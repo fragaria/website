@@ -1,10 +1,11 @@
 language: ruby
 rvm:
     - 2.5.1
-script: "bundle exec jekyll build"
+script: "JEKYLL_ENV=production bundle exec jekyll build"
 
 deploy:
     provider: pages
+    local-dir: _site
     skip-cleanup: true
     github-token: $GH_PAGES_DEPLOY_TOKEN  # Set in the settings page of your repository, as a secure variable
     keep-history: true

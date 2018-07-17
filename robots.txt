@@ -1,1 +1,1 @@
-Sitemap: https://fragaria.cz/sitemap.xml
+Sitemap: https://fragaria.cz/website/sitemap.xml

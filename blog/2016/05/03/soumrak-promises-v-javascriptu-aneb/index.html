@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="cs" dir="ltr" itemtype="http://schema.org/WebPage" itemscope="">
+    <head>
+    
+    
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Soumrak promises v Javascriptu aneb Pondělní střípky z 2.5.2016 | fragaria.cz</title>
+    <meta name="author" content="Fragaria s.r.o." />
+    <meta name="robots" content="index,follow" />
+    <meta name="description" content="Dnes si Hynek uzurpoval skoro dvacet minut, aby nám demonstroval jak nahradit promises reaktivním programováním v NodeJS.I Filip, který jinak rýpe do všeho, sledoval výklad téměř bez dechu. Zkusím&nbsp; tedy Hynkovu přednášku převyprávět i vám.Callback metody, které komplikovaly Javascriptový kód už jsou dávno za zenitem. Naj...">
+    <meta name="keywords" content="fragaria, software, vývoj software, webové aplikace, python, javascript, angular, elasticsearch, html, css, stripkyasyncnodejspromises" />
+    <!-- Favicons -->
+    
+
+    <meta property="og:url"           content="https://fragaria.cz/website/blog/2016/05/03/soumrak-promises-v-javascriptu-aneb/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Soumrak promises v Javascriptu aneb Pondělní střípky z 2.5.2016 | fragaria.cz" />
+    <meta property="og:description"   content="Dnes si Hynek uzurpoval skoro dvacet minut, aby nám demonstroval jak nahradit promises reaktivním programováním v NodeJS.I Filip, který jinak rýpe do všeho, sledoval výklad téměř bez dechu. Zkusím&nbsp; tedy Hynkovu přednášku převyprávět i vám.Callback metody, které komplikovaly Javascriptový kód už jsou dávno za zenitem. Naj..." />
+
+    
+</head>
+
+
+
+    <body>
+        <div class="page-content">
+            <div class="wrapper">
+                <article itemtype="http://schema.org/BlogPosting" itemscope="">
+  <h1 itemprop="headline">Soumrak promises v Javascriptu aneb Pondělní střípky z 2.5.2016</h1>
+
+  Dnes si Hynek uzurpoval skoro dvacet minut, aby nám demonstroval jak nahradit promises <i>reaktivním programováním</i> v NodeJS.<br /><a name='more'></a>I Filip, který jinak rýpe do všeho, sledoval výklad téměř bez dechu. Zkusím&nbsp; tedy Hynkovu přednášku převyprávět i vám.<br /><br /><br /><br />Callback metody, které komplikovaly Javascriptový kód už jsou dávno za zenitem. Najdete je možná v JQuery, ale NodeJS i AngularJS už dávno pro asynchronní volání používají <a href="https://en.wikipedia.org/wiki/Futures_and_promises" target="_blank">promises</a>. Pokud nevíte, na co promises jsou, tak vítám do 21. století a doporučuju třeba <a href="http://www.html5rocks.com/en/tutorials/es6/promises/" target="_blank">tenhle článek</a>.<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="https://4.bp.blogspot.com/-8plEfspkc7Q/VyhRs8Kci2I/AAAAAAAAAn4/bsY3ynVYj18C4-tdg5B6pLvYOmKqdXDkwCLcB/s1600/236H.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="266" src="https://4.bp.blogspot.com/-8plEfspkc7Q/VyhRs8Kci2I/AAAAAAAAAn4/bsY3ynVYj18C4-tdg5B6pLvYOmKqdXDkwCLcB/s400/236H.jpg" width="400" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">(c) http://www.gratisography.com</td></tr></tbody></table>Anebo možná ne. Vypadá to, že i nad promises se začínají stahovat mračna. Standard ES6 totiž obsahuje tzv. <a href="https://developer.mozilla.org/cs/docs/Web/JavaScript/Guide/Iterators_and_Generators" target="_blank">generátory</a> a klíčové slovo <i>yield</i>, což umožňuje použít <a href="https://en.wikipedia.org/wiki/Reactive_programming" target="_blank">reaktivní programování.</a> Jeho použitím se dají zjednodušit některé use-cases a vyhnout se použití promises.<br /><br />Hynek nám to vysvětlil na příkladu unit testu. Následující kus kódu by mohl být třeba ze systému na prodej bannerové reklamy:<br /><br /><script src="https://gist.github.com/krtek/20ced86512f9322651f07221f7274818.js?file=promises.js"></script> I když je kód super jednoduchý a dobře okomentovaný, stejně je tam těch promises <b>prostě moc</b>. Dá se v tom možná vyznat, ale je to spousta <i>boilerplate</i> kódu a čitelnost trpí.<br /><br />S použitím (zneužitím?) generátorů a <a href="http://bluebirdjs.com/docs/api/promise.coroutine.html" target="_blank">couroutine</a> z knihovny <span id="goog_537025175"></span>Bluebird<span id="goog_537025176"></span> se dostaneme k mnohem čitelnějšímu kódu:<br /><br /><script src="https://gist.github.com/krtek/20ced86512f9322651f07221f7274818.js?file=generators.js"></script> <br />Jak to funguje? Všimněte si, že celý test je napsán jako <a href="https://developer.mozilla.org/cs/docs/Web/JavaScript/Reference/Statements/function*" target="_blank">generátorová funkce</a> (to je to <i>function*</i>). A obalen voláním couroutine (to je to <i>co()</i>).<br /><br />Tady je potřeba malou odbočku – jak fungují generátory? Generátor je ze strany konzumenta klasický iterátor. Na každé volání funkce <i>next()</i> se vrátí jedna hodnota. Ze strany producenta se používá klíčové slovo <i>yield</i>, což je takový malý <i>return</i>. Vrátí další hodnotu v pořadí a "uspí" provádění funkce, dokud není zavolán znovu <i>next()</i>.<br /><br />A právě tohle uspání je tady zneužito. Každé volání <i>next()/yield</i> vrátí jednu promise, na kterou se v obalovací funkci počká a pak se zavolá znovu <i>next()</i>. Zajímavé, co?<br /><br />Samozřejmě, že promises umožňují i jiné hrátky, jako třeba <i>Promises.all()</i>, které generátory nahradit nedokáží. Ale pro popsaný příklad sekvenčního volání jde o elegantní náhradu.<br /><br />Takže promises se zatím o své místo na slunci bát nemusí.<br /><br /><br />
+</article>
+
+            </div>
+        </div>
+    </body>
+</html>

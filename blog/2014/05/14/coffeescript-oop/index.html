@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="cs" dir="ltr" itemtype="http://schema.org/WebPage" itemscope="">
+    <head>
+    
+    
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CoffeeScript a OOP | fragaria.cz</title>
+    <meta name="author" content="Fragaria s.r.o." />
+    <meta name="robots" content="index,follow" />
+    <meta name="description" content="Dlouho jsem nemohl přijít CoffeeScriptu na chuť. Přišlo mi, že za málo muziky nabízí hodně potíží. Co mě nakonec přesvědčilo, byla schopnost, po které jsem v JavaScriptu přímo prahnul: Psát skutečné třídy a objekty. Když jsem se nadšeně bavil s kolegy, že už jsem taky kafař, že to je fakt hustý kafe a že teď už konečně píšu „...">
+    <meta name="keywords" content="fragaria, software, vývoj software, webové aplikace, python, javascript, angular, elasticsearch, html, css, oopjavascriptangularjscoffeescript" />
+    <!-- Favicons -->
+    
+
+    <meta property="og:url"           content="https://fragaria.cz/website/blog/2014/05/14/coffeescript-oop/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="CoffeeScript a OOP | fragaria.cz" />
+    <meta property="og:description"   content="Dlouho jsem nemohl přijít CoffeeScriptu na chuť. Přišlo mi, že za málo muziky nabízí hodně potíží. Co mě nakonec přesvědčilo, byla schopnost, po které jsem v JavaScriptu přímo prahnul: Psát skutečné třídy a objekty. Když jsem se nadšeně bavil s kolegy, že už jsem taky kafař, že to je fakt hustý kafe a že teď už konečně píšu „..." />
+
+    
+</head>
+
+
+
+    <body>
+        <div class="page-content">
+            <div class="wrapper">
+                <article itemtype="http://schema.org/BlogPosting" itemscope="">
+  <h1 itemprop="headline">CoffeeScript a OOP</h1>
+
+  Dlouho jsem nemohl přijít CoffeeScriptu na chuť. Přišlo mi, že za málo muziky nabízí hodně potíží. Co mě nakonec přesvědčilo, byla schopnost, po které jsem v JavaScriptu přímo prahnul: <b>Psát skutečné třídy a objekty</b>. <br /><a name='more'></a><br />Když jsem se nadšeně bavil s kolegy, že už jsem taky kafař, že to je fakt hustý kafe a že teď už konečně píšu „objektivně”, zjistil jsem, že tuhle - za mě - nejdůležitější vychytávku, většina kafařů v okolí zatím vůbec nezkusila.<br /><br /><h3>První třída v CoffeScriptu</h3>Nejjednodušší třída vypadá takto:<br /><script src="https://gist.github.com/czervenka/3957ca18976955b77b8a.js?file=a-person.coffee"></script> <br /><ul><li><span style="font-family: Courier New, Courier, monospace;">toString: () -&gt;</span>&nbsp;... vytvoří metodu <span style="font-family: Courier New, Courier, monospace;">Person.prototype.toString</span><span style="font-family: inherit;">.</span></li><li>&nbsp;<span style="font-family: Courier New, Courier, monospace;">constructor: ()</span>&nbsp;... je speciální metoda konstruktoru objektu.</li><li>&nbsp;<span style="font-family: Courier New, Courier, monospace;">@</span>&nbsp;... zavináč je nejdůležitější znak pro objekty v CS, takže:</li><ul><li>&nbsp;<span style="font-family: Courier New, Courier, monospace;">@name</span>&nbsp;... odkazuje na <span style="font-family: Courier New, Courier, monospace;">this.name</span>.</li><li>&nbsp;(<span style="font-family: Courier New, Courier, monospace;">@name</span>) -&gt; ... zavináč v argumentu funkce zajistí automatické uložení do <span style="font-family: Courier New, Courier, monospace;">this.name</span><span style="font-family: inherit;"> před zavoláním metody.</span></li></ul></ul><br /><h3>Statické metody / properties</h3>Ke třídám patří statické metody. Jako vše kolem kafe-objektů i statické vlastnosti se zapisují pomocí zavináče<br /><script src="https://gist.github.com/czervenka/3957ca18976955b77b8a.js?file=b-person.coffee"></script> <br /><ul><li><span style="font-family: Courier New, Courier, monospace;">@</span> před názvem metody - vytvoří metodu jako statickou (jako metodu třídy)</li><li>Ve statické metodě zastupuje <span style="font-family: Courier New, Courier, monospace;">@</span>&nbsp;třídu, a protože třída je v JS to stejné jako konstruktor, <span style="font-family: Courier New, Courier, monospace;">new @(name)</span> vytvoří novou instanci aktuální třídy.</li><li>Podobně lze přistupovat ke statickým metodám z instance (<span style="font-family: Courier New, Courier, monospace;">@fromNames</span>&nbsp;zde stoprocentně nefunguje). Jen je třeba si uvědomit, že konstruktor je pod <span style="font-family: Courier New, Courier, monospace;">@constructor</span>&nbsp;a <span style="font-family: Courier New, Courier, monospace;">@constructor is Person</span>, tedy naši metodu můžeme z instance zavolat jako <span style="font-family: Courier New, Courier, monospace;">@constructor.fromNames(...)</span>.</li></ul><br /><ul></ul><h3>Dědění</h3>Vlastně největší výhodou tříd v CoffeeScriptu je přehledné dědění:<br /><script src="https://gist.github.com/czervenka/3957ca18976955b77b8a.js?file=c-employee.coffee"></script> <br /><ul><li><span style="font-family: Courier New, Courier, monospace;">extends</span>&nbsp;- je samozřejmé klíčové slovo CoffeeScriptu</li><li><span style="font-family: Courier New, Courier, monospace;">Employee.__super__.constructor</span>&nbsp;- uchovává odkaz na předka (v tomto případě&nbsp;<span style="font-family: Courier New, Courier, monospace;">Person</span>)</li><li><span style="font-family: Courier New, Courier, monospace;">super</span>&nbsp;- trochu nesystematicky</li><ul><li>bez argumentů a závorek zavolá stejnojmennou metodu nad rodičem a přepoužije aktuální argumenty (tj. <span style="font-family: Courier New, Courier, monospace;">Employee.__super__.constructor.apply(this, arguments)</span>)</li><li>se závorkami nebo s argumenty zavolá metodu předka pouze s těmito argumenty</li></ul></ul><br /><ul><ul></ul></ul><h3>Vázané metody</h3>Kdo programuje v Java/CoffeeScriptu, setkal se určitě s problémem vázaných metod. Jednoduchý příklad:<br /><script src="https://gist.github.com/czervenka/3957ca18976955b77b8a.js?file=x-invalid-invocation.coffee"></script>JavaScript u metod neuchová informaci, ke kterému objektu patří, takže při jejich volání bez plně kvalifikovaného jména přijde metoda o referenci na <span style="font-family: Courier New, Courier, monospace;">this</span>. <br />To je u asynchronního jazyka, kde každý program je plný callbacků, veliká otrava. Samozřejmě to lze různě obejít a obchází se to (pomocí <span style="font-family: Courier New, Courier, monospace;">function.bind</span> či <span style="font-family: Courier New, Courier, monospace;">self = this</span>), ale CoffeeScript má vlastní pěkné řešení v podobě konstrukce <span style="font-family: Courier New, Courier, monospace;">=&gt;</span><br /><script src="https://gist.github.com/czervenka/3957ca18976955b77b8a.js?file=d-person.coffee"></script> <br /><h3>Použití tříd v AngularJS</h3>AngularJS má vlastní způsob zapouzdření a využití objektového (prototypového) přístupu pro kolegy není úplně intuitivní. Častá námitka, kterou slyším, je: <i>Scope nebo Servisu ale nemůžeš jednoduše dědit.</i><br /><br />Takže, chlapci, můžeš! Stačí jen kávu správně dávkovat v injekcích:<br /><script src="https://gist.github.com/czervenka/3957ca18976955b77b8a.js?file=e-my-directive.coffee"></script>
+</article>
+
+            </div>
+        </div>
+    </body>
+</html>

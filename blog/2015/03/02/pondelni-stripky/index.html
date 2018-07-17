@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="cs" dir="ltr" itemtype="http://schema.org/WebPage" itemscope="">
+    <head>
+    
+    
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pondělní střípky z 2.3.2015 | fragaria.cz</title>
+    <meta name="author" content="Fragaria s.r.o." />
+    <meta name="robots" content="index,follow" />
+    <meta name="description" content="Každé pondělí máme ve Fragarii projektovou schůzku, kde si vyměňujeme informace o stavu jednotlivých projektů. A proč vám to říkám? Protože v rámci těchto pondělních schůzek si také děláme demo. Demo je krátký čas na začátku schůzky, kdy každý může ukázat zajímavou věc/službu kterou našel, použil nebo třeba i vyrobil.Je to pr...">
+    <meta name="keywords" content="fragaria, software, vývoj software, webové aplikace, python, javascript, angular, elasticsearch, html, css, stripkyazurepythonmailgunmicrosoftepydoc" />
+    <!-- Favicons -->
+    
+
+    <meta property="og:url"           content="https://fragaria.cz/website/blog/2015/03/02/pondelni-stripky/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Pondělní střípky z 2.3.2015 | fragaria.cz" />
+    <meta property="og:description"   content="Každé pondělí máme ve Fragarii projektovou schůzku, kde si vyměňujeme informace o stavu jednotlivých projektů. A proč vám to říkám? Protože v rámci těchto pondělních schůzek si také děláme demo. Demo je krátký čas na začátku schůzky, kdy každý může ukázat zajímavou věc/službu kterou našel, použil nebo třeba i vyrobil.Je to pr..." />
+
+    
+</head>
+
+
+
+    <body>
+        <div class="page-content">
+            <div class="wrapper">
+                <article itemtype="http://schema.org/BlogPosting" itemscope="">
+  <h1 itemprop="headline">Pondělní střípky z 2.3.2015</h1>
+
+  Každé pondělí máme ve Fragarii projektovou schůzku, kde si vyměňujeme informace o stavu jednotlivých projektů. A proč vám to říkám? <br /><a name='more'></a>Protože v rámci těchto pondělních schůzek si také děláme <b>demo</b>. Demo je krátký čas na začátku schůzky, kdy každý může ukázat zajímavou věc/službu kterou našel, použil nebo třeba i vyrobil.<br />Je to prostě taková všehochuť. Jeden týden řešíme databáze a ovládání GMailu klávesnicí, jindy zase ideální IDE pro Python (podle Robina je to <code>vim</code>) a pluginy pro <a href="http://www.redmine.org/">Redmine</a>.<br />A mě tak napadá, že by vás to mohlo taky zajímat.<br /><br /><h3>Mailgun</h3>Tento týden začal Filip službou <a href="http://www.mailgun.com/">Mailgun</a>. <br />Jasně. Standardem v posílání hromadných mailů je <a href="http://mailchimp.com/">Mailchimp</a>, který používáme pro většinu projektů. Mailgun má ale velmi hezké API, takže posílání hromadných mailů je hračka. Koneckonců si to zkuste sami:<br /><pre><code>curl -s —user 'api:key-3ax6xnjp29jd6fds4gc373sgvjxteol0' \<br />    https://api.mailgun.net/v2/samples.mailgun.org/messages \<br />    -F from='Čtenář blogu &lt;excited@samples.mailgun.org&gt;' \<br />    -F to='info@fragaria.cz' \<br />    -F subject='Ahoj' \<br />    -F text='Ahoj klucka z Fragarie!'<br /></code></pre><br /><h3>Hosting90</h3>Virtuální servery jsou něco, co řešíme pořád dokolečka. Naším favoritem byl zatím <a href="https://www.digitalocean.com/">Digital Ocean</a>, ale Martin dneska přinesl tuzemský <a href="https://www.hosting90.cz/">Hosting90</a>. <br />Když odhlédneme od ne moc hezkého webu, tak virtuální server s dvoujádrovým CPU a 2GB paměti stojí 200Kč měsíčně. Digital Ocean za trochu vyšší cenu nabízí poloviční konfiguraci.<br />Pro tuzemské projekty je to určitě zajímavá volba. <br /><br /><h3>Microsoft Azure</h3>Pak jsem chtěl já ukázat něco z <a href="http://azure.microsoft.com/en-us/">Microsoft Azure</a>, ale kluci mě vypískali.<br />Ne, vážně – byl jsem na přednášce, kde pánové z Microsoftu ukazovali, co všechno umí cloud Azure a je toho fakt hodně. Od obyčejných <b>linuxových</b> virtuálních serverů přes službu <a href="http://azure.microsoft.com/en-us/services/notification-hubs/">Notification Hub</a> pro posílání notifikací mobilním zařízením až po <a href="http://azure.microsoft.com/en-us/services/machine-learning/">strojové učení</a>.<br />No. A to je z Microsoft světa na dlouhou dobu všechno. <br /><br /><h3>Epydoc</h3>Poslední vstup si připravil Robin. <a href="http://epydoc.sourceforge.net/">Epydoc</a> je nástroj pro dokumentaci Pythoního kódu. Například Pycharm už ho <a href="https://www.jetbrains.com/pycharm/whatsnew/whatsnew_1x.html">podporuje docela dlouho</a> a hlavně podle něj umí napovídat. Takže když svůj Pythoní kód budete důsledně dokumentovat Epydocem, ušetříte si dost práce při psaní.<br /><br />PS: Víte, jak se řekne slovensky krajta? No přece Pytón!
+</article>
+
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="cs" dir="ltr" itemtype="http://schema.org/WebPage" itemscope="">
+    <head>
+    
+    
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GIT - proces vývoja a nasadzovania | fragaria.cz</title>
+    <meta name="author" content="Fragaria s.r.o." />
+    <meta name="robots" content="index,follow" />
+    <meta name="description" content="Rovnako ako pri každom vyvíjaní už existujúcim postupom, aj pri tom našom sme našli niekoľko možností ako ho vylepšiť. Na momentálnych projektoch vyvýjame pomocou SCRUM-u a snažíme sa každý sprint dodať použiteľnú a nasaditeľnú verziu produktu.Aby sme dosiahli požadovaný efekt, navrhli sme systém troch prostredí, Sandbox, Pre...">
+    <meta name="keywords" content="fragaria, software, vývoj software, webové aplikace, python, javascript, angular, elasticsearch, html, css, scrumverzováníinternationalagilegit" />
+    <!-- Favicons -->
+    
+
+    <meta property="og:url"           content="https://fragaria.cz/website/blog/2015/09/22/git-proces-vyvoja-nasadzovania/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="GIT - proces vývoja a nasadzovania | fragaria.cz" />
+    <meta property="og:description"   content="Rovnako ako pri každom vyvíjaní už existujúcim postupom, aj pri tom našom sme našli niekoľko možností ako ho vylepšiť. Na momentálnych projektoch vyvýjame pomocou SCRUM-u a snažíme sa každý sprint dodať použiteľnú a nasaditeľnú verziu produktu.Aby sme dosiahli požadovaný efekt, navrhli sme systém troch prostredí, Sandbox, Pre..." />
+
+    
+</head>
+
+
+
+    <body>
+        <div class="page-content">
+            <div class="wrapper">
+                <article itemtype="http://schema.org/BlogPosting" itemscope="">
+  <h1 itemprop="headline">GIT - proces vývoja a nasadzovania</h1>
+
+  Rovnako ako pri každom vyvíjaní už existujúcim postupom, aj pri tom našom sme našli niekoľko možností ako ho vylepšiť. <br /><br />Na momentálnych projektoch vyvýjame pomocou SCRUM-u a snažíme sa každý sprint dodať použiteľnú a nasaditeľnú verziu produktu.<br /><br /><a name='more'></a><div style="clear: both; text-align: center;"><img border="0" height="285" src="http://3.bp.blogspot.com/-wfyKBaMCdlk/VgFO8LnIvVI/AAAAAAAAA-I/h8kqrlus_1I/s320/git-illustration.png" width="320" /></div><br /><br />Aby sme dosiahli požadovaný efekt, navrhli sme systém troch prostredí, Sandbox, Preproduction a Production.<br /><br />Na <b>Sandboxe</b> možu všetci vidieť v akom sme v stave čiže forma continous integration. <br /><br /><b>Preproduction</b> je prostredie na ktoré umiestňujeme release candidate verziu. Slúži pre QA team na otestovanie a prípadný bugfix. Rovnako ako aj pre riešenie akýchkoľvek možných problémov. <br /><br />Na <b>Production</b> nasadzujeme po vychytaní všetkých bugov, overení kvality a samozrejem po schválení product ownerom. <br /><br />Používame GIT. Najvačšou výhodou tohoto šikovného nástroja sú vetvy - branches.<br /><br />Dohodli sme sa, že v <b>master</b> branchi bude stále tá verzia produktu, ktorá je nasadená na produkcii a do nej sa priamo commitovat nebude. Začiatkom každého sprintu sa vytvorí nová <b>releases/X.X.X</b> branch z master branch, a na nej sa bude vyvíjať.<br /><br />Ak nie je jasné, či sa daná funcionalita stihne dokončit do konca sprintu, vytvorí sa branch iba pre ňu napr. <b>features/XYZ</b> a tá sa po dokončení zlúči s aktuálnou releases/X.X.X vetvou.<br /><br />Koncom sprintu sa aktuálna releases branch nasadí na Preproduction prostredie na otestovanie a bugfix.<br /><br />Vo chvíli keď je verzia doladená, releases branch zlúčime s master branch, a otagujeme číslom aktuálnej verzie. Nasadíme na produkčné prostredie a vychutnávame už doladený final. <br /><br />Stručným resumém by som teda len dodal že celé vetvenie prechádza cez<br /><b>SANDBOX</b> - aktuálny stav vývoja tzv. Continuous Integration prostredie.<br /><b>PREPRODUCTION</b> - vždy releases branch z uplynulého sprintu (nasadzuje sa pred koncom sprintu a testuje sa)<br /><b>PRODUCTION</b> - master branch (nasadzuje sa raz za dva týžne po otestovaní).
+</article>
+
+            </div>
+        </div>
+    </body>
+</html>

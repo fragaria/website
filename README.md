@@ -5,12 +5,13 @@
 - [Fragaria website](#fragaria-website)
     - [Table of contents](#table-of-contents)
 - [Development](#development)
-    - [Installing on Linux](#installing-on-linux)
+    - [Installation](#installation)
         - [Install build dependencies](#install-build-dependencies)
             - [Ubuntu 18.04](#ubuntu-1804)
             - [Fedora 28](#fedora-28)
         - [Install rbenv](#install-rbenv)
-        - [Installation](#installation)
+        - [Installing dependencies on macOS](#installing-dependencies-on-macos)
+        - [Installing the app](#installing-the-app)
     - [Launching the app](#launching-the-app)
     - [Using Docker](#using-docker)
 
@@ -19,7 +20,7 @@
 This project requires Ruby to be installed on your computer (best installed
 using [rbenv](https://github.com/rbenv/rbenv)).
 
-## Installing on Linux
+## Installation
 
 The process is practically the same on any Linux. Only difference is build dependencies.
 
@@ -61,7 +62,18 @@ rbenv global 2.5.1
 ruby -v # Verify ruby@2.5.1 is installed
 ```
 
-### Installation
+### Installing dependencies on macOS
+
+```
+brew install rbenv
+rbenv init
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+exec $SHELL
+rbenv install 2.5.1
+ruby -v # Verify ruby@2.5.1 is installed
+```
+
+### Installing the app
 
 Once you have Ruby installed, clone the `fragaria/website` repository:
 

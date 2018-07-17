@@ -66,7 +66,7 @@ ruby -v # Verify ruby@2.5.1 is installed
 Once you have Ruby installed, clone the `fragaria/website` repository:
 
 ```
-git clone https://github.com/fragaria.cz/website.git fragaria.cz
+git clone https://github.com/fragaria/website.git fragaria.cz
 ```
 
 Switch to the cloned repository:

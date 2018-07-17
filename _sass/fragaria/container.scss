@@ -1,0 +1,9 @@
+.page-container {
+    text-align: center;
+}
+
+.page-container__inner {
+    width: map-get($mq-breakpoints, 'wide');
+    margin: auto;
+    text-align: left;
+}

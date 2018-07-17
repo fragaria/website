@@ -1,0 +1,33 @@
+// Colors
+$body-background: #46412A;
+$anchor-color: #5B5BFF;
+$anchor-hover-color: darken($anchor-color, 10%);
+
+// mq settings
+// https://github.com/sass-mq/sass-mq
+$mq-responsive: true;
+
+$mq-breakpoints: (
+    mobile:             320px,
+    tablet:             768px,
+    desktop:            992px,
+    wide:               1200px,
+
+    // Tweakpoints
+    mobileLandscape:    480px,
+);
+
+// If you want to display the currently active breakpoint in the top
+// right corner of your site during development, add the breakpoints
+// to this list, ordered by width, e.g. (mobile, tablet, desktop).
+$mq-show-breakpoints: (mobile, tablet, desktop, wide);
+
+// avalanche settings
+// https://github.com/colourgarden/avalanche
+$av-breakpoints: (
+    mobile:             "screen and (max-width: 320px)",
+    mobileLandscape:    "screen and (min-width: 480px) and (max-width: 767px)",
+    tablet:             "screen and (min-width: 768px) and (max-width: 991px)",
+    desktop:            "screen and (min-width: 992px) and (max-width: 1199px)",
+    wide:               "screen and (min-width: 1200px)",
+)

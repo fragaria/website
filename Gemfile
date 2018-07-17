@@ -10,9 +10,6 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll", "~> 3.7.3"
 
-# Uncomment this line for local development.
-# gem "jekyll-theme-pirati", github: "pirati-web/jekyll-theme-pirati", branch: "master"
-
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins

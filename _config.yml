@@ -12,10 +12,12 @@ description: ...
 keywords: fragaria, software, vývoj software, webové aplikace, python, javascript, angular, elasticsearch, html, css
 url: "https://fragaria.cz" # the base hostname & protocol for your site
 baseurl: "/website"
+logo: "/assets/logo.svg" # Site logo
+# favicon: "/favicon.ico" # Uncomment to add custom favicon, or leave as is to use site logo
 
 sass:
     style: compressed
-    sass_dir: _sass
+    sass_dir: ./_sass
 
 # Build settings
 markdown: kramdown

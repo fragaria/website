@@ -1,0 +1,14 @@
+<article itemtype="http://schema.org/BlogPosting" itemscope="">
+    {% if include.post.thumbnail %}
+        <img itemprop="image" src="{{ include.post.thumbnail }}"/>
+    {% endif %}
+    <a href="{{ include.post.url }}">
+        <h1 itemprop="headline">{{ include.post.title }}</h1>
+    </a>
+    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+        <span itemprop="name">{{ include.post.author }}</span>
+    </span>
+    <meta itemprop="datePublished" content="{{ include.post.date | date_to_xmlschema }}" />
+    <span>{{ include.post.date | date: "%d.%m.%Y" }}</span>
+    <p itemprop="description" class="c-post-listing__perex u-stacked">{{ include.post.excerpt | truncatewords: 45 | strip_html }}</p>
+</article>

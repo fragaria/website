@@ -11,6 +11,7 @@ email: info@fragaria.cz
 description: ...
 keywords: fragaria, software, vývoj software, webové aplikace, python, javascript, angular, elasticsearch, html, css
 url: "https://fragaria.cz" # the base hostname & protocol for your site
+baseurl: "/website"
 
 sass:
     style: compressed

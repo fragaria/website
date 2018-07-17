@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-    - 2.1
+    - 2.5.1
 script: "bundle exec jekyll build"
 
 deploy:
@@ -9,4 +9,4 @@ deploy:
     github-token: $GH_PAGES_DEPLOY_TOKEN  # Set in the settings page of your repository, as a secure variable
     keep-history: true
     on:
-    branch: master
+        branch: master

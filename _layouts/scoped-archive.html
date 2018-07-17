@@ -1,0 +1,15 @@
+---
+layout: archive
+---
+
+<header>
+    <h1 itemprop="headline">Posts in {% if page.type == 'year' %}{{ page.date | date: '%Y' }}{% elsif page.type == 'month' %}{{ page.date | date: '%Y %b' }}{% endif %}</h1>
+</header>
+
+<main>
+    {% for post in page.posts %}
+        {% include posts/listing.html post=post %}
+    {% endfor %}
+</main>
+
+

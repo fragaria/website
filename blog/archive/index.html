@@ -1,0 +1,18 @@
+---
+layout: archive
+title: Posts
+---
+
+<header>
+    <h1 itemprop="headline">Posts</h1>
+</header>
+
+<main>
+    {% assign posts = paginator.posts %}
+
+    {% for post in posts %}
+        {% include posts/listing.html post=post %}
+    {% endfor %}
+
+    {% include posts/pagination.html paginator=paginator %}
+</main>

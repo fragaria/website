@@ -24,10 +24,8 @@ plugins:
     - jekyll-sitemap
     - jekyll-feed
     - jekyll-paginate
-    - jekyll-environment-variables
+    - jekyll-archives
 
-paginate_path: "/blog/:num/"
-paginate: 11
 
 exclude:
     - Dockerfile
@@ -36,7 +34,25 @@ exclude:
     - Gemfile
     - Gemfile.lock
 
-permalink: /blog/:title/
+permalink: /blog/:year/:month/:day/:title/
+
+# --------------------------- plugins ------------------------------------------
+
+paginate_path: "/blog/archive/:num/"
+paginate: 11
+
+jekyll-archives:
+    enabled:
+        - year
+        - month
+        - tags
+    layout: scoped-archive
+    permalinks:
+        year: /blog/archive/year/:year/
+        month: /blog/archive/month/:year-:month/
+        tag: /blog/archive/tag/:name/
+
+# ---------------------- custom configuration ----------------------------------
 
 company:
     official_name: Fragaria s.r.o.

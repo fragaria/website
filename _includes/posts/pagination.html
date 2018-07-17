@@ -1,0 +1,27 @@
+<ul class="c-pagination" role="navigation" aria-label="Pagination">
+    {% if include.paginator.page != 1 %}
+    <li class="c-pagination__previous c-pagination__link">
+        <a class="c-pagination__anchor" href="{{ include.paginator.previous_page_path | relative_url }}" aria-label="Previous page">Previous</a>
+    </li>
+    {% endif %}
+
+    {% for page in (1..include.paginator.total_pages) %}
+    <li class="c-pagination__link{% if page == include.paginator.page %} c-pagination__link--current{% endif %}">
+        {% if page == include.paginator.page %}
+            <span class="c-pagination__anchor">{{ forloop.index }}</span>
+        {% else %}
+            {% if forloop.index == 1 %}
+                <a class="c-pagination__anchor" href="{{ '/blog/archive/' | relative_url }}" aria-label="Page {{ forloop.index }}">{{ forloop.index }}</a>
+            {% else %}
+                <a class="c-pagination__anchor" href="{{ '/blog/archive/' | append: forloop.index | append: '/' | relative_url }}" aria-label="Page {{ forloop.index }}">{{ forloop.index }}</a>
+            {% endif %}
+        {% endif %}
+    </li>
+    {% endfor %}
+
+    {% if include.paginator.page != include.paginator.total_pages %}
+    <li class="c-pagination__next c-pagination__link">
+        <a class="c-pagination__anchor" href="{{ include.paginator.next_page_path | relative_url }}" aria-label="Next page">Next</a>
+    </li>
+    {% endif %}
+</ul>

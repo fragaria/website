@@ -2,8 +2,4 @@
 layout: default
 ---
 
-<section>
-    {% for post in site.posts limit: 6 %}
-      {% include posts/listing.html post=post %}
-    {% endfor %}
-</section>
+<a href="{{ '/blog/' | relative_url }}">Blog</a>

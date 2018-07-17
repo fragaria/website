@@ -22,7 +22,7 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
   gem "jekyll-paginate"
   gem "jekyll-sitemap"
-  # gem "github-pages"
+  gem 'jekyll-archives'
   gem "jekyll-assets", "3.0.11"
   gem 'jekyll-environment-variables'
 end

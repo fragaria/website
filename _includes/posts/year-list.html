@@ -1,0 +1,7 @@
+{% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'"  %}
+<ul>
+    {% for year in postsByYear %}
+        {% assign archiveUrl = '/blog/archive/year/' | append: year.name | append: '/' %}
+        <li><a href="{{ archiveUrl | relative_url }}">{{ year.name }}</a> ({{ year.items.size }})</li>
+    {% endfor %}
+</ul>

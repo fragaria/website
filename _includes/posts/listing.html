@@ -2,7 +2,7 @@
     {% if include.post.thumbnail %}
         <img itemprop="image" src="{{ include.post.thumbnail }}"/>
     {% endif %}
-    <a href="{{ include.post.url | prepend: site.baseurl }}">
+    <a href="{{ include.post.url | relative_url }}">
         <h1 itemprop="headline">{{ include.post.title }}</h1>
     </a>
     <span itemprop="author" itemtype="http://schema.org/Person" itemscope="">
@@ -10,5 +10,5 @@
     </span>
     <meta itemprop="datePublished" content="{{ include.post.date | date_to_xmlschema }}" />
     <span>{{ include.post.date | date: "%d.%m.%Y" }}</span>
-    <p itemprop="description" class="c-post-listing__perex u-stacked">{{ include.post.excerpt | truncatewords: 45 | strip_html }}</p>
+    <p itemprop="description">{{ include.post.excerpt | truncatewords: 45 | strip_html }}</p>
 </article>

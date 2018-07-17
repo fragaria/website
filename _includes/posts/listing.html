@@ -2,7 +2,7 @@
     {% if include.post.thumbnail %}
         <img itemprop="image" src="{{ include.post.thumbnail }}"/>
     {% endif %}
-    <a href="{{ include.post.url }}">
+    <a href="{{ include.post.url | prepend: site.baseurl }}">
         <h1 itemprop="headline">{{ include.post.title }}</h1>
     </a>
     <span itemprop="author" itemtype="http://schema.org/Person" itemscope="">

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="cs" dir="ltr" itemtype="http://schema.org/WebPage" itemscope="">
+    <head>
+    
+    
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vytvořte si appku v Angularu, aneb výhody frameworku Ionic 2 | fragaria.cz</title>
+    <meta name="author" content="Fragaria s.r.o." />
+    <meta name="robots" content="index,follow" />
+    <meta name="description" content="Chtěl jsem vytvořit mobilní appku. Grafiku jsem měl hotovou, dokonce i API jsem měl hotové, teď už to zbývalo jen naprogramovat. Můj budget byl hodně omezený, jen 20 000 Kč na vývoj celé appky, tak jsem se rozhodl hledat Androidího programátora, protože Android má většinu trhu.&nbsp;Když jsem začal hledat programátora, tak s ...">
+    <meta name="keywords" content="fragaria, software, vývoj software, webové aplikace, python, javascript, angular, elasticsearch, html, css, ionicmobilyjavascriptangularjs" />
+    <!-- Favicons -->
+    
+
+    <meta property="og:url"           content="https://fragaria.cz/blog/vytvorte-si-appku-v-angularu/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Vytvořte si appku v Angularu, aneb výhody frameworku Ionic 2 | fragaria.cz" />
+    <meta property="og:description"   content="Chtěl jsem vytvořit mobilní appku. Grafiku jsem měl hotovou, dokonce i API jsem měl hotové, teď už to zbývalo jen naprogramovat. Můj budget byl hodně omezený, jen 20 000 Kč na vývoj celé appky, tak jsem se rozhodl hledat Androidího programátora, protože Android má většinu trhu.&nbsp;Když jsem začal hledat programátora, tak s ..." />
+
+    
+</head>
+
+
+
+    <body>
+        <div class="page-content">
+            <div class="wrapper">
+                <article itemtype="http://schema.org/BlogPosting" itemscope="">
+  <h1 itemprop="headline">Vytvořte si appku v Angularu, aneb výhody frameworku Ionic 2</h1>
+
+  <h2></h2><div>Chtěl jsem vytvořit mobilní appku. Grafiku jsem měl hotovou, dokonce i API jsem měl hotové, teď už to zbývalo jen naprogramovat. Můj budget byl hodně omezený, jen 20 000 Kč na vývoj celé appky, tak jsem se rozhodl hledat Androidího programátora, protože Android má většinu trhu.&nbsp;</div><div><br /><a name='more'></a></div><div>Když jsem začal hledat programátora, tak s tím začal nekonečný cyklus výběru programátorů, kde jsem vysvětloval, že se bude zatím jednat o Minimum Viable Product (první, osekaná verze) a snažil jsem se je ukecat na tento malý budget.&nbsp;</div><div><br /></div><div>Nutno podotknout, že do té doby jsem dělal všechno sám - návrh wireframů i následné grafiky, návrh databáze a následného API. Čas běžel a věci se nehýbaly, což mě začalo po té vší práci ukrutně s*át, tak jsem se rozhodl že si i tu aplikaci naprogramuju sám.</div><div><br /></div><div>Po chvíli googlování jsem zjistil, že je tu řešení v podobě hybridních mobilních aplikací, konkrétně frameworku <a href="https://ionicframework.com/" target="_blank">Ionic 2</a>, který je psán v Angularu 2. Pokud už teď píšete web v Angularu, tak můžete směle začít psát mobilní appku v Ionicu.</div><div><br /></div><h2>Co je to hybridní mobilní aplikace?</h2><div><div>Zatímco nativní aplikace je psaná na míru danému operačnímu systému, hybridrní mobilní aplikace je psána jako webová stránka a pomocí <a href="https://cordova.apache.org/" target="_blank">Cordovy</a> je kompilována do nativní aplikace, kde běží v komponentě WebView.&nbsp;</div><div><br /></div><div>Cordova rovněž umožňuje aplikaci využívat <a href="https://ionicframework.com/docs/native/" target="_blank">nativní služby zařízení</a>, takže i přesto, že píšete webovou stránku, lze pracovat s GPS, fotoaparátem či gyroskopem daného zařízení.</div><div>Samotný Ionic je nyní již ve verzi 2, je odladěný a poměrně rychlý. Navíc má velkou uživatelskou základnu a na jeho oficiálním fóru najdete odpovědi na většinu problémů.<br /><br /></div></div><h2>Kdy hybridní a kdy nativní?</h2><div><div>Hlavní výhodou Ionicu je možnost buildu aplikace na platformy iOS, Android a Windows Phone. Pro vývoj máte tedy jeden kód, což je snažší pro vývoj, údržbu i testování.</div><div>Pokud využíváte aplikaci spíše jako grafický výpis dat z webového API a od telefonu nepožadujete nijak velký výkon, pak je pro vás hybridní aplikace vhodné řešení.&nbsp;</div><div>Pokud ale ve vaší aplikaci probíhají složité procesy, nebo pokud chcete mít offline aplikaci, pak je pro vás lepší naprogramovat appku nativně.</div></div><div><br /></div><h2>Síla je v komponentách</h2><div><div>Ionic nabízí <a href="https://ionicframework.com/docs/components/#overview" target="_blank">spoustu komponent</a>, které známe z nativního prostředí, ať už jde o modální okna, seznamy či navigační lištu. Ionic zašel tak daleko, že podle operačního systému telefonu zvolí nastylování dané komponenty tak, aby vypadala jako v nativním prostředí, takže modální okno bude vypadat v iOS jinak než v Androidu.&nbsp;</div><div>Po vytvoření prázdné aplikace si tak během pár minut můžete vytvořit appku, která bude vypadat na chlup stejně, jako ta nativní. Stačí například napsat:</div><div><pre><code><br />&lt;ion-header&gt;<br />&nbsp; &nbsp; &lt;ion-navbar&gt;<br />&nbsp; &nbsp; &nbsp; &lt;ion-title&gt;Login&lt;/ion-title&gt;<br />&nbsp; &nbsp; &lt;/ion-navbar&gt;<br />&nbsp; &lt;/ion-header&gt;<br /></code></pre></div><br /><div>&nbsp;a hned máte na stránce nativně vypadající již předstylovaný navbar.</div></div><br /><h2>Angular tak trochu jinak</h2><div>Jak jsem psal výše, Ionic se píše v Angularu (konkrétně Ionic 2 v Angularu 2), ale má pár drobných rozdílů. </div><br /><h3>Žádné routy</h3><div>Protože v mobilní aplikaci nás nezajímá URL, tak nepotřebujeme ani router. Namísto toho pracuje Ionic s NavControllerem, kterému předává potřebné parametry.</div><br /><h3>Page namísto Components</h3><div>Co se struktury týče, tak Ionic využívá Page, což je komponenta pro celou stránku, takže oproti Angularu neskládáte web z malých komponent, ale na jedné Page máte vše. Snad jen kromě záložek (Tabs), které jsou v oddělené komponentě.</div><br /><h3>CLI</h3><div>V příkazové řádce vytváříme komponenty, service a další prvky pomocí Ionic CLI, kde příkaz začíná ionic, a ne ng jako v klasickém Angularu.</div><br /><h2>Závěr</h2><div>Cílem tohoto článku bylo vás seznámit s frameworkem Ionic a s hybridními mobilními aplikacemi, takže jsem tu nepsal moc konkrétních věcí. Vývoj v Ionicu bych určitě zvážil v případě, kdy váš budget na appku je menší a kdy nemáte velké požadavky na její výkon. <br />Pokud si myslíte, že by vám Ionic mohl sedět, pak bych ho na vašem místě určitě vyzkoušel.</div>
+</article>
+
+            </div>
+        </div>
+    </body>
+</html>

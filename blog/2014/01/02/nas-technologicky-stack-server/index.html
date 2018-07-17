@@ -21,20 +21,21 @@
     <meta property="og:description"   content="ServerBez diskuse Google AppEngine v Python verzi. Ne, že by to byla zase taková pecka, ale většinou je to požadavek zákazníka.Ovšem pecka je náš GAP a GAPI.GAPGAP je naše odpověď na to, že AppEngine neví, co to je virtualenv. AppEngine dokonce ani neví, co to je PIP. To naše pythonáře trochu (víc) zaskočilo, ale naštěstí Rob..." />
 
     
+
+    
+    <link rel="stylesheet" href="/website/assets/styles.css">
 </head>
 
 
 
-    <body>
-        <div class="page-content">
-            <div class="wrapper">
-                <article itemtype="http://schema.org/BlogPosting" itemscope="">
+    <body class="page-container">
+        <div class="page-container__inner">
+            <article itemtype="http://schema.org/BlogPosting" itemscope="">
   <h1 itemprop="headline">Náš technologický stack - server</h1>
 
   <h3>Server</h3>Bez diskuse <a href="https://developers.google.com/appengine/">Google AppEngine</a> v Python verzi. Ne, že by to byla zase taková pecka, ale většinou je to požadavek zákazníka.<br />Ovšem pecka je náš <a href="https://github.com/czervenka/gap">GAP</a> a <a href="https://github.com/czervenka/gapi">GAPI</a>.<br /><h4></h4><h4><br /></h4><h4>GAP</h4>GAP je naše odpověď na to, že AppEngine neví, co to je <a href="https://pypi.python.org/pypi/virtualenv">virtualenv</a>. AppEngine dokonce ani neví, co to je <a href="https://pypi.python.org/pypi">PIP</a>. <br />To naše pythonáře trochu (víc) zaskočilo, ale naštěstí Robin dal rychle dohromady náhradu.<br />Jak funguje? Takhle:<br /><pre><code>workon &lt;myvirtualenv&gt;<br />pip install gap<br />gap start-project &lt;applicationid&gt;<br />cd &lt;applicationid&gt;<br />vi requirements.gip<br />bin/gip install -r requirements.gip<br /></code></pre>Každý, kdo někdy dělal s virtualenv v Pythonu se zorientuje relativně rychle - jen místo <code>pip install</code> napíše <code>bin/gip install</code> a GAP se postará o stažení knihoven a jejich nalinkování do adresáře se zdrojákama. <br />Závislosti se ukládají do <code>requirements.gip</code> (místo <code>requirements.pip</code>) a svět je zase veselejší místo k životu.<br />GAP nám umožnil mít pořádek v knihovnách jednotlivých projektů a nezas*rat si instalaci Pythonu.<br /><h4></h4><h4><br /></h4><h4>GAPI</h4>Další náš příspěvek světu je GAPI – mimochodem na originálních názvech GAP/GAPI je vidět, že jsme především programátoři. Copywritera aby člověk pohledal... <br />Takže GAPI. Rozhraní (API) Google služeb je navržené šikovně, ale knihovna pro Python, která ho implementuje, už je na tom hůř. O dost.<br />GAPI umí navíc:<br /><ul><li>cachovat autorizační tokeny</li><li>dávkové requesty</li><li>opakovat requesty v případě chyby</li><li><strong>stránkovat</strong>&nbsp;odpovědi</li><li>a běží v pohodě na AppEngine</li></ul>Ke GAPu patří i další rozšíření jako <a href="https://github.com/fragaria/gap-resources">GAP-Resources</a>, <a href="https://github.com/fragaria/gap-angular">GAP-Angular</a> (to jsem psal já!) a <a href="https://github.com/fragaria/gap-datastoreadmin">GAP-DatastoreAdmin</a>, ale o těch až jindy.
 </article>
 
-            </div>
         </div>
     </body>
 </html>

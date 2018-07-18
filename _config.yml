@@ -27,7 +27,7 @@ plugins:
     - jekyll-feed
     - jekyll-paginate
     - jekyll-archives
-
+    - jekyll-autoprefixer
 
 exclude:
     - Dockerfile
@@ -35,6 +35,7 @@ exclude:
     - readme.md
     - Gemfile
     - Gemfile.lock
+    - __design
 
 permalink: /blog/:year/:month/:day/:title/
 
@@ -53,6 +54,10 @@ jekyll-archives:
         year: /blog/archive/year/:year/
         month: /blog/archive/month/:year-:month/
         tag: /blog/archive/tag/:name/
+
+autoprefixer:
+    browsers:
+        - last 2 versions
 
 # ---------------------- custom configuration ----------------------------------
 

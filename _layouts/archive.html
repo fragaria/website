@@ -3,11 +3,13 @@ layout: default
 ---
 
 <div class="content-block">
-    <div class="grid">
-        <div class="3/4 grid__cell">
-            {{ content }}
+    <div class="row">
+        <div class="col-8_tablet-12">
+            <div class="typeset">
+                {{ content }}
+            </div>
         </div>
-        <nav class="1/4 grid__cell">
+        <nav class="col_tablet-first typeset">
             <h2><a href="{{ '/blog/archive/' | relative_url }}">Archive</a></h2>
             {% include posts/year-list.html %}
         </nav>

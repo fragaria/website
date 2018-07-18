@@ -22,6 +22,7 @@ group :jekyll_plugins do
   gem 'jekyll-archives'
   gem "jekyll-assets", "3.0.11"
   gem 'jekyll-environment-variables'
+  gem 'jekyll-autoprefixer'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

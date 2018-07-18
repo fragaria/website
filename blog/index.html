@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<section class="content-block">
+<section class="content-block blog-listing typeset">
     {% assign featured_post = site.posts | where: 'featured', true | first %}
 
     {% if featured_post %}
@@ -11,18 +11,33 @@ layout: default
         {% assign other_posts = site.posts %}
     {% endif %}
 
-    {% for post in other_posts limit: 3 %}
-        {% include posts/listing/standard.html post=post %}
-    {% endfor %}
+    {% assign first_post = other_posts | first %}
 
+    {% include posts/listing/standard.html post=first_post class='blog-posting--horizontal blog-listing__post blog-listing__post--main' %}
 
-    {% if featured_post %}
-        {% include posts/listing/featured.html post=featured_post %}
-    {% endif %}
+    <div class="blog-listing__posts blog-listing__posts--latest row">
+        {% for post in other_posts offset: 1 limit: 3 %}
+            {% include posts/listing/standard.html post=post class='blog-listing__post col-4_mobileLandscape-12' %}
+        {% endfor %}
+    </div>
 
-    {% for post in other_posts offset: 3 limit: 3 %}
-        {% include posts/listing/standard.html post=post %}
-    {% endfor %}
+    <div class="blog-listing__featured">
+        {% if featured_post %}
+            {% include posts/listing/standard.html post=featured_post class='blog-posting--featured' show_cta=true %}
+        {% endif %}
+    </div>
+
+    <div class="blog-listing__posts row">
+        {% for post in other_posts offset: 4 limit: 3 %}
+            {% include posts/listing/standard.html post=post class='blog-listing__post col-4_mobileLandscape-12'  %}
+        {% endfor %}
+    </div>
+
+    <div class="blog-listing__posts row">
+        {% for post in other_posts offset: 7 limit: 3 %}
+            {% include posts/listing/standard.html post=post class='blog-listing__post col-4_mobileLandscape-12'  %}
+        {% endfor %}
+    </div>
 
     <a href="{{ '/blog/archive/' | relative_url }}">More posts</a>
 </section>

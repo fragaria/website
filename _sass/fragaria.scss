@@ -4,16 +4,19 @@
 @import
     "settings",
 
-    "normalize",      // normalization
+    // "normalize",      // normalization
     "sassline-base",  // sassline
-    "flex",           // flex helpers
     "mq",             // media query helpers
-    "avalanche",      // grid system
+    "gridlex/gridlex",      // grid system
 
-    "fragaria/reset",
+    // "fragaria/reset",
 
+    "fragaria/baseline-grid",
+    "fragaria/blog-listing",
+    "fragaria/blog-posting",
     "fragaria/container",
     "fragaria/content-block",
     "fragaria/pagination",
-    "fragaria/post-listing"
+    "fragaria/utils"
+
 ;

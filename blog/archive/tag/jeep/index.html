@@ -28,8 +28,8 @@
 
 
 
-    <body class="page-container">
-        <nav>
+    <body class="page-container baseline-grid baseline-grid--visible">
+        <nav class="typeset">
             <ul>
                 <li><a href="/website/">Home</a></li>
                 <li><a href="/website/blog/">Blog</a></li>
@@ -38,27 +38,35 @@
 
         <div class="page-container__inner">
             <div class="content-block">
-    <div class="grid">
-        <div class="3/4 grid__cell">
-            <header>
+    <div class="row">
+        <div class="col-8_tablet-12">
+            <div class="typeset">
+                <header>
     <h1 itemprop="headline">Posts in </h1>
 </header>
 
 <main>
     
-        <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-listing">
+        <article itemtype="http://schema.org/BlogPosting" itemscope="" class="blog-posting ">
+    <div class="blog-posting__content">
+        <h1 itemprop="headline" class="blog-posting__headline">
+            <a href="/website/blog/2015/07/28/pondelni-stripky-z-2772015/" class="blog-posting__anchor">Pondělní střípky z 27.7.2015 </a>
+        </h1>
+        <p class="blog-posting__meta">
+            <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="blog-posting__author">
+                <span itemprop="name">Lukáš Marek</span>
+            </span>
+            <meta itemprop="datePublished" content="2015-07-28T07:08:00+00:00" />
+            <span class="blog-posting__pubdate">28.07.2015</span>
+        </p>
+        <p itemprop="description" class="blog-posting__excerpt">Pondělní střípky z 27.7.2015 Dneska toho máme na programu ZNAPS, font Monoid, roboty pro platformu Telegram a hackování aut. ZNAPS Šílenství okolo kablíku ZNAPS se nevyhnulo ani nám. Lukáš L., já a Filip máme dohromady objednáno asi 10 kusů. Že nevíte, co to je? ZNAPS...</p>
+        
+    </div>
     
-        <img itemprop="image" src="http://4.bp.blogspot.com/-8C6bakoP0fU/Vbcpy78ur8I/AAAAAAAAAjc/7tYfuM0YSYM/s72-c/Screen%2BShot%2B2015-07-28%2Bat%2B09.05.21.png" class="post-listing__image" />
+    <div class="blog-posting__media" style="background-image: url('http://4.bp.blogspot.com/-8C6bakoP0fU/Vbcpy78ur8I/AAAAAAAAAjc/7tYfuM0YSYM/s72-c/Screen%2BShot%2B2015-07-28%2Bat%2B09.05.21.png')">
+        <img itemprop="image" src="http://4.bp.blogspot.com/-8C6bakoP0fU/Vbcpy78ur8I/AAAAAAAAAjc/7tYfuM0YSYM/s72-c/Screen%2BShot%2B2015-07-28%2Bat%2B09.05.21.png" class="blog-posting__image" />
+    </div>
     
-    <a href="/website/blog/2015/07/28/pondelni-stripky-z-2772015/" class="post-listing__anchor">
-        <h1 itemprop="headline" class="post-listing__headline">Pondělní střípky z 27.7.2015 </h1>
-    </a>
-    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="post-listing__author">
-        <span itemprop="name">Lukáš Marek</span>
-    </span>
-    <meta itemprop="datePublished" content="2015-07-28T07:08:00+00:00" />
-    <span class="post-listing__pubdate">28.07.2015</span>
-    <p itemprop="description" class="post-listing__excerpt">Pondělní střípky z 27.7.2015 Dneska toho máme na programu ZNAPS, font Monoid, roboty pro platformu Telegram a hackování aut.  ZNAPS Šílenství okolo kablíku ZNAPS se nevyhnulo ani nám. Lukáš L., já a Filip máme dohromady objednáno asi 10 kusů. Že nevíte, co...</p>
 </article>
 
     
@@ -66,8 +74,9 @@
 
 
 
+            </div>
         </div>
-        <nav class="1/4 grid__cell">
+        <nav class="col_tablet-first typeset">
             <h2><a href="/website/blog/archive/">Archive</a></h2>
             
 <ul>

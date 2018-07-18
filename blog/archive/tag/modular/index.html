@@ -28,8 +28,8 @@
 
 
 
-    <body class="page-container">
-        <nav>
+    <body class="page-container baseline-grid baseline-grid--visible">
+        <nav class="typeset">
             <ul>
                 <li><a href="/website/">Home</a></li>
                 <li><a href="/website/blog/">Blog</a></li>
@@ -38,27 +38,35 @@
 
         <div class="page-container__inner">
             <div class="content-block">
-    <div class="grid">
-        <div class="3/4 grid__cell">
-            <header>
+    <div class="row">
+        <div class="col-8_tablet-12">
+            <div class="typeset">
+                <header>
     <h1 itemprop="headline">Posts in </h1>
 </header>
 
 <main>
     
-        <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-listing">
+        <article itemtype="http://schema.org/BlogPosting" itemscope="" class="blog-posting ">
+    <div class="blog-posting__content">
+        <h1 itemprop="headline" class="blog-posting__headline">
+            <a href="/website/blog/2014/08/11/modular-menu-with-angularjs/" class="blog-posting__anchor">Creating Modular Menus in AngularJS</a>
+        </h1>
+        <p class="blog-posting__meta">
+            <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="blog-posting__author">
+                <span itemprop="name">Lukáš Marek</span>
+            </span>
+            <meta itemprop="datePublished" content="2014-08-11T12:48:00+00:00" />
+            <span class="blog-posting__pubdate">11.08.2014</span>
+        </p>
+        <p itemprop="description" class="blog-posting__excerpt">Recently, I had to design an AngularJS application that would be highly modular. The idea was to let each module to create its own menu items and its own routes.The final application should look like this:The menu on the left should be generated on-the-fly, based...</p>
+        
+    </div>
     
-        <img itemprop="image" src="http://3.bp.blogspot.com/-vhRlyVNm9wM/U-TmRNSdkxI/AAAAAAAAAYA/o4H8WBdQHUk/s72-c/Screen+Shot+2014-08-08+at+15.44.22.png" class="post-listing__image" />
+    <div class="blog-posting__media" style="background-image: url('http://3.bp.blogspot.com/-vhRlyVNm9wM/U-TmRNSdkxI/AAAAAAAAAYA/o4H8WBdQHUk/s72-c/Screen+Shot+2014-08-08+at+15.44.22.png')">
+        <img itemprop="image" src="http://3.bp.blogspot.com/-vhRlyVNm9wM/U-TmRNSdkxI/AAAAAAAAAYA/o4H8WBdQHUk/s72-c/Screen+Shot+2014-08-08+at+15.44.22.png" class="blog-posting__image" />
+    </div>
     
-    <a href="/website/blog/2014/08/11/modular-menu-with-angularjs/" class="post-listing__anchor">
-        <h1 itemprop="headline" class="post-listing__headline">Creating Modular Menus in AngularJS</h1>
-    </a>
-    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="post-listing__author">
-        <span itemprop="name">Lukáš Marek</span>
-    </span>
-    <meta itemprop="datePublished" content="2014-08-11T12:48:00+00:00" />
-    <span class="post-listing__pubdate">11.08.2014</span>
-    <p itemprop="description" class="post-listing__excerpt">Recently, I had to design an AngularJS application that would be highly modular. The idea was to let each module to create its own menu items and its own routes.The final application should look like this:<br...</p>
 </article>
 
     
@@ -66,8 +74,9 @@
 
 
 
+            </div>
         </div>
-        <nav class="1/4 grid__cell">
+        <nav class="col_tablet-first typeset">
             <h2><a href="/website/blog/archive/">Archive</a></h2>
             
 <ul>

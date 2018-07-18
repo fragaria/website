@@ -29,42 +29,52 @@
 
 
     <body class="page-container">
+        <nav>
+            <ul>
+                <li><a href="/website/">Home</a></li>
+                <li><a href="/website/blog/">Blog</a></li>
+            </ul>
+        </nav>
+
         <div class="page-container__inner">
+            <div class="content-block">
+    <div class="grid">
+        <div class="3/4 grid__cell">
             <header>
     <h1 itemprop="headline">Posts in </h1>
 </header>
 
 <main>
     
-        <article itemtype="http://schema.org/BlogPosting" itemscope="">
+        <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-listing">
     
-        <img itemprop="image" src="https://1.bp.blogspot.com/-1m372N2IuQ0/WIcSzGbwS3I/AAAAAAAAAy0/bZurnIWrbeslkr0s8CKcUyTGlLtwo2FaQCLcB/s72-c/hy99meknjhm-sandis-helvigs.jpg"/>
+        <img itemprop="image" src="https://1.bp.blogspot.com/-1m372N2IuQ0/WIcSzGbwS3I/AAAAAAAAAy0/bZurnIWrbeslkr0s8CKcUyTGlLtwo2FaQCLcB/s72-c/hy99meknjhm-sandis-helvigs.jpg" class="post-listing__image" />
     
-    <a href="/website/blog/2017/01/24/pondelni-stripky-z-2312017/">
-        <h1 itemprop="headline">Pondělní střípky z 23.1.2017</h1>
+    <a href="/website/blog/2017/01/24/pondelni-stripky-z-2312017/" class="post-listing__anchor">
+        <h1 itemprop="headline" class="post-listing__headline">Pondělní střípky z 23.1.2017</h1>
     </a>
-    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="post-listing__author">
         <span itemprop="name">Lukáš Marek</span>
     </span>
     <meta itemprop="datePublished" content="2017-01-24T10:05:00+00:00" />
-    <span>24.01.2017</span>
-    <p itemprop="description">Kalhoty jsou na cestě. Ve Fragarii byl opravdový architekt! Hrajeme si s RxJS v Angularu 2.0. A další. Drby z kancluDrby z kanclu zařazujeme hlavně pro Denisku, která čte střípky ráda, ale prográmátorské novinky jí moc nezajímají.Takže Deniska - první zkoušení...</p>
+    <span class="post-listing__pubdate">24.01.2017</span>
+    <p itemprop="description" class="post-listing__excerpt">Kalhoty jsou na cestě. Ve Fragarii byl opravdový architekt! Hrajeme si s RxJS v Angularu 2.0. A další. Drby z kancluDrby z kanclu zařazujeme hlavně pro Denisku, která čte střípky ráda, ale prográmátorské novinky jí moc nezajímají.Takže Deniska - první zkoušení...</p>
 </article>
 
     
-        <article itemtype="http://schema.org/BlogPosting" itemscope="">
+        <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-listing">
     
-        <img itemprop="image" src="https://4.bp.blogspot.com/-hZanygUQb3E/WHPdUdgo5WI/AAAAAAAAAuw/HW_O6ZYCr9wt9c216Lfc5uj1rrWWQcOZgCLcB/s72-c/IMG_20170109_095609%257E2.jpg"/>
+        <img itemprop="image" src="https://4.bp.blogspot.com/-hZanygUQb3E/WHPdUdgo5WI/AAAAAAAAAuw/HW_O6ZYCr9wt9c216Lfc5uj1rrWWQcOZgCLcB/s72-c/IMG_20170109_095609%257E2.jpg" class="post-listing__image" />
     
-    <a href="/website/blog/2017/01/10/pondelni-stripky-z-912017/">
-        <h1 itemprop="headline">Pondělní střípky z 9.1.2017</h1>
+    <a href="/website/blog/2017/01/10/pondelni-stripky-z-912017/" class="post-listing__anchor">
+        <h1 itemprop="headline" class="post-listing__headline">Pondělní střípky z 9.1.2017</h1>
     </a>
-    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="post-listing__author">
         <span itemprop="name">Lukáš Marek</span>
     </span>
     <meta itemprop="datePublished" content="2017-01-10T07:38:00+00:00" />
-    <span>10.01.2017</span>
-    <p itemprop="description">Tohle pondělí jsme se v kanclu konečně všichni sešli po Vánocích, takže se hlásím s prvními letošními střípky.JahodoviceO první, velmi milý, příspěvek do dema se zasloužil Tibor....</p>
+    <span class="post-listing__pubdate">10.01.2017</span>
+    <p itemprop="description" class="post-listing__excerpt">Tohle pondělí jsme se v kanclu konečně všichni sešli po Vánocích, takže se hlásím s prvními letošními střípky.JahodoviceO první, velmi milý, příspěvek do dema se zasloužil Tibor....</p>
 </article>
 
     
@@ -72,10 +82,10 @@
 
 
 
-
-<nav>
-    <h2>Archive</h2>
-    
+        </div>
+        <nav class="1/4 grid__cell">
+            <h2><a href="/website/blog/archive/">Archive</a></h2>
+            
 <ul>
     
         
@@ -98,7 +108,11 @@
     
 </ul>
 
-</nav>
+        </nav>
+    </div>
+</div>
+
+
 
         </div>
     </body>

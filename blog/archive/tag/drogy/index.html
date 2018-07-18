@@ -29,26 +29,36 @@
 
 
     <body class="page-container">
+        <nav>
+            <ul>
+                <li><a href="/website/">Home</a></li>
+                <li><a href="/website/blog/">Blog</a></li>
+            </ul>
+        </nav>
+
         <div class="page-container__inner">
+            <div class="content-block">
+    <div class="grid">
+        <div class="3/4 grid__cell">
             <header>
     <h1 itemprop="headline">Posts in </h1>
 </header>
 
 <main>
     
-        <article itemtype="http://schema.org/BlogPosting" itemscope="">
+        <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-listing">
     
-        <img itemprop="image" src="http://1.bp.blogspot.com/-tdxOMKBw-OQ/Umkag0f2-EI/AAAAAAAAARo/YvkL07rGzks/s72-c/boris-logo-70x202-black.png"/>
+        <img itemprop="image" src="http://1.bp.blogspot.com/-tdxOMKBw-OQ/Umkag0f2-EI/AAAAAAAAARo/YvkL07rGzks/s72-c/boris-logo-70x202-black.png" class="post-listing__image" />
     
-    <a href="/website/blog/2014/03/11/boris-moderni-system-pro-nepopularni/">
-        <h1 itemprop="headline">BorIS - moderní systém pro nepopulární sektor</h1>
+    <a href="/website/blog/2014/03/11/boris-moderni-system-pro-nepopularni/" class="post-listing__anchor">
+        <h1 itemprop="headline" class="post-listing__headline">BorIS - moderní systém pro nepopulární sektor</h1>
     </a>
-    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="post-listing__author">
         <span itemprop="name">Martin Burián</span>
     </span>
     <meta itemprop="datePublished" content="2014-03-11T11:22:00+00:00" />
-    <span>11.03.2014</span>
-    <p itemprop="description">O Borisovi&nbsp;jsme na blogu už jednou psali. Jen pro připomenutí: BorIS je elektronická databáze evidence výkonů v terénních programech drogových služeb. Pracovníci neziskové...</p>
+    <span class="post-listing__pubdate">11.03.2014</span>
+    <p itemprop="description" class="post-listing__excerpt">O Borisovi&nbsp;jsme na blogu už jednou psali. Jen pro připomenutí: BorIS je elektronická databáze evidence výkonů v terénních programech drogových služeb. Pracovníci neziskové...</p>
 </article>
 
     
@@ -56,10 +66,10 @@
 
 
 
-
-<nav>
-    <h2>Archive</h2>
-    
+        </div>
+        <nav class="1/4 grid__cell">
+            <h2><a href="/website/blog/archive/">Archive</a></h2>
+            
 <ul>
     
         
@@ -82,7 +92,11 @@
     
 </ul>
 
-</nav>
+        </nav>
+    </div>
+</div>
+
+
 
         </div>
     </body>

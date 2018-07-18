@@ -29,26 +29,36 @@
 
 
     <body class="page-container">
+        <nav>
+            <ul>
+                <li><a href="/website/">Home</a></li>
+                <li><a href="/website/blog/">Blog</a></li>
+            </ul>
+        </nav>
+
         <div class="page-container__inner">
+            <div class="content-block">
+    <div class="grid">
+        <div class="3/4 grid__cell">
             <header>
     <h1 itemprop="headline">Posts in 2016 Sep</h1>
 </header>
 
 <main>
     
-        <article itemtype="http://schema.org/BlogPosting" itemscope="">
+        <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-listing">
     
-        <img itemprop="image" src="https://1.bp.blogspot.com/-JIb241XABs8/V-DivKq4GYI/AAAAAAAAAJY/GqtW4-1I5hM04GxJpzo2kMRrm3mqjMSUgCLcB/s72-c/IMG_20160915_134828.jpg"/>
+        <img itemprop="image" src="https://1.bp.blogspot.com/-JIb241XABs8/V-DivKq4GYI/AAAAAAAAAJY/GqtW4-1I5hM04GxJpzo2kMRrm3mqjMSUgCLcB/s72-c/IMG_20160915_134828.jpg" class="post-listing__image" />
     
-    <a href="/website/blog/2016/09/20/zapisky-z-cest-krajem-krakonosovym/">
-        <h1 itemprop="headline">Zápisky z cest krajem Krakonošovým</h1>
+    <a href="/website/blog/2016/09/20/zapisky-z-cest-krajem-krakonosovym/" class="post-listing__anchor">
+        <h1 itemprop="headline" class="post-listing__headline">Zápisky z cest krajem Krakonošovým</h1>
     </a>
-    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="post-listing__author">
         <span itemprop="name">Jirka Chadima</span>
     </span>
     <meta itemprop="datePublished" content="2016-09-20T07:50:00+00:00" />
-    <span>20.09.2016</span>
-    <p itemprop="description">Už jste si možná na našem twitteru všimli, že i letos jsme se jako tradičně vydali na výroční výjezdní zasedání zvané Fraga-akce, tentokrát na chalupu Maršovku ukrytou v malebném Horním Maršově v Krkonoších. Podle všech zkušeností a očekávání se mělo jednat o intenzivní...</p>
+    <span class="post-listing__pubdate">20.09.2016</span>
+    <p itemprop="description" class="post-listing__excerpt">Už jste si možná na našem twitteru všimli, že i letos jsme se jako tradičně vydali na výroční výjezdní zasedání zvané Fraga-akce, tentokrát na chalupu Maršovku ukrytou v malebném Horním Maršově v Krkonoších. Podle všech zkušeností a očekávání se mělo jednat o intenzivní...</p>
 </article>
 
     
@@ -56,10 +66,10 @@
 
 
 
-
-<nav>
-    <h2>Archive</h2>
-    
+        </div>
+        <nav class="1/4 grid__cell">
+            <h2><a href="/website/blog/archive/">Archive</a></h2>
+            
 <ul>
     
         
@@ -82,7 +92,11 @@
     
 </ul>
 
-</nav>
+        </nav>
+    </div>
+</div>
+
+
 
         </div>
     </body>

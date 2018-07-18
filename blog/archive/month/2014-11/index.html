@@ -29,26 +29,36 @@
 
 
     <body class="page-container">
+        <nav>
+            <ul>
+                <li><a href="/website/">Home</a></li>
+                <li><a href="/website/blog/">Blog</a></li>
+            </ul>
+        </nav>
+
         <div class="page-container__inner">
+            <div class="content-block">
+    <div class="grid">
+        <div class="3/4 grid__cell">
             <header>
     <h1 itemprop="headline">Posts in 2014 Nov</h1>
 </header>
 
 <main>
     
-        <article itemtype="http://schema.org/BlogPosting" itemscope="">
+        <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-listing">
     
-        <img itemprop="image" src="http://4.bp.blogspot.com/-4Ws4a3qrwx0/VGDSstnVTBI/AAAAAAAAE-g/wufsc4l39kU/s72-c/Sni%CC%81mek%2Bobrazovky%2B2014-11-10%2Bv%C2%A015.58.11.png"/>
+        <img itemprop="image" src="http://4.bp.blogspot.com/-4Ws4a3qrwx0/VGDSstnVTBI/AAAAAAAAE-g/wufsc4l39kU/s72-c/Sni%CC%81mek%2Bobrazovky%2B2014-11-10%2Bv%C2%A015.58.11.png" class="post-listing__image" />
     
-    <a href="/website/blog/2014/11/14/fulltext-cesky-pomoci-djanga/">
-        <h1 itemprop="headline">Fulltext česky pomocí Djanga a Elasticsearch</h1>
+    <a href="/website/blog/2014/11/14/fulltext-cesky-pomoci-djanga/" class="post-listing__anchor">
+        <h1 itemprop="headline" class="post-listing__headline">Fulltext česky pomocí Djanga a Elasticsearch</h1>
     </a>
-    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="post-listing__author">
         <span itemprop="name">Filip Vařecha</span>
     </span>
     <meta itemprop="datePublished" content="2014-11-14T09:00:00+00:00" />
-    <span>14.11.2014</span>
-    <p itemprop="description">Fulltextové vyhledávání je k mojí nelibosti celkem často na webu opomíjená funkce. Klasickým argumentem, proč fulltext nedělat je zpravidla, že je to složité a hrozně časově náročné udělat. Klient je často uveden v omyl, že spolehlivé fulltextové vyhledávání je práce na...</p>
+    <span class="post-listing__pubdate">14.11.2014</span>
+    <p itemprop="description" class="post-listing__excerpt">Fulltextové vyhledávání je k mojí nelibosti celkem často na webu opomíjená funkce. Klasickým argumentem, proč fulltext nedělat je zpravidla, že je to složité a hrozně časově náročné udělat. Klient je často uveden v omyl, že spolehlivé fulltextové vyhledávání je práce na...</p>
 </article>
 
     
@@ -56,10 +66,10 @@
 
 
 
-
-<nav>
-    <h2>Archive</h2>
-    
+        </div>
+        <nav class="1/4 grid__cell">
+            <h2><a href="/website/blog/archive/">Archive</a></h2>
+            
 <ul>
     
         
@@ -82,7 +92,11 @@
     
 </ul>
 
-</nav>
+        </nav>
+    </div>
+</div>
+
+
 
         </div>
     </body>

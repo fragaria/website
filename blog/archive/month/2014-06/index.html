@@ -29,24 +29,34 @@
 
 
     <body class="page-container">
+        <nav>
+            <ul>
+                <li><a href="/website/">Home</a></li>
+                <li><a href="/website/blog/">Blog</a></li>
+            </ul>
+        </nav>
+
         <div class="page-container__inner">
+            <div class="content-block">
+    <div class="grid">
+        <div class="3/4 grid__cell">
             <header>
     <h1 itemprop="headline">Posts in 2014 Jun</h1>
 </header>
 
 <main>
     
-        <article itemtype="http://schema.org/BlogPosting" itemscope="">
+        <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-listing">
     
-    <a href="/website/blog/2014/06/09/analyza-prototyp-oboji/">
-        <h1 itemprop="headline">Analýza? Prototyp? Obojí!</h1>
+    <a href="/website/blog/2014/06/09/analyza-prototyp-oboji/" class="post-listing__anchor">
+        <h1 itemprop="headline" class="post-listing__headline">Analýza? Prototyp? Obojí!</h1>
     </a>
-    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="post-listing__author">
         <span itemprop="name">Lukáš Marek</span>
     </span>
     <meta itemprop="datePublished" content="2014-06-09T12:29:00+00:00" />
-    <span>09.06.2014</span>
-    <p itemprop="description"> Prototyp &gt; analýza Je známo, že prototyp/mock up uživatelského rozhraní, pokud je tvořen správně, dokáže zcela nahradit značnou část úvodní analýzy. Zejména v případech, kdy je zákazník technikou nepolíben, nemá podle mého valný smysl předvádět znalosti UML modelování a zahrnovat ho desítkami diagramů a...</p>
+    <span class="post-listing__pubdate">09.06.2014</span>
+    <p itemprop="description" class="post-listing__excerpt"> Prototyp &gt; analýza Je známo, že prototyp/mock up uživatelského rozhraní, pokud je tvořen správně, dokáže zcela nahradit značnou část úvodní analýzy. Zejména v případech, kdy je zákazník technikou nepolíben, nemá podle mého valný smysl předvádět znalosti UML modelování a zahrnovat ho desítkami diagramů a...</p>
 </article>
 
     
@@ -54,10 +64,10 @@
 
 
 
-
-<nav>
-    <h2>Archive</h2>
-    
+        </div>
+        <nav class="1/4 grid__cell">
+            <h2><a href="/website/blog/archive/">Archive</a></h2>
+            
 <ul>
     
         
@@ -80,7 +90,11 @@
     
 </ul>
 
-</nav>
+        </nav>
+    </div>
+</div>
+
+
 
         </div>
     </body>

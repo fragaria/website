@@ -29,24 +29,34 @@
 
 
     <body class="page-container">
+        <nav>
+            <ul>
+                <li><a href="/website/">Home</a></li>
+                <li><a href="/website/blog/">Blog</a></li>
+            </ul>
+        </nav>
+
         <div class="page-container__inner">
+            <div class="content-block">
+    <div class="grid">
+        <div class="3/4 grid__cell">
             <header>
     <h1 itemprop="headline">Posts in </h1>
 </header>
 
 <main>
     
-        <article itemtype="http://schema.org/BlogPosting" itemscope="">
+        <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-listing">
     
-    <a href="/website/blog/2015/01/12/the-reason-angular-js-will-fail/">
-        <h1 itemprop="headline">The reason Angular JS will fail. Revisited!</h1>
+    <a href="/website/blog/2015/01/12/the-reason-angular-js-will-fail/" class="post-listing__anchor">
+        <h1 itemprop="headline" class="post-listing__headline">The reason Angular JS will fail. Revisited!</h1>
     </a>
-    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="post-listing__author">
         <span itemprop="name">Lukáš Marek</span>
     </span>
     <meta itemprop="datePublished" content="2015-01-12T08:00:00+00:00" />
-    <span>12.01.2015</span>
-    <p itemprop="description"> Recently, I found in my RSS reader George Butiri’s article named The reason Angular JS will fail. Go ahead and read it – it’s quite interesting. Naturally, I do not agree with George’s conclusions, but that is not...</p>
+    <span class="post-listing__pubdate">12.01.2015</span>
+    <p itemprop="description" class="post-listing__excerpt"> Recently, I found in my RSS reader George Butiri’s article named The reason Angular JS will fail. Go ahead and read it – it’s quite interesting. Naturally, I do not agree with George’s conclusions, but that is not...</p>
 </article>
 
     
@@ -54,10 +64,10 @@
 
 
 
-
-<nav>
-    <h2>Archive</h2>
-    
+        </div>
+        <nav class="1/4 grid__cell">
+            <h2><a href="/website/blog/archive/">Archive</a></h2>
+            
 <ul>
     
         
@@ -80,7 +90,11 @@
     
 </ul>
 
-</nav>
+        </nav>
+    </div>
+</div>
+
+
 
         </div>
     </body>

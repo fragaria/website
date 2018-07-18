@@ -29,26 +29,36 @@
 
 
     <body class="page-container">
+        <nav>
+            <ul>
+                <li><a href="/website/">Home</a></li>
+                <li><a href="/website/blog/">Blog</a></li>
+            </ul>
+        </nav>
+
         <div class="page-container__inner">
+            <div class="content-block">
+    <div class="grid">
+        <div class="3/4 grid__cell">
             <header>
     <h1 itemprop="headline">Posts in </h1>
 </header>
 
 <main>
     
-        <article itemtype="http://schema.org/BlogPosting" itemscope="">
+        <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-listing">
     
-        <img itemprop="image" src="http://4.bp.blogspot.com/-HRuz6pT1KDo/VawKmZseNgI/AAAAAAAAAAY/KMdIChZwKss/s72-c/Diagram1.png"/>
+        <img itemprop="image" src="http://4.bp.blogspot.com/-HRuz6pT1KDo/VawKmZseNgI/AAAAAAAAAAY/KMdIChZwKss/s72-c/Diagram1.png" class="post-listing__image" />
     
-    <a href="/website/blog/2015/07/23/webassembly-cesta-k-nemu/">
-        <h1 itemprop="headline">WebAssembly a cesta k němu</h1>
+    <a href="/website/blog/2015/07/23/webassembly-cesta-k-nemu/" class="post-listing__anchor">
+        <h1 itemprop="headline" class="post-listing__headline">WebAssembly a cesta k němu</h1>
     </a>
-    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="post-listing__author">
         <span itemprop="name">Hynek Urban</span>
     </span>
     <meta itemprop="datePublished" content="2015-07-23T10:31:00+00:00" />
-    <span>23.07.2015</span>
-    <p itemprop="description">Je to asi měsíc, co Brendan Eich (autor JavaScriptu) zveřejnil na svém blogu oznámení o WebAsembly, binárním formátu pro vykonavatelný kód, který by měl v budoucnu koexistovat v prohlížečích vedle JavaScriptu. Pokud projekt nevyzní do ztracena (a zdá se, že má všechny předpoklady pro...</p>
+    <span class="post-listing__pubdate">23.07.2015</span>
+    <p itemprop="description" class="post-listing__excerpt">Je to asi měsíc, co Brendan Eich (autor JavaScriptu) zveřejnil na svém blogu oznámení o WebAsembly, binárním formátu pro vykonavatelný kód, který by měl v budoucnu koexistovat v prohlížečích vedle JavaScriptu. Pokud projekt nevyzní do ztracena (a zdá se, že má všechny předpoklady pro...</p>
 </article>
 
     
@@ -56,10 +66,10 @@
 
 
 
-
-<nav>
-    <h2>Archive</h2>
-    
+        </div>
+        <nav class="1/4 grid__cell">
+            <h2><a href="/website/blog/archive/">Archive</a></h2>
+            
 <ul>
     
         
@@ -82,7 +92,11 @@
     
 </ul>
 
-</nav>
+        </nav>
+    </div>
+</div>
+
+
 
         </div>
     </body>

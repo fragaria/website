@@ -29,26 +29,36 @@
 
 
     <body class="page-container">
+        <nav>
+            <ul>
+                <li><a href="/website/">Home</a></li>
+                <li><a href="/website/blog/">Blog</a></li>
+            </ul>
+        </nav>
+
         <div class="page-container__inner">
+            <div class="content-block">
+    <div class="grid">
+        <div class="3/4 grid__cell">
             <header>
     <h1 itemprop="headline">Posts in </h1>
 </header>
 
 <main>
     
-        <article itemtype="http://schema.org/BlogPosting" itemscope="">
+        <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-listing">
     
-        <img itemprop="image" src="http://1.bp.blogspot.com/-_tOz57fyTrM/VVnWgI-um6I/AAAAAAAAAg4/ctMVG-2AlW0/s72-c/IMG_20150515_130931.jpg"/>
+        <img itemprop="image" src="http://1.bp.blogspot.com/-_tOz57fyTrM/VVnWgI-um6I/AAAAAAAAAg4/ctMVG-2AlW0/s72-c/IMG_20150515_130931.jpg" class="post-listing__image" />
     
-    <a href="/website/blog/2015/05/18/pondelni-stripky-z-2252015/">
-        <h1 itemprop="headline">Pondělní střípky z 18.5.2015</h1>
+    <a href="/website/blog/2015/05/18/pondelni-stripky-z-2252015/" class="post-listing__anchor">
+        <h1 itemprop="headline" class="post-listing__headline">Pondělní střípky z 18.5.2015</h1>
     </a>
-    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="post-listing__author">
         <span itemprop="name">Lukáš Marek</span>
     </span>
     <meta itemprop="datePublished" content="2015-05-18T12:12:00+00:00" />
-    <span>18.05.2015</span>
-    <p itemprop="description">Dnešní střípky obsahují 0% hokeje.Duet displayPrvní střípek udělal radost hlavně mě. Mám doma totiž starý iPad 2, pro který už jsem neměl použití.A hopla, aplikace Duet display z něj umí udělat externí obrazovku pro Mac (případně i pro PC). Funguje to...</p>
+    <span class="post-listing__pubdate">18.05.2015</span>
+    <p itemprop="description" class="post-listing__excerpt">Dnešní střípky obsahují 0% hokeje.Duet displayPrvní střípek udělal radost hlavně mě. Mám doma totiž starý iPad 2, pro který už jsem neměl použití.A hopla, aplikace Duet display z něj umí udělat externí obrazovku pro Mac (případně i pro PC). Funguje to...</p>
 </article>
 
     
@@ -56,10 +66,10 @@
 
 
 
-
-<nav>
-    <h2>Archive</h2>
-    
+        </div>
+        <nav class="1/4 grid__cell">
+            <h2><a href="/website/blog/archive/">Archive</a></h2>
+            
 <ul>
     
         
@@ -82,7 +92,11 @@
     
 </ul>
 
-</nav>
+        </nav>
+    </div>
+</div>
+
+
 
         </div>
     </body>

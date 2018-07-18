@@ -29,26 +29,36 @@
 
 
     <body class="page-container">
+        <nav>
+            <ul>
+                <li><a href="/website/">Home</a></li>
+                <li><a href="/website/blog/">Blog</a></li>
+            </ul>
+        </nav>
+
         <div class="page-container__inner">
+            <div class="content-block">
+    <div class="grid">
+        <div class="3/4 grid__cell">
             <header>
     <h1 itemprop="headline">Posts in 2017 Jun</h1>
 </header>
 
 <main>
     
-        <article itemtype="http://schema.org/BlogPosting" itemscope="">
+        <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-listing">
     
-        <img itemprop="image" src="https://4.bp.blogspot.com/-M7nNiOQc2rE/WU-YmE_VeZI/AAAAAAAAA5c/HvIktzxZY104b7GyCeoTPgPYSqweYgpZQCPcBGAYYCw/s72-c/tim-gouw-68319.jpg"/>
+        <img itemprop="image" src="https://4.bp.blogspot.com/-M7nNiOQc2rE/WU-YmE_VeZI/AAAAAAAAA5c/HvIktzxZY104b7GyCeoTPgPYSqweYgpZQCPcBGAYYCw/s72-c/tim-gouw-68319.jpg" class="post-listing__image" />
     
-    <a href="/website/blog/2017/06/26/npm-packages-101-creating-npm-package/">
-        <h1 itemprop="headline">NPM packages 101: Creating npm package</h1>
+    <a href="/website/blog/2017/06/26/npm-packages-101-creating-npm-package/" class="post-listing__anchor">
+        <h1 itemprop="headline" class="post-listing__headline">NPM packages 101: Creating npm package</h1>
     </a>
-    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="post-listing__author">
         <span itemprop="name">Jakub Podlaha</span>
     </span>
     <meta itemprop="datePublished" content="2017-06-26T09:52:00+00:00" />
-    <span>26.06.2017</span>
-    <p itemprop="description">Going down the path of node package creator - guide to create npm package and publish it to npm repository. <a href="http://unsplash.com/@punttim?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" rel="noopener noreferrer" style="background-color:...</p>
+    <span class="post-listing__pubdate">26.06.2017</span>
+    <p itemprop="description" class="post-listing__excerpt">Going down the path of node package creator - guide to create npm package and publish it to npm repository. <a href="http://unsplash.com/@punttim?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" rel="noopener noreferrer" style="background-color:...</p>
 </article>
 
     
@@ -56,10 +66,10 @@
 
 
 
-
-<nav>
-    <h2>Archive</h2>
-    
+        </div>
+        <nav class="1/4 grid__cell">
+            <h2><a href="/website/blog/archive/">Archive</a></h2>
+            
 <ul>
     
         
@@ -82,7 +92,11 @@
     
 </ul>
 
-</nav>
+        </nav>
+    </div>
+</div>
+
+
 
         </div>
     </body>

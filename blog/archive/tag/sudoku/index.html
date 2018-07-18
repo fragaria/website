@@ -29,26 +29,36 @@
 
 
     <body class="page-container">
+        <nav>
+            <ul>
+                <li><a href="/website/">Home</a></li>
+                <li><a href="/website/blog/">Blog</a></li>
+            </ul>
+        </nav>
+
         <div class="page-container__inner">
+            <div class="content-block">
+    <div class="grid">
+        <div class="3/4 grid__cell">
             <header>
     <h1 itemprop="headline">Posts in </h1>
 </header>
 
 <main>
     
-        <article itemtype="http://schema.org/BlogPosting" itemscope="">
+        <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-listing">
     
-        <img itemprop="image" src="https://1.bp.blogspot.com/-etUeXi5dXfk/VxU3ivmXC5I/AAAAAAAAOco/On3vq6AD6nooK66rHqUl7c774lNxyWxxACK4B/s72-c/graph-gray.png"/>
+        <img itemprop="image" src="https://1.bp.blogspot.com/-etUeXi5dXfk/VxU3ivmXC5I/AAAAAAAAOco/On3vq6AD6nooK66rHqUl7c774lNxyWxxACK4B/s72-c/graph-gray.png" class="post-listing__image" />
     
-    <a href="/website/blog/2016/04/27/zero-knowledge-proofs/">
-        <h1 itemprop="headline">Zero knowledge proofs</h1>
+    <a href="/website/blog/2016/04/27/zero-knowledge-proofs/" class="post-listing__anchor">
+        <h1 itemprop="headline" class="post-listing__headline">Zero knowledge proofs</h1>
     </a>
-    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="post-listing__author">
         <span itemprop="name">pavel vojacek</span>
     </span>
     <meta itemprop="datePublished" content="2016-04-27T08:46:00+00:00" />
-    <span>27.04.2016</span>
-    <p itemprop="description">Kryptografie je plná fascinujících postupů - Diffie-Hellman výměna klíčů, šifrování veřejným klíčem. Představa, že komunikující strany potřebují mít předem sdílený klíč, aby mohli šifrovaně komunikovat vydržela několik století a podařilo se jí překonat až v polovině minulého století. O DH výměně i RSA bylo napsáno...</p>
+    <span class="post-listing__pubdate">27.04.2016</span>
+    <p itemprop="description" class="post-listing__excerpt">Kryptografie je plná fascinujících postupů - Diffie-Hellman výměna klíčů, šifrování veřejným klíčem. Představa, že komunikující strany potřebují mít předem sdílený klíč, aby mohli šifrovaně komunikovat vydržela několik století a podařilo se jí překonat až v polovině minulého století. O DH výměně i RSA bylo napsáno...</p>
 </article>
 
     
@@ -56,10 +66,10 @@
 
 
 
-
-<nav>
-    <h2>Archive</h2>
-    
+        </div>
+        <nav class="1/4 grid__cell">
+            <h2><a href="/website/blog/archive/">Archive</a></h2>
+            
 <ul>
     
         
@@ -82,7 +92,11 @@
     
 </ul>
 
-</nav>
+        </nav>
+    </div>
+</div>
+
+
 
         </div>
     </body>

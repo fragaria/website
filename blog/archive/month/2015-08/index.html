@@ -29,26 +29,36 @@
 
 
     <body class="page-container">
+        <nav>
+            <ul>
+                <li><a href="/website/">Home</a></li>
+                <li><a href="/website/blog/">Blog</a></li>
+            </ul>
+        </nav>
+
         <div class="page-container__inner">
+            <div class="content-block">
+    <div class="grid">
+        <div class="3/4 grid__cell">
             <header>
     <h1 itemprop="headline">Posts in 2015 Aug</h1>
 </header>
 
 <main>
     
-        <article itemtype="http://schema.org/BlogPosting" itemscope="">
+        <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-listing">
     
-        <img itemprop="image" src="http://1.bp.blogspot.com/-VWRnLzr_eVs/VeVfnOB_FTI/AAAAAAAAEag/nWJee2qiPyA/s72-c/2015-08-31-870.jpg"/>
+        <img itemprop="image" src="http://1.bp.blogspot.com/-VWRnLzr_eVs/VeVfnOB_FTI/AAAAAAAAEag/nWJee2qiPyA/s72-c/2015-08-31-870.jpg" class="post-listing__image" />
     
-    <a href="/website/blog/2015/08/24/chceme-pomoci-uprchlikum-budeme-radi/">
-        <h1 itemprop="headline">Chceme pomoci uprchlíkům a budeme rádi, pokud se zapojíte</h1>
+    <a href="/website/blog/2015/08/24/chceme-pomoci-uprchlikum-budeme-radi/" class="post-listing__anchor">
+        <h1 itemprop="headline" class="post-listing__headline">Chceme pomoci uprchlíkům a budeme rádi, pokud se zapojíte</h1>
     </a>
-    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="post-listing__author">
         <span itemprop="name">Martin Burián</span>
     </span>
     <meta itemprop="datePublished" content="2015-08-24T13:44:00+00:00" />
-    <span>24.08.2015</span>
-    <p itemprop="description">Nechávám stranou otázku, zda problém s uprchlíky je uměle vytvořený, nebo je to klasické čecháčkovství (čti: strach o vlastní blaho), příp. zda to je problém, není to problém ... pravice, levice, Ovce či výzva vědce ...Rozhodli jsme se nekecat a pomáhat. Budeme rádi,...</p>
+    <span class="post-listing__pubdate">24.08.2015</span>
+    <p itemprop="description" class="post-listing__excerpt">Nechávám stranou otázku, zda problém s uprchlíky je uměle vytvořený, nebo je to klasické čecháčkovství (čti: strach o vlastní blaho), příp. zda to je problém, není to problém ... pravice, levice, Ovce či výzva vědce ...Rozhodli jsme se nekecat a pomáhat. Budeme rádi,...</p>
 </article>
 
     
@@ -56,10 +66,10 @@
 
 
 
-
-<nav>
-    <h2>Archive</h2>
-    
+        </div>
+        <nav class="1/4 grid__cell">
+            <h2><a href="/website/blog/archive/">Archive</a></h2>
+            
 <ul>
     
         
@@ -82,7 +92,11 @@
     
 </ul>
 
-</nav>
+        </nav>
+    </div>
+</div>
+
+
 
         </div>
     </body>

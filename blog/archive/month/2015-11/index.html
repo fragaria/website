@@ -29,26 +29,36 @@
 
 
     <body class="page-container">
+        <nav>
+            <ul>
+                <li><a href="/website/">Home</a></li>
+                <li><a href="/website/blog/">Blog</a></li>
+            </ul>
+        </nav>
+
         <div class="page-container__inner">
+            <div class="content-block">
+    <div class="grid">
+        <div class="3/4 grid__cell">
             <header>
     <h1 itemprop="headline">Posts in 2015 Nov</h1>
 </header>
 
 <main>
     
-        <article itemtype="http://schema.org/BlogPosting" itemscope="">
+        <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-listing">
     
-        <img itemprop="image" src="http://2.bp.blogspot.com/-lmk0nJAZX0c/VkGrAm4PmtI/AAAAAAAAE1M/bu1YbDDpSqA/s72-c/pycon-cz-logo-fb-52d063c4.png"/>
+        <img itemprop="image" src="http://2.bp.blogspot.com/-lmk0nJAZX0c/VkGrAm4PmtI/AAAAAAAAE1M/bu1YbDDpSqA/s72-c/pycon-cz-logo-fb-52d063c4.png" class="post-listing__image" />
     
-    <a href="/website/blog/2015/11/09/podzimni-stripky/">
-        <h1 itemprop="headline">Podzimní střípky</h1>
+    <a href="/website/blog/2015/11/09/podzimni-stripky/" class="post-listing__anchor">
+        <h1 itemprop="headline" class="post-listing__headline">Podzimní střípky</h1>
     </a>
-    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="post-listing__author">
         <span itemprop="name">Martin Burián</span>
     </span>
     <meta itemprop="datePublished" content="2015-11-09T13:35:00+00:00" />
-    <span>09.11.2015</span>
-    <p itemprop="description">Předně bych se rád omluvil pravidelným čtenářům našich střípků. Prostě jsme se na ně pár týdnů vykašlali. Dnes jsme se ale hecli a přinášíme zajímavosti z Fragy i okolí.Amazon LambdaAmazon Lambda je cloudová služba umožňující nahrát kód, obsahující nějakou bezestavovou...</p>
+    <span class="post-listing__pubdate">09.11.2015</span>
+    <p itemprop="description" class="post-listing__excerpt">Předně bych se rád omluvil pravidelným čtenářům našich střípků. Prostě jsme se na ně pár týdnů vykašlali. Dnes jsme se ale hecli a přinášíme zajímavosti z Fragy i okolí.Amazon LambdaAmazon Lambda je cloudová služba umožňující nahrát kód, obsahující nějakou bezestavovou...</p>
 </article>
 
     
@@ -56,10 +66,10 @@
 
 
 
-
-<nav>
-    <h2>Archive</h2>
-    
+        </div>
+        <nav class="1/4 grid__cell">
+            <h2><a href="/website/blog/archive/">Archive</a></h2>
+            
 <ul>
     
         
@@ -82,7 +92,11 @@
     
 </ul>
 
-</nav>
+        </nav>
+    </div>
+</div>
+
+
 
         </div>
     </body>

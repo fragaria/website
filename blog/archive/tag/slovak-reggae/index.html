@@ -29,24 +29,34 @@
 
 
     <body class="page-container">
+        <nav>
+            <ul>
+                <li><a href="/website/">Home</a></li>
+                <li><a href="/website/blog/">Blog</a></li>
+            </ul>
+        </nav>
+
         <div class="page-container__inner">
+            <div class="content-block">
+    <div class="grid">
+        <div class="3/4 grid__cell">
             <header>
     <h1 itemprop="headline">Posts in </h1>
 </header>
 
 <main>
     
-        <article itemtype="http://schema.org/BlogPosting" itemscope="">
+        <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-listing">
     
-    <a href="/website/blog/2017/05/15/vyzva-pre-obcanov-cechie-trud-za/">
-        <h1 itemprop="headline">Zo studnice SK pop music</h1>
+    <a href="/website/blog/2017/05/15/vyzva-pre-obcanov-cechie-trud-za/" class="post-listing__anchor">
+        <h1 itemprop="headline" class="post-listing__headline">Zo studnice SK pop music</h1>
     </a>
-    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="post-listing__author">
         <span itemprop="name">Tibor Kulčár</span>
     </span>
     <meta itemprop="datePublished" content="2017-05-15T11:21:00+00:00" />
-    <span>15.05.2017</span>
-    <p itemprop="description">Trud za domovinou ma primäl načrieť do obdobia zlatého veku reggae na Slovensku a zostaviť túto zbierku skvostov rokov 80-tych. </p>
+    <span class="post-listing__pubdate">15.05.2017</span>
+    <p itemprop="description" class="post-listing__excerpt">Trud za domovinou ma primäl načrieť do obdobia zlatého veku reggae na Slovensku a zostaviť túto zbierku skvostov rokov 80-tych. </p>
 </article>
 
     
@@ -54,10 +64,10 @@
 
 
 
-
-<nav>
-    <h2>Archive</h2>
-    
+        </div>
+        <nav class="1/4 grid__cell">
+            <h2><a href="/website/blog/archive/">Archive</a></h2>
+            
 <ul>
     
         
@@ -80,7 +90,11 @@
     
 </ul>
 
-</nav>
+        </nav>
+    </div>
+</div>
+
+
 
         </div>
     </body>

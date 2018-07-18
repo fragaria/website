@@ -29,26 +29,36 @@
 
 
     <body class="page-container">
+        <nav>
+            <ul>
+                <li><a href="/website/">Home</a></li>
+                <li><a href="/website/blog/">Blog</a></li>
+            </ul>
+        </nav>
+
         <div class="page-container__inner">
+            <div class="content-block">
+    <div class="grid">
+        <div class="3/4 grid__cell">
             <header>
     <h1 itemprop="headline">Posts in </h1>
 </header>
 
 <main>
     
-        <article itemtype="http://schema.org/BlogPosting" itemscope="">
+        <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-listing">
     
-        <img itemprop="image" src="https://1.bp.blogspot.com/-WYKgaZSdXrU/WISTpBpTShI/AAAAAAAAAyc/eNNyFyA9WHUE6tU2fJFdCjQeiqc0LxSrwCLcB/s72-c/Screen%2BShot%2B2017-01-22%2Bat%2B12.11.58.png"/>
+        <img itemprop="image" src="https://1.bp.blogspot.com/-WYKgaZSdXrU/WISTpBpTShI/AAAAAAAAAyc/eNNyFyA9WHUE6tU2fJFdCjQeiqc0LxSrwCLcB/s72-c/Screen%2BShot%2B2017-01-22%2Bat%2B12.11.58.png" class="post-listing__image" />
     
-    <a href="/website/blog/2017/01/26/na-dovolenou-s-angularem/">
-        <h1 itemprop="headline">Na dovolenou s Angularem</h1>
+    <a href="/website/blog/2017/01/26/na-dovolenou-s-angularem/" class="post-listing__anchor">
+        <h1 itemprop="headline" class="post-listing__headline">Na dovolenou s Angularem</h1>
     </a>
-    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="post-listing__author">
         <span itemprop="name">Lukáš Marek</span>
     </span>
     <meta itemprop="datePublished" content="2017-01-26T08:38:00+00:00" />
-    <span>26.01.2017</span>
-    <p itemprop="description">Jak udělat stránky s dynamickým pozadím, kde bude pokaždé nová fotka stažená z Flickeru? V Angularu překvapivě jednoduše.Proč?Každý rok na podzim se jezdíme s chlapci na dovolenou. Protože už jezdíme víc než 10 let, logicky vzniklo několik tradic, které se snažíme více...</p>
+    <span class="post-listing__pubdate">26.01.2017</span>
+    <p itemprop="description" class="post-listing__excerpt">Jak udělat stránky s dynamickým pozadím, kde bude pokaždé nová fotka stažená z Flickeru? V Angularu překvapivě jednoduše.Proč?Každý rok na podzim se jezdíme s chlapci na dovolenou. Protože už jezdíme víc než 10 let, logicky vzniklo několik tradic, které se snažíme více...</p>
 </article>
 
     
@@ -56,10 +66,10 @@
 
 
 
-
-<nav>
-    <h2>Archive</h2>
-    
+        </div>
+        <nav class="1/4 grid__cell">
+            <h2><a href="/website/blog/archive/">Archive</a></h2>
+            
 <ul>
     
         
@@ -82,7 +92,11 @@
     
 </ul>
 
-</nav>
+        </nav>
+    </div>
+</div>
+
+
 
         </div>
     </body>

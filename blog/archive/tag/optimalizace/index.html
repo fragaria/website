@@ -29,26 +29,36 @@
 
 
     <body class="page-container">
+        <nav>
+            <ul>
+                <li><a href="/website/">Home</a></li>
+                <li><a href="/website/blog/">Blog</a></li>
+            </ul>
+        </nav>
+
         <div class="page-container__inner">
+            <div class="content-block">
+    <div class="grid">
+        <div class="3/4 grid__cell">
             <header>
     <h1 itemprop="headline">Posts in </h1>
 </header>
 
 <main>
     
-        <article itemtype="http://schema.org/BlogPosting" itemscope="">
+        <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-listing">
     
-        <img itemprop="image" src="http://1.bp.blogspot.com/-qcAPoHZyeS0/UoTO1M2iy_I/AAAAAAAAAZM/uIGfBwb6_Tw/s72-c/Screen+Shot+2013-11-14+at+14.22.43.png"/>
+        <img itemprop="image" src="http://1.bp.blogspot.com/-qcAPoHZyeS0/UoTO1M2iy_I/AAAAAAAAAZM/uIGfBwb6_Tw/s72-c/Screen+Shot+2013-11-14+at+14.22.43.png" class="post-listing__image" />
     
-    <a href="/website/blog/2013/11/14/optimalizace-rychlosti-webu/">
-        <h1 itemprop="headline">Optimalizace rychlosti webu</h1>
+    <a href="/website/blog/2013/11/14/optimalizace-rychlosti-webu/" class="post-listing__anchor">
+        <h1 itemprop="headline" class="post-listing__headline">Optimalizace rychlosti webu</h1>
     </a>
-    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="post-listing__author">
         <span itemprop="name">Martin Bílek</span>
     </span>
     <meta itemprop="datePublished" content="2013-11-14T13:26:00+00:00" />
-    <span>14.11.2013</span>
-    <p itemprop="description">Na blogu Google vývojářů vyšel zajímavý článek o tom, jak lze velmi jednoduše a s minimálními náklady (i s minimální časovou náročností) výrazně zrychlit webové stránky z pohledu rychlosti načtení stránky pro uživatele i z pohledu zátěže na infrastrukturu.Problematice optimalizace načítání webový...</p>
+    <span class="post-listing__pubdate">14.11.2013</span>
+    <p itemprop="description" class="post-listing__excerpt">Na blogu Google vývojářů vyšel zajímavý článek o tom, jak lze velmi jednoduše a s minimálními náklady (i s minimální časovou náročností) výrazně zrychlit webové stránky z pohledu rychlosti načtení stránky pro uživatele i z pohledu zátěže na infrastrukturu.Problematice optimalizace načítání webový...</p>
 </article>
 
     
@@ -56,10 +66,10 @@
 
 
 
-
-<nav>
-    <h2>Archive</h2>
-    
+        </div>
+        <nav class="1/4 grid__cell">
+            <h2><a href="/website/blog/archive/">Archive</a></h2>
+            
 <ul>
     
         
@@ -82,7 +92,11 @@
     
 </ul>
 
-</nav>
+        </nav>
+    </div>
+</div>
+
+
 
         </div>
     </body>

@@ -29,26 +29,36 @@
 
 
     <body class="page-container">
+        <nav>
+            <ul>
+                <li><a href="/website/">Home</a></li>
+                <li><a href="/website/blog/">Blog</a></li>
+            </ul>
+        </nav>
+
         <div class="page-container__inner">
+            <div class="content-block">
+    <div class="grid">
+        <div class="3/4 grid__cell">
             <header>
     <h1 itemprop="headline">Posts in </h1>
 </header>
 
 <main>
     
-        <article itemtype="http://schema.org/BlogPosting" itemscope="">
+        <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-listing">
     
-        <img itemprop="image" src="http://2.bp.blogspot.com/-4tu1uJoUPkc/VWLQzuJptyI/AAAAAAAAAhc/Isv16Hxfbd4/s72-c/node_inspector.png"/>
+        <img itemprop="image" src="http://2.bp.blogspot.com/-4tu1uJoUPkc/VWLQzuJptyI/AAAAAAAAAhc/Isv16Hxfbd4/s72-c/node_inspector.png" class="post-listing__image" />
     
-    <a href="/website/blog/2015/05/27/debugujeme-v-nodejs/">
-        <h1 itemprop="headline">Debugujeme v Node.js</h1>
+    <a href="/website/blog/2015/05/27/debugujeme-v-nodejs/" class="post-listing__anchor">
+        <h1 itemprop="headline" class="post-listing__headline">Debugujeme v Node.js</h1>
     </a>
-    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="post-listing__author">
         <span itemprop="name">Hynek Urban</span>
     </span>
     <meta itemprop="datePublished" content="2015-05-27T07:00:00+00:00" />
-    <span>27.05.2015</span>
-    <p itemprop="description">Jakožto nově příchozí do světa Node.js jsem se záhy začal zajímat o způsob, jak efektivně ladit kód v Node.js. Donedávna jsem se pohyboval především v prostředí Pythonu, kde jsem byl zvyklý používat pdb. Jaké jsou alternativy pro Node.js? Výpis do konzole Základní způsob...</p>
+    <span class="post-listing__pubdate">27.05.2015</span>
+    <p itemprop="description" class="post-listing__excerpt">Jakožto nově příchozí do světa Node.js jsem se záhy začal zajímat o způsob, jak efektivně ladit kód v Node.js. Donedávna jsem se pohyboval především v prostředí Pythonu, kde jsem byl zvyklý používat pdb. Jaké jsou alternativy pro Node.js? Výpis do konzole Základní způsob...</p>
 </article>
 
     
@@ -56,10 +66,10 @@
 
 
 
-
-<nav>
-    <h2>Archive</h2>
-    
+        </div>
+        <nav class="1/4 grid__cell">
+            <h2><a href="/website/blog/archive/">Archive</a></h2>
+            
 <ul>
     
         
@@ -82,7 +92,11 @@
     
 </ul>
 
-</nav>
+        </nav>
+    </div>
+</div>
+
+
 
         </div>
     </body>

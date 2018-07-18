@@ -29,38 +29,48 @@
 
 
     <body class="page-container">
+        <nav>
+            <ul>
+                <li><a href="/website/">Home</a></li>
+                <li><a href="/website/blog/">Blog</a></li>
+            </ul>
+        </nav>
+
         <div class="page-container__inner">
+            <div class="content-block">
+    <div class="grid">
+        <div class="3/4 grid__cell">
             <header>
     <h1 itemprop="headline">Posts in </h1>
 </header>
 
 <main>
     
-        <article itemtype="http://schema.org/BlogPosting" itemscope="">
+        <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-listing">
     
-    <a href="/website/blog/2017/05/26/co-je-noveho-v-ionic-3_26/">
-        <h1 itemprop="headline">Co je nového v Ionic 3</h1>
+    <a href="/website/blog/2017/05/26/co-je-noveho-v-ionic-3_26/" class="post-listing__anchor">
+        <h1 itemprop="headline" class="post-listing__headline">Co je nového v Ionic 3</h1>
     </a>
-    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="post-listing__author">
         <span itemprop="name">Jarda Brchel</span>
     </span>
     <meta itemprop="datePublished" content="2017-05-26T11:24:00+00:00" />
-    <span>26.05.2017</span>
-    <p itemprop="description">Jak jsme si ukázali minule, Ionic je oblíbený framework na tvorbu hybridních mobilních aplikací. Nyní je již k dipozici Ionic ve verzi 3. Co přinesl nového?Změny pod kapotouZměny ve verzi 3 nejsou nijak dramatické. Po vzoru Angularu se ruší číslování...</p>
+    <span class="post-listing__pubdate">26.05.2017</span>
+    <p itemprop="description" class="post-listing__excerpt">Jak jsme si ukázali minule, Ionic je oblíbený framework na tvorbu hybridních mobilních aplikací. Nyní je již k dipozici Ionic ve verzi 3. Co přinesl nového?Změny pod kapotouZměny ve verzi 3 nejsou nijak dramatické. Po vzoru Angularu se ruší číslování...</p>
 </article>
 
     
-        <article itemtype="http://schema.org/BlogPosting" itemscope="">
+        <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-listing">
     
-    <a href="/website/blog/2017/03/31/vytvorte-si-appku-v-angularu/">
-        <h1 itemprop="headline">Vytvořte si appku v Angularu, aneb výhody frameworku Ionic 2</h1>
+    <a href="/website/blog/2017/03/31/vytvorte-si-appku-v-angularu/" class="post-listing__anchor">
+        <h1 itemprop="headline" class="post-listing__headline">Vytvořte si appku v Angularu, aneb výhody frameworku Ionic 2</h1>
     </a>
-    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="post-listing__author">
         <span itemprop="name">Jarda Brchel</span>
     </span>
     <meta itemprop="datePublished" content="2017-03-31T07:52:00+00:00" />
-    <span>31.03.2017</span>
-    <p itemprop="description">Chtěl jsem vytvořit mobilní appku. Grafiku jsem měl hotovou, dokonce i API jsem měl hotové, teď už to zbývalo jen naprogramovat. Můj budget byl hodně omezený, jen 20 000 Kč na vývoj celé appky, tak jsem se rozhodl hledat Androidího programátora, protože Android má většinu...</p>
+    <span class="post-listing__pubdate">31.03.2017</span>
+    <p itemprop="description" class="post-listing__excerpt">Chtěl jsem vytvořit mobilní appku. Grafiku jsem měl hotovou, dokonce i API jsem měl hotové, teď už to zbývalo jen naprogramovat. Můj budget byl hodně omezený, jen 20 000 Kč na vývoj celé appky, tak jsem se rozhodl hledat Androidího programátora, protože Android má většinu...</p>
 </article>
 
     
@@ -68,10 +78,10 @@
 
 
 
-
-<nav>
-    <h2>Archive</h2>
-    
+        </div>
+        <nav class="1/4 grid__cell">
+            <h2><a href="/website/blog/archive/">Archive</a></h2>
+            
 <ul>
     
         
@@ -94,7 +104,11 @@
     
 </ul>
 
-</nav>
+        </nav>
+    </div>
+</div>
+
+
 
         </div>
     </body>

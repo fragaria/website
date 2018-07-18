@@ -29,42 +29,52 @@
 
 
     <body class="page-container">
+        <nav>
+            <ul>
+                <li><a href="/website/">Home</a></li>
+                <li><a href="/website/blog/">Blog</a></li>
+            </ul>
+        </nav>
+
         <div class="page-container__inner">
+            <div class="content-block">
+    <div class="grid">
+        <div class="3/4 grid__cell">
             <header>
     <h1 itemprop="headline">Posts in </h1>
 </header>
 
 <main>
     
-        <article itemtype="http://schema.org/BlogPosting" itemscope="">
+        <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-listing">
     
-        <img itemprop="image" src="https://1.bp.blogspot.com/-ZDoiwaABWB4/VyG6FPrAERI/AAAAAAAAAEk/hrMuWaXZmFAxrpgE73TwMejBvXp5l8esACLcB/s72-c/poll.jpg"/>
+        <img itemprop="image" src="https://1.bp.blogspot.com/-ZDoiwaABWB4/VyG6FPrAERI/AAAAAAAAAEk/hrMuWaXZmFAxrpgE73TwMejBvXp5l8esACLcB/s72-c/poll.jpg" class="post-listing__image" />
     
-    <a href="/website/blog/2016/05/11/jak-jsme-pocitali-new-york-aneb-aws/">
-        <h1 itemprop="headline">Jak jsme počítali New York aneb AWS Lambda v praxi</h1>
+    <a href="/website/blog/2016/05/11/jak-jsme-pocitali-new-york-aneb-aws/" class="post-listing__anchor">
+        <h1 itemprop="headline" class="post-listing__headline">Jak jsme počítali New York aneb AWS Lambda v praxi</h1>
     </a>
-    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="post-listing__author">
         <span itemprop="name">Jirka Chadima</span>
     </span>
     <meta itemprop="datePublished" content="2016-05-11T10:19:00+00:00" />
-    <span>11.05.2016</span>
-    <p itemprop="description">Na přelomu března a dubna se v New Yorku již popáté konalo hlasování o participativních rozpočtech&nbsp;(#PBNYC) jednotlivých distriktů (něco jako městské části v Praze). Díky naší spolupráci s Demokracií 2.1 (D21), pro kterou připravujeme technické řešení, jsme měli možnost se celé akce...</p>
+    <span class="post-listing__pubdate">11.05.2016</span>
+    <p itemprop="description" class="post-listing__excerpt">Na přelomu března a dubna se v New Yorku již popáté konalo hlasování o participativních rozpočtech&nbsp;(#PBNYC) jednotlivých distriktů (něco jako městské části v Praze). Díky naší spolupráci s Demokracií 2.1 (D21), pro kterou připravujeme technické řešení, jsme měli možnost se celé akce...</p>
 </article>
 
     
-        <article itemtype="http://schema.org/BlogPosting" itemscope="">
+        <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-listing">
     
-        <img itemprop="image" src="http://2.bp.blogspot.com/-lmk0nJAZX0c/VkGrAm4PmtI/AAAAAAAAE1M/bu1YbDDpSqA/s72-c/pycon-cz-logo-fb-52d063c4.png"/>
+        <img itemprop="image" src="http://2.bp.blogspot.com/-lmk0nJAZX0c/VkGrAm4PmtI/AAAAAAAAE1M/bu1YbDDpSqA/s72-c/pycon-cz-logo-fb-52d063c4.png" class="post-listing__image" />
     
-    <a href="/website/blog/2015/11/09/podzimni-stripky/">
-        <h1 itemprop="headline">Podzimní střípky</h1>
+    <a href="/website/blog/2015/11/09/podzimni-stripky/" class="post-listing__anchor">
+        <h1 itemprop="headline" class="post-listing__headline">Podzimní střípky</h1>
     </a>
-    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="post-listing__author">
         <span itemprop="name">Martin Burián</span>
     </span>
     <meta itemprop="datePublished" content="2015-11-09T13:35:00+00:00" />
-    <span>09.11.2015</span>
-    <p itemprop="description">Předně bych se rád omluvil pravidelným čtenářům našich střípků. Prostě jsme se na ně pár týdnů vykašlali. Dnes jsme se ale hecli a přinášíme zajímavosti z Fragy i okolí.Amazon LambdaAmazon Lambda je cloudová služba umožňující nahrát kód, obsahující nějakou bezestavovou...</p>
+    <span class="post-listing__pubdate">09.11.2015</span>
+    <p itemprop="description" class="post-listing__excerpt">Předně bych se rád omluvil pravidelným čtenářům našich střípků. Prostě jsme se na ně pár týdnů vykašlali. Dnes jsme se ale hecli a přinášíme zajímavosti z Fragy i okolí.Amazon LambdaAmazon Lambda je cloudová služba umožňující nahrát kód, obsahující nějakou bezestavovou...</p>
 </article>
 
     
@@ -72,10 +82,10 @@
 
 
 
-
-<nav>
-    <h2>Archive</h2>
-    
+        </div>
+        <nav class="1/4 grid__cell">
+            <h2><a href="/website/blog/archive/">Archive</a></h2>
+            
 <ul>
     
         
@@ -98,7 +108,11 @@
     
 </ul>
 
-</nav>
+        </nav>
+    </div>
+</div>
+
+
 
         </div>
     </body>

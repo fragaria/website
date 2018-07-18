@@ -29,26 +29,36 @@
 
 
     <body class="page-container">
+        <nav>
+            <ul>
+                <li><a href="/website/">Home</a></li>
+                <li><a href="/website/blog/">Blog</a></li>
+            </ul>
+        </nav>
+
         <div class="page-container__inner">
+            <div class="content-block">
+    <div class="grid">
+        <div class="3/4 grid__cell">
             <header>
     <h1 itemprop="headline">Posts in </h1>
 </header>
 
 <main>
     
-        <article itemtype="http://schema.org/BlogPosting" itemscope="">
+        <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-listing">
     
-        <img itemprop="image" src="https://1.bp.blogspot.com/-MP986IuLAmg/WVailx1qfYI/AAAAAAAAAhg/IiqZKrZ7pOYGs5rd4IJzODHPoywnVFaZwCLcBGAs/s72-c/DBkyLKpXoAI7tsr.jpg"/>
+        <img itemprop="image" src="https://1.bp.blogspot.com/-MP986IuLAmg/WVailx1qfYI/AAAAAAAAAhg/IiqZKrZ7pOYGs5rd4IJzODHPoywnVFaZwCLcBGAs/s72-c/DBkyLKpXoAI7tsr.jpg" class="post-listing__image" />
     
-    <a href="/website/blog/2017/07/03/jahoda-malina-sloni-hadi-flandera/">
-        <h1 itemprop="headline">Jahoda, malina, sloni, hadi, flanděra, angular</h1>
+    <a href="/website/blog/2017/07/03/jahoda-malina-sloni-hadi-flandera/" class="post-listing__anchor">
+        <h1 itemprop="headline" class="post-listing__headline">Jahoda, malina, sloni, hadi, flanděra, angular</h1>
     </a>
-    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="post-listing__author">
         <span itemprop="name">Jirka Chadima</span>
     </span>
     <meta itemprop="datePublished" content="2017-07-03T10:56:00+00:00" />
-    <span>03.07.2017</span>
-    <p itemprop="description">Přijde takhle klient do kanceláře a povídá: "Máme tady takovou velkou mašinu a k ní si můžeme koupit příšerně drahý ovládací panel. Nesvedli byste pro nás udělat něco levnějšího?" Technicky zdatný ředitel společnosti nesměle dí: "To bychom asi svedli." Klientovi se rozzáří očka a tichým...</p>
+    <span class="post-listing__pubdate">03.07.2017</span>
+    <p itemprop="description" class="post-listing__excerpt">Přijde takhle klient do kanceláře a povídá: "Máme tady takovou velkou mašinu a k ní si můžeme koupit příšerně drahý ovládací panel. Nesvedli byste pro nás udělat něco levnějšího?" Technicky zdatný ředitel společnosti nesměle dí: "To bychom asi svedli." Klientovi se rozzáří očka a tichým...</p>
 </article>
 
     
@@ -56,10 +66,10 @@
 
 
 
-
-<nav>
-    <h2>Archive</h2>
-    
+        </div>
+        <nav class="1/4 grid__cell">
+            <h2><a href="/website/blog/archive/">Archive</a></h2>
+            
 <ul>
     
         
@@ -82,7 +92,11 @@
     
 </ul>
 
-</nav>
+        </nav>
+    </div>
+</div>
+
+
 
         </div>
     </body>

@@ -29,24 +29,34 @@
 
 
     <body class="page-container">
+        <nav>
+            <ul>
+                <li><a href="/website/">Home</a></li>
+                <li><a href="/website/blog/">Blog</a></li>
+            </ul>
+        </nav>
+
         <div class="page-container__inner">
+            <div class="content-block">
+    <div class="grid">
+        <div class="3/4 grid__cell">
             <header>
     <h1 itemprop="headline">Posts in </h1>
 </header>
 
 <main>
     
-        <article itemtype="http://schema.org/BlogPosting" itemscope="">
+        <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-listing">
     
-    <a href="/website/blog/2014/05/14/coffeescript-oop/">
-        <h1 itemprop="headline">CoffeeScript a OOP</h1>
+    <a href="/website/blog/2014/05/14/coffeescript-oop/" class="post-listing__anchor">
+        <h1 itemprop="headline" class="post-listing__headline">CoffeeScript a OOP</h1>
     </a>
-    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="">
+    <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="post-listing__author">
         <span itemprop="name">Robin Gottfried</span>
     </span>
     <meta itemprop="datePublished" content="2014-05-14T08:43:00+00:00" />
-    <span>14.05.2014</span>
-    <p itemprop="description">Dlouho jsem nemohl přijít CoffeeScriptu na chuť. Přišlo mi, že za málo muziky nabízí hodně potíží. Co mě nakonec přesvědčilo, byla schopnost, po které jsem v JavaScriptu přímo prahnul: Psát skutečné třídy a objekty. Když jsem se nadšeně bavil s kolegy, že...</p>
+    <span class="post-listing__pubdate">14.05.2014</span>
+    <p itemprop="description" class="post-listing__excerpt">Dlouho jsem nemohl přijít CoffeeScriptu na chuť. Přišlo mi, že za málo muziky nabízí hodně potíží. Co mě nakonec přesvědčilo, byla schopnost, po které jsem v JavaScriptu přímo prahnul: Psát skutečné třídy a objekty. Když jsem se nadšeně bavil s kolegy, že...</p>
 </article>
 
     
@@ -54,10 +64,10 @@
 
 
 
-
-<nav>
-    <h2>Archive</h2>
-    
+        </div>
+        <nav class="1/4 grid__cell">
+            <h2><a href="/website/blog/archive/">Archive</a></h2>
+            
 <ul>
     
         
@@ -80,7 +90,11 @@
     
 </ul>
 
-</nav>
+        </nav>
+    </div>
+</div>
+
+
 
         </div>
     </body>

@@ -1,0 +1,11 @@
+.content-block {
+    padding: 0 1rem;
+
+    @include mq($from: tablet) {
+        padding: 0 2rem;
+    }
+
+    @include mq($from: wide) {
+        padding: 0;
+    }
+}

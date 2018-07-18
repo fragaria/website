@@ -2,10 +2,27 @@
 layout: default
 ---
 
-<section>
-    {% for post in site.posts limit: 6 %}
-        {% include posts/listing.html post=post %}
-    {% endfor %}
-</section>
+<section class="content-block">
+    {% assign featured_post = site.posts | where: 'featured', true | first %}
 
-<a href="{{ '/blog/archive/' | relative_url }}">More posts</a>
+    {% if featured_post %}
+        {% assign other_posts = site.posts | where_exp: 'post', 'post.url != featured_post.url' %}
+    {% else %}
+        {% assign other_posts = site.posts %}
+    {% endif %}
+
+    {% for post in other_posts limit: 3 %}
+        {% include posts/listing/standard.html post=post %}
+    {% endfor %}
+
+
+    {% if featured_post %}
+        {% include posts/listing/featured.html post=featured_post %}
+    {% endif %}
+
+    {% for post in other_posts offset: 3 limit: 3 %}
+        {% include posts/listing/standard.html post=post %}
+    {% endfor %}
+
+    <a href="{{ '/blog/archive/' | relative_url }}">More posts</a>
+</section>

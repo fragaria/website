@@ -11,7 +11,7 @@ title: Posts
     {% assign posts = paginator.posts %}
 
     {% for post in posts %}
-        {% include posts/listing.html post=post %}
+        {% include posts/listing/standard.html post=post %}
     {% endfor %}
 
     {% include posts/pagination.html paginator=paginator %}

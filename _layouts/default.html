@@ -6,6 +6,13 @@
     {% include head.html %}
 
     <body class="page-container">
+        <nav>
+            <ul>
+                <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+            </ul>
+        </nav>
+
         <div class="page-container__inner">
             {{ content }}
         </div>

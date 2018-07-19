@@ -22,6 +22,12 @@
 
     /* create vertical rules between columns on tablet and up */
     @include breakpoint(break-2) {
+        padding: 0;
+
+        & + & {
+            border-top: 0;
+        }
+
         &:not(:nth-child(4)):not(:first-child) .blog-listing__post-inner {
             padding-left: 2rem;
         }

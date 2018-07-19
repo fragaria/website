@@ -48,7 +48,7 @@
         display: none;
 
         @include breakpoint(break-2) {
-            display: block
+            display: inherit;
         }
     }
 }

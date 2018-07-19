@@ -17,6 +17,7 @@ $anchor-hover-color: darken($anchor-color, 10%);
 
 $border-color: $primary-color;
 
+// Aliases for Sassline breakpoints, @see: $breakpoints
 $breakpoint-aliases: (
     zero: break-0,
     mobile: break-1,

@@ -15,8 +15,8 @@
         @include cbPadding(2rem);
     }
 
-    @include deviceBreakpoint(desktop) {
-        @include cbPadding(0);
+    @include deviceBreakpoint(desktopWide) {
+        @include cbPadding(4rem);
     }
 }
 
@@ -27,7 +27,7 @@
         @include cbMargin(-2rem);
     }
 
-    @include deviceBreakpoint(desktop) {
-        @include cbMargin(0);
+    @include deviceBreakpoint(desktopWide) {
+        @include cbMargin(-4rem);
     }
 }

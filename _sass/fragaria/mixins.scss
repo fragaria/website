@@ -34,9 +34,17 @@
     }
 }
 
-
+/**
+ * Simple Sassline breakpoint wrapper to allow named breakpoints.
+ * @see: $breakpoint-aliases
+ */
 @mixin deviceBreakpoint($alias: 0) {
     @include breakpoint(map-get($breakpoint-aliases, $alias)) {
         @content;
     };
+}
+
+@function deviceBreakpointWidth($alias) {
+    $sasslineAlias: map-get($breakpoint-aliases, $alias);
+    @return map-get($breakpoints, $sasslineAlias) / 16 * 1em;
 }

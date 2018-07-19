@@ -3,7 +3,7 @@
 }
 
 .page-container__inner {
-    max-width: map-get($breakpoint-aliases, desktopWide);
+    max-width: deviceBreakpointWidth(desktop);
     margin: auto;
     text-align: left;
 }

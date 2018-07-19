@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<section class="content-block blog-listing typeset">
+<section class="content-block v-blog-home typeset">
     {% assign featured_post = site.posts | where: 'featured', true | first %}
 
     {% if featured_post %}
@@ -13,29 +13,25 @@ layout: default
 
     {% assign first_post = other_posts | first %}
 
-    {% include posts/listing/standard.html post=first_post class='blog-posting--horizontal blog-listing__post blog-listing__post--main' %}
+    {% include posts/listing/standard.html post=first_post class='blog-posting--horizontal v-blog-home__main v-blog-home__section' %}
 
-    <div class="blog-listing__posts blog-listing__posts--latest">
+    <div class="v-blog-home__posts v-blog-home__posts--latest v-blog-home__section blog-listing">
         {% for post in other_posts offset: 1 limit: 3 %}
-            {% include posts/listing/standard.html post=post class='blog-listing__post' %}
+            <div class="blog-listing__post">
+                {% include posts/listing/standard.html post=post class='blog-listing__post-inner' %}
+            </div>
         {% endfor %}
     </div>
 
-    <div class="blog-listing__featured">
-        {% if featured_post %}
-            {% include posts/listing/standard.html post=featured_post class='blog-posting--featured' show_cta=true %}
-        {% endif %}
-    </div>
+    {% if featured_post %}
+        {% include posts/listing/standard.html post=featured_post class='blog-posting--featured v-blog-home__featured v-blog-home__section' show_cta=true %}
+    {% endif %}
 
-    <div class="blog-listing__posts">
-        {% for post in other_posts offset: 4 limit: 3 %}
-            {% include posts/listing/standard.html post=post class='blog-listing__post' %}
-        {% endfor %}
-    </div>
-
-    <div class="blog-listing__posts">
-        {% for post in other_posts offset: 7 limit: 3 %}
-            {% include posts/listing/standard.html post=post class='blog-listing__post' %}
+    <div class="v-blog-home__posts v-blog-home__posts--other v-blog-home__section blog-listing blog-listing--hdivider">
+        {% for post in other_posts offset: 4 limit: 6 %}
+            <div class="blog-listing__post">
+                {% include posts/listing/standard.html post=post class="blog-listing__post-inner" %}
+            </div>
         {% endfor %}
     </div>
 

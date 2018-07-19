@@ -4,7 +4,8 @@
     grid-template-areas:
         "main"
         "featured"
-        "latest";
+        "latest"
+        "other";
     grid-column-gap: 4rem;
 
     @include deviceBreakpoint(tablet) {
@@ -15,7 +16,7 @@
             "other";
 
         // space out individual home sections
-        .v-blog-home__section:not(.v-blog-home__section--nodivider) {
+        .v-blog-home__section:not(.v-blog-home__section--nodivider):not(:last-child) {
             padding-bottom: 2rem;
         }
 
@@ -45,10 +46,5 @@
 
     &--other {
         grid-area: other;
-        display: none;
-
-        @include deviceBreakpoint(tablet) {
-            display: inherit;
-        }
     }
 }

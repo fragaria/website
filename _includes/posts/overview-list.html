@@ -1,0 +1,23 @@
+<div class="post-overview">
+    <h2 class="post-overview__headline">
+        <span class="post-overview__headline-fill">
+            {{ include.title }}
+        </span>
+    </h2>
+
+    <div class="post-overview__body">
+        {% for post in include.posts %}
+            <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-overview__post">
+                <h1 itemprop="headline" class="post-overview__post-headline">
+                    <a href="{{ include.post.url | relative_url }}" class="post-overview__anchor">{{ post.title }}</a>
+                </h1>
+                <meta itemprop="datePublished" content="{{ post.date | date_to_xmlschema }}" />
+                <p class="post-overview__pubdate">{{ post.date | date: "%d.%m.%Y" }}</p>
+            </article>
+        {% endfor %}
+    </div>
+
+    <div class="post-overview__cta text-center">
+        <a href="{{ include.cta_link }}" class="button">{{ include.cta_title }}</a>
+    </div>
+</div>

@@ -25,6 +25,15 @@ $breakpoint-aliases: (
     desktop: break-3,
 );
 
+// Buttons
+
+$button-variants: (
+    primary: (
+        foreground: map-get($palette, white),
+        background: map-get($palette, black),
+    )
+);
+
 // Fonts
 
 // Sassline settings

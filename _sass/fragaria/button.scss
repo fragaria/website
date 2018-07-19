@@ -1,0 +1,30 @@
+@mixin buttonStyle($foreground, $background) {
+    color: $foreground;
+    background-color: $background;
+    transition: background-color .2s ease-in-out;
+
+    &:hover {
+        background-color: lighten($background, 30%);
+    }
+}
+
+.button,
+a.button {
+    display: inline-block;
+    padding: .5rem 1.5em;
+
+    @include buttonStyle(
+        map-get(map-get($button-variants, primary), foreground),
+        map-get(map-get($button-variants, primary), background)
+    );
+}
+
+
+@each $variantName, $variantSettings in $button-variants {
+    .button.button--#{$variantName} {
+        @include buttonStyle(
+            map-get($variantSettings, foreground),
+            map-get($variantSettings, background)
+        );
+    }
+}

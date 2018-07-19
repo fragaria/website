@@ -37,7 +37,12 @@ layout: default
         {% endfor %}
     </div>
 
-    <p>
-        <a href="{{ '/blog/archive/' | relative_url }}">More posts</a>
-    </p>
+
+</section>
+
+<section class="content-block typeset">
+    {% assign more_posts = other_posts | slice: 10, 16 %}
+    {% assign cta_link = '/blog/archive/' | relative_url %}
+
+    {% include posts/overview-list.html title='Older posts' cta_title='More posts' cta_link=cta_link posts=more_posts %}
 </section>

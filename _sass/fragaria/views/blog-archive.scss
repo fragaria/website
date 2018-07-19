@@ -1,0 +1,20 @@
+.v-blog-archive {
+    display: grid;
+
+    grid-template-areas:
+        "nav"
+        "main";
+
+    @include mq($from: tablet) {
+        grid-template-areas: "main nav";
+        grid-template-columns: 3fr 1fr;
+    }
+}
+
+.v-blog-archive__main {
+    grid-area: main;
+}
+
+.v-blog-archive__nav {
+    grid-area: nav;
+}

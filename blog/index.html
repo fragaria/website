@@ -15,9 +15,9 @@ layout: default
 
     {% include posts/listing/standard.html post=first_post class='blog-posting--horizontal blog-listing__post blog-listing__post--main' %}
 
-    <div class="blog-listing__posts blog-listing__posts--latest row">
+    <div class="blog-listing__posts blog-listing__posts--latest">
         {% for post in other_posts offset: 1 limit: 3 %}
-            {% include posts/listing/standard.html post=post class='blog-listing__post col-4_mobileLandscape-12' %}
+            {% include posts/listing/standard.html post=post class='blog-listing__post' %}
         {% endfor %}
     </div>
 
@@ -27,15 +27,15 @@ layout: default
         {% endif %}
     </div>
 
-    <div class="blog-listing__posts row">
+    <div class="blog-listing__posts">
         {% for post in other_posts offset: 4 limit: 3 %}
-            {% include posts/listing/standard.html post=post class='blog-listing__post col-4_mobileLandscape-12'  %}
+            {% include posts/listing/standard.html post=post class='blog-listing__post' %}
         {% endfor %}
     </div>
 
-    <div class="blog-listing__posts row">
+    <div class="blog-listing__posts">
         {% for post in other_posts offset: 7 limit: 3 %}
-            {% include posts/listing/standard.html post=post class='blog-listing__post col-4_mobileLandscape-12'  %}
+            {% include posts/listing/standard.html post=post class='blog-listing__post' %}
         {% endfor %}
     </div>
 

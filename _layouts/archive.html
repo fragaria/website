@@ -2,18 +2,16 @@
 layout: default
 ---
 
-<div class="content-block">
-    <div class="row">
-        <div class="col-8_tablet-12">
-            <div class="typeset">
-                {{ content }}
-            </div>
+<div class="content-block v-blog-archive">
+    <main class="v-blog-archive__main">
+        <div class="typeset">
+            {{ content }}
         </div>
-        <nav class="col_tablet-first typeset">
-            <h2><a href="{{ '/blog/archive/' | relative_url }}">Archive</a></h2>
-            {% include posts/year-list.html %}
-        </nav>
-    </div>
+    </main>
+    <nav class="v-blog-archive__nav">
+        <h2><a href="{{ '/blog/archive/' | relative_url }}">Archive</a></h2>
+        {% include posts/year-list.html %}
+    </nav>
 </div>
 
 

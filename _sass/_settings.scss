@@ -111,15 +111,3 @@ $mq-breakpoints: (
 // right corner of your site during development, add the breakpoints
 // to this list, ordered by width, e.g. (mobile, tablet, desktop).
 $mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
-
-// gridlex settings
-// http://gridlex.devlint.fr/
-$gl-gridName: row;
-$gl-gutter: 2rem;
-
-$gl-mq-list: (
-    desktop:            map-get($mq-breakpoints, wide),
-    tablet:             map-get($mq-breakpoints, desktop),
-    mobileLandscape:    map-get($mq-breakpoints, tablet),
-    mobile:             map-get($mq-breakpoints, mobileLandscape),
-);

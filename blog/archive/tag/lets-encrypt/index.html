@@ -30,12 +30,14 @@
 
     <body class="page-container baseline-grid baseline-grid--visible">
         <div class="page-container__inner">
-            <div class="sitenav-wrapper content-block">
+            <div class="sitenav-wrapper content-block js-sitenav">
     <nav class="sitenav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-        <img alt="Fragaria.cz" class="sitenav__brand" src="/website/assets/img/strawberry.svg">
+        <a href="/website/">
+            <img alt="Fragaria s.r.o." class="sitenav__brand" src="/website/assets/img/strawberry.svg">
+        </a>
 
         <ul class="sitenav__linkset">
-            <li class="sitenav__linkset-item sitenav__linkset-item--fill"><a href="/website/" class="sitenav__link typeset__anchor--nounderline" itemprop="url"><span itemprop="name">Fragaria.cz</span></a></li>
+            <li class="sitenav__linkset-item sitenav__linkset-item--main"><a href="/website/" class="sitenav__link typeset__anchor--nounderline" itemprop="url"><span itemprop="name">Fragaria.cz</span></a></li>
             
                 <li class="sitenav__linkset-item "><a href="/website/works/" class="sitenav__link typeset__anchor--nounderline" itemprop="url"><span itemprop="name">Works</span></a></li>
             
@@ -46,6 +48,10 @@
                 <li class="sitenav__linkset-item "><a href="/website/career/" class="sitenav__link typeset__anchor--nounderline" itemprop="url"><span itemprop="name">Career</span></a></li>
             
         </ul>
+
+        <div class="sitenav__menu-toggle typeset">
+            <a href="#" class="sitenav__menu-toggle-link js-sitenav-menu-toggle">Menu</a>
+        </div>
     </nav>
 </div>
 
@@ -157,5 +163,7 @@
 
 
         </div>
+
+        <script src="/website/assets/js/site.js"></script>
     </body>
 </html>

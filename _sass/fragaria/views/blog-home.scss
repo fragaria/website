@@ -15,16 +15,16 @@
             "other";
 
         // space out individual home sections
-        .v-blog-home__section {
-            padding-bottom: 4rem;
+        .v-blog-home__section:not(.v-blog-home__section--nodivider) {
+            padding-bottom: 2rem;
         }
 
         .v-blog-home__section + .v-blog-home__section {
-            padding-top: 4rem;
+            padding-top: 2rem;
         }
 
         // divider between sections
-        .v-blog-home__section:not(.v-blog-home__featured) + .v-blog-home__section {
+        .v-blog-home__section:not(.v-blog-home__section--nodivider) + .v-blog-home__section {
             @include baselineAwareBorder($orientation: 'top');
         }
     }

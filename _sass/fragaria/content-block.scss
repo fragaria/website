@@ -20,7 +20,7 @@
     }
 }
 
-.content-block__fullscreen {
+.content-block__cover {
     @include cbMargin(-1rem);
 
     @include deviceBreakpoint(mobileLandscape) {
@@ -29,5 +29,17 @@
 
     @include deviceBreakpoint(desktopWide) {
         @include cbMargin(-4rem);
+    }
+}
+
+.content-block__cover--mobile {
+    @include cbMargin(-1rem);
+
+    @include deviceBreakpoint(mobileLandscape) {
+        @include cbMargin(-2rem);
+    }
+
+    @include deviceBreakpoint(tablet) {
+        @include cbMargin(0);
     }
 }

@@ -29,7 +29,11 @@
 
         .blog-posting__content {
             z-index: 1;
-            padding: 4rem 8rem;
+            padding: 2rem 1rem;
+
+            @include deviceBreakpoint(tablet) {
+                padding: 4rem 2rem;
+            }
         }
 
         .blog-posting__content,

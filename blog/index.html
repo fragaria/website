@@ -15,7 +15,7 @@ layout: default
 
     {% include posts/listing/standard.html post=first_post class='blog-posting--horizontal v-blog-home__main v-blog-home__section' %}
 
-    <div class="v-blog-home__posts v-blog-home__posts--latest v-blog-home__section blog-listing">
+    <div class="v-blog-home__posts v-blog-home__posts--latest v-blog-home__section v-blog-home__section--nodivider blog-listing">
         {% for post in other_posts offset: 1 limit: 3 %}
             <div class="blog-listing__post">
                 {% include posts/listing/standard.html post=post class='blog-listing__post-inner' %}
@@ -24,7 +24,9 @@ layout: default
     </div>
 
     {% if featured_post %}
-        {% include posts/listing/standard.html post=featured_post class='blog-posting--featured v-blog-home__featured v-blog-home__section' show_cta=true %}
+        <div class="v-blog-home__section v-blog-home__section--nodivider">
+            {% include posts/listing/standard.html post=featured_post class='blog-posting--featured content-block__cover--mobile v-blog-home__featured' show_cta=true %}
+        </div>
     {% endif %}
 
     <div class="v-blog-home__posts v-blog-home__posts--other v-blog-home__section blog-listing blog-listing--hdivider">
@@ -35,5 +37,7 @@ layout: default
         {% endfor %}
     </div>
 
-    <a href="{{ '/blog/archive/' | relative_url }}">More posts</a>
+    <p>
+        <a href="{{ '/blog/archive/' | relative_url }}">More posts</a>
+    </p>
 </section>

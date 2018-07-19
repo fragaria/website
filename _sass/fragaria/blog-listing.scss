@@ -37,6 +37,7 @@
     }
 }
 
+// this is a blog-listing that includes horizontal rule divider on tablet and larger
 .blog-listing--hdivider {
     /* create horizontal rules between rows on tablet and up */
     @include breakpoint(break-2) {

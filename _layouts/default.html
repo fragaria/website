@@ -6,14 +6,8 @@
     {% include head.html %}
 
     <body class="page-container baseline-grid baseline-grid--visible">
-        <nav class="typeset">
-            <ul>
-                <li><a href="{{ '/' | relative_url }}">Home</a></li>
-                <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
-            </ul>
-        </nav>
-
         <div class="page-container__inner">
+            {% include sitenav.html %}
             {{ content }}
         </div>
     </body>

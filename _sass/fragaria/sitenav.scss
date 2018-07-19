@@ -1,0 +1,70 @@
+/* wrapper necessary to compensate for borders that break the baseline */
+.sitenav-wrapper {
+    @include baseline(zeta, $bodytype, 2, 4, all);
+}
+
+.sitenav {
+    display: flex;
+    position: relative;
+    height: 4rem;
+    margin-top: 2rem;
+    align-items: center;
+    // first bottom border
+    border-bottom: 2px $border-color solid;
+
+    // top border
+    &:before {
+        content: ' ';
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        border-top: 2px $border-color solid;
+    }
+
+    // second bottom border
+    &:after {
+        content: ' ';
+        display: block;
+        width: 100%;
+        position: absolute;
+        bottom: 2px;
+        border-bottom: 2px $border-color solid;
+    }
+}
+
+// logo image
+.sitenav__brand {
+    position: absolute;
+    left: 50%;
+    top: -2rem;
+    margin-left: -76px;
+    z-index: 2;
+}
+
+.sitenav__linkset {
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+}
+
+.sitenav__linkset-item {
+    // this link is main and consumes all the available space
+    &--fill {
+        flex: 1;
+    }
+
+    // common links get spacing around them
+    &:not(--fill):not(:last-child) {
+        margin-right: 2em;
+    }
+
+    // active link is highlighted
+    &--active .sitenav__link {
+        color: map-get($palette, red);
+    }
+}
+
+.sitenav__link {
+    text-transform: lowercase;
+}

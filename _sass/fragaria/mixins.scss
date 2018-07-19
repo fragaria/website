@@ -1,0 +1,35 @@
+/**
+ * Border implementation which doesn't break baseline.
+ */
+@mixin baselineAwareBorder($color: $border-color, $width: 1px, $orientation: 'top', $offset: 0) {
+    position: relative;
+
+    &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        position: absolute;
+
+        @if ($orientation == 'top') {
+            top: $offset;
+            border-top: $width $color solid;
+        }
+
+        @if ($orientation == 'bottom') {
+            bottom: $offset;
+            border-bottom: $width $color solid;
+        }
+    }
+}
+
+@mixin baselineAwareBorderCancel($orientation: 'top') {
+    &:before {
+        @if ($orientation == 'top') {
+            border-top: 0;
+        }
+
+        @if ($orientation == 'bottom') {
+            border-bottom: 0;
+        }
+    }
+}

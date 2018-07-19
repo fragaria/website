@@ -13,24 +13,9 @@
     border-bottom: 2px $border-color solid;
 
     // top border
-    &:before {
-        content: ' ';
-        display: block;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        border-top: 2px $border-color solid;
-    }
-
+    @include baselineAwareBorder($orientation: 'top', $width: 2px);
     // second bottom border
-    &:after {
-        content: ' ';
-        display: block;
-        width: 100%;
-        position: absolute;
-        bottom: 2px;
-        border-bottom: 2px $border-color solid;
-    }
+    @include baselineAwareBorder($orientation: 'bottom', $width: 2px, $offset: 2px);
 }
 
 // logo image

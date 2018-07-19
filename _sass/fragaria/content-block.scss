@@ -1,11 +1,11 @@
 .content-block {
     padding: 0 1rem;
 
-    @include mq($from: tablet) {
+    @include breakpoint(break-2) {
         padding: 0 2rem;
     }
 
-    @include mq($from: wide) {
+    @include breakpoint(break-5) {
         padding: 0;
     }
 }

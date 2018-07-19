@@ -7,7 +7,7 @@
         "latest";
     grid-column-gap: 4rem;
 
-    @include mq($from: tablet) {
+    @include breakpoint(break-2) {
         grid-template-areas:
             "main"
             "latest"
@@ -45,10 +45,10 @@
 
     &--other {
         grid-area: other;
+        display: none;
 
-        // other articles hidden on mobile devices
-        @include mq($until: tablet) {
-            display: none;
+        @include breakpoint(break-2) {
+            display: block
         }
     }
 }

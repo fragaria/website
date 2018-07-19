@@ -49,7 +49,7 @@ $breakpoints: (
     // tablet
     break-2: 768,
     // desktop
-    break-3: 1280,
+    break-3: 1400,
 );
 
 // Root font-sizes for each breakpoint. Set to half desired line-height of body text.
@@ -69,9 +69,7 @@ $measures: (
     measure-0: 500,  // 500px wide
     measure-1: 550,  // 550px wide
     measure-2: 600,  // 600px wide
-    measure-3: 680,  // 680px wide
-    measure-4: 750,  // 750px wide
-    measure-5: 830,
+    measure-3: 680  // 680px wide
 );
 
 // Set the max-widths for containers (based on design).

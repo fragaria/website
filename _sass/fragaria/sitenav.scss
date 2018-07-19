@@ -4,18 +4,22 @@
 }
 
 .sitenav {
-    display: flex;
     position: relative;
     height: 4rem;
     margin-top: 2rem;
     align-items: center;
-    // first bottom border
-    border-bottom: 2px $border-color solid;
 
-    // top border
-    @include baselineAwareBorder($orientation: 'top', $width: 2px);
-    // second bottom border
-    @include baselineAwareBorder($orientation: 'bottom', $width: 2px, $offset: 2px);
+    @include deviceBreakpoint(tablet) {
+        display: flex;
+
+        // first bottom border
+        border-bottom: 2px $border-color solid;
+
+        // top border
+        @include baselineAwareBorder($orientation: 'top', $width: 2px);
+        // second bottom border
+        @include baselineAwareBorder($orientation: 'bottom', $width: 2px, $offset: 2px);
+    }
 }
 
 // logo image
@@ -25,24 +29,43 @@
     top: -2rem;
     z-index: 2;
 
-    margin-left: -76px;
+    width: 80px;
+    margin-left: -40px;
+
+    @include deviceBreakpoint(tablet) {
+        width: 130px;
+        margin-left: -65px;
+    }
+
+    @include deviceBreakpoint(desktopWide) {
+        width: 150px;
+        margin-left: -75px;
+    }
 }
 
 .sitenav__linkset {
-    display: flex;
+    display: none;
     width: 100%;
     list-style-type: none;
+
+    @include deviceBreakpoint(tablet) {
+        display: flex;
+    }
 }
 
 .sitenav__linkset-item {
     // this link is main and consumes all the available space
-    &--fill {
+    &--main {
         flex: 1;
     }
 
     // common links get spacing around them
-    &:not(--fill):not(:last-child) {
-        margin-right: 2em;
+    &:not(--main):not(:last-child) {
+        margin-right: 1.5em;
+
+        @include deviceBreakpoint(desktopWide) {
+            margin-right: 2em;
+        }
     }
 
     // active link is highlighted
@@ -53,4 +76,56 @@
 
 .sitenav__link {
     text-transform: lowercase;
+}
+
+.sitenav__menu-toggle {
+    float: right;
+
+    // hide menu toggle for tablet and bigger
+    @include deviceBreakpoint(tablet) {
+        display: none;
+    }
+}
+
+.sitenav__menu-toggle-link {
+    font-family: unquote(map-get($headingtype, font-family));
+
+    @include sassline(delta, $headingtype, 3, 0, all);
+}
+
+.sitenav-wrapper--show {
+    @media (max-width: deviceBreakpointWidth(tablet) - 1) {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: map-get($palette, white);
+        z-index: 1000;
+
+        .sitenav {
+            height: 100%;
+        }
+
+        .sitenav__linkset {
+            display: block;
+            width: 100%;
+            height: 200px;
+            top: 50%;
+            margin-top: -100px;
+            position: absolute;
+            text-align: center;
+        }
+
+        .sitenav__linkset-item {
+            margin-right: 0 !important;
+            padding: .5rem 0;
+
+            @include sassline(gamma, $bodytype, 2, 2, all);
+
+            &.sitenav__linkset-item--main {
+                display: none;
+            }
+        }
+    }
 }

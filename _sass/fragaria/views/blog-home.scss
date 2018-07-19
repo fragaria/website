@@ -7,7 +7,7 @@
         "latest";
     grid-column-gap: 4rem;
 
-    @include deviceBreakpoint(mobileLandscape) {
+    @include deviceBreakpoint(tablet) {
         grid-template-areas:
             "main"
             "latest"
@@ -47,7 +47,7 @@
         grid-area: other;
         display: none;
 
-        @include deviceBreakpoint(mobileLandscape) {
+        @include deviceBreakpoint(tablet) {
             display: inherit;
         }
     }

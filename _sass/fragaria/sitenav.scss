@@ -38,7 +38,7 @@
         margin-left: -65px;
     }
 
-    @include deviceBreakpoint(desktopWide) {
+    @include deviceBreakpoint(desktop) {
         width: 150px;
         margin-left: -75px;
     }
@@ -66,7 +66,7 @@
     &:not(--main):not(:last-child) {
         margin-right: 1.5em;
 
-        @include deviceBreakpoint(desktopWide) {
+        @include deviceBreakpoint(desktop) {
             margin-right: 2em;
         }
     }

@@ -17,6 +17,15 @@ $anchor-hover-color: darken($anchor-color, 10%);
 
 $border-color: $primary-color;
 
+$breakpoint-aliases: (
+    zero: break-0,
+    mobile: break-1,
+    mobileLandscape: break-2,
+    tablet: break-3,
+    desktop: break-4,
+    desktopWide: break-5,
+);
+
 // Fonts
 
 // Sassline settings
@@ -25,11 +34,17 @@ $border-color: $primary-color;
 // Breakpoint sizes from px to ems. Add more values here to add more breakpoints.
 // Change names if you prefer, it wont break the mixin as long as they are strings not just numbers.
 $breakpoints: (
+    // zero
     break-0: 0,
+    // mobile
     break-1: 320,
+    // mobile landscape mode
     break-2: 480,
+    // tablet
     break-3: 768,
+    // desktop
     break-4: 992,
+    // wide desktop
     break-5: 1200,
 );
 
@@ -98,22 +113,3 @@ $white: #FFFFFF;
 // Background colours.
 $backgroundColour: $body-background;
 $codeBackgroundColour: #F5F4F2;
-
-// mq settings
-// https://github.com/sass-mq/sass-mq
-$mq-responsive: true;
-
-$mq-breakpoints: (
-    mobile:             320px,
-    tablet:             768px,
-    desktop:            992px,
-    wide:               1200px,
-
-    // Tweakpoints
-    mobileLandscape:    480px,
-);
-
-// If you want to display the currently active breakpoint in the top
-// right corner of your site during development, add the breakpoints
-// to this list, ordered by width, e.g. (mobile, tablet, desktop).
-$mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);

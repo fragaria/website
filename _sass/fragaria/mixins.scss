@@ -33,3 +33,10 @@
         }
     }
 }
+
+
+@mixin deviceBreakpoint($alias: 0) {
+    @include breakpoint(map-get($breakpoint-aliases, $alias)) {
+        @content;
+    };
+}

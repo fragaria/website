@@ -1,11 +1,33 @@
-.content-block {
-    padding: 0 1rem;
+@mixin cbPadding($width) {
+    padding-left: $width;
+    padding-right: $width;
+}
 
-    @include breakpoint(break-2) {
-        padding: 0 2rem;
+@mixin cbMargin($width) {
+    margin-left: $width;
+    margin-right: $width;
+}
+
+.content-block {
+    @include cbPadding(1rem);
+
+    @include deviceBreakpoint(mobileLandscape) {
+        @include cbPadding(2rem);
     }
 
-    @include breakpoint(break-5) {
-        padding: 0;
+    @include deviceBreakpoint(desktop) {
+        @include cbPadding(0);
+    }
+}
+
+.content-block__fullscreen {
+    @include cbMargin(-1rem);
+
+    @include deviceBreakpoint(mobileLandscape) {
+        @include cbMargin(-2rem);
+    }
+
+    @include deviceBreakpoint(desktop) {
+        @include cbMargin(0);
     }
 }

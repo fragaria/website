@@ -4,7 +4,7 @@
     grid-auto-rows: minmax(10rem, auto);
 
     /* 3 columns on a row for tablet and up */
-    @include breakpoint(break-2) {
+    @include deviceBreakpoint(tablet) {
         grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: minmax(10rem, auto);
     }
@@ -21,7 +21,7 @@
 
 
     /* create vertical rules between columns on tablet and up */
-    @include breakpoint(break-2) {
+    @include deviceBreakpoint(tablet) {
         padding: 0;
 
         & + & {
@@ -46,7 +46,7 @@
 // this is a blog-listing that includes horizontal rule divider on tablet and larger
 .blog-listing--hdivider {
     /* create horizontal rules between rows on tablet and up */
-    @include breakpoint(break-2) {
+    @include deviceBreakpoint(tablet) {
         .blog-listing__post:nth-child(1n + 4) {
             @include baselineAwareBorder($orientation: 'top');
         }

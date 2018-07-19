@@ -5,7 +5,7 @@
 <html lang="cs" dir="ltr" itemtype="http://schema.org/WebPage" itemscope="">
     {% include head.html %}
 
-    <body class="page-container baseline-grid baseline-grid--visible">
+    <body class="page-container baseline-grid {% unless jekyll.environment == 'production' %}baseline-grid--visible{% endunless %}">
         <div class="page-container__inner">
             {% include sitenav.html %}
             {{ content }}

@@ -11,7 +11,7 @@ html {
 
 // Site-wide base styles.
 body {
-  @include fontsize(zeta, all);
+  @include fontsize(eta, all);
 
   font-family: unquote(map-get($bodytype, font-family));
   font-style: normal;
@@ -35,20 +35,23 @@ a {
 .typeset {
 
   // Nice underlines for text links.
-  p a, li a {
-    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten($anchor-color,20%) 50%);
-    background-position: 0 93%;
-    background-repeat: repeat-x;
-    background-size: 100% 0.15rem;
-    text-shadow: 0.1rem 0 $backgroundColour,
-                 0.15rem 0 $backgroundColour,
-                -0.1rem 0 $backgroundColour,
-                -0.15rem 0 $backgroundColour;
 
-    &:hover, &:active, &:focus {
-      background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten($anchor-hover-color,20%) 50%);
-    }
-  }
+  // Now browsers do it better and by default
+
+  // p a, li a {
+  //   background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten($anchor-color,20%) 50%);
+  //   background-position: 0 93%;
+  //   background-repeat: repeat-x;
+  //   background-size: 100% 0.15rem;
+  //   text-shadow: 0.1rem 0 $backgroundColour,
+  //                0.15rem 0 $backgroundColour,
+  //               -0.1rem 0 $backgroundColour,
+  //               -0.15rem 0 $backgroundColour;
+
+  //   &:hover, &:active, &:focus {
+  //     background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten($anchor-hover-color,20%) 50%);
+  //   }
+  // }
 
   // Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
   p {

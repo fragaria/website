@@ -5,9 +5,13 @@
 
 .sitenav {
     position: relative;
-    height: 4rem;
+    height: 6rem;
     margin-top: 2rem;
     align-items: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    font-size: 1.1rem;
 
     @include deviceBreakpoint(tablet) {
         display: flex;
@@ -26,7 +30,7 @@
 .sitenav__brand {
     position: absolute;
     left: 50%;
-    top: -2rem;
+    top: -2.2rem;
     z-index: 2;
 
     // logo image scales up on bigger screens

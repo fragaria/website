@@ -1,6 +1,8 @@
 .post-overview__headline {
-    text-align: center;
     position: relative;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
 
     &:before {
         content: '';
@@ -8,7 +10,7 @@
         width: 100%;
         top: 2rem;
         left: 0;
-        height: 1px;
+        height: 2px;
         background: $border-color;
         z-index: -1;
     }
@@ -23,36 +25,39 @@
     column-count: 1;
 
     @include deviceBreakpoint(tablet) {
-        column-count: 3;
+        column-count: 4;
         column-rule: 1px $border-color solid;
         column-gap: 4rem;
-    }
-
-    @include deviceBreakpoint(desktop) {
-        column-count: 4;
     }
 }
 
 .post-overview__post {
     // prevent item being cut in the middle by multicolumn layout
-    width: 100%;
     display: inline-block;
+    width: 100%;
+    margin-bottom: 1rem;
+    @include baselineAwareBorder($orientation: 'bottom', $width: 4px, $offset: -3px, $size: 3rem);
 
-    &:not(:last-child) {
-        @include baselineAwareBorder($orientation: 'bottom', $width: 4px, $offset: -3px, $size: 3rem);
+    @include deviceBreakpoint(tablet) {
+        @include baselineAwareBorderCancel($orientation: 'bottom');
 
-        @include deviceBreakpoint(tablet) {
-            @include baselineAwareBorderCancel($orientation: 'bottom');
+        &:not(:nth-child(4n+4)) {
+            @include baselineAwareBorder($orientation: 'bottom', $width: 4px, $offset: -3px, $size: 3rem);
         }
     }
 }
 
-.typeset .post-overview__post-headline {
-    font-family: unquote(map-get($bodytype, font-family));
-    @include sassline(zeta, $bodytype, 2, 0, all);
+.typeset {
+    .post-overview__post-headline {
+        font-family: unquote(map-get($bodytype, font-family));
+        @include sassline(zeta, $bodytype, 2, 0, all);
+    }
+    p.post-overview__pubdate {
+        font-style:italic
+    }
 }
 
 .post-overview__cta {
-    margin-top: 1rem;
+    margin-top: 2rem;
     @include baseline(zeta, $bodytype, 2, 2, all);
 }

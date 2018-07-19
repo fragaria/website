@@ -72,7 +72,9 @@
     /* create horizontal rules between rows on tablet and up */
     @include deviceBreakpoint(tablet) {
         .blog-listing__post:nth-child(1n + 4) {
-            @include baselineAwareBorder($orientation: 'top');
+            margin-top: 2rem;
+            padding-top: 2rem;
+            @include baselineAwareBorder($width:2px, $orientation: 'top');
         }
 
         .blog-listing__post-inner {

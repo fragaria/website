@@ -20,9 +20,10 @@
         padding: 0 0 2rem;
     }
     &:last-child {
-        padding: 2rem 0 0;
+        padding: 2rem 0;
     }
 
+    &:first-child,
     & + & {
         @include baselineAwareBorder($orientation: 'top');
     }
@@ -36,6 +37,7 @@
             padding: 0;
         }
 
+        &:first-child,
         & + & {
             @include baselineAwareBorderCancel($orientation: 'top');
         }
@@ -55,8 +57,18 @@
     }
 }
 
+// Cancels out padding of the last blog-listing__post
+.blog-listing--nolastpad .blog-listing__post:last-child {
+    padding-bottom: 0;
+}
+
+// Cancels out horizontal divider of the first blog-listing__post
+.blog-listing--nofirstdivider .blog-listing__post:first-child {
+    @include baselineAwareBorderCancel($orientation: 'top');
+}
+
 // this is a blog-listing that includes horizontal rule divider on tablet and larger
-.blog-listing--hdivider {
+.blog-listing--rowdivider {
     /* create horizontal rules between rows on tablet and up */
     @include deviceBreakpoint(tablet) {
         .blog-listing__post:nth-child(1n + 4) {

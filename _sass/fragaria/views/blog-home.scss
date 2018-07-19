@@ -16,11 +16,11 @@
             "other";
 
         // space out individual home sections
-        .v-blog-home__section:not(.v-blog-home__section--nodivider):not(:last-child) {
+        .v-blog-home__section--tablet-padbottom {
             padding-bottom: 2rem;
         }
 
-        .v-blog-home__section + .v-blog-home__section {
+        .v-blog-home__section--tablet-padtop {
             padding-top: 2rem;
         }
 

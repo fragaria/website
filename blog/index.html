@@ -15,7 +15,7 @@ layout: default
 
     {% include posts/listing/standard.html post=first_post class='blog-posting--horizontal v-blog-home__main v-blog-home__section' %}
 
-    <div class="v-blog-home__posts v-blog-home__posts--latest v-blog-home__section v-blog-home__section--tablet-padtop v-blog-home__section--nodivider blog-listing blog-listing--nofirstdivider">
+    <div class="v-blog-home__posts v-blog-home__posts--latest   v-blog-home__section v-blog-home__section--tablet-padtop v-blog-home__section--nodivider   blog-listing blog-listing--nofirstdivider">
         {% for post in other_posts offset: 1 limit: 3 %}
             <div class="blog-listing__post">
                 {% include posts/listing/standard.html post=post class='blog-listing__post-inner' %}
@@ -29,7 +29,7 @@ layout: default
         </div>
     {% endif %}
 
-    <div class="v-blog-home__posts v-blog-home__posts--other v-blog-home__section blog-listing blog-listing--rowdivider blog-listing--nolastpad">
+    <div class="v-blog-home__posts v-blog-home__posts--other   v-blog-home__section   blog-listing blog-listing--rowdivider blog-listing--nolastpad">
         {% for post in other_posts offset: 4 limit: 6 %}
             <div class="blog-listing__post">
                 {% include posts/listing/standard.html post=post class="blog-listing__post-inner" %}
@@ -42,7 +42,5 @@ layout: default
 
 <section class="content-block typeset">
     {% assign more_posts = other_posts | slice: 10, 16 %}
-    {% assign cta_link = '/blog/archive/' | relative_url %}
-
-    {% include posts/overview-list.html title='Older posts' cta_title='More posts' cta_link=cta_link posts=more_posts %}
+    {% include posts/overview-list.html title='Older posts' cta_title='More posts' cta_link='/blog/archive/' posts=more_posts %}
 </section>

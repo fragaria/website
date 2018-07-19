@@ -9,7 +9,7 @@
         {% for post in include.posts %}
             <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-overview__post">
                 <h1 itemprop="headline" class="post-overview__post-headline">
-                    <a href="{{ include.post.url | relative_url }}" class="post-overview__anchor">{{ post.title }}</a>
+                    <a href="{{ post.url | relative_url }}" class="post-overview__anchor">{{ post.title }}</a>
                 </h1>
                 <meta itemprop="datePublished" content="{{ post.date | date_to_xmlschema }}" />
                 <p class="post-overview__pubdate">{{ post.date | date: "%d.%m.%Y" }}</p>
@@ -18,6 +18,6 @@
     </div>
 
     <div class="post-overview__cta text-center">
-        <a href="{{ include.cta_link }}" class="button">{{ include.cta_title }}</a>
+        <a href="{{ include.cta_link | relative_url }}" class="button">{{ include.cta_title }}</a>
     </div>
 </div>

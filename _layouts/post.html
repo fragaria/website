@@ -2,10 +2,25 @@
 layout: default
 ---
 
-<article itemtype="http://schema.org/BlogPosting" itemscope="">
-  <div class="content-block">
-    <h1 itemprop="headline">{{ page.title }}</h1>
-    <h1>CHUJU sprety</h1>
-    {{ content }}
-  </div>
+<article itemtype="https://schema.org/TechArticle" itemscope class="article">
+    <div class="content-block typeset">
+        <h1 itemprop="name" class="article__headline">{{ page.title }}</h1>
+
+        <p class="article__meta">
+            <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="article__author">
+                <span itemprop="name">{{ page.author }}</span>
+            </span>
+            <meta itemprop="datePublished" content="{{ include.post.date | date_to_xmlschema }}" />
+            <span class="article__pubdate">{{ page.date | date: "%d.%m.%Y" }}</span>
+            <meta itemprop="publisher">{{ site.organization.official_name }}</meta>
+        </p>
+
+        {% if page.description %}
+            <p class="article__perex" itemprop="description">{{ page.description }}</p>
+        {% endif %}
+
+        <div class="article__content">
+            {{ content }}
+        </div>
+    </div>
 </article>

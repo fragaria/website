@@ -10,7 +10,7 @@
     <title>Jednoduché filtrování seznamů v AngularJS | fragaria.cz</title>
     <meta name="author" content="Fragaria s.r.o." />
     <meta name="robots" content="index,follow" />
-    <meta name="description" content="V našem posledním projektu chceme (čistě v Javascriptu) mít vyhledávací filtr nad seznamem objektů. Asi nějak takhle:Jenže objekty můžou obsahovat vnořené objekty, které obsahují vnořené objekty s dalšími vnořenými objekty – chápete, kam mířím?V první verzi jsme si hráli s rekurzí, procházeli properties objektu, přeskakovali ...">
+    <meta name="description" content="V našem posledním projektu chceme (čistě v Javascriptu) mít vyhledávacífiltr nad seznamem objektů. Asi nějaktakhle:">
     <meta name="keywords" content="fragaria, software, vývoj software, webové aplikace, python, javascript, angular, elasticsearch, html, css, javascriptangularjs" />
     <!-- Favicons -->
     
@@ -18,7 +18,7 @@
     <meta property="og:url"           content="https://fragaria.cz/website/blog/2013/10/22/jednoduche-filtrovani-seznamu-v/" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Jednoduché filtrování seznamů v AngularJS | fragaria.cz" />
-    <meta property="og:description"   content="V našem posledním projektu chceme (čistě v Javascriptu) mít vyhledávací filtr nad seznamem objektů. Asi nějak takhle:Jenže objekty můžou obsahovat vnořené objekty, které obsahují vnořené objekty s dalšími vnořenými objekty – chápete, kam mířím?V první verzi jsme si hráli s rekurzí, procházeli properties objektu, přeskakovali ..." />
+    <meta property="og:description"   content="V našem posledním projektu chceme (čistě v Javascriptu) mít vyhledávacífiltr nad seznamem objektů. Asi nějaktakhle:" />
 
     
 
@@ -56,12 +56,81 @@
 </div>
 
 
-            <article itemtype="http://schema.org/BlogPosting" itemscope="">
-  <div class="content-block">
-    <h1 itemprop="headline">Jednoduché filtrování seznamů v AngularJS</h1>
-    <h1>CHUJU sprety</h1>
-    V našem posledním projektu chceme (čistě v Javascriptu) mít vyhledávací filtr nad seznamem objektů. Asi nějak takhle:<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-kGr-9BvaeUM/UmQMDIRaFpI/AAAAAAAAAQo/GgoCPC4fIo4/s1600/Screen+Shot+2013-10-18+at+13.20.22.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="196" src="http://1.bp.blogspot.com/-kGr-9BvaeUM/UmQMDIRaFpI/AAAAAAAAAQo/GgoCPC4fIo4/s640/Screen+Shot+2013-10-18+at+13.20.22.png" width="640" /></a></div><div class="separator" style="clear: both; text-align: left;">Jenže objekty můžou obsahovat vnořené objekty, které obsahují vnořené objekty s dalšími vnořenými objekty – chápete, kam mířím?</div><div class="separator" style="clear: both; text-align: left;">V první verzi jsme si hráli s rekurzí, procházeli properties objektu, přeskakovali funkce atd. atd.&nbsp;</div><div class="separator" style="clear: both; text-align: left;">Ne že by to nefungovalo, ale je to spousta kódu, který se špatně čte, určitě je v něm nějaká chyba a jistě se už našel někdo, kdo to napsal líp.</div><div class="separator" style="clear: both; text-align: left;"><br /></div><div class="separator" style="clear: both; text-align: left;">No jasně – a byl to ten chlápek co psal <span style="font-family: Courier New, Courier, monospace;">JSON.stringify()</span>!</div><div class="separator" style="clear: both; text-align: left;"><br /></div><div class="separator" style="clear: both; text-align: left;">Když se postavíme na ramena obrů a použijeme JSON (a <a href="http://underscorejs.org/" target="_blank">Underscore.JS</a>), tak se s vyhledáváním dostaneme na 5 řádek jednoduchého kódu.</div><div class="separator" style="clear: both; text-align: left;"><br /></div><div class="separator" style="clear: both; text-align: left;">Když přidáme vyhledávání podle více klíčových slov, validace vstupů a možnost ignorovat některé properties objektu, tak jsme pořád na 22. řádcích:</div><div class="separator" style="clear: both; text-align: left;"><br /></div><script src="https://gist.github.com/krtek/7010022.js?file=filters.coffee"></script> <br /><div class="separator" style="clear: both; text-align: left;">Řídíme se zásadou, že jedno&nbsp;<a href="http://plnkr.co/edit/vDzh0i?p=preview" target="_blank">demo</a> řekne víc než tisíc slov. Hezké hraní.</div><div class="separator" style="clear: both; text-align: left;"><br /></div><div class="separator" style="clear: both; text-align: left;">A kdyby náhodou, tak zbytek kódu je na <a href="https://gist.github.com/krtek/7010022" target="_blank">Githubu</a>.</div>
-  </div>
+            <article itemtype="https://schema.org/TechArticle" itemscope class="article">
+    <div class="content-block typeset">
+        <h1 itemprop="name" class="article__headline alpha">Jednoduché filtrování seznamů v AngularJS</h1>
+
+        <p class="article__meta">
+            <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="article__author">
+                <span itemprop="name">Lukáš Marek</span>
+            </span>
+            <meta itemprop="datePublished" content="" />
+            <span class="article__pubdate">22.10.2013</span>
+            <meta itemprop="publisher"></meta>
+        </p>
+
+        
+
+        <div class="article__content-wrap">
+            <div class="article__content">
+                <p>V našem posledním projektu chceme (čistě v Javascriptu) mít vyhledávací
+filtr nad seznamem objektů. Asi nějak
+takhle:</p>
+
+<p><a href="http://1.bp.blogspot.com/-kGr-9BvaeUM/UmQMDIRaFpI/AAAAAAAAAQo/GgoCPC4fIo4/s1600/Screen+Shot+2013-10-18+at+13.20.22.png"><img src="http://1.bp.blogspot.com/-kGr-9BvaeUM/UmQMDIRaFpI/AAAAAAAAAQo/GgoCPC4fIo4/s640/Screen+Shot+2013-10-18+at+13.20.22.png" alt="" /></a></p>
+
+<p>Jenže objekty můžou obsahovat vnořené objekty, které obsahují vnořené
+objekty s dalšími vnořenými objekty – chápete, kam mířím?</p>
+
+<p>V první verzi jsme si hráli s rekurzí, procházeli properties objektu,
+přeskakovali funkce atd. atd. </p>
+
+<p>Ne že by to nefungovalo, ale je to spousta kódu, který se špatně čte,
+určitě je v něm nějaká chyba a jistě se už našel někdo, kdo to napsal
+líp.</p>
+
+<p>No jasně – a byl to ten chlápek co psal JSON.stringify()!</p>
+
+<p>Když se postavíme na ramena obrů a použijeme JSON (a
+<a href="http://underscorejs.org/">Underscore.JS</a>), tak se s vyhledáváním
+dostaneme na 5 řádek jednoduchého kódu.</p>
+
+<p>Když přidáme vyhledávání podle více klíčových slov, validace vstupů a
+možnost ignorovat některé properties objektu, tak jsme pořád na 22.
+řádcích:</p>
+
+<p>Řídíme se zásadou, že
+jedno <a href="http://plnkr.co/edit/vDzh0i?p=preview">demo</a> řekne víc než tisíc
+slov. Hezké hraní.</p>
+
+<p>A kdyby náhodou, tak zbytek kódu je na
+<a href="https://gist.github.com/krtek/7010022">Githubu</a>.</p>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="content-block">
+        <div class="article__misc">
+            <div class="article__sharebox">
+                <ul class="sharebox">
+    <li class="sharebox__item sharebox__item--twitter">
+        <a class="sharebox__item-body" href="https://twitter.com/intent/tweet?text=Jednoduché filtrování seznamů v AngularJS&url=https://fragaria.cz/blog/2013/10/22/jednoduche-filtrovani-seznamu-v/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter"><span>Share on Twitter</span></a>
+    </li>
+    <li class="sharebox__item sharebox__item--facebook">
+        <a class="sharebox__item-body" href="https://facebook.com/sharer.php?u=https://fragaria.cz/blog/2013/10/22/jednoduche-filtrovani-seznamu-v/" rel="nofollow" target="_blank" title="Share on Facebook"><span>Share on Facebook</span></a>
+    </li>
+    <li class="sharebox__item sharebox__item--gplus">
+        <a class="sharebox__item-body" href="https://plus.google.com/share?url=https://fragaria.cz/blog/2013/10/22/jednoduche-filtrovani-seznamu-v/" rel="nofollow" target="_blank" title="Share on Google+"><span>Share on Google+</span></a>
+    </li>
+</div>
+
+            </div>
+            <div class="article__tags">
+                
+            </div>
+        </div>
+    </div>
 </article>
 
         </div>

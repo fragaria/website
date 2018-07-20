@@ -10,7 +10,7 @@
     <title>Pondělní střípky z 23.1.2017 | fragaria.cz</title>
     <meta name="author" content="Fragaria s.r.o." />
     <meta name="robots" content="index,follow" />
-    <meta name="description" content="Kalhoty jsou na cestě. Ve Fragarii byl opravdový architekt! Hrajeme si s RxJS v Angularu 2.0. A další. Drby z kancluDrby z kanclu zařazujeme hlavně pro Denisku, která čte střípky ráda, ale prográmátorské novinky jí moc nezajímají.Takže Deniska - první zkoušení kalhot proběhne příští týden a budou mít na sobě jahodu! To mi při...">
+    <meta name="description" content="Kalhoty jsou na cestě. Ve Fragarii byl opravdový architekt! Hrajeme sis RxJS v Angularu 2.0. A další.">
     <meta name="keywords" content="fragaria, software, vývoj software, webové aplikace, python, javascript, angular, elasticsearch, html, css, stripkyetckeeperkalhotyreport-uri" />
     <!-- Favicons -->
     
@@ -18,7 +18,7 @@
     <meta property="og:url"           content="https://fragaria.cz/website/blog/2017/01/24/pondelni-stripky-z-2312017/" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Pondělní střípky z 23.1.2017 | fragaria.cz" />
-    <meta property="og:description"   content="Kalhoty jsou na cestě. Ve Fragarii byl opravdový architekt! Hrajeme si s RxJS v Angularu 2.0. A další. Drby z kancluDrby z kanclu zařazujeme hlavně pro Denisku, která čte střípky ráda, ale prográmátorské novinky jí moc nezajímají.Takže Deniska - první zkoušení kalhot proběhne příští týden a budou mít na sobě jahodu! To mi při..." />
+    <meta property="og:description"   content="Kalhoty jsou na cestě. Ve Fragarii byl opravdový architekt! Hrajeme sis RxJS v Angularu 2.0. A další." />
 
     
 
@@ -56,12 +56,130 @@
 </div>
 
 
-            <article itemtype="http://schema.org/BlogPosting" itemscope="">
-  <div class="content-block">
-    <h1 itemprop="headline">Pondělní střípky z 23.1.2017</h1>
-    <h1>CHUJU sprety</h1>
-    Kalhoty jsou na cestě. Ve Fragarii byl opravdový architekt! Hrajeme si s RxJS v Angularu 2.0. A další. <br /><a name='more'></a><br /><h3>Drby z kanclu</h3><i>Drby z kanclu</i> zařazujeme hlavně pro Denisku, která čte střípky ráda, ale prográmátorské novinky jí moc nezajímají.<br />Takže Deniska - první zkoušení kalhot proběhne příští týden a budou mít na sobě jahodu! To mi připomíná: <i>OK, Google. Ulož upomínku: vzít si v pondělí ráno čistý trenky!</i><br /><br /><h3>Architekt ve Fragarii</h3>Ve Fragarii jsme měli na návštěvě opravdového architekta. Teda, ne že bysme tu nebyli samí architekti, ale tohle byl architekt architekt. Je to jasný?<br />Ne? No prostě pan <a href="http://www.zalskyarchitekt.cz/">Honza je architekt</a>, který dostal za úkol zařídit, abysme se do našeho kanclíku vešli i se stále rostoucím počtem architektů.<br /><br />Pan architekt se s problémem popasoval dokonale a dokonce každému z našich architektů navrhl na stůl malou zahrádku.<br />Architekt a pěstitel Filip už přesně tuší, co na ní bude růst a Mates připravuje soutěž o zahrádkáře měsíce.<br /><div class="separator" style="clear: both; text-align: center;"><a href="https://1.bp.blogspot.com/-1m372N2IuQ0/WIcSzGbwS3I/AAAAAAAAAy0/bZurnIWrbeslkr0s8CKcUyTGlLtwo2FaQCLcB/s1600/hy99meknjhm-sandis-helvigs.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="267" src="https://1.bp.blogspot.com/-1m372N2IuQ0/WIcSzGbwS3I/AAAAAAAAAy0/bZurnIWrbeslkr0s8CKcUyTGlLtwo2FaQCLcB/s400/hy99meknjhm-sandis-helvigs.jpg" width="400" /></a><br/><i>Návrh našeho nového kanclu (vizualizace)</i></div><br /><br /><h3>Observables, RxJS a AngularJS 2.0</h3>Poté si vzal slovo architekt Filip a začal nám vysvětlovat, jak na <a href="https://www.prezident21.cz/candidates">Prezident 21</a> používají <a href="http://reactivex.io/rxjs/">RxJS</a> a <a href="https://en.wikipedia.org/wiki/Observer_pattern">Observables</a>.<br />Popravdě, většinu času jsem čuměl jak bagr na tvrdou hlínu. Ale bacha, jestli to myslíte s vývojem frontendových aplikací vážně a <a href="https://docs.angularjs.org/api/ng/service/$q">Promises</a> z Angularu 1.x už máte v malíku, koukejte si Observables nastudovat. Za rok se bez toho neobejdete (a je jedno jestli děláte v Angularu nebo třeba v ReactJS). <br />Škoda, že zde nemůžu přednášku zopakovat, proto doufám, že o tom Filip něco napíše. Na závěr jeden dotaz z publika:<br />- Co se stane, když zmerguju cold a hot stream?<br />- Bude vlažnej.<br /><br />PS: Dobrý úvod do Observables <a href="http://blog.angular-university.io/functional-reactive-programming-for-angular-2-developers-rxjs-and-observables/">je tady</a>.<br /><br /><h3>etckeeper</h3>Architekt Jirka nám ukázal <a href="https://etckeeper.branchable.com/">etckeeper</a>.<br />Je to nástroj na automatické verzování adresáře <code>/etc</code> do Gitu, což se hodí zejména lidem s Unixem.<br />Instalační skripty totiž soubory v <code>/etc</code> často upravují. Hodí se mít přehled o tom, co se při instalaci změnilo, případně to umět vrátit zpátky.<br />Sice jsme se shodli, že na Macu to potřeba není, ale když teď koukám na svůj <code>/etc</code>, tak už si tak jistej nejsem.<br /><br /><h3>report-uri</h3>Architekt Jirka tím neskončil a vrhnul se i do vod aplikační bezpečnosti. Předpokládám, že <a href="https://scotthelme.co.uk/content-security-policy-an-introduction/">Content-Security-Policy</a> (CSP) všichni znáte. Kdo tápe, tak CSP je ta věc, kvůli které vám prohlížeč odmítne zavolat REST API protože máte blbě nastavené CSP hlavičky na serveru.<br />Co se ale tolik neví&nbsp; (čti: já jsem to nevěděl) je, že prohlížeč můžete nastavit, aby v případě, že <i>zařízne</i> HTTP request, <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri">poslal zprávu</a> na předem definovanou adresu.<br /><br />A proto je tu projekt <a href="https://report-uri.io/">report-uri.io</a> - stačí se zaregistrovat, v hlavičkách začít posílat adresu report-uri.io a můžete si prohlížet, které zdroje prohlížeč zakazuje ve vašem projektu. Na ladění CSP geniální - a navíc zjistíte, kolik lidí má zavirované prohlížeče.<br />A to nejlepší? Je zadarmo!<br /><br />Architekt Lukáš se loučí a zase za týden!
-  </div>
+            <article itemtype="https://schema.org/TechArticle" itemscope class="article">
+    <div class="content-block typeset">
+        <h1 itemprop="name" class="article__headline alpha">Pondělní střípky z 23.1.2017</h1>
+
+        <p class="article__meta">
+            <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="article__author">
+                <span itemprop="name">Lukáš Marek</span>
+            </span>
+            <meta itemprop="datePublished" content="" />
+            <span class="article__pubdate">24.01.2017</span>
+            <meta itemprop="publisher"></meta>
+        </p>
+
+        
+
+        <div class="article__content-wrap">
+            <div class="article__content">
+                <p>Kalhoty jsou na cestě. Ve Fragarii byl opravdový architekt! Hrajeme si
+s RxJS v Angularu 2.0. A další.</p>
+
+<h3 id="drby-z-kanclu">Drby z kanclu</h3>
+
+<p><em>Drby z kanclu</em> zařazujeme hlavně pro Denisku, která čte střípky ráda,
+ale prográmátorské novinky jí moc nezajímají.
+Takže Deniska - první zkoušení kalhot proběhne příští týden a budou mít
+na sobě jahodu! To mi připomíná: <em>OK, Google. Ulož upomínku: vzít si v
+pondělí ráno čistý trenky!</em></p>
+
+<h3 id="architekt-ve-fragarii">Architekt ve Fragarii</h3>
+
+<p>Ve Fragarii jsme měli na návštěvě opravdového architekta. Teda, ne že
+bysme tu nebyli samí architekti, ale tohle byl architekt architekt. Je
+to jasný?
+Ne? No prostě pan <a href="http://www.zalskyarchitekt.cz/">Honza je architekt</a>,
+který dostal za úkol zařídit, abysme se do našeho kanclíku vešli i se
+stále rostoucím počtem architektů.</p>
+
+<p>Pan architekt se s problémem popasoval dokonale a dokonce každému z
+našich architektů navrhl na stůl malou zahrádku.
+Architekt a pěstitel Filip už přesně tuší, co na ní bude růst a Mates
+připravuje soutěž o zahrádkáře
+měsíce.</p>
+
+<p><a href="https://1.bp.blogspot.com/-1m372N2IuQ0/WIcSzGbwS3I/AAAAAAAAAy0/bZurnIWrbeslkr0s8CKcUyTGlLtwo2FaQCLcB/s1600/hy99meknjhm-sandis-helvigs.jpg"><img src="https://1.bp.blogspot.com/-1m372N2IuQ0/WIcSzGbwS3I/AAAAAAAAAy0/bZurnIWrbeslkr0s8CKcUyTGlLtwo2FaQCLcB/s400/hy99meknjhm-sandis-helvigs.jpg" alt="" /></a>
+<em>Návrh našeho nového kanclu (vizualizace)</em></p>
+
+<h3 id="observables-rxjs-a-angularjs-20">Observables, RxJS a AngularJS 2.0</h3>
+
+<p>Poté si vzal slovo architekt Filip a začal nám vysvětlovat, jak na
+<a href="https://www.prezident21.cz/candidates">Prezident 21</a> používají
+<a href="http://reactivex.io/rxjs/">RxJS</a> a
+<a href="https://en.wikipedia.org/wiki/Observer_pattern">Observables</a>.
+Popravdě, většinu času jsem čuměl jak bagr na tvrdou hlínu. Ale bacha,
+jestli to myslíte s vývojem frontendových aplikací vážně a
+<a href="https://docs.angularjs.org/api/ng/service/$q">Promises</a> z Angularu 1.x
+už máte v malíku, koukejte si Observables nastudovat. Za rok se bez toho
+neobejdete (a je jedno jestli děláte v Angularu nebo třeba v ReactJS).
+Škoda, že zde nemůžu přednášku zopakovat, proto doufám, že o tom Filip
+něco napíše. Na závěr jeden dotaz z publika:
+- Co se stane, když zmerguju cold a hot stream?
+- Bude vlažnej.</p>
+
+<p>PS: Dobrý úvod do Observables <a href="http://blog.angular-university.io/functional-reactive-programming-for-angular-2-developers-rxjs-and-observables/">je
+tady</a>.</p>
+
+<h3 id="etckeeper">etckeeper</h3>
+
+<p>Architekt Jirka nám ukázal
+<a href="https://etckeeper.branchable.com/">etckeeper</a>.
+Je to nástroj na automatické verzování adresáře <code class="highlighter-rouge">/etc</code> do Gitu, což se
+hodí zejména lidem s Unixem.
+Instalační skripty totiž soubory v <code class="highlighter-rouge">/etc</code> často upravují. Hodí se mít
+přehled o tom, co se při instalaci změnilo, případně to umět vrátit
+zpátky.
+Sice jsme se shodli, že na Macu to potřeba není, ale když teď koukám na
+svůj <code class="highlighter-rouge">/etc</code>, tak už si tak jistej nejsem.</p>
+
+<h3 id="report-uri">report-uri</h3>
+
+<p>Architekt Jirka tím neskončil a vrhnul se i do vod aplikační
+bezpečnosti. Předpokládám, že
+<a href="https://scotthelme.co.uk/content-security-policy-an-introduction/">Content-Security-Policy</a>
+(CSP) všichni znáte. Kdo tápe, tak CSP je ta věc, kvůli které vám
+prohlížeč odmítne zavolat REST API protože máte blbě nastavené CSP
+hlavičky na serveru.
+Co se ale tolik neví  (čti: já jsem to nevěděl) je, že prohlížeč můžete
+nastavit, aby v případě, že <em>zařízne</em> HTTP request, <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri">poslal
+zprávu</a>
+na předem definovanou adresu.</p>
+
+<p>A proto je tu projekt <a href="https://report-uri.io/">report-uri.io</a> - stačí se
+zaregistrovat, v hlavičkách začít posílat adresu report-uri.io a můžete
+si prohlížet, které zdroje prohlížeč zakazuje ve vašem projektu. Na
+ladění CSP geniální - a navíc zjistíte, kolik lidí má zavirované
+prohlížeče.
+A to nejlepší? Je zadarmo!</p>
+
+<p>Architekt Lukáš se loučí a zase za týden!</p>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="content-block">
+        <div class="article__misc">
+            <div class="article__sharebox">
+                <ul class="sharebox">
+    <li class="sharebox__item sharebox__item--twitter">
+        <a class="sharebox__item-body" href="https://twitter.com/intent/tweet?text=Pondělní střípky z 23.1.2017&url=https://fragaria.cz/blog/2017/01/24/pondelni-stripky-z-2312017/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter"><span>Share on Twitter</span></a>
+    </li>
+    <li class="sharebox__item sharebox__item--facebook">
+        <a class="sharebox__item-body" href="https://facebook.com/sharer.php?u=https://fragaria.cz/blog/2017/01/24/pondelni-stripky-z-2312017/" rel="nofollow" target="_blank" title="Share on Facebook"><span>Share on Facebook</span></a>
+    </li>
+    <li class="sharebox__item sharebox__item--gplus">
+        <a class="sharebox__item-body" href="https://plus.google.com/share?url=https://fragaria.cz/blog/2017/01/24/pondelni-stripky-z-2312017/" rel="nofollow" target="_blank" title="Share on Google+"><span>Share on Google+</span></a>
+    </li>
+</div>
+
+            </div>
+            <div class="article__tags">
+                
+            </div>
+        </div>
+    </div>
 </article>
 
         </div>

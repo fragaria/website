@@ -10,7 +10,7 @@
     <title>Jak jsme udělali Žanetu | fragaria.cz</title>
     <meta name="author" content="Fragaria s.r.o." />
     <meta name="robots" content="index,follow" />
-    <meta name="description" content="&nbsp;Po čase realizujeme projekt (500+ MD), který má všech "pět pé":baví nás,zákazník je spokojen,je dodán včas,zákazník řádně a včas platí,dostali jsme další související zakázky.Jmenuje se Žaneta a je to systém na správu zájezdů pro CK Adventura a CK China Tours.Domlouvání projektuKdyž to trochu přeženu, vypadal úvod asi ta...">
+    <meta name="description" content=" Po čase realizujeme projekt (500+ MD), který má všech “pět pé”:">
     <meta name="keywords" content="fragaria, software, vývoj software, webové aplikace, python, javascript, angular, elasticsearch, html, css, scrumagilepresaletrello" />
     <!-- Favicons -->
     
@@ -18,7 +18,7 @@
     <meta property="og:url"           content="https://fragaria.cz/website/blog/2014/09/02/jak-jsme-udelali-zanetu/" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Jak jsme udělali Žanetu | fragaria.cz" />
-    <meta property="og:description"   content="&nbsp;Po čase realizujeme projekt (500+ MD), který má všech "pět pé":baví nás,zákazník je spokojen,je dodán včas,zákazník řádně a včas platí,dostali jsme další související zakázky.Jmenuje se Žaneta a je to systém na správu zájezdů pro CK Adventura a CK China Tours.Domlouvání projektuKdyž to trochu přeženu, vypadal úvod asi ta..." />
+    <meta property="og:description"   content=" Po čase realizujeme projekt (500+ MD), který má všech “pět pé”:" />
 
     
 
@@ -56,12 +56,167 @@
 </div>
 
 
-            <article itemtype="http://schema.org/BlogPosting" itemscope="">
-  <div class="content-block">
-    <h1 itemprop="headline">Jak jsme udělali Žanetu</h1>
-    <h1>CHUJU sprety</h1>
-    <div dir="ltr" style="text-align: left;" trbidi="on">&nbsp;Po čase realizujeme projekt (500+ MD), který má všech "pět pé":<br /><ul><li>baví nás,</li><li>zákazník je spokojen,</li><li>je dodán včas,</li><li>zákazník řádně a včas platí,</li><li>dostali jsme další související zakázky.</li></ul>Jmenuje se Žaneta a je to<a href="http://www.fragaria.cz/reference/2014/6/13/system-pro-spravu-zajezdu/"> systém na správu zájezdů</a> pro <a href="http://www.adventura.cz/" target="_blank">CK Adventura</a> a <a href="http://www.chinatours.cz/" target="_blank">CK China Tours</a>.<br /><br /><a name='more'></a><br /><h3>Domlouvání projektu</h3><u>Když to trochu přeženu, vypadal úvod asi takto:</u><br />Zákazník: <i>Rádi bychom u Vás poptali vývoj systému na správu zájezdů, samozřejmě na míru.</i><br />Fraga: <i>Jasně, kolik na to máte cca peněz a co všechno to má umět?</i><br />Zákazník: <i>To bychom právě rádi zjistili z nabídek, z nichž si následně vybereme tu nej.</i><br />Fraga: <i>Aha ... mohli bychom Vám tedy nejprve představit jiný přístup k vývoji SW - jak pracujeme my?</i><br /><br /><h3><span style="background-color: yellow;"><span style="background-color: white;"><strike>Nabídka</strike></span><strike><br /></strike></span></h3>Neplýtvali jsme časem sepisováním mnohastránkové nabídky, jejíž hlavní náplní je vejít se za každou cenu do předpokládaného rozpočtu, který je již na první pohled nedostatečný s tím, že zbytek se vyřeší, až zakázku získáme. Nabídka pak není nic jiného než "za předpokladu", "představuje pouze základní ...", "součástí není ..." atd. Následně je na stole nicneříkající zadání a nicneříkající nabídka. Přesto se všichni tváří, že se vzájemně pochopili a jde se do toho. V nejhorším, co se může stát? Když nebudu jako zákazník spokojen, nezaplatím. V případě, že se jako dodavatel nevejdu do rozpočtu, některé funkce zkrátka "ořežu".<br /><br /><h3><strike>Analýza</strike></h3>Netvořili jsme ani žádnou analýzu, popis obrazovek apod. Náš presales spočíval v ukázce stylu naší práce, demu <a href="http://cs.wikipedia.org/wiki/Agiln%C3%AD_metodiky" target="_blank">agilní metodiky vývoje</a>, zkušebním vytvoření několika úvodních storek a sprintů (používáme <a href="https://trello.com/" target="_blank">Trello</a>). Abychom byli i správní obchodníci, poskytli jsme slevu v sazbách, v případě, že se domluvíme na agilním přístupu.<br /><br />Tím jsme rozbořili představu zákazníka o získání nabídky s finální cenou a termínem, vtáhli zákazníka do vývoje a nadchli jej pro spolupráci. Z češtiny jsem nikdy extra neprozpíval ;), ale slovo spolupráce chápu jako tvorbu nějakého díla dohromady. Máme ověřeno, že představa "Já zákazník, já pán" je ve svém důsledku extrémně drahá jak pro pána, tak pro dělný lid.<br /><br /><h3>Samotná realizace projektu</h3>Začali jsme tvorbou prototypů obrazovek. Jak je prototypování super, <a href="http://blog.fragaria.cz/2014/06/analyza-prototyp-oboji.html" target="_blank">píšeme v předchozím článku</a>.<br /><br />Pokud zákazník každý týden vidí, kolik bylo odvedeno práce, a má neustále k dispozici "něco" funkčního, je schopen velmi brzy porovnat, jak je daná funkce náročná/drahá. Následně má tři možnosti, přičemž všechny jsou správné:<br /><ul><li>Označí zbytné funkce, jejichž realizaci odsune na později.</li><li>Sáhne hlouběji do peněženky.</li><li>Danou funkčnost vyškrtne, protože se mu ekonomicky nevyplatí (nepotřebuje ji).</li></ul><br />Parádní věc jsou pravidelná dema pro zaměstnance zákazníka v průběhu projektu. Tím, že se pracovníci, pro které je systém vyvíjen, mohou k řešení v průběhu vývoje vyjadřovat, má jenom pozitiva. Lidé se na nový systém těší, my nebudeme muset na poslední chvíli nic předělávat a management vidí, za co platí.<br /><br />Samozřejmě v projektu byla a ještě bude řada problémů. Jsem si však jist, že naše kluky práce baví, děláme projekt, který má hlavu a patu, a zákazník k nám chodí rád. Jednou dostala paní Iveta i oběd.<br /><div class="separator" style="clear: both; text-align: center;"></div><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-UPbxrZ9ufgY/VAVxMFlMBmI/AAAAAAAAAoM/SCpvotLJWzY/s1600/obed.jpeg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-UPbxrZ9ufgY/VAVxMFlMBmI/AAAAAAAAAoM/SCpvotLJWzY/s1600/obed.jpeg" height="480" width="640" /></a></div><br /><br /><h3>Plán vs. skutečnost</h3>Finální rozpočet je cca 3x větší, než byla úvodní představa zákazníka. Výsledný produkt je ale násobně lepší, než si zákazník dovedl představit a nyní má v ruce nástroj, který mu vedle očekávané úspory práce přinese i přímé výnosy, takže business case v tom je ... z logiky výše uvedeného být musí.<br /><br />Díky výrazně větší náročnosti jsme začali mít problémy s termíny. Stanovili jsme si proto deadlines a rozsah funkcí (náplň práce v jednotlivých sprintech) jsme přizpůsobovali termínům. Fungovalo to i naopak, kdy důvěra zákazníka v naši práci vedla k tomu, že nás "nedrtil" na termínech, ale společně jsme posuzovali, kdy co musí být hotovo s ohledem na potřeby zákazníka a naše možnosti.<br /><br /><h3>Závěr </h3>Upřímně doufám, že už se nikdy nedostaneme do situace, kdy nebudeme u obdobných projektů umět zákazníkovi vysvětlit, že jasně daný rozpočet a termín je nesmysl, který ve finále odnese jak zákazník (nemá produkt, který chtěl), tak i my (na 99% na tom proděláme boty), nebo že budeme "nuceni" do takového projektu jít, vždyť ono se to nějak vyřeší.<br /><br />Nakonec ještě důkaz, že taková spolupráce opravdu funguje. Nové weby obou CK měl původně tvořit někdo jiný jako samostatné projekty. Zákazník je s naší prací spokojen natolik, že oba weby dodáváme my (vyjma grafiky). Administrace stránek je součást Žanety. Žaneta je totiž cool girl.<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-44U82QyPo6E/VAbEB7FfA6I/AAAAAAAAAog/M8mMncNi8wM/s1600/zaneta.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/-44U82QyPo6E/VAbEB7FfA6I/AAAAAAAAAog/M8mMncNi8wM/s1600/zaneta.jpg" height="314" width="640" /></a></div></div>
-  </div>
+            <article itemtype="https://schema.org/TechArticle" itemscope class="article">
+    <div class="content-block typeset">
+        <h1 itemprop="name" class="article__headline alpha">Jak jsme udělali Žanetu</h1>
+
+        <p class="article__meta">
+            <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="article__author">
+                <span itemprop="name">Martin Burián</span>
+            </span>
+            <meta itemprop="datePublished" content="" />
+            <span class="article__pubdate">02.09.2014</span>
+            <meta itemprop="publisher"></meta>
+        </p>
+
+        
+
+        <div class="article__content-wrap">
+            <div class="article__content">
+                <p> Po čase realizujeme projekt (500+ MD), který má všech “pět pé”:</p>
+
+<ul>
+  <li>baví nás,</li>
+  <li>zákazník je spokojen,</li>
+  <li>je dodán včas,</li>
+  <li>zákazník řádně a včas platí,</li>
+  <li>dostali jsme další související zakázky.</li>
+</ul>
+
+<p>Jmenuje se Žaneta a je to<a href="http://www.fragaria.cz/reference/2014/6/13/system-pro-spravu-zajezdu/">systém na správu
+zájezdů</a>
+pro <a href="http://www.adventura.cz/">CK Adventura</a> a <a href="http://www.chinatours.cz/">CK China
+Tours</a>.</p>
+
+<h3 id="domlouvání-projektu">Domlouvání projektu</h3>
+
+<p><span class="underline">Když to trochu přeženu, vypadal úvod asi
+takto:</span>
+Zákazník: <em>Rádi bychom u Vás poptali vývoj systému na správu zájezdů,
+samozřejmě na míru.</em>
+Fraga: <em>Jasně, kolik na to máte cca peněz a co všechno to má umět?</em>
+Zákazník: <em>To bychom právě rádi zjistili z nabídek, z nichž si následně
+vybereme tu nej.</em>
+Fraga: <em>Aha … mohli bychom Vám tedy nejprve představit jiný přístup k
+vývoji SW - jak pracujeme my?</em></p>
+
+<h3 id="nabídka">~~Nabídka</h3>
+<p>~~</p>
+
+<p>Neplýtvali jsme časem sepisováním mnohastránkové nabídky, jejíž hlavní
+náplní je vejít se za každou cenu do předpokládaného rozpočtu, který je
+již na první pohled nedostatečný s tím, že zbytek se vyřeší, až zakázku
+získáme. Nabídka pak není nic jiného než “za předpokladu”, “představuje
+pouze základní …”, “součástí není …” atd. Následně je na stole
+nicneříkající zadání a nicneříkající nabídka. Přesto se všichni tváří,
+že se vzájemně pochopili a jde se do toho. V nejhorším, co se může
+stát? Když nebudu jako zákazník spokojen, nezaplatím. V případě, že se
+jako dodavatel nevejdu do rozpočtu, některé funkce zkrátka “ořežu”.</p>
+
+<h3 id="analýza"><del>Analýza</del></h3>
+
+<p>Netvořili jsme ani žádnou analýzu, popis obrazovek apod. Náš presales
+spočíval v ukázce stylu naší práce, demu <a href="http://cs.wikipedia.org/wiki/Agiln%C3%AD_metodiky">agilní metodiky
+vývoje</a>, zkušebním
+vytvoření několika úvodních storek a sprintů (používáme
+<a href="https://trello.com/">Trello</a>). Abychom byli i správní obchodníci,
+poskytli jsme slevu v sazbách, v případě, že se domluvíme na agilním
+přístupu.</p>
+
+<p>Tím jsme rozbořili představu zákazníka o získání nabídky s finální cenou
+a termínem, vtáhli zákazníka do vývoje a nadchli jej pro spolupráci. Z
+češtiny jsem nikdy extra neprozpíval ;), ale slovo spolupráce chápu
+jako tvorbu nějakého díla dohromady. Máme ověřeno, že představa “Já
+zákazník, já pán” je ve svém důsledku extrémně drahá jak pro pána, tak
+pro dělný lid.</p>
+
+<h3 id="samotná-realizace-projektu">Samotná realizace projektu</h3>
+
+<p>Začali jsme tvorbou prototypů obrazovek. Jak je prototypování super,
+<a href="http://blog.fragaria.cz/2014/06/analyza-prototyp-oboji.html">píšeme v předchozím
+článku</a>.</p>
+
+<p>Pokud zákazník každý týden vidí, kolik bylo odvedeno práce, a má
+neustále k dispozici “něco” funkčního, je schopen velmi brzy porovnat,
+jak je daná funkce náročná/drahá. Následně má tři možnosti, přičemž
+všechny jsou správné:</p>
+
+<ul>
+  <li>Označí zbytné funkce, jejichž realizaci odsune na později.</li>
+  <li>Sáhne hlouběji do peněženky.</li>
+  <li>Danou funkčnost vyškrtne, protože se mu ekonomicky nevyplatí
+(nepotřebuje ji).</li>
+</ul>
+
+<p>Parádní věc jsou pravidelná dema pro zaměstnance zákazníka v průběhu
+projektu. Tím, že se pracovníci, pro které je systém vyvíjen, mohou k
+řešení v průběhu vývoje vyjadřovat, má jenom pozitiva. Lidé se na nový
+systém těší, my nebudeme muset na poslední chvíli nic předělávat a
+management vidí, za co platí.</p>
+
+<p>Samozřejmě v projektu byla a ještě bude řada problémů. Jsem si však
+jist, že naše kluky práce baví, děláme projekt, který má hlavu a patu, a
+zákazník k nám chodí rád. Jednou dostala paní Iveta i
+oběd.</p>
+
+<p><a href="http://1.bp.blogspot.com/-UPbxrZ9ufgY/VAVxMFlMBmI/AAAAAAAAAoM/SCpvotLJWzY/s1600/obed.jpeg">http://1.bp.blogspot.com/-UPbxrZ9ufgY/VAVxMFlMBmI/AAAAAAAAAoM/SCpvotLJWzY/s1600/obed.jpeg</a></p>
+
+<h3 id="plán-vs-skutečnost">Plán vs. skutečnost</h3>
+
+<p>Finální rozpočet je cca 3x větší, než byla úvodní představa zákazníka.
+Výsledný produkt je ale násobně lepší, než si zákazník dovedl
+představit a nyní má v ruce nástroj, který mu vedle očekávané úspory
+práce přinese i přímé výnosy, takže business case v tom je … z logiky
+výše uvedeného být musí.</p>
+
+<p>Díky výrazně větší náročnosti jsme začali mít problémy s termíny.
+Stanovili jsme si proto deadlines a rozsah funkcí (náplň práce v
+jednotlivých sprintech) jsme přizpůsobovali termínům. Fungovalo to i
+naopak, kdy důvěra zákazníka v naši práci vedla k tomu, že nás “nedrtil”
+na termínech, ale společně jsme posuzovali, kdy co musí být hotovo s
+ohledem na potřeby zákazníka a naše možnosti.</p>
+
+<h3 id="závěr">Závěr</h3>
+
+<p>Upřímně doufám, že už se nikdy nedostaneme do situace, kdy nebudeme u
+obdobných projektů umět zákazníkovi vysvětlit, že jasně daný rozpočet a
+termín je nesmysl, který ve finále odnese jak zákazník (nemá produkt,
+který chtěl), tak i my (na 99% na tom proděláme boty), nebo že budeme
+“nuceni” do takového projektu jít, vždyť ono se to nějak vyřeší.</p>
+
+<p>Nakonec ještě důkaz, že taková spolupráce opravdu funguje. Nové weby
+obou CK měl původně tvořit někdo jiný jako samostatné projekty. Zákazník
+je s naší prací spokojen natolik, že oba weby dodáváme my (vyjma
+grafiky). Administrace stránek je součást Žanety. Žaneta je totiž cool
+girl.</p>
+
+<p><a href="http://2.bp.blogspot.com/-44U82QyPo6E/VAbEB7FfA6I/AAAAAAAAAog/M8mMncNi8wM/s1600/zaneta.jpg">http://2.bp.blogspot.com/-44U82QyPo6E/VAbEB7FfA6I/AAAAAAAAAog/M8mMncNi8wM/s1600/zaneta.jpg</a></p>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="content-block">
+        <div class="article__misc">
+            <div class="article__sharebox">
+                <ul class="sharebox">
+    <li class="sharebox__item sharebox__item--twitter">
+        <a class="sharebox__item-body" href="https://twitter.com/intent/tweet?text=Jak jsme udělali Žanetu&url=https://fragaria.cz/blog/2014/09/02/jak-jsme-udelali-zanetu/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter"><span>Share on Twitter</span></a>
+    </li>
+    <li class="sharebox__item sharebox__item--facebook">
+        <a class="sharebox__item-body" href="https://facebook.com/sharer.php?u=https://fragaria.cz/blog/2014/09/02/jak-jsme-udelali-zanetu/" rel="nofollow" target="_blank" title="Share on Facebook"><span>Share on Facebook</span></a>
+    </li>
+    <li class="sharebox__item sharebox__item--gplus">
+        <a class="sharebox__item-body" href="https://plus.google.com/share?url=https://fragaria.cz/blog/2014/09/02/jak-jsme-udelali-zanetu/" rel="nofollow" target="_blank" title="Share on Google+"><span>Share on Google+</span></a>
+    </li>
+</div>
+
+            </div>
+            <div class="article__tags">
+                
+            </div>
+        </div>
+    </div>
 </article>
 
         </div>

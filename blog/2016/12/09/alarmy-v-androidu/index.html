@@ -10,7 +10,7 @@
     <title>Alarmy v Androidu | fragaria.cz</title>
     <meta name="author" content="Fragaria s.r.o." />
     <meta name="robots" content="index,follow" />
-    <meta name="description" content="Účelem toho příspěvku není vytvořit návod jak si na vašem telefonu se systémem Android nastavit budík na šestou ráno, ale nahlédnou trochu pod pokličku mechanizmu, který se postará o spuštění libovolné akce někdy v budoucnosti. A jak už to tak na Androidu bývá, nejedná se o mechanizmus jeden, ale hned několik.K čemu alarmy? P...">
+    <meta name="description" content="Účelem toho příspěvku není vytvořit návod jak si na vašem telefonu sesystémem Android nastavit budík na šestou ráno, ale nahlédnou trochu podpokličku mechanizmu, který se postará o spuštění libovolné akce někdy vbudoucnosti. A jak už to tak na Androidu bývá, nejedná se o mechanizmusjeden, ale hnedněkolik.">
     <meta name="keywords" content="fragaria, software, vývoj software, webové aplikace, python, javascript, angular, elasticsearch, html, css, alarmandroidscheduler" />
     <!-- Favicons -->
     
@@ -18,7 +18,7 @@
     <meta property="og:url"           content="https://fragaria.cz/website/blog/2016/12/09/alarmy-v-androidu/" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Alarmy v Androidu | fragaria.cz" />
-    <meta property="og:description"   content="Účelem toho příspěvku není vytvořit návod jak si na vašem telefonu se systémem Android nastavit budík na šestou ráno, ale nahlédnou trochu pod pokličku mechanizmu, který se postará o spuštění libovolné akce někdy v budoucnosti. A jak už to tak na Androidu bývá, nejedná se o mechanizmus jeden, ale hned několik.K čemu alarmy? P..." />
+    <meta property="og:description"   content="Účelem toho příspěvku není vytvořit návod jak si na vašem telefonu sesystémem Android nastavit budík na šestou ráno, ale nahlédnou trochu podpokličku mechanizmu, který se postará o spuštění libovolné akce někdy vbudoucnosti. A jak už to tak na Androidu bývá, nejedná se o mechanizmusjeden, ale hnedněkolik." />
 
     
 
@@ -56,12 +56,199 @@
 </div>
 
 
-            <article itemtype="http://schema.org/BlogPosting" itemscope="">
-  <div class="content-block">
-    <h1 itemprop="headline">Alarmy v Androidu</h1>
-    <h1>CHUJU sprety</h1>
-    Účelem toho příspěvku není vytvořit návod jak si na vašem telefonu se systémem Android nastavit budík na šestou ráno, ale nahlédnou trochu pod pokličku mechanizmu, který se postará o spuštění libovolné akce někdy v budoucnosti. A jak už to tak na Androidu bývá, nejedná se o mechanizmus jeden, ale hned několik.<br /><br /><a name='more'></a><div class="separator" style="clear: both; text-align: center;"><a href="https://4.bp.blogspot.com/-vEW67W0Rf4Q/WEp92ed7nDI/AAAAAAAAArk/u2A0ZCXRMDUsHkkxmKkcQc0ai33JqlzRgCLcB/s1600/numbers-time-watch-white.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://4.bp.blogspot.com/-vEW67W0Rf4Q/WEp92ed7nDI/AAAAAAAAArk/u2A0ZCXRMDUsHkkxmKkcQc0ai33JqlzRgCLcB/s320/numbers-time-watch-white.jpg" width="320" height="213" /></a></div><br/><br/><h3>K čemu alarmy?</h3> <div>Potřebujete vyvolat nějakou akci ve vzdálenější budoucnosti jako třeba rozeznít uživatelův budík? Rádi byste pravidelně synchronizovali data mezi apkou a serverem a popřípadě uživatele upozornili notifikací, že se objevily nějaké novinky, které stojí za to si prohlédnut? Něco vám našeptává že držet kvůli tomu při životě celou aplikaci není to pravé? V tom případě je alarm nebo chce-li job, přesně to co potřebujete.<br /><br />Jedná se totiž o způsob, jak systému Android sdělit, že má za uvedený časový interval nastartovat vaší aplikaci a nechat ji provést nějakou akci. Vzbudit jak? No samozřejmě pomocí dobře známého <b>Intentu</b> jakožto standardního prostředku meziaplikační komunikace. Zdá se to být jednoduché až primitivní, ale přece jenom za tím nějaké to tajemství je. <br /><br/><h3>Baterie především</h3><div>Ždímat baterii je většinou to poslední co uživatel od aplikace očekává a proto by měla být četnost alarmů co nejmenší. Tedy samozřejmě tak malá, aby vaše aplikace stále dávala smysl.<br /><br />Představte si aplikaci která má za úkol varovat vás například před zvýšenou koncentrací škodlivin a smogu ve vašem okolí. Logické asi bude pravidelně posílat serveru vaší lokaci (pokud se mění) a jako odpověd dostávat informaci zda v ní byly překročeny limity či nikoliv. Je třeba správně vybalancovat nastavenou periodu dotazování na server tak, aby k dotazům nedocházelo příliš často, ale zároveň aby uživatel nestihl strávit odpoledne v Bohumíně aniž by se dozvěděl, že riskuje zdraví.<br /><br />Jako doplněk ke správnému načasováni však existuje ještě jedna technika jak nějaké ty miliampérhodiny ušetřit.</div><br/><br/><h3>Nepřesné alarmy</h3><div>Ano vážně, pokud nebudete trvat na spuštění v přesně definovaný čas, pomůžete tím Androidu ušetřit nemalou část baterie.<br /><br />Android totiž, když zrovna nemá nic na práci, usne. V tomto stavu má nejmenší odběr a baterii tím šetří. Každý alarm ho však vzbudí a donutí provést rozličné rutiny jako například inicializovat spojení do internetu. Vaše aplikace však v systému není sama a takto ho budí aplikací hned několik. Pokud však při nastavování alarmu řeknete, že jej chcete provést například za 10 minut plus mínus jedna minuta, umožníte tím systému seskupit alarmy různých aplikací a provést tak více činností v rámci jednoho probuzení.<br /><br />Tato optimalizace má na životnost baterie nemalý vliv. Navíc dochází k randomizaci jednotlivých volání což jistě ocení i váš server.</div><br/><br/><h3>Alarmující mechanismy</h3><div>Jak již bylo uvedeno na začátku k nastavování alarmů lze využít hned několik mechanismů. Jedná se o: <br /><ul><li>Alarm Manager&nbsp;</li><li>Firebase Job Dispatcher&nbsp;</li><li>Job Scheduler&nbsp;</li></ul></div><br/><br/><h3>Alarm Manager</h3><div>Jedná se o nejstarší a zároveň nejméně efektivní způsob přístupu k alarmům. Jeho výhodou je, že do standardního Android SDK patří od začátku a není zde problém s kompatibilitou. Nevýhodou je že nepodporuje “Nepřesné alarmy” a je tedy nejméně efektivní metodou. Jeho API je dosti obecné a neposkytuje takový komfort jako následující dva bratříčci.</div><br /><br/><h3>Job Scheduler</h3><div>Naproti tomu Job Scheduler je nejmodernější způsob jak tuto problematiku řešit. API je čisté a intuitivní, jeho použití je efektivní. Nevýhodou je, že byl zařazen do standardního SDK až od verze 21+ a není tedy příliš použitelný pro aplikace vyžadující zpětnou kompatibilitu.</div><br /></br><h3>Firebase Job Dispatcher</h3><div>Je knihovna jež přináší zpětnou kompatibilitu už od verze 9+. Má velmi podobné API jako výše uvedený Job Scheduler, který také pro verze 21+ interně používá. Pro verze &lt; 21 interně využívá mechanismus GCM  (GCM Task service) a vyžaduje tedy závislost na balíku Play Services. Tato závislost může být nevýhodou neboť na některých zařízeních nemusí být k dispozici.<br /></div><br/><br/><table><colgroup><col width="198"></col><col width="152"></col><col width="152"></col><col width="122"></col></colgroup><tr><th>&nbsp;</th><th>Kompatibilita</th><th>Efektivita</th><th>Play services</th></tr><tr><th>Alarm Manager</th><td style="color:green;">1+</td><td style="color:red;">nízká</td><td style="color:green;">nevyžaduje</td></tr><tr><th>Job Scheduler</th><td style="color:red;">21+</td><td style="color:green;">vysoká</td><td style="color:green;">nevyžaduje</td></tr><tr><th>Firebase Job Dispatcher</th><td style="color:green;">9+</td><td style="color:green;">vysoká</td><td style="color:red;">vyžaduje</td></tr></table><br/><br/><h3>Trocha praxe</h3>Na závěr si ukážeme jak vytvořit jednoduchou službu, která bude pravidelně (co 10 minut) kontrolovat náš server. Zvolenou technologií je <b>Firebase Job Dispatcher</b>, jež je dle mého názoru nejrozumějším kompromisem. Pro absolutní kompatibilitu by bylo třeba příklad ještě doplnit o neefektivní mechanizmus založený na Alarm Manageru.</div><div><br /></div><div>Nejprve přidáme gradle závislost:<br /><br /><script src="https://gist.github.com/krtek/b280f7b6a110df8dc8fe17967e9a90c5.js?file=gradle.groovy"></script> <div><br /></div>Vytvoříme vlastní službu:<br /><br /><script src="https://gist.github.com/krtek/b280f7b6a110df8dc8fe17967e9a90c5.js?file=SmogService.java"></script> Kterou zaregistrujeme do manifest.xml:<br /><br/><script src="https://gist.github.com/krtek/b280f7b6a110df8dc8fe17967e9a90c5.js?file=manifest.xml"></script> A nyní už to jen celé spustit:<br /><br/><script src="https://gist.github.com/krtek/b280f7b6a110df8dc8fe17967e9a90c5.js?file=Main.java"></script>A pokud bychom to chtěli vypnout:<br /><br/><script src="https://gist.github.com/krtek/b280f7b6a110df8dc8fe17967e9a90c5.js?file=Cancel.java"></script><br/><br/><h3>Závěrem</h3><div>Ok, ale proč tři způsoby ptáte se? Odpověď je jednoduchá, “Protože Android”. Tato evolučně velmi živá platforma skýtá mnoho takovýchto mysteriózních zákoutí.</div>
-  </div>
+            <article itemtype="https://schema.org/TechArticle" itemscope class="article">
+    <div class="content-block typeset">
+        <h1 itemprop="name" class="article__headline alpha">Alarmy v Androidu</h1>
+
+        <p class="article__meta">
+            <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="article__author">
+                <span itemprop="name">Milan Slezák</span>
+            </span>
+            <meta itemprop="datePublished" content="" />
+            <span class="article__pubdate">09.12.2016</span>
+            <meta itemprop="publisher"></meta>
+        </p>
+
+        
+
+        <div class="article__content-wrap">
+            <div class="article__content">
+                <p>Účelem toho příspěvku není vytvořit návod jak si na vašem telefonu se
+systémem Android nastavit budík na šestou ráno, ale nahlédnou trochu pod
+pokličku mechanizmu, který se postará o spuštění libovolné akce někdy v
+budoucnosti. A jak už to tak na Androidu bývá, nejedná se o mechanizmus
+jeden, ale hned
+několik.</p>
+
+<p><a href="https://4.bp.blogspot.com/-vEW67W0Rf4Q/WEp92ed7nDI/AAAAAAAAArk/u2A0ZCXRMDUsHkkxmKkcQc0ai33JqlzRgCLcB/s1600/numbers-time-watch-white.jpg"><img src="https://4.bp.blogspot.com/-vEW67W0Rf4Q/WEp92ed7nDI/AAAAAAAAArk/u2A0ZCXRMDUsHkkxmKkcQc0ai33JqlzRgCLcB/s320/numbers-time-watch-white.jpg" alt="" /></a></p>
+
+<h3 id="k-čemu-alarmy">K čemu alarmy?</h3>
+
+<p>Potřebujete vyvolat nějakou akci ve vzdálenější budoucnosti jako třeba
+rozeznít uživatelův budík? Rádi byste pravidelně synchronizovali data
+mezi apkou a serverem a popřípadě uživatele upozornili notifikací, že se
+objevily nějaké novinky, které stojí za to si prohlédnut? Něco vám
+našeptává že držet kvůli tomu při životě celou aplikaci není to pravé?
+V tom případě je alarm nebo chce-li job, přesně to co potřebujete.</p>
+
+<p>Jedná se totiž o způsob, jak systému Android sdělit, že má za uvedený
+časový interval nastartovat vaší aplikaci a nechat ji provést nějakou
+akci. Vzbudit jak? No samozřejmě pomocí dobře známého <strong>Intentu</strong>
+jakožto standardního prostředku meziaplikační komunikace. Zdá se to být
+jednoduché až primitivní, ale přece jenom za tím nějaké to tajemství
+je.</p>
+
+<h3 id="baterie-především">Baterie především</h3>
+
+<p>Ždímat baterii je většinou to poslední co uživatel od aplikace očekává a
+proto by měla být četnost alarmů co nejmenší. Tedy samozřejmě tak malá,
+aby vaše aplikace stále dávala smysl.</p>
+
+<p>Představte si aplikaci která má za úkol varovat vás například před
+zvýšenou koncentrací škodlivin a smogu ve vašem okolí. Logické asi
+bude pravidelně posílat serveru vaší lokaci (pokud se mění) a jako
+odpověd dostávat informaci zda v ní byly překročeny limity či nikoliv.
+Je třeba správně vybalancovat nastavenou periodu dotazování na server
+tak, aby k dotazům nedocházelo příliš často, ale zároveň aby uživatel
+nestihl strávit odpoledne v Bohumíně aniž by se dozvěděl, že riskuje
+zdraví.</p>
+
+<p>Jako doplněk ke správnému načasováni však existuje ještě jedna technika
+jak nějaké ty miliampérhodiny ušetřit.</p>
+
+<h3 id="nepřesné-alarmy">Nepřesné alarmy</h3>
+
+<p>Ano vážně, pokud nebudete trvat na spuštění v přesně definovaný čas,
+pomůžete tím Androidu ušetřit nemalou část baterie.</p>
+
+<p>Android totiž, když zrovna nemá nic na práci, usne. V tomto stavu má
+nejmenší odběr a baterii tím šetří. Každý alarm ho však vzbudí a donutí
+provést rozličné rutiny jako například inicializovat spojení do
+internetu. Vaše aplikace však v systému není sama a takto ho budí
+aplikací hned několik. Pokud však při nastavování alarmu řeknete, že jej
+chcete provést například za 10 minut plus mínus jedna minuta, umožníte
+tím systému seskupit alarmy různých aplikací a provést tak více
+činností v rámci jednoho probuzení.</p>
+
+<p>Tato optimalizace má na životnost baterie nemalý vliv. Navíc dochází k
+randomizaci jednotlivých volání což jistě ocení i váš server.</p>
+
+<h3 id="alarmující-mechanismy">Alarmující mechanismy</h3>
+
+<p>Jak již bylo uvedeno na začátku k nastavování alarmů lze využít hned
+několik mechanismů. Jedná se o:</p>
+
+<ul>
+  <li>Alarm Manager </li>
+  <li>Firebase Job Dispatcher </li>
+  <li>Job Scheduler </li>
+</ul>
+
+<h3 id="alarm-manager">Alarm Manager</h3>
+
+<p>Jedná se o nejstarší a zároveň nejméně efektivní způsob přístupu k
+alarmům. Jeho výhodou je, že do standardního Android SDK patří od
+začátku a není zde problém s kompatibilitou. Nevýhodou je že
+nepodporuje “Nepřesné alarmy” a je tedy nejméně efektivní metodou. Jeho
+API je dosti obecné a neposkytuje takový komfort jako následující dva
+bratříčci.</p>
+
+<h3 id="job-scheduler">Job Scheduler</h3>
+
+<p>Naproti tomu Job Scheduler je nejmodernější způsob jak tuto problematiku
+řešit. API je čisté a intuitivní, jeho použití je efektivní. Nevýhodou
+je, že byl zařazen do standardního SDK až od verze 21+ a není tedy
+příliš použitelný pro aplikace vyžadující zpětnou kompatibilitu.</p>
+
+<h3 id="firebase-job-dispatcher">Firebase Job Dispatcher</h3>
+
+<p>Je knihovna jež přináší zpětnou kompatibilitu už od verze 9+. Má velmi
+podobné API jako výše uvedený Job Scheduler, který také pro verze 21+
+interně používá. Pro verze &lt; 21 interně využívá mechanismus GCM (GCM
+Task service) a vyžaduje tedy závislost na balíku Play Services. Tato
+závislost může být nevýhodou neboť na některých zařízeních nemusí být k
+dispozici.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Kompatibilita</th>
+      <th>Efektivita</th>
+      <th>Play services</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Alarm Manager</td>
+      <td>1+</td>
+      <td>nízká</td>
+      <td>nevyžaduje</td>
+    </tr>
+    <tr>
+      <td>Job Scheduler</td>
+      <td>21+</td>
+      <td>vysoká</td>
+      <td>nevyžaduje</td>
+    </tr>
+    <tr>
+      <td>Firebase Job Dispatcher</td>
+      <td>9+</td>
+      <td>vysoká</td>
+      <td>vyžaduje</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="trocha-praxe">Trocha praxe</h3>
+
+<p>Na závěr si ukážeme jak vytvořit jednoduchou službu, která bude
+pravidelně (co 10 minut) kontrolovat náš server. Zvolenou technologií je
+<strong>Firebase Job Dispatcher</strong>, jež je dle mého názoru nejrozumějším
+kompromisem. Pro absolutní kompatibilitu by bylo třeba příklad ještě
+doplnit o neefektivní mechanizmus založený na Alarm Manageru.</p>
+
+<p>Nejprve přidáme gradle závislost:</p>
+
+<p>Vytvoříme vlastní službu:</p>
+
+<p>Kterou zaregistrujeme do manifest.xml:</p>
+
+<p>A nyní už to jen celé spustit:</p>
+
+<p>A pokud bychom to chtěli vypnout:</p>
+
+<h3 id="závěrem">Závěrem</h3>
+
+<p>Ok, ale proč tři způsoby ptáte se? Odpověď je jednoduchá, “Protože
+Android”. Tato evolučně velmi živá platforma skýtá mnoho takovýchto
+mysteriózních zákoutí.</p>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="content-block">
+        <div class="article__misc">
+            <div class="article__sharebox">
+                <ul class="sharebox">
+    <li class="sharebox__item sharebox__item--twitter">
+        <a class="sharebox__item-body" href="https://twitter.com/intent/tweet?text=Alarmy v Androidu&url=https://fragaria.cz/blog/2016/12/09/alarmy-v-androidu/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter"><span>Share on Twitter</span></a>
+    </li>
+    <li class="sharebox__item sharebox__item--facebook">
+        <a class="sharebox__item-body" href="https://facebook.com/sharer.php?u=https://fragaria.cz/blog/2016/12/09/alarmy-v-androidu/" rel="nofollow" target="_blank" title="Share on Facebook"><span>Share on Facebook</span></a>
+    </li>
+    <li class="sharebox__item sharebox__item--gplus">
+        <a class="sharebox__item-body" href="https://plus.google.com/share?url=https://fragaria.cz/blog/2016/12/09/alarmy-v-androidu/" rel="nofollow" target="_blank" title="Share on Google+"><span>Share on Google+</span></a>
+    </li>
+</div>
+
+            </div>
+            <div class="article__tags">
+                
+            </div>
+        </div>
+    </div>
 </article>
 
         </div>

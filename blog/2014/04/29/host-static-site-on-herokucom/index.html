@@ -10,7 +10,7 @@
     <title>Host a static site on heroku.com | fragaria.cz</title>
     <meta name="author" content="Fragaria s.r.o." />
     <meta name="robots" content="index,follow" />
-    <meta name="description" content="Recently I needed to publish a simple HTML / CSS / JS GUI prototype application for our client. Just for them to see how it would look like with basic workflow.So I asked our administrator where should I put it. He told me that despite of it's very easy to have some Apache running on our virtual, we didn't have something like...">
+    <meta name="description" content="Recently I needed to publish a simple HTML / CSS / JS GUI prototypeapplication for our client. Just for them to see how it would look likewith basic workflow.So I asked our administrator where should I put it. He told me thatdespite of it’s very easy to have some Apache running on our virtual, wedidn’t have something like tha...">
     <meta name="keywords" content="fragaria, software, vývoj software, webové aplikace, python, javascript, angular, elasticsearch, html, css, herokupublish site without hostingstatic sitedeployment" />
     <!-- Favicons -->
     
@@ -18,7 +18,7 @@
     <meta property="og:url"           content="https://fragaria.cz/website/blog/2014/04/29/host-static-site-on-herokucom/" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Host a static site on heroku.com | fragaria.cz" />
-    <meta property="og:description"   content="Recently I needed to publish a simple HTML / CSS / JS GUI prototype application for our client. Just for them to see how it would look like with basic workflow.So I asked our administrator where should I put it. He told me that despite of it's very easy to have some Apache running on our virtual, we didn't have something like..." />
+    <meta property="og:description"   content="Recently I needed to publish a simple HTML / CSS / JS GUI prototypeapplication for our client. Just for them to see how it would look likewith basic workflow.So I asked our administrator where should I put it. He told me thatdespite of it’s very easy to have some Apache running on our virtual, wedidn’t have something like tha..." />
 
     
 
@@ -56,12 +56,79 @@
 </div>
 
 
-            <article itemtype="http://schema.org/BlogPosting" itemscope="">
-  <div class="content-block">
-    <h1 itemprop="headline">Host a static site on heroku.com</h1>
-    <h1>CHUJU sprety</h1>
-    Recently I needed to publish a simple HTML / CSS / JS GUI prototype application for our client. Just for them to see how it would look like with basic workflow.<br />So I asked our administrator where should I put it. He told me that despite of it's very easy to have some Apache running on our virtual, we didn't have something like that because there's no need for it.<br /><a name='more'></a><br />After short investigation I've found out that <a href="http://heroku.com/">heroku.com</a> provides free app hosting with full git support for projects based on all modern technologies. So I created my account, added my app, cloned the project and pushed my HTML site to heroku.<br />I expected heroku will magically consider my app to be HTML site and create apache server for it. But when I tried to push it, heroku replied: "Push rejected, no Cedar-supported app detected". Heroku also thinks that nobody needs it.<br /><br />Luckily, Heroku supports php applications, so all we need to do is to fool heroku a bit - mimic a php application by simply create empty index.php file:<br /><br /><code>touch index.php </code><br /><code><br /></code>and turn php engine on apache off:<br /><br /><code>echo 'php_flag engine off' &gt; .htaccess</code><br /><br />When you add these two files to the app you have static site hosted on heroku.com.<br /><br />Neat, isn't it?
-  </div>
+            <article itemtype="https://schema.org/TechArticle" itemscope class="article">
+    <div class="content-block typeset">
+        <h1 itemprop="name" class="article__headline alpha">Host a static site on heroku.com</h1>
+
+        <p class="article__meta">
+            <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="article__author">
+                <span itemprop="name">Tibor Kulčár</span>
+            </span>
+            <meta itemprop="datePublished" content="" />
+            <span class="article__pubdate">29.04.2014</span>
+            <meta itemprop="publisher"></meta>
+        </p>
+
+        
+
+        <div class="article__content-wrap">
+            <div class="article__content">
+                <p>Recently I needed to publish a simple HTML / CSS / JS GUI prototype
+application for our client. Just for them to see how it would look like
+with basic workflow.
+So I asked our administrator where should I put it. He told me that
+despite of it’s very easy to have some Apache running on our virtual, we
+didn’t have something like that because there’s no need for it.</p>
+
+<p>After short investigation I’ve found out that
+<a href="http://heroku.com/">heroku.com</a> provides free app hosting with full git
+support for projects based on all modern technologies. So I created my
+account, added my app, cloned the project and pushed my HTML site to
+heroku.
+I expected heroku will magically consider my app to be HTML site and
+create apache server for it. But when I tried to push it, heroku
+replied: “Push rejected, no Cedar-supported app detected”. Heroku also
+thinks that nobody needs it.</p>
+
+<p>Luckily, Heroku supports php applications, so all we need to do is to
+fool heroku a bit - mimic a php application by simply create empty
+index.php file:</p>
+
+<p><code class="highlighter-rouge">touch index.php </code>
+`  `and turn php engine on apache off:</p>
+
+<p><code class="highlighter-rouge">echo 'php_flag engine off' &gt; .htaccess</code></p>
+
+<p>When you add these two files to the app you have static site hosted on
+heroku.com.</p>
+
+<p>Neat, isn’t it?</p>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="content-block">
+        <div class="article__misc">
+            <div class="article__sharebox">
+                <ul class="sharebox">
+    <li class="sharebox__item sharebox__item--twitter">
+        <a class="sharebox__item-body" href="https://twitter.com/intent/tweet?text=Host a static site on heroku.com&url=https://fragaria.cz/blog/2014/04/29/host-static-site-on-herokucom/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter"><span>Share on Twitter</span></a>
+    </li>
+    <li class="sharebox__item sharebox__item--facebook">
+        <a class="sharebox__item-body" href="https://facebook.com/sharer.php?u=https://fragaria.cz/blog/2014/04/29/host-static-site-on-herokucom/" rel="nofollow" target="_blank" title="Share on Facebook"><span>Share on Facebook</span></a>
+    </li>
+    <li class="sharebox__item sharebox__item--gplus">
+        <a class="sharebox__item-body" href="https://plus.google.com/share?url=https://fragaria.cz/blog/2014/04/29/host-static-site-on-herokucom/" rel="nofollow" target="_blank" title="Share on Google+"><span>Share on Google+</span></a>
+    </li>
+</div>
+
+            </div>
+            <div class="article__tags">
+                
+            </div>
+        </div>
+    </div>
 </article>
 
         </div>

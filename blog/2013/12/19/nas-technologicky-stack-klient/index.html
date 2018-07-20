@@ -10,7 +10,7 @@
     <title>Náš technologický stack - klient | fragaria.cz</title>
     <meta name="author" content="Fragaria s.r.o." />
     <meta name="robots" content="index,follow" />
-    <meta name="description" content="Množí se nám dotazy (teda... byly dva), jaké technologie používáme na jednotlivých vrstvách aplikací, které tvoříme.Ani se nedivím. Než jsme si jednotlivé technologie sladili dohromady, tak to chvíli trvalo, ale výsledek stojí za to. Posuďte sami:KlientV prohlížeči nedáme dopustit na Bootstrap. Konečně i my prográmatoři dokáž...">
+    <meta name="description" content="Množí se nám dotazy (teda… byly dva), jaké technologie používáme najednotlivých vrstvách aplikací, které tvoříme.Ani se nedivím. Než jsme si jednotlivé technologie sladili dohromady,tak to chvíli trvalo, ale výsledek stojí za to. Posuďte sami:">
     <meta name="keywords" content="fragaria, software, vývoj software, webové aplikace, python, javascript, angular, elasticsearch, html, css, " />
     <!-- Favicons -->
     
@@ -18,7 +18,7 @@
     <meta property="og:url"           content="https://fragaria.cz/website/blog/2013/12/19/nas-technologicky-stack-klient/" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Náš technologický stack - klient | fragaria.cz" />
-    <meta property="og:description"   content="Množí se nám dotazy (teda... byly dva), jaké technologie používáme na jednotlivých vrstvách aplikací, které tvoříme.Ani se nedivím. Než jsme si jednotlivé technologie sladili dohromady, tak to chvíli trvalo, ale výsledek stojí za to. Posuďte sami:KlientV prohlížeči nedáme dopustit na Bootstrap. Konečně i my prográmatoři dokáž..." />
+    <meta property="og:description"   content="Množí se nám dotazy (teda… byly dva), jaké technologie používáme najednotlivých vrstvách aplikací, které tvoříme.Ani se nedivím. Než jsme si jednotlivé technologie sladili dohromady,tak to chvíli trvalo, ale výsledek stojí za to. Posuďte sami:" />
 
     
 
@@ -56,12 +56,148 @@
 </div>
 
 
-            <article itemtype="http://schema.org/BlogPosting" itemscope="">
-  <div class="content-block">
-    <h1 itemprop="headline">Náš technologický stack - klient</h1>
-    <h1>CHUJU sprety</h1>
-    Množí se nám dotazy (teda... byly dva), jaké technologie používáme na jednotlivých vrstvách aplikací, které tvoříme.<br />Ani se nedivím. Než jsme si jednotlivé technologie sladili dohromady, tak to chvíli trvalo, ale výsledek stojí za to. Posuďte sami:<br /><br /><h3>Klient</h3>V prohlížeči nedáme dopustit na <a href="http://getbootstrap.com/" title="nastřelit">Bootstrap</a>. Konečně i my prográmatoři dokážeme "nastřelit" rozhraní, které vypadá k světu a dá se s ním pracovat. <br />Kde nestačí vzhled čistého Bootstrapu, koukáme primárně po šablonách z <a href="https://wrapbootstrap.com/">WrapBootstrap</a>. Většinou jde o hodně designu za málo peněz. <br />No a kde to trochu drhne, tam pomůže Tibor a doladí CSSka. Tedy – neladí CSSka, ale <a href="http://lesscss.org/">LESSka</a>. To je snad jasné, ne?<br /><h4></h4><h4><br /></h4><h4>Angular.js</h4>Naší velkou láskou je <a href="http://angularjs.org/">Angular.js</a>. Nejdřív jsme s ním udělali mobilní aplikaci pro Investiční web (<a href="https://play.google.com/store/apps/details?id=cz.fragaria.iw3">Android</a>, <a href="https://itunes.apple.com/cz/app/investicniweb.cz/id592380883?mt=8">iPhone</a>) a teď v něm píšem i všechny desktopové aplikace.<br /><br />Nevíte, co to je Angular? Mrkněte na článek na <a href="http://www.zdrojak.cz/clanky/zaciname-s-angularjs/">Zdrojáku</a>.<br /><br />V kostce jde o MVC framework (představte si Grails, Django, Roo, ...) napsaný kompletně v Javascriptu.<br />Takhle na první pohled to nevypadá jako pecka, ale je! Server (o kterém se pobavím příště) je vlastně degradován jen na posílání dat ve formátu JSON a o jejich zobrazování se komplet stará frontend.<br /><br />Konečně to tedy vypadá jak v příručkách. Server řeší pouze data – jejich validaci, ukládání, vyhledávání atd. Klientský javascript pak šablony, zobrazení a interakci s uživatelem. A navíc – <a href="http://en.wikipedia.org/wiki/Single-page_application">SPI</a> zadarmo!<br /><h4></h4><h4><br /></h4><h4>Coffeescript</h4>Na Angularu nám (teda mě určitě) vadila vlastně jen jediná věc: Javascript. Nechápejte mě špatně. Ten jazyk je mocný, ale strašně ukecaný.<br /><a href="http://coffeescript.org/">Coffescript</a> je něco jako Groovy pro Javu. Konečně můžu napsat:<br /><pre><code>for x in [1, 2, 3]:<br /> console.log("Number: #{x}")</code></pre>a nemusím počítat indexy pole jak trotl.<br /><br />Tohle je samozřejmě jen jedna z výhod Coffeescriptu, je jich ještě záhon.<br /><br />Na druhou stranu, nešikovný "bastlič" dokáže v Coffeescriptu kód dost zašmodrchat. Ale to platí asi ve všech jazycích.<br /><h4></h4><h4><br /></h4><h4>Testování</h4>Angular má docela hezky propracovanou podporu pro unit testy, integrační testy a různé další testy.<br />My testy píšeme v <a href="http://pivotal.github.io/jasmine/">Jasmine</a> a spouštíme <a href="http://karma-runner.github.io/0.10/index.html">Karmou</a>.<br /><h4></h4><h4><br /></h4><h4>Build aplikace</h4>Ptáte se, jak tohle všechno skládáme dohromady? Lidi okolo Javascriptu se v tomhle směru poučili ve světě Javy a vznikl <a href="http://gruntjs.com/">Grunt</a> a <a href="http://bower.io/">Bower</a>.<br />Bower slouží pro správu závislosti (v Javě Maven, Apache Ivy) a Grunt pro sestavení finální aplikace (spíš Gradle než Maven).<br /><br />S Bowerem se neztratíte v použitých knihovnách. Už se nestahují z webu, ale instalují se pomocí:<br /><pre><code>bower install jquery<br />bower install angular</code></pre>a závislosti se ukládají do <code>bower.json</code> v pěkně čitelné podobě:<br /><pre><code>"dependencies": {<br />    "angular": "v1.2.0-rc.2",<br />    "bootstrap": "v3.0.0",<br />    "jquery": "~2.0.3",<br />    "jquery-ui": "~1.10.3"<br />}</code></pre>No a Grunt pěkně zkompiluje Coffeescripty do Javascriptů, prožene je testy, zmenší je, z LESS souborů udělá CSS soubory a vůbec připraví aplikaci na nasazení.<br /><br />Tak takhle my to děláme :)<br />V příštím díle: Server!<br /><br />PS: Jestli vás něco zajímá detailněji, tak se klidně ptejte...
-  </div>
+            <article itemtype="https://schema.org/TechArticle" itemscope class="article">
+    <div class="content-block typeset">
+        <h1 itemprop="name" class="article__headline alpha">Náš technologický stack - klient</h1>
+
+        <p class="article__meta">
+            <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="article__author">
+                <span itemprop="name">Lukáš Marek</span>
+            </span>
+            <meta itemprop="datePublished" content="" />
+            <span class="article__pubdate">19.12.2013</span>
+            <meta itemprop="publisher"></meta>
+        </p>
+
+        
+
+        <div class="article__content-wrap">
+            <div class="article__content">
+                <p>Množí se nám dotazy (teda… byly dva), jaké technologie používáme na
+jednotlivých vrstvách aplikací, které tvoříme.
+Ani se nedivím. Než jsme si jednotlivé technologie sladili dohromady,
+tak to chvíli trvalo, ale výsledek stojí za to. Posuďte sami:</p>
+
+<h3 id="klient">Klient</h3>
+
+<p>V prohlížeči nedáme dopustit na
+<a href="http://getbootstrap.com/" title="nastřelit">Bootstrap</a>. Konečně i my
+prográmatoři dokážeme “nastřelit” rozhraní, které vypadá k světu a dá
+se s ním pracovat.
+Kde nestačí vzhled čistého Bootstrapu, koukáme primárně po šablonách z
+<a href="https://wrapbootstrap.com/">WrapBootstrap</a>. Většinou jde o hodně
+designu za málo peněz.
+No a kde to trochu drhne, tam pomůže Tibor a doladí CSSka. Tedy – neladí
+CSSka, ale <a href="http://lesscss.org/">LESSka</a>. To je snad jasné, ne?</p>
+
+<h4 id="angularjs">Angular.js</h4>
+
+<p>Naší velkou láskou je <a href="http://angularjs.org/">Angular.js</a>. Nejdřív jsme
+s ním udělali mobilní aplikaci pro Investiční web
+(<a href="https://play.google.com/store/apps/details?id=cz.fragaria.iw3">Android</a>,
+<a href="https://itunes.apple.com/cz/app/investicniweb.cz/id592380883?mt=8">iPhone</a>)
+a teď v něm píšem i všechny desktopové aplikace.</p>
+
+<p>Nevíte, co to je Angular? Mrkněte na článek na
+<a href="http://www.zdrojak.cz/clanky/zaciname-s-angularjs/">Zdrojáku</a>.</p>
+
+<p>V kostce jde o MVC framework (představte si Grails, Django, Roo, …)
+napsaný kompletně v Javascriptu.
+Takhle na první pohled to nevypadá jako pecka, ale je! Server (o kterém
+se pobavím příště) je vlastně degradován jen na posílání dat ve formátu
+JSON a o jejich zobrazování se komplet stará frontend.</p>
+
+<p>Konečně to tedy vypadá jak v příručkách. Server řeší pouze data – jejich
+validaci, ukládání, vyhledávání atd. Klientský javascript pak šablony,
+zobrazení a interakci s uživatelem. A navíc –
+<a href="http://en.wikipedia.org/wiki/Single-page_application">SPI</a> zadarmo!</p>
+
+<h4 id="coffeescript">Coffeescript</h4>
+
+<p>Na Angularu nám (teda mě určitě) vadila vlastně jen jediná věc:
+Javascript. Nechápejte mě špatně. Ten jazyk je mocný, ale strašně
+ukecaný.
+<a href="http://coffeescript.org/">Coffescript</a> je něco jako Groovy pro Javu.
+Konečně můžu napsat:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for x in [1, 2, 3]:
+ console.log("Number: #{x}")
+</code></pre></div></div>
+
+<p>a nemusím počítat indexy pole jak trotl.</p>
+
+<p>Tohle je samozřejmě jen jedna z výhod Coffeescriptu, je jich ještě
+záhon.</p>
+
+<p>Na druhou stranu, nešikovný “bastlič” dokáže v Coffeescriptu kód dost
+zašmodrchat. Ale to platí asi ve všech jazycích.</p>
+
+<h4 id="testování">Testování</h4>
+
+<p>Angular má docela hezky propracovanou podporu pro unit testy, integrační
+testy a různé další testy.
+My testy píšeme v <a href="http://pivotal.github.io/jasmine/">Jasmine</a> a
+spouštíme <a href="http://karma-runner.github.io/0.10/index.html">Karmou</a>.</p>
+
+<h4 id="build-aplikace">Build aplikace</h4>
+
+<p>Ptáte se, jak tohle všechno skládáme dohromady? Lidi okolo Javascriptu
+se v tomhle směru poučili ve světě Javy a vznikl
+<a href="http://gruntjs.com/">Grunt</a> a <a href="http://bower.io/">Bower</a>.
+Bower slouží pro správu závislosti (v Javě Maven, Apache Ivy) a Grunt
+pro sestavení finální aplikace (spíš Gradle než Maven).</p>
+
+<p>S Bowerem se neztratíte v použitých knihovnách. Už se nestahují z webu,
+ale instalují se pomocí:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bower install jquery
+bower install angular
+</code></pre></div></div>
+
+<p>a závislosti se ukládají do <code class="highlighter-rouge">bower.json</code> v pěkně čitelné podobě:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"dependencies": {
+    "angular": "v1.2.0-rc.2",
+    "bootstrap": "v3.0.0",
+    "jquery": "~2.0.3",
+    "jquery-ui": "~1.10.3"
+}
+</code></pre></div></div>
+
+<p>No a Grunt pěkně zkompiluje Coffeescripty do Javascriptů, prožene je
+testy, zmenší je, z LESS souborů udělá CSS soubory a vůbec připraví
+aplikaci na nasazení.</p>
+
+<p>Tak takhle my to děláme :)
+V příštím díle: Server!</p>
+
+<p>PS: Jestli vás něco zajímá detailněji, tak se klidně ptejte…</p>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="content-block">
+        <div class="article__misc">
+            <div class="article__sharebox">
+                <ul class="sharebox">
+    <li class="sharebox__item sharebox__item--twitter">
+        <a class="sharebox__item-body" href="https://twitter.com/intent/tweet?text=Náš technologický stack - klient&url=https://fragaria.cz/blog/2013/12/19/nas-technologicky-stack-klient/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter"><span>Share on Twitter</span></a>
+    </li>
+    <li class="sharebox__item sharebox__item--facebook">
+        <a class="sharebox__item-body" href="https://facebook.com/sharer.php?u=https://fragaria.cz/blog/2013/12/19/nas-technologicky-stack-klient/" rel="nofollow" target="_blank" title="Share on Facebook"><span>Share on Facebook</span></a>
+    </li>
+    <li class="sharebox__item sharebox__item--gplus">
+        <a class="sharebox__item-body" href="https://plus.google.com/share?url=https://fragaria.cz/blog/2013/12/19/nas-technologicky-stack-klient/" rel="nofollow" target="_blank" title="Share on Google+"><span>Share on Google+</span></a>
+    </li>
+</div>
+
+            </div>
+            <div class="article__tags">
+                
+            </div>
+        </div>
+    </div>
 </article>
 
         </div>

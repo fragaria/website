@@ -10,7 +10,7 @@
     <title>CoffeeScript a OOP | fragaria.cz</title>
     <meta name="author" content="Fragaria s.r.o." />
     <meta name="robots" content="index,follow" />
-    <meta name="description" content="Dlouho jsem nemohl přijít CoffeeScriptu na chuť. Přišlo mi, že za málo muziky nabízí hodně potíží. Co mě nakonec přesvědčilo, byla schopnost, po které jsem v JavaScriptu přímo prahnul: Psát skutečné třídy a objekty. Když jsem se nadšeně bavil s kolegy, že už jsem taky kafař, že to je fakt hustý kafe a že teď už konečně píšu „...">
+    <meta name="description" content="Dlouho jsem nemohl přijít CoffeeScriptu na chuť. Přišlo mi, že za málomuziky nabízí hodně potíží. Co mě nakonec přesvědčilo, byla schopnost,po které jsem v JavaScriptu přímo prahnul: Psát skutečné třídy aobjekty.">
     <meta name="keywords" content="fragaria, software, vývoj software, webové aplikace, python, javascript, angular, elasticsearch, html, css, oopjavascriptangularjscoffeescript" />
     <!-- Favicons -->
     
@@ -18,7 +18,7 @@
     <meta property="og:url"           content="https://fragaria.cz/website/blog/2014/05/14/coffeescript-oop/" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="CoffeeScript a OOP | fragaria.cz" />
-    <meta property="og:description"   content="Dlouho jsem nemohl přijít CoffeeScriptu na chuť. Přišlo mi, že za málo muziky nabízí hodně potíží. Co mě nakonec přesvědčilo, byla schopnost, po které jsem v JavaScriptu přímo prahnul: Psát skutečné třídy a objekty. Když jsem se nadšeně bavil s kolegy, že už jsem taky kafař, že to je fakt hustý kafe a že teď už konečně píšu „..." />
+    <meta property="og:description"   content="Dlouho jsem nemohl přijít CoffeeScriptu na chuť. Přišlo mi, že za málomuziky nabízí hodně potíží. Co mě nakonec přesvědčilo, byla schopnost,po které jsem v JavaScriptu přímo prahnul: Psát skutečné třídy aobjekty." />
 
     
 
@@ -56,12 +56,133 @@
 </div>
 
 
-            <article itemtype="http://schema.org/BlogPosting" itemscope="">
-  <div class="content-block">
-    <h1 itemprop="headline">CoffeeScript a OOP</h1>
-    <h1>CHUJU sprety</h1>
-    Dlouho jsem nemohl přijít CoffeeScriptu na chuť. Přišlo mi, že za málo muziky nabízí hodně potíží. Co mě nakonec přesvědčilo, byla schopnost, po které jsem v JavaScriptu přímo prahnul: <b>Psát skutečné třídy a objekty</b>. <br /><a name='more'></a><br />Když jsem se nadšeně bavil s kolegy, že už jsem taky kafař, že to je fakt hustý kafe a že teď už konečně píšu „objektivně”, zjistil jsem, že tuhle - za mě - nejdůležitější vychytávku, většina kafařů v okolí zatím vůbec nezkusila.<br /><br /><h3>První třída v CoffeScriptu</h3>Nejjednodušší třída vypadá takto:<br /><script src="https://gist.github.com/czervenka/3957ca18976955b77b8a.js?file=a-person.coffee"></script> <br /><ul><li><span style="font-family: Courier New, Courier, monospace;">toString: () -&gt;</span>&nbsp;... vytvoří metodu <span style="font-family: Courier New, Courier, monospace;">Person.prototype.toString</span><span style="font-family: inherit;">.</span></li><li>&nbsp;<span style="font-family: Courier New, Courier, monospace;">constructor: ()</span>&nbsp;... je speciální metoda konstruktoru objektu.</li><li>&nbsp;<span style="font-family: Courier New, Courier, monospace;">@</span>&nbsp;... zavináč je nejdůležitější znak pro objekty v CS, takže:</li><ul><li>&nbsp;<span style="font-family: Courier New, Courier, monospace;">@name</span>&nbsp;... odkazuje na <span style="font-family: Courier New, Courier, monospace;">this.name</span>.</li><li>&nbsp;(<span style="font-family: Courier New, Courier, monospace;">@name</span>) -&gt; ... zavináč v argumentu funkce zajistí automatické uložení do <span style="font-family: Courier New, Courier, monospace;">this.name</span><span style="font-family: inherit;"> před zavoláním metody.</span></li></ul></ul><br /><h3>Statické metody / properties</h3>Ke třídám patří statické metody. Jako vše kolem kafe-objektů i statické vlastnosti se zapisují pomocí zavináče<br /><script src="https://gist.github.com/czervenka/3957ca18976955b77b8a.js?file=b-person.coffee"></script> <br /><ul><li><span style="font-family: Courier New, Courier, monospace;">@</span> před názvem metody - vytvoří metodu jako statickou (jako metodu třídy)</li><li>Ve statické metodě zastupuje <span style="font-family: Courier New, Courier, monospace;">@</span>&nbsp;třídu, a protože třída je v JS to stejné jako konstruktor, <span style="font-family: Courier New, Courier, monospace;">new @(name)</span> vytvoří novou instanci aktuální třídy.</li><li>Podobně lze přistupovat ke statickým metodám z instance (<span style="font-family: Courier New, Courier, monospace;">@fromNames</span>&nbsp;zde stoprocentně nefunguje). Jen je třeba si uvědomit, že konstruktor je pod <span style="font-family: Courier New, Courier, monospace;">@constructor</span>&nbsp;a <span style="font-family: Courier New, Courier, monospace;">@constructor is Person</span>, tedy naši metodu můžeme z instance zavolat jako <span style="font-family: Courier New, Courier, monospace;">@constructor.fromNames(...)</span>.</li></ul><br /><ul></ul><h3>Dědění</h3>Vlastně největší výhodou tříd v CoffeeScriptu je přehledné dědění:<br /><script src="https://gist.github.com/czervenka/3957ca18976955b77b8a.js?file=c-employee.coffee"></script> <br /><ul><li><span style="font-family: Courier New, Courier, monospace;">extends</span>&nbsp;- je samozřejmé klíčové slovo CoffeeScriptu</li><li><span style="font-family: Courier New, Courier, monospace;">Employee.__super__.constructor</span>&nbsp;- uchovává odkaz na předka (v tomto případě&nbsp;<span style="font-family: Courier New, Courier, monospace;">Person</span>)</li><li><span style="font-family: Courier New, Courier, monospace;">super</span>&nbsp;- trochu nesystematicky</li><ul><li>bez argumentů a závorek zavolá stejnojmennou metodu nad rodičem a přepoužije aktuální argumenty (tj. <span style="font-family: Courier New, Courier, monospace;">Employee.__super__.constructor.apply(this, arguments)</span>)</li><li>se závorkami nebo s argumenty zavolá metodu předka pouze s těmito argumenty</li></ul></ul><br /><ul><ul></ul></ul><h3>Vázané metody</h3>Kdo programuje v Java/CoffeeScriptu, setkal se určitě s problémem vázaných metod. Jednoduchý příklad:<br /><script src="https://gist.github.com/czervenka/3957ca18976955b77b8a.js?file=x-invalid-invocation.coffee"></script>JavaScript u metod neuchová informaci, ke kterému objektu patří, takže při jejich volání bez plně kvalifikovaného jména přijde metoda o referenci na <span style="font-family: Courier New, Courier, monospace;">this</span>. <br />To je u asynchronního jazyka, kde každý program je plný callbacků, veliká otrava. Samozřejmě to lze různě obejít a obchází se to (pomocí <span style="font-family: Courier New, Courier, monospace;">function.bind</span> či <span style="font-family: Courier New, Courier, monospace;">self = this</span>), ale CoffeeScript má vlastní pěkné řešení v podobě konstrukce <span style="font-family: Courier New, Courier, monospace;">=&gt;</span><br /><script src="https://gist.github.com/czervenka/3957ca18976955b77b8a.js?file=d-person.coffee"></script> <br /><h3>Použití tříd v AngularJS</h3>AngularJS má vlastní způsob zapouzdření a využití objektového (prototypového) přístupu pro kolegy není úplně intuitivní. Častá námitka, kterou slyším, je: <i>Scope nebo Servisu ale nemůžeš jednoduše dědit.</i><br /><br />Takže, chlapci, můžeš! Stačí jen kávu správně dávkovat v injekcích:<br /><script src="https://gist.github.com/czervenka/3957ca18976955b77b8a.js?file=e-my-directive.coffee"></script>
-  </div>
+            <article itemtype="https://schema.org/TechArticle" itemscope class="article">
+    <div class="content-block typeset">
+        <h1 itemprop="name" class="article__headline alpha">CoffeeScript a OOP</h1>
+
+        <p class="article__meta">
+            <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="article__author">
+                <span itemprop="name">Robin Gottfried</span>
+            </span>
+            <meta itemprop="datePublished" content="" />
+            <span class="article__pubdate">14.05.2014</span>
+            <meta itemprop="publisher"></meta>
+        </p>
+
+        
+
+        <div class="article__content-wrap">
+            <div class="article__content">
+                <p>Dlouho jsem nemohl přijít CoffeeScriptu na chuť. Přišlo mi, že za málo
+muziky nabízí hodně potíží. Co mě nakonec přesvědčilo, byla schopnost,
+po které jsem v JavaScriptu přímo prahnul: <strong>Psát skutečné třídy a
+objekty</strong>.</p>
+
+<p>Když jsem se nadšeně bavil s kolegy, že už jsem taky kafař, že to je
+fakt hustý kafe a že teď už konečně píšu „objektivně”, zjistil jsem, že
+tuhle - za mě - nejdůležitější vychytávku, většina kafařů v okolí zatím
+vůbec nezkusila.</p>
+
+<h3 id="první-třída-v-coffescriptu">První třída v CoffeScriptu</h3>
+
+<p>Nejjednodušší třída vypadá takto:</p>
+
+<p>toString: () -&gt; … vytvoří metodu Person.prototype.toString.</p>
+
+<p> constructor: () … je speciální metoda konstruktoru objektu.</p>
+
+<p> @ … zavináč je nejdůležitější znak pro objekty v CS, takže:</p>
+
+<ul>
+  <li> @name … odkazuje na this.name.</li>
+  <li> (@name) -&gt; … zavináč v argumentu funkce zajistí automatické
+uložení do this.name před zavoláním metody.</li>
+</ul>
+
+<h3 id="statické-metody--properties">Statické metody / properties</h3>
+
+<p>Ke třídám patří statické metody. Jako vše kolem kafe-objektů i statické
+vlastnosti se zapisují pomocí zavináče</p>
+
+<ul>
+  <li>@ před názvem metody - vytvoří metodu jako statickou (jako metodu
+třídy)</li>
+  <li>Ve statické metodě zastupuje @ třídu, a protože třída je v JS to
+stejné jako konstruktor, new @(name) vytvoří novou instanci aktuální
+třídy.</li>
+  <li>Podobně lze přistupovat ke statickým metodám z instance
+(@fromNames zde stoprocentně nefunguje). Jen je třeba si uvědomit,
+že konstruktor je pod @constructor a @constructor is Person, tedy
+naši metodu můžeme z instance zavolat jako
+@constructor.fromNames(…).</li>
+</ul>
+
+<h3 id="dědění">Dědění</h3>
+
+<p>Vlastně největší výhodou tříd v CoffeeScriptu je přehledné dědění:</p>
+
+<p>extends - je samozřejmé klíčové slovo CoffeeScriptu</p>
+
+<p>Employee.__super__.constructor - uchovává odkaz na předka (v tomto
+případě Person)</p>
+
+<p>super - trochu nesystematicky</p>
+
+<ul>
+  <li>bez argumentů a závorek zavolá stejnojmennou metodu nad rodičem a
+přepoužije aktuální argumenty (tj.
+Employee.__super__.constructor.apply(this, arguments))</li>
+  <li>se závorkami nebo s argumenty zavolá metodu předka pouze s těmito
+argumenty</li>
+</ul>
+
+<h3 id="vázané-metody">Vázané metody</h3>
+
+<p>Kdo programuje v Java/CoffeeScriptu, setkal se určitě s problémem
+vázaných metod. Jednoduchý příklad:</p>
+
+<p>JavaScript u metod neuchová informaci, ke kterému objektu patří, takže
+při jejich volání bez plně kvalifikovaného jména přijde metoda o
+referenci na this.
+To je u asynchronního jazyka, kde každý program je plný callbacků,
+veliká otrava. Samozřejmě to lze různě obejít a obchází se to (pomocí
+function.bind či self = this), ale CoffeeScript má vlastní pěkné řešení
+v podobě konstrukce =&gt;</p>
+
+<h3 id="použití-tříd-v-angularjs">Použití tříd v AngularJS</h3>
+
+<p>AngularJS má vlastní způsob zapouzdření a využití objektového
+(prototypového) přístupu pro kolegy není úplně intuitivní. Častá
+námitka, kterou slyším, je: <em>Scope nebo Servisu ale nemůžeš jednoduše
+dědit.</em></p>
+
+<p>Takže, chlapci, můžeš! Stačí jen kávu správně dávkovat v injekcích:</p>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="content-block">
+        <div class="article__misc">
+            <div class="article__sharebox">
+                <ul class="sharebox">
+    <li class="sharebox__item sharebox__item--twitter">
+        <a class="sharebox__item-body" href="https://twitter.com/intent/tweet?text=CoffeeScript a OOP&url=https://fragaria.cz/blog/2014/05/14/coffeescript-oop/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter"><span>Share on Twitter</span></a>
+    </li>
+    <li class="sharebox__item sharebox__item--facebook">
+        <a class="sharebox__item-body" href="https://facebook.com/sharer.php?u=https://fragaria.cz/blog/2014/05/14/coffeescript-oop/" rel="nofollow" target="_blank" title="Share on Facebook"><span>Share on Facebook</span></a>
+    </li>
+    <li class="sharebox__item sharebox__item--gplus">
+        <a class="sharebox__item-body" href="https://plus.google.com/share?url=https://fragaria.cz/blog/2014/05/14/coffeescript-oop/" rel="nofollow" target="_blank" title="Share on Google+"><span>Share on Google+</span></a>
+    </li>
+</div>
+
+            </div>
+            <div class="article__tags">
+                
+            </div>
+        </div>
+    </div>
 </article>
 
         </div>

@@ -10,7 +10,7 @@
     <title>Náš technologický stack - server | fragaria.cz</title>
     <meta name="author" content="Fragaria s.r.o." />
     <meta name="robots" content="index,follow" />
-    <meta name="description" content="ServerBez diskuse Google AppEngine v Python verzi. Ne, že by to byla zase taková pecka, ale většinou je to požadavek zákazníka.Ovšem pecka je náš GAP a GAPI.GAPGAP je naše odpověď na to, že AppEngine neví, co to je virtualenv. AppEngine dokonce ani neví, co to je PIP. To naše pythonáře trochu (víc) zaskočilo, ale naštěstí Rob...">
+    <meta name="description" content="Server">
     <meta name="keywords" content="fragaria, software, vývoj software, webové aplikace, python, javascript, angular, elasticsearch, html, css, " />
     <!-- Favicons -->
     
@@ -18,7 +18,7 @@
     <meta property="og:url"           content="https://fragaria.cz/website/blog/2014/01/02/nas-technologicky-stack-server/" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Náš technologický stack - server | fragaria.cz" />
-    <meta property="og:description"   content="ServerBez diskuse Google AppEngine v Python verzi. Ne, že by to byla zase taková pecka, ale většinou je to požadavek zákazníka.Ovšem pecka je náš GAP a GAPI.GAPGAP je naše odpověď na to, že AppEngine neví, co to je virtualenv. AppEngine dokonce ani neví, co to je PIP. To naše pythonáře trochu (víc) zaskočilo, ale naštěstí Rob..." />
+    <meta property="og:description"   content="Server" />
 
     
 
@@ -56,12 +56,106 @@
 </div>
 
 
-            <article itemtype="http://schema.org/BlogPosting" itemscope="">
-  <div class="content-block">
-    <h1 itemprop="headline">Náš technologický stack - server</h1>
-    <h1>CHUJU sprety</h1>
-    <h3>Server</h3>Bez diskuse <a href="https://developers.google.com/appengine/">Google AppEngine</a> v Python verzi. Ne, že by to byla zase taková pecka, ale většinou je to požadavek zákazníka.<br />Ovšem pecka je náš <a href="https://github.com/czervenka/gap">GAP</a> a <a href="https://github.com/czervenka/gapi">GAPI</a>.<br /><h4></h4><h4><br /></h4><h4>GAP</h4>GAP je naše odpověď na to, že AppEngine neví, co to je <a href="https://pypi.python.org/pypi/virtualenv">virtualenv</a>. AppEngine dokonce ani neví, co to je <a href="https://pypi.python.org/pypi">PIP</a>. <br />To naše pythonáře trochu (víc) zaskočilo, ale naštěstí Robin dal rychle dohromady náhradu.<br />Jak funguje? Takhle:<br /><pre><code>workon &lt;myvirtualenv&gt;<br />pip install gap<br />gap start-project &lt;applicationid&gt;<br />cd &lt;applicationid&gt;<br />vi requirements.gip<br />bin/gip install -r requirements.gip<br /></code></pre>Každý, kdo někdy dělal s virtualenv v Pythonu se zorientuje relativně rychle - jen místo <code>pip install</code> napíše <code>bin/gip install</code> a GAP se postará o stažení knihoven a jejich nalinkování do adresáře se zdrojákama. <br />Závislosti se ukládají do <code>requirements.gip</code> (místo <code>requirements.pip</code>) a svět je zase veselejší místo k životu.<br />GAP nám umožnil mít pořádek v knihovnách jednotlivých projektů a nezas*rat si instalaci Pythonu.<br /><h4></h4><h4><br /></h4><h4>GAPI</h4>Další náš příspěvek světu je GAPI – mimochodem na originálních názvech GAP/GAPI je vidět, že jsme především programátoři. Copywritera aby člověk pohledal... <br />Takže GAPI. Rozhraní (API) Google služeb je navržené šikovně, ale knihovna pro Python, která ho implementuje, už je na tom hůř. O dost.<br />GAPI umí navíc:<br /><ul><li>cachovat autorizační tokeny</li><li>dávkové requesty</li><li>opakovat requesty v případě chyby</li><li><strong>stránkovat</strong>&nbsp;odpovědi</li><li>a běží v pohodě na AppEngine</li></ul>Ke GAPu patří i další rozšíření jako <a href="https://github.com/fragaria/gap-resources">GAP-Resources</a>, <a href="https://github.com/fragaria/gap-angular">GAP-Angular</a> (to jsem psal já!) a <a href="https://github.com/fragaria/gap-datastoreadmin">GAP-DatastoreAdmin</a>, ale o těch až jindy.
-  </div>
+            <article itemtype="https://schema.org/TechArticle" itemscope class="article">
+    <div class="content-block typeset">
+        <h1 itemprop="name" class="article__headline alpha">Náš technologický stack - server</h1>
+
+        <p class="article__meta">
+            <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="article__author">
+                <span itemprop="name">Lukáš Marek</span>
+            </span>
+            <meta itemprop="datePublished" content="" />
+            <span class="article__pubdate">02.01.2014</span>
+            <meta itemprop="publisher"></meta>
+        </p>
+
+        
+
+        <div class="article__content-wrap">
+            <div class="article__content">
+                <h3 id="server">Server</h3>
+
+<p>Bez diskuse <a href="https://developers.google.com/appengine/">Google AppEngine</a>
+v Python verzi. Ne, že by to byla zase taková pecka, ale většinou je to
+požadavek zákazníka.
+Ovšem pecka je náš <a href="https://github.com/czervenka/gap">GAP</a> a
+<a href="https://github.com/czervenka/gapi">GAPI</a>.</p>
+
+<h4 id="gap">GAP</h4>
+
+<p>GAP je naše odpověď na to, že AppEngine neví, co to je
+<a href="https://pypi.python.org/pypi/virtualenv">virtualenv</a>. AppEngine dokonce
+ani neví, co to je <a href="https://pypi.python.org/pypi">PIP</a>.
+To naše pythonáře trochu (víc) zaskočilo, ale naštěstí Robin dal rychle
+dohromady náhradu.
+Jak funguje? Takhle:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>workon &lt;myvirtualenv&gt;
+pip install gap
+gap start-project &lt;applicationid&gt;
+cd &lt;applicationid&gt;
+vi requirements.gip
+bin/gip install -r requirements.gip
+</code></pre></div></div>
+
+<p>Každý, kdo někdy dělal s virtualenv v Pythonu se zorientuje relativně
+rychle - jen místo <code class="highlighter-rouge">pip install</code> napíše <code class="highlighter-rouge">bin/gip install</code> a GAP se
+postará o stažení knihoven a jejich nalinkování do adresáře se
+zdrojákama.
+Závislosti se ukládají do <code class="highlighter-rouge">requirements.gip</code> (místo <code class="highlighter-rouge">requirements.pip</code>)
+a svět je zase veselejší místo k životu.
+GAP nám umožnil mít pořádek v knihovnách jednotlivých projektů a
+nezas*rat si instalaci Pythonu.</p>
+
+<h4 id="gapi">GAPI</h4>
+
+<p>Další náš příspěvek světu je GAPI – mimochodem na originálních názvech
+GAP/GAPI je vidět, že jsme především programátoři. Copywritera aby
+člověk pohledal…
+Takže GAPI. Rozhraní (API) Google služeb je navržené šikovně, ale
+knihovna pro Python, která ho implementuje, už je na tom hůř. O dost.
+GAPI umí navíc:</p>
+
+<ul>
+  <li>cachovat autorizační tokeny</li>
+  <li>dávkové requesty</li>
+  <li>opakovat requesty v případě chyby</li>
+  <li><strong>stránkovat</strong> odpovědi</li>
+  <li>a běží v pohodě na AppEngine</li>
+</ul>
+
+<p>Ke GAPu patří i další rozšíření jako
+<a href="https://github.com/fragaria/gap-resources">GAP-Resources</a>,
+<a href="https://github.com/fragaria/gap-angular">GAP-Angular</a> (to jsem psal
+já!) a
+<a href="https://github.com/fragaria/gap-datastoreadmin">GAP-DatastoreAdmin</a>,
+ale o těch až jindy.</p>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="content-block">
+        <div class="article__misc">
+            <div class="article__sharebox">
+                <ul class="sharebox">
+    <li class="sharebox__item sharebox__item--twitter">
+        <a class="sharebox__item-body" href="https://twitter.com/intent/tweet?text=Náš technologický stack - server&url=https://fragaria.cz/blog/2014/01/02/nas-technologicky-stack-server/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter"><span>Share on Twitter</span></a>
+    </li>
+    <li class="sharebox__item sharebox__item--facebook">
+        <a class="sharebox__item-body" href="https://facebook.com/sharer.php?u=https://fragaria.cz/blog/2014/01/02/nas-technologicky-stack-server/" rel="nofollow" target="_blank" title="Share on Facebook"><span>Share on Facebook</span></a>
+    </li>
+    <li class="sharebox__item sharebox__item--gplus">
+        <a class="sharebox__item-body" href="https://plus.google.com/share?url=https://fragaria.cz/blog/2014/01/02/nas-technologicky-stack-server/" rel="nofollow" target="_blank" title="Share on Google+"><span>Share on Google+</span></a>
+    </li>
+</div>
+
+            </div>
+            <div class="article__tags">
+                
+            </div>
+        </div>
+    </div>
 </article>
 
         </div>

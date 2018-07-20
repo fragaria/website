@@ -10,7 +10,7 @@
     <title>GIT - proces vývoja a nasadzovania | fragaria.cz</title>
     <meta name="author" content="Fragaria s.r.o." />
     <meta name="robots" content="index,follow" />
-    <meta name="description" content="Rovnako ako pri každom vyvíjaní už existujúcim postupom, aj pri tom našom sme našli niekoľko možností ako ho vylepšiť. Na momentálnych projektoch vyvýjame pomocou SCRUM-u a snažíme sa každý sprint dodať použiteľnú a nasaditeľnú verziu produktu.Aby sme dosiahli požadovaný efekt, navrhli sme systém troch prostredí, Sandbox, Pre...">
+    <meta name="description" content="Rovnako ako pri každom vyvíjaní už existujúcim postupom, aj pri tomnašom sme našli niekoľko možností ako ho vylepšiť.">
     <meta name="keywords" content="fragaria, software, vývoj software, webové aplikace, python, javascript, angular, elasticsearch, html, css, scrumverzováníinternationalagilegit" />
     <!-- Favicons -->
     
@@ -18,7 +18,7 @@
     <meta property="og:url"           content="https://fragaria.cz/website/blog/2015/09/22/git-proces-vyvoja-nasadzovania/" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="GIT - proces vývoja a nasadzovania | fragaria.cz" />
-    <meta property="og:description"   content="Rovnako ako pri každom vyvíjaní už existujúcim postupom, aj pri tom našom sme našli niekoľko možností ako ho vylepšiť. Na momentálnych projektoch vyvýjame pomocou SCRUM-u a snažíme sa každý sprint dodať použiteľnú a nasaditeľnú verziu produktu.Aby sme dosiahli požadovaný efekt, navrhli sme systém troch prostredí, Sandbox, Pre..." />
+    <meta property="og:description"   content="Rovnako ako pri každom vyvíjaní už existujúcim postupom, aj pri tomnašom sme našli niekoľko možností ako ho vylepšiť." />
 
     
 
@@ -56,12 +56,97 @@
 </div>
 
 
-            <article itemtype="http://schema.org/BlogPosting" itemscope="">
-  <div class="content-block">
-    <h1 itemprop="headline">GIT - proces vývoja a nasadzovania</h1>
-    <h1>CHUJU sprety</h1>
-    Rovnako ako pri každom vyvíjaní už existujúcim postupom, aj pri tom našom sme našli niekoľko možností ako ho vylepšiť. <br /><br />Na momentálnych projektoch vyvýjame pomocou SCRUM-u a snažíme sa každý sprint dodať použiteľnú a nasaditeľnú verziu produktu.<br /><br /><a name='more'></a><div style="clear: both; text-align: center;"><img border="0" height="285" src="http://3.bp.blogspot.com/-wfyKBaMCdlk/VgFO8LnIvVI/AAAAAAAAA-I/h8kqrlus_1I/s320/git-illustration.png" width="320" /></div><br /><br />Aby sme dosiahli požadovaný efekt, navrhli sme systém troch prostredí, Sandbox, Preproduction a Production.<br /><br />Na <b>Sandboxe</b> možu všetci vidieť v akom sme v stave čiže forma continous integration. <br /><br /><b>Preproduction</b> je prostredie na ktoré umiestňujeme release candidate verziu. Slúži pre QA team na otestovanie a prípadný bugfix. Rovnako ako aj pre riešenie akýchkoľvek možných problémov. <br /><br />Na <b>Production</b> nasadzujeme po vychytaní všetkých bugov, overení kvality a samozrejem po schválení product ownerom. <br /><br />Používame GIT. Najvačšou výhodou tohoto šikovného nástroja sú vetvy - branches.<br /><br />Dohodli sme sa, že v <b>master</b> branchi bude stále tá verzia produktu, ktorá je nasadená na produkcii a do nej sa priamo commitovat nebude. Začiatkom každého sprintu sa vytvorí nová <b>releases/X.X.X</b> branch z master branch, a na nej sa bude vyvíjať.<br /><br />Ak nie je jasné, či sa daná funcionalita stihne dokončit do konca sprintu, vytvorí sa branch iba pre ňu napr. <b>features/XYZ</b> a tá sa po dokončení zlúči s aktuálnou releases/X.X.X vetvou.<br /><br />Koncom sprintu sa aktuálna releases branch nasadí na Preproduction prostredie na otestovanie a bugfix.<br /><br />Vo chvíli keď je verzia doladená, releases branch zlúčime s master branch, a otagujeme číslom aktuálnej verzie. Nasadíme na produkčné prostredie a vychutnávame už doladený final. <br /><br />Stručným resumém by som teda len dodal že celé vetvenie prechádza cez<br /><b>SANDBOX</b> - aktuálny stav vývoja tzv. Continuous Integration prostredie.<br /><b>PREPRODUCTION</b> - vždy releases branch z uplynulého sprintu (nasadzuje sa pred koncom sprintu a testuje sa)<br /><b>PRODUCTION</b> - master branch (nasadzuje sa raz za dva týžne po otestovaní).
-  </div>
+            <article itemtype="https://schema.org/TechArticle" itemscope class="article">
+    <div class="content-block typeset">
+        <h1 itemprop="name" class="article__headline alpha">GIT - proces vývoja a nasadzovania</h1>
+
+        <p class="article__meta">
+            <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="article__author">
+                <span itemprop="name">Tibor Kulčár</span>
+            </span>
+            <meta itemprop="datePublished" content="" />
+            <span class="article__pubdate">22.09.2015</span>
+            <meta itemprop="publisher"></meta>
+        </p>
+
+        
+
+        <div class="article__content-wrap">
+            <div class="article__content">
+                <p>Rovnako ako pri každom vyvíjaní už existujúcim postupom, aj pri tom
+našom sme našli niekoľko možností ako ho vylepšiť.</p>
+
+<p>Na momentálnych projektoch vyvýjame pomocou SCRUM-u a snažíme sa každý
+sprint dodať použiteľnú a nasaditeľnú verziu
+produktu.</p>
+
+<p><img src="http://3.bp.blogspot.com/-wfyKBaMCdlk/VgFO8LnIvVI/AAAAAAAAA-I/h8kqrlus_1I/s320/git-illustration.png" alt="" /></p>
+
+<p>Aby sme dosiahli požadovaný efekt, navrhli sme systém troch prostredí,
+Sandbox, Preproduction a Production.</p>
+
+<p>Na <strong>Sandboxe</strong> možu všetci vidieť v akom sme v stave čiže forma
+continous integration.</p>
+
+<p><strong>Preproduction</strong> je prostredie na ktoré umiestňujeme release candidate
+verziu. Slúži pre QA team na otestovanie a prípadný bugfix. Rovnako ako
+aj pre riešenie akýchkoľvek možných problémov.</p>
+
+<p>Na <strong>Production</strong> nasadzujeme po vychytaní všetkých bugov, overení
+kvality a samozrejem po schválení product ownerom.</p>
+
+<p>Používame GIT. Najvačšou výhodou tohoto šikovného nástroja sú vetvy -
+branches.</p>
+
+<p>Dohodli sme sa, že v <strong>master</strong> branchi bude stále tá verzia produktu,
+ktorá je nasadená na produkcii a do nej sa priamo commitovat nebude.
+Začiatkom každého sprintu sa vytvorí nová <strong>releases/X.X.X</strong> branch z
+master branch, a na nej sa bude vyvíjať.</p>
+
+<p>Ak nie je jasné, či sa daná funcionalita stihne dokončit do konca
+sprintu, vytvorí sa branch iba pre ňu napr. <strong>features/XYZ</strong> a tá sa po
+dokončení zlúči s aktuálnou releases/X.X.X vetvou.</p>
+
+<p>Koncom sprintu sa aktuálna releases branch nasadí na Preproduction
+prostredie na otestovanie a bugfix.</p>
+
+<p>Vo chvíli keď je verzia doladená, releases branch zlúčime s master
+branch, a otagujeme číslom aktuálnej verzie. Nasadíme na produkčné
+prostredie a vychutnávame už doladený final.</p>
+
+<p>Stručným resumém by som teda len dodal že celé vetvenie prechádza cez
+<strong>SANDBOX</strong> - aktuálny stav vývoja tzv. Continuous Integration
+prostredie.
+<strong>PREPRODUCTION</strong> - vždy releases branch z uplynulého sprintu (nasadzuje
+sa pred koncom sprintu a testuje sa)
+<strong>PRODUCTION</strong> - master branch (nasadzuje sa raz za dva týžne po
+otestovaní).</p>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="content-block">
+        <div class="article__misc">
+            <div class="article__sharebox">
+                <ul class="sharebox">
+    <li class="sharebox__item sharebox__item--twitter">
+        <a class="sharebox__item-body" href="https://twitter.com/intent/tweet?text=GIT - proces vývoja a nasadzovania&url=https://fragaria.cz/blog/2015/09/22/git-proces-vyvoja-nasadzovania/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter"><span>Share on Twitter</span></a>
+    </li>
+    <li class="sharebox__item sharebox__item--facebook">
+        <a class="sharebox__item-body" href="https://facebook.com/sharer.php?u=https://fragaria.cz/blog/2015/09/22/git-proces-vyvoja-nasadzovania/" rel="nofollow" target="_blank" title="Share on Facebook"><span>Share on Facebook</span></a>
+    </li>
+    <li class="sharebox__item sharebox__item--gplus">
+        <a class="sharebox__item-body" href="https://plus.google.com/share?url=https://fragaria.cz/blog/2015/09/22/git-proces-vyvoja-nasadzovania/" rel="nofollow" target="_blank" title="Share on Google+"><span>Share on Google+</span></a>
+    </li>
+</div>
+
+            </div>
+            <div class="article__tags">
+                
+            </div>
+        </div>
+    </div>
 </article>
 
         </div>

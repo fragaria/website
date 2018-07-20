@@ -10,7 +10,7 @@
     <title>Creating Modular Menus in AngularJS | fragaria.cz</title>
     <meta name="author" content="Fragaria s.r.o." />
     <meta name="robots" content="index,follow" />
-    <meta name="description" content="Recently, I had to design an AngularJS application that would be highly modular. The idea was to let each module to create its own menu items and its own routes.The final application should look like this:The menu on the left should be generated on-the-fly, based on the requirements of individual modules.It turned out it's qu...">
+    <meta name="description" content="Recently, I had to design an AngularJS application that would be highlymodular. The idea was to let each module to create its own menu itemsand its own routes.">
     <meta name="keywords" content="fragaria, software, vývoj software, webové aplikace, python, javascript, angular, elasticsearch, html, css, menudynamicmodularmodulesangularjs" />
     <!-- Favicons -->
     
@@ -18,7 +18,7 @@
     <meta property="og:url"           content="https://fragaria.cz/website/blog/2014/08/11/modular-menu-with-angularjs/" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Creating Modular Menus in AngularJS | fragaria.cz" />
-    <meta property="og:description"   content="Recently, I had to design an AngularJS application that would be highly modular. The idea was to let each module to create its own menu items and its own routes.The final application should look like this:The menu on the left should be generated on-the-fly, based on the requirements of individual modules.It turned out it's qu..." />
+    <meta property="og:description"   content="Recently, I had to design an AngularJS application that would be highlymodular. The idea was to let each module to create its own menu itemsand its own routes." />
 
     
 
@@ -56,12 +56,119 @@
 </div>
 
 
-            <article itemtype="http://schema.org/BlogPosting" itemscope="">
-  <div class="content-block">
-    <h1 itemprop="headline">Creating Modular Menus in AngularJS</h1>
-    <h1>CHUJU sprety</h1>
-    <div dir="ltr" style="text-align: left;" trbidi="on">Recently, I had to design an AngularJS application that would be highly modular. The idea was to let each module to create its own menu items and its own routes.<br /><br /><a name='more'></a><br /><br />The final application should look like this:<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-vhRlyVNm9wM/U-TmRNSdkxI/AAAAAAAAAYA/o4H8WBdQHUk/s1600/Screen+Shot+2014-08-08+at+15.44.22.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-vhRlyVNm9wM/U-TmRNSdkxI/AAAAAAAAAYA/o4H8WBdQHUk/s1600/Screen+Shot+2014-08-08+at+15.44.22.png" height="228" width="400" /></a></div><br /><br />The menu on the left should be generated <i>on-the-fly</i>, based on the requirements of individual modules.<br /><br />It turned out it's quite easy to do so using AngularJS <code>provider</code>.<br /><br />Wait a minute. What is AngularJS provider? Well, there is <a href="https://docs.angularjs.org/guide/providers">nice article</a> in documentation.<br /><br />For the sake of this article, provider is just a service, which <i>is configured at application startup</i>. And application startup is perfect time to build the menu. So let's do it.<br /><h3>&nbsp;</h3><h3>Core module</h3>First of all let us create a module called <code>app.core</code>. containing the <code>Menu</code>&nbsp; service provider which holds application menu items:<br /><br /><script src="https://gist.github.com/krtek/d74d9157b7bc9b4a21b3.js?file=core.js"></script> Note the <code>$get()</code> function. It is used by AngularJS at runtime to get an instance of <code>Menu</code> service.<br /><br />The <code>add()</code> method can be called only at bootstrap (<code>config</code> method) by other modules to add its own menu items.<br /><br />And finally, <code>MenuCtrl</code> is a controller which uses the menu service to get an instance of menu and render it.<br /><h3>&nbsp;</h3><h3>Add modules</h3>Let's define another module and add a menu item:<br /><br /><script src="https://gist.github.com/krtek/d74d9157b7bc9b4a21b3.js?file=settings.js"></script> Note that <code>app.settings</code> module dependents on <code>app.core</code> and during application bootstrap (<code>config()</code> method) it adds menu item and respective routes.<br /><br />Also note, that we are now dealing with <code>MenuProvider</code>, not the <code>Menu</code> service itself. We will use the service later in <code>MenuCtrl.</code><br /><br />Now let's define another module with two more menu items:<br /><script src="https://gist.github.com/krtek/d74d9157b7bc9b4a21b3.js?file=user.js"></script> <br /><h3>&nbsp;</h3><h3>Render menu</h3>Menu rendering depends on the frontend framework you are using, so here is just a simple version for Twitter's Bootstrap:<br /><script src="https://gist.github.com/krtek/d74d9157b7bc9b4a21b3.js?file=menu.html"></script>Of course you can add icons to achieve extra fanciness. Check <a href="http://plnkr.co/edit/6RkqZs0mBcZa3EcGC2op?p=preview">this demo</a> to learn about icons.<br /><h3>&nbsp;</h3><h3>Putting it all together</h3>Finally, we need to link all the individual modules into one root application and add a Home menu item. It's basically just a list of submodule dependencies and default route handler:<br /><br /><script src="https://gist.github.com/krtek/d74d9157b7bc9b4a21b3.js?file=app.js"></script> <br />The only issue in the example is that Home menu always appears on the last position because of module loading order. Fix it as your homework :)<br /><br />Get the code above <a href="https://gist.github.com/krtek/d74d9157b7bc9b4a21b3">as a gist</a> or <a href="http://plnkr.co/edit/6RkqZs0mBcZa3EcGC2op?p=preview">see it in action</a>.</div>
-  </div>
+            <article itemtype="https://schema.org/TechArticle" itemscope class="article">
+    <div class="content-block typeset">
+        <h1 itemprop="name" class="article__headline alpha">Creating Modular Menus in AngularJS</h1>
+
+        <p class="article__meta">
+            <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="article__author">
+                <span itemprop="name">Lukáš Marek</span>
+            </span>
+            <meta itemprop="datePublished" content="" />
+            <span class="article__pubdate">11.08.2014</span>
+            <meta itemprop="publisher"></meta>
+        </p>
+
+        
+
+        <div class="article__content-wrap">
+            <div class="article__content">
+                <p>Recently, I had to design an AngularJS application that would be highly
+modular. The idea was to let each module to create its own menu items
+and its own routes.</p>
+
+<p>The final application should look like
+this:</p>
+
+<p><a href="http://3.bp.blogspot.com/-vhRlyVNm9wM/U-TmRNSdkxI/AAAAAAAAAYA/o4H8WBdQHUk/s1600/Screen+Shot+2014-08-08+at+15.44.22.png">http://3.bp.blogspot.com/-vhRlyVNm9wM/U-TmRNSdkxI/AAAAAAAAAYA/o4H8WBdQHUk/s1600/Screen+Shot+2014-08-08+at+15.44.22.png</a></p>
+
+<p>The menu on the left should be generated <em>on-the-fly</em>, based on the
+requirements of individual modules.</p>
+
+<p>It turned out it’s quite easy to do so using AngularJS <code class="highlighter-rouge">provider</code>.</p>
+
+<p>Wait a minute. What is AngularJS provider? Well, there is <a href="https://docs.angularjs.org/guide/providers">nice
+article</a> in documentation.</p>
+
+<p>For the sake of this article, provider is just a service, which <em>is
+configured at application startup</em>. And application startup is perfect
+time to build the menu. So let’s do it.</p>
+
+<h3 id="core-module">Core module</h3>
+
+<p>First of all let us create a module called <code class="highlighter-rouge">app.core</code>. containing the
+<code class="highlighter-rouge">Menu</code>  service provider which holds application menu items:</p>
+
+<p>Note the <code class="highlighter-rouge">$get()</code> function. It is used by AngularJS at runtime to get an
+instance of <code class="highlighter-rouge">Menu</code> service.</p>
+
+<p>The <code class="highlighter-rouge">add()</code> method can be called only at bootstrap (<code class="highlighter-rouge">config</code> method) by
+other modules to add its own menu items.</p>
+
+<p>And finally, <code class="highlighter-rouge">MenuCtrl</code> is a controller which uses the menu service to
+get an instance of menu and render it.</p>
+
+<h3 id="add-modules">Add modules</h3>
+
+<p>Let’s define another module and add a menu item:</p>
+
+<p>Note that <code class="highlighter-rouge">app.settings</code> module dependents on <code class="highlighter-rouge">app.core</code> and during
+application bootstrap (<code class="highlighter-rouge">config()</code> method) it adds menu item and
+respective routes.</p>
+
+<p>Also note, that we are now dealing with <code class="highlighter-rouge">MenuProvider</code>, not the <code class="highlighter-rouge">Menu</code>
+service itself. We will use the service later in <code class="highlighter-rouge">MenuCtrl.</code></p>
+
+<p>Now let’s define another module with two more menu items:</p>
+
+<h3 id="render-menu">Render menu</h3>
+
+<p>Menu rendering depends on the frontend framework you are using, so here
+is just a simple version for Twitter’s Bootstrap:</p>
+
+<p>Of course you can add icons to achieve extra fanciness. Check <a href="http://plnkr.co/edit/6RkqZs0mBcZa3EcGC2op?p=preview">this
+demo</a> to learn
+about icons.</p>
+
+<h3 id="putting-it-all-together">Putting it all together</h3>
+
+<p>Finally, we need to link all the individual modules into one root
+application and add a Home menu item. It’s basically just a list of
+submodule dependencies and default route handler:</p>
+
+<p>The only issue in the example is that Home menu always appears on the
+last position because of module loading order. Fix it as your homework
+:)</p>
+
+<p>Get the code above <a href="https://gist.github.com/krtek/d74d9157b7bc9b4a21b3">as a
+gist</a> or <a href="http://plnkr.co/edit/6RkqZs0mBcZa3EcGC2op?p=preview">see it in
+action</a>.</p>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="content-block">
+        <div class="article__misc">
+            <div class="article__sharebox">
+                <ul class="sharebox">
+    <li class="sharebox__item sharebox__item--twitter">
+        <a class="sharebox__item-body" href="https://twitter.com/intent/tweet?text=Creating Modular Menus in AngularJS&url=https://fragaria.cz/blog/2014/08/11/modular-menu-with-angularjs/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter"><span>Share on Twitter</span></a>
+    </li>
+    <li class="sharebox__item sharebox__item--facebook">
+        <a class="sharebox__item-body" href="https://facebook.com/sharer.php?u=https://fragaria.cz/blog/2014/08/11/modular-menu-with-angularjs/" rel="nofollow" target="_blank" title="Share on Facebook"><span>Share on Facebook</span></a>
+    </li>
+    <li class="sharebox__item sharebox__item--gplus">
+        <a class="sharebox__item-body" href="https://plus.google.com/share?url=https://fragaria.cz/blog/2014/08/11/modular-menu-with-angularjs/" rel="nofollow" target="_blank" title="Share on Google+"><span>Share on Google+</span></a>
+    </li>
+</div>
+
+            </div>
+            <div class="article__tags">
+                
+            </div>
+        </div>
+    </div>
 </article>
 
         </div>

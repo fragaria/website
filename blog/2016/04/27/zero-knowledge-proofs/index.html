@@ -10,7 +10,7 @@
     <title>Zero knowledge proofs | fragaria.cz</title>
     <meta name="author" content="Fragaria s.r.o." />
     <meta name="robots" content="index,follow" />
-    <meta name="description" content="Kryptografie je plná fascinujících postupů - Diffie-Hellman výměna klíčů, šifrování veřejným klíčem. Představa, že komunikující strany potřebují mít předem sdílený klíč, aby mohli šifrovaně komunikovat vydržela několik století a podařilo se jí překonat až v polovině minulého století. O DH výměně i RSA bylo napsáno již mnoho, ...">
+    <meta name="description" content="Kryptografie je plná fascinujících postupů - Diffie-Hellman výměnaklíčů, šifrování veřejným klíčem. Představa, že komunikující stranypotřebují mít předem sdílený klíč, aby mohli šifrovaně komunikovatvydržela několik století a podařilo se jí překonat až v poloviněminulého století. O DH výměně i RSA bylo napsáno již mnoho, alee...">
     <meta name="keywords" content="fragaria, software, vývoj software, webové aplikace, python, javascript, angular, elasticsearch, html, css, zero knowledgekryptografiesudoku" />
     <!-- Favicons -->
     
@@ -18,7 +18,7 @@
     <meta property="og:url"           content="https://fragaria.cz/website/blog/2016/04/27/zero-knowledge-proofs/" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Zero knowledge proofs | fragaria.cz" />
-    <meta property="og:description"   content="Kryptografie je plná fascinujících postupů - Diffie-Hellman výměna klíčů, šifrování veřejným klíčem. Představa, že komunikující strany potřebují mít předem sdílený klíč, aby mohli šifrovaně komunikovat vydržela několik století a podařilo se jí překonat až v polovině minulého století. O DH výměně i RSA bylo napsáno již mnoho, ..." />
+    <meta property="og:description"   content="Kryptografie je plná fascinujících postupů - Diffie-Hellman výměnaklíčů, šifrování veřejným klíčem. Představa, že komunikující stranypotřebují mít předem sdílený klíč, aby mohli šifrovaně komunikovatvydržela několik století a podařilo se jí překonat až v poloviněminulého století. O DH výměně i RSA bylo napsáno již mnoho, alee..." />
 
     
 
@@ -56,12 +56,333 @@
 </div>
 
 
-            <article itemtype="http://schema.org/BlogPosting" itemscope="">
-  <div class="content-block">
-    <h1 itemprop="headline">Zero knowledge proofs</h1>
-    <h1>CHUJU sprety</h1>
-    Kryptografie je plná fascinujících postupů - Diffie-Hellman výměna klíčů, šifrování veřejným klíčem. Představa, že komunikující strany potřebují mít předem sdílený klíč, aby mohli šifrovaně komunikovat vydržela několik století a podařilo se jí překonat až v polovině minulého století. O DH výměně i RSA bylo napsáno již mnoho, ale existují i jiné, zdánlivě neřešitelné problémy.<br /><br /><b>Dnes uvádíme: Je možné přesvědčit protistranu o naší znalosti řešení úlohy, ale zárověn jí neposkytnout sebemenší nápovědu, jaké to řešení je?</b><br /><a name='more'></a><br /><h2>Cože?</h2>Velmi jednoduchý příklad: barvoslepý člověk má dvě karty – červenou a zelenou. Potřebuje zjistit, která má jakou barvu a je dokonce ochotný za pomoc zaplatit. Já mu umím pomoci, ale on má obavu, že můžu být také barvoslepý a toužíc po odměně si odpověď vymyslím.<br /><br />Já bych ho rád přesvědčil o opaku a ještě k tomu mu příliš nevěřím, že mi potom za pomoc zaplatí. Potřebuji ho tedy přesvědčit, že umím rozlišit červenou a zelenou a zároveň mu nevyzradit řešení rovnou.<br /><br />Jak z toho ven? Dohodneme se, že karty schová za záda a může, ale nemusí je mezi sebou vyměnit. Pak mi je ukáže a já mu řeknu, jestli je prohodil nebo ne. On stále nebude vědět, která je která, ale mohl by mi začít alespoň trochu věřit, že rozliším barvy.<br /><br />Tento pokus můžeme opakovat, až si bude náš klient s velkou pravděpodobností jistý mojí schopností rozlišovat barvy. Po první pokusu máme 50% šanci ho oklamat, pokud postup zopakujeme, naše šance podvádět bude 0.5^n, kde n je počet opakování. Po deseti kolech testů bude tato pravděpodobnost menší než 1 promile.<br /><br /><h2>Luštění sudoku</h2>Dalším příkladem je sudoku (<a href="http://blog.computationalcomplexity.org/2006/08/zero-knowledge-sudoku.html" target="_blank">zdroj</a>). Alice zná řešení sudoku, nechce ho Bobovi vyzradit, ale zároveň by ho ráda přesvědčila, že řešení zná.<br /><br />Alice nahradí čísla z jejího řešení písmeny ABCDEFGHI v náhodném pořádí, např. 1 → C, 2 → I, 3 → E, 4 → G atd., dosadí písmena na místo čísel do tabulky a následně každé políčko zakryje neprůhlednou kartičkou.<br /><br />Nyní si Bob má možnost vybrat z následujících možností:<br /><br />- odkryje jeden řádek (9 možností)<br />- odkryje jeden sloupec (9)<br />- odkryje jeden z devíti 3x3 čtverců (9)<br />- odkryje místa, kde se nacházela čísla původního zadání (1)<br /><br />Celkem tedy 28 možností.<br /><br />V prvních třech případech se může Bob přesvědčit, že v daném řádku/sloupci/čtverci je každé písmeno pouze jednou. Ve čtvrtém případě ověří, jestli to, co mu Alice ukazuje odpovídá původnímu zadání (tam, co by měly být stejná čísla jsou stejná písmena).<br /><br />O řešení se ale nedozví nic, v prvních třech případech neví jaká čísla odpovídají jakým číslům, vidí jenom, že se neopakují a řešení je možná správné a ve čtvrtém případě sice ví, které písmeno odpovídá číslu, ale pouze pro zadání, což stejně zná.<br /><br />Pokud Alice řešení nezná, mohla si řešení vymyslet a Bob mohl mít smůlu a vybrat si pro ověření možnost ve které to není vidět. Aby ho Alice přesvědčila, zvolí jiné přiřazení písmen k číslům, zakryje tabulku a Bob se zase může podívat na jednu z 28 možností.<br /><br />S každým opakováním je Bob více a více přesvědčený, že Alice řešení zná.<br /><br />A pokud Alice řešení nezná, musí být alespoň v jedné možnosti chyba – buď alespoň dvě stejná písmena v řádku/sloupci/podčtverci, nebo Alice ukazuje řešení, které neodpovídá zadání a Bob na tento podvod pravděpodobně přijde, pokud provede dostatečný počet opakování protokolu.<br /><br />Pokud má Alice chybu pouze v jednom z 28 případů, má Bob šanci vybrat zrovna ten problematický 1:28. Každý další pokus tedy zvyšuje možnost odhalení Alicina podvodu 27/28krát. Např. po 10 opakováních má Alice 70% šanci ((27/28)^10), že jí podvod vyjde, po 100 opakováních je to asi 2,6% a po 150 opakováních méně než 0,5%. Což už by mohlo Boba přesvědčit.<br /><br /><h2>Trochu teorie</h2><i>Zero knowledge protocol</i> musí splňovat tři podmínky, nastíněné výše:<br /><br />1. <i>Completeness</i> – Bob bude přesvědčen o správnosti Alicina řešení. Neexistuje nějaký temný kout řešení (např. podmínka, která nejde danými pravidly vyzkoušet - je potřeba mít liché číslo v levém horním rohu), na který by nemohl při testování narazit.<br /><br />2. <i>Soundness</i> – Pokud Alice řešení nezná, Boba velmi pravděpodobně nepřesvědčí, musela by mít ohromné štěstí a Bob velkou smůlu. <br /><br />3. <i>Zero knowledge</i> – Bob se o skutečném řešení nic nedozví.<br /><br />Zkusme ještě pouvažovat, co by se stalo, kdyby se Bob dotázal na jinou otázku, než jednu z těch 28. Například na čísla z různých řádků. Byl by to problém? Bob by se dozvěděl, zda jsou tyto čísla shodná nebo ne a to mu poskytuje cennou nápovědu k řešení. <br /><br />Pro zájemce postup na ZKP sudoku u <a href="http://www.cs.berkeley.edu/~luca/lunch/minutes/naor05.html" target="_blank">kterého se nedá podvádět</a>. (Obdobně by se dala prokázat znalost řešení libovolně rozměrného sudoku.)<br /><br /><h2>Hrátky s grafy</h2>Další problém na kterém můžeme ukázat zero knowledge proof je barvení grafu. (<a href="http://blog.cryptographyengineering.com/2014/11/zero-knowledge-proofs-illustrated-primer.html" target="_blank">zdroj</a>) Představte si - jsme majiteli telekomunikační společnosti a hodláme vystavět novou mobilní síť. Víme, kde budou umístěny naše vysílače a máme tři různé frekvence a potřebujeme určit, který vysílač bude používat jako frekvenci, tak aby žádné dva sousední nevysílali na stejné frekvenci, docházelo by tak k rušení. <br /><br />Situaci si můžeme nakreslit jako následující graf, vrcholy jsou pozice vysílaců a hrany označují možné rušení:<br /><br /><a href="http://1.bp.blogspot.com/-etUeXi5dXfk/VxU3ivmXC5I/AAAAAAAAOco/On3vq6AD6nooK66rHqUl7c774lNxyWxxACK4B/s1600/graph-gray.png" imageanchor="1"><img border="0" height="136" src="https://1.bp.blogspot.com/-etUeXi5dXfk/VxU3ivmXC5I/AAAAAAAAOco/On3vq6AD6nooK66rHqUl7c774lNxyWxxACK4B/s320/graph-gray.png" width="320" /></a><br /><br />Potřebujeme vrcholy tohoto grafu obarvit třemi barvami tak, aby žádní dva sousedé neměli stejnou barvu. V případě těchto několika málo vrcholů není až takový problém řešení vymyslet, ale pokud budeme mít graf o desítkách nebo stovkách vrcholů může být řešení velmi složité (NP-hard). V tomto případě není ani jisté, že řešení existuje. [<a href="https://en.wikipedia.org/wiki/Graph_coloring">https://en.wikipedia.org/wiki/Graph_coloring</a>]<br /><br /><a href="http://1.bp.blogspot.com/-6IIzHV3iF0s/VxU3rq3LKUI/AAAAAAAAOcw/L94T1xc28LUOCcqLiKI6Lf_c2P37mqp2wCK4B/s1600/graph-color.png" imageanchor="1"><img border="0" height="135" src="https://1.bp.blogspot.com/-6IIzHV3iF0s/VxU3rq3LKUI/AAAAAAAAOcw/L94T1xc28LUOCcqLiKI6Lf_c2P37mqp2wCK4B/s320/graph-color.png" width="320" /></a><br /><br />Zadáme tedy tento problém k řešení našemu IT oddělení, ale máme příliš mnoho vysílačů a řešení se nedaří nalézt. Na obědě se náhodou potkáme s managerem Google a ten se nabídne, že nám s problémem pomůže. Pustí na to tedy jejich výpočetní oddělení.<br /><br />Chvilku to trvá, ale mají přeci jenom o něco více CPU a za týden nám volá, že znají řešení. Nechtějí ho ovšem dát zadarmo a my jim nevěříme – přeci jen šlo o velmi složitý výpočet. Rádi sice zaplatíme za korektní řešení, ale nejsme si jisti, zda ho dostaneme a jestli nám vrátí peníze, pokud se ukáže neplatnost řešení. A Google se zase bojí, že když nám řešení pošle, tak mu nepošleme peníze a chce tedy zaplatit předem.<br /><br />Opět zdánlivě neřešitelný problém. Naštěstí máme zero-knowledge a dokonce ho můžeme provést bez použití počítače.<br /><br />Pronajmeme stodolu a uvnitř na podlahu nakreslíme náš graf vysílačů. Potom do stodoly pustíme pracovníky Googlu a ti obarví pozice vysílačů třemi barvami (libovolnou permutací barev), tak aby žádné dvě stejné nespojovala hrana (tnz. platné řešení) a vrcholy zakryjí klobouky. <br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-Q4jYlwfBk_E/VxU5aBWxcAI/AAAAAAAAOc4/aIIwu1hJH0Itb0z9SVvcpT2w-tmxrr8ngCK4B/s1600/graph-colors-examples.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="85" src="https://1.bp.blogspot.com/-Q4jYlwfBk_E/VxU5aBWxcAI/AAAAAAAAOc4/aIIwu1hJH0Itb0z9SVvcpT2w-tmxrr8ngCK4B/s400/graph-colors-examples.png" width="400" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Dva příklady obarvení - oba jsou správným řešením.</td></tr></tbody></table>Následně můžou opět do stodoly vstoupit naši pracovníci a odstranit právě dva klobouky spojené hranou. Přesvědčí se, že odkryté vrcholy mají různou barvu. Následně opustí stodolu, Google smaže barvu ze všech vrcholů a opět nabarví vrcholy třemi barvami v jiném, náhodném pořadí.<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-84FDOR4uBU8/VxU6iFyww7I/AAAAAAAAOdE/H5ywpEbRF80CUZhoKk7Mv8mfuz006gxyACK4B/s1600/graph-covered.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="163" src="https://4.bp.blogspot.com/-84FDOR4uBU8/VxU6iFyww7I/AAAAAAAAOdE/H5ywpEbRF80CUZhoKk7Mv8mfuz006gxyACK4B/s320/graph-covered.png" width="320" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">My máme možnost vidět pouze toto. Situace odpovídá platnému řešení, ale vůbec nám nic nenapovídá.</td></tr></tbody></table>Zase vstoupíme my, odkryjeme dva klobouky a přesvědčíme se, že barvy pod nimi jsou různé. Tento proces opakujeme dostatečně dlouho, než si budeme dostatečně jisti, že Google zná správné řešení.<br /><br />Prvních několik pokusů může mít Google štěstí, ale pokud řešení nezná a některé dva sousední vrcholy mají stejnou barvu, tak po mnoha pokusech máme slušnou šanci, že podvod odhalíme. Pravděpodobnost odhalení neplatného řešení je ((E-1)/E)^n, kde a je počet hran grafu a n počet provedených testů.<br /><br />Google na druhou stranu nic neriskuje, jediné co se dozvídáme, je že sousední vrcholy nemají stejnou barvu (což víme už ze zadání), ale díky prohazování barev mezi pokusy nemáme žádnou další souvislost. <br /><br />Vyzkoušet můžete zde: [<a href="http://web.mit.edu/~ezyang/Public/graph/svg.html">http://web.mit.edu/~ezyang/Public/graph/svg.html</a>]<br /><br /><h2>Ověřujeme online</h2>Nyní je na místě otázka, jak podobné dokazování provést elektronicky na dálku. Jednak musíme zajistit, aby dokazující nemohl změnit svoji odpověď v moment, kdy se dozví jakou možnost má odkrýt. Pouhý dotaz a odpověď by byla k ničemu, Google by mohl posílat náhodné dvě barvy.<br /><br />Proto dokazující (Google) nejprve pošle <i>commitment</i> (česky snad závazek) – v našem případě by to mohl být třeba seznam barev vrcholů grafu ve známém pořadí, každý zašifrovaný zvlášť symetrickou šifrou. Klíče si ponechá v tajnosti a na žádost ověřujícího mu pošle klíče od dvou vrcholů spojených hranou. Protože commitment už má ověřující a ověřovaný neví jaké dva klíče bude muset poslat, nemá možnost upravit svoje řešení, tak aby se zdálo pravdivé.<br /><br />Pozor: šifra musí být vhodně zvolená, nesmí umožnit ověřovanému volbou klíče určit výsledek dešifrování. Což by se snadno mohlo stát např. s <a href="https://cs.wikipedia.org/wiki/Vigen%C3%A8rova_%C5%A1ifra" target="_blank">Vigenèrovou šifrou</a>.<br /><div style="margin-bottom: 0in; widows: 1;"><br /><h2>I offline</h2></div>Dalším nepříjemným problém výše nastíněného protokolu je velké množství komunikace mezi oběma stranami a obě strany musí být ve stejný moment online.<br /><br />I tento problém má řešení – <a href="https://en.wikipedia.org/wiki/Non-interactive_zero-knowledge_proof" target="_blank">non-interactive zero knowledge proof</a> (NIZK). Vhodně zvoleným postupem se totiž může dotazující otestovat sám a vystavit výsledek sebetestování. Každý si potom může kdykoli později ověřit, že postupoval správně. Toto testování bývá založeno na náhodném orákulu (random oracle) – černá skříňka/funkce (všem přístupná a známá) vracející pro konkrétní vstup vždy stejný náhodný výstup. Výběr odkrývaných prvků, tak neurčuje dokazující strana, ale nezávislý zdroj náhody. Vstupem do orákula je postup všech předchozích testů (řetěz jejich hashů). <br /><br />Nejběžnějším využitím ZKP je při SSH autentifikaci pomocí asymetrické šifry. Na server uložíme náš veřejný klíč. Při požadavku na autentizaci nejprve server vygeneruje náhodná data, ty zašifruje a pošle k nám. My dešifrujeme a odešleme zpět.&nbsp;Server ověří, že dostal původní data a mi musíme znát privátní klíč z páru. Náhodná data jsou použita pouze jednou a případnému útočníkovi i v případě odposlechu moc nepomohou.<br /><div><br /><div>Další praktické využití nachází NIZK např. v <a href="https://en.wikipedia.org/wiki/Ring_signature" target="_blank">ring-signature</a> a <a href="https://en.wikipedia.org/wiki/Group_signature" target="_blank">group-signature</a> schématech, podobné klasickému použití digitálního podepisování, ovšem bez možnosti zjistit, kterým podpisem ze skupiny vydaných klíčů byl dokument podepsán. Je tak možné například uskutečnit opravdu anonymní hlasování na internetu. (v případě group-signature může vydavatel klíčů konkrétní držitele odtajnit, u ring-signature to možné není).</div></div><div><br /></div><div><h2>Doporučené čtení</h2></div><div><a href="https://en.wikipedia.org/wiki/Zero-knowledge_proof#Discrete_log_of_a_given_value" target="_blank">wikipedia</a>&nbsp;s příklady na diskrétní logaritmus a ověření znalosti Hamiltonovy kružnice</div><div><a href="https://crypton.io/" target="_blank">Crypton</a>&nbsp;js framework<br /><a href="http://cs.nyu.edu/courses/fall09/G22.3220-001/index.html" target="_blank">Advanced Cryptography lectures</a> na NYU</div><div><a href="http://anonize.org/assets/anonize-oak-camera.pdf" target="_blank">Anonize</a>&nbsp;- anonymní hlasovací systém</div><div><a href="https://en.wikipedia.org/wiki/Fiat%E2%80%93Shamir_heuristic" target="_blank">Fiat-Shamir heuristic</a>&nbsp;- diskrétní logaritmus<br /><a href="https://en.wikipedia.org/wiki/Feige%E2%80%93Fiat%E2%80%93Shamir_identification_scheme" target="_blank">Feige–Fiat–Shamir identification scheme</a>&nbsp;- faktorizace čísla</div><div></div>
-  </div>
+            <article itemtype="https://schema.org/TechArticle" itemscope class="article">
+    <div class="content-block typeset">
+        <h1 itemprop="name" class="article__headline alpha">Zero knowledge proofs</h1>
+
+        <p class="article__meta">
+            <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="article__author">
+                <span itemprop="name">pavel vojacek</span>
+            </span>
+            <meta itemprop="datePublished" content="" />
+            <span class="article__pubdate">27.04.2016</span>
+            <meta itemprop="publisher"></meta>
+        </p>
+
+        
+
+        <div class="article__content-wrap">
+            <div class="article__content">
+                <p>Kryptografie je plná fascinujících postupů - Diffie-Hellman výměna
+klíčů, šifrování veřejným klíčem. Představa, že komunikující strany
+potřebují mít předem sdílený klíč, aby mohli šifrovaně komunikovat
+vydržela několik století a podařilo se jí překonat až v polovině
+minulého století. O DH výměně i RSA bylo napsáno již mnoho, ale
+existují i jiné, zdánlivě neřešitelné problémy.</p>
+
+<p><strong>Dnes uvádíme: Je možné přesvědčit protistranu o naší znalosti řešení
+úlohy, ale zárověn jí neposkytnout sebemenší nápovědu, jaké to řešení
+je?</strong></p>
+
+<h2 id="cože">Cože?</h2>
+
+<p>Velmi jednoduchý příklad: barvoslepý člověk má dvě karty – červenou a
+zelenou. Potřebuje zjistit, která má jakou barvu a je dokonce ochotný za
+pomoc zaplatit. Já mu umím pomoci, ale on má obavu, že můžu být také
+barvoslepý a toužíc po odměně si odpověď vymyslím.</p>
+
+<p>Já bych ho rád přesvědčil o opaku a ještě k tomu mu příliš nevěřím, že
+mi potom za pomoc zaplatí. Potřebuji ho tedy přesvědčit, že umím
+rozlišit červenou a zelenou a zároveň mu nevyzradit řešení rovnou.</p>
+
+<p>Jak z toho ven? Dohodneme se, že karty schová za záda a může, ale nemusí
+je mezi sebou vyměnit. Pak mi je ukáže a já mu řeknu, jestli je prohodil
+nebo ne. On stále nebude vědět, která je která, ale mohl by mi začít
+alespoň trochu věřit, že rozliším barvy.</p>
+
+<p>Tento pokus můžeme opakovat, až si bude náš klient s velkou
+pravděpodobností jistý mojí schopností rozlišovat barvy. Po první
+pokusu máme 50% šanci ho oklamat, pokud postup zopakujeme, naše šance
+podvádět bude 0.5^n, kde n je počet opakování. Po deseti kolech testů
+bude tato pravděpodobnost menší než 1 promile.</p>
+
+<h2 id="luštění-sudoku">Luštění sudoku</h2>
+
+<p>Dalším příkladem je sudoku
+(<a href="http://blog.computationalcomplexity.org/2006/08/zero-knowledge-sudoku.html">zdroj</a>).
+Alice zná řešení sudoku, nechce ho Bobovi vyzradit, ale zároveň by ho
+ráda přesvědčila, že řešení zná.</p>
+
+<p>Alice nahradí čísla z jejího řešení písmeny ABCDEFGHI v náhodném pořádí,
+např. 1 → C, 2 → I, 3 → E, 4 → G atd., dosadí písmena na místo čísel do
+tabulky a následně každé políčko zakryje neprůhlednou kartičkou.</p>
+
+<p>Nyní si Bob má možnost vybrat z následujících možností:</p>
+
+<p>- odkryje jeden řádek (9 možností)
+- odkryje jeden sloupec (9)
+- odkryje jeden z devíti 3x3 čtverců (9)
+- odkryje místa, kde se nacházela čísla původního zadání (1)</p>
+
+<p>Celkem tedy 28 možností.</p>
+
+<p>V prvních třech případech se může Bob přesvědčit, že v daném
+řádku/sloupci/čtverci je každé písmeno pouze jednou. Ve čtvrtém
+případě ověří, jestli to, co mu Alice ukazuje odpovídá původnímu
+zadání (tam, co by měly být stejná čísla jsou stejná písmena).</p>
+
+<p>O řešení se ale nedozví nic, v prvních třech případech neví jaká čísla
+odpovídají jakým číslům, vidí jenom, že se neopakují a řešení je možná
+správné a ve čtvrtém případě sice ví, které písmeno odpovídá číslu, ale
+pouze pro zadání, což stejně zná.</p>
+
+<p>Pokud Alice řešení nezná, mohla si řešení vymyslet a Bob mohl mít smůlu
+a vybrat si pro ověření možnost ve které to není vidět. Aby ho Alice
+přesvědčila, zvolí jiné přiřazení písmen k číslům, zakryje tabulku a
+Bob se zase může podívat na jednu z 28 možností.</p>
+
+<p>S každým opakováním je Bob více a více přesvědčený, že Alice řešení
+zná.</p>
+
+<p>A pokud Alice řešení nezná, musí být alespoň v jedné možnosti chyba –
+buď alespoň dvě stejná písmena v řádku/sloupci/podčtverci, nebo Alice
+ukazuje řešení, které neodpovídá zadání a Bob na tento podvod
+pravděpodobně přijde, pokud provede dostatečný počet opakování
+protokolu.</p>
+
+<p>Pokud má Alice chybu pouze v jednom z 28 případů, má Bob šanci vybrat
+zrovna ten problematický 1:28. Každý další pokus tedy zvyšuje možnost
+odhalení Alicina podvodu 27/28krát. Např. po 10 opakováních má Alice 70%
+šanci ((27/28)^10), že jí podvod vyjde, po 100 opakováních je to asi
+2,6% a po 150 opakováních méně než 0,5%. Což už by mohlo Boba
+přesvědčit.</p>
+
+<h2 id="trochu-teorie">Trochu teorie</h2>
+
+<p><em>Zero knowledge protocol</em> musí splňovat tři podmínky, nastíněné výše:</p>
+
+<p>1. <em>Completeness</em> – Bob bude přesvědčen o správnosti Alicina řešení.
+Neexistuje nějaký temný kout řešení (např. podmínka, která nejde danými
+pravidly vyzkoušet - je potřeba mít liché číslo v levém horním rohu), na
+který by nemohl při testování narazit.</p>
+
+<p>2. <em>Soundness</em> – Pokud Alice řešení nezná, Boba velmi pravděpodobně
+nepřesvědčí, musela by mít ohromné štěstí a Bob velkou smůlu.</p>
+
+<p>3. <em>Zero knowledge</em> – Bob se o skutečném řešení nic nedozví.</p>
+
+<p>Zkusme ještě pouvažovat, co by se stalo, kdyby se Bob dotázal na jinou
+otázku, než jednu z těch 28. Například na čísla z různých řádků. Byl by
+to problém? Bob by se dozvěděl, zda jsou tyto čísla shodná nebo ne a to
+mu poskytuje cennou nápovědu k řešení.</p>
+
+<p>Pro zájemce postup na ZKP sudoku u <a href="http://www.cs.berkeley.edu/~luca/lunch/minutes/naor05.html">kterého se nedá
+podvádět</a>.
+(Obdobně by se dala prokázat znalost řešení libovolně rozměrného
+sudoku.)</p>
+
+<h2 id="hrátky-s-grafy">Hrátky s grafy</h2>
+
+<p>Další problém na kterém můžeme ukázat zero knowledge proof je barvení
+grafu.
+(<a href="http://blog.cryptographyengineering.com/2014/11/zero-knowledge-proofs-illustrated-primer.html">zdroj</a>)
+Představte si - jsme majiteli telekomunikační společnosti a hodláme
+vystavět novou mobilní síť. Víme, kde budou umístěny naše vysílače a
+máme tři různé frekvence a potřebujeme určit, který vysílač bude
+používat jako frekvenci, tak aby žádné dva sousední nevysílali na
+stejné frekvenci, docházelo by tak k rušení.</p>
+
+<p>Situaci si můžeme nakreslit jako následující graf, vrcholy jsou pozice
+vysílaců a hrany označují možné
+rušení:</p>
+
+<p><a href="http://1.bp.blogspot.com/-etUeXi5dXfk/VxU3ivmXC5I/AAAAAAAAOco/On3vq6AD6nooK66rHqUl7c774lNxyWxxACK4B/s1600/graph-gray.png"><img src="https://1.bp.blogspot.com/-etUeXi5dXfk/VxU3ivmXC5I/AAAAAAAAOco/On3vq6AD6nooK66rHqUl7c774lNxyWxxACK4B/s320/graph-gray.png" alt="" /></a></p>
+
+<p>Potřebujeme vrcholy tohoto grafu obarvit třemi barvami tak, aby žádní
+dva sousedé neměli stejnou barvu. V případě těchto několika málo vrcholů
+není až takový problém řešení vymyslet, ale pokud budeme mít graf o
+desítkách nebo stovkách vrcholů může být řešení velmi složité
+(NP-hard). V tomto případě není ani jisté, že řešení existuje.
+[<a href="https://en.wikipedia.org/wiki/Graph_coloring">https://en.wikipedia.org/wiki/Graph_coloring</a>]</p>
+
+<p><a href="http://1.bp.blogspot.com/-6IIzHV3iF0s/VxU3rq3LKUI/AAAAAAAAOcw/L94T1xc28LUOCcqLiKI6Lf_c2P37mqp2wCK4B/s1600/graph-color.png"><img src="https://1.bp.blogspot.com/-6IIzHV3iF0s/VxU3rq3LKUI/AAAAAAAAOcw/L94T1xc28LUOCcqLiKI6Lf_c2P37mqp2wCK4B/s320/graph-color.png" alt="" /></a></p>
+
+<p>Zadáme tedy tento problém k řešení našemu IT oddělení, ale máme příliš
+mnoho vysílačů a řešení se nedaří nalézt. Na obědě se náhodou potkáme s
+managerem Google a ten se nabídne, že nám s problémem pomůže. Pustí na
+to tedy jejich výpočetní oddělení.</p>
+
+<p>Chvilku to trvá, ale mají přeci jenom o něco více CPU a za týden nám
+volá, že znají řešení. Nechtějí ho ovšem dát zadarmo a my jim nevěříme
+– přeci jen šlo o velmi složitý výpočet. Rádi sice zaplatíme za
+korektní řešení, ale nejsme si jisti, zda ho dostaneme a jestli nám
+vrátí peníze, pokud se ukáže neplatnost řešení. A Google se zase bojí,
+že když nám řešení pošle, tak mu nepošleme peníze a chce tedy zaplatit
+předem.</p>
+
+<p>Opět zdánlivě neřešitelný problém. Naštěstí máme zero-knowledge a
+dokonce ho můžeme provést bez použití počítače.</p>
+
+<p>Pronajmeme stodolu a uvnitř na podlahu nakreslíme náš graf vysílačů.
+Potom do stodoly pustíme pracovníky Googlu a ti obarví pozice vysílačů
+třemi barvami (libovolnou permutací barev), tak aby žádné dvě stejné
+nespojovala hrana (tnz. platné řešení) a vrcholy zakryjí
+klobouky.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="http://1.bp.blogspot.com/-Q4jYlwfBk_E/VxU5aBWxcAI/AAAAAAAAOc4/aIIwu1hJH0Itb0z9SVvcpT2w-tmxrr8ngCK4B/s1600/graph-colors-examples.png"><img src="https://1.bp.blogspot.com/-Q4jYlwfBk_E/VxU5aBWxcAI/AAAAAAAAOc4/aIIwu1hJH0Itb0z9SVvcpT2w-tmxrr8ngCK4B/s400/graph-colors-examples.png" alt="" /></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Dva příklady obarvení - oba jsou správným řešením.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Následně můžou opět do stodoly vstoupit naši pracovníci a odstranit
+právě dva klobouky spojené hranou. Přesvědčí se, že odkryté vrcholy
+mají různou barvu. Následně opustí stodolu, Google smaže barvu ze všech
+vrcholů a opět nabarví vrcholy třemi barvami v jiném, náhodném
+pořadí.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="http://4.bp.blogspot.com/-84FDOR4uBU8/VxU6iFyww7I/AAAAAAAAOdE/H5ywpEbRF80CUZhoKk7Mv8mfuz006gxyACK4B/s1600/graph-covered.png"><img src="https://4.bp.blogspot.com/-84FDOR4uBU8/VxU6iFyww7I/AAAAAAAAOdE/H5ywpEbRF80CUZhoKk7Mv8mfuz006gxyACK4B/s320/graph-covered.png" alt="" /></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: center">My máme možnost vidět pouze toto. Situace odpovídá platnému řešení, ale vůbec nám nic nenapovídá.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Zase vstoupíme my, odkryjeme dva klobouky a přesvědčíme se, že barvy pod
+nimi jsou různé. Tento proces opakujeme dostatečně dlouho, než si budeme
+dostatečně jisti, že Google zná správné řešení.</p>
+
+<p>Prvních několik pokusů může mít Google štěstí, ale pokud řešení nezná a
+některé dva sousední vrcholy mají stejnou barvu, tak po mnoha pokusech
+máme slušnou šanci, že podvod odhalíme. Pravděpodobnost odhalení
+neplatného řešení je ((E-1)/E)^n, kde a je počet hran grafu a n počet
+provedených testů.</p>
+
+<p>Google na druhou stranu nic neriskuje, jediné co se dozvídáme, je že
+sousední vrcholy nemají stejnou barvu (což víme už ze zadání), ale díky
+prohazování barev mezi pokusy nemáme žádnou další souvislost.</p>
+
+<p>Vyzkoušet můžete zde:
+[<a href="http://web.mit.edu/~ezyang/Public/graph/svg.html">http://web.mit.edu/~ezyang/Public/graph/svg.html</a>]</p>
+
+<h2 id="ověřujeme-online">Ověřujeme online</h2>
+
+<p>Nyní je na místě otázka, jak podobné dokazování provést elektronicky na
+dálku. Jednak musíme zajistit, aby dokazující nemohl změnit svoji
+odpověď v moment, kdy se dozví jakou možnost má odkrýt. Pouhý dotaz a
+odpověď by byla k ničemu, Google by mohl posílat náhodné dvě barvy.</p>
+
+<p>Proto dokazující (Google) nejprve pošle <em>commitment</em> (česky snad
+závazek) – v našem případě by to mohl být třeba seznam barev vrcholů
+grafu ve známém pořadí, každý zašifrovaný zvlášť symetrickou šifrou.
+Klíče si ponechá v tajnosti a na žádost ověřujícího mu pošle klíče od
+dvou vrcholů spojených hranou. Protože commitment už má ověřující a
+ověřovaný neví jaké dva klíče bude muset poslat, nemá možnost upravit
+svoje řešení, tak aby se zdálo pravdivé.</p>
+
+<p>Pozor: šifra musí být vhodně zvolená, nesmí umožnit ověřovanému volbou
+klíče určit výsledek dešifrování. Což by se snadno mohlo stát např. s
+<a href="https://cs.wikipedia.org/wiki/Vigen%C3%A8rova_%C5%A1ifra">Vigenèrovou
+šifrou</a>.</p>
+
+<h2 id="i-offline">I offline</h2>
+
+<p>Dalším nepříjemným problém výše nastíněného protokolu je velké množství
+komunikace mezi oběma stranami a obě strany musí být ve stejný moment
+online.</p>
+
+<p>I tento problém má řešení – <a href="https://en.wikipedia.org/wiki/Non-interactive_zero-knowledge_proof">non-interactive zero knowledge
+proof</a>
+(NIZK). Vhodně zvoleným postupem se totiž může dotazující otestovat sám
+a vystavit výsledek sebetestování. Každý si potom může kdykoli později
+ověřit, že postupoval správně. Toto testování bývá založeno na náhodném
+orákulu (random oracle) – černá skříňka/funkce (všem přístupná a známá)
+vracející pro konkrétní vstup vždy stejný náhodný výstup. Výběr
+odkrývaných prvků, tak neurčuje dokazující strana, ale nezávislý zdroj
+náhody. Vstupem do orákula je postup všech předchozích testů (řetěz
+jejich hashů).</p>
+
+<p>Nejběžnějším využitím ZKP je při SSH autentifikaci pomocí asymetrické
+šifry. Na server uložíme náš veřejný klíč. Při požadavku na autentizaci
+nejprve server vygeneruje náhodná data, ty zašifruje a pošle k nám. My
+dešifrujeme a odešleme zpět. Server ověří, že dostal původní data a mi
+musíme znát privátní klíč z páru. Náhodná data jsou použita pouze jednou
+a případnému útočníkovi i v případě odposlechu moc nepomohou.</p>
+
+<p>Další praktické využití nachází NIZK např. v
+<a href="https://en.wikipedia.org/wiki/Ring_signature">ring-signature</a> a
+<a href="https://en.wikipedia.org/wiki/Group_signature">group-signature</a>
+schématech, podobné klasickému použití digitálního podepisování, ovšem
+bez možnosti zjistit, kterým podpisem ze skupiny vydaných klíčů byl
+dokument podepsán. Je tak možné například uskutečnit opravdu anonymní
+hlasování na internetu. (v případě group-signature může vydavatel klíčů
+konkrétní držitele odtajnit, u ring-signature to možné
+není).</p>
+
+<h2 id="doporučené-čtení">Doporučené čtení</h2>
+
+<p><a href="https://en.wikipedia.org/wiki/Zero-knowledge_proof#Discrete_log_of_a_given_value">wikipedia</a> s
+příklady na diskrétní logaritmus a ověření znalosti Hamiltonovy kružnice</p>
+
+<p><a href="https://crypton.io/">Crypton</a> js framework
+<a href="http://cs.nyu.edu/courses/fall09/G22.3220-001/index.html">Advanced Cryptography
+lectures</a> na
+NYU</p>
+
+<p><a href="http://anonize.org/assets/anonize-oak-camera.pdf">Anonize</a> - anonymní
+hlasovací systém</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Fiat%E2%80%93Shamir_heuristic">Fiat-Shamir
+heuristic</a> -
+diskrétní logaritmus
+<a href="https://en.wikipedia.org/wiki/Feige%E2%80%93Fiat%E2%80%93Shamir_identification_scheme">Feige–Fiat–Shamir identification
+scheme</a> -
+faktorizace čísla</p>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="content-block">
+        <div class="article__misc">
+            <div class="article__sharebox">
+                <ul class="sharebox">
+    <li class="sharebox__item sharebox__item--twitter">
+        <a class="sharebox__item-body" href="https://twitter.com/intent/tweet?text=Zero knowledge proofs&url=https://fragaria.cz/blog/2016/04/27/zero-knowledge-proofs/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter"><span>Share on Twitter</span></a>
+    </li>
+    <li class="sharebox__item sharebox__item--facebook">
+        <a class="sharebox__item-body" href="https://facebook.com/sharer.php?u=https://fragaria.cz/blog/2016/04/27/zero-knowledge-proofs/" rel="nofollow" target="_blank" title="Share on Facebook"><span>Share on Facebook</span></a>
+    </li>
+    <li class="sharebox__item sharebox__item--gplus">
+        <a class="sharebox__item-body" href="https://plus.google.com/share?url=https://fragaria.cz/blog/2016/04/27/zero-knowledge-proofs/" rel="nofollow" target="_blank" title="Share on Google+"><span>Share on Google+</span></a>
+    </li>
+</div>
+
+            </div>
+            <div class="article__tags">
+                
+            </div>
+        </div>
+    </div>
 </article>
 
         </div>

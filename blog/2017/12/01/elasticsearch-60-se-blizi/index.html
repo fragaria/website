@@ -10,7 +10,7 @@
     <title>Elasticsearch 6.0 se blíží | fragaria.cz</title>
     <meta name="author" content="Fragaria s.r.o." />
     <meta name="robots" content="index,follow" />
-    <meta name="description" content="V říjnu mi přistála do mailu pozvánka na výlet do do Mnichova s firmou Elastic. Docela jsem se těšil, než jsem zjistil, že Octoberfest se navzdory jménu konal už v září. Sice to tedy bylo bez piva, ale aspoň si většinu představených novinek pamatuju.  Mimochodem, Elasticsearch verze 6.0 bude představen 6. prosince 2017 v 17.0...">
+    <meta name="description" content="V říjnu mi přistála do mailu pozvánka na výlet do do Mnichova s firmouElastic. Docela jsem se těšil, než jsem zjistil, že Octoberfest senavzdory jménu konal už v září. Sice to tedy bylo bez piva, ale aspoň sivětšinu představených novinek pamatuju.">
     <meta name="keywords" content="fragaria, software, vývoj software, webové aplikace, python, javascript, angular, elasticsearch, html, css, elasticsearchpivoelastic" />
     <!-- Favicons -->
     
@@ -18,7 +18,7 @@
     <meta property="og:url"           content="https://fragaria.cz/website/blog/2017/12/01/elasticsearch-60-se-blizi/" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Elasticsearch 6.0 se blíží | fragaria.cz" />
-    <meta property="og:description"   content="V říjnu mi přistála do mailu pozvánka na výlet do do Mnichova s firmou Elastic. Docela jsem se těšil, než jsem zjistil, že Octoberfest se navzdory jménu konal už v září. Sice to tedy bylo bez piva, ale aspoň si většinu představených novinek pamatuju.  Mimochodem, Elasticsearch verze 6.0 bude představen 6. prosince 2017 v 17.0..." />
+    <meta property="og:description"   content="V říjnu mi přistála do mailu pozvánka na výlet do do Mnichova s firmouElastic. Docela jsem se těšil, než jsem zjistil, že Octoberfest senavzdory jménu konal už v září. Sice to tedy bylo bez piva, ale aspoň sivětšinu představených novinek pamatuju." />
 
     
 
@@ -56,12 +56,146 @@
 </div>
 
 
-            <article itemtype="http://schema.org/BlogPosting" itemscope="">
-  <div class="content-block">
-    <h1 itemprop="headline">Elasticsearch 6.0 se blíží</h1>
-    <h1>CHUJU sprety</h1>
-    <p>V říjnu mi přistála do mailu pozvánka na výlet do do Mnichova s firmou Elastic. Docela jsem se těšil, než jsem zjistil, že Octoberfest se navzdory jménu konal už v září. Sice to tedy bylo bez piva, ale aspoň si většinu představených novinek pamatuju.</p> <a name='more'></a> <p>Mimochodem, Elasticsearch verze 6.0 bude představen 6. prosince 2017 v 17.00 hodin. Pokud máte chuť, můžete celou událost <a href="https://www.elastic.co/live/v6?elektra=home&amp;storm=banner">sledovat online</a>.</p> <div class="separator" style="clear: both; text-align: center;"><a href="https://2.bp.blogspot.com/-jLqY9EBW7DY/Wh66FS2cO9I/AAAAAAAAA9E/wDo6XGfAqMApko3x2rbH9LJtyuqH2BV2wCPcBGAYYCw/s1600/mar-newhall-226045.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://2.bp.blogspot.com/-jLqY9EBW7DY/Wh66FS2cO9I/AAAAAAAAA9E/wDo6XGfAqMApko3x2rbH9LJtyuqH2BV2wCPcBGAYYCw/s400/mar-newhall-226045.jpg" width="400" height="267" data-original-width="1600" data-original-height="1067" /></a> </div> <p>Protože jsme Elasticsearch na blogu chvíli zanedbávali, vypíchnu tu pár novinek verze 6.0 (a někdy i 5.0).</p> <h2>Šifrování (5.x)</h2> <p>Pokud ukládáte do Elasticsearch citlivá data, existuje nepodporovaná (ale vyzkoušená) cesta, jak zašifrovat celý index na disku.</p> <p>Jestli se smíříte s cca 5% poklesem výkonnosti, můžete celý index zašifrovat pomocí standardního <a href="https://en.wikipedia.org/wiki/Dm-crypt">dm-cryptu</a>.</p> <h2>Painless (5.x)</h2> <p>Skriptování v Elasticsearch je sice mocná zbraň, ale také zdroj bezpečnostních problémů. V minulosti Elastic používal jako defaultní skriptovací jazyk Groovy, který se jim ovšem nikdy nepodařilo pořádně sandboxovat. </p> <p>Problém se spíše obcházel pomocí pojmenovaných skriptů definovaných v konfiguraci Elasticsearch a odkazovaných pouze jménem, což bylo dost nepraktické.</p> <p>Řešením je nový jazyk <a href="https://www.elastic.co/guide/en/elasticsearch/painless/master/painless-getting-started.html">Painless</a>, který je v podstatě totožný s Groovy, ale neobsahuje &quot;nebezpečné&quot; metody.</p> <h2>Elastic Cloud Enterprise (X-Pack)</h2> <p>Několik našich zákazníků provozuje víc Elasticsearch clusterů. Koneckonců, sám Elastic doporučuje monitoring umístit do samostatného clusteru - takže i pro základní použití jsou potřeba dva clustery.</p> <p>Spravovat pár takových clusterů může být klidně práce na plný úvazek. To by ale znamenalo, že provozovat <a href="https://www.elastic.co/cloud">vlastní cloudové řešení</a> bude práce na pár desítek úvazků? </p> <div class="separator" style="clear: both; text-align: center;"><img src="https://www.elastic.co/assets/bltf1e9537b10e91151/cluster-optimized.gif" width="600" alt="cluster management" /></div> <p>Ne. Celý Elastic Cloud spravuje 5 lidí. Proč? Protože mají vymakaný administrační nástroj, který je teď nově k dispozici i pro zákazníky Elasticu. </p> <p>Elastic Cloud Enterprise je vlastně virtualizační nástroj. Jednotlivé clustery a nody jsou vytvářeny a spouštěny podle potřeby, je možné jednoduše měnit jejich umístění, velikost a dokonce bezodstávkově updatovat cluster na novější verzi Elasticsearch.</p> <p>Samozřejmě je možné mít clustery s různou verzí Elasticsearch vedle sebe. </p> <h2>Machine learning (X-Pack)</h2> <p>Osobně považuji strojové učení za největší pecku v novém Elasticsearch a mrzí mě, že jsem ho ještě nestihl vyzkoušet.</p> <p>Je to totiž první &quot;strojové učení pro blbé&quot; - není třeba vytvářet žádné neuronové sítě, prostě přidáváte data do Elasticsearch a ten si průběžně vytváří model a dokáže upozornit na anomálie.</p> <div class="separator" style="clear: both; text-align: center;"><img src="https://www.elastic.co/assets/blt484d90d927bee30d/machine-learning-anomaly.jpg" width="600" alt="machine learning" /></div> <p>Strojovému učení v Elasticsearch se budu určitě ještě tady na blogu věnovat.</p> <h2>Predictions API (X-Pack, 6.2)</h2> <p>Když už máme strojové učení, další logický krok je predikce. K dispozici bude asi až ve verzi 6.2. </p> <h2>Performance monitoring (X-Pack, 6.X)</h2> <p>Elastic poslední dobou hojně nakupuje další firmy. Strojové učení je výsledkem akvizice, výsledkem <a href="https://opbeat.com/blog/posts/welcome-opbeat-to-the-elastic-family/">dalšího nákupu</a> je vstup na pole <a href="https://techcrunch.com/2017/06/22/elastic-enters-apm-space-with-opbeat-acquisition/">performance monitoringu</a>.</p> <div class="separator" style="clear: both; text-align: center;"><img src="https://opbeat.com/blog/posts/welcome-opbeat-to-the-elastic-family/opbeat-timeline-ui.png" width="600" alt="performance-monitoring" /></div> <p>Mrkněte na stránky firmy <a href="https://opbeat.com">opbeat</a>, kde si uděláte obrázek, co se chystá.</p>
-  </div>
+            <article itemtype="https://schema.org/TechArticle" itemscope class="article">
+    <div class="content-block typeset">
+        <h1 itemprop="name" class="article__headline alpha">Elasticsearch 6.0 se blíží</h1>
+
+        <p class="article__meta">
+            <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="article__author">
+                <span itemprop="name">Lukáš Marek</span>
+            </span>
+            <meta itemprop="datePublished" content="" />
+            <span class="article__pubdate">01.12.2017</span>
+            <meta itemprop="publisher"></meta>
+        </p>
+
+        
+
+        <div class="article__content-wrap">
+            <div class="article__content">
+                <p>V říjnu mi přistála do mailu pozvánka na výlet do do Mnichova s firmou
+Elastic. Docela jsem se těšil, než jsem zjistil, že Octoberfest se
+navzdory jménu konal už v září. Sice to tedy bylo bez piva, ale aspoň si
+většinu představených novinek pamatuju.</p>
+
+<p>Mimochodem, Elasticsearch verze 6.0 bude představen 6. prosince 2017 v
+17.00 hodin. Pokud máte chuť, můžete celou událost <a href="https://www.elastic.co/live/v6?elektra=home&amp;storm=banner">sledovat
+online</a>.</p>
+
+<p><a href="https://2.bp.blogspot.com/-jLqY9EBW7DY/Wh66FS2cO9I/AAAAAAAAA9E/wDo6XGfAqMApko3x2rbH9LJtyuqH2BV2wCPcBGAYYCw/s1600/mar-newhall-226045.jpg"><img src="https://2.bp.blogspot.com/-jLqY9EBW7DY/Wh66FS2cO9I/AAAAAAAAA9E/wDo6XGfAqMApko3x2rbH9LJtyuqH2BV2wCPcBGAYYCw/s400/mar-newhall-226045.jpg" alt="" /></a></p>
+
+<p>Protože jsme Elasticsearch na blogu chvíli zanedbávali, vypíchnu tu pár
+novinek verze 6.0 (a někdy i 5.0).</p>
+
+<h2 id="šifrování-5x">Šifrování (5.x)</h2>
+
+<p>Pokud ukládáte do Elasticsearch citlivá data, existuje nepodporovaná
+(ale vyzkoušená) cesta, jak zašifrovat celý index na disku.</p>
+
+<p>Jestli se smíříte s cca 5% poklesem výkonnosti, můžete celý index
+zašifrovat pomocí standardního
+<a href="https://en.wikipedia.org/wiki/Dm-crypt">dm-cryptu</a>.</p>
+
+<h2 id="painless-5x">Painless (5.x)</h2>
+
+<p>Skriptování v Elasticsearch je sice mocná zbraň, ale také zdroj
+bezpečnostních problémů. V minulosti Elastic používal jako defaultní
+skriptovací jazyk Groovy, který se jim ovšem nikdy nepodařilo pořádně
+sandboxovat.</p>
+
+<p>Problém se spíše obcházel pomocí pojmenovaných skriptů definovaných v
+konfiguraci Elasticsearch a odkazovaných pouze jménem, což bylo dost
+nepraktické.</p>
+
+<p>Řešením je nový jazyk
+<a href="https://www.elastic.co/guide/en/elasticsearch/painless/master/painless-getting-started.html">Painless</a>,
+který je v podstatě totožný s Groovy, ale neobsahuje “nebezpečné”
+metody.</p>
+
+<h2 id="elastic-cloud-enterprise-x-pack">Elastic Cloud Enterprise (X-Pack)</h2>
+
+<p>Několik našich zákazníků provozuje víc Elasticsearch clusterů.
+Koneckonců, sám Elastic doporučuje monitoring umístit do samostatného
+clusteru - takže i pro základní použití jsou potřeba dva clustery.</p>
+
+<p>Spravovat pár takových clusterů může být klidně práce na plný úvazek. To
+by ale znamenalo, že provozovat <a href="https://www.elastic.co/cloud">vlastní cloudové
+řešení</a> bude práce na pár desítek
+úvazků?</p>
+
+<p><img src="https://www.elastic.co/assets/bltf1e9537b10e91151/cluster-optimized.gif" alt="cluster
+management" /></p>
+
+<p>Ne. Celý Elastic Cloud spravuje 5 lidí. Proč? Protože mají vymakaný
+administrační nástroj, který je teď nově k dispozici i pro zákazníky
+Elasticu.</p>
+
+<p>Elastic Cloud Enterprise je vlastně virtualizační nástroj. Jednotlivé
+clustery a nody jsou vytvářeny a spouštěny podle potřeby, je možné
+jednoduše měnit jejich umístění, velikost a dokonce bezodstávkově
+updatovat cluster na novější verzi Elasticsearch.</p>
+
+<p>Samozřejmě je možné mít clustery s různou verzí Elasticsearch vedle
+sebe.</p>
+
+<h2 id="machine-learning-x-pack">Machine learning (X-Pack)</h2>
+
+<p>Osobně považuji strojové učení za největší pecku v novém Elasticsearch a
+mrzí mě, že jsem ho ještě nestihl vyzkoušet.</p>
+
+<p>Je to totiž první “strojové učení pro blbé” - není třeba vytvářet žádné
+neuronové sítě, prostě přidáváte data do Elasticsearch a ten si průběžně
+vytváří model a dokáže upozornit na anomálie.</p>
+
+<p><img src="https://www.elastic.co/assets/blt484d90d927bee30d/machine-learning-anomaly.jpg" alt="machine
+learning" /></p>
+
+<p>Strojovému učení v Elasticsearch se budu určitě ještě tady na blogu
+věnovat.</p>
+
+<h2 id="predictions-api-x-pack-62">Predictions API (X-Pack, 6.2)</h2>
+
+<p>Když už máme strojové učení, další logický krok je predikce. K dispozici
+bude asi až ve verzi 6.2.</p>
+
+<h2 id="performance-monitoring-x-pack-6x">Performance monitoring (X-Pack, 6.X)</h2>
+
+<p>Elastic poslední dobou hojně nakupuje další firmy. Strojové učení je
+výsledkem akvizice, výsledkem <a href="https://opbeat.com/blog/posts/welcome-opbeat-to-the-elastic-family/">dalšího
+nákupu</a>
+je vstup na pole <a href="https://techcrunch.com/2017/06/22/elastic-enters-apm-space-with-opbeat-acquisition/">performance
+monitoringu</a>.</p>
+
+<p><img src="https://opbeat.com/blog/posts/welcome-opbeat-to-the-elastic-family/opbeat-timeline-ui.png" alt="performance-monitoring" /></p>
+
+<p>Mrkněte na stránky firmy <a href="https://opbeat.com">opbeat</a>, kde si uděláte
+obrázek, co se chystá.</p>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="content-block">
+        <div class="article__misc">
+            <div class="article__sharebox">
+                <ul class="sharebox">
+    <li class="sharebox__item sharebox__item--twitter">
+        <a class="sharebox__item-body" href="https://twitter.com/intent/tweet?text=Elasticsearch 6.0 se blíží&url=https://fragaria.cz/blog/2017/12/01/elasticsearch-60-se-blizi/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter"><span>Share on Twitter</span></a>
+    </li>
+    <li class="sharebox__item sharebox__item--facebook">
+        <a class="sharebox__item-body" href="https://facebook.com/sharer.php?u=https://fragaria.cz/blog/2017/12/01/elasticsearch-60-se-blizi/" rel="nofollow" target="_blank" title="Share on Facebook"><span>Share on Facebook</span></a>
+    </li>
+    <li class="sharebox__item sharebox__item--gplus">
+        <a class="sharebox__item-body" href="https://plus.google.com/share?url=https://fragaria.cz/blog/2017/12/01/elasticsearch-60-se-blizi/" rel="nofollow" target="_blank" title="Share on Google+"><span>Share on Google+</span></a>
+    </li>
+</div>
+
+            </div>
+            <div class="article__tags">
+                
+            </div>
+        </div>
+    </div>
 </article>
 
         </div>

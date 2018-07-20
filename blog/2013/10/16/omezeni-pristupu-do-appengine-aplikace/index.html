@@ -10,7 +10,7 @@
     <title>Omezení přístupu do AppEngine aplikace | fragaria.cz</title>
     <meta name="author" content="Fragaria s.r.o." />
     <meta name="robots" content="index,follow" />
-    <meta name="description" content="Poměrně často narážíme na požadavek omezení přístupu uživatelů do aplikace na AppEngine.Modelový příklad: Zákazník si přeje omezit přístup do aplikace tak, aby do ní mohli pouze uživatelé z domény xxx.cz, yyy.cz a fragaria.cz.Google nabízí pouze omezení přístupu buď na libovolnou (ale pouze jednu) Google Apps doménu nebo na j...">
+    <meta name="description" content="Poměrně často narážíme na požadavek omezení přístupu uživatelů doaplikace na AppEngine.">
     <meta name="keywords" content="fragaria, software, vývoj software, webové aplikace, python, javascript, angular, elasticsearch, html, css, gaegoogle app engine" />
     <!-- Favicons -->
     
@@ -18,7 +18,7 @@
     <meta property="og:url"           content="https://fragaria.cz/website/blog/2013/10/16/omezeni-pristupu-do-appengine-aplikace/" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Omezení přístupu do AppEngine aplikace | fragaria.cz" />
-    <meta property="og:description"   content="Poměrně často narážíme na požadavek omezení přístupu uživatelů do aplikace na AppEngine.Modelový příklad: Zákazník si přeje omezit přístup do aplikace tak, aby do ní mohli pouze uživatelé z domény xxx.cz, yyy.cz a fragaria.cz.Google nabízí pouze omezení přístupu buď na libovolnou (ale pouze jednu) Google Apps doménu nebo na j..." />
+    <meta property="og:description"   content="Poměrně často narážíme na požadavek omezení přístupu uživatelů doaplikace na AppEngine." />
 
     
 
@@ -56,12 +56,79 @@
 </div>
 
 
-            <article itemtype="http://schema.org/BlogPosting" itemscope="">
-  <div class="content-block">
-    <h1 itemprop="headline">Omezení přístupu do AppEngine aplikace</h1>
-    <h1>CHUJU sprety</h1>
-    Poměrně často narážíme na požadavek omezení přístupu uživatelů do aplikace na AppEngine.<br /><br />Modelový příklad: Zákazník si přeje omezit přístup do aplikace tak, aby do ní mohli pouze uživatelé z domény <b>xxx.cz</b>, <b>yyy.cz</b> a <b>fragaria.cz</b>.<br /><br />Google nabízí pouze omezení přístupu buď na libovolnou (ale pouze jednu) Google Apps doménu nebo na jakéhokoliv uživatele z Google Apps domény bez omezení.<br /><br />První možnost tedy použít nemůžeme, druhou používáme k vynucení přihlášení uživatele – omezení na Google Apps domény je pro nás OK.<br /><br />Postup, který jsme používali dosud je podobný jako například v <a href="http://blog.abahgat.com/2013/01/07/user-authentication-with-webapp2-on-google-app-engine/">tomto článku</a>. Připravíme si anotaci <b>@user_required</b>, která zkontroluje uživatele a tu "nalepíme" na všechny metody příslušných HTTP handlerů. To ale znamená, že máme anotace rozeseté všude a je snadné jí někde zapomenout.<br /><br />Dneska <a href="https://plus.google.com/115351013889485284951">+Robin Gottfried</a> přišel s mnohem elegantnějším řešením.<br />Využívá metodu <b>__call__()</b> z webapp2, přes kterou procházejí všechny requesty v aplikaci a kontrolu dělá tam.<br /><br />Asi takhle:<br /><br /><script src="https://gist.github.com/krtek/6994910.js?file=__init__.py"></script> Samozřejmě je nutné místo standardní <b>WSGIApplication</b>&nbsp; použít vlastní podtřídu:<br /><br /><script src="https://gist.github.com/krtek/6994910.js?file=utils.py"></script>
-  </div>
+            <article itemtype="https://schema.org/TechArticle" itemscope class="article">
+    <div class="content-block typeset">
+        <h1 itemprop="name" class="article__headline alpha">Omezení přístupu do AppEngine aplikace</h1>
+
+        <p class="article__meta">
+            <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="article__author">
+                <span itemprop="name">Lukáš Marek</span>
+            </span>
+            <meta itemprop="datePublished" content="" />
+            <span class="article__pubdate">16.10.2013</span>
+            <meta itemprop="publisher"></meta>
+        </p>
+
+        
+
+        <div class="article__content-wrap">
+            <div class="article__content">
+                <p>Poměrně často narážíme na požadavek omezení přístupu uživatelů do
+aplikace na AppEngine.</p>
+
+<p>Modelový příklad: Zákazník si přeje omezit přístup do aplikace tak, aby
+do ní mohli pouze uživatelé z domény <strong>xxx.cz</strong>, <strong>yyy.cz</strong> a
+<strong>fragaria.cz</strong>.</p>
+
+<p>Google nabízí pouze omezení přístupu buď na libovolnou (ale pouze jednu)
+Google Apps doménu nebo na jakéhokoliv uživatele z Google Apps domény
+bez omezení.</p>
+
+<p>První možnost tedy použít nemůžeme, druhou používáme k vynucení
+přihlášení uživatele – omezení na Google Apps domény je pro nás OK.</p>
+
+<p>Postup, který jsme používali dosud je podobný jako například v <a href="http://blog.abahgat.com/2013/01/07/user-authentication-with-webapp2-on-google-app-engine/">tomto
+článku</a>.
+Připravíme si anotaci <strong>@user_required</strong>, která zkontroluje uživatele a
+tu “nalepíme” na všechny metody příslušných HTTP handlerů. To ale
+znamená, že máme anotace rozeseté všude a je snadné jí někde
+zapomenout.</p>
+
+<p>Dneska <a href="https://plus.google.com/115351013889485284951">+Robin Gottfried</a>
+přišel s mnohem elegantnějším řešením.
+Využívá metodu <strong>__call__()</strong> z webapp2, přes kterou procházejí
+všechny requesty v aplikaci a kontrolu dělá tam.</p>
+
+<p>Asi takhle:</p>
+
+<p>Samozřejmě je nutné místo standardní <strong>WSGIApplication</strong>  použít vlastní
+podtřídu:</p>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="content-block">
+        <div class="article__misc">
+            <div class="article__sharebox">
+                <ul class="sharebox">
+    <li class="sharebox__item sharebox__item--twitter">
+        <a class="sharebox__item-body" href="https://twitter.com/intent/tweet?text=Omezení přístupu do AppEngine aplikace&url=https://fragaria.cz/blog/2013/10/16/omezeni-pristupu-do-appengine-aplikace/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter"><span>Share on Twitter</span></a>
+    </li>
+    <li class="sharebox__item sharebox__item--facebook">
+        <a class="sharebox__item-body" href="https://facebook.com/sharer.php?u=https://fragaria.cz/blog/2013/10/16/omezeni-pristupu-do-appengine-aplikace/" rel="nofollow" target="_blank" title="Share on Facebook"><span>Share on Facebook</span></a>
+    </li>
+    <li class="sharebox__item sharebox__item--gplus">
+        <a class="sharebox__item-body" href="https://plus.google.com/share?url=https://fragaria.cz/blog/2013/10/16/omezeni-pristupu-do-appengine-aplikace/" rel="nofollow" target="_blank" title="Share on Google+"><span>Share on Google+</span></a>
+    </li>
+</div>
+
+            </div>
+            <div class="article__tags">
+                
+            </div>
+        </div>
+    </div>
 </article>
 
         </div>

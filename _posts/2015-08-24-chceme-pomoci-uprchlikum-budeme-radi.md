@@ -14,32 +14,31 @@ blogger_orig_url: http://blog.fragaria.cz/2015/08/chceme-pomoci-uprchlikum-budem
 Nechávám stranou otázku, zda problém s uprchlíky je uměle vytvořený,
 nebo je to klasické čecháčkovství (čti: strach o vlastní blaho), příp.
 zda to je problém, není to problém ... pravice, levice, Ovce či výzva
-vědce ...  
-  
+vědce ...
+
 Rozhodli jsme se nekecat a pomáhat. Budeme rádi, pokud se kdokoliv
 zapojí. Aktuálně/urgentně sháníme školní vybavení pro děti, které tady
-v září nastoupí do školy.  
-<span id="more"></span>  
+v září nastoupí do školy.
+
 Primárně se jedná o sbírku organizovanou [OPU](http://www.opu.cz/),
 která shání [školní vybavení pro 30 dětí
 z rodin](http://www.opu.cz/cz/article/409), které nedávno získali
 mezinárodní či doplňkovou ochranu či z rodin, které se nacházejí ve
-finanční tísni.  
-  
+finanční tísni.
+
 Pokud byste měli doma, nebo chtěli zakoupit školní vybavení (sešity,
 podložky, pravítka, tužky, penály, vodovky, školní tašky atd.), budeme
-rádi.  
-  
+rádi.
+
 Vybavení si od vás rádi převezmeme ve Fragarii (Ječná 6, Praha 2).
 Domluvit převzetí můžeme přes
 [e-mail](mailto:martin.burian@fragaria.cz). Školní potřeby můžete donést
-také rovnou do OPU (Kovářská 939/4, Praha 9).  
-  
+také rovnou do OPU (Kovářská 939/4, Praha 9).
+
 Díky moc a nebojte se, urpchlíkům pomáhá spousta lidí a firem, jen to
-nekřičí do světa.  
-  
-Přikládám i položkový seznam, tak jak jsme jej z OPU dostali:  
-  
+nekřičí do světa.
+
+Přikládám i položkový seznam, tak jak jsme jej z OPU dostali:
 
   - Sešity A5 (12 na osobu)
   - Sešity A4 (3 na osobu)

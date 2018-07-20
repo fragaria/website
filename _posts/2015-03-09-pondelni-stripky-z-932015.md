@@ -18,8 +18,6 @@ Stejně jako [minulý
 týden](http://blog.fragaria.cz/2015/03/pondelni-stripky.html) i dnes
 jsme si ukázali pár zajímavých věcí.
 
-<span id="more"></span>
-
 ### Charlie
 
 Za první tip děkujeme [@jirifabian](https://twitter.com/jirifabian) na

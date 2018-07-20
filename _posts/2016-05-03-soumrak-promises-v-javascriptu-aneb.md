@@ -15,21 +15,18 @@ blogger_orig_url: http://blog.fragaria.cz/2016/05/soumrak-promises-v-javascriptu
 ---
 
 Dnes si Hynek uzurpoval skoro dvacet minut, aby nám demonstroval jak
-nahradit promises *reaktivním programováním* v NodeJS.  
-<span id="more"></span>I Filip, který jinak rýpe do všeho, sledoval
+nahradit promises *reaktivním programováním* v NodeJS.
+I Filip, který jinak rýpe do všeho, sledoval
 výklad téměř bez dechu. Zkusím  tedy Hynkovu přednášku převyprávět i
-vám.  
-  
-  
-  
+vám.
+
 Callback metody, které komplikovaly Javascriptový kód už jsou dávno za
 zenitem. Najdete je možná v JQuery, ale NodeJS i AngularJS už dávno pro
 asynchronní volání používají
 [promises](https://en.wikipedia.org/wiki/Futures_and_promises). Pokud
 nevíte, na co promises jsou, tak vítám do 21. století a doporučuju třeba
 [tenhle
-článek](http://www.html5rocks.com/en/tutorials/es6/promises/).  
-  
+článek](http://www.html5rocks.com/en/tutorials/es6/promises/).
 
 |                                                                                                                                                                                                                                                |
 | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -42,39 +39,36 @@ mračna. Standard ES6 totiž obsahuje tzv.
 a klíčové slovo *yield*, což umožňuje použít [reaktivní
 programování.](https://en.wikipedia.org/wiki/Reactive_programming)
 Jeho použitím se dají zjednodušit některé use-cases a vyhnout se použití
-promises.  
-  
+promises.
+
 Hynek nám to vysvětlil na příkladu unit testu. Následující kus kódu by
-mohl být třeba ze systému na prodej bannerové reklamy:  
-  
+mohl být třeba ze systému na prodej bannerové reklamy:
 
 I když je kód super jednoduchý a dobře okomentovaný, stejně je tam těch
 promises **prostě moc**. Dá se v tom možná vyznat, ale je to spousta
-*boilerplate* kódu a čitelnost trpí.  
-  
+*boilerplate* kódu a čitelnost trpí.
+
 S použitím (zneužitím?) generátorů a
 [couroutine](http://bluebirdjs.com/docs/api/promise.coroutine.html) z
-knihovny Bluebird se dostaneme k mnohem čitelnějšímu kódu:  
-  
+knihovny Bluebird se dostaneme k mnohem čitelnějšímu kódu:
 
-  
 Jak to funguje? Všimněte si, že celý test je napsán jako [generátorová
 funkce](https://developer.mozilla.org/cs/docs/Web/JavaScript/Reference/Statements/function*)
 (to je to *function\**). A obalen voláním couroutine (to je to
-*co()*).  
-  
+*co()*).
+
 Tady je potřeba malou odbočku – jak fungují generátory? Generátor je ze
 strany konzumenta klasický iterátor. Na každé volání funkce *next()* se
 vrátí jedna hodnota. Ze strany producenta se používá klíčové slovo
 *yield*, což je takový malý *return*. Vrátí další hodnotu v pořadí a
-"uspí" provádění funkce, dokud není zavolán znovu *next()*.  
-  
+"uspí" provádění funkce, dokud není zavolán znovu *next()*.
+
 A právě tohle uspání je tady zneužito. Každé volání *next()/yield* vrátí
 jednu promise, na kterou se v obalovací funkci počká a pak se zavolá
-znovu *next()*. Zajímavé, co?  
-  
+znovu *next()*. Zajímavé, co?
+
 Samozřejmě, že promises umožňují i jiné hrátky, jako třeba
 *Promises.all()*, které generátory nahradit nedokáží. Ale pro popsaný
-příklad sekvenčního volání jde o elegantní náhradu.  
-  
+příklad sekvenčního volání jde o elegantní náhradu.
+
 Takže promises se zatím o své místo na slunci bát nemusí.

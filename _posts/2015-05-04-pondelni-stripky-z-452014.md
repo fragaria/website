@@ -18,8 +18,6 @@ blogger_orig_url: http://blog.fragaria.cz/2015/05/pondelni-stripky-z-452014.html
 Prodloužený víkend jsme ve valné většině prožili mimo dosah Wi-Fi
 signálu, takže dnes máme střípků opravdu jen pár.
 
-<span id="more"></span>
-
 ### Android tool for Mac
 
 První tip se bude hodit programátorům mobilních aplikací. Udělat z

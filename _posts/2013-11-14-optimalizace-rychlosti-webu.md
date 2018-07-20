@@ -12,7 +12,7 @@ blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-64902692581064473
 blogger_orig_url: http://blog.fragaria.cz/2013/11/optimalizace-rychlosti-webu.html
 ---
 
-  
+
 
 Na blogu Google vývojářů vyšel [zajímavý
 článek](http://googledevelopers.blogspot.cz/2013/11/speeding-up-mobile-pages-with.html)
@@ -20,14 +20,10 @@ o tom, jak lze velmi jednoduše a s minimálními náklady (i s minimální
 časovou náročností) výrazně zrychlit webové stránky z pohledu rychlosti
 načtení stránky pro uživatele i z pohledu zátěže na infrastrukturu.
 
-  
-
 Problematice optimalizace načítání webový stránek se ve Fragarii
 věnujeme dlouhodobě a velmi často dokážeme ohromit naše klienty tím,
 čeho lze dosáhnout i minimální úpravou několika řádků v nastavení
 webového serveru.
-
-  
 
 Naposledy jsme například změnou konfigurace webových serverů přední
 české banky dosáhli toho, že se o 30% snížil celkový objem přenášených
@@ -35,11 +31,7 @@ dat. Tato optimalizace byla velmi vítána zejména ve chvíli, kdy bylo
 uvažováno o dvojnásobném navýšení kapacity síťové
 konektivity.
 
-  
-
 [![](http://1.bp.blogspot.com/-qcAPoHZyeS0/UoTO1M2iy_I/AAAAAAAAAZM/uIGfBwb6_Tw/s640/Screen+Shot+2013-11-14+at+14.22.43.png)](http://1.bp.blogspot.com/-qcAPoHZyeS0/UoTO1M2iy_I/AAAAAAAAAZM/uIGfBwb6_Tw/s1600/Screen+Shot+2013-11-14+at+14.22.43.png)
-
-  
 
 Zajímalo by Vás, jak je možné optimalizovat rychlost načítání webu? Rádi
 připravíme analýzu na míru právě pro Váš projekt a přesvědčíme Vás o

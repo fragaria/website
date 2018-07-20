@@ -13,15 +13,12 @@ blogger_orig_url: http://blog.fragaria.cz/2017/09/fraga-akce-aneb-kluci-na-vylet
 ---
 
 Máme za sebou letošní Fraga akci. Jsem ve firmě nováček a tři dny s mými
-novými kolegy mi ukázaly kvality tohoto týmu:  
-<span id="more"></span>
-
-  
+novými kolegy mi ukázaly kvality tohoto týmu:
 
   - Umíme se i bavit a jsme vynalézaví. Umíme zpívat a hrát písničky, k
     čemu nám stačí ukulele, celofán, lžíce, kamení a
-    kelímek.  
-      
+    kelímek.
+    
     [![](https://1.bp.blogspot.com/-fGRrdiLDNaY/WcPMYBcxYGI/AAAAAAAAACA/6G1kDqZrBKYmY02bRB8N6w-kG6AaHijLwCLcBGAs/s320/20170907_231243.jpg)](https://1.bp.blogspot.com/-fGRrdiLDNaY/WcPMYBcxYGI/AAAAAAAAACA/6G1kDqZrBKYmY02bRB8N6w-kG6AaHijLwCLcBGAs/s1600/20170907_231243.jpg)
 
 <!-- end list -->
@@ -36,18 +33,18 @@ novými kolegy mi ukázaly kvality tohoto týmu:
     uvidíš až vyhraješ.”
   - Jsme soudržní, nedělíme se na víc než dvě skupiny.
   - Umíme najít kompromis: “Jděte pěšky, my jedeme busem. Sejdeme se na
-    ubikaci.”   
-      
+    ubikaci.” 
+    
     [![](https://4.bp.blogspot.com/-ccHsk0GwpcU/WcPMoY4PK8I/AAAAAAAAACE/nrmmSN3CliMC44tRRinGvyuY0fbc2afHQCLcBGAs/s320/R0004684.jpg)](https://4.bp.blogspot.com/-ccHsk0GwpcU/WcPMoY4PK8I/AAAAAAAAACE/nrmmSN3CliMC44tRRinGvyuY0fbc2afHQCLcBGAs/s1600/R0004684.jpg)
-      
+    
   - Umíme dobře argumentovat: “Nepůjdeme přeci po asfaltce, to je
     nuda\!”
   - Jsme tým a umíme si podat pomocnou ruku, např. abychom pomohli
     kolegovi překonat potok suchou nohou po větvi stojíc po kotníky ve
-    vodě.  
-      
+    vodě.
+    
     [![](https://3.bp.blogspot.com/-gxCucTECoug/WcPL5Z2HkOI/AAAAAAAAAB4/_wNRuDsmzp4XEnf4r5Yyc4N6i-cHgSmXACLcBGAs/s200/R0004703.jpg)](https://3.bp.blogspot.com/-gxCucTECoug/WcPL5Z2HkOI/AAAAAAAAAB4/_wNRuDsmzp4XEnf4r5Yyc4N6i-cHgSmXACLcBGAs/s1600/R0004703.jpg)
-      
+    
   - Máme pohotové reakce, dokážeme uskočit běžící srně z cesty.
   - Dokážeme si přiznat chybu: “To nejsou krávy, to jsou býci.
     Utíkejme\!” 
@@ -63,25 +60,19 @@ novými kolegy mi ukázaly kvality tohoto týmu:
     však dáma zahučí do bahna, tak ji pomůžou z něj ven a sami ho pak
     obejdou.
   - Jsme dobrými architekty, umíme naskládat dříví pro opravdu krásný
-    oheň.  
-      
+    oheň.
+    
     [![](https://3.bp.blogspot.com/-w4_3d1tv6Jc/WcPJezp0QZI/AAAAAAAAABs/06weQeJdfwsJgIaIadKeIRepGDevOARnACLcBGAs/s320/20170907_221520.jpg)](https://3.bp.blogspot.com/-w4_3d1tv6Jc/WcPJezp0QZI/AAAAAAAAABs/06weQeJdfwsJgIaIadKeIRepGDevOARnACLcBGAs/s1600/20170907_221520.jpg)
-      
+    
   -  Jsme hraví, baví nás bowling i logik.
-
-  
 
 Tohle všechno a ještě víc se odehrálo ve třech dnech od čtvrtku
 odpoledne, kdy jsem se vlakem vybrali do Českých Budějovic, do neděle
 oběda, kdy jsme se živí a zdraví vrátili zpátky do
-Prahy.   
-  
+Prahy. 
 
 [![](https://2.bp.blogspot.com/-GCU9XLgNaLg/WcTm308MbDI/AAAAAAAAACs/s72AA8X6oY84DwNDhrgrcrNGmo3uZ8K0gCLcBGAs/s320/R0004640.jpg)](https://2.bp.blogspot.com/-GCU9XLgNaLg/WcTm308MbDI/AAAAAAAAACs/s72AA8X6oY84DwNDhrgrcrNGmo3uZ8K0gCLcBGAs/s1600/R0004640.jpg)
 
-  
-
-  
 Ano, zdraví. Tento rok se akce obešla bez zranění. Bodnutí včelou
 nebudeme specifikovat jako zranění, ani když se jedná o bodnutí v dutině
 ústní.
@@ -97,8 +88,7 @@ V pátek jsme se vybrali na vycházku malebnou krajinou kolem rybníků do
 sousední obce. Byl čas oběda, tak jsme hledali místo, kde bychom se
 mohli najíst a doplnit těkutiny. Potěšil nás hospodský, který nám
 natočil pivo a naservíroval utopence tři hodiny před vlastní
-otvíračkou.  
-  
+otvíračkou.
 
 [![](https://1.bp.blogspot.com/-w1sf3ZiRog4/WcPP05h6PbI/AAAAAAAAACY/__5xtbTZthI4LpQulTNuOU9ujLchjQ5tACLcBGAs/s320/R0004660.jpg)](https://1.bp.blogspot.com/-w1sf3ZiRog4/WcPP05h6PbI/AAAAAAAAACY/__5xtbTZthI4LpQulTNuOU9ujLchjQ5tACLcBGAs/s1600/R0004660.jpg)
 
@@ -108,8 +98,7 @@ autobusem do města. V přírodě jsme narazili na překážky, které ukázaly
 soudržnost týmu a ochotu pomoci kolegovi. A taky jsme se přesvědčili, že
 za divokou přírodou nemusíme na safari. Kluci ve městě se vydali hledat
 adrenalin na sídliště Máj. Svoji misi si zpříjemnili plněním svých
-přání.   
-  
+přání. 
 
 [![](https://2.bp.blogspot.com/-5H2-GW0SrDQ/WcPQMkFpw0I/AAAAAAAAACc/rwMQ_mjrbFYL6BXeoXMOC_7QMbqNIsLnQCLcBGAs/s320/IMG_20170908_173432_HDR.jpg)](https://2.bp.blogspot.com/-5H2-GW0SrDQ/WcPQMkFpw0I/AAAAAAAAACc/rwMQ_mjrbFYL6BXeoXMOC_7QMbqNIsLnQCLcBGAs/s1600/IMG_20170908_173432_HDR.jpg)
 
@@ -117,7 +106,7 @@ V sobotu jsme se vydali do nedaleké Hluboké. Pěší cestu opět vystihuje
 motto “Cesta je cíl”, i třetí den po sobě jsme si pořád měli o čem
 povídat. U ZOO jsme si dali obídek a oslavili Robinovo narozeniny. Na
 námestí jsme si v pivovaru u pivka procvičili mozkové buňky Logikem a
-Scrabblem.   
+Scrabblem. 
 
 [![](https://1.bp.blogspot.com/-EKIgpLjUtkM/WcPPrbRtyOI/AAAAAAAAACU/zbikcFgvD64DlgaSLpiAfKfd3F0jJTKPQCLcBGAs/s320/R0004775.jpg)](https://1.bp.blogspot.com/-EKIgpLjUtkM/WcPPrbRtyOI/AAAAAAAAACU/zbikcFgvD64DlgaSLpiAfKfd3F0jJTKPQCLcBGAs/s1600/R0004775.jpg)
 

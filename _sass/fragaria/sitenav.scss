@@ -113,7 +113,7 @@ a.sitenav__menu-toggle-link {
 
 /* if menu is shown, it covers whole screen  with background fill */
 .sitenav-wrapper--show {
-    @media (max-width: deviceBreakpointWidth(tablet) - 1) {
+    @media (max-width: deviceBreakpointWidth(tablet) - 0.00001rem) {
         position: fixed;
         width: 100%;
         height: 100%;
@@ -135,6 +135,7 @@ a.sitenav__menu-toggle-link {
             justify-content: space-between;
             align-items: center;
             flex-direction: row;
+            flex-wrap: wrap;
             padding: 6rem 3rem 5rem;
 
             @media (min-height: 360px) {
@@ -144,6 +145,8 @@ a.sitenav__menu-toggle-link {
 
         .sitenav__linkset-item {
             margin-right: 0 !important;
+            padding-left: .5em;
+            padding-right: .5em;
 
             @include sassline(gamma, $bodytype, 2, 2, all);
 

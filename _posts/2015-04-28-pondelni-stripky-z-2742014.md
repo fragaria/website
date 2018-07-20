@@ -18,8 +18,6 @@ výrazy.
 
 A my jsme v tom vyjímečně nevinně.
 
-<span id="more"></span>
-
 ### Let’s encrypt
 
 Čas od času vás upozorňujeme na projekty, které ještě nejsou spuštené,

@@ -18,8 +18,6 @@ blogger_orig_url: http://blog.fragaria.cz/2017/01/pondelni-stripky-z-1612017.htm
 
 Dnešní střípky jsou samá bezpečnostní chyba.
 
-<span id="more"></span>
-
 ### Uber otevírá data
 
 Uber oznámil, že se chystá [otevřít

@@ -14,8 +14,8 @@ Ve Fragarii se snažíme pomáhat neziskovému sektoru. Budou to již dva
 roky, co jsme si řekli, že bychom z našeho zisku mohli finančně podpořit
 nějakou obecně prospěšnou organizaci. Vytipovali jsme [Semiramis
 o.s.](http://os-semiramis.cz/) a vypravili se za nimi s darem 30k v
-označených bankovkách.  
-  
+označených bankovkách.
+
 Po krátkém sezení v parku na Kampě jsme zjistili, že Semiramis by
 upřednostnil, kdybychom mu jako ajtíci pomohli vyvinout softwarový
 nástroj, který by jim usnadnil práci, neboť stávající řešení, která
@@ -24,9 +24,7 @@ problematikou (ano sběr stříkaček a práce s drogově závislými) k
 dispozici, není úplně ideální. Slovo dalo slovo, každý kdo měl chuť a
 čas přidal ruku k dílu a přibližně od října 2012 začal Borise používat
 [Semiramis o.s.](http://os-semiramis.cz/) a brzy rovněž i [Laxus,
-o.s.](http://www.laxus.cz/)  
-
-  
+o.s.](http://www.laxus.cz/)
 
 ### [BorIS](http://www.bor-is.cz/) je:
 
@@ -37,8 +35,6 @@ o.s.](http://www.laxus.cz/)
     řešení, jehož licence je zdarma;
   - projekt, který chceme dále rozvíjet a šířit po celé republice i za
     její hranice (bodka .sk).
-
-  
 
 ### Jaké používáme nástroje:
 
@@ -55,8 +51,6 @@ o.s.](http://www.laxus.cz/)
   - “social”: radost z dobré věci, lidský přístup, spokojený vývojář i
     uživatel :-).
 
-  
-
 ### Jsme rádi za každou pomoc:
 
   - napište nám jakékoliv náměty na další rozvoj či jen připomínky;
@@ -64,12 +58,8 @@ o.s.](http://www.laxus.cz/)
   - pomozte nám projekt financovat, pouze z nadšení nedokážeme
     realizovat úplně vše, co bychom chtěli.
 
-  
-
 Pokud projekt kohokoliv zajímá, ozvěte se v diskuzi pod článkem nebo
 koukněte přímo na stránky [BorISe](http://www.bor-is.cz/).
-
-  
 
 ### ...a ještě jedna aktuální informace:
 
@@ -79,8 +69,6 @@ seznámili přítomné s Borisem. Teď nepřijde nic jiného, než klasické
 “zájem o Borise předčil naše očekávání” … tak nepředčil, protože naše
 očekávání bylo opravdu veliké. V každém případě nás velmi těší, že je o
 systém tak velký zájem (dokonce i z Úřádu vlády ČR).
-
-  
 
 Na závěr díky všem, kteří projektu pomohli či pomáhají, byť je v něčích
 silách “jen” někoho slovem pochválit nebo otevřít pivo vývojáři, který

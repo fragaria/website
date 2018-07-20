@@ -22,17 +22,9 @@ it. And from now on, so are we\! It turns out, it's just another young
 technology that we can
 handle.
 
-<span id="more"></span>  
-
 [![](https://3.bp.blogspot.com/-HYB0yHh56hA/WpPIiCzFmoI/AAAAAAAAAnQ/6EJRSOyZEkYJV13r8rMM09GmFutP9-QGACLcBGAs/s640/DSC_0054.JPG)](https://3.bp.blogspot.com/-HYB0yHh56hA/WpPIiCzFmoI/AAAAAAAAAnQ/6EJRSOyZEkYJV13r8rMM09GmFutP9-QGACLcBGAs/s1600/DSC_0054.JPG)
 
-  
-
-  
-
 ## Not that hard
-
-  
 
 The thing is, that blockchain itself is basically just a distributed
 ledger that holds an undeniable and unchangeable history of
@@ -42,8 +34,6 @@ things on top of it. Take for example
 called [smart contracts](https://en.wikipedia.org/wiki/Smart_contract) -
 an executable Turing-complete code that runs on top of the distributed
 network. And that's where the fun begins.
-
-  
 
 By using a programming language called
 [Solidity](https://solidity.readthedocs.io/en/v0.4.21/), you can create
@@ -81,42 +71,35 @@ yes, some of them might take a lot of time to get solved, but in the
 meantime, we can use what we have or figure out some workaround with
 other tools and services.
 
-  
-
 ## Endgame? Web 3 and Dapps
 
-  
 The grand vision that motivates people to solve all of the undeniable
 problems the concept has, is called Web 3, for some reason. A fully
 distributed and open network of nodes serving everything necessary for a
 distributed application (called Dapp for short). Be it an application
-code itself or its data. Pretty ambitious, right?  
-  
+code itself or its data. Pretty ambitious, right?
 
 And the solution is based on - wait for it - Javascript. What? How? A
 picture is worth a thousand words, they
-say:  
-  
+say:
 
 [![](https://2.bp.blogspot.com/-FJYjncoZO1c/WrTKLsRsOKI/AAAAAAAAAn4/aprELKsTqQIyfiMn0BvaUhATzxR4xp-aACLcBGAs/s640/contracts-abi-web3.png)](https://2.bp.blogspot.com/-FJYjncoZO1c/WrTKLsRsOKI/AAAAAAAAAn4/aprELKsTqQIyfiMn0BvaUhATzxR4xp-aACLcBGAs/s1600/contracts-abi-web3.png)
-
-  
 
 During smart contract compilation and deployment to the blockchain, an
 ABI (Application Binary Interface) is produced. And that is nothing else
 than a JSON object with method signatures. You can use these signatures
 to produce bytecode that can be executed over the
 [JSON-RPC](https://en.wikipedia.org/wiki/JSON-RPC) protocol directly on
-any of the network's nodes.  
-  
+any of the network's nodes.
+
 That's why [web3.js](https://github.com/ethereum/web3.js/) (and others
 such as [ethers.js](https://github.com/ethers-io/ethers.js/)) was born.
 It is a library that contains everything you need to interact with an
 Ethereum node from the world of Javascript. And since you can build
 client-facing applications with Javascript (using Angular, React, vue.js
 or anything else you know), you can build the whole Dapp with
-Javascript.  
-  
+Javascript.
+
 So the idea is to serve application code from a distributed environment
 like [IPFS](https://ipfs.io/) or
 [Swarm](https://ethereum.stackexchange.com/questions/375/what-is-swarm-and-what-is-it-used-for)
@@ -124,12 +107,9 @@ and use blockchain for all client to client interactions, such as
 payments or anything else that needs to be tracked. Of course, you are
 not limited to Javascript, you can use whatever speaks JSON-RPC. But the
 beauty of this solution is that almost every device has a browser that
-can interpret Javascript. And therefore, run your Dapp.  
-  
+can interpret Javascript. And therefore, run your Dapp.
 
 ## Entering the real world
-
-  
 
 Apparently, in spite of every problem the technology stack currently
 has, it attracts many investors and even big, traditional companies,
@@ -138,8 +118,6 @@ such as
 [J. P. Morgan](https://www.jpmorgan.com/global/blockchain) or
 [Walmart](https://cointelegraph.com/news/walmart-to-implement-blockchain-based-delivery-system).
 So there might be some future here.
-
-  
 
 That's why we started to work with [Winding
 Tree](https://windingtree.com/) on their product that will try to change
@@ -150,18 +128,13 @@ their inventory and accept bookings directly. And it should even
 simplify the growth of the middlemen themselves by providing a
 well-structured data of every member of the platform.
 
-  
-
 ## This cannot work
 
-  
 Well, we think it can and will. The idea might seem farfetched and there
 are a lot of issues along the way, such as the very small throughput of
 any blockchain. But there are very smart people already working on these
 problems and in the near future, we might actually book hotels and
 flights over a decentralized and open network.
-
-  
 
 Do you like this idea, do you have any questions? Come join us on
 [GitHub](https://github.com/windingtree),

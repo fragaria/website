@@ -18,14 +18,9 @@ systémem Android nastavit budík na šestou ráno, ale nahlédnou trochu pod
 pokličku mechanizmu, který se postará o spuštění libovolné akce někdy v
 budoucnosti. A jak už to tak na Androidu bývá, nejedná se o mechanizmus
 jeden, ale hned
-několik.  
-  
-<span id="more"></span>
+několik.
 
 [![](https://4.bp.blogspot.com/-vEW67W0Rf4Q/WEp92ed7nDI/AAAAAAAAArk/u2A0ZCXRMDUsHkkxmKkcQc0ai33JqlzRgCLcB/s320/numbers-time-watch-white.jpg)](https://4.bp.blogspot.com/-vEW67W0Rf4Q/WEp92ed7nDI/AAAAAAAAArk/u2A0ZCXRMDUsHkkxmKkcQc0ai33JqlzRgCLcB/s1600/numbers-time-watch-white.jpg)
-
-  
-  
 
 ### K čemu alarmy?
 
@@ -34,22 +29,21 @@ rozeznít uživatelův budík? Rádi byste pravidelně synchronizovali data
 mezi apkou a serverem a popřípadě uživatele upozornili notifikací, že se
 objevily nějaké novinky, které stojí za to si prohlédnut? Něco vám
 našeptává že držet kvůli tomu při životě celou aplikaci není to pravé?
-V tom případě je alarm nebo chce-li job, přesně to co potřebujete.  
-  
+V tom případě je alarm nebo chce-li job, přesně to co potřebujete.
+
 Jedná se totiž o způsob, jak systému Android sdělit, že má za uvedený
 časový interval nastartovat vaší aplikaci a nechat ji provést nějakou
 akci. Vzbudit jak? No samozřejmě pomocí dobře známého **Intentu**
 jakožto standardního prostředku meziaplikační komunikace. Zdá se to být
 jednoduché až primitivní, ale přece jenom za tím nějaké to tajemství
-je.  
-  
+je.
 
 ### Baterie především
 
 Ždímat baterii je většinou to poslední co uživatel od aplikace očekává a
 proto by měla být četnost alarmů co nejmenší. Tedy samozřejmě tak malá,
-aby vaše aplikace stále dávala smysl.  
-  
+aby vaše aplikace stále dávala smysl.
+
 Představte si aplikaci která má za úkol varovat vás například před
 zvýšenou koncentrací škodlivin a smogu ve vašem okolí. Logické asi
 bude pravidelně posílat serveru vaší lokaci (pokud se mění) a jako
@@ -57,19 +51,16 @@ odpověd dostávat informaci zda v ní byly překročeny limity či nikoliv.
 Je třeba správně vybalancovat nastavenou periodu dotazování na server
 tak, aby k dotazům nedocházelo příliš často, ale zároveň aby uživatel
 nestihl strávit odpoledne v Bohumíně aniž by se dozvěděl, že riskuje
-zdraví.  
-  
+zdraví.
+
 Jako doplněk ke správnému načasováni však existuje ještě jedna technika
 jak nějaké ty miliampérhodiny ušetřit.
-
-  
-  
 
 ### Nepřesné alarmy
 
 Ano vážně, pokud nebudete trvat na spuštění v přesně definovaný čas,
-pomůžete tím Androidu ušetřit nemalou část baterie.  
-  
+pomůžete tím Androidu ušetřit nemalou část baterie.
+
 Android totiž, když zrovna nemá nic na práci, usne. V tomto stavu má
 nejmenší odběr a baterii tím šetří. Každý alarm ho však vzbudí a donutí
 provést rozličné rutiny jako například inicializovat spojení do
@@ -77,25 +68,19 @@ internetu. Vaše aplikace však v systému není sama a takto ho budí
 aplikací hned několik. Pokud však při nastavování alarmu řeknete, že jej
 chcete provést například za 10 minut plus mínus jedna minuta, umožníte
 tím systému seskupit alarmy různých aplikací a provést tak více
-činností v rámci jednoho probuzení.  
-  
+činností v rámci jednoho probuzení.
+
 Tato optimalizace má na životnost baterie nemalý vliv. Navíc dochází k
 randomizaci jednotlivých volání což jistě ocení i váš server.
-
-  
-  
 
 ### Alarmující mechanismy
 
 Jak již bylo uvedeno na začátku k nastavování alarmů lze využít hned
-několik mechanismů. Jedná se o:  
+několik mechanismů. Jedná se o:
 
   - Alarm Manager 
   - Firebase Job Dispatcher 
   - Job Scheduler 
-
-  
-  
 
 ### Alarm Manager
 
@@ -106,17 +91,12 @@ nepodporuje “Nepřesné alarmy” a je tedy nejméně efektivní metodou. Jeho
 API je dosti obecné a neposkytuje takový komfort jako následující dva
 bratříčci.
 
-  
-  
-
 ### Job Scheduler
 
 Naproti tomu Job Scheduler je nejmodernější způsob jak tuto problematiku
 řešit. API je čisté a intuitivní, jeho použití je efektivní. Nevýhodou
 je, že byl zařazen do standardního SDK až od verze 21+ a není tedy
 příliš použitelný pro aplikace vyžadující zpětnou kompatibilitu.
-
-  
 
 ### Firebase Job Dispatcher
 
@@ -125,19 +105,13 @@ podobné API jako výše uvedený Job Scheduler, který také pro verze 21+
 interně používá. Pro verze \< 21 interně využívá mechanismus GCM (GCM
 Task service) a vyžaduje tedy závislost na balíku Play Services. Tato
 závislost může být nevýhodou neboť na některých zařízeních nemusí být k
-dispozici.  
-
-  
-  
+dispozici.
 
 |                         | Kompatibilita | Efektivita | Play services |
 | ----------------------- | ------------- | ---------- | ------------- |
 | Alarm Manager           | 1+            | nízká      | nevyžaduje    |
 | Job Scheduler           | 21+           | vysoká     | nevyžaduje    |
 | Firebase Job Dispatcher | 9+            | vysoká     | vyžaduje      |
-
-  
-  
 
 ### Trocha praxe
 
@@ -147,27 +121,15 @@ pravidelně (co 10 minut) kontrolovat náš server. Zvolenou technologií je
 kompromisem. Pro absolutní kompatibilitu by bylo třeba příklad ještě
 doplnit o neefektivní mechanizmus založený na Alarm Manageru.
 
-  
+Nejprve přidáme gradle závislost:
 
-Nejprve přidáme gradle závislost:  
-  
+Vytvoříme vlastní službu:
 
-  
+Kterou zaregistrujeme do manifest.xml:
 
-Vytvoříme vlastní službu:  
-  
+A nyní už to jen celé spustit:
 
-Kterou zaregistrujeme do manifest.xml:  
-  
-
-A nyní už to jen celé spustit:  
-  
-
-A pokud bychom to chtěli vypnout:  
-  
-
-  
-  
+A pokud bychom to chtěli vypnout:
 
 ### Závěrem
 

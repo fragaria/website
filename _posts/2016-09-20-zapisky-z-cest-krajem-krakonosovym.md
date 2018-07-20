@@ -19,14 +19,13 @@ zasedání zvané Fraga-akce, tentokrát na [chalupu
 Maršovku](http://www.marsovka.cz/) ukrytou v malebném Horním Maršově v
 Krkonoších. Podle všech zkušeností a očekávání se mělo jednat o
 intenzivní a nabitou akci plnou sportovních, turistických, kulinářských,
-kulturních i jiných zážitků.  
-<span id="more"></span>  
+kulturních i jiných zážitků.
+
 Jelikož nám počasí přálo, sešli jsme se ve čtvrtek po poledni u autobusu
 příjemně natěšení a po krátkém rozehřátí jsme v autobusu zaujali pozice
 na legendární zadní pětce a v jejím blízkém okolí vybaveni denním
 tiskem, pitným režimem a domácím
-moučníkem.  
-  
+moučníkem.
 
 |                                                                                                                                                                                                                                                                              |
 | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -38,18 +37,16 @@ Měli jsme zájem se ihned seznamovat s našimi spolucestujícími, ale
 načasování technologické pauzy. Nakonec jsme zařadili dvě, obě proběhly
 bez ztráty kytičky a i přes to, že se nás pan řidič snažil za jízdy
 vysypat otevřenými zadními dveřmi ven, jsme s drobným zpožděním po 16.
-hodině úspěšně dorazili na útulnou ubikaci.  
-  
+hodině úspěšně dorazili na útulnou ubikaci.
+
 Okamžitě jsme se vydali prozkoumávat terén, našli jsme masnu, sýrárnu,
 koloniál i několik zajímavě vypadajících osvěžoven. V jedné z nich jsme
 u brzké večeře čekali na opozdilce na rychlých jednostopých bestiích a
 naplánovali večerní zábavné pásmo sestávající se z bojové výpravy do
-lesa a poslechu šlágrů rozličného stáří, žánrů i kvality...  
-  
+lesa a poslechu šlágrů rozličného stáří, žánrů i kvality...
 
 ## Poznáváme hřebeny
 
-  
 Na druhý den nás čekala ta nejvyšší turistická atrakce v České
 republice, totiž pivovar na Luční boudě vařící pivo Paroháč. Po
 adrenalinové vsuvce na bobové dráze v Peci jsme úspěšně překonali i
@@ -61,15 +58,13 @@ Ti největší turisté se ještě zastavili v architektonickém pekle hotelu
 Horizont a pak už jsme skoro nočním autobusem zamířili zpátky na
 základnu, pěkně k hořícímu krbu, na degustaci sýrů a sympaticky orosené
 pivko ze
-džbánku.  
-  
+džbánku.
 
 |                                                                                                                                                                                                                                                                              |
 | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | [![](https://4.bp.blogspot.com/-VVOqJLhefA8/V-Dj6hBE6fI/AAAAAAAAAJg/XNG4iG17ALc5gDCEh8tf76Kli5JewxVWwCLcB/s400/IMG_20160916_192155.jpg)](https://4.bp.blogspot.com/-VVOqJLhefA8/V-Dj6hBE6fI/AAAAAAAAAJg/XNG4iG17ALc5gDCEh8tf76Kli5JewxVWwCLcB/s1600/IMG_20160916_192155.jpg) |
 |                                                                                                            Nadčasový zábavní sál v Horizontu včetně pana pouštěče                                                                                                            |
 
-  
 V sobotu byl program otevřený a po vykulení z pelíšků jsme celé ráno a
 dopoledne vyhlíželi déšť. Odvážnější a odolnější členové vyrazili
 prozkoumat nedaleké jeskyně a světě div se, nezmokli. Pojali jsme tedy
@@ -82,23 +77,19 @@ začalo pršet. Na hřebenech se tak rozpoutala věru módní přehlídka bund,
 pláštěnek a jiného ochranného vybavení. Naštěstí nás nečekala štreka
 nijak daleká, ale i tak jsme na autobusovou zastávku dorazili slušně
 zavlhlí a
-prokřehlí.  
-  
-
-  
+prokřehlí.
 
 |                                                                                                                                                                                                                                                        |
 | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | [![](https://1.bp.blogspot.com/-PPvT6_zU7JQ/V-Dl0c7nwlI/AAAAAAAAAJs/PN_t_k7Y2vYmhiN4u_s-9D8ATkI08sPywCLcB/s400/DSC_0041.JPG)](https://1.bp.blogspot.com/-PPvT6_zU7JQ/V-Dl0c7nwlI/AAAAAAAAAJs/PN_t_k7Y2vYmhiN4u_s-9D8ATkI08sPywCLcB/s1600/DSC_0041.JPG) |
 |                                                                                                Výhled jako z propagačního materiálu výrobce mlhostrojů                                                                                                 |
 
-  
 Po rychlém přesunu a osušení jsme tak znovu rozdělali oheň a někteří
 vyrazili na lekce ve hře v šipky od místního přeborníka a výčepáka v
 Hostinci Pod Starou horou, pana Milana. Zbytek mezitím připravil
 kulturní program a drobné občerstvení, jehož hlavním tahákem byly
-grilované hermelíny.  
-  
+grilované hermelíny.
+
 V neděli už nás čekal jen drobný úklid a hurá zase zpátky do Prahy.
 Všichni jsme se vrátili vcelku, škody na majetku jsme taky žádné
 nezanechali, skoro to vypadá že dostáváme rozum\! No, to teda uvidíme

@@ -19,8 +19,6 @@ blogger_orig_url: http://blog.fragaria.cz/2015/04/pondelni-stripky-z-1342015.htm
 Ahoj, vítáme vás u dalších *Pondělních střípků*. Tentokrát se podíváme i
 na hardware.
 
-<span id="more"></span>
-
 [View image](http://www.gettyimages.com/detail/85795845) |
 [gettyimages.com](http://www.gettyimages.com)
 

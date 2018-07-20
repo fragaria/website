@@ -18,8 +18,6 @@ Dobré odpoledne, pokud právě svačíte. Uplynuly tři týdny, než jsem se
 odvážil opět [převzít žezlo po
 Martinovi](http://blog.fragaria.cz/2015/06/pondelni-stripky-z-162015.html).
 
-<span id="more"></span>
-
 Zkusím to tedy opět trochu na vážnější notu..
 
 ## Facebook Infer

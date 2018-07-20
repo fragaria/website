@@ -18,8 +18,6 @@ především v prostředí Pythonu, kde jsem byl zvyklý používat
 [pdb](https://docs.python.org/3/library/pdb.html). Jaké jsou alternativy
 pro Node.js?
 
-<span id="more"></span>
-
 ### Výpis do konzole
 
 Základní způsob ladění, totiž výpis do konzole, lze s úspěchem použít

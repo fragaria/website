@@ -34,7 +34,28 @@ $button-variants: (
     )
 );
 
+// Sharebox
+
+$sharebox-variants: (
+    facebook: (
+        foreground: #fff,
+        background:#3b5998,
+        icon: $icon--facebook,
+    ),
+    twitter: (
+        foreground: #fff,
+        background: #1da1f2,
+        icon: $icon--twitter,
+    ),
+    gplus: (
+        foreground: #fff,
+        background: #dd4b39,
+        icon: $icon--gplus,
+    ),
+);
+
 // Fonts
+
 
 // Sassline settings
 // https://sassline.com/

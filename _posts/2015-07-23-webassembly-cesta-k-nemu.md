@@ -20,8 +20,6 @@ měl v budoucnu koexistovat v prohlížečích vedle JavaScriptu. Pokud
 projekt nevyzní do ztracena (a zdá se, že má všechny předpoklady pro to,
 aby se to nestalo), jedná se zřejmě o poměrně velkou novinku.
 
-<span id="more"></span>
-
 Tato novinka ovšem nepřichází jako blesk z čistého nebe, předcházela jí
 víceletá snaha různých stran o to, aby prohlížeče podporovaly i jiné
 jazyky než JavaScript - ať už nativně (vzpomeňme třeba ve své době velké

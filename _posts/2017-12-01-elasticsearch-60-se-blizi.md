@@ -18,8 +18,6 @@ Elastic. Docela jsem se těšil, než jsem zjistil, že Octoberfest se
 navzdory jménu konal už v září. Sice to tedy bylo bez piva, ale aspoň si
 většinu představených novinek pamatuju.
 
-<span id="more"></span>
-
 Mimochodem, Elasticsearch verze 6.0 bude představen 6. prosince 2017 v
 17.00 hodin. Pokud máte chuť, můžete celou událost [sledovat
 online](https://www.elastic.co/live/v6?elektra=home&storm=banner).

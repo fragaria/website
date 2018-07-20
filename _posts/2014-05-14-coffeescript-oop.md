@@ -16,19 +16,16 @@ blogger_orig_url: http://blog.fragaria.cz/2014/05/coffeescript-oop.html
 Dlouho jsem nemohl přijít CoffeeScriptu na chuť. Přišlo mi, že za málo
 muziky nabízí hodně potíží. Co mě nakonec přesvědčilo, byla schopnost,
 po které jsem v JavaScriptu přímo prahnul: **Psát skutečné třídy a
-objekty**.  
-<span id="more"></span>  
+objekty**.
+
 Když jsem se nadšeně bavil s kolegy, že už jsem taky kafař, že to je
 fakt hustý kafe a že teď už konečně píšu „objektivně”, zjistil jsem, že
 tuhle - za mě - nejdůležitější vychytávku, většina kafařů v okolí zatím
-vůbec nezkusila.  
-  
+vůbec nezkusila.
 
 ### První třída v CoffeScriptu
 
-Nejjednodušší třída vypadá takto:  
-
-  
+Nejjednodušší třída vypadá takto:
 
 toString: () -\> ... vytvoří metodu Person.prototype.toString.
 
@@ -40,14 +37,10 @@ toString: () -\> ... vytvoří metodu Person.prototype.toString.
   -  (@name) -\> ... zavináč v argumentu funkce zajistí automatické
     uložení do this.name před zavoláním metody.
 
-  
-
 ### Statické metody / properties
 
 Ke třídám patří statické metody. Jako vše kolem kafe-objektů i statické
-vlastnosti se zapisují pomocí zavináče  
-
-  
+vlastnosti se zapisují pomocí zavináče
 
   - @ před názvem metody - vytvoří metodu jako statickou (jako metodu
     třídy)
@@ -60,13 +53,9 @@ vlastnosti se zapisují pomocí zavináče
     naši metodu můžeme z instance zavolat jako
     @constructor.fromNames(...).
 
-  
-
 ### Dědění
 
-Vlastně největší výhodou tříd v CoffeeScriptu je přehledné dědění:  
-
-  
+Vlastně největší výhodou tříd v CoffeeScriptu je přehledné dědění:
 
 extends - je samozřejmé klíčové slovo CoffeeScriptu
 
@@ -81,28 +70,24 @@ super - trochu nesystematicky
   - se závorkami nebo s argumenty zavolá metodu předka pouze s těmito
     argumenty
 
-  
-
 ### Vázané metody
 
 Kdo programuje v Java/CoffeeScriptu, setkal se určitě s problémem
-vázaných metod. Jednoduchý příklad:  
+vázaných metod. Jednoduchý příklad:
 
 JavaScript u metod neuchová informaci, ke kterému objektu patří, takže
 při jejich volání bez plně kvalifikovaného jména přijde metoda o
-referenci na this.  
+referenci na this.
 To je u asynchronního jazyka, kde každý program je plný callbacků,
 veliká otrava. Samozřejmě to lze různě obejít a obchází se to (pomocí
 function.bind či self = this), ale CoffeeScript má vlastní pěkné řešení
-v podobě konstrukce =\>  
-
-  
+v podobě konstrukce =\>
 
 ### Použití tříd v AngularJS
 
 AngularJS má vlastní způsob zapouzdření a využití objektového
 (prototypového) přístupu pro kolegy není úplně intuitivní. Častá
 námitka, kterou slyším, je: *Scope nebo Servisu ale nemůžeš jednoduše
-dědit.*  
-  
+dědit.*
+
 Takže, chlapci, můžeš\! Stačí jen kávu správně dávkovat v injekcích:

@@ -20,8 +20,6 @@ Je tu opět pondělí (no dobře, středa) a tedy čas na pravidelné střípky.
 Tentokrát díky hlavně Hynkovi, který hned napoprvé přidal celé dva
 příspěvky.
 
-<span id="more"></span>
-
 ### git-po-merge
 
 (Nejen) Python používá pro lokalizaci [formát

@@ -17,8 +17,6 @@ blogger_orig_url: http://blog.fragaria.cz/2015/03/pondelni-stripky-z-3032015.htm
 
 Vítám vás u zpožděných pondělních střípků a slibuju, že se polepšíme :)
 
-<span id="more"></span>
-
 ### Curry On
 
 A začneme trochu netradičně – konferencí. [Curry

@@ -35,6 +35,23 @@ rm $base.html
 pandoc --from html-native_divs-native_spans --to gfm $base.htm -o $base.content
 rm $base.htm
 
+
+python3 -c "
+import sys
+import re
+
+# common bullshit
+out = sys.stdin.read().replace('  \n', '\n').replace('<span id=\"more\"></span>', '')
+
+# empty headings
+out = re.sub(r'(#{1,}\s*\n)', '\n', out)
+
+# multi newlines
+out = re.sub(r'(\n{3,})', '\n\n', out)
+
+open(f'out.md', 'w').write(out)
+" < $base.content
+
 # concat .yaml and .content into .md
-cat $base.yaml $base.content > $base.md
-rm $base.yaml $base.content
+cat $base.yaml out.md > $base.md
+rm $base.yaml $base.content out.md

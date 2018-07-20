@@ -14,61 +14,50 @@ blogger_orig_url: http://blog.fragaria.cz/2016/01/povidani-o-hyperkrychlich.html
 
 Dnešní článek bude na rozdíl od těch předcházejících laděn na poněkud
 matematičtější notu. Budeme se zabývat hyperkrychlí, což je objekt známý
-z teorie grafů.  
-  
-<span id="more"></span>
+z teorie grafů.
 
 ### Zní to složitě, ale těžké to není
 
 Na začátek si zkusíme poněkud tajemně znějící pojem trošku rozpitvat a
 ukázat jakou má souvislost s tradiční třírozměrnou krychlí v prostoru. U
 hyperkrychle je vždy potřeba říct jakou má dimenzi. Podívejme se
-kupříkladu na Obrázku 1 na hyperkrychli dimenze dvě.  
-  
+kupříkladu na Obrázku 1 na hyperkrychli dimenze dvě.
 
 [![Hypekrychle dimenze
 dvě.](http://1.bp.blogspot.com/-1TU1nYyYJWg/VoMj0M_pDYI/AAAAAAAAABw/T4A3H2tl91Y/s320/q2.png
-"Hypekrychle dimenze dvě.")](http://1.bp.blogspot.com/-1TU1nYyYJWg/VoMj0M_pDYI/AAAAAAAAABw/T4A3H2tl91Y/s1600/q2.png)  
+"Hypekrychle dimenze dvě.")](http://1.bp.blogspot.com/-1TU1nYyYJWg/VoMj0M_pDYI/AAAAAAAAABw/T4A3H2tl91Y/s1600/q2.png)
 Obrázek 1: Hypekrychle dimenze dvě.
 
-  
 Nic objevného se tady nekoná, vypadá jako obyčejný čtverec. Dle
 očekávání hyperkrychle dimenze tři na Obrázku 2 vypadá jako krychle,
-ale zdání může klamat.  
-  
+ale zdání může klamat.
 
 [![Hypekrychle dimenze
 tři.](http://4.bp.blogspot.com/-8XNoMyGLeYw/VoMlRQDwF4I/AAAAAAAAACE/VpB6gPcIawo/s320/q3_cube.png
-"Hypekrychle dimenze tři.")](http://4.bp.blogspot.com/-8XNoMyGLeYw/VoMlRQDwF4I/AAAAAAAAACE/VpB6gPcIawo/s1600/q3_cube.png)  
+"Hypekrychle dimenze tři.")](http://4.bp.blogspot.com/-8XNoMyGLeYw/VoMlRQDwF4I/AAAAAAAAACE/VpB6gPcIawo/s1600/q3_cube.png)
 Obrázek 2: Hypekrychle dimenze tři.
 
-  
 U hyperkrychle nás nezajímá fyzikální interpretace rozměrů, tedy zda
 jsou prostorové, časové nebo jiné. Zajímá nás pouze propojení vrcholů
 hranami mezi sebou. Proto je v pořádku že hyperkrychle dimenze tři může
-vypadat i jako na Obrázku 3.  
-  
+vypadat i jako na Obrázku 3.
 
 [![Hypekrychle dimenze
 tři.](http://1.bp.blogspot.com/-N3Rkp4KnvJ8/VoMl5WcbU7I/AAAAAAAAACM/8LWSF58C4Mk/s320/q3.png
-"Hypekrychle dimenze tři.")](http://1.bp.blogspot.com/-N3Rkp4KnvJ8/VoMl5WcbU7I/AAAAAAAAACM/8LWSF58C4Mk/s1600/q3.png)  
+"Hypekrychle dimenze tři.")](http://1.bp.blogspot.com/-N3Rkp4KnvJ8/VoMl5WcbU7I/AAAAAAAAACM/8LWSF58C4Mk/s1600/q3.png)
 Obrázek 3: Stále hypekrychle dimenze tři, jen jinak nakreslená.
 
-  
 Kde takovou hyperkrychli vzít? Hyperkrychli dimenze tři vytvoříme tak,
 že vezmeme dvě hyperkrychle dimenze dvě a spárujeme protější vrcholy
 novými hranami. Stejně tak vytvoříme hyperkrychli dimenze čtyři -
 spárováním vrcholů dvou hyperkrychlí dimenze 3 jak je vidět na Obrázku
-4.  
-  
-  
+4.
 
 [![](http://1.bp.blogspot.com/-mmXn-OzW3vg/VoMnasujwkI/AAAAAAAAACY/Eunlgm0FAKg/s320/q4.png
-"Hypekrychle dimenze čtyři.")](http://1.bp.blogspot.com/-mmXn-OzW3vg/VoMnasujwkI/AAAAAAAAACY/Eunlgm0FAKg/s1600/q4.png)  
+"Hypekrychle dimenze čtyři.")](http://1.bp.blogspot.com/-mmXn-OzW3vg/VoMnasujwkI/AAAAAAAAACY/Eunlgm0FAKg/s1600/q4.png)
 Obrázek 4: Hypekrychle dimenze čtyři s vyznačeným propojením dvou
 hyperkrychlí dimenze tři.
 
-  
 Opačným způsobem (tedy řezáním) snadno dostaneme z hyperkrychle dimenze
 dva hyperkrychli dimenze jedna a z ní hyperkrychli dimenze nula. Zkuste
 si to :). Obecně hyperkrychli dimenze
@@ -93,16 +82,16 @@ tak dále. Tedy počet vrcholů ![](http://www.codecogs.com/gif.latex?Q_n)
 je
 ![](http://latex.codecogs.com/gif.latex?$\\underbrace%7B2&space;\\cdot&space;2&space;\\cdot&space;2&space;\\cdots&space;2%7D_%7Bn&space;\\times%7D$
 "$\\underbrace{2 \\cdot 2 \\cdot 2 \\cdots 2}_{n \\times}$") a to je
-![](http://www.codecogs.com/gif.latex?2%5En) vrcholů.  
-  
+![](http://www.codecogs.com/gif.latex?2%5En) vrcholů.
+
 Vrcholy to nejsou jen tak obyčejné a není náhodou, že je na obrázcích
 kreslíme různě. Vrcholy každé hyperkrychle lze totiž rozdělit na černé a
 bílé vrcholy a to takovým způsobem, že jsou hranami spojeny jen černé
 vrcholy s bílými. Nikdy nejsou mezi sebou spojené žádné dva černé
 vrcholy a stejně tak nejsou nikdy mezi sebou spojené ani žádné dva bílé
 vrcholy. Této vlastnosti se říká bipartita. Například graf se třemi
-vrcholy který vypadá jako trojúhelník bipartitní není.  
-  
+vrcholy který vypadá jako trojúhelník bipartitní není.
+
 Poslední pojem který si představíme bude Hamiltonovskost. Je to jakási
 varianta kreslení domečku jedním tahem. Položíme tužku na jeden
 libovolný vrchol hyperkrychle a budeme chtít bez zvednutí tužky z
@@ -111,19 +100,18 @@ začali, ale zároveň žádný vrchol nechceme projít dvakrát. Útvaru který
 tímto nakreslíme se říká Hamiltonovský cyklus a graf kde takový cyklus
 umíme najít se nazývá Hamiltonovský. Hyperkrychle dimenze čtyři je
 Hamiltonovská, jak můžeme vidět na Obrázku
-5.  
+5.
 
-[![](http://3.bp.blogspot.com/-3SIZLxS99fY/VoQCdvUHPjI/AAAAAAAAACw/3xVNYJo6nHY/s320/q4_hc.png)](http://3.bp.blogspot.com/-3SIZLxS99fY/VoQCdvUHPjI/AAAAAAAAACw/3xVNYJo6nHY/s1600/q4_hc.png)  
+[![](http://3.bp.blogspot.com/-3SIZLxS99fY/VoQCdvUHPjI/AAAAAAAAACw/3xVNYJo6nHY/s320/q4_hc.png)](http://3.bp.blogspot.com/-3SIZLxS99fY/VoQCdvUHPjI/AAAAAAAAACw/3xVNYJo6nHY/s1600/q4_hc.png)
 Obrázek 5: Hyperkrychle dimenze čtyři s červeně vyznačeným
 Hamiltonovským cyklem.
 
-  
 Protože Hamiltonovský cyklus v
 ![](http://www.codecogs.com/gif.latex?Q_n) obsahuje všechny vrcholy
 hyperkrychle, musí mít ![](http://www.codecogs.com/gif.latex?2%5En) hran
 a ![](http://www.codecogs.com/gif.latex?2%5En) vrcholů. Není těžké
-ukázat že každá hyperkrychle dimenze aspoň dva je Hamiltonovská.  
-  
+ukázat že každá hyperkrychle dimenze aspoň dva je Hamiltonovská.
+
 Zajímavější problém nastává, pokud začneme nějaké vrcholy mazat. Bude
 mít hyperkrychle s nějakými vrcholy smazanými stále Hamiltonovský
 cyklus? To záleží nejen na tom jaké vrcholy smažeme, ale také kolik.
@@ -140,8 +128,7 @@ bílých jako černých) kde
 ![](http://www.codecogs.com/gif.latex?$k&space;\\leq&space;n-2$) pak je
 taková otrhaná hyperkrychle stále Hamiltonovská. Tato hypotéza nebyla
 zatím dokázána (ani vyvrácena). Jsou však známy různé částečné
-výsledky.  
-  
+výsledky.
 
 ### No a k čemu je to všechno dobré?
 
@@ -160,8 +147,7 @@ nakonec pro svoji špatnou škálovatelnost opuštěny. I přesto hyperkrychle
 nacházejí využití i v současnosti. Zmiňme alespoň P2P síť HyperCup,
 bluetooth síť BlueCube či hyperkrychlovou topologii pro dynamicky
 distribuované databáze zvanou HyperD, která byla představena v roce
-2011.  
-  
+2011.
 
 ### Pro pozorné čtenáře
 

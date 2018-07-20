@@ -19,8 +19,6 @@ blogger_orig_url: http://blog.fragaria.cz/2015/07/pondelni-stripky-z-2772015.htm
 Dneska toho máme na programu ZNAPS, font Monoid, roboty pro platformu
 Telegram a hackování aut.
 
-<span id="more"></span>
-
 ## ZNAPS
 
 Šílenství okolo kablíku

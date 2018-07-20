@@ -21,8 +21,6 @@ Opět se hlásím s pravidelnými pondělními střípky.
 Dnes: Velká prosba, volby na Slovensku, dobrodužství s Vimem, dynamické
 moduly v Angularu, Webpack a NW.js. A navíc Babel.
 
-<span id="more"></span>
-
 ## Sháníme skener
 
 Hledáme firmu, která nám zapůjčí nebo poskytne přístup k
@@ -32,16 +30,16 @@ vysokorychlostnímu dokumentovému skeneru.
 Demokracie 2.1](https://d21.me) si potřebujeme otestovat naši
 infrastrukturu pro automatické rozpoznání hlasovacích lístků.
 
-**Požadavky na skener**  
-Rychlost: cca 100ppm; 10 000/den  
-Formát papíru: A3  
-Minimální rozlišení: 200dpi  
-Barevný/černobílý: stačí černobílý  
-  
-**Příklady vhodných skenerů**  
-Canon imageFORMULA DR-G1100 (preferovaný)  
-Fujitsu fi-5900C  
-Panasonic KV-S2026C  
+**Požadavky na skener**
+Rychlost: cca 100ppm; 10 000/den
+Formát papíru: A3
+Minimální rozlišení: 200dpi
+Barevný/černobílý: stačí černobílý
+
+**Příklady vhodných skenerů**
+Canon imageFORMULA DR-G1100 (preferovaný)
+Fujitsu fi-5900C
+Panasonic KV-S2026C
 
 Pokud máte, nebo o někom víte – dejte nám, prosím, vědět. Moc nám
 pomůžete. Díky.

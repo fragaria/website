@@ -18,8 +18,6 @@ blogger_orig_url: http://blog.fragaria.cz/2015/05/pondelni-stripky-z-2552015.htm
 Stará kachna umí nové kousky, Estonsko nabízí e-občanství a Javascript
 je ještě větší pecka, než jste si mysleli.
 
-<span id="more"></span>
-
 Vítám vás u stručných pondělních střípků.
 
 ### Duck Duck Go

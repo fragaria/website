@@ -6,10 +6,12 @@ $article-content-width: 40rem;
     @include deviceBreakpoint(tablet) {
         padding-top: 3rem;
     }
+
+    .article__headline {
+        @include sassline(beta, $bodytype, 4, 0, all);
+    }
 }
 
-.article__headline {
-}
 
 .article__meta {
     font-style: italic;

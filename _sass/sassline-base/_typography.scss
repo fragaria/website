@@ -71,37 +71,37 @@ a {
 
   // Heading level 1.
   h1, .alpha {
-    @include sassline($fontsize: alpha, $font: $headingtype, $lineheight: 3, $below: 1, $breakpoint: all);
+    @include sassline($fontsize: gamma, $font: $headingtype, $lineheight: 3, $below: 1, $breakpoint: all);
   }
 
   // Heading level 2.
   h2, .beta {
-    @include sassline(beta, $headingtype, 3, 1, all);
+    @include sassline(delta, $headingtype, 3, 1, all);
   }
 
   // Heading level 3.
   h3, .gamma {
-    @include sassline(gamma, $headingtype, 3, 1, all);
+    @include sassline(epsilon, $headingtype, 3, 1, all);
   }
 
   // Heading level 4.
   h4, .delta {
-    @include sassline(delta, $headingtype, 2, 0, all);
+    @include sassline(zeta, $headingtype, 2, 0, all);
   }
 
   // Heading level 5.
   h5, .epsilon {
-    @include sassline(epsilon, $headingtype, 2, 0, all);
+    @include sassline(eta, $headingtype, 2, 0, all);
   }
 
   // Heading level 6.
   h6, .zeta {
-    @include sassline(zeta, $headingtype, 2, 0, all);
+    @include sassline(theta, $headingtype, 2, 0, all);
   }
 
   // Lists.
   ul, ol {
-    @include baseline(zeta, $bodytype, 2, 2, all);
+    @include baseline(eta, $bodytype, 2, 2, all);
 
     li {
       font-feature-settings: 'kern', 'onum', 'liga';

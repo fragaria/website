@@ -19,6 +19,7 @@
     }
 
     &--featured {
+        display: block;
         text-align: center;
         position: relative;
 
@@ -32,6 +33,7 @@
         }
 
         .blog-posting__content {
+            position: relative;
             z-index: 1;
             padding: 2rem 1rem;
 
@@ -41,12 +43,23 @@
         }
 
         .blog-posting__headline {
-            @include sassline(72, $bodytype, 8, 0, all);
+            @include sassline(alpha, $bodytype, 2, 0, all);
         }
 
         .blog-posting__content,
         .blog-posting__content a {
             color: $white;
+        }
+
+        .blog-posting__meta {
+            display: none;
+        }
+
+        .blog-posting__excerpt {
+            max-width: deviceBreakpointWidth(tablet);
+            margin: 0 auto;
+            @include sassline(epsilon, $bodytype, 2, 0, all);
+            font-weight: bold;
         }
     }
 }

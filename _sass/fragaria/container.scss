@@ -5,6 +5,7 @@
 .page-container__inner {
     width: 100%;
     max-width: deviceBreakpointWidth(desktop);
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     text-align: left;
 }

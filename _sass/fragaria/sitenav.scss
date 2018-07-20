@@ -1,12 +1,8 @@
-/* wrapper necessary to compensate for borders that break the baseline */
-.sitenav-wrapper {
-    @include baseline(zeta, $bodytype, 2, 4, all);
-}
-
 .sitenav {
     position: relative;
-    height: 6rem;
-    margin-top: 2rem;
+    height: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
     align-items: center;
     font-family: $sansSerif;
     letter-spacing: .1rem;
@@ -16,6 +12,8 @@
         display: flex;
         // first bottom border
         border-bottom: 2px $border-color solid;
+        margin-top: 3rem;
+        margin-bottom: 4rem;
 
         // top border
         @include baselineAwareBorder($orientation: 'top', $width: 2px);
@@ -26,23 +24,30 @@
 
 // logo image
 .sitenav__brand {
+    @mixin snBrandSize($height) {
+        $brand-dimension-ratio: 153 / 196;
+
+        height: $height;
+        // use image dimension ratio to calculate right shift
+        margin-left: $height * -0.5 * $brand-dimension-ratio;
+    }
+
     position: absolute;
+    top: 0;
     left: 50%;
-    top: -2.2rem;
     z-index: 3;
 
     // logo image scales up on bigger screens
-    width: 80px;
-    margin-left: -40px;
+    @include snBrandSize(6rem);
 
     @include deviceBreakpoint(tablet) {
-        width: 130px;
-        margin-left: -65px;
+        top: -2rem;
+
+        @include snBrandSize(9rem);
     }
 
     @include deviceBreakpoint(desktop) {
-        width: 150px;
-        margin-left: -75px;
+        @include snBrandSize(10rem);
     }
 }
 
@@ -51,7 +56,7 @@
     display: none;
     width: 100%;
     list-style-type: none;
-    z-index: 2;
+    z-index: 4;
 
     @include deviceBreakpoint(tablet) {
         display: flex;
@@ -92,6 +97,7 @@
     position: absolute;
     right: 0;
     z-index: 3;
+    @include sassline(delta, $headingtype, 3, 0, all);
 
     // hide menu toggle for tablet and bigger
     @include deviceBreakpoint(tablet) {
@@ -102,8 +108,6 @@
 a.sitenav__menu-toggle-link {
     font-family: unquote(map-get($headingtype, font-family));
     transition: color .2s ease-in-out;
-
-    @include sassline(delta, $headingtype, 3, 0, all);
 
     &--active {
         color: map-get($palette, red);
@@ -131,13 +135,14 @@ a.sitenav__menu-toggle-link {
             height: 100%;
             position: absolute;
             text-align: center;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
             flex-direction: row;
             flex-wrap: wrap;
-            padding: 6rem 3rem 5rem;
+            // a little bigger padding from the top, make sure it's bigger than logo size (6rem)
+            padding: 7rem 3rem 5rem;
 
-            @media (min-height: 360px) {
+            @media (min-height: 460px) {
                 flex-direction: column;
             }
         }

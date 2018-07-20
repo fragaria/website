@@ -14,7 +14,7 @@
     font-size: 1.1rem;
 
     @include deviceBreakpoint(tablet) {
-        flex-direction: flex;
+        display: flex;
         // first bottom border
         border-bottom: 2px $border-color solid;
 

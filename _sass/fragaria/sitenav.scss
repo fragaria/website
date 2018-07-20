@@ -14,8 +14,7 @@
     font-size: 1.1rem;
 
     @include deviceBreakpoint(tablet) {
-        display: flex;
-
+        flex-direction: flex;
         // first bottom border
         border-bottom: 2px $border-color solid;
 
@@ -91,7 +90,9 @@
 }
 
 .sitenav__menu-toggle {
-    float: right;
+    position: absolute;
+    right: 0;
+    z-index: 3;
 
     // hide menu toggle for tablet and bigger
     @include deviceBreakpoint(tablet) {
@@ -126,18 +127,23 @@ a.sitenav__menu-toggle-link {
         }
 
         .sitenav__linkset {
-            display: block;
+            display: flex;
             width: 100%;
-            height: 250px;
-            top: 50%;
-            margin-top: -125px;
+            height: 100%;
             position: absolute;
             text-align: center;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            padding: 6rem 3rem 5rem;
+
+            @media (min-height: 360px) {
+                flex-direction: column;
+            }
         }
 
         .sitenav__linkset-item {
             margin-right: 0 !important;
-            padding: .5rem 0;
 
             @include sassline(gamma, $bodytype, 2, 2, all);
 

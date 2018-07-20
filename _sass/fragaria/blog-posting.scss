@@ -40,6 +40,10 @@
             }
         }
 
+        .blog-posting__headline {
+            @include sassline(72, $bodytype, 8, 0, all);
+        }
+
         .blog-posting__content,
         .blog-posting__content a {
             color: $white;
@@ -63,6 +67,7 @@
     }
 
     h1.blog-posting__headline {
+        text-transform: uppercase;
         line-height: 2rem;
 
         @include deviceBreakpoint(tablet) {

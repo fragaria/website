@@ -41,7 +41,7 @@ $modular-scale: (
   ),
   // Perfect Fourth http://www.modularscale.com/?20,40&px&1.333&web&text
   scale-3: (
-    alpha:   40.0,
+    alpha:   36.0,
     beta:    35.5,
     gamma:   30.0,
     delta:   26.7,
@@ -50,29 +50,5 @@ $modular-scale: (
     eta:     16.9,
     theta:   15.0,
     iota:    12.7
-  ),
-  // Aug. Fourth http://www.modularscale.com/?22,50&px&1.414&web&text
-  scale-4: (
-    alpha:   50.0,
-    beta:    43.9,
-    gamma:   35.3,
-    delta:   31.1,
-    epsilon: 25.0,
-    zeta:    22.0,
-    eta:     17.6,
-    theta:   15.6,
-    iota:    12.5
-  ),
-  // Aug. Fourth http://www.modularscale.com/?22,50&px&1.414&web&text
-  scale-5: (
-    alpha:   50.0,
-    beta:    43.9,
-    gamma:   35.3,
-    delta:   31.1,
-    epsilon: 25.0,
-    zeta:    22.0,
-    eta:     17.6,
-    theta:   15.6,
-    iota:    12.5
   )
 );

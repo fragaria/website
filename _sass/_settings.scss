@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC:400,400i&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin-ext');
 
 // Colors
 $palette: (
@@ -127,6 +128,8 @@ $headingtype: (
     italic: italic,
     cap-height: 0.82
 );
+
+$sansSerif: 'Open Sans Condensed', sans-serif;
 
 $headingColour: $primary-color;
 $captionColour: #BDC8CC;

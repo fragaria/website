@@ -1,5 +1,13 @@
 .taglist {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -1rem;
+    margin-left: -0.5rem;
+
+    @include deviceBreakpoint(tablet) {
+        justify-content: left;
+    }
 }
 
 .taglist__tag {
@@ -9,6 +17,8 @@
     background-color: map-get($palette, grey-light);
     padding-left: .5em;
     padding-right: .5em;
+    margin-top: 1rem;
+    margin-left: .5rem;
     color: map-get($palette, grey-medium);
 
     @include fontsize(eta);
@@ -16,8 +26,4 @@
     &:hover {
         color: $primary-color;
     }
-}
-
-.taglist__tag + .taglist__tag {
-    margin-left: .5rem;
 }

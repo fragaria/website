@@ -44,14 +44,17 @@ $article-content-width: 40rem;
 
     .article__miscitem + .article__miscitem {
         margin-top: 1rem;
+        margin-left: 0;
     }
 
     @include deviceBreakpoint(tablet) {
         flex-direction: row;
         justify-content: space-between;
+        align-items: flex-start;
 
         .article__miscitem + .article__miscitem {
             margin-top: 0;
+            margin-left: 3rem;
         }
     }
 }

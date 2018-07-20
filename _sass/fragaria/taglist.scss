@@ -1,0 +1,23 @@
+.taglist {
+    display: flex;
+}
+
+.taglist__tag {
+    display: inline-block;
+    height: 2rem;
+    line-height: 2rem;
+    background-color: map-get($palette, grey-light);
+    padding-left: .5em;
+    padding-right: .5em;
+    color: map-get($palette, grey-medium);
+
+    @include fontsize(eta);
+
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+.taglist__tag + .taglist__tag {
+    margin-left: .5rem;
+}

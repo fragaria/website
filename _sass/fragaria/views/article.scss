@@ -35,3 +35,8 @@ $article-content-width: 40rem;
 .article__content {
     text-align: left;
 }
+
+.article__misc {
+    display: flex;
+    justify-content: space-between;
+}

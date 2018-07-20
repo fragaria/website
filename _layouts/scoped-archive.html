@@ -2,8 +2,18 @@
 layout: archive
 ---
 
+{% capture title %}
+    {% if page.type == 'tag' %}
+        Posts with tag '{{ page.title }}'
+    {% elsif page.type == 'year' %}
+        Posts in {{ page.date | date: '%Y' }}
+    {% elsif page.type == 'month' %}
+        Posts in {{ page.date | date: '%Y %b' }}
+    {% endif %}
+{% endcapture %}
+
 <header>
-    <h1 itemprop="headline">Posts in {% if page.type == 'year' %}{{ page.date | date: '%Y' }}{% elsif page.type == 'month' %}{{ page.date | date: '%Y %b' }}{% endif %}</h1>
+    <h1 itemprop="headline">{{ title }}</h1>
 </header>
 
 <main>

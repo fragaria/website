@@ -4,7 +4,10 @@
 $palette: (
     black: #000,
     white: #fff,
-    red: #ea272e
+    red: #ea272e,
+    grey-light: rgba(0,0,0,.05),
+    grey-medium: rgba(0,0,0,.5),
+    grey-dark: rgba(0,0,0,.8),
 );
 
 $primary-color: map-get($palette, black);

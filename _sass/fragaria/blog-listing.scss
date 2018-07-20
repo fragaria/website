@@ -14,13 +14,7 @@
     display: flex;
 
     & {
-        padding: 2rem 0;
-    }
-    &:first-child {
-        padding: 0 0 2rem;
-    }
-    &:last-child {
-        padding: 2rem 0;
+        padding: 2rem 0 3rem;
     }
 
     &:first-child,
@@ -31,6 +25,18 @@
 
     /* create vertical rules between columns on tablet and up */
     @include deviceBreakpoint(tablet) {
+        & {
+            padding: 2rem 0;
+        }
+
+        &:first-child {
+            padding: 0 0 2rem;
+        }
+
+        &:last-child {
+            padding: 2rem 0;
+        }
+
         &,
         &:first-child,
         &:last-child {

@@ -2,7 +2,9 @@
     display: flex;
     flex-direction: column;
 
-    margin: 2rem 0;
+    @include deviceBreakpoint(tablet) {
+        margin: 2rem 0;
+    }
 
     &--horizontal {
         flex-direction: row;
@@ -48,6 +50,27 @@
 .blog-posting__pubdate {
     display: none;
 }
+
+.typeset {
+    p {
+        &.blog-posting__meta {
+            margin-bottom: 0;
+        }
+
+        &.blog-posting__excerpt {
+            padding-top: 0;
+        }
+    }
+
+    h1.blog-posting__headline {
+        line-height: 2rem;
+
+        @include deviceBreakpoint(tablet) {
+            line-height: 3rem;
+        }
+    }
+}
+
 
 .blog-posting__author {
     font-style: italic;

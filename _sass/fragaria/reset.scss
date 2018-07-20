@@ -4,7 +4,7 @@ body {
     background: $body-background;
     height: 100%;
     display: flex;
-    @include flex-direction(column);
+    flex-direction: column;
     overflow-x: hidden;
 }
 
@@ -46,6 +46,14 @@ body {
                 color: $backgroundColour;
             }
         }
+
+        // h1 {
+        //     line-height: 2rem;
+
+        //     @include deviceBreakpoint(tablet) {
+        //         line-height: 3rem;
+        //     }
+        // }
 
         hr {
             width: 100%;

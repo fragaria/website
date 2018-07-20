@@ -18,7 +18,7 @@
 
 .post-overview__headline-fill {
     background: map-get($palette, white);
-    padding: 0 .25em;
+    padding: 1rem;
 }
 
 .post-overview__body {
@@ -50,7 +50,7 @@
 .typeset {
     .post-overview__post-headline {
         font-family: unquote(map-get($bodytype, font-family));
-        @include sassline(zeta, $bodytype, 2, 0, all);
+        @include sassline(eta, $bodytype, 2, 0, all);
     }
     p.post-overview__pubdate {
         font-style:italic

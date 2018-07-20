@@ -58,6 +58,7 @@ jekyll-archives:
 autoprefixer:
     browsers:
         - last 2 versions
+    only_production: true
 
 # ---------------------- custom configuration ----------------------------------
 

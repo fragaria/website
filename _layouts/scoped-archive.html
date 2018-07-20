@@ -12,11 +12,11 @@ layout: archive
     {% endif %}
 {% endcapture %}
 
-<header>
+<header class="typeset">
     <h1 itemprop="headline" class="gamma">{{ title }}</h1>
 </header>
 
-<main>
+<main class="typeset">
     {% for post in page.posts %}
         {% include posts/listing/standard.html post=post %}
     {% endfor %}

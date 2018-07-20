@@ -8,10 +8,22 @@ $article-content-width: 40rem;
     }
 
     .article__headline {
-        @include sassline(beta, $bodytype, 4, 0, all);
+        max-width: 13em;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include sassline(alpha, $headingtype, $lineheight: 3, $breakpoint: all);
+
+        @include deviceBreakpoint(tablet) {
+            @include sassline(alpha, $headingtype, $lineheight: 4, $breakpoint: all);
+        }
+
+        @include deviceBreakpoint(desktop) {
+            @include sassline(alpha, $headingtype, $lineheight: 5, $breakpoint: all);
+        }
+
     }
 }
-
 
 .article__meta {
     font-style: italic;

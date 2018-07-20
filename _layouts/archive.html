@@ -4,13 +4,14 @@ layout: default
 
 <div class="content-block v-blog-archive">
     <main class="v-blog-archive__main">
-        <div class="typeset">
-            {{ content }}
-        </div>
+        {{ content }}
     </main>
-    <nav class="v-blog-archive__nav">
-        <h2><a href="{{ '/blog/archive/' | relative_url }}">Archive</a></h2>
+    <nav class="v-blog-archive__nav typeset">
+        <h2 class="gamma"><a href="{{ '/blog/archive/' | relative_url }}">Archive</a></h2>
         {% include posts/year-list.html %}
+
+        <h2 class="gamma">Topics</h2>
+        {% include posts/topic-list.html %}
     </nav>
 </div>
 

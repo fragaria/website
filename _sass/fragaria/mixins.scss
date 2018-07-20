@@ -44,7 +44,10 @@
     };
 }
 
+@function getDeviceBreakpointName($alias) {
+    @return map-get($breakpoint-aliases, $alias);
+}
+
 @function deviceBreakpointWidth($alias) {
-    $sasslineAlias: map-get($breakpoint-aliases, $alias);
-    @return map-get($breakpoints, $sasslineAlias) / 16 * 1rem;
+    @return map-get($breakpoints, getDeviceBreakpointName($alias)) / 16 * 1rem;
 }

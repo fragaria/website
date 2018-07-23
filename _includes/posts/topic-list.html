@@ -1,5 +1,12 @@
 <ul>
-    {% for tag in site.tags %}
-        <li><a class="anchor--emphasized" href="{{ site.baseurl }}blog/archive/tag/{{ tag[0] | replace: ' ', '-' }}/">{{ tag[0] }}</a></li>
-    {% endfor %}
+    {% capture tags %}
+        {% for tag in site.tags %}
+            {% if tag[1].size > 1 %}
+            <li data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}">
+                <a class="anchor--emphasized" href="{{ site.baseurl }}blog/archive/tag/{{ tag[0] | slugify: 'pretty' }}/">{{ tag[0] }}</a> ({{ tag[1].size }})
+            </li>
+            {% endif %}
+        {% endfor %}
+    {% endcapture %}
+    {{ tags | split:'</li>' | sort | join:'</li>' }}
 </ul>

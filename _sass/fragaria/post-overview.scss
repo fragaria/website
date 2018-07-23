@@ -1,26 +1,3 @@
-.post-overview__headline {
-    position: relative;
-    margin-top: 2rem;
-    padding-bottom: 2rem;
-    text-align: center;
-
-    &:before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        top: 2rem;
-        left: 0;
-        height: 2px;
-        background: $border-color;
-        z-index: -1;
-    }
-}
-
-.post-overview__headline-fill {
-    background: map-get($palette, white);
-    padding: 1rem;
-}
-
 .post-overview__body {
     column-count: 1;
 

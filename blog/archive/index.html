@@ -10,9 +10,13 @@ title: Posts
 <main class="typeset">
     {% assign posts = paginator.posts %}
 
-    {% for post in posts %}
-        {% include posts/listing/standard.html post=post %}
-    {% endfor %}
+    <div class="blog-listing blog-listing--nofirstdivider">
+        {% for post in posts %}
+            <div class="blog-listing__post">
+                {% include posts/listing/standard.html post=post class='blog-listing__post-inner' %}
+            </div>
+        {% endfor %}
+    </div>
 
     {% include posts/pagination.html paginator=paginator %}
 </main>

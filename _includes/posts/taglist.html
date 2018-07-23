@@ -1,6 +1,6 @@
 <div class="taglist" itemscope itemtype="http://schema.org/WebPage">
     {% for tag in include.tags %}
-        {% capture url %}/blog/archive/tag/{{ tag }}/{% endcapture %}
+        {% capture url %}/blog/archive/tag/{{ tag | slugify: 'pretty' }}/{% endcapture %}
         <a class="taglist__tag" href="{{ url | relative_url }}" itemprop="relatedLink">{{ tag }}</a>
     {% endfor %}
 </div>

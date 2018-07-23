@@ -1,14 +1,9 @@
 .v-blog-archive {
     display: grid;
     grid-template-areas:
-        "nav"
-        "main";
-
-    @include deviceBreakpoint(mobile) {
-        grid-template-areas: "main nav";
-        grid-template-columns: 3fr 1fr;
-        grid-column-gap: 4rem;
-    }
+        "main"
+        "nav";
+    grid-row-gap: 4rem;
 }
 
 .v-blog-archive__main {
@@ -17,4 +12,28 @@
 
 .v-blog-archive__nav {
     grid-area: nav;
+}
+
+.v-blog-archive-nav {
+    display: none;
+
+    @include deviceBreakpoint(desktop) {
+        display: grid;
+        grid-column-gap: 4rem;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+            "yearlist topiclist";
+    }
+}
+
+.v-blog-archive-nav__yearlist {
+    grid-area: yearlist;
+}
+
+.v-blog-archive-nav__topiclist {
+    grid-area: topiclist;
+
+    .topic-list {
+        column-count: 4;
+    }
 }

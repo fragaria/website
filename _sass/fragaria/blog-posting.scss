@@ -79,6 +79,10 @@
 
         &.blog-posting__excerpt {
             padding-top: 0;
+
+            a {
+                display: inline-block;
+            }
         }
     }
 

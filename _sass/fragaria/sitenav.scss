@@ -152,7 +152,7 @@ a.sitenav__menu-toggle-link {
             padding-left: .5em;
             padding-right: .5em;
 
-            @include sassline(gamma, $bodytype, 2, 2, all);
+            @include sassline(epsilon, $bodytype, 2, 2, all);
 
             &.sitenav__linkset-item--main {
                 display: none;

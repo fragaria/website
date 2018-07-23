@@ -19,31 +19,31 @@
     }
 
     &--featured {
+        position: relative;
         display: block;
         text-align: center;
-        position: relative;
 
         .blog-posting__media {
             position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             z-index: 0;
-            top: 0;
-            left: 0;
         }
 
         .blog-posting__content {
             position: relative;
+            padding: 3rem 1rem;
             z-index: 1;
-            padding: 2rem 1rem;
 
             @include deviceBreakpoint(tablet) {
-                padding: 4rem 2rem;
+                padding: 6rem 2rem 5rem 2rem;
             }
         }
 
         .blog-posting__headline {
-            @include sassline(alpha, $bodytype, 2, 0, all);
+            @include sassline(alpha, $bodytype, 3, 0, all);
         }
 
         .blog-posting__content,
@@ -57,9 +57,9 @@
 
         .blog-posting__excerpt {
             max-width: deviceBreakpointWidth(tablet);
-            margin: 0 auto;
-            @include sassline(epsilon, $bodytype, 2, 0, all);
+            margin: 1.3rem auto 1.2rem!important;
             font-weight: bold;
+            @include sassline(epsilon, $bodytype, 2, 0, all);
         }
     }
 }
@@ -81,11 +81,7 @@
 
     h1.blog-posting__headline {
         text-transform: uppercase;
-        line-height: 2rem;
-
-        @include deviceBreakpoint(tablet) {
-            line-height: 3rem;
-        }
+        line-height: 3rem;
     }
 }
 

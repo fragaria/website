@@ -1,5 +1,5 @@
 <ul>
     {% for tag in site.tags %}
-        <li><a class="anchor--emphasized" href="{{ '/blog/archive/tag/' | append: tag[0] | append: '/' | relative_url }}">{{ tag[0] }}</a></li>
+        <li><a class="anchor--emphasized" href="{{ site.baseurl }}blog/archive/tag/{{ tag[0] | replace: ' ', '-' }}/">{{ tag[0] }}</a></li>
     {% endfor %}
 </ul>

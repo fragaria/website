@@ -11,7 +11,7 @@ email: info@fragaria.cz
 description: ...
 keywords: fragaria, software, vývoj software, webové aplikace, python, javascript, angular, elasticsearch, html, css
 url: "https://fragaria.cz" # the base hostname & protocol for your site
-baseurl: "/website"
+baseurl: "/website/"
 logo: "/assets/logo.svg" # Site logo
 # favicon: "/favicon.ico" # Uncomment to add custom favicon, or leave as is to use site logo
 
@@ -27,7 +27,6 @@ plugins:
     - jekyll-feed
     - jekyll-paginate
     - jekyll-archives
-    - jekyll-autoprefixer
 
 exclude:
     - Dockerfile
@@ -54,11 +53,6 @@ jekyll-archives:
         year: /blog/archive/year/:year/
         month: /blog/archive/month/:year-:month/
         tag: /blog/archive/tag/:name/
-
-autoprefixer:
-    browsers:
-        - last 2 versions
-    only_production: true
 
 # ---------------------- custom configuration ----------------------------------
 

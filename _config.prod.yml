@@ -1,0 +1,11 @@
+plugins:
+    - jekyll-sitemap
+    - jekyll-feed
+    - jekyll-paginate
+    - jekyll-archives
+    - octopress-autoprefixer
+
+autoprefixer:
+  browsers:
+      - last 2 versions
+  only_production: true

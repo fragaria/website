@@ -17,7 +17,7 @@ $body-background: map-get($palette, white);
 $text-color: $primary-color;
 
 $anchor-color: $primary-color;
-$anchor-hover-color: darken($anchor-color, 10%);
+$anchor-hover-color: map-get($palette, red);
 
 $border-color: $primary-color;
 

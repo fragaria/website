@@ -10,14 +10,18 @@
             <meta itemprop="datePublished" content="{{ include.post.date | date_to_xmlschema }}" />
             <span class="blog-posting__pubdate">{{ include.post.date | date: "%d.%m.%Y" }}</span>
         </p>
-        <p itemprop="description" class="blog-posting__excerpt">{{ include.post.excerpt | strip_html | truncatewords: 45 }}</p>
         {% if include.show_cta %}
+        <p itemprop="description" class="blog-posting__excerpt">{{ include.post.excerpt | strip_html | truncatewords: 45 }}</p>
             <a href="{{ include.post.url | relative_url }}" class="button blog-posting__cta-button">Read</a>
+        {% else %}
+        <p itemprop="description" class="blog-posting__excerpt">
+            <a href="{{ include.post.url | relative_url }}" class="blog-posting__anchor">{{ include.post.excerpt | strip_html | truncatewords: 45 }}</a>
+        </p>
         {% endif %}
     </div>
     {% if include.post.thumbnail %}
-    <div class="blog-posting__media" style="background-image: url('{{ include.post.thumbnail }}')">
+    <a href="{{ include.post.url | relative_url }}" class="blog-posting__media" style="background-image: url('{{ include.post.thumbnail }}')">
         <img itemprop="image" src="{{ include.post.thumbnail }}" class="blog-posting__image" />
-    </div>
+    </a>
     {% endif %}
 </article>

@@ -7,7 +7,7 @@
         padding-bottom: 2rem;
 
         .blog-posting__excerpt {
-            @include sassline(eta, $bodytype, 1.5, 1, all);
+            @include sassline(eta, $bodytype, 2, 1, all);
         }
 
         .blog-posting__media {

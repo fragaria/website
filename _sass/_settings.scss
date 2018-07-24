@@ -170,9 +170,9 @@ $headingtype: (
 
     // test - replace headline font with sans-serif
     font-family: "'Open Sans Condensed', sans-serif",
-    regular: 400,
+    regular: 300,
     bold: 700,
-    cap-height: 0.75
+    cap-height: 0.56
 );
 
 $monospacetype: (
@@ -183,7 +183,7 @@ $monospacetype: (
 
 $sansseriftype: (
     font-family: "'Open Sans Condensed', sans-serif",
-    regular: 400,
+    regular: 300,
     bold: 700,
     cap-height: 0.56
 );

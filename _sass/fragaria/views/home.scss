@@ -13,10 +13,10 @@
     margin-right: auto;
     text-align: center;
 
-    @include sassline(delta, $headingtype, 3, 0, all);
+    @include sassline(delta, $headingtype, 2, 0, all);
 
     @include deviceBreakpoint(mobile) {
-        @include sassline(delta, $headingtype, 4, 0, all);
+        @include sassline(delta, $headingtype, 3, 0, all);
     }
 
     @include deviceBreakpoint(tablet) {

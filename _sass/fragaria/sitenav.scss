@@ -34,14 +34,14 @@
 
     position: absolute;
     top: 0;
-    left: 50%;
+    left: 0;
+    height: 5rem;
     z-index: 3;
 
     // logo image scales up on bigger screens
-    @include snBrandSize(6rem);
-
     @include deviceBreakpoint(tablet) {
         top: -2rem;
+        left: 50%;
 
         @include snBrandSize(9rem);
     }

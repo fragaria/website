@@ -3,9 +3,9 @@
         <div class="blog-posting__content">
             <h1 itemprop="headline" class="blog-posting__headline">{{ include.post.title }}</h1>
             <p class="blog-posting__meta">
-                <span class="blog-posting__pubdate">{{ include.post.date | date: '%B %d, %Y' }}, </span>
+                <span class="blog-posting__pubdate">{{ include.post.date | date: '%B %d, %Y' }}</span>
                 <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="blog-posting__author">
-                    <span itemprop="name">{{ include.post.author }}</span>
+                    by <span itemprop="name">{{ include.post.author }}</span>
                 </span>
 
                 <span itemprop="publisher" itemtype="http://schema.org/Organization" class="hidden" itemscope>

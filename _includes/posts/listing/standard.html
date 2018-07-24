@@ -3,20 +3,20 @@
         <div class="blog-posting__content">
             <h1 itemprop="headline" class="blog-posting__headline">{{ include.post.title }}</h1>
             <p class="blog-posting__meta">
+                <span class="blog-posting__pubdate">{{ include.post.date | date: '%B %d, %Y' }}, </span>
                 <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="blog-posting__author">
-                    by <span itemprop="name">{{ include.post.author }}</span>
+                    <span itemprop="name">{{ include.post.author }}</span>
                 </span>
 
-                <div itemprop="publisher" itemtype="http://schema.org/Organization" class="hidden" itemscope>
-                    <div itemprop="logo" itemtype="http://schema.org/ImageObject" itemscope="">
+                <span itemprop="publisher" itemtype="http://schema.org/Organization" class="hidden" itemscope>
+                    <span itemprop="logo" itemtype="http://schema.org/ImageObject" itemscope="">
                         <meta itemprop="url" content="{{ 'assets/img/strawberry.svg' | absolute_url }}">
-                    </div>
+                    </span>
                     <meta itemprop="name" content="{{ site.company.official_name }}">
-                </div>
+                </span>
 
                 <meta itemprop="datePublished" content="{{ include.post.date | date_to_xmlschema }}" />
                 <link itemprop="mainEntityOfPage" href="{{ include.post.url }}" />
-                <span class="blog-posting__pubdate">{{ include.post.date | date: "%d.%m.%Y" }}</span>
             </p>
             <p itemprop="description" class="blog-posting__excerpt">{{ include.post.excerpt | strip_html | truncatewords: 45 }}</p>
             {% if include.show_cta %}

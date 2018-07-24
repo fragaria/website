@@ -7,7 +7,7 @@
         padding-bottom: 2rem;
 
         .blog-posting__excerpt {
-            @include sassline(eta, $bodytype, 2, 1, all);
+            @include sassline(eta, $bodytype, 1.5, 1, all);
         }
 
         .blog-posting__media {
@@ -92,7 +92,7 @@
     }
 
     .blog-posting__meta {
-        @include baseline(zeta, $bodytype, $below: 0);
+        @include baseline(zeta, $bodytype, $below: 1);
     }
 
     .blog-posting__headline {
@@ -103,10 +103,6 @@
 .blog-posting__author,
 .blog-posting__pubdate {
     font-style: italic;
-}
-
-.blog-posting__pubdate {
-    display: none
 }
 
 .blog-posting__media {

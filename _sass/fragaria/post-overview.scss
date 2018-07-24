@@ -26,8 +26,8 @@
 
 // this has to be scoped so it beats specificity of .typeset
 .post-overview .post-overview__post-headline {
-    font-family: getFontFamily($bodytype);
-    @include sassline(eta, $bodytype, 2, 0, all);
+    font-family: getFontFamily($headingtype);
+    @include sassline(eta, $headingtype, 2, 0, all);
 
 }
 

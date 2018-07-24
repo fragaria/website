@@ -8,19 +8,22 @@
     @include deviceBreakpoint(tablet) {
         display: flex;
         // first bottom border
-        border-bottom: 2px $border-color solid;
+        // border-bottom: 2px $border-color solid;
         margin-top: 3rem;
         margin-bottom: 4rem;
 
-        // top border
-        @include baselineAwareBorder($orientation: 'top', $width: 2px);
+        // // top border
+        // @include baselineAwareBorder($orientation: 'top', $width: 2px);
         // second bottom border
-        @include baselineAwareBorder($orientation: 'bottom', $width: 2px, $offset: 2px);
+        @include baselineAwareBorder($orientation: 'bottom', $width: 4px, $offset: 38px);
     }
 }
 
 // logo image
 .sitenav__brand {
+    background: map-get($palette, white);
+    padding: .5em;
+
     @mixin snBrandSize($height) {
         $brand-dimension-ratio: 153 / 196;
 
@@ -71,7 +74,7 @@
     }
 
     // common links get spacing around them
-    &:not(--main):not(:last-child) {
+    &:not(&--main):not(:last-child) {
         margin-right: 1.5em;
 
         @include deviceBreakpoint(desktop) {
@@ -88,9 +91,27 @@
 .sitenav__link {
     text-transform: lowercase;
     transition: color .2s ease-in-out;
+    background: map-get($palette, white);
+    padding: 0 .75em;
 
     &:hover {
         color: map-get($palette, red);
+    }
+}
+
+.sitenav__linkset-item {
+    &:not(&--main):first-child .sitenav__link {
+        padding-left: 0;
+    }
+
+    &:last-child .sitenav__link {
+        padding-right: 0;
+    }
+
+    &--main .sitenav__link {
+        padding: .25em .75em;
+        color: map-get($palette, white);
+        background-color: map-get($palette, red);
     }
 }
 

@@ -53,7 +53,7 @@ $anchor-hover-color: map-get($palette, red);
 
 $border-color: $primary-color;
 
-$hr-color: map-get($palette, grey-medium);
+$hr-color: $primary-color;
 
 $caption-color: map-get($palette, grey-medium);
 
@@ -162,11 +162,17 @@ $bodytype: (
 );
 
 $headingtype: (
-    font-family: '"PlayFair Display SC", serif',
+    // font-family: '"PlayFair Display SC", serif',
+    // regular: 400,
+    // bold: 400,
+    // italic: italic,
+    // cap-height: 0.82
+
+    // test - replace headline font with sans-serif
+    font-family: "'Open Sans Condensed', sans-serif",
     regular: 400,
-    bold: 400,
-    italic: italic,
-    cap-height: 0.82
+    bold: 700,
+    cap-height: 0.75
 );
 
 $monospacetype: (

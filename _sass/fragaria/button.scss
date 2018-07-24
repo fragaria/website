@@ -1,13 +1,12 @@
 @mixin buttonStyle($foreground, $background) {
     color: $foreground;
-    background-color: $background;
+    background-color: transparentize($background, 0.5) ;
     transition: all .2s ease-in-out;
     text-transform: uppercase;
     font-family: getFontFamily($sansseriftype);
 
     &:hover {
-        background-color: $foreground;
-        color: $background!important;
+        background-color: $background;
     }
 }
 

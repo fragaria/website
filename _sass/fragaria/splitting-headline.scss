@@ -2,6 +2,7 @@
     position: relative;
     padding-bottom: 2rem;
     text-align: center;
+    text-transform: uppercase;
 
     &:before {
         content: '';
@@ -9,8 +10,8 @@
         width: 100%;
         top: 2rem;
         left: 0;
-        height: 2px;
-        background: $border-color;
+        height: 3px;
+        background: $hr-color;
         z-index: -1;
     }
 }

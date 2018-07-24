@@ -58,6 +58,7 @@ jekyll-archives:
 # ---------------------- custom configuration ----------------------------------
 
 company:
+    website_title: fragaria.cz
     official_name: Fragaria s.r.o.
     phone: +420 222 581 311
     email: info@fragaria.cz
@@ -76,4 +77,5 @@ company:
         twitter: fragariacz
         linkedin: fragaria-ltd-
         gplus: FragariaCz
+        github: fragaria
 

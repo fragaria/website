@@ -2,7 +2,7 @@
     {% for member in site.data.team %}
         {% capture member_slug %}{{ member.name | slugify }}{% endcapture %}
         {% capture member_url %}/#{{ member_slug }}{% endcapture %}
-        <article itemprop="employee" itemtype="http://schema.org/Person" class="team-member" id="{{ member_slug }}">
+        <article itemprop="employee" itemtype="http://schema.org/Person" itemscope class="team-member" id="{{ member_slug }}">
             <div class="team-member__avatar" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
                 <picture>
                     {% if member.avatar.src == 'github' %}

@@ -42,7 +42,7 @@ permalink: /blog/:year/:month/:day/:title/
 # --------------------------- plugins ------------------------------------------
 
 paginate_path: "/blog/archive/:num/"
-paginate: 11
+paginate: 12
 
 jekyll-archives:
     enabled:

@@ -2,7 +2,7 @@
     display: grid;
     grid-template-areas:
         "main"
-        "nav";
+        "breakdown";
     grid-row-gap: 4rem;
 }
 
@@ -10,8 +10,8 @@
     grid-area: main;
 }
 
-.v-blog-archive__nav {
-    grid-area: nav;
+.v-blog-archive__breakdown {
+    grid-area: breakdown;
 }
 
 .v-blog-archive-nav {

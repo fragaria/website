@@ -4,6 +4,11 @@
 
     &--horizontal .blog-posting__body {
         flex-direction: row;
+        padding-bottom: 2rem;
+
+        .blog-posting__excerpt {
+            @include sassline(eta, $bodytype, 2, 1, all);
+        }
 
         .blog-posting__media {
             background: none !important;
@@ -27,6 +32,7 @@
             height: 100%;
             z-index: 0;
             filter: grayscale(0);
+            margin: 0;
         }
 
         .blog-posting__content {
@@ -62,14 +68,11 @@
     }
 }
 
+
 .blog-posting__body {
     width: 100%;
     display: flex;
     flex-direction: column;
-
-    @include deviceBreakpoint(tablet) {
-        margin: 2rem 0;
-    }
 
     &:hover {
         .blog-posting__media {
@@ -84,6 +87,10 @@
 
 // this has to be scoped so it beats specificity of .typeset
 .blog-posting {
+    .blog-posting__excerpt {
+        @include sassline(eta, $bodytype, 2, 0, all);
+    }
+
     .blog-posting__meta {
         @include baseline(zeta, $bodytype, $below: 0);
     }
@@ -106,6 +113,7 @@
     width: 100%;
     flex: 1;
     min-height: 8rem;
+    margin-top: 2rem;
     background-size: cover;
     background-position: center;
     filter: grayscale(100%);

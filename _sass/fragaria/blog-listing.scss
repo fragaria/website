@@ -8,13 +8,6 @@
         grid-template-columns: repeat(3, 1fr);
         grid-auto-rows: minmax(10rem, auto);
     }
-
-    &--dense {
-        /* 4 columns on a row for tablet and up */
-        @include deviceBreakpoint(tablet) {
-            grid-template-columns: repeat(4, 1fr);
-        }
-    }
 }
 
 .blog-listing__post {
@@ -55,18 +48,27 @@
             @include baselineAwareBorderCancel($orientation: 'top');
         }
 
-        &:not(:nth-child(4)):not(:first-child) .blog-listing__post-inner {
+        // anything but first posting in the row should have left padding
+        &:not(:nth-child(3n + 4)):not(:first-child) .blog-listing__post-inner {
             padding-left: 2rem;
         }
 
+        // anything but last posting in the row should have right padding
         &:not(:nth-child(3n + 3)) .blog-listing__post-inner {
             padding-right: 2rem;
         }
 
+        // middle posting includes borders around it
         &:nth-child(3n + 2) .blog-listing__post-inner {
             border-left: 1px $border-color solid;
             border-right: 1px $border-color solid;
         }
+    }
+}
+
+.blog-listing__post--tablet-margin {
+    @include deviceBreakpoint(tablet) {
+        margin: 2rem 0;
     }
 }
 

@@ -7,18 +7,4 @@ title: Posts
     <h1 itemprop="headline" class="gamma">Posts</h1>
 </header>
 
-<main class="typeset">
-    {% assign posts = paginator.posts %}
 
-    <div class="blog-listing blog-listing--nofirstdivider">
-        {% for post in posts %}
-            <div class="blog-listing__post">
-                {% include posts/listing/standard.html post=post class='blog-listing__post-inner' %}
-            </div>
-        {% endfor %}
-    </div>
-</main>
-
-<nav>
-    {% include posts/pagination.html paginator=paginator %}
-</nav>

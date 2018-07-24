@@ -3,10 +3,33 @@ layout: default
 ---
 
 <div class="content-block v-blog-archive">
-    <main class="v-blog-archive__main">
+    <div class="v-blog-archive__main">
         {{ content }}
-    </main>
-    <nav class="v-blog-archive__nav v-blog-archive-nav typeset">
+
+        <main class="typeset">
+            {% if page.posts %}
+                {% assign posts = page.posts %}
+            {% elsif paginator %}
+                {% assign posts = paginator.posts %}
+            {% endif %}
+
+            <div class="blog-listing blog-listing--rowdivider blog-listing--nofirstdivider blog-listing--nolastpad">
+                {% for post in posts %}
+                    <div class="blog-listing__post">
+                        {% include posts/listing/standard.html post=post class='blog-listing__post-inner  blog-listing__post--tablet-magin' %}
+                    </div>
+                {% endfor %}
+            </div>
+        </main>
+
+        {% if paginator %}
+        <nav class="u-margin--top2">
+            {% include posts/pagination.html paginator=paginator %}
+        </nav>
+        {% endif %}
+    </div>
+
+    <nav class="v-blog-archive__breakdown v-blog-archive-nav typeset">
         <div class="v-blog-archive-nav__yearlist">
             <h2 class="newspaper-splitting-headline"><a href="{{ '/blog/archive/' | relative_url }}" class="newspaper-splitting-headline__fill">Archive</a></h2>
             {% include posts/year-list.html %}

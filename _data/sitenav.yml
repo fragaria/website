@@ -1,7 +1,7 @@
 - name: Works
-  url: /works/
+  url: /#works
 - name: Team
-  url: /team/
+  url: /#team
 - name: Blog
   url: /blog/
 - name: Career

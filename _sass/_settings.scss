@@ -11,6 +11,38 @@ $palette: (
     grey-dark: rgba(0,0,0,.8),
 );
 
+$brands: (
+    facebook: (
+        main:#3b5998,
+        alt: #fff,
+        icon: $icon--facebook,
+    ),
+    twitter: (
+        main: #1da1f2,
+        alt: #fff,
+        icon: $icon--twitter,
+    ),
+    gplus: (
+        main: #dd4b39,
+        alt: #fff,
+        icon: $icon--gplus,
+    ),
+    linkedin: (
+        main: #0077b5,
+        alt: #fff,
+        icon: $icon--linkedin,
+    ),
+    github: (
+        main: #333,
+        alt: #fff,
+        icon: $icon--github,
+    ),
+);
+
+@function getBrandInfo($brand, $prop) {
+    @return map-get(map-get($brands, $brand), $prop);
+}
+
 $primary-color: map-get($palette, black);
 
 $body-background: map-get($palette, white);
@@ -50,19 +82,19 @@ $button-variants: (
 
 $sharebox-variants: (
     facebook: (
-        foreground: #fff,
-        background:#3b5998,
-        icon: $icon--facebook,
+        foreground: getBrandInfo(facebook, alt),
+        background:getBrandInfo(facebook, main),
+        icon: getBrandInfo(facebook, icon),
     ),
     twitter: (
-        foreground: #fff,
-        background: #1da1f2,
-        icon: $icon--twitter,
+        foreground: getBrandInfo(twitter, alt),
+        background:getBrandInfo(twitter, main),
+        icon: getBrandInfo(twitter, icon),
     ),
     gplus: (
-        foreground: #fff,
-        background: #dd4b39,
-        icon: $icon--gplus,
+        foreground: getBrandInfo(gplus, alt),
+        background:getBrandInfo(gplus, main),
+        icon: getBrandInfo(gplus, icon),
     ),
 );
 
@@ -78,11 +110,11 @@ $breakpoints: (
     // zero
     break-0: 0,
     // mobile
-    break-1: 480,
+    break-1: 480, // 1 rem * 30
     // tablet
-    break-2: 768,
+    break-2: 768, // 1 rem * 48
     // desktop
-    break-3: 1400,
+    break-3: 1408, // 1rem * 88
 );
 
 // Root font-sizes for each breakpoint. Set to half desired line-height of body text.

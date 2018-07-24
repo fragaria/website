@@ -1,0 +1,60 @@
+@mixin memberProfileVariant($icon, $main) {
+    font-family: 'fragariacz-icons';
+
+    &:before {
+        color: $main;
+        content: $icon;
+    }
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(10rem, auto);
+    grid-row-gap: 4rem;
+
+    /* 3 columns on a row for tablet and up */
+    @include deviceBreakpoint(tablet) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(10rem, auto);
+        grid-gap: 4rem;
+    }
+}
+
+.team-member__avatar {
+    text-align: center;
+}
+
+.team-member__avatar-image {
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    width: 8rem;
+
+    @include deviceBreakpoint(tablet) {
+        width: 14rem;
+    }
+}
+
+.team-member__body {
+    text-align: center;
+}
+
+.team-member__profile {
+    @each $variantName, $variantSettings in $brands {
+        &--#{$variantName} {
+            @include memberProfileVariant(
+                map-get($variantSettings, icon),
+                map-get($variantSettings, main)
+            );
+        }
+    }
+
+    & + .team-member__profile {
+        margin-left: .25em;
+    }
+}
+
+.team-member__profile-body {
+    display: none;
+}

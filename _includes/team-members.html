@@ -1,0 +1,52 @@
+<div class="team-members">
+    {% for member in site.data.team %}
+        {% capture member_slug %}{{ member.name | slugify }}{% endcapture %}
+        {% capture member_url %}/#{{ member_slug }}{% endcapture %}
+        <article itemprop="employee" itemtype="http://schema.org/Person" class="team-member" id="{{ member_slug }}">
+            <div class="team-member__avatar" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                <picture>
+                    {% if member.avatar.src == 'github' %}
+                        <source srcset="https://github.com/{{ member.profiles.github }}.png?size=300" media="(min-width: 480px)" />
+                        <img class="team-member__avatar-image" src="https://github.com/{{ member.profiles.github }}.png?size=128" alt="{{ member.name }}" itemprop="contentUrl" />
+                    {% else %}
+                        <img class="team-member__avatar-image" src="{{ member.avatar.img }}" alt="{{ member.name }}" itemprop="contentUrl" />
+                    {% endif %}
+                </picture>
+            </div>
+            <div class="team-member__body typeset">
+                <h1 itemprop="name" class="gamma">{{ member.name }}</h1>
+                <p class="team-member__alt caption caption--nopad" itemprop="jobTitle">{{ member.alt }}</p>
+                <meta itemprop="gender" content="{{ member.gender }}">
+                <meta itemprop="nationality" content="{{ member.nationality }}">
+                <link itemprop="url" href="{{ member_url | relative_url }}">
+                <div class="team-member__profiles u-margin--top1">
+                    {% if member.profiles.twitter %}
+                        <a href="https://www.twitter.com/{{ member.profiles.twitter }}" target="_blank" itemprop="sameAs" class="team-member__profile team-member__profile--twitter">
+                            <span class="team-member__profile-body">Twitter</span>
+                        </a>
+                    {% endif %}
+                    {% if member.profiles.facebook %}
+                        <a href="https://www.facebok.com/{{ member.profiles.facebook }}" target="_blank" itemprop="sameAs" class="team-member__profile team-member__profile--facebook">
+                            <span class="team-member__profile-body">Facebook</span>
+                        </a>
+                    {% endif %}
+                    {% if member.profiles.gplus %}
+                        <a href="https://plus.google.com/{{ member.profiles.gplus }}" target="_blank" itemprop="sameAs" class="team-member__profile team-member__profile--gplus">
+                            <span class="team-member__profile-body">Google+</span>
+                        </a>
+                    {% endif %}
+                    {% if member.profiles.linkedin %}
+                        <a href="https://www.linkedin.com/in/{{ member.profiles.twitter }}" target="_blank" itemprop="sameAs" class="team-member__profile team-member__profile--linkedin">
+                            <span class="team-member__profile-body">LinkedIn</span>
+                        </a>
+                    {% endif %}
+                    {% if member.profiles.github %}
+                        <a href="https://github.com/{{ member.profiles.github }}" target="_blank" itemprop="sameAs" class="team-member__profile team-member__profile--github">
+                            <span class="team-member__profile-body">GitHub</span>
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+        </article>
+    {% endfor %}
+</div>

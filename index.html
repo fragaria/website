@@ -2,4 +2,20 @@
 layout: default
 ---
 
-<a href="{{ '/blog/' | relative_url }}">Blog</a>
+<div class="content-block typeset" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="{{ site.company.official_name }}">
+    <section class="v-home__team">
+        <h1 class="splitting-headline" id="works">
+            <span class="splitting-headline__fill">Works</span>
+        </h1>
+    </section>
+    <section class="v-home__team">
+        <meta itemprop="numberOfEmployees" content="{{ site.data.team.size }}">
+
+        <h1 class="splitting-headline" id="team">
+            <span class="splitting-headline__fill">Team</span>
+        </h1>
+
+        {% include team-members.html %}
+    </section>
+</div>

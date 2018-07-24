@@ -260,6 +260,10 @@ a {
     @include baseline(theta, $headingtype, 2, 2, all);
 
     color: $caption-color;
+
+    &--nopad {
+      @include baseline(theta, $headingtype, 2, 0, all);
+    }
   }
 
   // Nice spacing for captions.

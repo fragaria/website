@@ -8,7 +8,7 @@ layout: default
 
         <p class="article__meta">
             <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="article__author">
-                <span itemprop="name">{{ page.author }}</span>
+                by <span itemprop="name">{{ page.author }}</span>
             </span>
             <meta itemprop="datePublished" content="{{ include.post.date | date_to_xmlschema }}" />
             <span class="article__pubdate">{{ page.date | date: "%d.%m.%Y" }}</span>

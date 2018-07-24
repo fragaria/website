@@ -1,0 +1,168 @@
+- name: Martin Burián
+  alt: Havloid
+  nationality: Czech
+  gender: male
+  avatar:
+    src: img
+    img: http://via.placeholder.com/300x300
+  profiles:
+    twitter: martin_burian
+    linkedin: martinburi8n
+- name: Martin Bílek
+  alt: Především otec
+  nationality: Czech
+  gender: male
+  avatar:
+    src: github
+  profiles:
+    github: martinbilek
+    twitter: ajtea
+    linkedin: martin-b%C3%ADlek-47699542
+- name: Lukáš Marek
+  alt: Digitální plešoun
+  nationality: Czech
+  gender: male
+  avatar:
+    src: github
+  profiles:
+    github: krtek
+    twitter: krtek_cz
+    linkedin: krtek
+- name: Robin Gottfried
+  alt: Pábitel
+  nationality: Czech
+  gender: male
+  avatar:
+    src: github
+  profiles:
+    github: czervenka
+    twitter: czervenka
+    linkedin: robingottfried
+- name: Filip Vařecha
+  alt: Věčný optimista
+  nationality: Czech
+  gender: male
+  avatar:
+    src: github
+  profiles:
+    github: xaralis
+    twitter: xaralis
+    facebook: filip.varecha
+    linkedin: filip-varecha
+- name: Tibor Kulčár
+  alt: Aristokrat
+  nationality: Slovak
+  gender: male
+  avatar:
+    src: github
+  profiles:
+    github: tibor-kulcar
+    twitter: tiborkulcar
+    linkedin: tiborkulcar
+- name: Hynek Urban
+  alt: Skeptický Sudeťák
+  nationality: Czech
+  gender: male
+  avatar:
+    src: github
+  profiles:
+    github: hynek-urban
+- name: Ondřej Chmelař
+  alt: Ferda Mravenec
+  nationality: Czech
+  gender: male
+  avatar:
+    src: github
+  profiles:
+    github: ondrejchmelar
+    twitter: AndyTheEntity
+    linkedin: ondrejchmelar
+- name: Pavel Vojáček
+  alt: Ten, co spraví i zubařský rentgen
+  nationality: Czech
+  gender: male
+  avatar:
+    src: github
+  profiles:
+    github: pavel-mxsf
+    twitter: pavel_mxsf
+    linkedin: pavel-vojacek-14420713
+- name: Jirka Chadima
+  alt: Konzultant
+  nationality: Czech
+  gender: male
+  avatar:
+    src: github
+  profiles:
+    github: JirkaChadima
+    twitter: JirkaChadima
+    linkedin: jirichadima
+- name: Lukáš Turský
+  alt: Vrták
+  nationality: Slovak
+  gender: male
+  avatar:
+    src: img
+    img: http://via.placeholder.com/300x300
+  profiles:
+    github: xtursky
+    twitter: xtursky
+    linkedin: lukas-tursky-79584247
+- name: Milan Slezák
+  alt: Milan do každé firmy
+  nationality: Czech
+  gender: male
+  avatar:
+    src: img
+    img: http://via.placeholder.com/300x300
+  profiles:
+    linkedin: slezakm
+- name: Michal Dub
+  alt: Nimrod
+  nationality: Czech
+  gender: male
+  avatar:
+    src: github
+  profiles:
+    github: MichalMaM
+- name: Daniela Borošová
+  alt: Tango DJ
+  nationality: Slovak
+  gender: female
+  avatar:
+    src: img
+    img: http://via.placeholder.com/300x300
+  profiles:
+    linkedin: daniela-boro%C5%A1ov%C3%A1-1521833b
+- name: Kamil Daněk
+  alt: Ex-vědec
+  nationality: Czech
+  gender: male
+  avatar:
+    src: img
+    img: http://via.placeholder.com/300x300
+  profiles:
+- name: Adam David
+  alt: Kodér remote
+  nationality: Czech
+  gender: male
+  avatar:
+    src: img
+    img: http://via.placeholder.com/300x300
+  profiles:
+- name: Ondřej Pudiš
+  alt: Mladá krev
+  nationality: Czech
+  gender: male
+  avatar:
+    src: img
+    img: http://via.placeholder.com/300x300
+  profiles:
+- name: Marta Vaňková
+  alt: Duše Fostera
+  nationality: Czech
+  gender: female
+  avatar:
+    src: img
+    img: http://via.placeholder.com/300x300
+  profiles:

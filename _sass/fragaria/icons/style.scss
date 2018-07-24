@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'fragariacz-icons';
-  src:  url('#{$icomoon-font-path}/fragariacz-icons.eot?t4c1vm');
-  src:  url('#{$icomoon-font-path}/fragariacz-icons.eot?t4c1vm#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/fragariacz-icons.ttf?t4c1vm') format('truetype'),
-    url('#{$icomoon-font-path}/fragariacz-icons.woff?t4c1vm') format('woff'),
-    url('#{$icomoon-font-path}/fragariacz-icons.svg?t4c1vm#fragariacz-icons') format('svg');
+  src:  url('#{$icomoon-font-path}/fragariacz-icons.eot?jyqyjr');
+  src:  url('#{$icomoon-font-path}/fragariacz-icons.eot?jyqyjr#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/fragariacz-icons.ttf?jyqyjr') format('truetype'),
+    url('#{$icomoon-font-path}/fragariacz-icons.woff?jyqyjr') format('woff'),
+    url('#{$icomoon-font-path}/fragariacz-icons.svg?jyqyjr#fragariacz-icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,6 +26,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon--linkedin {
+  &:before {
+    content: $icon--linkedin; 
+  }
+}
+.icon--github {
+  &:before {
+    content: $icon--github; 
+  }
+}
 .icon--gplus {
   &:before {
     content: $icon--gplus; 

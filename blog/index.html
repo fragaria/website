@@ -24,8 +24,8 @@ layout: default
     </div>
 
     {% if featured_post %}
-        <div class="v-blog-home__section v-blog-home__section--tablet-padtop v-blog-home__section--nodivider">
-            {% include posts/listing/standard.html post=featured_post class='blog-posting--featured content-block__cover--mobile v-blog-home__featured' show_cta=true %}
+        <div class="v-blog-home__section v-blog-home__section--tablet-padtop v-blog-home__section--nodivider  content-block__cover--mobile">
+            {% include posts/listing/standard.html post=featured_post class='blog-posting--featured  v-blog-home__featured' show_cta=true %}
         </div>
     {% endif %}
 
@@ -40,7 +40,7 @@ layout: default
 
 </section>
 
-<section class="content-block typeset">
+<section class="content-block typeset u-margin--bottom2">
     {% assign more_posts = other_posts | slice: 10, 16 %}
     {% include posts/overview-list.html title='Older posts' cta_title='More posts' cta_link='/blog/archive/' posts=more_posts %}
 </section>

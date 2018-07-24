@@ -40,6 +40,10 @@
     text-align: center;
 }
 
+.team-member__profiles {
+    height: 2rem;
+}
+
 .team-member__profile {
     @each $variantName, $variantSettings in $brands {
         &--#{$variantName} {

@@ -11,6 +11,13 @@ layout: default
             <meta itemprop="image" content="{{ page.thumbnail }}">
         {% endif %}
 
+        <div itemprop="publisher" itemtype="http://schema.org/Organization" class="hidden" itemscope>
+            <div itemprop="logo" itemtype="http://schema.org/ImageObject" itemscope="">
+                <meta itemprop="url" content="{{ 'assets/img/strawberry.svg' | absolute_url }}">
+            </div>
+            <meta itemprop="name" content="{{ site.company.official_name }}">
+        </div>
+
         <p class="article__meta">
             <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="article__author">
                 by <span itemprop="name">{{ page.author }}</span>

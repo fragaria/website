@@ -6,7 +6,14 @@
                 <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="blog-posting__author">
                     by <span itemprop="name">{{ include.post.author }}</span>
                 </span>
-                <meta itemprop="publisher" content="{{ site.company.official_name }}" />
+
+                <div itemprop="publisher" itemtype="http://schema.org/Organization" class="hidden" itemscope>
+                    <div itemprop="logo" itemtype="http://schema.org/ImageObject" itemscope="">
+                        <meta itemprop="url" content="{{ 'assets/img/strawberry.svg' | absolute_url }}">
+                    </div>
+                    <meta itemprop="name" content="{{ site.company.official_name }}">
+                </div>
+
                 <meta itemprop="datePublished" content="{{ include.post.date | date_to_xmlschema }}" />
                 <link itemprop="mainEntityOfPage" href="{{ include.post.url }}" />
                 <span class="blog-posting__pubdate">{{ include.post.date | date: "%d.%m.%Y" }}</span>

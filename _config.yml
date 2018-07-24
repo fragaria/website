@@ -17,7 +17,7 @@ logo: "/assets/logo.svg" # Site logo
 
 sass:
     style: compressed
-    sass_dir: ./_sass
+    sass_dir: _sass
 
 # Build settings
 markdown: kramdown
@@ -35,6 +35,7 @@ exclude:
     - Gemfile
     - Gemfile.lock
     - __design
+    - .sass-cache
 
 permalink: /blog/:year/:month/:day/:title/
 

@@ -17,6 +17,8 @@ title: Posts
             </div>
         {% endfor %}
     </div>
-
-    {% include posts/pagination.html paginator=paginator %}
 </main>
+
+<nav>
+    {% include posts/pagination.html paginator=paginator %}
+</nav>

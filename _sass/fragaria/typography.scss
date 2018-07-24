@@ -9,6 +9,16 @@ html {
   -ms-text-size-adjust: 100%;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+audio,
+video {
+    width: 100%;
+}
+
 // Site-wide base styles.
 body {
   @include fontsize(eta, all);
@@ -17,6 +27,12 @@ body {
   font-style: normal;
   font-weight: map-get($bodytype, regular);
   line-height: 2rem;
+  color: $text-color;
+  background: $body-background;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
 }
 
 // Links.
@@ -31,28 +47,15 @@ a {
   }
 }
 
+// Text selection
+::selection {
+  background: $selection-color;
+  color: map-get($palette, white);
+  text-shadow: none;
+}
+
 // Styles for typeset text.
 .typeset {
-
-  // Nice underlines for text links.
-
-  // Now browsers do it better and by default
-
-  // p a, li a {
-  //   background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten($anchor-color,20%) 50%);
-  //   background-position: 0 93%;
-  //   background-repeat: repeat-x;
-  //   background-size: 100% 0.15rem;
-  //   text-shadow: 0.1rem 0 $backgroundColour,
-  //                0.15rem 0 $backgroundColour,
-  //               -0.1rem 0 $backgroundColour,
-  //               -0.15rem 0 $backgroundColour;
-
-  //   &:hover, &:active, &:focus {
-  //     background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,lighten($anchor-hover-color,20%) 50%);
-  //   }
-  // }
-
   // Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
   p {
     @include baseline($fontsize: zeta, $font: $bodytype, $lineheight: 2, $below: 2, $breakpoint: all);
@@ -62,7 +65,6 @@ a {
 
   // Headings. OpenType ligatures, discretionary ligatures and lining figures enabled if available.
   h1, h2, h3, h4, h5, h6 {
-    color: $headingColour;
     font-family: unquote(map-get($headingtype, font-family));
     font-feature-settings: 'dlig', 'liga', 'lnum', 'kern';
     font-style: normal;
@@ -257,7 +259,7 @@ a {
   .caption {
     @include baseline(theta, $headingtype, 2, 2, all);
 
-    color: $captionColour;
+    color: $caption-color;
   }
 
   // Nice spacing for captions.
@@ -308,6 +310,7 @@ a {
 
   // Horizontal rule.
   hr {
+    width: 100%;
     background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%, $hr-color 50%);
     background-position: 0 50%;
     background-repeat: repeat-x;
@@ -320,7 +323,7 @@ a {
 
   // Code block.
   code, pre {
-    background-color: $codeBackgroundColour;
+    background-color: $code-background-color;
     font-family: unquote(map-get($monospacetype, font-family));
   }
 

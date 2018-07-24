@@ -1,0 +1,25 @@
+.pagination {
+    @include sassline(delta, $headingtype, 2, 0, all);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    font-family: unquote(map-get($headingtype, font-family));
+
+    @include deviceBreakpoint(tablet) {
+        flex-direction: row;
+    }
+}
+
+.pagination__next {
+    @include deviceBreakpoint(tablet) {
+        margin-left: auto;
+    }
+}
+
+.pagination__previous {
+    @include deviceBreakpoint(tablet) {
+        margin-right: auto;
+    }
+}

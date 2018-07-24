@@ -23,6 +23,12 @@ $border-color: $primary-color;
 
 $hr-color: map-get($palette, grey-medium);
 
+$caption-color: map-get($palette, grey-medium);
+
+$code-background-color: map-get($palette, grey-light);
+
+$selection-color: map-get($palette, red);
+
 // Aliases for Sassline breakpoints, @see: $breakpoints
 $breakpoint-aliases: (
     zero: break-0,
@@ -131,12 +137,10 @@ $headingtype: (
     cap-height: 0.82
 );
 
+$monospacetype: (
+    font-family: 'Menlo, monospace',
+    regular: 400,
+    cap-height: 0.68
+);
+
 $sansSerif: 'Open Sans Condensed', sans-serif;
-
-$headingColour: $primary-color;
-$captionColour: #BDC8CC;
-$white: #FFFFFF;
-
-// Background colours.
-$backgroundColour: $body-background;
-$codeBackgroundColour: #F5F4F2;

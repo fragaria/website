@@ -92,7 +92,10 @@
     text-transform: lowercase;
     transition: color .2s ease-in-out;
     background: map-get($palette, white);
-    padding: 0 .75em;
+
+    @include deviceBreakpoint(tablet) {
+        padding: 0 .75em;
+    }
 
     &:hover {
         color: map-get($palette, red);
@@ -106,10 +109,13 @@
 
     &:last-child .sitenav__link {
         padding-right: 0;
+        float: right;
     }
 
     &--main .sitenav__link {
-        padding: .25em .75em;
+        padding: 0 .75em;
+        display: inline-block;
+        height: 2rem;
         color: map-get($palette, white);
         background-color: map-get($palette, red);
     }

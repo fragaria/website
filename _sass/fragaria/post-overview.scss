@@ -24,17 +24,17 @@
     }
 }
 
-.typeset {
-    .post-overview__post-headline {
-        font-family: unquote(map-get($bodytype, font-family));
-        @include sassline(eta, $bodytype, 2, 0, all);
-    }
-    p.post-overview__pubdate {
-        font-style:italic
-    }
+// this has to be scoped so it beats specificity of .typeset
+.post-overview .post-overview__post-headline {
+    font-family: getFontFamily($bodytype);
+    @include sassline(eta, $bodytype, 2, 0, all);
+
+}
+
+.post-overview__pubdate {
+    font-style: italic;
 }
 
 .post-overview__cta {
-    margin-top: 2rem;
-    @include baseline(zeta, $bodytype, 2, 2, all);
+    padding-top: 2rem;
 }

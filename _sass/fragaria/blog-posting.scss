@@ -79,30 +79,19 @@
 }
 
 .blog-posting__cta {
-    @include baseline(zeta, $bodytype, 2, 0, all);
+    padding-top: 1rem;
 }
 
-.typeset {
-    p {
-        &.blog-posting__meta {
-            margin-bottom: 0;
-        }
-
-        &.blog-posting__excerpt {
-            padding-top: 0;
-
-            a {
-                display: inline-block;
-            }
-        }
+// this has to be scoped so it beats specificity of .typeset
+.blog-posting {
+    .blog-posting__meta {
+        @include baseline(zeta, $bodytype, $below: 0);
     }
 
-    h1.blog-posting__headline {
+    .blog-posting__headline {
         text-transform: uppercase;
-        line-height: 3rem;
     }
 }
-
 
 .blog-posting__author,
 .blog-posting__pubdate {

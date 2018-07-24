@@ -122,7 +122,7 @@ $gutterwidths: (
 );
 
 $bodytype: (
-    font-family: 'serif',
+    font-family: "'Times New Roman', serif",
     regular: 400,
     bold: 700,
     italic: italic,
@@ -143,4 +143,9 @@ $monospacetype: (
     cap-height: 0.68
 );
 
-$sansSerif: 'Open Sans Condensed', sans-serif;
+$sansseriftype: (
+    font-family: "'Open Sans Condensed', sans-serif",
+    regular: 400,
+    bold: 700,
+    cap-height: 0.56
+);

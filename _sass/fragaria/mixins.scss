@@ -51,3 +51,7 @@
 @function deviceBreakpointWidth($alias) {
     @return map-get($breakpoints, getDeviceBreakpointName($alias)) / 16 * 1rem;
 }
+
+@function getFontFamily($type) {
+    @return unquote(map-get($type, font-family));
+}

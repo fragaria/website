@@ -4,9 +4,6 @@
     margin-top: 1rem;
     margin-bottom: 3rem;
     align-items: center;
-    font-family: $sansSerif;
-    letter-spacing: .1rem;
-    font-size: 1.15rem;
 
     @include deviceBreakpoint(tablet) {
         display: flex;
@@ -64,6 +61,10 @@
 }
 
 .sitenav__linkset-item {
+    font-family: getFontFamily($sansseriftype);
+    letter-spacing: .1rem;
+    font-size: 1.15rem;
+
     // this link is main and consumes all the available space
     &--main {
         flex: 1;
@@ -106,7 +107,7 @@
 }
 
 a.sitenav__menu-toggle-link {
-    font-family: unquote(map-get($headingtype, font-family));
+    font-family: getFontFamily($headingtype);
     transition: color .2s ease-in-out;
 
     &--active {

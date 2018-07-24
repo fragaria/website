@@ -23,7 +23,7 @@ video {
 body {
   @include fontsize(eta, all);
 
-  font-family: unquote(map-get($bodytype, font-family));
+  font-family: getFontFamily($bodytype);;
   font-style: normal;
   font-weight: map-get($bodytype, regular);
   line-height: 2rem;
@@ -65,7 +65,7 @@ a {
 
   // Headings. OpenType ligatures, discretionary ligatures and lining figures enabled if available.
   h1, h2, h3, h4, h5, h6 {
-    font-family: unquote(map-get($headingtype, font-family));
+    font-family: getFontFamily($headingtype);
     font-feature-settings: 'dlig', 'liga', 'lnum', 'kern';
     font-style: normal;
     font-weight: map-get($headingtype, bold);
@@ -218,7 +218,7 @@ a {
   table {
     @include sassline(eta, $headingtype, 2, 0, all);
 
-    font-family: unquote(map-get($headingtype, font-family));
+    font-family: getFontFamily($headingtype);
     font-feature-settings: 'liga', 'lnum', 'tnum', 'kern';
     font-style: normal;
     font-weight: map-get($headingtype, regular);
@@ -247,7 +247,7 @@ a {
   small, .caption {
     @include fontsize(theta, all);
 
-    font-family: unquote(map-get($headingtype, font-family));
+    font-family: getFontFamily($headingtype);
     font-style: normal;
     font-weight: map-get($headingtype, regular);
   }
@@ -324,7 +324,7 @@ a {
   // Code block.
   code, pre {
     background-color: $code-background-color;
-    font-family: unquote(map-get($monospacetype, font-family));
+    font-family: getFontFamily($monospacetype);
   }
 
   pre {

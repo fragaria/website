@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     list-style-type: none;
-    font-family: unquote(map-get($headingtype, font-family));
+    font-family: getFontFamily($headingtype);
 
     @include deviceBreakpoint(tablet) {
         flex-direction: row;

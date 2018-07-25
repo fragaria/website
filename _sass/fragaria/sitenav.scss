@@ -15,7 +15,7 @@
         // // top border
         // @include baselineAwareBorder($orientation: 'top', $width: 2px);
         // second bottom border
-        @include baselineAwareBorder($orientation: 'bottom', $width: 4px, $offset: 38px);
+        @include baselineAwareBorder($orientation: 'bottom', $width: 3px, $offset: 38px);
     }
 }
 
@@ -65,6 +65,7 @@
 
 .sitenav__linkset-item {
     font-family: getFontFamily($sansseriftype);
+    font-weight: map-get($sansseriftype, semi);
     letter-spacing: .1rem;
     font-size: 1.15rem;
 

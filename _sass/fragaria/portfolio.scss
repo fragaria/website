@@ -1,0 +1,134 @@
+$detail-background-color: map-get($palette, grey-light);
+$detail-border-color: map-get($palette, grey-semilight);
+
+.portfolio-strip {
+    position: relative;
+}
+
+.portfolio-strip__items {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(10rem, auto);
+    grid-row-gap: 4rem;
+    position: relative;
+
+    @include deviceBreakpoint(mobile) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(10rem, auto);
+        grid-gap: 4rem;
+    }
+
+    /* 4 columns on a row for tablet and up */
+    @include deviceBreakpoint(desktop) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(10rem, auto);
+        grid-gap: 4rem;
+    }
+}
+
+.portfolio-project {
+    display: flex;
+    flex-direction: column;
+    background: map-get($palette, red);
+
+    @include deviceBreakpoint(desktop) {
+        cursor: pointer;
+    }
+
+    .portfolio-project__headline,
+    .portfolio-project__subheadline {
+        color: map-get($palette, white);
+    }
+
+    .portfolio-project__headline {
+        @include sassline(delta, $headingtype, 3, 1);
+    }
+
+    .portfolio-project__subheadline {
+        @include sassline(epsilon, $headingtype, 2, 1);
+        font-weight: map-get($headingtype, regular);
+    }
+}
+
+.portfolio-project__media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 14rem;
+    background: radial-gradient(
+        circle at center,
+        map-get($palette, white) 45%,
+        map-get($palette, grey-light) 100%
+    );
+}
+
+.portfolio-project__image {
+    display: block;
+
+}
+
+.portfolio-project__label {
+    padding: 0 1rem 1rem;
+}
+
+.portfolio-project-detail {
+    display: flex;
+    width: 100%;
+
+    &--template {
+        display: none;
+    }
+}
+
+.portfolio-project-detail__desc {
+    margin-right: 4rem;
+    width: 36rem;
+}
+
+.portfolio-project-detail__gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    flex: 1;
+}
+
+.portfolio-project-detail__gallery-item {
+    padding: .25rem;
+    border: 1px map-get($palette, grey-semilight) solid;
+    background: map-get($palette, white);
+}
+
+.portfolio-strip__detail-container {
+    margin-top: 2rem;
+    position: relative;
+    display: none;
+
+    &--on  {
+        @include deviceBreakpoint(desktop) {
+            display: block;
+        }
+    }
+}
+
+.portfolio-strip__detail-triangle-wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+}
+
+.portfolio-strip__detail-triangle {
+    @include borderedTriangle(96px, 1px, $detail-background-color, $detail-border-color, up, true);
+
+    &:before,
+    &:after {
+        top: calc(-6rem + 1px);
+    }
+}
+
+.portfolio-strip__detail-container-body {
+    background: $detail-background-color;
+    padding: 2rem;
+    border: 1px $detail-border-color solid;
+}

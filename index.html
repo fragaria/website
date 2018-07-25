@@ -7,10 +7,12 @@ layout: default
     <section class="v-home__hero">
         <h1 class="v-home__hero-headline">We build software that <i>works</i>.<br>No <i>half-baked</i> solutions, no <i>false</i> promises.<br>Just state-of-the art <i>code</i>.</h1>
     </section>
-    <section class="v-home__team">
+    <section class="v-home__portfolio">
         <h1 class="splitting-headline" id="works">
             <span class="splitting-headline__fill">Works</span>
         </h1>
+
+        {% include portfolio-strip.html %}
     </section>
     <section class="v-home__team">
         <meta itemprop="numberOfEmployees" content="{{ site.data.team.size }}">
@@ -20,5 +22,12 @@ layout: default
         </h1>
 
         {% include team-members.html %}
+    </section>
+
+    <section class="v-home__company">
+        <h1 class="splitting-headline">
+            <span class="splitting-headline__fill">Get in touch</span>
+        </h1>
+
     </section>
 </div>

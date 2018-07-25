@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC:400,400i&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=latin-ext');
 
 // Colors
 $palette: (
     black: #000,
     white: #fff,
     red: #ea272e,
-    grey-light: rgba(0,0,0,.05),
-    grey-medium: rgba(0,0,0,.5),
-    grey-dark: rgba(0,0,0,.8),
+    grey-light: #f5f5f5,
+    grey-semilight: #bebebe,
+    grey-medium: #ccc,
+    grey-dark: #888,
 );
 
 $brands: (
@@ -55,7 +56,7 @@ $border-color: $primary-color;
 
 $hr-color: $primary-color;
 
-$caption-color: map-get($palette, grey-medium);
+$caption-color: map-get($palette, grey-dark);
 
 $code-background-color: map-get($palette, grey-light);
 
@@ -171,6 +172,7 @@ $headingtype: (
     // test - replace headline font with sans-serif
     font-family: "'Open Sans Condensed', sans-serif",
     regular: 300,
+    semi: 700,
     bold: 700,
     cap-height: 0.79
 );
@@ -184,6 +186,7 @@ $monospacetype: (
 $sansseriftype: (
     font-family: "'Open Sans Condensed', sans-serif",
     regular: 300,
+    semi: 700,
     bold: 700,
     cap-height: 0.79
 );

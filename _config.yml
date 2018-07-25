@@ -55,6 +55,10 @@ jekyll-archives:
         month: /blog/archive/month/:year-:month/
         tag: /blog/archive/tag/:name/
 
+cloudinary:
+    cloud_name: fragaria
+    cloud_path_prefix: fragaria.cz/
+
 # ---------------------- custom configuration ----------------------------------
 
 company:

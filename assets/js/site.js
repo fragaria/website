@@ -19,7 +19,7 @@ function portfolioStrip(rootElem) {
     const detailContainerBody = detailContainer.getElementsByClassName('js-portfolio-detail-container__body')[0];
     const viewport = detailContainer.getElementsByClassName('js-portfolio-detail-container__viewport')[0];
     const triangleElem = detailContainer.getElementsByClassName('js-portfolio-detail-container__triangle')[0];
-    let dimensionsCalculated = false;
+    let reinit = true;
 
     viewport.style.overflow = 'hidden';
     detailContainerBody.style.postion = 'absolute';
@@ -30,6 +30,11 @@ function portfolioStrip(rootElem) {
     const enableTranstions = () => {
         triangleElem.style.transition = 'transform .3s ease-in-out';
         detailContainerBody.style.transition = 'transform .3s ease-in-out';
+    }
+
+    const disableTransitions = () => {
+        triangleElem.style.transition = 'none';
+        detailContainerBody.style.transition = 'none';
     }
 
     // iterate over all carousel items
@@ -67,12 +72,8 @@ function portfolioStrip(rootElem) {
      *
      * Once dimensions are set, we position to the first item.
      */
-    const updateDimensions = () => {
-        if (dimensionsCalculated) {
-            return;
-        }
-
-        dimensionsCalculated = true;
+    const updateDimensions = (activateCallback) => {
+        disableTransitions();
 
         const viewportWidth = getViewportWidth();
         let minHeight = 0;
@@ -83,7 +84,7 @@ function portfolioStrip(rootElem) {
         }
         viewport.style['min-height'] = minHeight + 'px';
 
-        activateDetail(items[0]);
+        activateCallback();
         setTimeout(enableTranstions, 0);
     }
 
@@ -120,11 +121,16 @@ function portfolioStrip(rootElem) {
             if (item.classList.contains(itemOnClass)) {
                 item.classList.remove(itemOnClass);
                 detailContainer.classList.remove(containerOnClass);
+                reinit = true;
             } else {
                 item.classList.add(itemOnClass);
                 detailContainer.classList.add(containerOnClass);
-                updateDimensions();
-                activateDetail(item);
+                if (reinit) {
+                    reinit = false;
+                    updateDimensions(() => activateDetail(item));
+                } else {
+                    activateDetail(item);
+                }
             }
 
         });

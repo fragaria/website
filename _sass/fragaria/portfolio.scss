@@ -1,6 +1,7 @@
 $detail-background-color: map-get($palette, grey-light);
 $detail-border-color: map-get($palette, grey-semilight);
 
+// a list of portfolio items
 .portfolio-strip {
     position: relative;
 }
@@ -26,6 +27,7 @@ $detail-border-color: map-get($palette, grey-semilight);
     }
 }
 
+// single project within portfolio, has image and caption
 .portfolio-project {
     display: flex;
     flex-direction: column;
@@ -50,11 +52,14 @@ $detail-border-color: map-get($palette, grey-semilight);
     }
 }
 
+// project image wrapper
 .portfolio-project__media {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 14rem;
+    // logos like to be on white background but our page background is also white
+    // it is solved by having gray gradient with circle inside wrapping the logo
     background: radial-gradient(
         circle at center,
         map-get($palette, white) 45%,
@@ -62,29 +67,36 @@ $detail-border-color: map-get($palette, grey-semilight);
     );
 }
 
+// project image itself
 .portfolio-project__image {
     display: block;
-
 }
 
+// project caption
 .portfolio-project__label {
     padding: 0 1rem 1rem;
 }
 
+
+// detail describing the project, detached from it by JS and displayed separately
 .portfolio-project-detail {
     display: flex;
     width: 100%;
 
+    // this is how detail body template is marked
     &--template {
         display: none;
     }
 }
 
+// a paragraph describing the project
 .portfolio-project-detail__desc {
     margin-right: 4rem;
     width: 36rem;
 }
 
+
+// few pictures for a project which has some
 .portfolio-project-detail__gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -92,17 +104,21 @@ $detail-border-color: map-get($palette, grey-semilight);
     flex: 1;
 }
 
+// single image withing gallery
 .portfolio-project-detail__gallery-item {
     padding: .25rem;
     border: 1px map-get($palette, grey-semilight) solid;
     background: map-get($palette, white);
 }
 
+
+// container for displaying the detail.
 .portfolio-strip__detail-container {
     margin-top: 2rem;
     position: relative;
     display: none;
 
+    // only displayed on desktop devices
     &--on  {
         @include deviceBreakpoint(desktop) {
             display: block;
@@ -110,6 +126,8 @@ $detail-border-color: map-get($palette, grey-semilight);
     }
 }
 
+// triangle-like pointer, aligned by JS so we need to have it wrapped by something
+// which can be moved easily
 .portfolio-strip__detail-triangle-wrap {
     position: absolute;
     left: 0;
@@ -118,6 +136,7 @@ $detail-border-color: map-get($palette, grey-semilight);
     height: 0;
 }
 
+// triangle pointer
 .portfolio-strip__detail-triangle {
     @include borderedTriangle(96px, 1px, $detail-background-color, $detail-border-color, up, true);
 
@@ -127,6 +146,7 @@ $detail-border-color: map-get($palette, grey-semilight);
     }
 }
 
+// body of the project detail container
 .portfolio-strip__detail-container-body {
     background: $detail-background-color;
     padding: 2rem;

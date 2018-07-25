@@ -8,6 +8,10 @@
     - nodejs
     - mongodb
     - aws
+  gallery:
+    - https://picsum.photos/200?random
+    - https://picsum.photos/200?random
+    - https://picsum.photos/200?random
 - title: Komerční Banka
   job: Frontend strategy kickoff
   desc: >
@@ -26,6 +30,10 @@
     - angular
     - java
     - elasticsearch
+  gallery:
+    - https://picsum.photos/200?random
+    - https://picsum.photos/200?random
+    - https://picsum.photos/200?random
 - title: Adventura
   job: Travel agency portfolio management
   desc: >

@@ -9,26 +9,32 @@
                     <h1 class="portfolio-project__headline">{{ project.title }}</h1>
                     <div class="caption portfolio-project__subheadline">{{ project.job }}</div>
                 </div>
+                <!-- @note: template will not be visible, it's only copied down to the detail container -->
                 <div class="portfolio-project-detail portfolio-project-detail--template js-portfolio-strip-item-template">
                     <div class="portfolio-project-detail__desc">
                         <p>{{ project.desc }}</p>
                         {% include posts/taglist.html tags=project.tags %}
                     </div>
+                    {% if project.gallery %}
+
                     <div class="portfolio-project-detail__gallery">
-                        <img class="portfolio-project-detail__gallery-item" src="https://picsum.photos/200?random" alt="">
-                        <img class="portfolio-project-detail__gallery-item" src="https://picsum.photos/200?random" alt="">
-                        <img class="portfolio-project-detail__gallery-item" src="https://picsum.photos/200?random" alt="">
+                        {% for image in project.gallery %}
+                            <img class="portfolio-project-detail__gallery-item" src="{{ image }}" alt="{{ project.title }} visualisation ({{ forloop.index + 1 }} / {{ project.gallery.size }})">
+                        {% endfor %}
                     </div>
+                    {% endif %}
                 </div>
             </article>
         {% endfor %}
     </div>
-    <div class="portfolio-strip__detail-container js-portfolio-detail-container">
+    <div class="portfolio-strip__detail-container   js-portfolio-detail-container">
         <div class="portfolio-strip__detail-triangle-wrap">
-            <div class="portfolio-strip__detail-triangle js-portfolio-detail-container__triangle"></div>
+            <div class="portfolio-strip__detail-triangle  js-portfolio-detail-container__triangle"></div>
         </div>
         <div class="portfolio-strip__detail-container-body">
+            <!-- carousel viewport, stays constant -->
             <div class="js-portfolio-detail-container__viewport">
+                <!-- carousel body, moves on x-axis -->
                 <div class="js-portfolio-detail-container__body"></div>
             </div>
         </div>

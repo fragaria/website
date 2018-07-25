@@ -9,6 +9,10 @@ function siteMenu(rootElem) {
     }
 }
 
+/**
+ * Simple carousel implementation.
+ * @param {HTMLElement} rootElem
+ */
 function portfolioStrip(rootElem) {
     const items = Array.from(rootElem.getElementsByClassName('js-portfolio-strip-item'));
     const detailContainer = rootElem.getElementsByClassName('js-portfolio-detail-container')[0];
@@ -22,21 +26,25 @@ function portfolioStrip(rootElem) {
     detailContainerBody.style.width = '9999px';
     detailContainerBody.style.transform = 'translateX(0px)';
 
+    // enable triangle and strip row transitions
     const enableTranstions = () => {
         triangleElem.style.transition = 'transform .3s ease-in-out';
         detailContainerBody.style.transition = 'transform .3s ease-in-out';
     }
 
+    // iterate over all carousel items
     const forEachItem = handler => {
         for (let item of items) {
             handler(item);
         }
     }
 
+    // return width of viewport
     const getViewportWidth = () => {
         return viewport.getBoundingClientRect().width;
     }
 
+    // position triangle to mark `item`
     const positionTriangle = (item) => {
         const triangleWidth = triangleElem.getBoundingClientRect().width;
         const itemWidth = item.getBoundingClientRect().width;
@@ -46,12 +54,19 @@ function portfolioStrip(rootElem) {
         triangleElem.style.transform = 'translateX(' + offset + 'px)';
     };
 
+    // activate detail of the `item`
     const activateDetail = (item) => {
         positionTriangle(item);
         const idx = items.indexOf(item);
         detailContainerBody.style.transform = 'translateX(-' + getViewportWidth() * idx + 'px)';
     }
 
+    /**
+     * Since dimensions can only be calculated when element is displayed,
+     * we can only do it when some detail is first requested.
+     *
+     * Once dimensions are set, we position to the first item.
+     */
     const updateDimensions = () => {
         if (dimensionsCalculated) {
             return;
@@ -72,6 +87,7 @@ function portfolioStrip(rootElem) {
         setTimeout(enableTranstions, 0);
     }
 
+    // Attaches event handler that listens to click events on projects.
     const attachItemHandler = item => {
         const itemDetailHTML = item.getElementsByClassName('js-portfolio-strip-item-template')[0].innerHTML;
 

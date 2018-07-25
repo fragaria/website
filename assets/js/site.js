@@ -102,6 +102,11 @@ function portfolioStrip(rootElem) {
         detailContainerBody.appendChild(detailWrapElement);
 
         item.addEventListener('click', function () {
+            // do not bother on mobiles
+            if (window.innerWidth < 1200) {
+                return;
+            }
+
             const itemOnClass = 'js-portfolio-strip-item--on';
             const containerOnClass = 'portfolio-strip__detail-container--on';
 

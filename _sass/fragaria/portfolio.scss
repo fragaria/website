@@ -129,6 +129,7 @@ $detail-border-color: map-get($palette, grey-semilight);
 // triangle-like pointer, aligned by JS so we need to have it wrapped by something
 // which can be moved easily
 .portfolio-strip__detail-triangle-wrap {
+    pointer-events: none;
     position: absolute;
     left: 0;
     top: 0;

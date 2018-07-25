@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,700&subset=latin-ext');
 
 // Colors
 $palette: (
     black: #000,
     white: #fff,
     red: #ea272e,
-    grey-light: #f5f5f5,
+    grey-light: #fafafa,
     grey-semilight: #bebebe,
     grey-medium: #ccc,
     grey-dark: #888,
@@ -155,11 +156,16 @@ $gutterwidths: (
 );
 
 $bodytype: (
-    font-family: "'Times New Roman', serif",
+    font-family: "'PT serif', serif",
     regular: 400,
     bold: 700,
     italic: italic,
     cap-height: 0.65
+    // font-family: "'Times New Roman', serif",
+    // regular: 400,
+    // bold: 700,
+    // italic: italic,
+    // cap-height: 0.65
 );
 
 $headingtype: (

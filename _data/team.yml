@@ -102,8 +102,7 @@
   nationality: Slovak
   gender: male
   avatar:
-    src: img
-    img: http://via.placeholder.com/300x300
+    src: github
   profiles:
     github: xtursky
     twitter: xtursky

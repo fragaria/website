@@ -31,3 +31,10 @@
 .v-home__portfolio {
     margin-bottom: 2rem;
 }
+
+.v-home__team,
+.v-home__company {
+    @include deviceBreakpoint(desktop) {
+        margin-top: 8rem;
+    }
+}

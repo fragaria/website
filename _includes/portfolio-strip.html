@@ -1,7 +1,17 @@
 <div class="portfolio-strip js-portfolio-strip">
     <div class="portfolio-strip__items">
         {% for project in site.data.portfolio %}
-            <article class="portfolio-project js-portfolio-strip-item">
+            <article class="portfolio-project js-portfolio-strip-item" itemtype="https://schema.org/SoftwareApplication" itemscope>
+                <meta itemprop="applicationCategory" content="website">
+                <meta itemprop="operatingSystem" content="all">
+
+                <span itemprop="author" itemtype="http://schema.org/Organization" class="hidden" itemscope>
+                    <span itemprop="logo" itemtype="http://schema.org/ImageObject" itemscope="">
+                        <meta itemprop="url" content="{{ 'assets/img/strawberry.svg' | absolute_url }}">
+                    </span>
+                    <meta itemprop="name" content="{{ site.company.official_name }}">
+                </span>
+
                 <div class="portfolio-project__media">
                     <img class="portfolio-project__img" src="{% cloudinary_url project.img crop='fit' height='128' width='128' format='png' %}" alt="{{ project.title }}">
                 </div>
@@ -19,7 +29,7 @@
 
                     <div class="portfolio-project-detail__gallery">
                         {% for image in project.gallery %}
-                            <img class="portfolio-project-detail__gallery-item" src="{{ image }}" alt="{{ project.title }} visualisation ({{ forloop.index + 1 }} / {{ project.gallery.size }})">
+                            <img itemprop="screenshot" class="portfolio-project-detail__gallery-item" src="{{ image }}" alt="{{ project.title }} visualisation ({{ forloop.index + 1 }} / {{ project.gallery.size }})">
                         {% endfor %}
                     </div>
                     {% endif %}

@@ -1,8 +1,6 @@
 # Fragaria.cz website
 
-Fraga
-
-[![Build Status](https://travis-ci.org/fragaria/website.png?branch=master)](https://travis-ci.org/fragaria/website)
+[![Build Status](https://travis-ci.org/fragaria/website.svg?branch=master)](https://travis-ci.org/fragaria/website)
 
 ## Table of contents
 

@@ -1,8 +1,12 @@
-# Fragaria website
+# Fragaria.cz website
+
+Fraga
+
+[![Build Status](https://travis-ci.org/fragaria/website.png?branch=master)](https://travis-ci.org/fragaria/website)
 
 ## Table of contents
 
-- [Fragaria website](#fragaria-website)
+- [Fragaria.cz website](#fragariacz-website)
     - [Table of contents](#table-of-contents)
 - [Development](#development)
     - [Installation](#installation)

@@ -151,3 +151,8 @@ handlers.forEach(({className, handler}) => {
     }
 });
 
+console.log(window.location.href);
+
+if (window.location.href.indexOf('?showgrid') !== -1) {
+    document.getElementsByClassName('js-baseline-grid')[0].classList.add('baseline-grid--visible');
+}

@@ -1,0 +1,18 @@
+- title: Working agile
+  icon: icon--power
+  description: No waterfalls here. We belive agile is the only right way to do it.
+- title: Open source
+  icon: icon--gnu
+  description: We support open source and we regularly contribute to it.
+- title: Home office
+  icon: icon--house
+  description: Working from home is easier than ever. That's why consider it a common practice.
+- title: Sick days
+  icon: icon--thermometer
+  description: Sometimes one's not feeling OK. Or the night was to rough.
+- title: Beers and BBQ
+  icon: icon--beer
+  description: A glass of beer after hard work is always welcome.
+- title: Office in the city center
+  icon: icon--city
+  description: We're based on Karlovo náměstí. Top-class locality.

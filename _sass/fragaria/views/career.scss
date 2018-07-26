@@ -1,0 +1,126 @@
+$full-view-break: 1000px;
+
+.v-career-section + .v-career-section {
+    margin-top: 4rem;
+}
+
+.v-career-section--halfsplit {
+    display: grid;
+    grid-template-areas:
+        "first"
+        "second";
+    grid-template-rows: auto;
+    grid-gap: 2rem;
+
+    @media (min-width: $full-view-break) {
+        grid-template-areas: "first second";
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10rem;
+    }
+
+    .v-career-section__block:first-child {
+        grid-area: first;
+    }
+    .v-career-section__block:last-child {
+        grid-area: second;
+    }
+}
+
+.v-career-section--halfsplit.v-career-section--reversed {
+    @media (min-width: $full-view-break) {
+        .v-career-section__block:first-child {
+            grid-area: second;
+        }
+        .v-career-section__block:last-child {
+            grid-area: first;
+        }
+    }
+}
+
+.v-career-section {
+    .v-career-section__headline {
+        br {
+            content: '';
+            padding: 0 .25em 0 0;
+        }
+
+        i {
+            color: map-get($palette, red);
+        }
+
+        @include sassline(alpha, $headingtype, $lineheight: 3, $breakpoint: all);
+
+        @include deviceBreakpoint(tablet) {
+            @include sassline(alpha, $headingtype, $lineheight: 5, $breakpoint: all);
+
+            br {
+                display: block;
+            }
+        }
+    }
+}
+
+.v-career-section--emphasized {
+    background-color: map-get($palette, red);
+    color: map-get($palette, white);
+    padding: 3rem;
+}
+
+.v-career-section__contactbutton {
+    align-self: center;
+
+    @media (min-width: $full-view-break) {
+        justify-self: right;
+    }
+}
+
+
+
+.v-career-facts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 0 2rem;
+}
+
+.v-career-facts-grid__item {
+    text-align: center;
+}
+
+.v-career-facts-grid .v-career-facts-grid__title {
+    @include sassline(zeta, $headingtype, $lineheight: 2, $below: 0, $breakpoint: all);
+}
+
+.v-career-facts-grid .v-career-facts-grid__icon {
+    font-size: 2rem;
+
+    &:before {
+        color: $text-color !important;
+    }
+}
+
+
+
+
+
+.v-career-tech-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 2rem;
+}
+
+.v-career-tech-grid__item {
+    text-align: center;
+}
+
+.v-career-tech-grid__image {
+    display: block;
+    height: 4rem;
+    width: 4rem;
+    margin: auto;
+}
+
+.v-career-tech-grid .v-career-tech-grid__title {
+    @include sassline(zeta, $headingtype, $lineheight: 2, $below: 0, $breakpoint: all);
+}

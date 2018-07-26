@@ -39,6 +39,7 @@
 
 .footer__copy {
     padding-left: 0;
+    margin-top: 1rem;
     font-family: getFontFamily($sansseriftype);
     letter-spacing: .09em;
     color: map-get($palette, gray-dark);
@@ -47,6 +48,7 @@
     @include sassline(theta, $sansseriftype, 1, 0);
 
     @include deviceBreakpoint(tablet) {
+        margin-top: 0;
         padding-left: 1rem;
         text-align: left;
     }

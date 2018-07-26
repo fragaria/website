@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+<div class="content-block v-career typeset">
+
+    <section class="v-career-section v-career-section--halfsplit v-career-section--reversed">
+        <div class="v-career-section__block">
+            <h1 class="v-career-section__headline">Career<br>in <i>Fragaria</i></h1>
+            <p>Fragaria is a company with some serious software development history. The company is build upon people with real skills. You can be sure to learn a lot. Fast.</p>
+            <p>Besides developing great web apps, we like being people too. That's why we value friendship and understanding as our top priorities. Expect great collective full of interesting characters. Beers and parties included.</p>
+        </div>
+        <div class="v-career-section__block">
+            <div class="v-career-facts-grid">
+                {% for fact in site.data.facts %}
+                    <div class="v-career-facts-grid__item">
+                        <div class="v-career-facts-grid__icon {{ fact.icon }}"></div>
+                        <h2 class="v-career-facts-grid__title">{{ fact.title }}</h2>
+                        <p class="v-career-facts-grid__desc">{{ fact.description }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="v-career-section v-career-section--emphasized v-career-section--halfsplit v-career-section--main content-block__cover--mobile">
+        <div class="v-career-section__block">
+            <h1>Have we grabbed your attention?<br>Don't hesitate to get in touch.</h1>
+        </div>
+        <div class="v-career-section__block v-career-section__contactbutton">
+            <a href="mailto:hr@fragaria.cz" class="button">Contact us</a>
+        </div>
+    </section>
+
+    <section class="v-career-section v-career-section--halfsplit">
+        <div class="v-carrer-section__block">
+            <h1 class="v-career-section__headline">What<br><i>technologies</i><br>do we use?</h1>
+            <p>
+                We enjoy working with the best tools currently available.<br>
+                Code quality is paramount for us and we're not afraid to keep up with the latest trends in the web world.
+            </p>
+        </div>
+        <div class="v-career-section__block">
+            <div class="v-career-tech-grid">
+                {% for tech in site.data.tech %}
+                    <div class="v-career-tech-grid__item">
+                        <img class="v-career-tech-grid__image" src="{{ tech.img | relative_url }}" alt="{{ tech.title }}">
+                        <h2 class="v-career-tech-grid__title">{{ tech.title }}</h2>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+
+    <section class="v-career-section">
+        <h1 class="splitting-headline">
+            <span class="splitting-headline__fill">Our team</span>
+        </h1>
+
+        {% include team-members.html %}
+    </section>
+</div>

@@ -1035,15 +1035,15 @@ můžeme pustit do recenzí konkrétních sluchátek.
 
                 <div class="form__line">
                     <label for="name" class="form-label">Your name</label>
-                    <input class="form-control" type="text" name="name">
+                    <input class="form-control" type="text" name="name" required>
                 </div>
                 <div class="form__line">
                     <label for="name" class="form-label">Your email</label>
-                    <input class="form-control" type="email" name="_replyto">
+                    <input class="form-control" type="email" name="_replyto" required>
                 </div>
                 <div class="form__line">
                     <label for="name" class="form-label">Your message</label>
-                    <textarea class="form-control" name="message"></textarea>
+                    <textarea class="form-control" name="message" required></textarea>
                 </div>
                 <div class="form__submit">
                     <input type="submit" class="button" value="Send">
@@ -1060,8 +1060,8 @@ můžeme pustit do recenzí konkrétních sluchátek.
                 <img alt="Fragaria s.r.o." class="footer__brand" src="/website/assets/img/strawberry.svg">
             </a>
             <div class="footer__copy">
-                <div class="footer__copy-line">FRAGARIA (C) 2018</div>
-                <div class="footer__copy-line">Hard at work building the awesome.</div>
+                <div class="footer__copy-line footer__copy-line--emphasized">FRAGARIA (C) 2018</div>
+                <div class="footer__copy-line">Talk is cheap, show me some code.</div>
             </div>
         </div>
         <div class="footer__social">

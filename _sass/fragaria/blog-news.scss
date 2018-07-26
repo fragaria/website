@@ -2,20 +2,35 @@
     background: map-get($palette, gray-light);
     position: relative;
     margin-top: 3rem;
-    padding: 3rem;
+    padding: 1rem;
+
+    @include deviceBreakpoint(tablet) {
+        padding: 3rem;
+    }
 }
 
 .blog-news__headline {
-    position: absolute;
-    top: calc(-3rem + 1px);
-    right: 3rem;
     color: map-get($palette, gray-dark);
+    position: absolute;
+    width: calc(100% - 2rem);
+    top: calc(-3rem + 1px);
+    text-align: center;
+
+    @include deviceBreakpoint(tablet) {
+        width: auto;
+        right: 3rem;
+    }
 }
 
 .blog-news__posts {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
     grid-gap: 2rem;
+
+    @include deviceBreakpoint(tablet) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2rem;
+    }
 }
 
 .blog-news__more {

@@ -93,6 +93,8 @@ $detail-border-color: map-get($palette, gray-semilight);
 .portfolio-project-detail__desc {
     margin-right: 4rem;
     width: 36rem;
+    font-family: getFontFamily($headingtype);
+    @include sassline(epsilon, $headingtype, 2, 1);
 }
 
 

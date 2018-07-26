@@ -1,11 +1,22 @@
 function siteMenu(rootElem) {
     const toggles = rootElem.getElementsByClassName('js-sitenav-menu-toggle');
+    const links = rootElem.getElementsByClassName('js-sitenav-link');
 
     for (let toggle of toggles) {
         toggle.addEventListener('click', function () {
             rootElem.classList.toggle('sitenav-wrapper--show');
             toggle.classList.toggle('sitenav__menu-toggle-link--active');
         });
+    }
+
+    for (let link of links) {
+        link.addEventListener('click', function () {
+            rootElem.classList.remove('sitenav-wrapper--show');
+        });
+
+        for (let toggle of toggles) {
+            toggle.classList.remove('sitenav__menu-toggle-link--active');
+        }
     }
 }
 

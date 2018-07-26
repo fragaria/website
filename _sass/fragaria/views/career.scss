@@ -1,17 +1,21 @@
 $full-view-break: 1000px;
 
+// spacing of individual section blocks
 .v-career-section + .v-career-section {
     margin-top: 4rem;
 }
 
+// --halfsplit means it has two columns on a single row
 .v-career-section--halfsplit {
     display: grid;
+    // columns are displayed below each other on mobile
     grid-template-areas:
         "first"
         "second";
     grid-template-rows: auto;
     grid-gap: 2rem;
 
+    // columns are displayed next to each other on desktop
     @media (min-width: $full-view-break) {
         grid-template-areas: "first second";
         grid-template-columns: 1fr 1fr;
@@ -26,7 +30,9 @@ $full-view-break: 1000px;
     }
 }
 
+// in --reversed mode, columns are swapped
 .v-career-section--halfsplit.v-career-section--reversed {
+    // ...but only on desktop
     @media (min-width: $full-view-break) {
         .v-career-section__block:first-child {
             grid-area: second;
@@ -38,7 +44,9 @@ $full-view-break: 1000px;
 }
 
 .v-career-section {
+    // section headline
     .v-career-section__headline {
+        // hide typography breaks on mobile
         br {
             display: none;
         }
@@ -47,13 +55,12 @@ $full-view-break: 1000px;
             color: map-get($palette, red);
         }
 
-        // @include sassline(alpha, $headingtype, $lineheight: 3, $breakpoint: 0);
-
         @include sassline(alpha, $headingtype, $lineheight: 4);
 
         @include deviceBreakpoint(tablet) {
             @include sassline(alpha, $headingtype, $lineheight: 5, $breakpoint: all);
 
+            // display typography breaks on desktop
             br {
                 display: block;
             }
@@ -61,12 +68,14 @@ $full-view-break: 1000px;
     }
 }
 
+// special section that has emphasized background
 .v-career-section--emphasized {
     background-color: map-get($palette, red);
     color: map-get($palette, white);
     padding: 3rem;
 }
 
+// align 'contact us' button
 .v-career-section__contactbutton {
     align-self: center;
 
@@ -76,7 +85,7 @@ $full-view-break: 1000px;
 }
 
 
-
+// grid for facts about the company
 .v-career-facts-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -107,7 +116,7 @@ $full-view-break: 1000px;
 
 
 
-
+// grid for technologies used in the company
 .v-career-tech-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;

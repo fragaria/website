@@ -8,7 +8,10 @@
 # Site settings
 title: fragaria.cz
 email: info@fragaria.cz
-description: ...
+description: >
+    We are a software development company based in Czech Republic. Our
+    specialization are state-of-the-art web without compromises applications
+    that you can rely on. JavaScript, Python, NodeJS, Angular or Vue.js... we know it all.
 keywords: fragaria, software, vývoj software, webové aplikace, python, javascript, angular, elasticsearch, html, css
 url: "https://fragaria.cz" # the base hostname & protocol for your site
 baseurl: "/website/"

@@ -1,5 +1,23 @@
 <head>
-    {% capture title %}{% if page.ogtitle %}{{ page.ogtitle }} | {% elsif page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}{% endcapture %}
+    {%- capture posts_archive_title -%}
+        {%- if page.type == 'tag' -%}
+            Posts tagged with "{{ page.title }}"
+        {%- elsif page.type == 'year' -%}
+            Posts in {{ page.date | date: '%Y' }}
+        {%- elsif page.type == 'month' -%}
+            Posts in {{ page.date | date: '%Y %b' }}
+        {%- endif -%}
+    {%- endcapture -%}
+
+    {%- capture page_title -%}
+        {%- if posts_archive_title != '' -%}
+            {{ posts_archive_title | escape }}
+        {%- elsif page.title -%}
+            {{ page.title | escape }} {% if paginator %} - Page {{ paginator.page }} {% endif %}
+        {%- endif -%}
+    {%- endcapture -%}
+
+    {% capture title %}{% if page_title != '' %}{{ page_title }} | {% endif %}{{ site.title | escape }}{% endcapture %}
     {% capture description %}{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | replace: '<br>', ' ' | strip_html | strip_newlines | truncate: 330 }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
     {% capture keywords %}{{ site.keywords }}{% if page.keywords %}, {{ page.keywords }}{% endif %}{% if page.tags %}, {{ page.tags | join: ', ' }}{% endif %}{% endcapture %}
     <meta charset="utf-8">

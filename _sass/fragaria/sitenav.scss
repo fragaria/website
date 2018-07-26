@@ -76,7 +76,7 @@
 
     // common links get spacing around them
     &:not(&--main):not(:last-child) {
-        margin-right: 1.5em;
+        margin-right: .5em;
 
         @include deviceBreakpoint(desktop) {
             margin-right: 2em;
@@ -95,6 +95,10 @@
     background: map-get($palette, white);
 
     @include deviceBreakpoint(tablet) {
+        padding: 0 .5em;
+    }
+
+    @include deviceBreakpoint(desktop) {
         padding: 0 .75em;
     }
 

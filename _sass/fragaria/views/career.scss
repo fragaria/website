@@ -40,15 +40,16 @@ $full-view-break: 1000px;
 .v-career-section {
     .v-career-section__headline {
         br {
-            content: '';
-            padding: 0 .25em 0 0;
+            display: none;
         }
 
         i {
             color: map-get($palette, red);
         }
 
-        @include sassline(alpha, $headingtype, $lineheight: 3, $breakpoint: all);
+        // @include sassline(alpha, $headingtype, $lineheight: 3, $breakpoint: 0);
+
+        @include sassline(alpha, $headingtype, $lineheight: 4);
 
         @include deviceBreakpoint(tablet) {
             @include sassline(alpha, $headingtype, $lineheight: 5, $breakpoint: all);
@@ -78,9 +79,13 @@ $full-view-break: 1000px;
 
 .v-career-facts-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-gap: 0 2rem;
+
+    @include deviceBreakpoint(mobile) {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .v-career-facts-grid__item {
@@ -105,9 +110,13 @@ $full-view-break: 1000px;
 
 .v-career-tech-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-gap: 3rem 2rem;
+
+    @include deviceBreakpoint(mobile) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
 
 .v-career-tech-grid__item {

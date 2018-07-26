@@ -2,7 +2,7 @@
   job: Public participation voting platform
   desc: >
     V rámci projektu participativního rozpočtu v New Yorku v roce 2016 radnice umožnila místním obyvatelům rozdělit z mětského rozpočtu 38 milionů dolarů na projekty navržené členy komunit. Jednalo se tak o největší projekt tohoto typu v Severní Americe. V roce 2015/16 tak proběhlo již 5. kolo, do kterého bylo zapojeno 28 z 51 městských ditriktů.
-  img: portfolio/d21.svg
+  img: portfolio/d21.png
   tags:
     - angular
     - nodejs
@@ -16,7 +16,7 @@
   job: Frontend strategy kickoff
   desc: >
     V rámci tohoto projektu proběhl participativní urbanistický výzkum, jehož cílem bylo, aby urbanistické úpravy byly uzpůsobeny potřebám a požadavkům občanů, kteří žijí v blízkosti parku a využívají park nejvíce.
-  img: portfolio/kb.svg
+  img: portfolio/kb.png
   tags:
     - angular
     - java
@@ -25,7 +25,7 @@
   job: Frontend strategy kickoff
   desc: >
     Rarely in modern times have we witnessed such a display of petulance and bad judgment by those supposed to be in charge of global financial stability, and by those who set the tone for the Western world. The spectacle is astonishing. The European Central Bank, the EMU bail-out fund, and the International Monetary Fund, among others, are lashing out in fury against an elected government that refuses to do what it is told.
-  img: portfolio/csas.svg
+  img: portfolio/csas.png
   tags:
     - angular
     - java

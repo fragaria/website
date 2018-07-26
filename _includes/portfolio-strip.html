@@ -13,7 +13,7 @@
                 </span>
 
                 <div class="portfolio-project__media">
-                    <img class="portfolio-project__img" src="{% cloudinary_url project.img crop='fit' height='128' width='128' format='png' %}" alt="{{ project.title }}">
+                    <img class="portfolio-project__image" src="{% cloudinary_url project.img crop='fit' height='128' width='128' format='png' quality='auto' dpr='2.0' %}" alt="{{ project.title }}">
                 </div>
                 <div class="portfolio-project__label">
                     <h1 class="portfolio-project__headline">{{ project.title }}</h1>

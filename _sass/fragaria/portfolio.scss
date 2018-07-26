@@ -70,6 +70,7 @@ $detail-border-color: map-get($palette, gray-semilight);
 // project image itself
 .portfolio-project__image {
     display: block;
+    width: 8rem;
 }
 
 // project caption

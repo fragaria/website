@@ -8,7 +8,7 @@
     padding-bottom: 2rem;
 
     // second top border
-    @include baselineAwareBorder($orientation: 'top', $width: 3px, $offset: 0);
+    @include baselineAwareBorder($color: map-get($palette, gray-semilight), $orientation: 'top', $width: 1px, $offset: 0);
 
     @include deviceBreakpoint(tablet) {
         align-items: flex-start;
@@ -22,6 +22,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-bottom: 1rem;
 
     @include deviceBreakpoint(tablet) {
@@ -39,9 +40,10 @@
 .footer__copy {
     padding-left: 0;
     font-family: getFontFamily($sansseriftype);
-    text-transform: lowercase;
+    letter-spacing: .09em;
+    color: map-get($palette, gray-dark);
 
-    @include sassline(zeta, $sansseriftype, 2, 0, all);
+    @include sassline(theta, $sansseriftype, 1, 0);
 
     @include deviceBreakpoint(tablet) {
         padding-left: 1rem;
@@ -58,7 +60,7 @@
 }
 
 .footer__social-icon {
-    // color: map-get($palette, gray-medium);
+    color: map-get($palette, gray-dark);
 }
 
 .footer__social-icon + .footer__social-icon {

@@ -1,0 +1,33 @@
+.blog-news {
+    background: map-get($palette, gray-light);
+    position: relative;
+    margin-top: 3rem;
+    padding: 3rem;
+}
+
+.blog-news__headline {
+    position: absolute;
+    top: calc(-3rem + 1px);
+    right: 3rem;
+    color: map-get($palette, gray-dark);
+}
+
+.blog-news__posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+}
+
+.blog-news__more {
+    text-transform: uppercase;
+    text-align: right;
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+.blog-news__more-link {
+    font-family: getFontFamily($headingtype);
+    text-decoration: underline;
+
+    @include sassline(theta, $headingtype, 2, 1, all);
+}

@@ -6,6 +6,8 @@
     align-items: center;
     list-style-type: none;
     font-family: getFontFamily($headingtype);
+    font-weight: bold;
+    text-decoration: underline;
 
     @include deviceBreakpoint(tablet) {
         flex-direction: row;

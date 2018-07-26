@@ -1,0 +1,23 @@
+<article itemtype="http://schema.org/BlogPosting" itemscope="" class="blog-posting-brief">
+    <a href="{{ include.post.url | relative_url }}" class="blog-posting-brief__body">
+        <div class="blog-posting-brief__content">
+            <h1 itemprop="headline" class="blog-posting-brief__headline">{{ include.post.title }}</h1>
+            <div class="hidden">
+                <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="hidden">
+                    <span itemprop="name">{{ include.post.author }}</span>
+                </span>
+
+                <span itemprop="publisher" itemtype="http://schema.org/Organization" itemscope>
+                    <span itemprop="logo" itemtype="http://schema.org/ImageObject" itemscope="">
+                        <meta itemprop="url" content="{{ 'assets/img/strawberry.svg' | absolute_url }}">
+                    </span>
+                    <meta itemprop="name" content="{{ site.company.official_name }}">
+                </span>
+
+                <meta itemprop="datePublished" content="{{ include.post.date | date_to_xmlschema }}" />
+                <link itemprop="mainEntityOfPage" href="{{ include.post.url }}" />
+            </div>
+            <p itemprop="description" class="blog-posting-brief__excerpt">{{ include.post.excerpt | strip_html | truncatewords: 45 }}</p>
+        </div>
+    </a>
+</article>

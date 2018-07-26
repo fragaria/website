@@ -1,0 +1,11 @@
+<div class="blog-news">
+    <h1 class="blog-news__headline">Tech blog</h1>
+    <div class="blog-news__posts">
+        {% for post in site.posts limit: 3 %}
+            {% include posts/listing/brief.html post=post %}
+        {% endfor %}
+    </div>
+    <div class="blog-news__more">
+        <a href="{{ '/blog/' | relative_url }}" class="blog-news__more-link">More &raquo;</a>
+    </div>
+</div>

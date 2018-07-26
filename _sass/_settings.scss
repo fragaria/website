@@ -9,7 +9,7 @@ $palette: (
     red: #ea272e,
     dark-red: #9f1c21,
     olive-green: #8fa13b,
-    gray-light: #fafafa,
+    gray-light: #f5f5f5,
     gray-semilight: #ddd,
     gray-medium: #ccc,
     gray-dark: #888,
@@ -64,6 +64,8 @@ $caption-color: map-get($palette, gray-dark);
 $code-background-color: map-get($palette, gray-light);
 
 $selection-color: map-get($palette, red);
+
+$blog-listing-splitter-border-color: map-get($palette, gray-semilight);
 
 // Aliases for Sassline breakpoints, @see: $breakpoints
 $breakpoint-aliases: (

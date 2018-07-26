@@ -1,0 +1,11 @@
+.blog-posting-brief {
+    .blog-posting-brief__headline {
+        text-decoration: underline;
+
+        @include sassline(zeta, $headingtype, 2, 1, all);
+    }
+
+    .blog-posting-brief__excerpt {
+        @include sassline(theta, $bodytype, 2, 1, all);
+    }
+}

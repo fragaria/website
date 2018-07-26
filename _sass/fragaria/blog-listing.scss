@@ -19,7 +19,7 @@
 
     &:first-child,
     & + & {
-        @include baselineAwareBorder($orientation: 'top');
+        @include baselineAwareBorder($color: $blog-listing-splitter-border-color, $orientation: 'top');
     }
 
 
@@ -60,8 +60,8 @@
 
         // middle posting includes borders around it
         &:nth-child(3n + 2) .blog-listing__post-inner {
-            border-left: 1px $border-color solid;
-            border-right: 1px $border-color solid;
+            border-left: 1px $blog-listing-splitter-border-color solid;
+            border-right: 1px $blog-listing-splitter-border-color solid;
         }
     }
 }
@@ -89,7 +89,7 @@
         .blog-listing__post:nth-child(1n + 4) {
             margin-top: 2rem;
             padding-top: 2rem;
-            @include baselineAwareBorder($width:2px, $orientation: 'top');
+            @include baselineAwareBorder($color: $blog-listing-splitter-border-color, $width:2px, $orientation: 'top');
         }
 
         .blog-listing__post-inner {

@@ -46,6 +46,9 @@
         }
 
         .blog-posting__headline {
+            text-transform: uppercase;
+            text-decoration: none;
+
             @include sassline(alpha, $headingtype, 4, 1, all);
         }
 
@@ -92,11 +95,16 @@
     }
 
     .blog-posting__meta {
+        color: map-get($palette, gray-dark);
         @include baseline(zeta, $bodytype, $below: 1);
     }
 
     .blog-posting__headline {
-        text-transform: uppercase;
+        text-decoration: underline;
+    }
+
+    &:hover .blog-posting__meta {
+        color: inherit;
     }
 }
 

@@ -3,7 +3,7 @@
 
     @include deviceBreakpoint(tablet) {
         column-count: 4;
-        column-rule: 1px $border-color solid;
+        column-rule: 1px $blog-listing-splitter-border-color solid;
         column-gap: 4rem;
     }
 }
@@ -27,8 +27,9 @@
 // this has to be scoped so it beats specificity of .typeset
 .post-overview .post-overview__post-headline {
     font-family: getFontFamily($headingtype);
-    @include sassline(eta, $headingtype, 2, 0, all);
+    text-decoration: underline;
 
+    @include sassline(eta, $headingtype, 2, 0, all);
 }
 
 .post-overview__pubdate {

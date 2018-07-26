@@ -78,7 +78,7 @@
     &:not(&--main):not(:last-child) {
         margin-right: .5em;
 
-        @include deviceBreakpoint(desktop) {
+        @media (min-width: 1100px) {
             margin-right: 2em;
         }
     }

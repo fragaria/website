@@ -1,3 +1,9 @@
+.anchor--default {
+    font-family: getFontFamily($headingtype);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 .anchor--emphasized {
     color: map-get($palette, red);
     font-weight: bold;

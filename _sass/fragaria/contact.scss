@@ -9,7 +9,7 @@
 .contact-button {
     position: relative;
     color: map-get($palette, black);
-    background-color: map-get($palette, gray-semilight);
+    background-color: map-get($palette, gray-light);
     font-family: getFontFamily($headingtype);
     font-weight: bold;
     height: 2rem;

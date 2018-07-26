@@ -8,6 +8,9 @@
     - nodejs
     - mongodb
     - aws
+  website:
+    href: https://d21.me
+    caption: d21.me
   gallery:
     - https://picsum.photos/200?random
     - https://picsum.photos/200?random
@@ -17,6 +20,9 @@
   desc: >
     V rámci tohoto projektu proběhl participativní urbanistický výzkum, jehož cílem bylo, aby urbanistické úpravy byly uzpůsobeny potřebám a požadavkům občanů, kteří žijí v blízkosti parku a využívají park nejvíce.
   img: portfolio/kb.png
+  website:
+    href: https://www.kb.cz
+    caption: www.kb.cz
   tags:
     - angular
     - java
@@ -30,6 +36,9 @@
     - angular
     - java
     - elasticsearch
+  website:
+    href: https://www.csas.cz
+    caption: www.csas.cz
   gallery:
     - https://picsum.photos/200?random
     - https://picsum.photos/200?random
@@ -39,6 +48,9 @@
   desc: >
     Martin Armstrong on his blog about the plans of abolishing cash: “I doubt that the USA will be able to move to a cashless society as easily as Europe. The dollar is used around the world and cancelling that outstanding money supply would bring tremendous international unrest. Additionally, the USA is not in crisis financially, as is the case in Europe.
   img: portfolio/adventura.jpg
+  website:
+    href: https://www.adventura.cz
+    caption: adventura.cz
   tags:
     - angular
     - django

@@ -22,7 +22,7 @@
     display: block;
     width: 100%;
     font-family: getFontFamily($bodytype);
-    background-color: map-get($palette, gray-semilight);
+    background-color: map-get($palette, gray-light);
     border: 0;
     // border: 2px map-get($palette, red) solid;
     border-radius: 0;

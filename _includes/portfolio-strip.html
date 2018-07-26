@@ -23,15 +23,22 @@
                 <div class="portfolio-project-detail portfolio-project-detail--template js-portfolio-strip-item-template">
                     <div class="portfolio-project-detail__desc">
                         <p>{{ project.desc }}</p>
-                        {% include posts/taglist.html tags=project.tags %}
+
+                        <div class="portfolio-project-detail__resources">
+                            {% include posts/taglist.html tags=project.tags %}
+                            {% if project.website %}
+                            <div>
+                                <a class="anchor anchor--default" href="{{ project.website.href }}">{{ project.website.caption }}</a>
+                            </div>
+                            {% endif %}
+                        </div>
                     </div>
                     {% if project.gallery %}
-
-                    <div class="portfolio-project-detail__gallery">
-                        {% for image in project.gallery %}
-                            <img itemprop="screenshot" class="portfolio-project-detail__gallery-item" src="{{ image }}" alt="{{ project.title }} visualisation ({{ forloop.index + 1 }} / {{ project.gallery.size }})">
-                        {% endfor %}
-                    </div>
+                        <div class="portfolio-project-detail__gallery">
+                            {% for image in project.gallery %}
+                                <img itemprop="screenshot" class="portfolio-project-detail__gallery-item" src="{{ image }}" alt="{{ project.title }} visualisation ({{ forloop.index + 1 }} / {{ project.gallery.size }})">
+                            {% endfor %}
+                        </div>
                     {% endif %}
                 </div>
             </article>

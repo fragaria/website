@@ -107,7 +107,7 @@ $full-view-break: 1000px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-gap: 2rem;
+    grid-gap: 3rem 2rem;
 }
 
 .v-career-tech-grid__item {

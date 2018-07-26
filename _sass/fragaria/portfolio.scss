@@ -1,5 +1,5 @@
 $detail-background-color: map-get($palette, gray-light);
-$detail-border-color: map-get($palette, gray-semilight);
+$detail-border-color: map-get($palette, red);
 
 // a list of portfolio items
 .portfolio-strip {
@@ -94,8 +94,14 @@ $detail-border-color: map-get($palette, gray-semilight);
 .portfolio-project-detail__desc {
     margin-right: 4rem;
     width: 36rem;
-    font-family: getFontFamily($headingtype);
-    @include sassline(epsilon, $headingtype, 2, 1);
+    font-family: getFontFamily($bodytype);
+
+    @include sassline(eta, $bodytype, 2, 1);
+}
+
+.portfolio-project-detail__resources {
+    display: flex;
+    justify-content: space-between;
 }
 
 
@@ -142,17 +148,18 @@ $detail-border-color: map-get($palette, gray-semilight);
 
 // triangle pointer
 .portfolio-strip__detail-triangle {
-    @include borderedTriangle(96px, 1px, $detail-background-color, $detail-border-color, up, true);
+    @include borderedTriangle(96px, 3px, $detail-background-color, $detail-border-color, up, true);
 
     &:before,
     &:after {
-        top: calc(-6rem + 1px);
+        top: calc(-6rem + 2px);
     }
 }
 
 // body of the project detail container
 .portfolio-strip__detail-container-body {
     background: $detail-background-color;
-    padding: 2rem;
-    border: 1px $detail-border-color solid;
+    padding: 3rem;
+    border-top: 2px $detail-border-color solid;
+    // border-bottom: 2px $detail-border-color solid;
 }

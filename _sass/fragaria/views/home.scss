@@ -38,3 +38,60 @@
         margin-top: 8rem;
     }
 }
+
+
+.v-home__company-content {
+    display: grid;
+
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-gap: 1rem 0;
+    grid-template-areas:
+        "phone"
+        "email"
+        "map"
+        "residence"
+        "billing"
+        "contactform";
+
+    @include deviceBreakpoint(tablet) {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-gap: 1rem 1rem;
+        grid-template-areas:
+            "phone       email    map"
+            "residence  billing none"
+            "contactform contactform contactform"
+        ;
+    }
+
+    @media (min-width: 1100px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 2rem 4rem;
+        grid-template-areas:
+            "phone     email   map         .          "
+            "residence billing contactform contactform"
+        ;
+    }
+
+}
+
+.v-home__company-phone       { grid-area: phone; }
+.v-home__company-email       { grid-area: email; }
+.v-home__company-map         { grid-area: map; }
+.v-home__company-residence   { grid-area: residence; }
+.v-home__company-billing     { grid-area: billing; }
+.v-home__company-contactform { grid-area: contactform; }
+
+.v-home__company-contactform {
+    border-top: 1px $border-color solid;
+    padding-top: 1rem;
+    margin-top: 1rem;
+
+    @include deviceBreakpoint(tablet) {
+        border-top: 0;
+        padding: 0;
+        margin: 0;
+    }
+}

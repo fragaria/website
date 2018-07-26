@@ -1,0 +1,33 @@
+.contact .contact__line {
+    @include sassline(zeta, $bodytype, 2, 0);
+
+    &--indented {
+        margin-top: 2rem;
+    }
+}
+
+.contact-button {
+    position: relative;
+    color: map-get($palette, black);
+    background-color: map-get($palette, gray-semilight);
+    font-family: getFontFamily($headingtype);
+    font-weight: bold;
+    height: 2rem;
+    padding-left: 3rem;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 0 .5rem;
+        height: 100%;
+        color: map-get($palette, white);
+        background: map-get($palette, red);
+        font-family: 'fragariacz-icons';
+    }
+
+    &--phone:before { content: $icon--phone; }
+    &--email:before { content: $icon--at; }
+    &--map:before   { content: $icon--location; }
+}

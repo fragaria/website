@@ -1,5 +1,5 @@
-$detail-background-color: map-get($palette, grey-light);
-$detail-border-color: map-get($palette, grey-semilight);
+$detail-background-color: map-get($palette, gray-light);
+$detail-border-color: map-get($palette, gray-semilight);
 
 // a list of portfolio items
 .portfolio-strip {
@@ -58,12 +58,12 @@ $detail-border-color: map-get($palette, grey-semilight);
     align-items: center;
     justify-content: center;
     height: 14rem;
-    // logos like to be on white background but our page background is also white
-    // it is solved by having gray gradient with circle inside wrapping the logo
+    // Logos like to be placed on white background but our page background is also white...
+    // It is solved by having gray gradient with circle inside wrapping the logo.
     background: radial-gradient(
         circle at center,
         map-get($palette, white) 45%,
-        map-get($palette, grey-light) 100%
+        darken(map-get($palette, gray-light), 8%) 100%
     );
 }
 
@@ -107,7 +107,7 @@ $detail-border-color: map-get($palette, grey-semilight);
 // single image withing gallery
 .portfolio-project-detail__gallery-item {
     padding: .25rem;
-    border: 1px map-get($palette, grey-semilight) solid;
+    border: 1px map-get($palette, gray-semilight) solid;
     background: map-get($palette, white);
 }
 

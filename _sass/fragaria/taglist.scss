@@ -14,12 +14,12 @@
     display: inline-block;
     height: 2rem;
     line-height: 2rem;
-    background-color: map-get($palette, grey-medium);
+    background-color: map-get($palette, gray-medium);
     padding-left: .5em;
     padding-right: .5em;
     margin-top: 1rem;
     margin-left: .5rem;
-    color: map-get($palette, grey-dark);
+    color: map-get($palette, gray-dark);
 
     @include fontsize(eta);
 

@@ -9,10 +9,10 @@ $palette: (
     red: #ea272e,
     dark-red: #9f1c21,
     olive-green: #8fa13b,
-    grey-light: #fafafa,
-    grey-semilight: #bebebe,
-    grey-medium: #ccc,
-    grey-dark: #888,
+    gray-light: #fafafa,
+    gray-semilight: #ddd,
+    gray-medium: #ccc,
+    gray-dark: #888,
 );
 
 $brands: (
@@ -59,9 +59,9 @@ $border-color: $primary-color;
 
 $hr-color: $primary-color;
 
-$caption-color: map-get($palette, grey-dark);
+$caption-color: map-get($palette, gray-dark);
 
-$code-background-color: map-get($palette, grey-light);
+$code-background-color: map-get($palette, gray-light);
 
 $selection-color: map-get($palette, red);
 

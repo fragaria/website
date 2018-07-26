@@ -1,11 +1,11 @@
 .footer {
     position: relative;
-    margin-top: 1rem;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
 
     // second top border
     @include baselineAwareBorder($orientation: 'top', $width: 3px, $offset: 0);
@@ -13,7 +13,8 @@
     @include deviceBreakpoint(tablet) {
         align-items: flex-start;
         flex-direction: row;
-        margin-top: 3rem;
+        margin-top: 4rem;
+        padding-bottom: 6rem;
     }
 }
 
@@ -57,7 +58,7 @@
 }
 
 .footer__social-icon {
-    // color: map-get($palette, grey-medium);
+    // color: map-get($palette, gray-medium);
 }
 
 .footer__social-icon + .footer__social-icon {

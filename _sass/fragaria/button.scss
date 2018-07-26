@@ -4,9 +4,17 @@
     transition: all .2s ease-in-out;
     text-transform: uppercase;
     font-family: getFontFamily($sansseriftype);
+    font-weight: bold;
 
-    &:hover {
+    @include fontsize(zeta);
+
+    &:hover,
+    &:focus {
         background-color: $background;
+    }
+
+    &:focus {
+        outline: none;
     }
 }
 

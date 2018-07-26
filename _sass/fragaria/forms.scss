@@ -1,0 +1,49 @@
+.form__line {
+    display: block;
+}
+
+.form__line + .form__line {
+    margin-top: 1rem;
+}
+
+.form__submit {
+    margin-top: 2rem;
+}
+
+.form-label {
+    display: block;
+    font-family: getFontFamily($headingtype);
+    font-weight: bold;
+
+    @include sassline(epsilon, $headingtype, 2, 1);
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    font-family: getFontFamily($bodytype);
+    background-color: map-get($palette, gray-semilight);
+    border: 0;
+    // border: 2px map-get($palette, red) solid;
+    border-radius: 0;
+    padding: .5rem;
+
+    @include fontsize(zeta);
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+input.form-control {
+    // height: 2rem;
+    line-height: 2rem;
+    // border: 0;
+}
+
+textarea.form-control {
+    min-height: 8rem;
+    line-height: 2rem;
+    // border: 0;
+}

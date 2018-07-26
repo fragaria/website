@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'fragariacz-icons';
-  src:  url('#{$icomoon-font-path}/fragariacz-icons.eot?jyqyjr');
-  src:  url('#{$icomoon-font-path}/fragariacz-icons.eot?jyqyjr#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/fragariacz-icons.ttf?jyqyjr') format('truetype'),
-    url('#{$icomoon-font-path}/fragariacz-icons.woff?jyqyjr') format('woff'),
-    url('#{$icomoon-font-path}/fragariacz-icons.svg?jyqyjr#fragariacz-icons') format('svg');
+  src:  url('#{$icomoon-font-path}/fragariacz-icons.eot?tcnvwh');
+  src:  url('#{$icomoon-font-path}/fragariacz-icons.eot?tcnvwh#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/fragariacz-icons.ttf?tcnvwh') format('truetype'),
+    url('#{$icomoon-font-path}/fragariacz-icons.woff?tcnvwh') format('woff'),
+    url('#{$icomoon-font-path}/fragariacz-icons.svg?tcnvwh#fragariacz-icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,6 +26,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon--at {
+  &:before {
+    content: $icon--at; 
+  }
+}
+.icon--location {
+  &:before {
+    content: $icon--location; 
+  }
+}
+.icon--phone {
+  &:before {
+    content: $icon--phone; 
+  }
+}
 .icon--linkedin {
   &:before {
     content: $icon--linkedin; 

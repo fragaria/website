@@ -5,6 +5,7 @@
     text-transform: uppercase;
     font-family: getFontFamily($sansseriftype);
     font-weight: bold;
+    cursor: pointer;
 
     @include fontsize(zeta);
 

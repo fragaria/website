@@ -42,12 +42,18 @@
     font-family: getFontFamily($sansseriftype);
     letter-spacing: .09em;
     color: map-get($palette, gray-dark);
+    text-align: center;
 
     @include sassline(theta, $sansseriftype, 1, 0);
 
     @include deviceBreakpoint(tablet) {
         padding-left: 1rem;
+        text-align: left;
     }
+}
+
+.footer__copy-line--emphasized {
+    font-weight: bold;
 }
 
 .footer__social {

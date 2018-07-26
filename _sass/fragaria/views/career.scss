@@ -109,7 +109,7 @@ $full-view-break: 1000px;
     font-size: 2rem;
 
     &:before {
-        color: $text-color !important;
+        color: map-get($palette, red) !important;
     }
 }
 

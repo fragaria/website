@@ -1,4 +1,5 @@
 $sitenav-height-mobile: 26rem;
+$sitenav-slide-transition: cubic-bezier(0.17, 0.04, 0.03, 0.94);
 
 .sitenav {
     position: relative;
@@ -62,7 +63,7 @@ $sitenav-height-mobile: 26rem;
     // linkset only shown if menu is toggled on mobile (@see: .sitenav-wrapper--show)
     padding: 4rem 7rem 2rem;
     transform: translateY(-100%);
-    transition: transform .4s ease-in-out;
+    transition: transform .3s $sitenav-slide-transition;
     background: map-get($palette, red);
     box-shadow: inset 0 -0.3rem 2rem rgba(0, 0, 0, .3);
 
@@ -199,7 +200,7 @@ a.sitenav__menu-toggle-link {
 }
 
 .sitenav-wrapper {
-    transition: padding-bottom .4s ease-in-out;
+    transition: padding-bottom .3s $sitenav-slide-transition;
     padding-bottom: 0;
 }
 

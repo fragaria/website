@@ -1,195 +1,21 @@
-<!DOCTYPE html>
-<html lang="cs" dir="ltr" itemtype="http://schema.org/WebPage" itemscope="">
-    <head>
-    
-    
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fulltext česky pomocí Djanga a Elasticsearch  | fragaria.cz</title>
-    <meta name="author" content="Fragaria s.r.o." />
-    <meta name="robots" content="index,follow" />
-    <meta name="description" content="Fulltextové vyhledávání je k mojí nelibosti celkem často na webuopomíjená funkce. Klasickým argumentem, proč fulltext nedělat jezpravidla, že je to složité a hrozně časově náročné udělat. Klient ječasto uveden v omyl, že spolehlivé fulltextové vyhledávání je práce natýden a tak mnohdy vítězí buď varianta ne-fulltextová, nebo ...">
-    <meta name="keywords" content="fragaria, software, vývoj software, webové aplikace, python, javascript, angular, elasticsearch, html, css, search, fulltext, django, elasticsearch, python" />
-    <!-- Favicons -->
-    
-
-    <meta property="og:url"           content="https://fragaria.cz/website/blog/2014/11/14/fulltext-cesky-pomoci-djanga/" />
-    <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="Fulltext česky pomocí Djanga a Elasticsearch  | fragaria.cz" />
-    <meta property="og:description"   content="Fulltextové vyhledávání je k mojí nelibosti celkem často na webuopomíjená funkce. Klasickým argumentem, proč fulltext nedělat jezpravidla, že je to složité a hrozně časově náročné udělat. Klient ječasto uveden v omyl, že spolehlivé fulltextové vyhledávání je práce natýden a tak mnohdy vítězí buď varianta ne-fulltextová, nebo ..." />
-
-    
-        <meta property="og:image"         content="https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto/fragaria.cz/posts/2014-11-14-fulltext-cesky-pomoci-djanga__1.png" />
-    
-
-    <link rel="stylesheet" href="/website/assets/styles.css?d41d8cd98f00b204e9800998ecf8427e">
-    <link rel="alternate" type="application/atom+xml" href="/website/feed.xml" title="Atom feed for this page"/>
-    <link rel="self" type="application/atom+xml" href="/website/feed.xml"/>
-</head>
-
-
-
-    <body class="page-container baseline-grid js-baseline-grid">
-        <div class="page-container__inner">
-            <div class="content-block js-sitenav sitenav-wrapper">
-    <nav class="sitenav content-block__cover--mobile" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-        <a href="/website/">
-            <img alt="Fragaria s.r.o." class="sitenav__brand" src="/website/assets/img/strawberry.svg">
-        </a>
-
-        <ul class="sitenav__linkset">
-            <li class="sitenav__linkset-item sitenav__linkset-item--main"><a href="/website/" class="sitenav__link typeset__anchor--nounderline" itemprop="url"><span itemprop="name">Fragaria.cz</span></a></li>
-            
-                <li class="sitenav__linkset-item  js-sitenav-link"><a href="/website/#works" class="sitenav__link typeset__anchor--nounderline" itemprop="url"><span itemprop="name">Works</span></a></li>
-            
-                <li class="sitenav__linkset-item  js-sitenav-link"><a href="/website/#team" class="sitenav__link typeset__anchor--nounderline" itemprop="url"><span itemprop="name">Team</span></a></li>
-            
-                <li class="sitenav__linkset-item sitenav__linkset-item--active js-sitenav-link"><a href="/website/blog/" class="sitenav__link typeset__anchor--nounderline" itemprop="url"><span itemprop="name">Blog</span></a></li>
-            
-                <li class="sitenav__linkset-item  js-sitenav-link"><a href="/website/career/" class="sitenav__link typeset__anchor--nounderline" itemprop="url"><span itemprop="name">Career</span></a></li>
-            
-        </ul>
-
-        <div class="sitenav__menu-toggle typeset">
-            <a href="#" class="sitenav__menu-toggle-link js-sitenav-menu-toggle">Menu</a>
-        </div>
-    </nav>
-</div>
-
-
-            <article itemtype="https://schema.org/TechArticle" itemscope class="article">
-    <div class="content-block typeset">
-        <h1 itemprop="name" class="article__headline">Fulltext česky pomocí Djanga a Elasticsearch</h1>
-        <meta itemprop="headline" content="Fulltext česky pomocí Djanga a Elasticsearch">
-
-        
-
-        <div itemprop="publisher" itemtype="http://schema.org/Organization" class="hidden" itemscope>
-            <div itemprop="logo" itemtype="http://schema.org/ImageObject" itemscope="">
-                <meta itemprop="url" content="https://fragaria.cz/website/assets/img/strawberry.svg">
-            </div>
-            <meta itemprop="name" content="Fragaria s.r.o.">
-        </div>
-
-        <p class="article__meta">
-            <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="article__author">
-                by <span itemprop="name">Filip Vařecha</span>
-            </span>
-            <meta itemprop="datePublished" content="" />
-            <span class="article__pubdate">14.11.2014</span>
-            <meta itemprop="publisher"></meta>
-        </p>
-
-        
-
-        <div class="article__content-wrap">
-            <div class="article__content">
-                <p>Fulltextové vyhledávání je k mojí nelibosti celkem často na webu
-opomíjená funkce. Klasickým argumentem, proč fulltext nedělat je
-zpravidla, že je to složité a hrozně časově náročné udělat. Klient je
-často uveden v omyl, že spolehlivé fulltextové vyhledávání je práce na
-týden a tak mnohdy vítězí buď varianta ne-fulltextová, nebo (častěji)
-<a href="https://developers.google.com/custom-search/">Custom Search</a> od Google.
-Dnes si ukážeme, že opak je pravdou a že dobře fungující fulltext je
-dneska spíše <strong>otázkou hodin</strong>.</p>
-
-<p>Fulltextových enginů je tu spousta. V tomhle
-“tutoriálu” použijeme <a href="http://www.elasticsearch.org/">Elasticsearch</a>. Je
-jednoduchý na použití i instalaci a jeho integrace s Djangem je hračka.
-Existuje totiž appka <a href="http://haystacksearch.org/">django-haystack</a>,
-kterou použijeme. Haystack je mezivrstva, která vám usnadní vybudování
-indexů nad vašimy modely a napojení na vyhledávací backend dle vaší
-preference. Mimo Elasticsearch podporuje celou řadu dalších prominentů
-na poli fulltextu jako například Solr, Xapian, nebo Whoosh.</p>
-
-<h3 id="1-instalace-elasticsearch">1. Instalace Elasticsearch</h3>
-
-<p>Jako první pochopitelně musíme Elasticsearch nainstalovat. Instalační
-pokyny pro jednotlivé platformy se trochu liší, já zde popíšu pouze
-variantu pro Mac OSX. Pro linuxové distribuce lze využít <a href="http://www.elasticsearch.com/guide/en/elasticsearch/reference/current/setup-repositories.html">apt/yum
-repozitáře</a>,
-jinak lze vždycky stáhnout binárku, jak je to hezky popsáno v <a href="http://www.elasticsearch.com/guide/en/elasticsearch/reference/current/setup.html">oficiální
-dokumentaci</a>.</p>
-
-<p>Na Macu je postup za použítí Homebrew snadný jak facka:</p>
-
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">brew <span class="nb">install </span>elasticsearch</code></pre></figure>
-
-<p>Jakmile bude mít Homebrew hotovo, musíme ještě udělat jednu věc.
-Elasticsearch totiž pochopitelně out-of-box neumí česky, což ho je
-potřeba naučit. Zde jsem vycházel ze skvělého článku na Zdrojáku
-<a href="http://www.zdrojak.cz/clanky/elasticsearch-vyhledavame-hezky-cesky-ii-a-taky-slovensky/">Vyhledáváme hezky
-česky</a>
-od Lukáše Vlčka. Nebudeme se zde zabývat podrobnostmi (které jsou
-detailně rozepsané právě v tomto článku) a pojďme rovnou na věc. Aby nám
-Elasticsearch češtinu rozuměl, musíme mu dodat český slovník a také mu
-vysvětlit, jak má daný slovník použít.</p>
-
-<p>Jako slovník lze využít modifikovanou verzi slovníku pro Openoffice.org,
-jež je k dispozici pod GNU/GPL licencí. Stáhnout si ho můžete
-<a href="https://drive.google.com/open?id=0B0PU1esp2HvqX3JSSWdJR2hkYk0&amp;authuser=0">tady</a>.
-Poté je nutné stažený archiv rozbalit a zkopírovat ho do konfiguračního
-adresáře pro Elasticsearch. Na Macu to je adresář
-<code class="highlighter-rouge">/usr/local/Cellar/elasticsearch/[VERZE]/config</code>. Výsledkem by měla být
-následující adresářová struktura:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/config
+<!DOCTYPE html> <html lang="cs" dir="ltr" itemtype="http://schema.org/WebPage" itemscope=""> <head> <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>Fulltext česky pomocí Djanga a Elasticsearch | fragaria.cz</title> <meta name="author" content="Fragaria s.r.o." /> <meta name="robots" content="index,follow" /> <meta name="description" content="Fulltextové vyhledávání je k mojí nelibosti celkem často na webuopomíjená funkce. Klasickým argumentem, proč fulltext nedělat jezpravidla, že je to složité a hrozně časově náročné udělat. Klient ječasto uveden v omyl, že spolehlivé fulltextové vyhledávání je práce natýden a tak mnohdy vítězí buď varianta ne-fulltextová, nebo ..."> <meta name="keywords" content="fragaria, software, vývoj software, webové aplikace, python, javascript, angular, elasticsearch, html, css, search, fulltext, django, elasticsearch, python" /> <!-- Favicons --> <meta property="og:url" content="https://fragaria.cz/website/blog/2014/11/14/fulltext-cesky-pomoci-djanga/" /> <meta property="og:type" content="website" /> <meta property="og:title" content="Fulltext česky pomocí Djanga a Elasticsearch | fragaria.cz" /> <meta property="og:description" content="Fulltextové vyhledávání je k mojí nelibosti celkem často na webuopomíjená funkce. Klasickým argumentem, proč fulltext nedělat jezpravidla, že je to složité a hrozně časově náročné udělat. Klient ječasto uveden v omyl, že spolehlivé fulltextové vyhledávání je práce natýden a tak mnohdy vítězí buď varianta ne-fulltextová, nebo ..." /> <meta property="og:image" content="https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto/fragaria.cz/posts/2014-11-14-fulltext-cesky-pomoci-djanga__1.png" /> <link rel="stylesheet" href="/website/assets/styles.css?d41d8cd98f00b204e9800998ecf8427e"> <link rel="alternate" type="application/atom+xml" href="/website/feed.xml" title="Atom feed for this page"/> <link rel="self" type="application/atom+xml" href="/website/feed.xml"/> </head> <body class="page-container baseline-grid js-baseline-grid"> <div class="page-container__inner"> <div class="content-block js-sitenav sitenav-wrapper"> <nav class="sitenav content-block__cover--mobile" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement"> <a href="/website/"> <img alt="Fragaria s.r.o." class="sitenav__brand" src="/website/assets/img/strawberry.svg"> </a> <ul class="sitenav__linkset"> <li class="sitenav__linkset-item sitenav__linkset-item--main"><a href="/website/" class="sitenav__link typeset__anchor--nounderline" itemprop="url"><span itemprop="name">Fragaria.cz</span></a></li> <li class="sitenav__linkset-item js-sitenav-link"><a href="/website/#works" class="sitenav__link typeset__anchor--nounderline" itemprop="url"><span itemprop="name">Works</span></a></li> <li class="sitenav__linkset-item js-sitenav-link"><a href="/website/#team" class="sitenav__link typeset__anchor--nounderline" itemprop="url"><span itemprop="name">Team</span></a></li> <li class="sitenav__linkset-item sitenav__linkset-item--active js-sitenav-link"><a href="/website/blog/" class="sitenav__link typeset__anchor--nounderline" itemprop="url"><span itemprop="name">Blog</span></a></li> <li class="sitenav__linkset-item js-sitenav-link"><a href="/website/career/" class="sitenav__link typeset__anchor--nounderline" itemprop="url"><span itemprop="name">Career</span></a></li> </ul> <div class="sitenav__menu-toggle typeset"> <a href="#" class="sitenav__menu-toggle-link js-sitenav-menu-toggle">Menu</a> </div> </nav> </div> <article itemtype="https://schema.org/TechArticle" itemscope class="article"> <div class="content-block typeset"> <h1 itemprop="name" class="article__headline">Fulltext česky pomocí Djanga a Elasticsearch</h1> <meta itemprop="headline" content="Fulltext česky pomocí Djanga a Elasticsearch"> <div itemprop="publisher" itemtype="http://schema.org/Organization" class="hidden" itemscope> <div itemprop="logo" itemtype="http://schema.org/ImageObject" itemscope=""> <meta itemprop="url" content="https://fragaria.cz/website/assets/img/strawberry.svg"> </div> <meta itemprop="name" content="Fragaria s.r.o."> </div> <p class="article__meta"> <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="article__author"> by <span itemprop="name">Filip Vařecha</span> </span> <meta itemprop="datePublished" content="" /> <span class="article__pubdate">14.11.2014</span> <meta itemprop="publisher"></meta> </p> <div class="article__content-wrap"> <div class="article__content"> <p>Fulltextové vyhledávání je k mojí nelibosti celkem často na webu opomíjená funkce. Klasickým argumentem, proč fulltext nedělat je zpravidla, že je to složité a hrozně časově náročné udělat. Klient je často uveden v omyl, že spolehlivé fulltextové vyhledávání je práce na týden a tak mnohdy vítězí buď varianta ne-fulltextová, nebo (častěji) <a href="https://developers.google.com/custom-search/">Custom Search</a> od Google. Dnes si ukážeme, že opak je pravdou a že dobře fungující fulltext je dneska spíše <strong>otázkou hodin</strong>.</p> <p>Fulltextových enginů je tu spousta. V tomhle “tutoriálu” použijeme <a href="http://www.elasticsearch.org/">Elasticsearch</a>. Je jednoduchý na použití i instalaci a jeho integrace s Djangem je hračka. Existuje totiž appka <a href="http://haystacksearch.org/">django-haystack</a>, kterou použijeme. Haystack je mezivrstva, která vám usnadní vybudování indexů nad vašimy modely a napojení na vyhledávací backend dle vaší preference. Mimo Elasticsearch podporuje celou řadu dalších prominentů na poli fulltextu jako například Solr, Xapian, nebo Whoosh.</p> <h3 id="1-instalace-elasticsearch">1. Instalace Elasticsearch</h3> <p>Jako první pochopitelně musíme Elasticsearch nainstalovat. Instalační pokyny pro jednotlivé platformy se trochu liší, já zde popíšu pouze variantu pro Mac OSX. Pro linuxové distribuce lze využít <a href="http://www.elasticsearch.com/guide/en/elasticsearch/reference/current/setup-repositories.html">apt/yum repozitáře</a>, jinak lze vždycky stáhnout binárku, jak je to hezky popsáno v <a href="http://www.elasticsearch.com/guide/en/elasticsearch/reference/current/setup.html">oficiální dokumentaci</a>.</p> <p>Na Macu je postup za použítí Homebrew snadný jak facka:</p> <figure class="highlight"><pre><code class="language-shell" data-lang="shell">brew <span class="nb">install </span>elasticsearch</code></pre></figure> <p>Jakmile bude mít Homebrew hotovo, musíme ještě udělat jednu věc. Elasticsearch totiž pochopitelně out-of-box neumí česky, což ho je potřeba naučit. Zde jsem vycházel ze skvělého článku na Zdrojáku <a href="http://www.zdrojak.cz/clanky/elasticsearch-vyhledavame-hezky-cesky-ii-a-taky-slovensky/">Vyhledáváme hezky česky</a> od Lukáše Vlčka. Nebudeme se zde zabývat podrobnostmi (které jsou detailně rozepsané právě v tomto článku) a pojďme rovnou na věc. Aby nám Elasticsearch češtinu rozuměl, musíme mu dodat český slovník a také mu vysvětlit, jak má daný slovník použít.</p> <p>Jako slovník lze využít modifikovanou verzi slovníku pro Openoffice.org, jež je k dispozici pod GNU/GPL licencí. Stáhnout si ho můžete <a href="https://drive.google.com/open?id=0B0PU1esp2HvqX3JSSWdJR2hkYk0&amp;authuser=0">tady</a>. Poté je nutné stažený archiv rozbalit a zkopírovat ho do konfiguračního adresáře pro Elasticsearch. Na Macu to je adresář <code class="highlighter-rouge">/usr/local/Cellar/elasticsearch/[VERZE]/config</code>. Výsledkem by měla být následující adresářová struktura:</p> <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/config
     /hunspell
         /cs_CZ
             cs_CZ.aff           
             cs_CZ.dic
             settings.yml`
-</code></pre></div></div>
-
-<h3 id="2-instalace-django-haystack">2. Instalace django-haystack</h3>
-
-<p>Dalším krokem je instalace <strong>django-haystack</strong> pro vaší aplikaci. Budeme
-také potřebovat knihovnu <strong>elasticsearch</strong> s Pythoními bindingy. To
-uděláte snadno pomocí <strong>pipu</strong> (přičemž předpokládám, že virtualenv
-již máte aktivovaný):</p>
-
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">pip <span class="nb">install </span>django-haystack elasticsearch</code></pre></figure>
-
-<p>Abychom mohli používat češtinu, budeme muset nainstalovat ještě
-vylepšený Elasticsearch backend, který nám umožní upravit konfiguraci:</p>
-
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">pip <span class="nb">install </span>elasticstack</code></pre></figure>
-
-<p>Dále musíme tyto Django appky přidat do <code class="highlighter-rouge">INSTALLED_APPS</code>. Otevřeme
-si tedy <code class="highlighter-rouge">settings.py</code> naší aplikace a upravíme <code class="highlighter-rouge">INSTALLED_APPS</code> aby
-vypadaly cca takto:</p>
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+</code></pre></div></div> <h3 id="2-instalace-django-haystack">2. Instalace django-haystack</h3> <p>Dalším krokem je instalace <strong>django-haystack</strong> pro vaší aplikaci. Budeme také potřebovat knihovnu <strong>elasticsearch</strong> s Pythoními bindingy. To uděláte snadno pomocí <strong>pipu</strong> (přičemž předpokládám, že virtualenv již máte aktivovaný):</p> <figure class="highlight"><pre><code class="language-shell" data-lang="shell">pip <span class="nb">install </span>django-haystack elasticsearch</code></pre></figure> <p>Abychom mohli používat češtinu, budeme muset nainstalovat ještě vylepšený Elasticsearch backend, který nám umožní upravit konfiguraci:</p> <figure class="highlight"><pre><code class="language-shell" data-lang="shell">pip <span class="nb">install </span>elasticstack</code></pre></figure> <p>Dále musíme tyto Django appky přidat do <code class="highlighter-rouge">INSTALLED_APPS</code>. Otevřeme si tedy <code class="highlighter-rouge">settings.py</code> naší aplikace a upravíme <code class="highlighter-rouge">INSTALLED_APPS</code> aby vypadaly cca takto:</p> <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
     <span class="o">...</span>
     <span class="s">'haystack'</span><span class="p">,</span>
     <span class="s">'elasticstack'</span><span class="p">,</span>
     <span class="o">...</span>
-<span class="p">]</span></code></pre></figure>
-
-<h3 id="3-konfigurace">3. Konfigurace</h3>
-
-<p>Nyní musíme haystack správně nakonfigurovat. Otevřeme si settings.py
-naší aplikace a přidáme následující kus kódu:</p>
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">HAYSTACK_CONNECTIONS</span> <span class="o">=</span> <span class="p">{</span>
+<span class="p">]</span></code></pre></figure> <h3 id="3-konfigurace">3. Konfigurace</h3> <p>Nyní musíme haystack správně nakonfigurovat. Otevřeme si settings.py naší aplikace a přidáme následující kus kódu:</p> <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">HAYSTACK_CONNECTIONS</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s">'default'</span><span class="p">:</span> <span class="p">{</span>
         <span class="s">'ENGINE'</span><span class="p">:</span> <span class="s">'elasticstack.backends.ConfigurableElasticSearchEngine'</span><span class="p">,</span>
         <span class="s">'URL'</span><span class="p">:</span> <span class="s">'127.0.0.1:9200'</span><span class="p">,</span>
         <span class="s">'INDEX_NAME'</span><span class="p">:</span> <span class="s">'my_custom_index'</span><span class="p">,</span>
     <span class="p">},</span>
-<span class="p">}</span></code></pre></figure>
-
-<p>Toto nastavení říká, že pro fulltext se má použít backend z
-elasticstacku na adrese <code class="highlighter-rouge">127.0.0.1</code> a portu <code class="highlighter-rouge">9200</code> (což je výchozí
-nastavení pro Elasticsearch). Náš index se bude jmenovat
-<code class="highlighter-rouge">my_custom_index</code>.</p>
-
-<p>Abychom při vytváření indexu použili speciální konfiguraci pro češtinu a
-také náš český slovník, musíme přidat ještě další část, kterou opět
-umožňuje elasticstack:</p>
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">ELASTICSEARCH_INDEX_SETTINGS</span> <span class="o">=</span> <span class="p">{</span>
+<span class="p">}</span></code></pre></figure> <p>Toto nastavení říká, že pro fulltext se má použít backend z elasticstacku na adrese <code class="highlighter-rouge">127.0.0.1</code> a portu <code class="highlighter-rouge">9200</code> (což je výchozí nastavení pro Elasticsearch). Náš index se bude jmenovat <code class="highlighter-rouge">my_custom_index</code>.</p> <p>Abychom při vytváření indexu použili speciální konfiguraci pro češtinu a také náš český slovník, musíme přidat ještě další část, kterou opět umožňuje elasticstack:</p> <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">ELASTICSEARCH_INDEX_SETTINGS</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s">'settings'</span><span class="p">:</span> <span class="p">{</span>
         <span class="s">'analysis'</span><span class="p">:</span> <span class="p">{</span>
             <span class="s">'analyzer'</span> <span class="p">:</span> <span class="p">{</span>
@@ -220,61 +46,7 @@ umožňuje elasticstack:</p>
     <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="n">ELASTICSEARCH_DEFAULT_ANALYZER</span> <span class="o">=</span> <span class="s">'cs_hunspell'</span></code></pre></figure>
-
-<p>Tato část si jistě zaslouží podrobnější popis.</p>
-
-<p>Direktiva <code class="highlighter-rouge">ELASTICSEARCH_INDEX_SETTINGS</code> definuje, jaké nastavení se má
-při vytváření indexu použít. V našem případě je hlavním předmětem zájmu
-naše vlastní konfigurace analyzátoru, který bude Elasticsearch při
-vyhledávání používat. Tento analyzátor se jsme pojmenovali
-jako <strong>cs_hunspell</strong>. Jeho hlavní smysl spočívá ve vlastní definici
-filtrů, které se při vyhledávání použijí:</p>
-
-<ul>
-  <li>Jako první se z hledaného řetězce <strong>odstraní stopwords</strong>
-(vycházející ze základní databáze pro češtinu a rozšířené o slova
-“právě” a “že”), které ve vyhledávání nenesou žádnou velkou
-sémantickou funkci.</li>
-  <li>V dalším kroku se řetězec převede na jeho <strong>lowercase variantu</strong>. Ve
-slovníku, který jsme stáhli jsou všechna česká slova i v lowercase
-verzi, takže nehrozí case-sensitivity problém naznačený ve článku
-Lukáše Vlčka.</li>
-  <li>Poté se použije filtr <strong>hunspell_CZ</strong>, jehož smyslem není nic
-jiného než porovnání se slovníkem, který jsme do Elasticsearch
-přidali v prvním instalačním kroku.</li>
-  <li>Dále se provede <strong>asciifolding</strong> filtr, který řetězec okleští o
-diakritiku.</li>
-  <li>Načež se ještě jednou provede odstranění stopwords.</li>
-  <li>Nakonec se <strong>odstraní případné duplicity</strong> ve výsledném řetězci.</li>
-</ul>
-
-<p>Pokud vás zajímají detaily této konfigurace (na které zde není prostor),
-ještě jednou vás odkáži na <a href="http://www.zdrojak.cz/clanky/elasticsearch-vyhledavame-hezky-cesky-ii-a-taky-slovensky/">výborný článek Lukáše
-Vlčka</a>.</p>
-
-<p>Direktiva <code class="highlighter-rouge">ELASTICSEARCH_DEFAULT_ANALYZER</code> pouze určuje, jaký analyzátor
-se má při hledání považovat za výchozí. Zde pochopitelně uvedeme ten náš
-vlastní pro češtinu.</p>
-
-<h3 id="4-vytvoření-indexů">4. Vytvoření indexů</h3>
-
-<p>Dalším krokem k funkčnímu fulltextu je vytvoření indexů. Indexem se
-rozumí textová reprezentace instance modelu, se kterou si vyhledávací
-engine poradí. Je tedy nanejvýš důležité mít indexy co nejúplnější a
-poctivě promyšlené, jinak celkem jistě vaše vyhledávání nebude fungovat
-uspokojivě. django-haystack nabízí cestu jak od modelu k takovému textu
-dojít.</p>
-
-<p>Řešením je <strong>vytvoření třídy</strong> (odvozené od <code class="highlighter-rouge">SearchIndex</code>) pro každý
-Django model, nad kterým chceme vyhledávat. Tyto třídy umisťujeme dle
-konvence do souboru <code class="highlighter-rouge">search_indexes.py</code> podobně jako modely umisťujeme
-do <code class="highlighter-rouge">models.py</code>. django-haystack tyto soubory <strong>automaticky hledá v každé
-aplikaci</strong>, takže není nutné je někde uvádět, nebo registrovat.
-Příkladem jednoduché definice indexu může například následující
-třída:</p>
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">haystack</span> <span class="kn">import</span> <span class="n">indexes</span>
+<span class="n">ELASTICSEARCH_DEFAULT_ANALYZER</span> <span class="o">=</span> <span class="s">'cs_hunspell'</span></code></pre></figure> <p>Tato část si jistě zaslouží podrobnější popis.</p> <p>Direktiva <code class="highlighter-rouge">ELASTICSEARCH_INDEX_SETTINGS</code> definuje, jaké nastavení se má při vytváření indexu použít. V našem případě je hlavním předmětem zájmu naše vlastní konfigurace analyzátoru, který bude Elasticsearch při vyhledávání používat. Tento analyzátor se jsme pojmenovali jako <strong>cs_hunspell</strong>. Jeho hlavní smysl spočívá ve vlastní definici filtrů, které se při vyhledávání použijí:</p> <ul> <li>Jako první se z hledaného řetězce <strong>odstraní stopwords</strong> (vycházející ze základní databáze pro češtinu a rozšířené o slova “právě” a “že”), které ve vyhledávání nenesou žádnou velkou sémantickou funkci.</li> <li>V dalším kroku se řetězec převede na jeho <strong>lowercase variantu</strong>. Ve slovníku, který jsme stáhli jsou všechna česká slova i v lowercase verzi, takže nehrozí case-sensitivity problém naznačený ve článku Lukáše Vlčka.</li> <li>Poté se použije filtr <strong>hunspell_CZ</strong>, jehož smyslem není nic jiného než porovnání se slovníkem, který jsme do Elasticsearch přidali v prvním instalačním kroku.</li> <li>Dále se provede <strong>asciifolding</strong> filtr, který řetězec okleští o diakritiku.</li> <li>Načež se ještě jednou provede odstranění stopwords.</li> <li>Nakonec se <strong>odstraní případné duplicity</strong> ve výsledném řetězci.</li> </ul> <p>Pokud vás zajímají detaily této konfigurace (na které zde není prostor), ještě jednou vás odkáži na <a href="http://www.zdrojak.cz/clanky/elasticsearch-vyhledavame-hezky-cesky-ii-a-taky-slovensky/">výborný článek Lukáše Vlčka</a>.</p> <p>Direktiva <code class="highlighter-rouge">ELASTICSEARCH_DEFAULT_ANALYZER</code> pouze určuje, jaký analyzátor se má při hledání považovat za výchozí. Zde pochopitelně uvedeme ten náš vlastní pro češtinu.</p> <h3 id="4-vytvoření-indexů">4. Vytvoření indexů</h3> <p>Dalším krokem k funkčnímu fulltextu je vytvoření indexů. Indexem se rozumí textová reprezentace instance modelu, se kterou si vyhledávací engine poradí. Je tedy nanejvýš důležité mít indexy co nejúplnější a poctivě promyšlené, jinak celkem jistě vaše vyhledávání nebude fungovat uspokojivě. django-haystack nabízí cestu jak od modelu k takovému textu dojít.</p> <p>Řešením je <strong>vytvoření třídy</strong> (odvozené od <code class="highlighter-rouge">SearchIndex</code>) pro každý Django model, nad kterým chceme vyhledávat. Tyto třídy umisťujeme dle konvence do souboru <code class="highlighter-rouge">search_indexes.py</code> podobně jako modely umisťujeme do <code class="highlighter-rouge">models.py</code>. django-haystack tyto soubory <strong>automaticky hledá v každé aplikaci</strong>, takže není nutné je někde uvádět, nebo registrovat. Příkladem jednoduché definice indexu může například následující třída:</p> <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">haystack</span> <span class="kn">import</span> <span class="n">indexes</span>
 <span class="kn">from</span> <span class="nn">myproject.app</span> <span class="kn">import</span> <span class="n">models</span>
 
 <span class="k">class</span> <span class="nc">PageIndex</span><span class="p">(</span><span class="n">indexes</span><span class="o">.</span><span class="n">SearchIndex</span><span class="p">,</span> <span class="n">indexes</span><span class="o">.</span><span class="n">Indexable</span><span class="p">):</span>
@@ -285,58 +57,9 @@ třída:</p>
         <span class="k">return</span> <span class="n">models</span><span class="o">.</span><span class="n">Page</span>
 
     <span class="k">def</span> <span class="nf">index_queryset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">using</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_model</span><span class="p">()</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">published</span><span class="p">()</span></code></pre></figure>
-
-<p>Pojďme se blíže podívat na to, co tato definice říká. Jedná se o index
-nad modelem <code class="highlighter-rouge">Page</code>, který reprezentuje jednoduchou CMS stránku. Tento
-index bude mít dva atributy.</p>
-
-<ol>
-  <li>Jako hlavní je zde použit atribut <code class="highlighter-rouge">text</code>. To, že je hlavní lze
-poznat podle toho, že má v definici uvedeno <code class="highlighter-rouge">document=True</code>. U
-tohoto atributu je navíc použita šablona (více o tomto níže), která
-se použije při jeho vytváření. Dle konvence, kterou django-haystack
-používá, bychom měli hlavní atribut indexu vždy nazývat <code class="highlighter-rouge">text</code>.</li>
-  <li>Dalším atributem je <code class="highlighter-rouge">title</code>, který bude odpovídat <code class="highlighter-rouge">title</code> atributu
-na instanci <code class="highlighter-rouge">Page</code> modelu (což nám říká <code class="highlighter-rouge">model_attr='title'</code> použitý
-při definici. Argument <code class="highlighter-rouge">boost</code> znamená, že shoda na úrovni tohoto
-atributu má být považována za důležitou, což v principu povede k
-tomu, že shoda v titulku získá při vyhodnocení výsledků větší váhu.</li>
-</ol>
-
-<p>Ještě se vrátíme k použití šablony u atributu <code class="highlighter-rouge">text</code>. Použití šablony
-nám umožní do indexu vložit všechny podstatné atributy dané instance,
-které chceme při hledání zohlednit. U indexu by tedy klidně stačilo mít
-pouze atribut <code class="highlighter-rouge">text</code> a nic jiného. Ostatní atributy jsou uvedeny jen
-kvůli tomu, abychom mohli tyto při shodě zvýhodnit. Šablonu pro
-vygenerování textu django-haystack hledá na cestě:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[TEMPLATE_DIR]/search/indexes/[APP_LABEL]/[MODEL]_[NAZEV_ATRIBUTU].txt
-</code></pre></div></div>
-
-<p>V našem případě by to tedy mohla být cesta:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>templates/search/indexes/app/page_text.txt
-</code></pre></div></div>
-
-<p>V šabloně automaticky dostaneme k dispozici proměnnou <code class="highlighter-rouge">object</code>, která
-odpovídá instanci daného modelu, která se zrovna do indexu přidává.
-Obsah této šablony můžeme použít zhruba následující:</p>
-
-<p>Do indexu tedy přidáváme informaci o titulku, celém jméně autora co
-stránku vytvořil, její perex (bez HTML značek) a celý její obsah (opět
-bez HTML značek). HTML odstraňujeme, protože nás při hledání nezajímá a
-naopak by ho kazilo. Kdybychom měli další informace, podle kterých je
-třeba hledat, měli bychom je do šablony přidat také. Příkladem by mohly
-být třeba štítky, které ke stránce, nebo článku můžeme přiřazovat.</p>
-
-<h3 id="5-spuštění-elasticsearch-a-vybudování-prvotního-indexu">5. Spuštění Elasticsearch a vybudování prvotního indexu</h3>
-
-<p>Pokud jste se dostali až sem, můžeme nyní spustit Elasticsearch a
-vybudovat náš první index. Elasticsearch na Macu spustíme následovně a
-měl by nás uvítat konzolový výstup podobný tomu zde uvedenému.</p>
-
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">you@computer:~<span class="nv">$ </span>elasticsearch <span class="nt">--config</span><span class="o">=</span>/usr/local/opt/elasticsearch/config/elasticsearch.yml
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_model</span><span class="p">()</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">published</span><span class="p">()</span></code></pre></figure> <p>Pojďme se blíže podívat na to, co tato definice říká. Jedná se o index nad modelem <code class="highlighter-rouge">Page</code>, který reprezentuje jednoduchou CMS stránku. Tento index bude mít dva atributy.</p> <ol> <li>Jako hlavní je zde použit atribut <code class="highlighter-rouge">text</code>. To, že je hlavní lze poznat podle toho, že má v definici uvedeno <code class="highlighter-rouge">document=True</code>. U tohoto atributu je navíc použita šablona (více o tomto níže), která se použije při jeho vytváření. Dle konvence, kterou django-haystack používá, bychom měli hlavní atribut indexu vždy nazývat <code class="highlighter-rouge">text</code>.</li> <li>Dalším atributem je <code class="highlighter-rouge">title</code>, který bude odpovídat <code class="highlighter-rouge">title</code> atributu na instanci <code class="highlighter-rouge">Page</code> modelu (což nám říká <code class="highlighter-rouge">model_attr='title'</code> použitý při definici. Argument <code class="highlighter-rouge">boost</code> znamená, že shoda na úrovni tohoto atributu má být považována za důležitou, což v principu povede k tomu, že shoda v titulku získá při vyhodnocení výsledků větší váhu.</li> </ol> <p>Ještě se vrátíme k použití šablony u atributu <code class="highlighter-rouge">text</code>. Použití šablony nám umožní do indexu vložit všechny podstatné atributy dané instance, které chceme při hledání zohlednit. U indexu by tedy klidně stačilo mít pouze atribut <code class="highlighter-rouge">text</code> a nic jiného. Ostatní atributy jsou uvedeny jen kvůli tomu, abychom mohli tyto při shodě zvýhodnit. Šablonu pro vygenerování textu django-haystack hledá na cestě:</p> <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[TEMPLATE_DIR]/search/indexes/[APP_LABEL]/[MODEL]_[NAZEV_ATRIBUTU].txt
+</code></pre></div></div> <p>V našem případě by to tedy mohla být cesta:</p> <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>templates/search/indexes/app/page_text.txt
+</code></pre></div></div> <p>V šabloně automaticky dostaneme k dispozici proměnnou <code class="highlighter-rouge">object</code>, která odpovídá instanci daného modelu, která se zrovna do indexu přidává. Obsah této šablony můžeme použít zhruba následující:</p> <p>Do indexu tedy přidáváme informaci o titulku, celém jméně autora co stránku vytvořil, její perex (bez HTML značek) a celý její obsah (opět bez HTML značek). HTML odstraňujeme, protože nás při hledání nezajímá a naopak by ho kazilo. Kdybychom měli další informace, podle kterých je třeba hledat, měli bychom je do šablony přidat také. Příkladem by mohly být třeba štítky, které ke stránce, nebo článku můžeme přiřazovat.</p> <h3 id="5-spuštění-elasticsearch-a-vybudování-prvotního-indexu">5. Spuštění Elasticsearch a vybudování prvotního indexu</h3> <p>Pokud jste se dostali až sem, můžeme nyní spustit Elasticsearch a vybudovat náš první index. Elasticsearch na Macu spustíme následovně a měl by nás uvítat konzolový výstup podobný tomu zde uvedenému.</p> <figure class="highlight"><pre><code class="language-shell" data-lang="shell">you@computer:~<span class="nv">$ </span>elasticsearch <span class="nt">--config</span><span class="o">=</span>/usr/local/opt/elasticsearch/config/elasticsearch.yml
 
 <span class="o">[</span>2014-11-10 10:41:49,409][INFO <span class="o">][</span>node                     <span class="o">]</span> <span class="o">[</span>Toad-In-Waiting] version[1.3.4], pid[99851], build[a70f3cc/2014-09-30T09:07:17Z]
 <span class="o">[</span>2014-11-10 10:41:49,411][INFO <span class="o">][</span>node                     <span class="o">]</span> <span class="o">[</span>Toad-In-Waiting] initializing ...
@@ -346,35 +69,13 @@ měl by nás uvítat konzolový výstup podobný tomu zde uvedenému.</p>
 <span class="o">[</span>2014-11-10 10:41:58,511][INFO <span class="o">][</span>discovery                <span class="o">]</span> <span class="o">[</span>Toad-In-Waiting] xaralis/oIhw_OW3Trim_30_TOz_Mw
 <span class="o">[</span>2014-11-10 10:42:01,527][INFO <span class="o">][</span>cluster.service          <span class="o">]</span> <span class="o">[</span>Toad-In-Waiting] new_master <span class="o">[</span>Toad-In-Waiting][oIhw_OW3Trim_30_TOz_Mw][matrix][inet[/127.0.0.1:9300]], reason: zen-disco-join <span class="o">(</span>elected_as_master<span class="o">)</span>
 <span class="o">[</span>2014-11-10 10:42:01,558][INFO <span class="o">][</span>http                     <span class="o">]</span> <span class="o">[</span>Toad-In-Waiting] bound_address <span class="o">{</span>inet[/127.0.0.1:9200]<span class="o">}</span>, publish_address <span class="o">{</span>inet[/127.0.0.1:9200]<span class="o">}</span>
-<span class="o">[</span>2014-11-10 10:42:01,559][INFO <span class="o">][</span>node                     <span class="o">]</span> <span class="o">[</span>Toad-In-Waiting] started</code></pre></figure>
-
-<p>V další konzoli spustíme management commad od haystacku, který zajistí
-vybudování indexu:</p>
-
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">you@computer:/projects/myproject<span class="nv">$ </span>python manage.py rebuild_index <span class="nt">--noinput</span>
+<span class="o">[</span>2014-11-10 10:42:01,559][INFO <span class="o">][</span>node                     <span class="o">]</span> <span class="o">[</span>Toad-In-Waiting] started</code></pre></figure> <p>V další konzoli spustíme management commad od haystacku, který zajistí vybudování indexu:</p> <figure class="highlight"><pre><code class="language-shell" data-lang="shell">you@computer:/projects/myproject<span class="nv">$ </span>python manage.py rebuild_index <span class="nt">--noinput</span>
 
 Removing all documents from your index because you said so.
 All documents removed.
-Indexing 164 Stránky</code></pre></figure>
-
-<p>Jakmile příkaz doběhne, máme vše připraveno k vyhledávání.</p>
-
-<h3 id="6-view-pro-vyhledávání">6. View pro vyhledávání</h3>
-
-<p>Jediné, co nám v tuto chvíli zbývá vytvořit je stránka pro zadání
-hledáné fráze a zobrazení výsledků. django-haystack nám jde opět
-naproti, protože obsahuje již hotové View třídy, které můžeme rovnou pro
-tento účel použít.</p>
-
-<p>Do našeho <code class="highlighter-rouge">urls.py</code> přidáme:</p>
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">...</span>
+Indexing 164 Stránky</code></pre></figure> <p>Jakmile příkaz doběhne, máme vše připraveno k vyhledávání.</p> <h3 id="6-view-pro-vyhledávání">6. View pro vyhledávání</h3> <p>Jediné, co nám v tuto chvíli zbývá vytvořit je stránka pro zadání hledáné fráze a zobrazení výsledků. django-haystack nám jde opět naproti, protože obsahuje již hotové View třídy, které můžeme rovnou pro tento účel použít.</p> <p>Do našeho <code class="highlighter-rouge">urls.py</code> přidáme:</p> <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">...</span>
 <span class="p">(</span><span class="s">r'^vyhledavani/'</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s">'haystack.urls'</span><span class="p">)),</span>
-<span class="o">...</span></code></pre></figure>
-
-<p>A zbývá již pouze vytvořit šablonu (<code class="highlighter-rouge">templates/search/search.html</code>):</p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html">{% extends 'base.html' %}
+<span class="o">...</span></code></pre></figure> <p>A zbývá již pouze vytvořit šablonu (<code class="highlighter-rouge">templates/search/search.html</code>):</p> <figure class="highlight"><pre><code class="language-html" data-lang="html">{% extends 'base.html' %}
 
 {% block content %}
     <span class="nt">&lt;h2&gt;</span>Vyhledávání<span class="nt">&lt;/h2&gt;</span>
@@ -410,107 +111,4 @@ tento účel použít.</p>
             {% endif %}
         {% endif %}
     <span class="nt">&lt;/form&gt;</span>
-{% endblock %}</code></pre></figure>
-
-<p>Když nyní do prohlížeče zadáte adresu /vyhledavani/, dostanete se na
-funkční stránku s vyhledáváním! Elasticsearch bude umět česky a bude
-schopen si uvědomit skloňování a mnoho dalších specifik českého jazyka.
-Zájemcům o podrobnosti konfigurace Elasticsearch doporučuji již zmíněný
-<strong>článek Lukáše Vlčka</strong>, který mi při prvních krocích velice pomohl.
-Dále je dobrý nápad si pročíst pořádně i <a href="http://django-haystack.readthedocs.org/en/latest/toc.html">dokumentaci
-django-haystacku</a> a
-v neposlední řadě také <a href="http://www.elasticsearch.com/guide/en/elasticsearch/reference/current/index.html">dokumentaci
-Elasticsearch</a>.</p>
-
-<p>Elasticsearch v téhle konfiguraci jsme použili pro fulltextové
-vyhledávání na webu <a href="https://www.adventura.cz/">CK Adventura</a>,
-výsledek může vypadat třeba
-takhle:</p>
-
-<figure>
-<img src="https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2014-11-14-fulltext-cesky-pomoci-djanga__1.png" srcset="https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2014-11-14-fulltext-cesky-pomoci-djanga__1.png 1x,
-        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2014-11-14-fulltext-cesky-pomoci-djanga__1.png 2x,
-        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2014-11-14-fulltext-cesky-pomoci-djanga__1.png 3x" />
-
-</figure>
-
-
-            </div>
-        </div>
-    </div>
-    <div class="content-block">
-        <div class="article__misc">
-            <div class="article__miscitem">
-                <div class="sharebox">
-    <ul class="sharebox__items">
-        <li class="sharebox__item sharebox__item--twitter">
-            <a class="sharebox__item-body" href="https://twitter.com/intent/tweet?text=Fulltext česky pomocí Djanga a Elasticsearch&url=https://fragaria.cz/blog/2014/11/14/fulltext-cesky-pomoci-djanga/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter"><span>Share on Twitter</span></a>
-        </li>
-        <li class="sharebox__item sharebox__item--facebook">
-            <a class="sharebox__item-body" href="https://facebook.com/sharer.php?u=https://fragaria.cz/blog/2014/11/14/fulltext-cesky-pomoci-djanga/" rel="nofollow" target="_blank" title="Share on Facebook"><span>Share on Facebook</span></a>
-        </li>
-        <li class="sharebox__item sharebox__item--gplus">
-            <a class="sharebox__item-body" href="https://plus.google.com/share?url=https://fragaria.cz/blog/2014/11/14/fulltext-cesky-pomoci-djanga/" rel="nofollow" target="_blank" title="Share on Google+"><span>Share on Google+</span></a>
-        </li>
-    </ul>
-</div>
-
-            </div>
-            <div class="article__miscitem">
-                <div class="taglist" itemscope itemtype="http://schema.org/WebPage">
-    
-        
-        <a class="taglist__tag" href="/website/blog/archive/tag/search/" itemprop="relatedLink">search</a>
-    
-        
-        <a class="taglist__tag" href="/website/blog/archive/tag/fulltext/" itemprop="relatedLink">fulltext</a>
-    
-        
-        <a class="taglist__tag" href="/website/blog/archive/tag/django/" itemprop="relatedLink">django</a>
-    
-        
-        <a class="taglist__tag" href="/website/blog/archive/tag/elasticsearch/" itemprop="relatedLink">elasticsearch</a>
-    
-        
-        <a class="taglist__tag" href="/website/blog/archive/tag/python/" itemprop="relatedLink">python</a>
-    
-</div>
-
-            </div>
-        </div>
-    </div>
-</article>
-
-            <footer class="content-block">
-    <div class="footer">
-        <div class="footer__meta">
-            <a href="/website/">
-                <img alt="Fragaria s.r.o." class="footer__brand" src="/website/assets/img/strawberry.svg">
-            </a>
-            <div class="footer__copy">
-                <div class="footer__copy-line footer__copy-line--emphasized">FRAGARIA (C) 2018</div>
-                <div class="footer__copy-line">Talk is cheap, show me the code.</div>
-            </div>
-        </div>
-        <div class="footer__social">
-            
-                <a href="https://twitter.com/fragariacz" class="icon--twitter footer__social-icon"></a>
-            
-            
-                <a href="https://linkedin.com/company/fragaria-ltd-" class="icon--linkedin footer__social-icon"></a>
-            
-            
-                <a href="https://plus.google.com/+FragariaCz"class="icon--gplus footer__social-icon"></a>
-            
-            
-                <a href="https://github.com/fragaria"class="icon--github footer__social-icon"></a>
-            
-        </div>
-    </div>
-</footer>
-
-        </div>
-
-        <script src="/website/assets/js/site.js?9e00faef3e05e859744dbd885eab4baf"></script>
-    </body>
-</html>
+{% endblock %}</code></pre></figure> <p>Když nyní do prohlížeče zadáte adresu /vyhledavani/, dostanete se na funkční stránku s vyhledáváním! Elasticsearch bude umět česky a bude schopen si uvědomit skloňování a mnoho dalších specifik českého jazyka. Zájemcům o podrobnosti konfigurace Elasticsearch doporučuji již zmíněný <strong>článek Lukáše Vlčka</strong>, který mi při prvních krocích velice pomohl. Dále je dobrý nápad si pročíst pořádně i <a href="http://django-haystack.readthedocs.org/en/latest/toc.html">dokumentaci django-haystacku</a> a v neposlední řadě také <a href="http://www.elasticsearch.com/guide/en/elasticsearch/reference/current/index.html">dokumentaci Elasticsearch</a>.</p> <p>Elasticsearch v téhle konfiguraci jsme použili pro fulltextové vyhledávání na webu <a href="https://www.adventura.cz/">CK Adventura</a>, výsledek může vypadat třeba takhle:</p> <figure> <img src="https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2014-11-14-fulltext-cesky-pomoci-djanga__1.png" srcset="https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2014-11-14-fulltext-cesky-pomoci-djanga__1.png 1x, https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2014-11-14-fulltext-cesky-pomoci-djanga__1.png 2x, https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2014-11-14-fulltext-cesky-pomoci-djanga__1.png 3x" /> </figure> </div> </div> </div> <div class="content-block"> <div class="article__misc"> <div class="article__miscitem"> <div class="sharebox"> <ul class="sharebox__items"> <li class="sharebox__item sharebox__item--twitter"> <a class="sharebox__item-body" href="https://twitter.com/intent/tweet?text=Fulltext česky pomocí Djanga a Elasticsearch&url=https://fragaria.cz/blog/2014/11/14/fulltext-cesky-pomoci-djanga/&via=&related=" rel="nofollow" target="_blank" title="Share on Twitter"><span>Share on Twitter</span></a> </li> <li class="sharebox__item sharebox__item--facebook"> <a class="sharebox__item-body" href="https://facebook.com/sharer.php?u=https://fragaria.cz/blog/2014/11/14/fulltext-cesky-pomoci-djanga/" rel="nofollow" target="_blank" title="Share on Facebook"><span>Share on Facebook</span></a> </li> <li class="sharebox__item sharebox__item--gplus"> <a class="sharebox__item-body" href="https://plus.google.com/share?url=https://fragaria.cz/blog/2014/11/14/fulltext-cesky-pomoci-djanga/" rel="nofollow" target="_blank" title="Share on Google+"><span>Share on Google+</span></a> </li> </ul> </div> </div> <div class="article__miscitem"> <div class="taglist" itemscope itemtype="http://schema.org/WebPage"> <a class="taglist__tag" href="/website/blog/archive/tag/search/" itemprop="relatedLink">search</a> <a class="taglist__tag" href="/website/blog/archive/tag/fulltext/" itemprop="relatedLink">fulltext</a> <a class="taglist__tag" href="/website/blog/archive/tag/django/" itemprop="relatedLink">django</a> <a class="taglist__tag" href="/website/blog/archive/tag/elasticsearch/" itemprop="relatedLink">elasticsearch</a> <a class="taglist__tag" href="/website/blog/archive/tag/python/" itemprop="relatedLink">python</a> </div> </div> </div> </div> </article> <footer class="content-block"> <div class="footer"> <div class="footer__meta"> <a href="/website/"> <img alt="Fragaria s.r.o." class="footer__brand" src="/website/assets/img/strawberry.svg"> </a> <div class="footer__copy"> <div class="footer__copy-line footer__copy-line--emphasized">FRAGARIA (C) 2018</div> <div class="footer__copy-line">Talk is cheap, show me the code.</div> </div> </div> <div class="footer__social"> <a href="https://twitter.com/fragariacz" class="icon--twitter footer__social-icon"></a> <a href="https://linkedin.com/company/fragaria-ltd-" class="icon--linkedin footer__social-icon"></a> <a href="https://plus.google.com/+FragariaCz"class="icon--gplus footer__social-icon"></a> <a href="https://github.com/fragaria"class="icon--github footer__social-icon"></a> </div> </div> </footer> </div> <script src="/website/assets/js/site.js?9e00faef3e05e859744dbd885eab4baf"></script> </body> </html>

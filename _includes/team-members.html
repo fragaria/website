@@ -8,6 +8,8 @@
                     {% if member.avatar.src == 'github' %}
                         <source srcset="https://github.com/{{ member.profiles.github }}.png?size=300" media="(min-width: 480px)" />
                         <img class="team-member__avatar-image" src="https://github.com/{{ member.profiles.github }}.png?size=128" alt="{{ member.name }}" itemprop="contentUrl" />
+                    {% elsif member.avatar.src == 'gravatar' %}
+                        <img class="team-member__avatar-image" src="{{ member.profiles.gravatar | to_gravatar }}?s=300" alt="{{ member.name }}" itemprop="contentUrl" />
                     {% else %}
                         <img class="team-member__avatar-image" src="{{ member.avatar.img }}" alt="{{ member.name }}" itemprop="contentUrl" />
                     {% endif %}

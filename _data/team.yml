@@ -23,8 +23,9 @@
   nationality: Czech
   gender: male
   avatar:
-    src: github
+    src: gravatar
   profiles:
+    gravatar: lukas.marek@fragaria.cz
     github: krtek
     twitter: krtek_cz
     linkedin: krtek

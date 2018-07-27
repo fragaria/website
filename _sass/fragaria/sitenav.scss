@@ -1,9 +1,10 @@
-$sitenav-height-mobile: 26rem;
+$sitenav-height-mobile: 100vh;
+$sitenav-body-height: 5rem;
 $sitenav-slide-transition: cubic-bezier(0.17, 0.04, 0.03, 0.94);
 
 .sitenav {
     position: relative;
-    height: 5rem;
+    height: $sitenav-body-height;
     margin-bottom: 3rem;
     align-items: center;
 
@@ -59,6 +60,7 @@ $sitenav-slide-transition: cubic-bezier(0.17, 0.04, 0.03, 0.94);
     list-style-type: none;
     z-index: 2;
     width: 100%;
+    min-height: 100vh;
 
     // linkset only shown if menu is toggled on mobile (@see: .sitenav-wrapper--show)
     padding: 4rem 7rem 2rem;
@@ -70,6 +72,7 @@ $sitenav-slide-transition: cubic-bezier(0.17, 0.04, 0.03, 0.94);
     @include deviceBreakpoint(tablet) {
         flex-direction: row;
         padding: 0;
+        height: auto;
         transform: translateY(0);
         transition: none;
         background: none;
@@ -211,7 +214,7 @@ a.sitenav__menu-toggle-link {
 /* if menu is shown, it covers whole screen  with background fill */
 .sitenav-wrapper--show {
     @media (max-width: deviceBreakpointWidth(tablet) - 0.00001rem) {
-        padding-bottom: $sitenav-height-mobile;
+        padding-bottom: calc(#{$sitenav-height-mobile}  - #{$sitenav-body-height});
 
         .sitenav__linkset {
             transform: translateY(0);

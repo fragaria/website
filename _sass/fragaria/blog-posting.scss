@@ -3,20 +3,23 @@
     display: flex;
 
     &--horizontal .blog-posting__body {
-        flex-direction: row;
         padding-bottom: 2rem;
 
-        .blog-posting__excerpt {
-            @include sassline(eta, $bodytype, 2, 1, all);
+        @include deviceBreakpoint(tablet) {
+            flex-direction: row;
+
+
+            .blog-posting__media {
+                margin-left: 2rem;
+                margin-top: 0;
+                min-width: 33.333%;
+            }
+
+            .blog-posting__image {
+                display: block;
+            }
         }
 
-        .blog-posting__media {
-            background: none !important;
-        }
-
-        .blog-posting__image {
-            display: block;
-        }
     }
 
     &--featured .blog-posting__body {

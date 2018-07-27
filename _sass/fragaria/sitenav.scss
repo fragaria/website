@@ -143,7 +143,7 @@ $sitenav-slide-transition: cubic-bezier(0.17, 0.04, 0.03, 0.94);
     }
 
     @include deviceBreakpoint(tablet) {
-        .sitenav__link {
+        .sitenav__link:not(&--main) {
             color: map-get($palette, black);
 
             &:hover {
@@ -171,6 +171,10 @@ $sitenav-slide-transition: cubic-bezier(0.17, 0.04, 0.03, 0.94);
             height: 2rem;
             color: map-get($palette, white);
             background-color: map-get($palette, red);
+
+            &:hover {
+                color: map-get($palette, white);
+            }
 
         }
     }

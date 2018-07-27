@@ -7,7 +7,7 @@ tags:
 - hyperkrychle
 - off-topic
 modified_time: '2016-01-06T21:28:56.017+01:00'
-thumbnail: http://1.bp.blogspot.com/-1TU1nYyYJWg/VoMj0M_pDYI/AAAAAAAAABw/T4A3H2tl91Y/s72-c/q2.png
+cloudinary_src: posts/2016-01-06-povidani-o-hyperkrychlich__5.png
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-8688357239949204146
 blogger_orig_url: http://blog.fragaria.cz/2016/01/povidani-o-hyperkrychlich.html
 ---
@@ -23,40 +23,29 @@ ukázat jakou má souvislost s tradiční třírozměrnou krychlí v prostoru. U
 hyperkrychle je vždy potřeba říct jakou má dimenzi. Podívejme se
 kupříkladu na Obrázku 1 na hyperkrychli dimenze dvě.
 
-[![Hypekrychle dimenze
-dvě.](http://1.bp.blogspot.com/-1TU1nYyYJWg/VoMj0M_pDYI/AAAAAAAAABw/T4A3H2tl91Y/s320/q2.png
-"Hypekrychle dimenze dvě.")](http://1.bp.blogspot.com/-1TU1nYyYJWg/VoMj0M_pDYI/AAAAAAAAABw/T4A3H2tl91Y/s1600/q2.png)
-Obrázek 1: Hypekrychle dimenze dvě.
+{% include figure.html cloudinary_src='posts/2016-01-06-povidani-o-hyperkrychlich__1.png' caption='Obrázek 1: Hypekrychle dimenze dvě.' %}
 
 Nic objevného se tady nekoná, vypadá jako obyčejný čtverec. Dle
 očekávání hyperkrychle dimenze tři na Obrázku 2 vypadá jako krychle,
 ale zdání může klamat.
 
-[![Hypekrychle dimenze
-tři.](http://4.bp.blogspot.com/-8XNoMyGLeYw/VoMlRQDwF4I/AAAAAAAAACE/VpB6gPcIawo/s320/q3_cube.png
-"Hypekrychle dimenze tři.")](http://4.bp.blogspot.com/-8XNoMyGLeYw/VoMlRQDwF4I/AAAAAAAAACE/VpB6gPcIawo/s1600/q3_cube.png)
-Obrázek 2: Hypekrychle dimenze tři.
+{% include figure.html cloudinary_src='posts/2016-01-06-povidani-o-hyperkrychlich__2.png' caption='Obrázek 2: Hypekrychle dimenze tři.' %}
+
 
 U hyperkrychle nás nezajímá fyzikální interpretace rozměrů, tedy zda
 jsou prostorové, časové nebo jiné. Zajímá nás pouze propojení vrcholů
 hranami mezi sebou. Proto je v pořádku že hyperkrychle dimenze tři může
 vypadat i jako na Obrázku 3.
 
-[![Hypekrychle dimenze
-tři.](http://1.bp.blogspot.com/-N3Rkp4KnvJ8/VoMl5WcbU7I/AAAAAAAAACM/8LWSF58C4Mk/s320/q3.png
-"Hypekrychle dimenze tři.")](http://1.bp.blogspot.com/-N3Rkp4KnvJ8/VoMl5WcbU7I/AAAAAAAAACM/8LWSF58C4Mk/s1600/q3.png)
-Obrázek 3: Stále hypekrychle dimenze tři, jen jinak nakreslená.
+{% include figure.html cloudinary_src='posts/2016-01-06-povidani-o-hyperkrychlich__3.png' caption='Obrázek 3: Stále hypekrychle dimenze tři, jen jinak nakreslená.' %}
 
 Kde takovou hyperkrychli vzít? Hyperkrychli dimenze tři vytvoříme tak,
 že vezmeme dvě hyperkrychle dimenze dvě a spárujeme protější vrcholy
 novými hranami. Stejně tak vytvoříme hyperkrychli dimenze čtyři -
 spárováním vrcholů dvou hyperkrychlí dimenze 3 jak je vidět na Obrázku
-4.
 
-[![](http://1.bp.blogspot.com/-mmXn-OzW3vg/VoMnasujwkI/AAAAAAAAACY/Eunlgm0FAKg/s320/q4.png
-"Hypekrychle dimenze čtyři.")](http://1.bp.blogspot.com/-mmXn-OzW3vg/VoMnasujwkI/AAAAAAAAACY/Eunlgm0FAKg/s1600/q4.png)
-Obrázek 4: Hypekrychle dimenze čtyři s vyznačeným propojením dvou
-hyperkrychlí dimenze tři.
+
+{% include figure.html cloudinary_src='posts/2016-01-06-povidani-o-hyperkrychlich__4.png' caption='Obrázek 4: Hypekrychle dimenze čtyři s vyznačeným propojením dvou hyperkrychlí dimenze tři.' %}
 
 Opačným způsobem (tedy řezáním) snadno dostaneme z hyperkrychle dimenze
 dva hyperkrychli dimenze jedna a z ní hyperkrychli dimenze nula. Zkuste
@@ -102,9 +91,7 @@ umíme najít se nazývá Hamiltonovský. Hyperkrychle dimenze čtyři je
 Hamiltonovská, jak můžeme vidět na Obrázku
 5.
 
-[![](http://3.bp.blogspot.com/-3SIZLxS99fY/VoQCdvUHPjI/AAAAAAAAACw/3xVNYJo6nHY/s320/q4_hc.png)](http://3.bp.blogspot.com/-3SIZLxS99fY/VoQCdvUHPjI/AAAAAAAAACw/3xVNYJo6nHY/s1600/q4_hc.png)
-Obrázek 5: Hyperkrychle dimenze čtyři s červeně vyznačeným
-Hamiltonovským cyklem.
+{% include figure.html cloudinary_src='posts/2016-01-06-povidani-o-hyperkrychlich__5.png' caption='Obrázek 5: Hyperkrychle dimenze čtyři s červeně vyznačeným Hamiltonovským cyklem.' %}
 
 Protože Hamiltonovský cyklus v
 ![](http://www.codecogs.com/gif.latex?Q_n) obsahuje všechny vrcholy

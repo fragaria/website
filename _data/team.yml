@@ -3,8 +3,8 @@
   nationality: Czech
   gender: male
   avatar:
-    src: img
-    img: http://via.placeholder.com/300x300
+    src: cloudinary
+    cloudinary: people/martin-burian.jpg
   profiles:
     twitter: martin_burian
     linkedin: martinburi8n
@@ -113,8 +113,8 @@
   nationality: Czech
   gender: male
   avatar:
-    src: img
-    img: http://via.placeholder.com/300x300
+    src: cloudinary
+    cloudinary: people/milan-slezak.jpg
   profiles:
     linkedin: slezakm
 - name: Michal Dub
@@ -130,8 +130,8 @@
   nationality: Slovak
   gender: female
   avatar:
-    src: img
-    img: http://via.placeholder.com/300x300
+    src: cloudinary
+    cloudinary: people/daniela-borosova.jpg
   profiles:
     linkedin: daniela-boro%C5%A1ov%C3%A1-1521833b
 - name: Kamil Daněk
@@ -139,30 +139,31 @@
   nationality: Czech
   gender: male
   avatar:
-    src: img
-    img: http://via.placeholder.com/300x300
+    src: cloudinary
+    cloudinary: people/kamil-danek.jpg
   profiles:
 - name: Adam David
   alt: Kodér remote
   nationality: Czech
   gender: male
   avatar:
-    src: img
-    img: http://via.placeholder.com/300x300
+    src: cloudinary
+    cloudinary: people/adam-david.jpg
   profiles:
+    gravatar: adam.david@fragaria.cz
 - name: Ondřej Pudiš
   alt: Mladá krev
   nationality: Czech
   gender: male
   avatar:
-    src: img
-    img: http://via.placeholder.com/300x300
+    src: cloudinary
+    cloudinary: people/ondrej-pudis.jpg
   profiles:
 - name: Marta Vaňková
   alt: Duše Fostera
   nationality: Czech
   gender: female
   avatar:
-    src: img
-    img: http://via.placeholder.com/300x300
+    src: cloudinary
+    cloudinary: people/marta-vankova.jpg
   profiles:

@@ -25,10 +25,17 @@
             </div>
             {% endif %}
         </div>
-        {% if include.post.thumbnail %}
-        <div class="blog-posting__media" style="background-image: url('{{ include.post.thumbnail }}')">
-            <img itemprop="image" src="{{ include.post.thumbnail }}" class="blog-posting__image" />
-        </div>
+        {% if include.post.cloudinary_src %}
+            {%- capture img_src -%}
+                {%- if include.media_sizing != 'large' -%}
+                    {% cloudinary_url include.post.cloudinary_src width='640' crop='fit' quality='auto' dpr='2.0' format='jpg' %}
+                {%- else -%}
+                    {% cloudinary_url include.post.cloudinary_src width='1280' height='800' crop='fit' quality='auto' dpr='2.0' format='jpg' %}
+                {%- endif -%}
+            {%- endcapture -%}
+            <div class="blog-posting__media" style="background-image: url('{{ img_src }}')">
+                <img itemprop="image" src="{{ img_src }}" class="blog-posting__image" />
+            </div>
         {% endif %}
     </a>
 </article>

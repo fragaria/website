@@ -8,7 +8,7 @@ tags:
 - openstreetmap
 - javascript
 modified_time: '2018-02-05T09:56:15.586+01:00'
-thumbnail: https://3.bp.blogspot.com/-ZCiJ_QZQkj8/WnCJev76DVI/AAAAAAAAAlg/GJfwYJFxe48ZyGlnJL1-23zULFYKJyYrgCLcBGAs/s72-c/Screenshot_2018-01-30_16-02-36.png
+cloudinary_src: posts/2018-02-05-mapujeme-adresy-do-ceskych-kraju__1.png
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-2947207121541021275
 blogger_orig_url: http://blog.fragaria.cz/2018/02/mapujeme-adresy-do-ceskych-kraju.html
 ---
@@ -21,7 +21,7 @@ chvíli ale netuší, že před ním leží křivolaká cesta plná slepých uli
 nezrušených zákonů, neúplných datových zdrojů a zajímavých
 algoritmů.
 
-[![](https://3.bp.blogspot.com/-ZCiJ_QZQkj8/WnCJev76DVI/AAAAAAAAAlg/GJfwYJFxe48ZyGlnJL1-23zULFYKJyYrgCLcBGAs/s640/Screenshot_2018-01-30_16-02-36.png)](https://3.bp.blogspot.com/-ZCiJ_QZQkj8/WnCJev76DVI/AAAAAAAAAlg/GJfwYJFxe48ZyGlnJL1-23zULFYKJyYrgCLcBGAs/s1600/Screenshot_2018-01-30_16-02-36.png)
+{% include figure.html cloudinary_src="posts/2018-02-05-mapujeme-adresy-do-ceskych-kraju__1.png" %}
 
 ## Hledáme data
 

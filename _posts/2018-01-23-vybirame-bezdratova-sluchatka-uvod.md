@@ -11,7 +11,7 @@ tags:
 - iphone
 - android
 modified_time: '2018-01-23T13:44:12.420+01:00'
-thumbnail: https://2.bp.blogspot.com/-dfIxl0de1OI/WmYAmCWRAcI/AAAAAAAAA-4/A2WLvtXHnlos78sFiI8K04szO_ETtqdigCLcBGAs/s72-c/R0005251.JPG
+cloudinary_src: posts/2018-01-23-vybirame-bezdratova-sluchatka-uvod__1.jpg
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-8749405181262035675
 blogger_orig_url: http://blog.fragaria.cz/2018/01/vybirame-bezdratova-sluchatka-uvod.html
 ---
@@ -26,7 +26,7 @@ A protože celý proces byl dlouhý a hlavně dost drahý, chci se s Vámi
 podělit o svá
 zjištění.
 
-## [![](https://2.bp.blogspot.com/-dfIxl0de1OI/WmYAmCWRAcI/AAAAAAAAA-4/A2WLvtXHnlos78sFiI8K04szO_ETtqdigCLcBGAs/s640/R0005251.JPG)](https://2.bp.blogspot.com/-dfIxl0de1OI/WmYAmCWRAcI/AAAAAAAAA-4/A2WLvtXHnlos78sFiI8K04szO_ETtqdigCLcBGAs/s1600/R0005251.JPG)
+{% include figure.html cloudinary_src="posts/2018-01-23-vybirame-bezdratova-sluchatka-uvod__1.jpg" %}
 
 Dráty, bezdráty, kde je rozdíl?
 
@@ -140,11 +140,11 @@ zač.
 
 #### Spotify
 
-[![](https://2.bp.blogspot.com/-SWMDcoHjijE/WmSF93W6T5I/AAAAAAAAA-k/X5lZgiLM6rITV0BmrnEFa3XD02FKZHtJQCLcBGAs/s400/Screenshot_20180121-125842.jpg)](https://2.bp.blogspot.com/-SWMDcoHjijE/WmSF93W6T5I/AAAAAAAAA-k/X5lZgiLM6rITV0BmrnEFa3XD02FKZHtJQCLcBGAs/s1600/Screenshot_20180121-125842.jpg)
+{% include figure.html cloudinary_src="posts/2018-01-23-vybirame-bezdratova-sluchatka-uvod__2.jpg" %}
 
 #### Google Play Music
 
-[![](https://1.bp.blogspot.com/-86ivIXCvyA0/WmSF9iET8MI/AAAAAAAAA-g/Ijw66DULphQwWv7VaeidqdAWKrlHAPmCgCLcBGAs/s400/Screenshot_20180121-130323.jpg)](https://1.bp.blogspot.com/-86ivIXCvyA0/WmSF9iET8MI/AAAAAAAAA-g/Ijw66DULphQwWv7VaeidqdAWKrlHAPmCgCLcBGAs/s1600/Screenshot_20180121-130323.jpg)
+{% include figure.html cloudinary_src="posts/2018-01-23-vybirame-bezdratova-sluchatka-uvod__3.jpg" %}
 
 Příští týden se podíváme na bezdrátová sluchátka do uší (pecky).
 

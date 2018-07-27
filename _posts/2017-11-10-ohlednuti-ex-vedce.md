@@ -8,7 +8,7 @@ tags:
 - angularjs
 - vědec
 modified_time: '2017-11-10T15:51:01.440+01:00'
-thumbnail: https://lh4.googleusercontent.com/QyzFZSDXrnnuAINoZRZayv4R3JaLCNVcvzYJCIziVACy-2B1K_7Y0ZS2irxVnhSkmVxnG_s95hbMQ6kkcJMnAuw-22x5hGMrMIPvCHoNWFqTKIZ6wh1irSMTQnSR92v5I-pE6gG0=s72-c
+cloudinary_src: posts/2017-11-10-ohlednuti-ex-vedce__1.jpg
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-2043004085493454927
 blogger_orig_url: http://blog.fragaria.cz/2017/11/ohlednuti-ex-vedce.html
 featured: true
@@ -20,10 +20,8 @@ proč jsem od ní nakonec upustil a vrhl se na programování.
 Aby se nejednalo jen o osobní zpověď, snažím se zde zahrnout co možná
 nejvíce postřehů, které se snad zcela neutonou v poněkud krkolomném
 slohu.
-**
-**
 
-![greg-rakozy-38802.jpg](https://lh4.googleusercontent.com/QyzFZSDXrnnuAINoZRZayv4R3JaLCNVcvzYJCIziVACy-2B1K_7Y0ZS2irxVnhSkmVxnG_s95hbMQ6kkcJMnAuw-22x5hGMrMIPvCHoNWFqTKIZ6wh1irSMTQnSR92v5I-pE6gG0)
+{% include figure.html cloudinary_src='posts/2017-11-10-ohlednuti-ex-vedce__1.jpg' %}
 
 ### Kdo je to fyzik?
 

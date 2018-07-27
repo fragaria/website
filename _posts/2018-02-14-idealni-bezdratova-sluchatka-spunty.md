@@ -14,7 +14,7 @@ tags:
 - iphone
 - android
 modified_time: '2018-02-14T14:46:23.227+01:00'
-thumbnail: https://1.bp.blogspot.com/-h2VdSjNhHT0/WnWk_zGeyUI/AAAAAAAAA_c/dx-iWFyIYT4y5oGQJ6ACxvOu-Y43h9ZbACPcBGAYYCw/s72-c/DSCF1741.jpg
+cloudinary_src: posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__1.jpg
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-4715149078168620870
 blogger_orig_url: http://blog.fragaria.cz/2018/02/idealni-bezdratova-sluchatka-spunty.html
 ---
@@ -38,7 +38,7 @@ EP51](https://www.gearbest.com/sports-fitness-headphones/pp_356162.html)
 a novější (a dražší) [Meizu
 EP52](https://www.meizu.com/en/accessory/ep52.html).
 
-[![](https://1.bp.blogspot.com/-h2VdSjNhHT0/WnWk_zGeyUI/AAAAAAAAA_c/dx-iWFyIYT4y5oGQJ6ACxvOu-Y43h9ZbACPcBGAYYCw/s640/DSCF1741.jpg)](https://1.bp.blogspot.com/-h2VdSjNhHT0/WnWk_zGeyUI/AAAAAAAAA_c/dx-iWFyIYT4y5oGQJ6ACxvOu-Y43h9ZbACPcBGAYYCw/s1600/DSCF1741.jpg)
+{% include figure.html cloudinary_src="posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__1.jpg" %}
 
 Meizu mají tradičně řešené ovládání, které visí z pravé strany a
 umožňuje ovládat hlasitost, zastavit/pustit hudbu a přeskakovat na
@@ -54,33 +54,27 @@ se opře o vnitřek ucha a zaručuje, že sluchátko v uchu drží opravdu
 dobře a nevypadne ani při běhání -
 asi.
 
-[![](https://3.bp.blogspot.com/-qJeY-AzqIWs/WnWk_4bedpI/AAAAAAAAA_Y/AM1yxDXy-9IxOmue3JgfoN9tmfZVe9xnwCPcBGAYYCw/s640/DSCF1742.jpg)](https://3.bp.blogspot.com/-qJeY-AzqIWs/WnWk_4bedpI/AAAAAAAAA_Y/AM1yxDXy-9IxOmue3JgfoN9tmfZVe9xnwCPcBGAYYCw/s1600/DSCF1742.jpg)
+{% include figure.html cloudinary_src="posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__2.jpg" %}
 
 ### Zvuk
 
 Obě verze podle mě hrají téměř stejně, bohužel EP51 jsem ztratil, takže
 přímé porovnání neudělám.
 
-Zvuk trochu postrádá detaily. Zvlášť je to patrné u bicích, kde se
-ztratí živost a bubny zní jako ze samplu. Výšky a středy jsou na tom
-lépe, ale pořád je poznat, že jde o sluchátka za pár korun.
-
-V porovnání s RHA MA 750 se ztrácí umístění nástrojů v prostoru.
-
-Já ale oceňuji, že zvuk je vyrovnaný a sluchátka nejsou zbytečně
-přebasovaná.
+Zvuk trochu postrádá detaily. Zvlášť je to patrné u bicích, kde se ztratí živost
+a bubny zní jako ze samplu. Výšky a středy jsou na tom lépe, ale pořád je
+poznat, že jde o sluchátka za pár korun. V porovnání s RHA MA 750 se ztrácí
+umístění nástrojů v prostoru. Já ale oceňuji, že zvuk je vyrovnaný a sluchátka
+nejsou zbytečně přebasovaná.
 
 V balení nebyl pěnový nástavec Comply, takže jsem ho musel [koupit
-zvlášť](https://www.audigo.cz/Prislusenstvi/Pro-sluchatka/Nausniky-a-nastavce/Comply-Tx-400-velikost-M)
-- mimochodem doporučuju pro libovolná sluchátka.
+zvlášť](https://www.audigo.cz/Prislusenstvi/Pro-sluchatka/Nausniky-a-nastavce/Comply-Tx-400-velikost-M) - mimochodem doporučuju pro libovolná sluchátka.
 
 ### Kodeky
 
-|   |      |
-| :- | :--- |
-| ✅ | SBC  |
-| ❎ | AAC  |
-| ✅ | aptX |
+- SBC: **ANO**
+- AAC: **NE**
+- aptX: **ANO**
 
 ### Výdrž
 
@@ -107,7 +101,7 @@ Skotská firma RHA po úspěchu svých sluchátek **MA 750** zkusila vydat i
 jejich bezdrátovou
 verzi.
 
-[![](https://4.bp.blogspot.com/-TlP1XefINc0/WnWk_rEGh5I/AAAAAAAAA_U/3n1Sw9M5jmAPKaQPXucr7Y53dV_LegRawCPcBGAYYCw/s640/DSCF1745.jpg)](https://4.bp.blogspot.com/-TlP1XefINc0/WnWk_rEGh5I/AAAAAAAAA_U/3n1Sw9M5jmAPKaQPXucr7Y53dV_LegRawCPcBGAYYCw/s1600/DSCF1745.jpg)
+{% include figure.html cloudinary_src="posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__3.jpg" %}
 
 Musím říct, že jsem se na ně docela těšil a že jsem byl docela zklamaný.
 Jednak nemám rád sluchátka s nákrčníkem - no a když ho **MA 750
@@ -121,7 +115,7 @@ Musím pochválit výbavu - dostanete celou řadu náhradních špuntů do uší
 takže není problém vybrat správnou velikost pro libovolné
 ucho.
 
-[![](https://2.bp.blogspot.com/-s3Q6Ctj-tfo/WnWlAWfGg2I/AAAAAAAAA_g/shORm_Qh2m4npaxIQXMY7og47s8miML1gCPcBGAYYCw/s640/DSCF1746.jpg)](https://2.bp.blogspot.com/-s3Q6Ctj-tfo/WnWlAWfGg2I/AAAAAAAAA_g/shORm_Qh2m4npaxIQXMY7og47s8miML1gCPcBGAYYCw/s1600/DSCF1746.jpg)
+{% include figure.html cloudinary_src="posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__4.jpg" %}
 
 Pokud je budete kupovat, určitě si schovejte účtenku - na mých nefunguje
 tlačítko „snížit hlasitost“ a kolegovi po 14 dnech přestalo hrát pravé
@@ -157,11 +151,9 @@ zvuk beru spíš jako plus.
 
 ### Kodeky
 
-|   |      |
-| :- | :--- |
-| ✅ | SBC  |
-| ✅ | AAC  |
-| ✅ | aptX |
+- SBC: **ANO**
+- AAC: **ANO**
+- aptX: **ANO**
 
 ### Výdrž
 
@@ -191,7 +183,7 @@ Ještě víc než na **RHA MA 750 Wireless** jsem se těšil na **Beoplay
 E8**, takže jsem je koupil, aniž bych ověřil, že umí zpracovat **aptX**.
 Neumí.
 
-[![](https://1.bp.blogspot.com/-WbSwMTqLfsc/WnWlArbr__I/AAAAAAAAA_k/A0Kh38oKYfQ1zMnIAJwtVUKOcs7XHvoWACPcBGAYYCw/s640/DSCF1750.jpg)](https://1.bp.blogspot.com/-WbSwMTqLfsc/WnWlArbr__I/AAAAAAAAA_k/A0Kh38oKYfQ1zMnIAJwtVUKOcs7XHvoWACPcBGAYYCw/s1600/DSCF1750.jpg)
+{% include figure.html cloudinary_src="posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__5.jpg" %}
 
 Naštěstí můj telefon (OnePlus 5) si poradí i s **AAC**, jinak bych byl
 dost namíchnutý.
@@ -226,9 +218,7 @@ Dva dotyky na pravém (nebo levém) sluchátku přeskočí písničku dopředu
 nebo Siri - podle telefonu.
 
 Hlasitost se ovládá delším držením pravého (zesílit) nebo levého
-(zeslabit) sluchátka.
-
-Párování s novým telefonem se provádí současným stiskem na obou
+(zeslabit) sluchátka. Párování s novým telefonem se provádí současným stiskem na obou
 sluchátkách.
 
 Je vidět, že nad ovládáním někdo docela přemýšlel, protože je snadno
@@ -261,7 +251,7 @@ vlastnosti zvuku ve čtverci popsaném nadpisy jako *warm*, *excited*,
 *relaxed* nebo
 *bright*.
 
-[![](https://3.bp.blogspot.com/-DGELMgR6jzY/WnWmuj_DvXI/AAAAAAAAA_4/Mj003Ossh4EKdbrmjnXGS-3vUF3agfMZwCLcBGAs/s640/Screenshot_20180121-142051.jpg)](https://3.bp.blogspot.com/-DGELMgR6jzY/WnWmuj_DvXI/AAAAAAAAA_4/Mj003Ossh4EKdbrmjnXGS-3vUF3agfMZwCLcBGAs/s1600/Screenshot_20180121-142051.jpg)
+{% include figure.html cloudinary_src="posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__6.jpg" %}
 
   - tažením směrem k *bright* a *excited* zvýrazníte výšky, s tím že u
     *excited* zůstanu zvýrazněné i středy
@@ -280,11 +270,9 @@ hudbu.
 
 ### Kodeky
 
-|   |                         |
-| :- | :---------------------- |
-| ✅ | SBC                     |
-| ✅ | AAC                     |
-| ❎ | aptX ( proboha proč\!?) |
+- SBC: **ANO**
+- AAC: **ANO**
+- aptX: **NE** (proboha proč?!)
 
 ### Výdrž
 

@@ -1,10 +1,17 @@
-.anchor--default {
+@mixin anchorStyle($emphasize: false) {
     font-family: getFontFamily($headingtype);
     font-weight: bold;
     text-decoration: underline;
+
+    @if ($emphasize) {
+        color: map-get($palette, red);
+    }
+}
+
+.anchor--default {
+    @include anchorStyle();
 }
 
 .anchor--emphasized {
-    color: map-get($palette, red);
-    font-weight: bold;
+    @include anchorStyle(true);
 }

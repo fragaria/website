@@ -27,11 +27,11 @@ Nyní je již k dipozici Ionic ve verzi 3. Co přinesl nového?
   - Stěžejní a pro nás nejvýraznější změnou je podpora Angularu 4.
 
 Při přechodu z verze 1 na verzi 2 u příkazu ionic start pro vytvoření
-nového projektu přibyl argument --v2, který definoval vytvoření projektu
+nového projektu přibyl argument `--v2`, který definoval vytvoření projektu
 ve verzi 2. Pokud chceme vytvořit projekt verze 3, pak stačí zadat jen
 ionic start s tím, že se nainstaluje ta nejnovější dostupná verze (platí
 od Ionic CLI v2.2.3, ve staších verzích CLI musíte pro nejnovější verzi
-Ionicu zadat argument --v2).
+Ionicu zadat argument `--v2`).
  
 
 ### Dekorátor IonicPage
@@ -40,12 +40,16 @@ Ionic nepoužívá Router, namísto něj má tzv. *deep link system*, kdy se o
 přechod mezi Pages stará NavController, který má metody Push a Pop.
 Do funkce Push se vkládá název komponenty, na kterou chceme přesměrovat,
 například:
+
+{% highlight javascript %}
 this.navCtrl.push('MyPage');
+{% endhighlight %}
 
 Pokud bychom si komponentu chtěli označit jinak, můžeme využít parametru
 name v dekorátoru IonicPage, díky kterému pak linkujeme na komponentu
 díky vlastní proměnné: 
 
+{% highlight javascript %}
 @IonicPage({
  name: 'my-page'
 })
@@ -55,31 +59,39 @@ díky vlastní proměnné: 
 
 })
 export class MyPage {...}
+{% endhighlight %}
 
 Následně na tuto komponentu můžeme linkovat přes proměnnou nastavenou v
 dekorátoru:
+
+{% highlight javascript %}
 this.navCtrl.push('MyPage');
+{% endhighlight %}
 
 Další vlastností dekorátoru IonicPage je atribut segment, který definuje
 URL parametr pro danou komponentu v případě, že je zrovna aktivní:
+
+{% highlight javascript %}
 @IonicPage({
  name: 'my-page',
  segment: 'some-path'
 })
+{% endhighlight %}
 
-V URL se daná komponenta zobazí následovně:
-http://localhost:8101/\#/some-path
+V URL se daná komponenta zobazí následovně: `http://localhost:8101/\#/some-path`
 
 Do proměnné *segment* se dá vložit i dynamická proměnná, a to ve formátu
-:variable, příklad:
+`:variable`, příklad:
+
+{% highlight javascript %}
 @IonicPage({
  name: 'detail-page',
  segment: 'detail/:id'
 })
+{% endhighlight %}
 
 Samotná proměnná se předává v metodě Push, odkazující na naší
-komponentu.
-Více o IonicPage dekorátoru se můžete dozvědět v [oficiální
+komponentu. Více o IonicPage dekorátoru se můžete dozvědět v [oficiální
 dokumentaci](http://ionicframework.com/docs/api/navigation/IonicPage/).
 
 ### Lazy loading

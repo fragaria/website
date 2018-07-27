@@ -10,7 +10,7 @@ tags:
 - ethereum
 - líf
 modified_time: '2018-03-28T13:25:06.396+02:00'
-thumbnail: https://3.bp.blogspot.com/-HYB0yHh56hA/WpPIiCzFmoI/AAAAAAAAAnQ/6EJRSOyZEkYJV13r8rMM09GmFutP9-QGACLcBGAs/s72-c/DSC_0054.JPG
+cloudinary_src: posts/2018-03-28-blockchain-can-do__1.jpg
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-9154961035646733437
 blogger_orig_url: http://blog.fragaria.cz/2018/03/blockchain-can-do.html
 ---
@@ -22,7 +22,7 @@ it. And from now on, so are we\! It turns out, it's just another young
 technology that we can
 handle.
 
-[![](https://3.bp.blogspot.com/-HYB0yHh56hA/WpPIiCzFmoI/AAAAAAAAAnQ/6EJRSOyZEkYJV13r8rMM09GmFutP9-QGACLcBGAs/s640/DSC_0054.JPG)](https://3.bp.blogspot.com/-HYB0yHh56hA/WpPIiCzFmoI/AAAAAAAAAnQ/6EJRSOyZEkYJV13r8rMM09GmFutP9-QGACLcBGAs/s1600/DSC_0054.JPG)
+{% include figure.html cloudinary_src="posts/2018-03-28-blockchain-can-do__1.jpg" %}
 
 ## Not that hard
 
@@ -83,7 +83,7 @@ And the solution is based on - wait for it - Javascript. What? How? A
 picture is worth a thousand words, they
 say:
 
-[![](https://2.bp.blogspot.com/-FJYjncoZO1c/WrTKLsRsOKI/AAAAAAAAAn4/aprELKsTqQIyfiMn0BvaUhATzxR4xp-aACLcBGAs/s640/contracts-abi-web3.png)](https://2.bp.blogspot.com/-FJYjncoZO1c/WrTKLsRsOKI/AAAAAAAAAn4/aprELKsTqQIyfiMn0BvaUhATzxR4xp-aACLcBGAs/s1600/contracts-abi-web3.png)
+{% include figure.html cloudinary_src="posts/2018-03-28-blockchain-can-do__2.png" %}
 
 During smart contract compilation and deployment to the blockchain, an
 ABI (Application Binary Interface) is produced. And that is nothing else

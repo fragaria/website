@@ -8,7 +8,7 @@ tags:
 - pivo
 - elastic
 modified_time: '2017-12-01T13:24:21.349+01:00'
-thumbnail: https://2.bp.blogspot.com/-jLqY9EBW7DY/Wh66FS2cO9I/AAAAAAAAA9E/wDo6XGfAqMApko3x2rbH9LJtyuqH2BV2wCPcBGAYYCw/s72-c/mar-newhall-226045.jpg
+cloudinary_src: posts/2017-12-01-elasticsearch-60-se-blizi__1.jpg
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-1732240598242685769
 blogger_orig_url: http://blog.fragaria.cz/2017/12/elasticsearch-60-se-blizi.html
 ---
@@ -22,7 +22,7 @@ Mimochodem, Elasticsearch verze 6.0 bude představen 6. prosince 2017 v
 17.00 hodin. Pokud máte chuť, můžete celou událost [sledovat
 online](https://www.elastic.co/live/v6?elektra=home&storm=banner).
 
-[![](https://2.bp.blogspot.com/-jLqY9EBW7DY/Wh66FS2cO9I/AAAAAAAAA9E/wDo6XGfAqMApko3x2rbH9LJtyuqH2BV2wCPcBGAYYCw/s400/mar-newhall-226045.jpg)](https://2.bp.blogspot.com/-jLqY9EBW7DY/Wh66FS2cO9I/AAAAAAAAA9E/wDo6XGfAqMApko3x2rbH9LJtyuqH2BV2wCPcBGAYYCw/s1600/mar-newhall-226045.jpg)
+{% include figure.html cloudinary_src="posts/2017-12-01-elasticsearch-60-se-blizi__1.jpg" %}
 
 Protože jsme Elasticsearch na blogu chvíli zanedbávali, vypíchnu tu pár
 novinek verze 6.0 (a někdy i 5.0).

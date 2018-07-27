@@ -48,6 +48,11 @@ $article-content-width: 40rem;
 
 .article__content {
     text-align: left;
+
+    a {
+        // default anchor style
+        @include anchorStyle(true);
+    }
 }
 
 .article__misc {

@@ -1,0 +1,4 @@
+<figure>
+<img {% if include.alt %}alt="{{ include.alt }}"{% endif %} src="{% if include.cloudinary_src %}{% cloudinary_url include.cloudinary_src width='640' crop='fit' quality='auto' dpr='2.0' format='jpg' %}{% else %}{{ include.src }}{% endif %}" />
+{% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
+</figure>

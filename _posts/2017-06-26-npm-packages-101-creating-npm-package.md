@@ -9,7 +9,7 @@ tags:
 - javascript
 - publish
 modified_time: '2017-06-26T11:55:25.385+02:00'
-thumbnail: https://4.bp.blogspot.com/-M7nNiOQc2rE/WU-YmE_VeZI/AAAAAAAAA5c/HvIktzxZY104b7GyCeoTPgPYSqweYgpZQCPcBGAYYCw/s72-c/tim-gouw-68319.jpg
+cloudinary_src: posts/2017-06-26-npm-packages-101-creating-npm-package__1.jpg
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-4829889913533734686
 blogger_orig_url: http://blog.fragaria.cz/2017/06/npm-packages-101-creating-npm-package.html
 ---
@@ -18,9 +18,7 @@ Going down the path of node package creator - guide to create npm
 package and publish it to npm
 repository.
 
-[![](https://4.bp.blogspot.com/-M7nNiOQc2rE/WU-YmE_VeZI/AAAAAAAAA5c/HvIktzxZY104b7GyCeoTPgPYSqweYgpZQCPcBGAYYCw/s640/tim-gouw-68319.jpg)](https://4.bp.blogspot.com/-M7nNiOQc2rE/WU-YmE_VeZI/AAAAAAAAA5c/HvIktzxZY104b7GyCeoTPgPYSqweYgpZQCPcBGAYYCw/s1600/tim-gouw-68319.jpg)
-
-Tim Gouw
+{% include figure.html cloudinary_src='posts/2017-06-26-npm-packages-101-creating-npm-package__1.jpg' caption='Tim Gouw' %}
 
 As I couldn’t find any Javascript package for handling [Czech and Slovak
 National identification
@@ -39,9 +37,11 @@ even npm itself under `~/.nvm/...` directories and not under
 `/usr/lib/node_modules` which I like to keep simple and
 su-rights-protected.
 
-    # install nvm
-    nvm install node
-    nvm use node
+{% highlight shell %}
+# install nvm
+nvm install node
+nvm use node
+{% endhighlight %}
 
 Ok, nvm is installed let's dive into package creation.
 
@@ -84,11 +84,14 @@ Now let's have an empty github repo
 [`kub1x/rodnecislo`](https://github.com/kub1x/rodnecislo) cloned in
 `rodnecislo` directory and start the generator as follows:
 
-    git clone git@github.com:kub1x/rodnecislo.git
-    cd rodnecislo
-    nvm use node
-    npm install -g yeoman generator-np
-    yo np
+
+{% highlight shell %}
+git clone git@github.com:kub1x/rodnecislo.git
+cd rodnecislo
+nvm use node
+npm install -g yeoman generator-np
+yo np
+{% endhighlight %}
 
 The generator-np still asks some questions, which need to be answered.
 Following are my answers and the reasoning behind them.
@@ -174,8 +177,10 @@ someone could offer him a hand ;)). To fix this use
 [npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
 tool:
 
-    npm install -g npm-check-updates
-    ncu -a
+{% highlight shell %}
+npm install -g npm-check-updates
+ncu -a
+{% endhighlight %}
 
 Now this is just the beginning. Even the first version of the module
 took quite some time on research, programming and writing. I’m kinda

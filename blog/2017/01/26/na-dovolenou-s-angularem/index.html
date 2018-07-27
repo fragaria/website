@@ -20,7 +20,7 @@
     <meta property="og:description"   content="Jak udělat stránky s dynamickým pozadím, kde bude pokaždé nová fotkastažená z Flickeru? V Angularu překvapivě jednoduše." />
 
     
-        <meta property="og:image"         content="https://1.bp.blogspot.com/-WYKgaZSdXrU/WISTpBpTShI/AAAAAAAAAyc/eNNyFyA9WHUE6tU2fJFdCjQeiqc0LxSrwCLcB/s72-c/Screen%2BShot%2B2017-01-22%2Bat%2B12.11.58.png" />
+        <meta property="og:image"         content="" />
     
 
     <link rel="stylesheet" href="/website/assets/styles.css">
@@ -64,8 +64,6 @@
         <meta itemprop="headline" content="Na dovolenou s Angularem">
 
         
-            <meta itemprop="image" content="https://1.bp.blogspot.com/-WYKgaZSdXrU/WISTpBpTShI/AAAAAAAAAyc/eNNyFyA9WHUE6tU2fJFdCjQeiqc0LxSrwCLcB/s72-c/Screen%2BShot%2B2017-01-22%2Bat%2B12.11.58.png">
-        
 
         <div itemprop="publisher" itemtype="http://schema.org/Organization" class="hidden" itemscope>
             <div itemprop="logo" itemtype="http://schema.org/ImageObject" itemscope="">
@@ -102,7 +100,10 @@ Důležitou tradicí je také <a href="https://cartagena.cz/">odletová stránka
 která ukazuje počet dní a hodin do
 odletu.</p>
 
-<p><a href="https://1.bp.blogspot.com/-WYKgaZSdXrU/WISTpBpTShI/AAAAAAAAAyc/eNNyFyA9WHUE6tU2fJFdCjQeiqc0LxSrwCLcB/s1600/Screen%2BShot%2B2017-01-22%2Bat%2B12.11.58.png"><img src="https://1.bp.blogspot.com/-WYKgaZSdXrU/WISTpBpTShI/AAAAAAAAAyc/eNNyFyA9WHUE6tU2fJFdCjQeiqc0LxSrwCLcB/s400/Screen%2BShot%2B2017-01-22%2Bat%2B12.11.58.png" alt="" /></a></p>
+<figure>
+<img src="https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-01-26-na-dovolenou-s-angularem__1.png" />
+
+</figure>
 
 <p>Odletovou stránku mám na starosti já a každý rok se snažím, aby na ní
 bylo kromě prostého odpočtu i něco zajímavého. Loni mě napadlo, že by
@@ -121,7 +122,7 @@ Potom je potřeba zjistit ID alb, které se mají zobrazovat. To je snadné,
 protože ID alba je to poslední číslo v <a href="https://www.flickr.com/photos/79052148@N04/albums/72157674403312466">URL
 alba</a>.
 Takže v mém případě, kdy album má adresu
-<code class="highlighter-rouge">https://www.flickr.com/photos/79052148@N04/albums/72157674403312466</code> je
+<a href="https://www.flickr.com/photos/79052148@N04/albums/72157674403312466">https://www.flickr.com/photos/79052148@N04/albums/72157674403312466</a> je
 IDčko <code class="highlighter-rouge">72157674403312466</code>.</p>
 
 <h3 id="pozor-na-autorská-práva">Pozor na autorská práva</h3>
@@ -135,11 +136,100 @@ případů musíte alespoň označit autora fotky!</p>
 <p>Nejdřív je třeba připravit si styl pro element, u kterého se bude měnit
 pozadí pomocí <code class="highlighter-rouge">background-url</code>. Asi nějak takhle:</p>
 
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.container-fluid.main</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">silver</span><span class="p">;</span>
+  <span class="nl">background-repeat</span><span class="p">:</span> <span class="nb">no-repeat</span><span class="p">;</span>
+  <span class="nl">background-attachment</span><span class="p">:</span> <span class="nb">scroll</span><span class="p">;</span>
+  <span class="nl">background-position</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">background-size</span><span class="p">:</span> <span class="n">cover</span><span class="p">;</span>
+  <span class="nl">background-position</span><span class="p">:</span> <span class="nb">center</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">100vh</span><span class="p">;</span>
+  <span class="nl">opacity</span><span class="p">:</span> <span class="m">0.9</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
 <p>No a potom už jen do projektu přidat službu a direktivu, která se
 postará o vlastní volání Flickeru:</p>
 
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s2">"use strict"</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">API_KEY</span> <span class="o">=</span> <span class="s1">'__API_KEY__'</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">PHOTOSET_IDS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'__ID1__'</span><span class="p">,</span> <span class="s1">'__ID2__'</span><span class="p">,</span> <span class="s1">'__ID3__'</span><span class="p">];</span>
+
+
+<span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'cartagenaApp'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">directive</span><span class="p">(</span><span class="s1">'flickrBackground'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">Flickr</span><span class="p">,</span> <span class="nx">$http</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">_flickrBackground</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$scope</span><span class="p">,</span> <span class="nx">$element</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">nextPhoto</span><span class="p">;</span>
+
+      <span class="kd">var</span> <span class="nx">_createUrl</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">photo</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s1">'https://farm'</span> <span class="o">+</span> <span class="nx">photo</span><span class="p">.</span><span class="nx">farm</span> <span class="o">+</span> <span class="s1">'.staticflickr.com/'</span> <span class="o">+</span>
+          <span class="nx">photo</span><span class="p">.</span><span class="nx">server</span> <span class="o">+</span> <span class="s1">'/'</span> <span class="o">+</span> <span class="nx">photo</span><span class="p">.</span><span class="nx">id</span> <span class="o">+</span> <span class="s1">'_'</span> <span class="o">+</span> <span class="nx">photo</span><span class="p">.</span><span class="nx">secret</span> <span class="o">+</span> <span class="s1">'_b.jpg'</span><span class="p">;</span>
+      <span class="p">};</span>
+
+      <span class="kd">var</span> <span class="nx">_next</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">Flickr</span><span class="p">.</span><span class="nx">getPhotos</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">photos</span><span class="p">)</span> <span class="p">{</span>
+          <span class="c1">//There is no nextPhoto preloaded (first call?)</span>
+          <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">nextPhoto</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">nextPhoto</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">sample</span><span class="p">(</span><span class="nx">photos</span><span class="p">);</span>
+            <span class="nx">$http</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="nx">_createUrl</span><span class="p">(</span><span class="nx">nextPhoto</span><span class="p">));</span>
+          <span class="p">}</span>
+          <span class="nx">$</span><span class="p">(</span><span class="nx">$element</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">'background-image'</span><span class="p">,</span> <span class="s1">'url(</span><span class="se">\'</span><span class="s1">'</span> <span class="o">+</span> <span class="nx">_createUrl</span><span class="p">(</span><span class="nx">nextPhoto</span><span class="p">)</span> <span class="o">+</span> <span class="s1">'</span><span class="se">\'</span><span class="s1">)'</span><span class="p">);</span>
+
+          <span class="c1">//Preload next photo</span>
+          <span class="nx">nextPhoto</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">sample</span><span class="p">(</span><span class="nx">photos</span><span class="p">);</span>
+          <span class="nx">$http</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="nx">_createUrl</span><span class="p">(</span><span class="nx">nextPhoto</span><span class="p">));</span>
+        <span class="p">});</span>
+      <span class="p">};</span>
+
+      <span class="nx">_next</span><span class="p">();</span>
+
+      <span class="nx">$scope</span><span class="p">.</span><span class="nx">$on</span><span class="p">(</span><span class="s1">'next'</span><span class="p">,</span> <span class="nx">_next</span><span class="p">);</span>
+    <span class="p">};</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="na">restrict</span><span class="p">:</span> <span class="s1">'A'</span><span class="p">,</span>
+      <span class="na">link</span><span class="p">:</span> <span class="nx">_flickrBackground</span>
+    <span class="p">};</span>
+  <span class="p">});</span>
+
+<span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'cartagenaApp'</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">service</span><span class="p">(</span><span class="s1">'Flickr'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$q</span><span class="p">,</span> <span class="nx">$http</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">cache</span><span class="p">;</span>
+
+    <span class="kd">var</span> <span class="nx">_getPhotos</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">photoset</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">$http</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s1">'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&amp;'</span> <span class="o">+</span>
+        <span class="s1">'api_key='</span> <span class="o">+</span> <span class="nx">API_KEY</span> <span class="o">+</span>
+        <span class="s1">'&amp;photoset_id='</span> <span class="o">+</span> <span class="nx">photoset</span> <span class="o">+</span>
+        <span class="s1">'&amp;format=json&amp;nojsoncallback=1'</span><span class="p">);</span>
+    <span class="p">};</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">getPhotos</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">$q</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">cache</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">resolve</span><span class="p">(</span><span class="nx">cache</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          <span class="kd">var</span> <span class="nx">promises</span> <span class="o">=</span> <span class="p">[];</span>
+          <span class="c1">//load photos for all photoset ids into one array</span>
+          <span class="nx">PHOTOSET_IDS</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">promises</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">_getPhotos</span><span class="p">(</span><span class="nx">id</span><span class="p">));</span>
+          <span class="p">});</span>
+          <span class="nx">$q</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="nx">promises</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">results</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">cache</span> <span class="o">=</span> <span class="p">[];</span>
+            <span class="nx">results</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+              <span class="nx">cache</span> <span class="o">=</span> <span class="nx">cache</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">photoset</span><span class="p">.</span><span class="nx">photo</span><span class="p">);</span>
+            <span class="p">});</span>
+            <span class="nx">resolve</span><span class="p">(</span><span class="nx">cache</span><span class="p">);</span>
+          <span class="p">});</span>
+        <span class="p">}</span>
+      <span class="p">});</span>
+    <span class="p">};</span>
+  <span class="p">});</span></code></pre></figure>
+
 <p>A použití? Jednoduše se k elementu u kterého je třeba měnit pozadí dá
 direktiva <code class="highlighter-rouge">flickr-background</code>:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid main"</span> <span class="na">flickr-background</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">ng-view=</span><span class="s">""</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h3 id="vychytávky">Vychytávky</h3>
 

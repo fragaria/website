@@ -20,7 +20,7 @@
     <meta property="og:description"   content="Na přelomu března a dubna se v New Yorku již popáté konalo hlasování oparticipativníchrozpočtech (#PBNYC)jednotlivých distriktů (něco jako městské části v Praze). Díky našíspolupráci s Demokracií 2.1 (D21), pro kteroupřipravujeme technické řešení, jsme měli možnost se celé akce zúčastnita svou troškou přispět k bezproblémovém..." />
 
     
-        <meta property="og:image"         content="https://1.bp.blogspot.com/-ZDoiwaABWB4/VyG6FPrAERI/AAAAAAAAAEk/hrMuWaXZmFAxrpgE73TwMejBvXp5l8esACLcB/s72-c/poll.jpg" />
+        <meta property="og:image"         content="" />
     
 
     <link rel="stylesheet" href="/website/assets/styles.css">
@@ -63,8 +63,6 @@
         <h1 itemprop="name" class="article__headline">Jak jsme počítali New York aneb AWS Lambda v praxi</h1>
         <meta itemprop="headline" content="Jak jsme počítali New York aneb AWS Lambda v praxi">
 
-        
-            <meta itemprop="image" content="https://1.bp.blogspot.com/-ZDoiwaABWB4/VyG6FPrAERI/AAAAAAAAAEk/hrMuWaXZmFAxrpgE73TwMejBvXp5l8esACLcB/s72-c/poll.jpg">
         
 
         <div itemprop="publisher" itemtype="http://schema.org/Organization" class="hidden" itemscope>
@@ -130,21 +128,10 @@ Vision</a>, které nám umožnily
 zpracovávat lístky v následujícím
 formátu:</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center"> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><a href="https://1.bp.blogspot.com/-ZDoiwaABWB4/VyG6FPrAERI/AAAAAAAAAEk/hrMuWaXZmFAxrpgE73TwMejBvXp5l8esACLcB/s1600/poll.jpg"><img src="https://1.bp.blogspot.com/-ZDoiwaABWB4/VyG6FPrAERI/AAAAAAAAAEk/hrMuWaXZmFAxrpgE73TwMejBvXp5l8esACLcB/s640/poll.jpg" alt="" /></a></td>
-    </tr>
-    <tr>
-      <td style="text-align: center">Velmi neoptimalizovaný testovací lístek</td>
-    </tr>
-  </tbody>
-</table>
+<figure>
+<img src="https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2016-05-11-jak-jsme-pocitali-new-york-aneb-aws__1.jpg" />
+<figcaption>Velmi neoptimalizovaný testovací lístek</figcaption>
+</figure>
 
 <p>Trojice QR kódů nám umožní každý sken zorientovat (klasická translace,
 rotace a scaling) a zároveň určuje, co za hlasování daný papírový lístek
@@ -159,13 +146,8 @@ dostatečně rychle plnit. Událostí, které spouští Lambda funkci, může
 být celá řada, a jednou z nich je i nahrání obrázku do bucketu na S3.
 Takže už nám chybí jenom sada vysokorychlostních skenerů…</p>
 
-<blockquote>
-  <p><a href="https://twitter.com/Fragariacz">@Fragariacz</a> I papir umime
-<a href="https://t.co/xb3aY7FEF3">pic.twitter.com/xb3aY7FEF3</a></p>
-
-  <p>— Pavel Vojacek (@pavel_mxsf)
-<a href="https://twitter.com/pavel_mxsf/status/716067794312413185">April 2, 2016</a></p>
-</blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="pt" dir="ltr"><a href="https://twitter.com/Fragariacz?ref_src=twsrc%5Etfw">@Fragariacz</a> I papir umime <a href="https://t.co/xb3aY7FEF3">pic.twitter.com/xb3aY7FEF3</a></p>&mdash; Pavel Vojacek (@pavel_mxsf) <a href="https://twitter.com/pavel_mxsf/status/716067794312413185?ref_src=twsrc%5Etfw">April 2, 2016</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <p>Video není propagační materiál, ale opravdový provoz v průběhu
 hlasování. Díky téhle rychlosti a svižnému internetu jsme všech téměř
@@ -185,7 +167,10 @@ ruční dočištění, drobnou část souborů jsme rozpoznáváním prohnali
 znovu s trochu jiným nastavením, a bylo
 hotovo.</p>
 
-<p><a href="https://4.bp.blogspot.com/-diOGr2uAVwk/VyBsz4AhGwI/AAAAAAAAAEU/uD7CFFAkEOka8Q5xob5D0Yc8fw_E_43SwCLcB/s1600/lambda-invocations.png"><img src="https://4.bp.blogspot.com/-diOGr2uAVwk/VyBsz4AhGwI/AAAAAAAAAEU/uD7CFFAkEOka8Q5xob5D0Yc8fw_E_43SwCLcB/s640/lambda-invocations.png" alt="" /></a></p>
+<figure>
+<img src="https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2016-05-11-jak-jsme-pocitali-new-york-aneb-aws__2.png" />
+<figcaption>Velmi neoptimalizovaný testovací lístek</figcaption>
+</figure>
 
 <p>Pro tento typ nárazových a nesynchronních úloh je tedy AWS Lambda
 naprosto ideálním řešením, a to i přes to, že teoreticky máte k

@@ -20,7 +20,7 @@
     <meta property="og:description"   content="Účelem toho příspěvku není vytvořit návod jak si na vašem telefonu sesystémem Android nastavit budík na šestou ráno, ale nahlédnou trochu podpokličku mechanizmu, který se postará o spuštění libovolné akce někdy vbudoucnosti. A jak už to tak na Androidu bývá, nejedná se o mechanizmusjeden, ale hnedněkolik." />
 
     
-        <meta property="og:image"         content="https://4.bp.blogspot.com/-vEW67W0Rf4Q/WEp92ed7nDI/AAAAAAAAArk/u2A0ZCXRMDUsHkkxmKkcQc0ai33JqlzRgCLcB/s72-c/numbers-time-watch-white.jpg" />
+        <meta property="og:image"         content="" />
     
 
     <link rel="stylesheet" href="/website/assets/styles.css">
@@ -64,8 +64,6 @@
         <meta itemprop="headline" content="Alarmy v Androidu">
 
         
-            <meta itemprop="image" content="https://4.bp.blogspot.com/-vEW67W0Rf4Q/WEp92ed7nDI/AAAAAAAAArk/u2A0ZCXRMDUsHkkxmKkcQc0ai33JqlzRgCLcB/s72-c/numbers-time-watch-white.jpg">
-        
 
         <div itemprop="publisher" itemtype="http://schema.org/Organization" class="hidden" itemscope>
             <div itemprop="logo" itemtype="http://schema.org/ImageObject" itemscope="">
@@ -94,7 +92,10 @@ budoucnosti. A jak už to tak na Androidu bývá, nejedná se o mechanizmus
 jeden, ale hned
 několik.</p>
 
-<p><a href="https://4.bp.blogspot.com/-vEW67W0Rf4Q/WEp92ed7nDI/AAAAAAAAArk/u2A0ZCXRMDUsHkkxmKkcQc0ai33JqlzRgCLcB/s1600/numbers-time-watch-white.jpg"><img src="https://4.bp.blogspot.com/-vEW67W0Rf4Q/WEp92ed7nDI/AAAAAAAAArk/u2A0ZCXRMDUsHkkxmKkcQc0ai33JqlzRgCLcB/s320/numbers-time-watch-white.jpg" alt="" /></a></p>
+<figure>
+<img src="https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2016-12-09-alarmy-v-androidu__1.jpg" />
+
+</figure>
 
 <h3 id="k-čemu-alarmy">K čemu alarmy?</h3>
 
@@ -224,13 +225,55 @@ doplnit o neefektivní mechanizmus založený na Alarm Manageru.</p>
 
 <p>Nejprve přidáme gradle závislost:</p>
 
+<figure class="highlight"><pre><code class="language-gradle" data-lang="gradle"><span class="n">compile</span> <span class="s1">'com.firebase:firebase-jobdispatcher:0.5.0'</span></code></pre></figure>
+
 <p>Vytvoříme vlastní službu:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">com.firebase.jobdispatcher.JobParameters</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.firebase.jobdispatcher.JobService</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SmogService</span> <span class="kd">extends</span> <span class="n">JobService</span> <span class="o">{</span>
+	<span class="nd">@Override</span>
+	<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">onStartJob</span><span class="o">(</span><span class="n">JobParameters</span> <span class="n">job</span><span class="o">)</span> <span class="o">{</span>
+		<span class="c1">// Provést komunikaci se serverem a např. vyhodit notifikaci</span>
+		<span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+	<span class="o">}</span>
+
+	<span class="nd">@Override</span>
+	<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">onStopJob</span><span class="o">(</span><span class="n">JobParameters</span> <span class="n">job</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+	<span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
 
 <p>Kterou zaregistrujeme do manifest.xml:</p>
 
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;service</span>
+	<span class="na">android:exported=</span><span class="s">"false"</span>
+	<span class="na">android:name=</span><span class="s">".SmogService"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;intent-filter&gt;</span>
+		<span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">"com.firebase.jobdispatcher.ACTION_EXECUTE"</span><span class="nt">/&gt;</span>"
+	<span class="nt">&lt;/intent-filter&gt;</span>
+<span class="nt">&lt;/service&gt;</span></code></pre></figure>
+
 <p>A nyní už to jen celé spustit:</p>
 
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Int</span> <span class="n">periodInSec</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="mi">60</span> <span class="c1">// 10 minut perioda</span>
+<span class="kt">int</span> <span class="n">windowStart</span> <span class="o">=</span><span class="n">periodInSec</span> <span class="o">-</span> <span class="mi">60</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">windowEnd</span> <span class="o">=</span> <span class="n">periodInSec</span> <span class="o">+</span> <span class="mi">60</span><span class="o">;</span>
+<span class="n">Job</span> <span class="n">job</span> <span class="o">=</span> <span class="n">dispatcher</span><span class="o">.</span><span class="na">newJobBuilder</span><span class="o">()</span>
+	<span class="o">.</span><span class="na">setTag</span><span class="o">(</span><span class="n">JOB_TAG</span><span class="o">)</span> <span class="c1">// Označení jobu</span>
+	<span class="o">.</span><span class="na">setService</span><span class="o">(</span><span class="n">SmogService</span><span class="o">.</span><span class="na">class</span><span class="o">)</span> <span class="c1">// Naše služba</span>
+	<span class="o">.</span><span class="na">setRecurring</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="c1">// Opakuj</span>
+	<span class="o">.</span><span class="na">setLifetime</span><span class="o">(</span><span class="n">Lifetime</span><span class="o">.</span><span class="na">FOREVER</span><span class="o">)</span> <span class="c1">// Donekonečna, dokud není expicitně zastaveno</span>
+	<span class="o">.</span><span class="na">setReplaceCurrent</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="c1">// Přepiš job pokud již existuje</span>
+	<span class="o">.</span><span class="na">setConstraints</span><span class="o">(</span><span class="n">Constraint</span><span class="o">.</span><span class="na">ON_ANY_NETWORK</span><span class="o">)</span> <span class="c1">// Je třeba připoení k internetu, jinak se nespustí</span>
+	<span class="o">.</span><span class="na">setTrigger</span><span class="o">(</span><span class="n">Trigger</span><span class="o">.</span><span class="na">executionWindow</span><span class="o">(</span><span class="n">windowStart</span><span class="o">,</span> <span class="n">windowEnd</span><span class="o">))</span> <span class="c1">//Kdy se má spuštět</span>
+	<span class="o">.</span><span class="na">build</span><span class="o">();</span>
+<span class="n">dispatcher</span><span class="o">.</span><span class="na">mustSchedule</span><span class="o">(</span><span class="n">myJob</span><span class="o">);</span> <span class="c1">// Konečně spustit</span></code></pre></figure>
+
 <p>A pokud bychom to chtěli vypnout:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">dispatcher</span><span class="o">.</span><span class="na">cancel</span><span class="o">(</span><span class="n">JOB_TAG</span><span class="o">);</span></code></pre></figure>
 
 <h3 id="závěrem">Závěrem</h3>
 

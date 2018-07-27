@@ -112,12 +112,72 @@ clicked. This is indeed quite simple task. Let’s have a look at the code
 from the article (<a href="http://jsfiddle.net/simpulton/E7xER/">original
 JSFiddle</a>):</p>
 
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">myApp</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'myApp'</span><span class="p">,</span> <span class="p">[]);</span>
+
+<span class="nx">myApp</span><span class="p">.</span><span class="nx">directive</span><span class="p">(</span><span class="s1">'myWidget'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">linkFn</span><span class="p">;</span>
+    <span class="nx">linkFn</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">scope</span><span class="p">,</span> <span class="nx">element</span><span class="p">,</span> <span class="nx">attrs</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">animateDown</span><span class="p">,</span> <span class="nx">animateRight</span><span class="p">,</span> <span class="nx">pageOne</span><span class="p">,</span> <span class="nx">pageTwo</span><span class="p">;</span>
+        <span class="nx">pageOne</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="nx">element</span><span class="p">(</span><span class="nx">element</span><span class="p">.</span><span class="nx">children</span><span class="p">()[</span><span class="mi">0</span><span class="p">]);</span>
+        <span class="nx">pageTwo</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="nx">element</span><span class="p">(</span><span class="nx">element</span><span class="p">.</span><span class="nx">children</span><span class="p">()[</span><span class="mi">1</span><span class="p">]);</span>
+
+        <span class="nx">animateDown</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">animate</span><span class="p">({</span>
+                <span class="na">top</span><span class="p">:</span> <span class="s1">'+=50'</span>
+            <span class="p">});</span>
+        <span class="p">};</span>
+
+        <span class="nx">animateRight</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">animate</span><span class="p">({</span>
+                <span class="na">left</span><span class="p">:</span> <span class="s1">'+=50'</span>
+            <span class="p">});</span>
+        <span class="p">};</span>
+
+        <span class="nx">$</span><span class="p">(</span><span class="nx">pageOne</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="nx">animateDown</span><span class="p">);</span>
+        <span class="nx">$</span><span class="p">(</span><span class="nx">pageTwo</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="nx">animateRight</span><span class="p">);</span>
+    <span class="p">};</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="na">restrict</span><span class="p">:</span> <span class="s1">'E'</span><span class="p">,</span>
+        <span class="na">link</span><span class="p">:</span> <span class="nx">linkFn</span>
+    <span class="p">};</span>
+<span class="p">});</span></code></pre></figure>
+
 <p>Notice something awkward? Yes, you’re right. This is not AngularJS, this
 is just bunch of jQuery code wrapped in <em>directive</em> for no obvious
 reason.</p>
 
 <p>As I read the article I thought: „There has to be better way to achieve
 such simple result.“ Of course there is one and quite straightforward:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">myApp</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'myApp'</span><span class="p">,</span> <span class="p">[]);</span>
+
+<span class="nx">myApp</span><span class="p">.</span><span class="nx">directive</span><span class="p">(</span><span class="s1">'box'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">linkFn</span><span class="p">;</span>
+    <span class="nx">linkFn</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">scope</span><span class="p">,</span> <span class="nx">element</span><span class="p">,</span> <span class="nx">attrs</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="nx">scope</span><span class="p">.</span><span class="nx">click</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">opts</span> <span class="o">=</span> <span class="p">{};</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">attrs</span><span class="p">.</span><span class="nx">move</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">'right'</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">opts</span><span class="p">.</span><span class="nx">left</span> <span class="o">=</span> <span class="s1">'+=50px'</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="nx">attrs</span><span class="p">.</span><span class="nx">move</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">'down'</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">opts</span><span class="p">.</span><span class="nx">top</span> <span class="o">=</span> <span class="s1">'+=50px'</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="nx">$</span><span class="p">(</span><span class="nx">element</span><span class="p">.</span><span class="nx">children</span><span class="p">()[</span><span class="mi">0</span><span class="p">]).</span><span class="nx">animate</span><span class="p">(</span><span class="nx">opts</span><span class="p">,</span> <span class="s2">"slow"</span><span class="p">);</span>
+        <span class="p">};</span>
+
+    <span class="p">};</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="na">restrict</span><span class="p">:</span> <span class="s1">'EA'</span><span class="p">,</span>
+        <span class="na">link</span><span class="p">:</span> <span class="nx">linkFn</span><span class="p">,</span>
+        <span class="na">template</span><span class="p">:</span> <span class="s1">'&lt;div class="box" ng-click="click()"&gt;&lt;/div&gt;'</span><span class="p">,</span>
+        <span class="na">scope</span><span class="p">:</span> <span class="p">{}</span>
+    <span class="p">};</span>
+<span class="p">});</span>
+
+<span class="c1">//see JS Fiddle at http://jsfiddle.net/3rom9aoz/36/</span></code></pre></figure>
 
 <p>See? Why not unleash AngularJS <em>directives</em> to their full potential and
 use them exactly how they are supposed to be used in the first place?
@@ -131,6 +191,15 @@ truly rocks at this field.</p>
 <p>What is the main difference then? <strong>Readability.</strong> Let’s compare source
 HTML:</p>
 
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;my-widget&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"one"</span> <span class="na">class=</span><span class="s">"box"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"two"</span> <span class="na">class=</span><span class="s">"box"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/my-widget&gt;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;box</span> <span class="na">move=</span><span class="s">"down"</span><span class="nt">&gt;&lt;/box&gt;</span>
+<span class="nt">&lt;box</span> <span class="na">move=</span><span class="s">"right"</span><span class="nt">&gt;&lt;/box&gt;</span>
+<span class="nt">&lt;box</span> <span class="na">move=</span><span class="s">"down right"</span><span class="nt">&gt;&lt;/box&gt;</span></code></pre></figure>
+
 <p>In AngularJS case, HTML speaks for itself. You can understand its
 purpose without even looking at the Javascript code.
 See complete <a href="http://jsfiddle.net/3rom9aoz/36/">JSFiddle</a>.</p>
@@ -141,18 +210,37 @@ See complete <a href="http://jsfiddle.net/3rom9aoz/36/">JSFiddle</a>.</p>
 
 <blockquote>
   <p><em>For the purpose of simplicity, here’s the requirements:</em></p>
-
   <ul>
     <li>Two links, and two output elements on the page.</li>
     <li>One link loads a random number in the first element.</li>
     <li>The second link loads today’s date in the second element.</li>
   </ul>
-
-  <p>**</p>
 </blockquote>
 
 <p>This simple requirement is followed by two paragraphs explaining why
 it’s impossible to achieve this in AngularJS. Ok, pal, here you go:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">myApp</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'myApp'</span><span class="p">,</span> <span class="p">[]);</span>
+
+<span class="kd">var</span> <span class="nx">MainCtrl</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">$http</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">main</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">load</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">what</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">what</span> <span class="o">==</span> <span class="s1">'ip'</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">$http</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s1">'http://ip.jsontest.com/'</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">main</span><span class="p">.</span><span class="nx">ip</span> <span class="o">=</span> <span class="nx">result</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">ip</span><span class="p">;</span>
+            <span class="p">});</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">what</span> <span class="o">==</span> <span class="s1">'date'</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">$http</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s1">'http://date.jsontest.com/'</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">main</span><span class="p">.</span><span class="nx">date</span> <span class="o">=</span> <span class="nx">result</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">date</span><span class="p">;</span>
+            <span class="p">});</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">myApp</span><span class="p">.</span><span class="nx">controller</span><span class="p">(</span><span class="s1">'MainCtrl'</span><span class="p">,</span> <span class="nx">MainCtrl</span><span class="p">);</span>
+
+<span class="c1">//see JS Fiddle at http://jsfiddle.net/5xm4yqvL/25/</span></code></pre></figure>
 
 <p>(<a href="http://jsfiddle.net/5xm4yqvL/25/">Complete JSFiddle</a> – I couldn’t find
 online service that would return random number, so I replaced it with IP
@@ -162,9 +250,44 @@ address. Hope that is not a problem.)</p>
 generic system to replace various elements (identified by IDs) with
 values sent from server. I hope that this example is not taken from real
 world application. Maintaining such application must be a real pain in
-the ass.
-Although I think it is not really an AngularJS way, it’s still perfectly
+the ass.</p>
+
+<p>Although I think it is not really an AngularJS way, it’s still perfectly
 achievable. For example like this:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">myApp</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'myApp'</span><span class="p">,</span> <span class="p">[]);</span>
+
+<span class="nx">myApp</span><span class="p">.</span><span class="nx">directive</span><span class="p">(</span><span class="s1">'serverData'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">$http</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">linkFn</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">scope</span><span class="p">,</span> <span class="nx">element</span><span class="p">,</span> <span class="nx">attrs</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">attrs</span><span class="p">.</span><span class="nx">$observe</span><span class="p">(</span><span class="s1">'load'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">value</span> <span class="o">==</span> <span class="s2">"true"</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">$http</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="s1">'http://'</span> <span class="o">+</span> <span class="nx">attrs</span><span class="p">.</span><span class="nx">id</span> <span class="o">+</span> <span class="s1">'.jsontest.com/'</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">scope</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="nx">result</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+                <span class="p">});</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+    <span class="p">};</span>
+
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="na">restrict</span><span class="p">:</span> <span class="s1">'EA'</span><span class="p">,</span>
+        <span class="na">link</span><span class="p">:</span> <span class="nx">linkFn</span><span class="p">,</span>
+        <span class="na">template</span><span class="p">:</span> <span class="s1">'&lt;span&gt;&lt;/span&gt;'</span><span class="p">,</span>
+        <span class="na">scope</span><span class="p">:</span> <span class="p">{}</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="c1">//see JS Fiddle at http://jsfiddle.net/v7Lhh384/22/</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">ng-click=</span><span class="s">"loadIp = true"</span><span class="nt">&gt;</span>Load IP<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">ng-click=</span><span class="s">"loadDate = true"</span><span class="nt">&gt;</span>Load date<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Your IP:
+        <span class="nt">&lt;server-data</span> <span class="na">id=</span><span class="s">"ip"</span> <span class="na">load=</span><span class="s">""</span><span class="nt">&gt;&lt;/server-data&gt;</span>
+    <span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Today is:
+        <span class="nt">&lt;server-data</span> <span class="na">id=</span><span class="s">"date"</span> <span class="na">load=</span><span class="s">""</span><span class="nt">&gt;&lt;/server-data&gt;</span>
+    <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <p>See? This is where directives really rock. One really just have to
 resist to urge to sprinkle #IDs all over the HTML code and create

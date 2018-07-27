@@ -103,13 +103,12 @@ Jasně. Standardem v posílání hromadných mailů je
 projektů. Mailgun má ale velmi hezké API, takže posílání hromadných
 mailů je hračka. Koneckonců si to zkuste sami:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -s —user 'api:key-3ax6xnjp29jd6fds4gc373sgvjxteol0' \
-    https://api.mailgun.net/v2/samples.mailgun.org/messages \
-    -F from='Čtenář blogu &lt;excited@samples.mailgun.org&gt;' \
-    -F to='info@fragaria.cz' \
-    -F subject='Ahoj' \
-    -F text='Ahoj klucka z Fragarie!'
-</code></pre></div></div>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">curl <span class="nt">-s</span> —user <span class="s1">'api:key-3ax6xnjp29jd6fds4gc373sgvjxteol0'</span> <span class="se">\</span>
+    https://api.mailgun.net/v2/samples.mailgun.org/messages <span class="se">\</span>
+    <span class="nt">-F</span> <span class="nv">from</span><span class="o">=</span><span class="s1">'Čtenář blogu &lt;excited@samples.mailgun.org&gt;'</span> <span class="se">\</span>
+    <span class="nt">-F</span> <span class="nv">to</span><span class="o">=</span><span class="s1">'info@fragaria.cz'</span> <span class="se">\</span>
+    <span class="nt">-F</span> <span class="nv">subject</span><span class="o">=</span><span class="s1">'Ahoj'</span> <span class="se">\</span>
+    <span class="nt">-F</span> <span class="nv">text</span><span class="o">=</span><span class="s1">'Ahoj klucka z Fragarie!'</span></code></pre></figure>
 
 <h3 id="hosting90">Hosting90</h3>
 

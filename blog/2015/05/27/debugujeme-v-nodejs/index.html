@@ -20,7 +20,7 @@
     <meta property="og:description"   content="Jakožto nově příchozí do světa Node.js jsem se záhy začal zajímat ozpůsob, jak efektivně ladit kód v Node.js. Donedávna jsem se pohybovalpředevším v prostředí Pythonu, kde jsem byl zvyklý používatpdb. Jaké jsou alternativypro Node.js?" />
 
     
-        <meta property="og:image"         content="http://2.bp.blogspot.com/-4tu1uJoUPkc/VWLQzuJptyI/AAAAAAAAAhc/Isv16Hxfbd4/s72-c/node_inspector.png" />
+        <meta property="og:image"         content="" />
     
 
     <link rel="stylesheet" href="/website/assets/styles.css">
@@ -63,8 +63,6 @@
         <h1 itemprop="name" class="article__headline">Debugujeme v Node.js</h1>
         <meta itemprop="headline" content="Debugujeme v Node.js">
 
-        
-            <meta itemprop="image" content="http://2.bp.blogspot.com/-4tu1uJoUPkc/VWLQzuJptyI/AAAAAAAAAhc/Isv16Hxfbd4/s72-c/node_inspector.png">
         
 
         <div itemprop="publisher" itemtype="http://schema.org/Organization" class="hidden" itemscope>
@@ -142,10 +140,9 @@ která nás blíže zajímají.</p>
 
 <p>Řekněme, že máme tuto jednoduchou funkci:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function foo(bar) {
-    return bar.reduce(function (curr, prev) {return curr + prev; }, 0);
-}
-</code></pre></div></div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">foo</span><span class="p">(</span><span class="nx">bar</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">bar</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">curr</span><span class="p">,</span> <span class="nx">prev</span><span class="p">)</span> <span class="p">{</span><span class="k">return</span> <span class="nx">curr</span> <span class="o">+</span> <span class="nx">prev</span><span class="p">;</span> <span class="p">},</span> <span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
 
 <p>Dále si představme, že na nějakém místě v naší aplikaci čekáme, že tato
 funkce vrátí konkrétní číslo, třeba 90. Jenže ouha, vrácené číslo je 89.
@@ -153,11 +150,10 @@ Nejjednodušší způsob, jak zjistit proč, je podívat se, jaký argument
 funkce dostává. To můžeme udělat třeba tak, že na vhodné místo umístíme
 breakpoint:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function foo(bar) {
-    debugger; // Definováno v ECMAScript 5.
-    return bar.reduce(function (curr, prev) {return curr + prev; }, 0);
-}
-</code></pre></div></div>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">foo</span><span class="p">(</span><span class="nx">bar</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">debugger</span><span class="p">;</span> <span class="c1">// Definováno v ECMAScript 5.</span>
+    <span class="k">return</span> <span class="nx">bar</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">curr</span><span class="p">,</span> <span class="nx">prev</span><span class="p">)</span> <span class="p">{</span><span class="k">return</span> <span class="nx">curr</span> <span class="o">+</span> <span class="nx">prev</span><span class="p">;</span> <span class="p">},</span> <span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
 
 <p>Po spuštění aplikace v debug módu (a přeskočení úvodního breakpointu
 pomocí příkazu <code class="highlighter-rouge">cont</code>) se vykonávání kódu zastaví na řádce obsahující
@@ -227,7 +223,10 @@ použít na všechno, co bylo popsáno v minulé sekci, s plným pohodlím
 grafického uživatelského
 rozhraní.</p>
 
-<p><a href="http://2.bp.blogspot.com/-4tu1uJoUPkc/VWLQzuJptyI/AAAAAAAAAhc/Isv16Hxfbd4/s1600/node_inspector.png"><img src="http://2.bp.blogspot.com/-4tu1uJoUPkc/VWLQzuJptyI/AAAAAAAAAhc/Isv16Hxfbd4/s400/node_inspector.png" alt="" /></a></p>
+<figure>
+<img src="https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2015-05-27-debugujeme-v-nodejs__1.png" />
+
+</figure>
 
 <p>Závěrem bych tak snad jen řekl, že se zdá, že ladit kód v Node.js není o
 nic těžší nebo jednodušší než na jiných platformách. Alespoň do chvíle,

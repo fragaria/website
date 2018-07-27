@@ -20,7 +20,7 @@
     <meta property="og:description"   content="Jak uspět v populární soutěži? Analýza dat s použitím Elasticsearchukazuje, že uspějete s českou klasikou: domácí hovězí vývar s nudlemi,kuře s bramborem a koláč. Ale taky se hodí někoho milovat,jmenovat se Lucie a hrát hokej.Jak jsem na to přišel?" />
 
     
-        <meta property="og:image"         content="http://3.bp.blogspot.com/-dE37yw9kiTc/VPMxPANTwfI/AAAAAAAAAe4/wduKmRTPMm8/s72-c/Screen%2BShot%2B2015-03-01%2Bat%2B15.40.31.png" />
+        <meta property="og:image"         content="" />
     
 
     <link rel="stylesheet" href="/website/assets/styles.css">
@@ -63,8 +63,6 @@
         <h1 itemprop="name" class="article__headline">Jak vyhrát Prostřeno?</h1>
         <meta itemprop="headline" content="Jak vyhrát Prostřeno?">
 
-        
-            <meta itemprop="image" content="http://3.bp.blogspot.com/-dE37yw9kiTc/VPMxPANTwfI/AAAAAAAAAe4/wduKmRTPMm8/s72-c/Screen%2BShot%2B2015-03-01%2Bat%2B15.40.31.png">
         
 
         <div itemprop="publisher" itemtype="http://schema.org/Organization" class="hidden" itemscope>
@@ -120,7 +118,10 @@ neposkytuje API (proč taky), takže to je třeba zrobit ručně.</p>
 stránky Prostřeno vůbec vypadají. Začneme na <a href="http://www.iprima.cz/prostreno/soutezici?day=1267448067">stránce s nejstarším
 vysíláním</a>.</p>
 
-<p><a href="http://3.bp.blogspot.com/-dE37yw9kiTc/VPMxPANTwfI/AAAAAAAAAe4/wduKmRTPMm8/s1600/Screen%2BShot%2B2015-03-01%2Bat%2B15.40.31.png"><img src="http://3.bp.blogspot.com/-dE37yw9kiTc/VPMxPANTwfI/AAAAAAAAAe4/wduKmRTPMm8/s400/Screen%2BShot%2B2015-03-01%2Bat%2B15.40.31.png" alt="" /></a></p>
+<figure>
+<img src="https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2015-03-05-jak-vyhrat-prostreno__1.png" />
+
+</figure>
 
 <p>Vidíme pět soutěžících, z nichž František je označen korunkou – vítěz
 kola. Je poznat, že stránky dělal někdo zodpovědný – obrázek každého
@@ -134,16 +135,15 @@ S tím už se dá pracovat.</p>
 načte data ze stránek Primy a uloží je ve formátu JSON do databáze
 Elasticsearch. Formát uložených dat je následující:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
-  "predkrm": "Kuřecí salát v broskvi",
-  "hlavni": "Candát s mandlovou nádivkou a šťouchané brambory",
-  "zakusek": "Líná hospodyňka",
-  "id": "jiri-mueller",
-  "winner": true,
-  "gender": "M",
-  "desc": "\n       Je ženatý, má čtyři děti ... atd."
-}
-</code></pre></div></div>
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="s2">"predkrm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kuřecí salát v broskvi"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"hlavni"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Candát s mandlovou nádivkou a šťouchané brambory"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"zakusek"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Líná hospodyňka"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jiri-mueller"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"winner"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"gender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"M"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"desc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"</span><span class="se">\n</span><span class="s2">       Je ženatý, má čtyři děti ... atd."</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
 
 <p>Nebudu se tady pouštět do detailů a případného zájemce odkážu na
 <a href="https://gist.github.com/krtek/a3d9d68081ec629a5a16">kompletní zdrojové
@@ -160,53 +160,51 @@ dat</a>.
 Pojďme si pro začátek zjistit nejčastější vítězné polévky. Dotaz do
 Elasticsearch bude vypadat následovně:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  {
-    "query": {
-      "match": {
-        winner: true
-      }
-    },
-    "aggregations": {
-      "polevka": {
-        "terms": {
-          "field": "polevka",
-          "size": 10
-        }
-      }
-    }
-  }
-</code></pre></div></div>
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="s2">"query"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"match"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="err">winner</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"aggregations"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"polevka"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"terms"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"field"</span><span class="p">:</span><span class="w"> </span><span class="s2">"polevka"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
 
 <p>a odpověď Elasticsearch serveru bude:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  {
-    ...
-    },
-    "aggregations": {
-      "polevka": {
-        "doc_count_error_upper_bound": 5,
-        "sum_other_doc_count": 276,
-        "buckets": [{
-          "key": "polevka",
-          "doc_count": 69
-        }, {
-          "key": "vyvar",
-          "doc_count": 32
-        }, {
-          "key": "nudle",
-          "doc_count": 20
-        }, {
-          "key": "hovezi",
-          "doc_count": 18
-        }, {
-          "key": "kremova",
-          "doc_count": 18
-        }, ...
-        ]
-      }
-    }
-  }
-</code></pre></div></div>
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="err">...</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"aggregations"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"polevka"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"doc_count_error_upper_bound"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"sum_other_doc_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">276</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"buckets"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"polevka"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"doc_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">69</span><span class="w">
+      </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vyvar"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"doc_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="w">
+      </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nudle"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"doc_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w">
+      </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hovezi"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"doc_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="w">
+      </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kremova"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"doc_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="w">
+      </span><span class="p">},</span><span class="w"> </span><span class="err">...</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
 
 <p>Nejčastějším slovem mezi vítěznými polévkami je překvapivě <strong>polévka</strong>.
 To se dalo čekat. Ale hned na dalších místech je <strong>vývar</strong>, <strong>nudle</strong> a
@@ -218,59 +216,57 @@ Pod tímhle šíleným pojmem se skrývá užitečná pomůcka. Dokáže zjistit
 jaká slova se <strong>vyskytují mezi vítěznými polévkami</strong> a naopak <strong>nejsou
 mezi ostatními</strong>. Příklad? Tady je:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  {
-    "query": {
-      "match": {
-        winner: true
-      }
-    },
-    "aggregations": {
-      "polevka_odchylky": {
-        "terms": {
-          "field": "polevka",
-          "size": 10
-        }
-      }
-    }
-  }
-</code></pre></div></div>
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="s2">"query"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"match"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="err">winner</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"aggregations"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"polevka_odchylky"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"terms"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"field"</span><span class="p">:</span><span class="w"> </span><span class="s2">"polevka"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
 
 <p>a odpověď?</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  {
-    ...
-    },
-    "aggregations": {
-      "polevka_odchylky": {
-        "doc_count": 245,
-        "buckets": [{
-          "key": "domacim",
-          "doc_count": 4,
-          "score": 0.05084548104956269,
-          "bg_count": 4
-        }, {
-          "key": "kremova",
-          "doc_count": 18,
-          "score": 0.037570060094008456,
-          "bg_count": 49
-        }, {
-          "key": "cibulova",
-          "doc_count": 4,
-          "score": 0.037411078717201174,
-          "bg_count": 5
-        }, {
-          "key": "celestynskymi",
-          "doc_count": 5,
-          "score": 0.026239067055393583,
-          "bg_count": 9
-        }, {
-          "key": "spenatova",
-          "doc_count": 3,
-          "score": 0.025539358600583092,
-          "bg_count": 4
-        }...
-        ]
-</code></pre></div></div>
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+  </span><span class="err">...</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"aggregations"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"polevka_odchylky"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"doc_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">245</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"buckets"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"domacim"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"doc_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"score"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.05084548104956269</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"bg_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w">
+      </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kremova"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"doc_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"score"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.037570060094008456</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"bg_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">49</span><span class="w">
+      </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cibulova"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"doc_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"score"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.037411078717201174</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"bg_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w">
+      </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"celestynskymi"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"doc_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"score"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.026239067055393583</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"bg_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="w">
+      </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"spenatova"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"doc_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"score"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.025539358600583092</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"bg_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w">
+      </span><span class="p">}</span><span class="err">...</span><span class="w">
+      </span><span class="p">]</span></code></pre></figure>
 
 <p>Tady je vidět, že z celkem 4 polévek označených jako <strong>domácí</strong> všechny
 vyhrály. <strong>Cibulové</strong> polévky mají taky slušné skóre: čtyři z pěti.
@@ -296,17 +292,21 @@ nemusí zapínat sporák (36 z 38 nevyhrálo).</p>
 
 <p>Nejčastější vítězné menu vypadá nějak takhle:</p>
 
-<p><strong>Kuřecí salát</strong>
-<strong>Hovězí vývar</strong>
-<strong>Kuře s bramborem</strong>
-<strong>Koláč</strong></p>
+<ul>
+  <li><strong>Kuřecí salát</strong></li>
+  <li><strong>Hovězí vývar</strong></li>
+  <li><strong>Kuře s bramborem</strong></li>
+  <li><strong>Koláč</strong></li>
+</ul>
 
 <p>Ale černým koněm soutěže bude následují menu:</p>
 
-<p><strong>Pancetta</strong> (nebo salát s rajčátky)
-<strong>Domácí cibulová polévka</strong> (pozor na to domácí!)
-<strong>Marinovaná vepřová pečeně s bramborem</strong>
-<strong>Čokoládové sufflé</strong> (nebo palačinka nebo medovník)</p>
+<ul>
+  <li><strong>Pancetta</strong> (nebo salát s rajčátky)</li>
+  <li><strong>Domácí cibulová polévka</strong> (pozor na to domácí!)</li>
+  <li><strong>Marinovaná vepřová pečeně s bramborem</strong></li>
+  <li><strong>Čokoládové sufflé</strong> (nebo palačinka nebo medovník)</li>
+</ul>
 
 <p>Proč? Agregace podstatných výrazů říká, že když se jakékoliv z těchto
 jídel objevilo v soutěži, tak bylo součástí vítězného menu.

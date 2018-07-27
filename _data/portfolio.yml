@@ -11,10 +11,10 @@
   website:
     href: https://d21.me
     caption: d21.me
-  gallery:
-    - https://picsum.photos/200?random
-    - https://picsum.photos/200?random
-    - https://picsum.photos/200?random
+  # gallery:
+  #   - https://picsum.photos/200?random
+  #   - https://picsum.photos/200?random
+  #   - https://picsum.photos/200?random
 - title: Komerční Banka
   job: Frontend strategy kickoff
   desc: >
@@ -39,10 +39,10 @@
   website:
     href: https://www.csas.cz
     caption: www.csas.cz
-  gallery:
-    - https://picsum.photos/200?random
-    - https://picsum.photos/200?random
-    - https://picsum.photos/200?random
+  # gallery:
+  #   - https://picsum.photos/200?random
+  #   - https://picsum.photos/200?random
+  #   - https://picsum.photos/200?random
 - title: Adventura
   job: Travel agency portfolio management
   desc: >

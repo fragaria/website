@@ -101,11 +101,11 @@ celková velikost se také změnšila.</li>
 </ul>
 
 <p>Při přechodu z verze 1 na verzi 2 u příkazu ionic start pro vytvoření
-nového projektu přibyl argument –v2, který definoval vytvoření projektu
+nového projektu přibyl argument <code class="highlighter-rouge">--v2</code>, který definoval vytvoření projektu
 ve verzi 2. Pokud chceme vytvořit projekt verze 3, pak stačí zadat jen
 ionic start s tím, že se nainstaluje ta nejnovější dostupná verze (platí
 od Ionic CLI v2.2.3, ve staších verzích CLI musíte pro nejnovější verzi
-Ionicu zadat argument –v2).
+Ionicu zadat argument <code class="highlighter-rouge">--v2</code>).
  </p>
 
 <h3 id="dekorátor-ionicpage">Dekorátor IonicPage</h3>
@@ -113,47 +113,49 @@ Ionicu zadat argument –v2).
 <p>Ionic nepoužívá Router, namísto něj má tzv. <em>deep link system</em>, kdy se o
 přechod mezi Pages stará NavController, který má metody Push a Pop.
 Do funkce Push se vkládá název komponenty, na kterou chceme přesměrovat,
-například:
-this.navCtrl.push(‘MyPage’);</p>
+například:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">this</span><span class="p">.</span><span class="nx">navCtrl</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">'MyPage'</span><span class="p">);</span></code></pre></figure>
 
 <p>Pokud bychom si komponentu chtěli označit jinak, můžeme využít parametru
 name v dekorátoru IonicPage, díky kterému pak linkujeme na komponentu
 díky vlastní proměnné: </p>
 
-<p>@IonicPage({
- name: ‘my-page’
-})</p>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">@</span><span class="nd">IonicPage</span><span class="p">({</span>
+<span class="err"> </span><span class="na">name</span><span class="p">:</span> <span class="s1">'my-page'</span>
+<span class="p">})</span>
 
-<p>@Component({
- …</p>
+<span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
+<span class="err"> </span><span class="p">...</span>
 
-<p>})
-export class MyPage {…}</p>
+<span class="p">})</span>
+<span class="k">export</span> <span class="kd">class</span> <span class="nx">MyPage</span> <span class="p">{...}</span></code></pre></figure>
 
 <p>Následně na tuto komponentu můžeme linkovat přes proměnnou nastavenou v
-dekorátoru:
-this.navCtrl.push(‘MyPage’);</p>
+dekorátoru:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">this</span><span class="p">.</span><span class="nx">navCtrl</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">'MyPage'</span><span class="p">);</span></code></pre></figure>
 
 <p>Další vlastností dekorátoru IonicPage je atribut segment, který definuje
-URL parametr pro danou komponentu v případě, že je zrovna aktivní:
-@IonicPage({
- name: ‘my-page’,
- segment: ‘some-path’
-})</p>
+URL parametr pro danou komponentu v případě, že je zrovna aktivní:</p>
 
-<p>V URL se daná komponenta zobazí následovně:
-http://localhost:8101/#/some-path</p>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">@</span><span class="nd">IonicPage</span><span class="p">({</span>
+<span class="err"> </span><span class="na">name</span><span class="p">:</span> <span class="s1">'my-page'</span><span class="p">,</span>
+<span class="err"> </span><span class="na">segment</span><span class="p">:</span> <span class="s1">'some-path'</span>
+<span class="p">})</span></code></pre></figure>
+
+<p>V URL se daná komponenta zobazí následovně: <code class="highlighter-rouge">http://localhost:8101/\#/some-path</code></p>
 
 <p>Do proměnné <em>segment</em> se dá vložit i dynamická proměnná, a to ve formátu
-:variable, příklad:
-@IonicPage({
- name: ‘detail-page’,
- segment: ‘detail/:id’
-})</p>
+<code class="highlighter-rouge">:variable</code>, příklad:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">@</span><span class="nd">IonicPage</span><span class="p">({</span>
+<span class="err"> </span><span class="na">name</span><span class="p">:</span> <span class="s1">'detail-page'</span><span class="p">,</span>
+<span class="err"> </span><span class="na">segment</span><span class="p">:</span> <span class="s1">'detail/:id'</span>
+<span class="p">})</span></code></pre></figure>
 
 <p>Samotná proměnná se předává v metodě Push, odkazující na naší
-komponentu.
-Více o IonicPage dekorátoru se můžete dozvědět v <a href="http://ionicframework.com/docs/api/navigation/IonicPage/">oficiální
+komponentu. Více o IonicPage dekorátoru se můžete dozvědět v <a href="http://ionicframework.com/docs/api/navigation/IonicPage/">oficiální
 dokumentaci</a>.</p>
 
 <h3 id="lazy-loading">Lazy loading</h3>

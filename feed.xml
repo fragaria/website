@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="https://fragaria.cz/website/feed.xml" rel="self" type="application/atom+xml" /><link href="https://fragaria.cz/website/" rel="alternate" type="text/html" /><updated>2018-07-27T09:56:32+00:00</updated><id>https://fragaria.cz/website/</id><title type="html">fragaria.cz</title><subtitle>We are a software development company based in Czech Republic. Our specialization are state-of-the-art apps without compromises that you can rely on. JavaScript, Python, NodeJS, Angular or Vue.js... we know it all.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="https://fragaria.cz/website/feed.xml" rel="self" type="application/atom+xml" /><link href="https://fragaria.cz/website/" rel="alternate" type="text/html" /><updated>2018-07-27T11:07:59+00:00</updated><id>https://fragaria.cz/website/</id><title type="html">fragaria.cz</title><subtitle>We are a software development company based in Czech Republic. Our specialization are state-of-the-art apps without compromises that you can rely on. JavaScript, Python, NodeJS, Angular or Vue.js... we know it all.
 </subtitle><entry><title type="html">Blockchain? Can do!</title><link href="https://fragaria.cz/website/blog/2018/03/28/blockchain-can-do/" rel="alternate" type="text/html" title="Blockchain? Can do!" /><published>2018-03-28T11:25:00+00:00</published><updated>2018-03-28T11:25:00+00:00</updated><id>https://fragaria.cz/website/blog/2018/03/28/blockchain-can-do</id><content type="html" xml:base="https://fragaria.cz/website/blog/2018/03/28/blockchain-can-do/">&lt;p&gt;Blockchain is the new sexy. Everybody is talking about it, people in
 lines in grocery stores are discussing Bitcoin price, big companies are
 pouring tons of money in research. Everybody just wants to be a part of
@@ -6,7 +6,10 @@ it. And from now on, so are we! It turns out, it’s just another young
 technology that we can
 handle.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://3.bp.blogspot.com/-HYB0yHh56hA/WpPIiCzFmoI/AAAAAAAAAnQ/6EJRSOyZEkYJV13r8rMM09GmFutP9-QGACLcBGAs/s1600/DSC_0054.JPG&quot;&gt;&lt;img src=&quot;https://3.bp.blogspot.com/-HYB0yHh56hA/WpPIiCzFmoI/AAAAAAAAAnQ/6EJRSOyZEkYJV13r8rMM09GmFutP9-QGACLcBGAs/s640/DSC_0054.JPG&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-03-28-blockchain-can-do__1.jpg&quot; /&gt;
+
+&lt;/figure&gt;
 
 &lt;h2 id=&quot;not-that-hard&quot;&gt;Not that hard&lt;/h2&gt;
 
@@ -69,7 +72,10 @@ code itself or its data. Pretty ambitious, right?&lt;/p&gt;
 picture is worth a thousand words, they
 say:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://2.bp.blogspot.com/-FJYjncoZO1c/WrTKLsRsOKI/AAAAAAAAAn4/aprELKsTqQIyfiMn0BvaUhATzxR4xp-aACLcBGAs/s1600/contracts-abi-web3.png&quot;&gt;&lt;img src=&quot;https://2.bp.blogspot.com/-FJYjncoZO1c/WrTKLsRsOKI/AAAAAAAAAn4/aprELKsTqQIyfiMn0BvaUhATzxR4xp-aACLcBGAs/s640/contracts-abi-web3.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-03-28-blockchain-can-do__2.png&quot; /&gt;
+
+&lt;/figure&gt;
 
 &lt;p&gt;During smart contract compilation and deployment to the blockchain, an
 ABI (Application Binary Interface) is produced. And that is nothing else
@@ -144,7 +150,10 @@ EP51&lt;/a&gt;
 a novější (a dražší) &lt;a href=&quot;https://www.meizu.com/en/accessory/ep52.html&quot;&gt;Meizu
 EP52&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://1.bp.blogspot.com/-h2VdSjNhHT0/WnWk_zGeyUI/AAAAAAAAA_c/dx-iWFyIYT4y5oGQJ6ACxvOu-Y43h9ZbACPcBGAYYCw/s1600/DSCF1741.jpg&quot;&gt;&lt;img src=&quot;https://1.bp.blogspot.com/-h2VdSjNhHT0/WnWk_zGeyUI/AAAAAAAAA_c/dx-iWFyIYT4y5oGQJ6ACxvOu-Y43h9ZbACPcBGAYYCw/s640/DSCF1741.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__1.jpg&quot; /&gt;
+
+&lt;/figure&gt;
 
 &lt;p&gt;Meizu mají tradičně řešené ovládání, které visí z pravé strany a
 umožňuje ovládat hlasitost, zastavit/pustit hudbu a přeskakovat na
@@ -160,52 +169,32 @@ se opře o vnitřek ucha a zaručuje, že sluchátko v uchu drží opravdu
 dobře a nevypadne ani při běhání -
 asi.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://3.bp.blogspot.com/-qJeY-AzqIWs/WnWk_4bedpI/AAAAAAAAA_Y/AM1yxDXy-9IxOmue3JgfoN9tmfZVe9xnwCPcBGAYYCw/s1600/DSCF1742.jpg&quot;&gt;&lt;img src=&quot;https://3.bp.blogspot.com/-qJeY-AzqIWs/WnWk_4bedpI/AAAAAAAAA_Y/AM1yxDXy-9IxOmue3JgfoN9tmfZVe9xnwCPcBGAYYCw/s640/DSCF1742.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__2.jpg&quot; /&gt;
+
+&lt;/figure&gt;
 
 &lt;h3 id=&quot;zvuk&quot;&gt;Zvuk&lt;/h3&gt;
 
 &lt;p&gt;Obě verze podle mě hrají téměř stejně, bohužel EP51 jsem ztratil, takže
 přímé porovnání neudělám.&lt;/p&gt;
 
-&lt;p&gt;Zvuk trochu postrádá detaily. Zvlášť je to patrné u bicích, kde se
-ztratí živost a bubny zní jako ze samplu. Výšky a středy jsou na tom
-lépe, ale pořád je poznat, že jde o sluchátka za pár korun.&lt;/p&gt;
-
-&lt;p&gt;V porovnání s RHA MA 750 se ztrácí umístění nástrojů v prostoru.&lt;/p&gt;
-
-&lt;p&gt;Já ale oceňuji, že zvuk je vyrovnaný a sluchátka nejsou zbytečně
-přebasovaná.&lt;/p&gt;
+&lt;p&gt;Zvuk trochu postrádá detaily. Zvlášť je to patrné u bicích, kde se ztratí živost
+a bubny zní jako ze samplu. Výšky a středy jsou na tom lépe, ale pořád je
+poznat, že jde o sluchátka za pár korun. V porovnání s RHA MA 750 se ztrácí
+umístění nástrojů v prostoru. Já ale oceňuji, že zvuk je vyrovnaný a sluchátka
+nejsou zbytečně přebasovaná.&lt;/p&gt;
 
 &lt;p&gt;V balení nebyl pěnový nástavec Comply, takže jsem ho musel &lt;a href=&quot;https://www.audigo.cz/Prislusenstvi/Pro-sluchatka/Nausniky-a-nastavce/Comply-Tx-400-velikost-M&quot;&gt;koupit
-zvlášť&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;mimochodem doporučuju pro libovolná sluchátka.&lt;/li&gt;
-&lt;/ul&gt;
+zvlášť&lt;/a&gt; - mimochodem doporučuju pro libovolná sluchátka.&lt;/p&gt;
 
 &lt;h3 id=&quot;kodeky&quot;&gt;Kodeky&lt;/h3&gt;
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt; &lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;✅&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;SBC&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;❎&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;AAC&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;✅&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;aptX&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;ul&gt;
+  &lt;li&gt;SBC: &lt;strong&gt;ANO&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;AAC: &lt;strong&gt;NE&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;aptX: &lt;strong&gt;ANO&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&quot;výdrž&quot;&gt;Výdrž&lt;/h3&gt;
 
@@ -234,7 +223,10 @@ menší výdrže.&lt;/p&gt;
 jejich bezdrátovou
 verzi.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://4.bp.blogspot.com/-TlP1XefINc0/WnWk_rEGh5I/AAAAAAAAA_U/3n1Sw9M5jmAPKaQPXucr7Y53dV_LegRawCPcBGAYYCw/s1600/DSCF1745.jpg&quot;&gt;&lt;img src=&quot;https://4.bp.blogspot.com/-TlP1XefINc0/WnWk_rEGh5I/AAAAAAAAA_U/3n1Sw9M5jmAPKaQPXucr7Y53dV_LegRawCPcBGAYYCw/s640/DSCF1745.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__3.jpg&quot; /&gt;
+
+&lt;/figure&gt;
 
 &lt;p&gt;Musím říct, že jsem se na ně docela těšil a že jsem byl docela zklamaný.
 Jednak nemám rád sluchátka s nákrčníkem - no a když ho &lt;strong&gt;MA 750
@@ -248,7 +240,10 @@ EP52&lt;/strong&gt; - po scvaknutí pecek k sobě se hudba automaticky zastaví.
 takže není problém vybrat správnou velikost pro libovolné
 ucho.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://2.bp.blogspot.com/-s3Q6Ctj-tfo/WnWlAWfGg2I/AAAAAAAAA_g/shORm_Qh2m4npaxIQXMY7og47s8miML1gCPcBGAYYCw/s1600/DSCF1746.jpg&quot;&gt;&lt;img src=&quot;https://2.bp.blogspot.com/-s3Q6Ctj-tfo/WnWlAWfGg2I/AAAAAAAAA_g/shORm_Qh2m4npaxIQXMY7og47s8miML1gCPcBGAYYCw/s640/DSCF1746.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__4.jpg&quot; /&gt;
+
+&lt;/figure&gt;
 
 &lt;p&gt;Pokud je budete kupovat, určitě si schovejte účtenku - na mých nefunguje
 tlačítko „snížit hlasitost“ a kolegovi po 14 dnech přestalo hrát pravé
@@ -284,28 +279,11 @@ zvuk beru spíš jako plus.&lt;/p&gt;
 
 &lt;h3 id=&quot;kodeky-1&quot;&gt;Kodeky&lt;/h3&gt;
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt; &lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;✅&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;SBC&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;✅&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;AAC&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;✅&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;aptX&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;ul&gt;
+  &lt;li&gt;SBC: &lt;strong&gt;ANO&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;AAC: &lt;strong&gt;ANO&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;aptX: &lt;strong&gt;ANO&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&quot;výdrž-1&quot;&gt;Výdrž&lt;/h3&gt;
 
@@ -335,7 +313,10 @@ používání mě nějak nebaví…&lt;/p&gt;
 E8&lt;/strong&gt;, takže jsem je koupil, aniž bych ověřil, že umí zpracovat &lt;strong&gt;aptX&lt;/strong&gt;.
 Neumí.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://1.bp.blogspot.com/-WbSwMTqLfsc/WnWlArbr__I/AAAAAAAAA_k/A0Kh38oKYfQ1zMnIAJwtVUKOcs7XHvoWACPcBGAYYCw/s1600/DSCF1750.jpg&quot;&gt;&lt;img src=&quot;https://1.bp.blogspot.com/-WbSwMTqLfsc/WnWlArbr__I/AAAAAAAAA_k/A0Kh38oKYfQ1zMnIAJwtVUKOcs7XHvoWACPcBGAYYCw/s640/DSCF1750.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__5.jpg&quot; /&gt;
+
+&lt;/figure&gt;
 
 &lt;p&gt;Naštěstí můj telefon (OnePlus 5) si poradí i s &lt;strong&gt;AAC&lt;/strong&gt;, jinak bych byl
 dost namíchnutý.&lt;/p&gt;
@@ -370,9 +351,7 @@ zapne hlasitý odposlech (o tom si povíme dále).&lt;/p&gt;
 nebo Siri - podle telefonu.&lt;/p&gt;
 
 &lt;p&gt;Hlasitost se ovládá delším držením pravého (zesílit) nebo levého
-(zeslabit) sluchátka.&lt;/p&gt;
-
-&lt;p&gt;Párování s novým telefonem se provádí současným stiskem na obou
+(zeslabit) sluchátka. Párování s novým telefonem se provádí současným stiskem na obou
 sluchátkách.&lt;/p&gt;
 
 &lt;p&gt;Je vidět, že nad ovládáním někdo docela přemýšlel, protože je snadno
@@ -405,7 +384,10 @@ vlastnosti zvuku ve čtverci popsaném nadpisy jako &lt;em&gt;warm&lt;/em&gt;, &
 &lt;em&gt;relaxed&lt;/em&gt; nebo
 &lt;em&gt;bright&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://3.bp.blogspot.com/-DGELMgR6jzY/WnWmuj_DvXI/AAAAAAAAA_4/Mj003Ossh4EKdbrmjnXGS-3vUF3agfMZwCLcBGAs/s1600/Screenshot_20180121-142051.jpg&quot;&gt;&lt;img src=&quot;https://3.bp.blogspot.com/-DGELMgR6jzY/WnWmuj_DvXI/AAAAAAAAA_4/Mj003Ossh4EKdbrmjnXGS-3vUF3agfMZwCLcBGAs/s640/Screenshot_20180121-142051.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__6.jpg&quot; /&gt;
+
+&lt;/figure&gt;
 
 &lt;ul&gt;
   &lt;li&gt;tažením směrem k &lt;em&gt;bright&lt;/em&gt; a &lt;em&gt;excited&lt;/em&gt; zvýrazníte výšky, s tím že u
@@ -426,28 +408,11 @@ hudbu.&lt;/p&gt;
 
 &lt;h3 id=&quot;kodeky-2&quot;&gt;Kodeky&lt;/h3&gt;
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt; &lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;✅&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;SBC&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;✅&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;AAC&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;❎&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;aptX ( proboha proč!?)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;ul&gt;
+  &lt;li&gt;SBC: &lt;strong&gt;ANO&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;AAC: &lt;strong&gt;ANO&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;aptX: &lt;strong&gt;NE&lt;/strong&gt; (proboha proč?!)&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&quot;výdrž-2&quot;&gt;Výdrž&lt;/h3&gt;
 
@@ -472,7 +437,10 @@ chvíli ale netuší, že před ním leží křivolaká cesta plná slepých uli
 nezrušených zákonů, neúplných datových zdrojů a zajímavých
 algoritmů.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://3.bp.blogspot.com/-ZCiJ_QZQkj8/WnCJev76DVI/AAAAAAAAAlg/GJfwYJFxe48ZyGlnJL1-23zULFYKJyYrgCLcBGAs/s1600/Screenshot_2018-01-30_16-02-36.png&quot;&gt;&lt;img src=&quot;https://3.bp.blogspot.com/-ZCiJ_QZQkj8/WnCJev76DVI/AAAAAAAAAlg/GJfwYJFxe48ZyGlnJL1-23zULFYKJyYrgCLcBGAs/s640/Screenshot_2018-01-30_16-02-36.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-02-05-mapujeme-adresy-do-ceskych-kraju__1.png&quot; /&gt;
+
+&lt;/figure&gt;
 
 &lt;h2 id=&quot;hledáme-data&quot;&gt;Hledáme data&lt;/h2&gt;
 
@@ -572,7 +540,10 @@ sluchátka.&lt;/p&gt;
 podělit o svá
 zjištění.&lt;/p&gt;
 
-&lt;h2&gt;&lt;a href=&quot;https://2.bp.blogspot.com/-dfIxl0de1OI/WmYAmCWRAcI/AAAAAAAAA-4/A2WLvtXHnlos78sFiI8K04szO_ETtqdigCLcBGAs/s1600/R0005251.JPG&quot;&gt;&lt;img src=&quot;https://2.bp.blogspot.com/-dfIxl0de1OI/WmYAmCWRAcI/AAAAAAAAA-4/A2WLvtXHnlos78sFiI8K04szO_ETtqdigCLcBGAs/s640/R0005251.JPG&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-01-23-vybirame-bezdratova-sluchatka-uvod__1.jpg&quot; /&gt;
+
+&lt;/figure&gt;
 
 &lt;p&gt;Dráty, bezdráty, kde je rozdíl?&lt;/p&gt;
 
@@ -688,11 +659,17 @@ zač.&lt;/p&gt;
 
 &lt;h4 id=&quot;spotify&quot;&gt;Spotify&lt;/h4&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://2.bp.blogspot.com/-SWMDcoHjijE/WmSF93W6T5I/AAAAAAAAA-k/X5lZgiLM6rITV0BmrnEFa3XD02FKZHtJQCLcBGAs/s1600/Screenshot_20180121-125842.jpg&quot;&gt;&lt;img src=&quot;https://2.bp.blogspot.com/-SWMDcoHjijE/WmSF93W6T5I/AAAAAAAAA-k/X5lZgiLM6rITV0BmrnEFa3XD02FKZHtJQCLcBGAs/s400/Screenshot_20180121-125842.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-01-23-vybirame-bezdratova-sluchatka-uvod__2.jpg&quot; /&gt;
+
+&lt;/figure&gt;
 
 &lt;h4 id=&quot;google-play-music&quot;&gt;Google Play Music&lt;/h4&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://1.bp.blogspot.com/-86ivIXCvyA0/WmSF9iET8MI/AAAAAAAAA-g/Ijw66DULphQwWv7VaeidqdAWKrlHAPmCgCLcBGAs/s1600/Screenshot_20180121-130323.jpg&quot;&gt;&lt;img src=&quot;https://1.bp.blogspot.com/-86ivIXCvyA0/WmSF9iET8MI/AAAAAAAAA-g/Ijw66DULphQwWv7VaeidqdAWKrlHAPmCgCLcBGAs/s400/Screenshot_20180121-130323.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-01-23-vybirame-bezdratova-sluchatka-uvod__3.jpg&quot; /&gt;
+
+&lt;/figure&gt;
 
 &lt;p&gt;Příští týden se podíváme na bezdrátová sluchátka do uší (pecky).&lt;/p&gt;
 
@@ -706,7 +683,10 @@ většinu představených novinek pamatuju.&lt;/p&gt;
 17.00 hodin. Pokud máte chuť, můžete celou událost &lt;a href=&quot;https://www.elastic.co/live/v6?elektra=home&amp;amp;storm=banner&quot;&gt;sledovat
 online&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://2.bp.blogspot.com/-jLqY9EBW7DY/Wh66FS2cO9I/AAAAAAAAA9E/wDo6XGfAqMApko3x2rbH9LJtyuqH2BV2wCPcBGAYYCw/s1600/mar-newhall-226045.jpg&quot;&gt;&lt;img src=&quot;https://2.bp.blogspot.com/-jLqY9EBW7DY/Wh66FS2cO9I/AAAAAAAAA9E/wDo6XGfAqMApko3x2rbH9LJtyuqH2BV2wCPcBGAYYCw/s400/mar-newhall-226045.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-12-01-elasticsearch-60-se-blizi__1.jpg&quot; /&gt;
+
+&lt;/figure&gt;
 
 &lt;p&gt;Protože jsme Elasticsearch na blogu chvíli zanedbávali, vypíchnu tu pár
 novinek verze 6.0 (a někdy i 5.0).&lt;/p&gt;
@@ -798,11 +778,12 @@ proč jsem od ní nakonec upustil a vrhl se na programování.&lt;/p&gt;
 
 &lt;p&gt;Aby se nejednalo jen o osobní zpověď, snažím se zde zahrnout co možná
 nejvíce postřehů, které se snad zcela neutonou v poněkud krkolomném
-slohu.
-**
-**&lt;/p&gt;
+slohu.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://lh4.googleusercontent.com/QyzFZSDXrnnuAINoZRZayv4R3JaLCNVcvzYJCIziVACy-2B1K_7Y0ZS2irxVnhSkmVxnG_s95hbMQ6kkcJMnAuw-22x5hGMrMIPvCHoNWFqTKIZ6wh1irSMTQnSR92v5I-pE6gG0&quot; alt=&quot;greg-rakozy-38802.jpg&quot; /&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-11-10-ohlednuti-ex-vedce__1.jpg&quot; /&gt;
+
+&lt;/figure&gt;
 
 &lt;h3 id=&quot;kdo-je-to-fyzik&quot;&gt;Kdo je to fyzik?&lt;/h3&gt;
 
@@ -1073,72 +1054,72 @@ zamítnutá grantová žádost nebo jiné příkoří a baví vás programovat,
 možná je čas do Fragarie napsat.&lt;/p&gt;</content><author><name>Kamil</name></author><category term="fyzika" /><category term="angularjs" /><category term="vědec" /><summary type="html">V tomto textu bych se rád ohlédnul za svou vědeckou kariérou i důvody, proč jsem od ní nakonec upustil a vrhl se na programování.</summary></entry><entry><title type="html">Fraga akce aneb kluci na výletě</title><link href="https://fragaria.cz/website/blog/2017/09/22/fraga-akce-aneb-kluci-na-vylete/" rel="alternate" type="text/html" title="Fraga akce aneb kluci na výletě" /><published>2017-09-22T10:47:00+00:00</published><updated>2017-09-22T10:47:00+00:00</updated><id>https://fragaria.cz/website/blog/2017/09/22/fraga-akce-aneb-kluci-na-vylete</id><content type="html" xml:base="https://fragaria.cz/website/blog/2017/09/22/fraga-akce-aneb-kluci-na-vylete/">&lt;p&gt;Máme za sebou letošní Fraga akci. Jsem ve firmě nováček a tři dny s mými
 novými kolegy mi ukázaly kvality tohoto týmu:&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Umíme se i bavit a jsme vynalézaví. Umíme zpívat a hrát písničky, k
-čemu nám stačí ukulele, celofán, lžíce, kamení a
-kelímek.&lt;/p&gt;
+&lt;p&gt;1) Umíme se i bavit a jsme vynalézaví. Umíme zpívat a hrát písničky, k čemu nám
+stačí ukulele, celofán, lžíce, kamení a kelímek.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;https://1.bp.blogspot.com/-fGRrdiLDNaY/WcPMYBcxYGI/AAAAAAAAACA/6G1kDqZrBKYmY02bRB8N6w-kG6AaHijLwCLcBGAs/s1600/20170907_231243.jpg&quot;&gt;&lt;img src=&quot;https://1.bp.blogspot.com/-fGRrdiLDNaY/WcPMYBcxYGI/AAAAAAAAACA/6G1kDqZrBKYmY02bRB8N6w-kG6AaHijLwCLcBGAs/s320/20170907_231243.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__1.jpg&quot; /&gt;
 
-&lt;!-- end list --&gt;
+&lt;/figure&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Umíme věci dobře naplánovat, díky čemuž jsme stihli všechno co bylo
-naplánované.&lt;/li&gt;
-  &lt;li&gt;Umíme improvizovat tam, kde plán chybí. Tady by byl výčet poněkud
-dlouhý.&lt;/li&gt;
-  &lt;li&gt;Umíme lidi přemluvit, kupříkladu aby nám načepovali 14 piv, i když
-mají ještě 3 hodiny zavřenou hospodu.&lt;/li&gt;
-  &lt;li&gt;Umíme lidi motivovat: “Kdo vyhraje, dostane odměnu. Že jakou? To
-uvidíš až vyhraješ.”&lt;/li&gt;
-  &lt;li&gt;Jsme soudržní, nedělíme se na víc než dvě skupiny.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Umíme najít kompromis: “Jděte pěšky, my jedeme busem. Sejdeme se na
-ubikaci.” &lt;/p&gt;
+&lt;p&gt;2) Umíme věci dobře naplánovat, díky čemuž jsme stihli všechno co bylo naplánované.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;https://4.bp.blogspot.com/-ccHsk0GwpcU/WcPMoY4PK8I/AAAAAAAAACE/nrmmSN3CliMC44tRRinGvyuY0fbc2afHQCLcBGAs/s1600/R0004684.jpg&quot;&gt;&lt;img src=&quot;https://4.bp.blogspot.com/-ccHsk0GwpcU/WcPMoY4PK8I/AAAAAAAAACE/nrmmSN3CliMC44tRRinGvyuY0fbc2afHQCLcBGAs/s320/R0004684.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Umíme dobře argumentovat: “Nepůjdeme přeci po asfaltce, to je
-nuda!”&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Jsme tým a umíme si podat pomocnou ruku, např. abychom pomohli
-kolegovi překonat potok suchou nohou po větvi stojíc po kotníky ve
-vodě.&lt;/p&gt;
+&lt;p&gt;3) Umíme improvizovat tam, kde plán chybí. Tady by byl výčet poněkud dlouhý.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;https://3.bp.blogspot.com/-gxCucTECoug/WcPL5Z2HkOI/AAAAAAAAAB4/_wNRuDsmzp4XEnf4r5Yyc4N6i-cHgSmXACLcBGAs/s1600/R0004703.jpg&quot;&gt;&lt;img src=&quot;https://3.bp.blogspot.com/-gxCucTECoug/WcPL5Z2HkOI/AAAAAAAAAB4/_wNRuDsmzp4XEnf4r5Yyc4N6i-cHgSmXACLcBGAs/s200/R0004703.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Máme pohotové reakce, dokážeme uskočit běžící srně z cesty.&lt;/li&gt;
-  &lt;li&gt;Dokážeme si přiznat chybu: “To nejsou krávy, to jsou býci.
-Utíkejme!” &lt;/li&gt;
-  &lt;li&gt;Jsme dobrými pozorovateli, jsme schopní objevit i živočichy s dobrým
-krytím jako je skokan, kterému z louže čouhají jenom oči.&lt;/li&gt;
-  &lt;li&gt;Máme mnoho společných témat, a to nejen z našeho oboru, ale od
-barefoot bot až po kvantovku.&lt;/li&gt;
-  &lt;li&gt;Nebojíme se seznámit, abychom si rozšíříli obzory. Narozeninová
-oslava ve vedlejší místnosti může být dobrou příležitostí se
-seznámit s mnoha různými lidmi na jednom místě.&lt;/li&gt;
-  &lt;li&gt;Učíme se nové jazyky, třeba i ten posunkový.&lt;/li&gt;
-  &lt;li&gt;Kolegové mají slušné vychování a vědí, že dámy mají přednost. Když
-však dáma zahučí do bahna, tak ji pomůžou z něj ven a sami ho pak
-obejdou.&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Jsme dobrými architekty, umíme naskládat dříví pro opravdu krásný
-oheň.&lt;/p&gt;
+&lt;p&gt;4) Umíme lidi přemluvit, kupříkladu aby nám načepovali 14 piv, i když mají ještě 3 hodiny zavřenou hospodu.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;https://3.bp.blogspot.com/-w4_3d1tv6Jc/WcPJezp0QZI/AAAAAAAAABs/06weQeJdfwsJgIaIadKeIRepGDevOARnACLcBGAs/s1600/20170907_221520.jpg&quot;&gt;&lt;img src=&quot;https://3.bp.blogspot.com/-w4_3d1tv6Jc/WcPJezp0QZI/AAAAAAAAABs/06weQeJdfwsJgIaIadKeIRepGDevOARnACLcBGAs/s320/20170907_221520.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt; Jsme hraví, baví nás bowling i logik.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;5) Umíme lidi motivovat: “Kdo vyhraje, dostane odměnu. Že jakou? To uvidíš až vyhraješ.”&lt;/p&gt;
+
+&lt;p&gt;6) Jsme soudržní, nedělíme se na víc než dvě skupiny.&lt;/p&gt;
+
+&lt;p&gt;7) Umíme najít kompromis: “Jděte pěšky, my jedeme busem. Sejdeme se na ubikaci.”&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__2.jpg&quot; /&gt;
+
+&lt;/figure&gt;
+
+&lt;p&gt;8) Umíme dobře argumentovat: “Nepůjdeme přeci po asfaltce, to je nuda!”&lt;/p&gt;
+
+&lt;p&gt;9) Jsme tým a umíme si podat pomocnou ruku, např. abychom pomohli kolegovi překonat potok suchou nohou po větvi stojíc po kotníky ve vodě.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__3.jpg&quot; /&gt;
+
+&lt;/figure&gt;
+
+&lt;p&gt;10) Máme pohotové reakce, dokážeme uskočit běžící srně z cesty.&lt;/p&gt;
+
+&lt;p&gt;11) Dokážeme si přiznat chybu: “To nejsou krávy, to jsou býci. Utíkejme!” &lt;/p&gt;
+
+&lt;p&gt;12) Jsme dobrými pozorovateli, jsme schopní objevit i živočichy s dobrým krytím jako je skokan, kterému z louže čouhají jenom oči.&lt;/p&gt;
+
+&lt;p&gt;13) Máme mnoho společných témat, a to nejen z našeho oboru, ale od barefoot bot až po kvantovku.&lt;/p&gt;
+
+&lt;p&gt;14) Nebojíme se seznámit, abychom si rozšíříli obzory. Narozeninová oslava ve vedlejší místnosti může být dobrou příležitostí se seznámit s mnoha různými lidmi na jednom místě.&lt;/p&gt;
+
+&lt;p&gt;15) Učíme se nové jazyky, třeba i ten posunkový.&lt;/p&gt;
+
+&lt;p&gt;16) Kolegové mají slušné vychování a vědí, že dámy mají přednost. Když však dáma zahučí do bahna, tak ji pomůžou z něj ven a sami ho pak obejdou.&lt;/p&gt;
+
+&lt;p&gt;17) Jsme dobrými architekty, umíme naskládat dříví pro opravdu krásný oheň.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__4.jpg&quot; /&gt;
+
+&lt;/figure&gt;
+
+&lt;p&gt;18) Jsme hraví, baví nás bowling i logik.&lt;/p&gt;
 
 &lt;p&gt;Tohle všechno a ještě víc se odehrálo ve třech dnech od čtvrtku
 odpoledne, kdy jsem se vlakem vybrali do Českých Budějovic, do neděle
 oběda, kdy jsme se živí a zdraví vrátili zpátky do
 Prahy. &lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://2.bp.blogspot.com/-GCU9XLgNaLg/WcTm308MbDI/AAAAAAAAACs/s72AA8X6oY84DwNDhrgrcrNGmo3uZ8K0gCLcBGAs/s1600/R0004640.jpg&quot;&gt;&lt;img src=&quot;https://2.bp.blogspot.com/-GCU9XLgNaLg/WcTm308MbDI/AAAAAAAAACs/s72AA8X6oY84DwNDhrgrcrNGmo3uZ8K0gCLcBGAs/s320/R0004640.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__5.jpg&quot; /&gt;
+
+&lt;/figure&gt;
 
 &lt;p&gt;Ano, zdraví. Tento rok se akce obešla bez zranění. Bodnutí včelou
 nebudeme specifikovat jako zranění, ani když se jedná o bodnutí v dutině
@@ -1157,7 +1138,10 @@ mohli najíst a doplnit těkutiny. Potěšil nás hospodský, který nám
 natočil pivo a naservíroval utopence tři hodiny před vlastní
 otvíračkou.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://1.bp.blogspot.com/-w1sf3ZiRog4/WcPP05h6PbI/AAAAAAAAACY/__5xtbTZthI4LpQulTNuOU9ujLchjQ5tACLcBGAs/s1600/R0004660.jpg&quot;&gt;&lt;img src=&quot;https://1.bp.blogspot.com/-w1sf3ZiRog4/WcPP05h6PbI/AAAAAAAAACY/__5xtbTZthI4LpQulTNuOU9ujLchjQ5tACLcBGAs/s320/R0004660.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__6.jpg&quot; /&gt;
+
+&lt;/figure&gt;
 
 &lt;p&gt;Po poklidné procházce to chtělo trochu adrenalinu. Rozdělili jsme se na
 dvě skupinky a vydali se ho pohledat. Část se vydala přírodou, část
@@ -1167,7 +1151,10 @@ za divokou přírodou nemusíme na safari. Kluci ve městě se vydali hledat
 adrenalin na sídliště Máj. Svoji misi si zpříjemnili plněním svých
 přání. &lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://2.bp.blogspot.com/-5H2-GW0SrDQ/WcPQMkFpw0I/AAAAAAAAACc/rwMQ_mjrbFYL6BXeoXMOC_7QMbqNIsLnQCLcBGAs/s1600/IMG_20170908_173432_HDR.jpg&quot;&gt;&lt;img src=&quot;https://2.bp.blogspot.com/-5H2-GW0SrDQ/WcPQMkFpw0I/AAAAAAAAACc/rwMQ_mjrbFYL6BXeoXMOC_7QMbqNIsLnQCLcBGAs/s320/IMG_20170908_173432_HDR.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__7.jpg&quot; /&gt;
+
+&lt;/figure&gt;
 
 &lt;p&gt;V sobotu jsme se vydali do nedaleké Hluboké. Pěší cestu opět vystihuje
 motto “Cesta je cíl”, i třetí den po sobě jsme si pořád měli o čem
@@ -1175,7 +1162,10 @@ povídat. U ZOO jsme si dali obídek a oslavili Robinovo narozeniny. Na
 námestí jsme si v pivovaru u pivka procvičili mozkové buňky Logikem a
 Scrabblem. &lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://1.bp.blogspot.com/-EKIgpLjUtkM/WcPPrbRtyOI/AAAAAAAAACU/zbikcFgvD64DlgaSLpiAfKfd3F0jJTKPQCLcBGAs/s1600/R0004775.jpg&quot;&gt;&lt;img src=&quot;https://1.bp.blogspot.com/-EKIgpLjUtkM/WcPPrbRtyOI/AAAAAAAAACU/zbikcFgvD64DlgaSLpiAfKfd3F0jJTKPQCLcBGAs/s320/R0004775.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__8.jpg&quot; /&gt;
+
+&lt;/figure&gt;
 
 &lt;p&gt;Bylo to uvolněné a oddychové setkání party fajn kluků a, poprvé v
 historii, holek.&lt;/p&gt;</content><author><name>Daniela Borošová</name></author><category term="kancl" /><category term="fragaria" /><summary type="html">Máme za sebou letošní Fraga akci. Jsem ve firmě nováček a tři dny s mými novými kolegy mi ukázaly kvality tohoto týmu:</summary></entry><entry><title type="html">Jahoda, malina, sloni, hadi, flanděra, angular</title><link href="https://fragaria.cz/website/blog/2017/07/03/jahoda-malina-sloni-hadi-flandera/" rel="alternate" type="text/html" title="Jahoda, malina, sloni, hadi, flanděra, angular" /><published>2017-07-03T10:56:00+00:00</published><updated>2017-07-03T10:56:00+00:00</updated><id>https://fragaria.cz/website/blog/2017/07/03/jahoda-malina-sloni-hadi-flandera</id><content type="html" xml:base="https://fragaria.cz/website/blog/2017/07/03/jahoda-malina-sloni-hadi-flandera/">&lt;p&gt;Přijde takhle klient do kanceláře a povídá: “Máme tady takovou velkou
@@ -1192,7 +1182,10 @@ ukazovat a bude je možné měnit, backend ideálně v Pythonu a jako datové
 od uživatelského konce, tedy od
 klienta.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://1.bp.blogspot.com/-MP986IuLAmg/WVailx1qfYI/AAAAAAAAAhg/IiqZKrZ7pOYGs5rd4IJzODHPoywnVFaZwCLcBGAs/s1600/DBkyLKpXoAI7tsr.jpg&quot;&gt;&lt;img src=&quot;https://1.bp.blogspot.com/-MP986IuLAmg/WVailx1qfYI/AAAAAAAAAhg/IiqZKrZ7pOYGs5rd4IJzODHPoywnVFaZwCLcBGAs/s640/DBkyLKpXoAI7tsr.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-07-03-jahoda-malina-sloni-hadi-flandera__1.jpg&quot; /&gt;
+
+&lt;/figure&gt;
 
 &lt;h2 id=&quot;angular-websockets-a-socketio&quot;&gt;Angular, WebSockets a socket.io&lt;/h2&gt;
 
@@ -1215,10 +1208,127 @@ přiřazovat pojmenovaný typ.&lt;/p&gt;
 návodu&lt;/a&gt; napíšeme tupoučký
 wrapper a službičku…&lt;/p&gt;
 
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// .. omit some imports&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;Injectable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;WebSocketService&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kr&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sockets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;WrappedSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
+
+    &lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;WrappedSocket&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sockets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sockets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;WrappedSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sockets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// omit import, basically taken from ng2-socket-io&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;io&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'socket.io-client'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;Injectable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;WrappedSocket&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;ioSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;SocketIoConfig&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;any&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ioSocket&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;io&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eventName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ioSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eventName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;once&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eventName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ioSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;once&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eventName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ioSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;disconnect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'disconnect'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ioSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;disconnect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ioSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;emit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eventName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ioSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;emit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ioSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;removeListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eventName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ioSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;removeListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ioSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;removeAllListeners&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eventName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ioSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;removeAllListeners&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ioSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;cm&quot;&gt;/** create an Observable from an event */&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;fromEvent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eventName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Observable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;subscribersCounter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Observable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;observer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+             &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ioSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eventName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                 &lt;span class=&quot;nx&quot;&gt;observer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+             &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+             &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                 &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;subscribersCounter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ioSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;removeListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eventName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;share&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
 &lt;p&gt;…a na dalších 20 řádkách si ten tunel ještě pustíme. No, a to je
 vlastně všechno. Zbytek aplikace jsou tradiční nezajímavé formulářové
 inputy, validace a taky on-screen klávesnice. Třeba trochu upravená
 &lt;a href=&quot;https://github.com/protacon/ng-virtual-keyboard&quot;&gt;tahleta&lt;/a&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// omit imports&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt;   &lt;span class=&quot;nx&quot;&gt;SOCKET_URL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/* @echo SOCKET_URL */'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;Component&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;templateUrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dashboard.component.html'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;styleUrls&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'dashboard.component.less'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Dashboard&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;OnInit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;OnDestroy&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;kr&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mainSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;WrappedSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;socketSubscribe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;fields&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;constructor&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;kr&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;socketService&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;WebSocketService&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mainSocket&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;socketService&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;SOCKET_URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;ngOnInit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// Listen for &quot;data_changed&quot; events from server&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;socketSubscribe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mainSocket&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fromEvent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;any&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'data_changed'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;subscribe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fields&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;field&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fields&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+                    &lt;span class=&quot;nx&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;modify&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;modify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;parseInt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Handle data change from UI and emit &quot;json&quot; event into socket&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;onFieldChange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mainSocket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;emit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'json'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;ngOnDestroy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;socketSubscribe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;socketSubscribe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;unsubscribe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h2 id=&quot;flask-a-socketio&quot;&gt;Flask a socket.io&lt;/h2&gt;
 
@@ -1228,6 +1338,21 @@ něco jednoduchého, do čeho se dobře integruje socket.io. Volba padla na
 &lt;a href=&quot;https://hotframeworks.com/languages/python&quot;&gt;používá&lt;/a&gt; a socket.io to
 &lt;a href=&quot;https://flask-socketio.readthedocs.io/en/latest/&quot;&gt;taky umí&lt;/a&gt;. Přijímat
 data z klienta je pak přímo odzbrojujícím způsobem jednoduché.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;flask&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Flask&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;flask_socketio&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SocketIO&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;flask_cors&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CORS&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Flask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;from_envvar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'FLASKR_SETTINGS'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;silent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;CORS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;socketio&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SocketIO&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Handles messages of type &quot;json&quot;&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@socketio.on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'json'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;client_data_change&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;database&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;update_value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Jak se data na klienta posílají si ukážeme po krátké odbočce do světa
 databází.&lt;/p&gt;
@@ -1249,8 +1374,53 @@ my si ukážeme, jak se problém řeší v Postgresu a
 pokaždé, když do ní přibude nový řádek. Na to se samozřejme nejlépe
 používají triggery.&lt;/p&gt;
 
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sql&quot; data-lang=&quot;sql&quot;&gt;&lt;span class=&quot;c1&quot;&gt;-- simple table definition, sequence omitted&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;field_value&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;integer&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;NOT&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;character&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;varying&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;NOT&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;field&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;character&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;varying&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FUNCTION&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;field_value_notify_change&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;RETURNS&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;trigger&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;LANGUAGE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plpgsql&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;AS&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$$&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;DECLARE&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jsonb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;BEGIN&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;-- build JSON object, compatible with 9.4 and 9.5&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json_build_object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'field'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;NEW&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;NEW&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;-- this is the magic, that emits the real event&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;perform&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pg_notify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'field_value_change'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;RETURN&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;END&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;$$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;-- regsiter function as a table trigger&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;TRIGGER&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;on_field_value_change&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;AFTER&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;INSERT&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;ON&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;field_value&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;FOR&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;EACH&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;ROW&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;EXECUTE&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;PROCEDURE&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;field_value_notify_change&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
 &lt;p&gt;Obsluha v Pythonu je pak dost jednoduchá, ale pro webový server je
 blokující smyčka tak, jak je uvedená v dokumentaci, poměrně nevhodná.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;c&quot;&gt;# http://initd.org/psycopg/docs/advanced.html#asynchronous-notifications&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;select&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;psycopg2&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;psycopg2.extensions&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;psycopg2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DSN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set_isolation_level&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;psycopg2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;extensions&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ISOLATION_LEVEL_AUTOCOMMIT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;curs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cursor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;cursor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;LISTEN field_value_change&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Waiting for notifications on channel 'test'&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],[],[],&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;([],[],[]):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Timeout&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;poll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;notifies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;notify&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;conn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;notifies&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Got NOTIFY:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;notify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;notify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;channel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;notify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h2 id=&quot;lepíme-to-celé-dohromady&quot;&gt;Lepíme to celé dohromady&lt;/h2&gt;
 
@@ -1262,8 +1432,48 @@ podstatě samostatná vlákna) v režii socket.io a asynchronní frontu s
 &lt;a href=&quot;http://eventlet.net/doc/hubs.html?highlight=trampoline#eventlet.hubs.trampoline&quot;&gt;trampolínou&lt;/a&gt;
 z arzenálu knihovny eventlet. Celá nádhera tak vypadá následovně:&lt;/p&gt;
 
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;eventlet.hubs&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trampoline&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;start_listening&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;Connects to PgSQL and listens to notifications, inspired by http://initd.org/psycopg/articles/2010/12/01/postgresql-notifications-psycopg2-eventlet/&quot;&quot;&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;connection&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;psycopg2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DSN&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;cursor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;connection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cursor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;cursor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;LISTEN field_value_change&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;trampoline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;connection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;poll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;connection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;notifies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;notify&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;connection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;notifies&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;put&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loads&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;notify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;emitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;Listens to queued events and emits data_changed broadcast event to a socket&quot;&quot;&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;element&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;socketio&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;emit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data_changed'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'field'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]}},&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;broadcast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# ...&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;dbThread&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;qThread&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@socketio.on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'connect'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;On first socket.io connection registers the database listener and value emitter&quot;&quot;&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;global&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dbThread&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;global&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;qThread&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;q&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;eventlet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dbThread&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;dbThread&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;socketio&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start_background_task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start_listening&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;qThread&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;socketio&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start_background_task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;emitter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
 &lt;p&gt;Neumíte si to představit? Podívejte se na následující video, kde je
 navíc v provozu i REST API, aby se nemuselo sahat přímo do databáze:&lt;/p&gt;
+
+&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://www.youtube.com/embed/y8cdWyMp_KE&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
 &lt;h2 id=&quot;co-říci-závěrem&quot;&gt;Co říci závěrem&lt;/h2&gt;
 
@@ -1283,9 +1493,10 @@ prožitek, ale hlavně to setsakra dobře vypadá.&lt;/p&gt;</content><author><n
 package and publish it to npm
 repository.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://4.bp.blogspot.com/-M7nNiOQc2rE/WU-YmE_VeZI/AAAAAAAAA5c/HvIktzxZY104b7GyCeoTPgPYSqweYgpZQCPcBGAYYCw/s1600/tim-gouw-68319.jpg&quot;&gt;&lt;img src=&quot;https://4.bp.blogspot.com/-M7nNiOQc2rE/WU-YmE_VeZI/AAAAAAAAA5c/HvIktzxZY104b7GyCeoTPgPYSqweYgpZQCPcBGAYYCw/s640/tim-gouw-68319.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Tim Gouw&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-06-26-npm-packages-101-creating-npm-package__1.jpg&quot; /&gt;
+&lt;figcaption&gt;Tim Gouw&lt;/figcaption&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;As I couldn’t find any Javascript package for handling &lt;a href=&quot;https://en.wikipedia.org/wiki/National_identification_number#Czech_Republic_and_Slovakia&quot;&gt;Czech and Slovak
 National identification
@@ -1304,10 +1515,9 @@ even npm itself under &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.nvm/...
 &lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/lib/node_modules&lt;/code&gt; which I like to keep simple and
 su-rights-protected.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# install nvm
-nvm install node
-nvm use node
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;c&quot;&gt;# install nvm&lt;/span&gt;
+nvm &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;node
+nvm use node&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Ok, nvm is installed let’s dive into package creation.&lt;/p&gt;
 
@@ -1352,12 +1562,11 @@ Now let’s have an empty github repo
 &lt;a href=&quot;https://github.com/kub1x/rodnecislo&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;kub1x/rodnecislo&lt;/code&gt;&lt;/a&gt; cloned in
 &lt;code class=&quot;highlighter-rouge&quot;&gt;rodnecislo&lt;/code&gt; directory and start the generator as follows:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone git@github.com:kub1x/rodnecislo.git
-cd rodnecislo
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;git clone git@github.com:kub1x/rodnecislo.git
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;rodnecislo
 nvm use node
-npm install -g yeoman generator-np
-yo np
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-g&lt;/span&gt; yeoman generator-np
+yo np&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;The generator-np still asks some questions, which need to be answered.
 Following are my answers and the reasoning behind them.&lt;/p&gt;
@@ -1448,9 +1657,8 @@ someone could offer him a hand ;)). To fix this use
 &lt;a href=&quot;https://www.npmjs.com/package/npm-check-updates&quot;&gt;npm-check-updates&lt;/a&gt;
 tool:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install -g npm-check-updates
-ncu -a
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-g&lt;/span&gt; npm-check-updates
+ncu &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Now this is just the beginning. Even the first version of the module
 took quite some time on research, programming and writing. I’m kinda
@@ -1472,11 +1680,11 @@ celková velikost se také změnšila.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Při přechodu z verze 1 na verzi 2 u příkazu ionic start pro vytvoření
-nového projektu přibyl argument –v2, který definoval vytvoření projektu
+nového projektu přibyl argument &lt;code class=&quot;highlighter-rouge&quot;&gt;--v2&lt;/code&gt;, který definoval vytvoření projektu
 ve verzi 2. Pokud chceme vytvořit projekt verze 3, pak stačí zadat jen
 ionic start s tím, že se nainstaluje ta nejnovější dostupná verze (platí
 od Ionic CLI v2.2.3, ve staších verzích CLI musíte pro nejnovější verzi
-Ionicu zadat argument –v2).
+Ionicu zadat argument &lt;code class=&quot;highlighter-rouge&quot;&gt;--v2&lt;/code&gt;).
  &lt;/p&gt;
 
 &lt;h3 id=&quot;dekorátor-ionicpage&quot;&gt;Dekorátor IonicPage&lt;/h3&gt;
@@ -1484,47 +1692,49 @@ Ionicu zadat argument –v2).
 &lt;p&gt;Ionic nepoužívá Router, namísto něj má tzv. &lt;em&gt;deep link system&lt;/em&gt;, kdy se o
 přechod mezi Pages stará NavController, který má metody Push a Pop.
 Do funkce Push se vkládá název komponenty, na kterou chceme přesměrovat,
-například:
-this.navCtrl.push(‘MyPage’);&lt;/p&gt;
+například:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;navCtrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'MyPage'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Pokud bychom si komponentu chtěli označit jinak, můžeme využít parametru
 name v dekorátoru IonicPage, díky kterému pak linkujeme na komponentu
 díky vlastní proměnné: &lt;/p&gt;
 
-&lt;p&gt;@IonicPage({
- name: ‘my-page’
-})&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;IonicPage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'my-page'&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
 
-&lt;p&gt;@Component({
- …&lt;/p&gt;
+&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;Component&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
 
-&lt;p&gt;})
-export class MyPage {…}&lt;/p&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;MyPage&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{...}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Následně na tuto komponentu můžeme linkovat přes proměnnou nastavenou v
-dekorátoru:
-this.navCtrl.push(‘MyPage’);&lt;/p&gt;
+dekorátoru:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;navCtrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'MyPage'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Další vlastností dekorátoru IonicPage je atribut segment, který definuje
-URL parametr pro danou komponentu v případě, že je zrovna aktivní:
-@IonicPage({
- name: ‘my-page’,
- segment: ‘some-path’
-})&lt;/p&gt;
+URL parametr pro danou komponentu v případě, že je zrovna aktivní:&lt;/p&gt;
 
-&lt;p&gt;V URL se daná komponenta zobazí následovně:
-http://localhost:8101/#/some-path&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;IonicPage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'my-page'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;segment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'some-path'&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;V URL se daná komponenta zobazí následovně: &lt;code class=&quot;highlighter-rouge&quot;&gt;http://localhost:8101/\#/some-path&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Do proměnné &lt;em&gt;segment&lt;/em&gt; se dá vložit i dynamická proměnná, a to ve formátu
-:variable, příklad:
-@IonicPage({
- name: ‘detail-page’,
- segment: ‘detail/:id’
-})&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;:variable&lt;/code&gt;, příklad:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;IonicPage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'detail-page'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;segment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'detail/:id'&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Samotná proměnná se předává v metodě Push, odkazující na naší
-komponentu.
-Více o IonicPage dekorátoru se můžete dozvědět v &lt;a href=&quot;http://ionicframework.com/docs/api/navigation/IonicPage/&quot;&gt;oficiální
+komponentu. Více o IonicPage dekorátoru se můžete dozvědět v &lt;a href=&quot;http://ionicframework.com/docs/api/navigation/IonicPage/&quot;&gt;oficiální
 dokumentaci&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;lazy-loading&quot;&gt;Lazy loading&lt;/h3&gt;

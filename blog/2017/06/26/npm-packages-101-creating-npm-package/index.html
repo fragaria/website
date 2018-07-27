@@ -20,7 +20,7 @@
     <meta property="og:description"   content="Going down the path of node package creator - guide to create npmpackage and publish it to npmrepository." />
 
     
-        <meta property="og:image"         content="https://4.bp.blogspot.com/-M7nNiOQc2rE/WU-YmE_VeZI/AAAAAAAAA5c/HvIktzxZY104b7GyCeoTPgPYSqweYgpZQCPcBGAYYCw/s72-c/tim-gouw-68319.jpg" />
+        <meta property="og:image"         content="" />
     
 
     <link rel="stylesheet" href="/website/assets/styles.css">
@@ -64,8 +64,6 @@
         <meta itemprop="headline" content="NPM packages 101: Creating npm package">
 
         
-            <meta itemprop="image" content="https://4.bp.blogspot.com/-M7nNiOQc2rE/WU-YmE_VeZI/AAAAAAAAA5c/HvIktzxZY104b7GyCeoTPgPYSqweYgpZQCPcBGAYYCw/s72-c/tim-gouw-68319.jpg">
-        
 
         <div itemprop="publisher" itemtype="http://schema.org/Organization" class="hidden" itemscope>
             <div itemprop="logo" itemtype="http://schema.org/ImageObject" itemscope="">
@@ -91,9 +89,10 @@
 package and publish it to npm
 repository.</p>
 
-<p><a href="https://4.bp.blogspot.com/-M7nNiOQc2rE/WU-YmE_VeZI/AAAAAAAAA5c/HvIktzxZY104b7GyCeoTPgPYSqweYgpZQCPcBGAYYCw/s1600/tim-gouw-68319.jpg"><img src="https://4.bp.blogspot.com/-M7nNiOQc2rE/WU-YmE_VeZI/AAAAAAAAA5c/HvIktzxZY104b7GyCeoTPgPYSqweYgpZQCPcBGAYYCw/s640/tim-gouw-68319.jpg" alt="" /></a></p>
-
-<p>Tim Gouw</p>
+<figure>
+<img src="https://res.cloudinary.com/fragaria/image/upload/w_640,c_fit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-06-26-npm-packages-101-creating-npm-package__1.jpg" />
+<figcaption>Tim Gouw</figcaption>
+</figure>
 
 <p>As I couldn’t find any Javascript package for handling <a href="https://en.wikipedia.org/wiki/National_identification_number#Czech_Republic_and_Slovakia">Czech and Slovak
 National identification
@@ -112,10 +111,9 @@ even npm itself under <code class="highlighter-rouge">~/.nvm/...</code> director
 <code class="highlighter-rouge">/usr/lib/node_modules</code> which I like to keep simple and
 su-rights-protected.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># install nvm
-nvm install node
-nvm use node
-</code></pre></div></div>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="c"># install nvm</span>
+nvm <span class="nb">install </span>node
+nvm use node</code></pre></figure>
 
 <p>Ok, nvm is installed let’s dive into package creation.</p>
 
@@ -160,12 +158,11 @@ Now let’s have an empty github repo
 <a href="https://github.com/kub1x/rodnecislo"><code class="highlighter-rouge">kub1x/rodnecislo</code></a> cloned in
 <code class="highlighter-rouge">rodnecislo</code> directory and start the generator as follows:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@github.com:kub1x/rodnecislo.git
-cd rodnecislo
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">git clone git@github.com:kub1x/rodnecislo.git
+<span class="nb">cd </span>rodnecislo
 nvm use node
-npm install -g yeoman generator-np
-yo np
-</code></pre></div></div>
+npm <span class="nb">install</span> <span class="nt">-g</span> yeoman generator-np
+yo np</code></pre></figure>
 
 <p>The generator-np still asks some questions, which need to be answered.
 Following are my answers and the reasoning behind them.</p>
@@ -256,9 +253,8 @@ someone could offer him a hand ;)). To fix this use
 <a href="https://www.npmjs.com/package/npm-check-updates">npm-check-updates</a>
 tool:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g npm-check-updates
-ncu -a
-</code></pre></div></div>
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">npm <span class="nb">install</span> <span class="nt">-g</span> npm-check-updates
+ncu <span class="nt">-a</span></code></pre></figure>
 
 <p>Now this is just the beginning. Even the first version of the module
 took quite some time on research, programming and writing. I’m kinda

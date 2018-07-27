@@ -1,11 +1,13 @@
 - title: HTML5
   img: /assets/img/html5.svg
-- title: NodeJS
-  img: /assets/img/nodejs.svg
 - title: Angular
   img: /assets/img/angular.svg
 - title: Vue.js
   img: /assets/img/vuejs.svg
+- title: React
+  img: /assets/img/react.svg
+- title: NodeJS
+  img: /assets/img/nodejs.svg
 - title: Python
   img: /assets/img/python.svg
 - title: JavaScript
@@ -14,10 +16,16 @@
   img: /assets/img/typescript.svg
 - title: Java
   img: /assets/img/java.svg
-- title: Docker
-  img: /assets/img/docker.png
+- title: Ethereum
+  img: /assets/img/ethereum.svg
+- title: MongoDB
+  img: /assets/img/mongodb.svg
 - title: ElasticSearch
   img: /assets/img/elasticsearch.svg
+- title: Docker
+  img: /assets/img/docker.png
+- title: Kubernetes
+  img: /assets/img/kubernetes.svg
 - title: AWS
   img: /assets/img/aws.svg
 - title: Linux

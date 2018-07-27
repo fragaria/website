@@ -73,7 +73,7 @@ $sitenav-slide-transition: cubic-bezier(0.17, 0.04, 0.03, 0.94);
         flex-direction: row;
         padding: 0;
         height: auto;
-        min-height: none;
+        min-height: initial;
         transform: translateY(0);
         transition: none;
         background: none;

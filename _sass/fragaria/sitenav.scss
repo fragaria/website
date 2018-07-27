@@ -1,7 +1,8 @@
+$sitenav-height-mobile: 26rem;
+
 .sitenav {
     position: relative;
     height: 5rem;
-    margin-top: 1rem;
     margin-bottom: 3rem;
     align-items: center;
 
@@ -21,9 +22,6 @@
 
 // logo image
 .sitenav__brand {
-    background: map-get($palette, white);
-    padding: .5em;
-
     @mixin snBrandSize($height) {
         $brand-dimension-ratio: 153 / 196;
 
@@ -33,13 +31,15 @@
     }
 
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 1rem;
+    left: 1rem;
     height: 5rem;
     z-index: 3;
 
     // logo image scales up on bigger screens
     @include deviceBreakpoint(tablet) {
+        background: map-get($palette, white);
+        padding: .5em;
         top: -2rem;
         left: 50%;
 
@@ -52,84 +52,135 @@
 }
 
 .sitenav__linkset {
-    // linkset only shown if menu is toggled on mobile (@see: .sitenav-wrapper--show)
-    display: none;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     list-style-type: none;
     z-index: 2;
+    width: 100%;
+
+    // linkset only shown if menu is toggled on mobile (@see: .sitenav-wrapper--show)
+    padding: 4rem 7rem 2rem;
+    transform: translateY(-100%);
+    transition: transform .4s ease-in-out;
+    background: map-get($palette, red);
+    box-shadow: inset 0 -0.3rem 2rem rgba(0, 0, 0, .3);
 
     @include deviceBreakpoint(tablet) {
-        display: flex;
+        flex-direction: row;
+        padding: 0;
+        transform: translateY(0);
+        transition: none;
+        background: none;
+        box-shadow: none;
     }
 }
 
+/* .sitenav__linkset-item styles */
 .sitenav__linkset-item {
     font-family: getFontFamily($sansseriftype);
     font-weight: map-get($sansseriftype, semi);
     letter-spacing: .1rem;
+
+    width: 12em;
     font-size: 1.15rem;
+    padding: 1rem 0;
+    text-align: center;
 
-    // this link is main and consumes all the available space
-    &--main {
-        flex: 1;
+    &:not(:first-child) {
+        @include baselineAwareBorder(rgba(0, 0, 0, .3));
     }
 
-    // common links get spacing around them
-    &:not(&--main):not(:last-child) {
-        margin-right: .5em;
+    @include deviceBreakpoint(tablet) {
+        width: auto;
+        margin: 0;
+        text-align: left;
 
-        @media (min-width: 1100px) {
-            margin-right: 2em;
+        &:not(:first-child) {
+            @include baselineAwareBorderCancel();
         }
-    }
 
-    // active link is highlighted
-    &--active .sitenav__link {
-        color: map-get($palette, red);
+        // this link is main and consumes all the available space
+        &--main {
+            flex: 1;
+        }
+
+        // common links get spacing around them
+        &:not(&--main):not(:last-child) {
+            margin-right: .5em;
+
+            @media (min-width: 1100px) {
+                margin-right: 2em;
+            }
+        }
     }
 }
 
+/* .sitenav__link styles */
 .sitenav__link {
     text-transform: lowercase;
-    transition: color .2s ease-in-out;
-    background: map-get($palette, white);
 
     @include deviceBreakpoint(tablet) {
         padding: 0 .5em;
+        transition: color .2s ease-in-out;
+        background: map-get($palette, white);
     }
 
     @include deviceBreakpoint(desktop) {
         padding: 0 .75em;
     }
-
-    &:hover {
-        color: map-get($palette, red);
-    }
 }
 
 .sitenav__linkset-item {
-    &:not(&--main):first-child .sitenav__link {
-        padding-left: 0;
-    }
-
-    &:last-child .sitenav__link {
-        padding-right: 0;
-        float: right;
-    }
-
-    &--main .sitenav__link {
-        padding: 0 .75em;
-        display: inline-block;
-        height: 2rem;
+    .sitenav__link {
         color: map-get($palette, white);
-        background-color: map-get($palette, red);
+    }
+
+    // active link is highlighted
+    &--active .sitenav__link {
+        color: map-get($palette, black);
+    }
+
+    @include deviceBreakpoint(tablet) {
+        .sitenav__link {
+            color: map-get($palette, black);
+
+            &:hover {
+                color: map-get($palette, red);
+            }
+        }
+
+        &:not(&--main):first-child .sitenav__link {
+            padding-left: 0;
+        }
+
+        &:last-child .sitenav__link {
+            padding-right: 0;
+            float: right;
+        }
+
+        // active link is highlighted
+        &--active .sitenav__link {
+            color: map-get($palette, red);
+        }
+
+        &--main .sitenav__link {
+            padding: 0 .75em;
+            display: inline-block;
+            height: 2rem;
+            color: map-get($palette, white);
+            background-color: map-get($palette, red);
+
+        }
     }
 }
 
 .sitenav__menu-toggle {
     position: absolute;
-    right: 0;
+    right: 1rem;
+    top: 1rem;
     z-index: 3;
+
     @include sassline(delta, $headingtype, 3, 0, all);
 
     // hide menu toggle for tablet and bigger
@@ -147,49 +198,22 @@ a.sitenav__menu-toggle-link {
     }
 }
 
+.sitenav-wrapper {
+    transition: padding-bottom .4s ease-in-out;
+    padding-bottom: 0;
+}
+
 /* if menu is shown, it covers whole screen  with background fill */
 .sitenav-wrapper--show {
     @media (max-width: deviceBreakpointWidth(tablet) - 0.00001rem) {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        background-color: map-get($palette, white);
-        z-index: 1000;
-
-        .sitenav {
-            height: 100%;
-        }
+        padding-bottom: $sitenav-height-mobile;
 
         .sitenav__linkset {
-            display: flex;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            text-align: center;
-            justify-content: space-around;
-            align-items: center;
-            flex-direction: row;
-            flex-wrap: wrap;
-            // a little bigger padding from the top, make sure it's bigger than logo size (6rem)
-            padding: 7rem 3rem 5rem;
-
-            @media (min-height: 460px) {
-                flex-direction: column;
-            }
+            transform: translateY(0);
         }
 
-        .sitenav__linkset-item {
-            margin-right: 0 !important;
-            padding-left: .5em;
-            padding-right: .5em;
-
-            @include sassline(epsilon, $bodytype, 2, 2, all);
-
-            &.sitenav__linkset-item--main {
-                display: none;
-            }
+        .sitenav__menu-toggle-link {
+            color: map-get($palette, white);
         }
     }
 }

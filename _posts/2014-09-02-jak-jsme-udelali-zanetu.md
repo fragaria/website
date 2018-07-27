@@ -22,7 +22,7 @@ blogger_orig_url: http://blog.fragaria.cz/2014/09/jak-jsme-udelali-zanetu.html
   - zákazník řádně a včas platí,
   - dostali jsme další související zakázky.
 
-Jmenuje se Žaneta a je to[systém na správu
+Jmenuje se Žaneta a je to [systém na správu
 zájezdů](http://www.fragaria.cz/reference/2014/6/13/system-pro-spravu-zajezdu/)
 pro [CK Adventura](http://www.adventura.cz/) a [CK China
 Tours](http://www.chinatours.cz/).

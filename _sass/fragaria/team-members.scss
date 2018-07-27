@@ -13,16 +13,19 @@
     grid-auto-rows: minmax(10rem, auto);
     grid-row-gap: 4rem;
 
-    @include deviceBreakpoint(mobile) {
+    @media (min-width: 20rem) {
         grid-template-columns: repeat(2, 1fr);
         grid-auto-rows: minmax(10rem, auto);
+        grid-gap: 2rem;
+    }
+
+    @include deviceBreakpoint(mobile) {
         grid-gap: 4rem;
     }
 
     /* 4 columns on a row for tablet and up */
     @include deviceBreakpoint(tablet) {
         grid-template-columns: repeat(4, 1fr);
-        grid-auto-rows: minmax(10rem, auto);
         grid-gap: 4rem;
     }
 }

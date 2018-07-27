@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="https://fragaria.cz/website/feed.xml" rel="self" type="application/atom+xml" /><link href="https://fragaria.cz/website/" rel="alternate" type="text/html" /><updated>2018-07-27T15:47:55+00:00</updated><id>https://fragaria.cz/website/</id><title type="html">fragaria.cz</title><subtitle>We are a software development company based in Czech Republic. Our specialization are state-of-the-art apps without compromises that you can rely on. JavaScript, Python, NodeJS, Angular or Vue.js... we know it all.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="https://fragaria.cz/website/feed.xml" rel="self" type="application/atom+xml" /><link href="https://fragaria.cz/website/" rel="alternate" type="text/html" /><updated>2018-07-27T16:14:51+00:00</updated><id>https://fragaria.cz/website/</id><title type="html">fragaria.cz</title><subtitle>We are a software development company based in Czech Republic. Our specialization are state-of-the-art apps without compromises that you can rely on. JavaScript, Python, NodeJS, Angular or Vue.js... we know it all.
 </subtitle><entry><title type="html">Blockchain? Can do!</title><link href="https://fragaria.cz/website/blog/2018/03/28/blockchain-can-do/" rel="alternate" type="text/html" title="Blockchain? Can do!" /><published>2018-03-28T11:25:00+00:00</published><updated>2018-03-28T11:25:00+00:00</updated><id>https://fragaria.cz/website/blog/2018/03/28/blockchain-can-do</id><content type="html" xml:base="https://fragaria.cz/website/blog/2018/03/28/blockchain-can-do/">&lt;p&gt;Blockchain is the new sexy. Everybody is talking about it, people in
 lines in grocery stores are discussing Bitcoin price, big companies are
 pouring tons of money in research. Everybody just wants to be a part of
@@ -6,7 +6,7 @@ it. And from now on, so are we! It turns out, it’s just another young
 technology that we can
 handle.&lt;/p&gt;
 
-&lt;figure&gt;
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
 &lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-03-28-blockchain-can-do__1.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2018-03-28-blockchain-can-do__1.jpg 1x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-03-28-blockchain-can-do__1.jpg 2x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2018-03-28-blockchain-can-do__1.jpg 3x&quot; /&gt;
@@ -74,7 +74,7 @@ code itself or its data. Pretty ambitious, right?&lt;/p&gt;
 picture is worth a thousand words, they
 say:&lt;/p&gt;
 
-&lt;figure&gt;
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
 &lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-03-28-blockchain-can-do__2.png&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2018-03-28-blockchain-can-do__2.png 1x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-03-28-blockchain-can-do__2.png 2x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2018-03-28-blockchain-can-do__2.png 3x&quot; /&gt;
@@ -154,7 +154,7 @@ EP51&lt;/a&gt;
 a novější (a dražší) &lt;a href=&quot;https://www.meizu.com/en/accessory/ep52.html&quot;&gt;Meizu
 EP52&lt;/a&gt;.&lt;/p&gt;
 
-&lt;figure&gt;
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
 &lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__1.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__1.jpg 1x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__1.jpg 2x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__1.jpg 3x&quot; /&gt;
@@ -175,7 +175,7 @@ se opře o vnitřek ucha a zaručuje, že sluchátko v uchu drží opravdu
 dobře a nevypadne ani při běhání -
 asi.&lt;/p&gt;
 
-&lt;figure&gt;
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
 &lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__2.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__2.jpg 1x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__2.jpg 2x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__2.jpg 3x&quot; /&gt;
@@ -231,7 +231,7 @@ menší výdrže.&lt;/p&gt;
 jejich bezdrátovou
 verzi.&lt;/p&gt;
 
-&lt;figure&gt;
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
 &lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__3.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__3.jpg 1x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__3.jpg 2x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__3.jpg 3x&quot; /&gt;
@@ -250,7 +250,7 @@ EP52&lt;/strong&gt; - po scvaknutí pecek k sobě se hudba automaticky zastaví.
 takže není problém vybrat správnou velikost pro libovolné
 ucho.&lt;/p&gt;
 
-&lt;figure&gt;
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
 &lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__4.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__4.jpg 1x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__4.jpg 2x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__4.jpg 3x&quot; /&gt;
@@ -325,7 +325,7 @@ používání mě nějak nebaví…&lt;/p&gt;
 E8&lt;/strong&gt;, takže jsem je koupil, aniž bych ověřil, že umí zpracovat &lt;strong&gt;aptX&lt;/strong&gt;.
 Neumí.&lt;/p&gt;
 
-&lt;figure&gt;
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
 &lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__5.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__5.jpg 1x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__5.jpg 2x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__5.jpg 3x&quot; /&gt;
@@ -398,7 +398,7 @@ vlastnosti zvuku ve čtverci popsaném nadpisy jako &lt;em&gt;warm&lt;/em&gt;, &
 &lt;em&gt;relaxed&lt;/em&gt; nebo
 &lt;em&gt;bright&lt;/em&gt;.&lt;/p&gt;
 
-&lt;figure&gt;
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
 &lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__6.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__6.jpg 1x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__6.jpg 2x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2018-02-14-idealni-bezdratova-sluchatka-spunty__6.jpg 3x&quot; /&gt;
@@ -453,7 +453,7 @@ chvíli ale netuší, že před ním leží křivolaká cesta plná slepých uli
 nezrušených zákonů, neúplných datových zdrojů a zajímavých
 algoritmů.&lt;/p&gt;
 
-&lt;figure&gt;
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
 &lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-02-05-mapujeme-adresy-do-ceskych-kraju__1.png&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2018-02-05-mapujeme-adresy-do-ceskych-kraju__1.png 1x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-02-05-mapujeme-adresy-do-ceskych-kraju__1.png 2x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2018-02-05-mapujeme-adresy-do-ceskych-kraju__1.png 3x&quot; /&gt;
@@ -558,7 +558,7 @@ sluchátka.&lt;/p&gt;
 podělit o svá
 zjištění.&lt;/p&gt;
 
-&lt;figure&gt;
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
 &lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-01-23-vybirame-bezdratova-sluchatka-uvod__1.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2018-01-23-vybirame-bezdratova-sluchatka-uvod__1.jpg 1x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-01-23-vybirame-bezdratova-sluchatka-uvod__1.jpg 2x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2018-01-23-vybirame-bezdratova-sluchatka-uvod__1.jpg 3x&quot; /&gt;
@@ -679,7 +679,7 @@ zač.&lt;/p&gt;
 
 &lt;h4 id=&quot;spotify&quot;&gt;Spotify&lt;/h4&gt;
 
-&lt;figure&gt;
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
 &lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-01-23-vybirame-bezdratova-sluchatka-uvod__2.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2018-01-23-vybirame-bezdratova-sluchatka-uvod__2.jpg 1x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-01-23-vybirame-bezdratova-sluchatka-uvod__2.jpg 2x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2018-01-23-vybirame-bezdratova-sluchatka-uvod__2.jpg 3x&quot; /&gt;
@@ -688,7 +688,7 @@ zač.&lt;/p&gt;
 
 &lt;h4 id=&quot;google-play-music&quot;&gt;Google Play Music&lt;/h4&gt;
 
-&lt;figure&gt;
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
 &lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-01-23-vybirame-bezdratova-sluchatka-uvod__3.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2018-01-23-vybirame-bezdratova-sluchatka-uvod__3.jpg 1x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-01-23-vybirame-bezdratova-sluchatka-uvod__3.jpg 2x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2018-01-23-vybirame-bezdratova-sluchatka-uvod__3.jpg 3x&quot; /&gt;
@@ -707,7 +707,7 @@ většinu představených novinek pamatuju.&lt;/p&gt;
 17.00 hodin. Pokud máte chuť, můžete celou událost &lt;a href=&quot;https://www.elastic.co/live/v6?elektra=home&amp;amp;storm=banner&quot;&gt;sledovat
 online&lt;/a&gt;.&lt;/p&gt;
 
-&lt;figure&gt;
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
 &lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-12-01-elasticsearch-60-se-blizi__1.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2017-12-01-elasticsearch-60-se-blizi__1.jpg 1x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-12-01-elasticsearch-60-se-blizi__1.jpg 2x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2017-12-01-elasticsearch-60-se-blizi__1.jpg 3x&quot; /&gt;
@@ -806,7 +806,7 @@ proč jsem od ní nakonec upustil a vrhl se na programování.&lt;/p&gt;
 nejvíce postřehů, které se snad zcela neutonou v poněkud krkolomném
 slohu.&lt;/p&gt;
 
-&lt;figure&gt;
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
 &lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-11-10-ohlednuti-ex-vedce__1.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2017-11-10-ohlednuti-ex-vedce__1.jpg 1x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-11-10-ohlednuti-ex-vedce__1.jpg 2x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2017-11-10-ohlednuti-ex-vedce__1.jpg 3x&quot; /&gt;
@@ -1085,7 +1085,7 @@ novými kolegy mi ukázaly kvality tohoto týmu:&lt;/p&gt;
 &lt;p&gt;1) Umíme se i bavit a jsme vynalézaví. Umíme zpívat a hrát písničky, k čemu nám
 stačí ukulele, celofán, lžíce, kamení a kelímek.&lt;/p&gt;
 
-&lt;figure&gt;
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
 &lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__1.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__1.jpg 1x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__1.jpg 2x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__1.jpg 3x&quot; /&gt;
@@ -1104,7 +1104,7 @@ stačí ukulele, celofán, lžíce, kamení a kelímek.&lt;/p&gt;
 
 &lt;p&gt;7) Umíme najít kompromis: “Jděte pěšky, my jedeme busem. Sejdeme se na ubikaci.”&lt;/p&gt;
 
-&lt;figure&gt;
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
 &lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__2.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__2.jpg 1x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__2.jpg 2x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__2.jpg 3x&quot; /&gt;
@@ -1115,7 +1115,7 @@ stačí ukulele, celofán, lžíce, kamení a kelímek.&lt;/p&gt;
 
 &lt;p&gt;9) Jsme tým a umíme si podat pomocnou ruku, např. abychom pomohli kolegovi překonat potok suchou nohou po větvi stojíc po kotníky ve vodě.&lt;/p&gt;
 
-&lt;figure&gt;
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
 &lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__3.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__3.jpg 1x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__3.jpg 2x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__3.jpg 3x&quot; /&gt;
@@ -1138,7 +1138,7 @@ stačí ukulele, celofán, lžíce, kamení a kelímek.&lt;/p&gt;
 
 &lt;p&gt;17) Jsme dobrými architekty, umíme naskládat dříví pro opravdu krásný oheň.&lt;/p&gt;
 
-&lt;figure&gt;
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
 &lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__4.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__4.jpg 1x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__4.jpg 2x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__4.jpg 3x&quot; /&gt;
@@ -1152,7 +1152,7 @@ odpoledne, kdy jsem se vlakem vybrali do Českých Budějovic, do neděle
 oběda, kdy jsme se živí a zdraví vrátili zpátky do
 Prahy. &lt;/p&gt;
 
-&lt;figure&gt;
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
 &lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__5.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__5.jpg 1x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__5.jpg 2x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__5.jpg 3x&quot; /&gt;
@@ -1176,7 +1176,7 @@ mohli najíst a doplnit těkutiny. Potěšil nás hospodský, který nám
 natočil pivo a naservíroval utopence tři hodiny před vlastní
 otvíračkou.&lt;/p&gt;
 
-&lt;figure&gt;
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
 &lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__6.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__6.jpg 1x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__6.jpg 2x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__6.jpg 3x&quot; /&gt;
@@ -1191,7 +1191,7 @@ za divokou přírodou nemusíme na safari. Kluci ve městě se vydali hledat
 adrenalin na sídliště Máj. Svoji misi si zpříjemnili plněním svých
 přání. &lt;/p&gt;
 
-&lt;figure&gt;
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
 &lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__7.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__7.jpg 1x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__7.jpg 2x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__7.jpg 3x&quot; /&gt;
@@ -1204,7 +1204,7 @@ povídat. U ZOO jsme si dali obídek a oslavili Robinovo narozeniny. Na
 námestí jsme si v pivovaru u pivka procvičili mozkové buňky Logikem a
 Scrabblem. &lt;/p&gt;
 
-&lt;figure&gt;
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
 &lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__8.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__8.jpg 1x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__8.jpg 2x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2017-09-22-fraga-akce-aneb-kluci-na-vylete__8.jpg 3x&quot; /&gt;
@@ -1226,7 +1226,7 @@ ukazovat a bude je možné měnit, backend ideálně v Pythonu a jako datové
 od uživatelského konce, tedy od
 klienta.&lt;/p&gt;
 
-&lt;figure&gt;
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
 &lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-07-03-jahoda-malina-sloni-hadi-flandera__1.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2017-07-03-jahoda-malina-sloni-hadi-flandera__1.jpg 1x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-07-03-jahoda-malina-sloni-hadi-flandera__1.jpg 2x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2017-07-03-jahoda-malina-sloni-hadi-flandera__1.jpg 3x&quot; /&gt;
@@ -1539,7 +1539,7 @@ prožitek, ale hlavně to setsakra dobře vypadá.&lt;/p&gt;</content><author><n
 package and publish it to npm
 repository.&lt;/p&gt;
 
-&lt;figure&gt;
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
 &lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-06-26-npm-packages-101-creating-npm-package__1.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2017-06-26-npm-packages-101-creating-npm-package__1.jpg 1x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2017-06-26-npm-packages-101-creating-npm-package__1.jpg 2x,
         https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2017-06-26-npm-packages-101-creating-npm-package__1.jpg 3x&quot; /&gt;

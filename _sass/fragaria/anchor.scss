@@ -1,5 +1,4 @@
 @mixin anchorStyle($emphasize: false) {
-    font-family: getFontFamily($headingtype);
     font-weight: bold;
     text-decoration: underline;
 
@@ -13,5 +12,6 @@
 }
 
 .anchor--emphasized {
+    font-family: getFontFamily($headingtype);
     @include anchorStyle(true);
 }

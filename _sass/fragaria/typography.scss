@@ -324,13 +324,10 @@ a {
     padding-top: 2rem;
   }
 
-  // Code block.
-  code, pre {
+  // Code blocks
+  pre.highlight {
     background-color: $code-background-color;
     font-family: getFontFamily($monospacetype);
-  }
-
-  pre {
     display: block;
     margin-bottom: 2rem;
     padding: 1rem;
@@ -338,12 +335,39 @@ a {
     white-space: pre-wrap;
     word-break: break-all;
     word-wrap: break-word;
+    line-height: 1rem;
+
+    code {
+      @include fontsize(iota, all);
+    }
   }
 
   code {
-    @include fontsize(theta, all);
+    font-family: getFontFamily($monospacetype);
+    background-color: $code-background-color;
+    white-space: pre;
+  }
 
+  // Code block
+  figure.highlight {
+    margin-bottom: 2rem;
+    background-color: $code-background-color;
+    overflow-x: scroll;
     line-height: 1rem;
+    font-family: getFontFamily($monospacetype);
+
+    code {
+      @include fontsize(iota, all);
+      @include codeHighlight();
+
+      display: inline-block;
+      padding: 1rem;
+    }
+  }
+
+  // Inline code
+  code.highlighter-rouge {
+    padding: 0 .2em;
   }
 
   // Letter space those capitals people, Jan Tschichold would be proud.

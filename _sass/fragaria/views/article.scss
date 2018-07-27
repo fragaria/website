@@ -54,6 +54,17 @@ $article-content-width: 40rem;
         @include anchorStyle(true);
     }
 
+    // basic image
+    // todo: align to baseline somehow?
+    figure:not(.highlight) {
+        text-align: center;
+
+        figcaption {
+            font-weight: bold;
+            @include sassline(theta, $bodytype, $lineheight: 2, $below: 2, $breakpoint: all);
+        }
+    }
+
     .inline-figure-container {
         display: flex;
         justify-content: space-around;

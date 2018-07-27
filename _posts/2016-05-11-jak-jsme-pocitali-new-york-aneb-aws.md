@@ -10,7 +10,7 @@ tags:
 - aws
 - lambda
 modified_time: '2016-05-11T12:21:35.046+02:00'
-thumbnail: https://1.bp.blogspot.com/-ZDoiwaABWB4/VyG6FPrAERI/AAAAAAAAAEk/hrMuWaXZmFAxrpgE73TwMejBvXp5l8esACLcB/s72-c/poll.jpg
+cloudinary_src: posts/2016-05-11-jak-jsme-pocitali-new-york-aneb-aws__1.jpg
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-7389964546885819327
 blogger_orig_url: http://blog.fragaria.cz/2016/05/jak-jsme-pocitali-new-york-aneb-aws.html
 ---
@@ -58,10 +58,7 @@ Vision](https://github.com/creatale/node-fv), které nám umožnily
 zpracovávat lístky v následujícím
 formátu:
 
-|                                                                                                                                                                                                                                                |
-| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| [![](https://1.bp.blogspot.com/-ZDoiwaABWB4/VyG6FPrAERI/AAAAAAAAAEk/hrMuWaXZmFAxrpgE73TwMejBvXp5l8esACLcB/s640/poll.jpg)](https://1.bp.blogspot.com/-ZDoiwaABWB4/VyG6FPrAERI/AAAAAAAAAEk/hrMuWaXZmFAxrpgE73TwMejBvXp5l8esACLcB/s1600/poll.jpg) |
-|                                                                                                    Velmi neoptimalizovaný testovací lístek                                                                                                     |
+{% include figure.html cloudinary_src='posts/2016-05-11-jak-jsme-pocitali-new-york-aneb-aws__1.jpg' caption='Velmi neoptimalizovaný testovací lístek' %}
 
 Trojice QR kódů nám umožní každý sken zorientovat (klasická translace,
 rotace a scaling) a zároveň určuje, co za hlasování daný papírový lístek
@@ -76,11 +73,9 @@ dostatečně rychle plnit. Událostí, které spouští Lambda funkci, může
 být celá řada, a jednou z nich je i nahrání obrázku do bucketu na S3.
 Takže už nám chybí jenom sada vysokorychlostních skenerů...
 
-> [@Fragariacz](https://twitter.com/Fragariacz) I papir umime
-> [pic.twitter.com/xb3aY7FEF3](https://t.co/xb3aY7FEF3)
-> 
-> — Pavel Vojacek (@pavel\_mxsf)
-> [April 2, 2016](https://twitter.com/pavel_mxsf/status/716067794312413185)
+<blockquote class="twitter-tweet" data-lang="en"><p lang="pt" dir="ltr"><a href="https://twitter.com/Fragariacz?ref_src=twsrc%5Etfw">@Fragariacz</a> I papir umime <a href="https://t.co/xb3aY7FEF3">pic.twitter.com/xb3aY7FEF3</a></p>&mdash; Pavel Vojacek (@pavel_mxsf) <a href="https://twitter.com/pavel_mxsf/status/716067794312413185?ref_src=twsrc%5Etfw">April 2, 2016</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 
 Video není propagační materiál, ale opravdový provoz v průběhu
 hlasování. Díky téhle rychlosti a svižnému internetu jsme všech téměř
@@ -100,7 +95,7 @@ ruční dočištění, drobnou část souborů jsme rozpoznáváním prohnali
 znovu s trochu jiným nastavením, a bylo
 hotovo.
 
-[![](https://4.bp.blogspot.com/-diOGr2uAVwk/VyBsz4AhGwI/AAAAAAAAAEU/uD7CFFAkEOka8Q5xob5D0Yc8fw_E_43SwCLcB/s640/lambda-invocations.png)](https://4.bp.blogspot.com/-diOGr2uAVwk/VyBsz4AhGwI/AAAAAAAAAEU/uD7CFFAkEOka8Q5xob5D0Yc8fw_E_43SwCLcB/s1600/lambda-invocations.png)
+{% include figure.html cloudinary_src='posts/2016-05-11-jak-jsme-pocitali-new-york-aneb-aws__2.png' caption='Velmi neoptimalizovaný testovací lístek' %}
 
 Pro tento typ nárazových a nesynchronních úloh je tedy AWS Lambda
 naprosto ideálním řešením, a to i přes to, že teoreticky máte k

@@ -8,7 +8,7 @@ tags:
 - kancl
 - fragaria
 modified_time: '2017-02-15T10:48:09.566+01:00'
-thumbnail: https://2.bp.blogspot.com/-cUT8zbYe1ac/WKQjPWSXZgI/AAAAAAAAAz4/u4CGMr2XCrsjSdcvjE48asBuW3AHMIdKQCLcB/s72-c/uvrpmz1atvg-markus-spiske.jpg
+cloudinary_src: posts/2017-02-15-pondelni-stripky-z-1322017__1.jpg
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-5311544707190608917
 blogger_orig_url: http://blog.fragaria.cz/2017/02/pondelni-stripky-z-1322017.html
 ---
@@ -29,7 +29,7 @@ vyvrknutý kotník. Interní směrnice se rozšiřuje i na saně, boby a
 podobné rizikové
 sporty.
 
-[![](https://2.bp.blogspot.com/-cUT8zbYe1ac/WKQjPWSXZgI/AAAAAAAAAz4/u4CGMr2XCrsjSdcvjE48asBuW3AHMIdKQCLcB/s400/uvrpmz1atvg-markus-spiske.jpg)](https://2.bp.blogspot.com/-cUT8zbYe1ac/WKQjPWSXZgI/AAAAAAAAAz4/u4CGMr2XCrsjSdcvjE48asBuW3AHMIdKQCLcB/s1600/uvrpmz1atvg-markus-spiske.jpg)
+{% include figure.html cloudinary_src='posts/2017-02-15-pondelni-stripky-z-1322017__1.jpg' %}
 
 Průběžně posilujeme náš tým o nové šikuly, i přesto bychom rádi
 [rozšířili naše řady](http://kariera.fragaria.cz/) o další vývojářské
@@ -54,7 +54,7 @@ budeme renovovat kancly, už je to dost ostuda, jak to u nás vypadá a
 hlavně ... budeme mít konečně
 bar\!
 
-[![](https://2.bp.blogspot.com/-rYfo3naXKjE/WJrpSnINJQI/AAAAAAAAOUk/Q5erTE5FnGEeVCOC0apB_AOUjO3yM9dCQCLcB/s320/dasdfsafsda.png)](https://2.bp.blogspot.com/-rYfo3naXKjE/WJrpSnINJQI/AAAAAAAAOUk/Q5erTE5FnGEeVCOC0apB_AOUjO3yM9dCQCLcB/s1600/dasdfsafsda.png)
+{% include figure.html cloudinary_src='posts/2017-02-15-pondelni-stripky-z-1322017__2.png' %}
 
 ### Naše projekty
 

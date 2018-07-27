@@ -7,7 +7,7 @@ tags:
 - kancl
 - fragaria
 modified_time: '2017-01-03T16:39:15.343+01:00'
-thumbnail: https://3.bp.blogspot.com/-V57Mm-PCJ_8/V4T9lbZlt8I/AAAAAAAAJnU/-f-707dVjGgHUB8l2FQKeqIS8TCb_A8qACLcB/s72-c/20160418_174056.jpg
+cloudinary_src: posts/2016-07-12-co-je-u-nas-noveho__1.jpg
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-4503422953016299503
 blogger_orig_url: http://blog.fragaria.cz/2016/07/co-je-u-nas-noveho.html
 ---
@@ -22,7 +22,7 @@ Máme nového android developera Milana, který do našeho kritického
 kolektivu s důrazem na docházku do Šumavy okamžitě
 zapadl.
 
-[![](https://3.bp.blogspot.com/-V57Mm-PCJ_8/V4T9lbZlt8I/AAAAAAAAJnU/-f-707dVjGgHUB8l2FQKeqIS8TCb_A8qACLcB/s320/20160418_174056.jpg)](https://3.bp.blogspot.com/-V57Mm-PCJ_8/V4T9lbZlt8I/AAAAAAAAJnU/-f-707dVjGgHUB8l2FQKeqIS8TCb_A8qACLcB/s1600/20160418_174056.jpg)
+{% include figure.html cloudinary_src='posts/2016-07-12-co-je-u-nas-noveho__1.jpg' %}
 
 Nějaký Milan nám v týmu delší čas chyběl a máme tedy radost, že jsme
 zase "kompletní". Tímto pozdravuji Milana Majera a přeji mu hodně zdaru

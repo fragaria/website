@@ -9,7 +9,7 @@ tags:
 - e-government
 - x-road
 modified_time: '2017-02-01T11:44:29.168+01:00'
-thumbnail: https://3.bp.blogspot.com/-B88YnISDZVI/WHYcJLphBoI/AAAAAAAAAvU/g2x1ZliPk1AOb6VquNGZd-0qdKvLeJo2wCLcB/s72-c/e-res-id-card.jpg
+cloudinary_src: posts/2017-01-11-exkurze-do-estonskeho-digitalniho-statu__1.jpg
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-2297671821493286568
 blogger_orig_url: http://blog.fragaria.cz/2017/01/exkurze-do-estonskeho-digitalniho-statu.html
 ---
@@ -38,7 +38,7 @@ období](http://www.lupa.cz/clanky/system-pro-eet-s-podminkou-zavislost-na-ibm-m
 ani se
 nezadýchá\!
 
-[![](https://3.bp.blogspot.com/-B88YnISDZVI/WHYcJLphBoI/AAAAAAAAAvU/g2x1ZliPk1AOb6VquNGZd-0qdKvLeJo2wCLcB/s320/e-res-id-card.jpg)](https://3.bp.blogspot.com/-B88YnISDZVI/WHYcJLphBoI/AAAAAAAAAvU/g2x1ZliPk1AOb6VquNGZd-0qdKvLeJo2wCLcB/s1600/e-res-id-card.jpg)
+{% include figure.html cloudinary_src='posts/2017-01-11-exkurze-do-estonskeho-digitalniho-statu__1.jpg' %}
 
 Dotkli jsme se také čerstvého
 programu [e-Residency](https://e-estonia.com/e-residents/about/), který
@@ -92,10 +92,7 @@ Díky těmto serverům je pak možné používat jako komunikační síť normá
 internet a ne nějakou podivnou privátní
 zběsilost.
 
-|                                                                                                                                                                                                                                                                                                    |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| [![](https://3.bp.blogspot.com/-dmVbbqawtQk/WGqfLtmDZVI/AAAAAAAAAWo/aUdGgl7hfNcCRr5F0KYd4shpyhNyfV3xgCLcB/s640/Screenshot_2017-01-02_19-42-37.png)](https://3.bp.blogspot.com/-dmVbbqawtQk/WGqfLtmDZVI/AAAAAAAAAWo/aUdGgl7hfNcCRr5F0KYd4shpyhNyfV3xgCLcB/s1600/Screenshot_2017-01-02_19-42-37.png) |
-|                                                                                                                                  X-Road vypadá fakt jednoduše...                                                                                                                                   |
+{% include figure.html cloudinary_src='posts/2017-01-11-exkurze-do-estonskeho-digitalniho-statu__2.png' caption='X-Road vypadá fakt jednoduše...' %}
 
 Jako bonus nabízí tato architektura vcelku jednoduché propojování více
 X-Roadů dohromady. Když totiž vezmete dvě infrastruktury z obrázku výše
@@ -143,10 +140,7 @@ zjištěných údajů a potvrzení, že vše souhlasí. Když máte přeplatek,
 stát vám ho vrátí do pěti dnů. Inu, proč
 ne...
 
-|                                                                                                                                                                                                                                                                                  |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| [![](https://4.bp.blogspot.com/-_ID1zhYkXE4/WE77UVgfg3I/AAAAAAAAARQ/l9KJkloLgu4tm1IVRo8FJ3O5flABrDEhgCLcB/s640/2016-12-09%2B14.23.19.jpg)](https://4.bp.blogspot.com/-_ID1zhYkXE4/WE77UVgfg3I/AAAAAAAAARQ/l9KJkloLgu4tm1IVRo8FJ3O5flABrDEhgCLcB/s1600/2016-12-09%2B14.23.19.jpg) |
-|                                                                                                     Jak rychle byste si zvykli na podání daňového přiznání po internetu vy?                                                                                                      |
+{% include figure.html cloudinary_src='posts/2017-01-11-exkurze-do-estonskeho-digitalniho-statu__3.jpg' caption='Jak rychle byste si zvykli na podání daňového přiznání po internetu vy?' %}
 
 Samozřejmě lze namítat, že státním organizacím tímto dávate neskutečně
 mocný šmírovací nástroj a kdokoliv se správnými oprávněními o vás dokáže

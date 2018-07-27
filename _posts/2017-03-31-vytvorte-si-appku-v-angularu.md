@@ -78,11 +78,13 @@ Po vytvoření prázdné aplikace si tak během pár minut můžete vytvořit
 appku, která bude vypadat na chlup stejně, jako ta nativní. Stačí
 například napsat:
 
-    <ion-header>
-        <ion-navbar>
-          <ion-title>Login</ion-title>
-        </ion-navbar>
-      </ion-header>
+{% highlight html %}
+<ion-header>
+    <ion-navbar>
+      <ion-title>Login</ion-title>
+    </ion-navbar>
+</ion-header>
+{% endhighlight %}
 
  a hned máte na stránce nativně vypadající již předstylovaný navbar.
 

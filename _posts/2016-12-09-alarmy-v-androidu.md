@@ -8,7 +8,7 @@ tags:
 - android
 - scheduler
 modified_time: '2016-12-09T10:49:12.606+01:00'
-thumbnail: https://4.bp.blogspot.com/-vEW67W0Rf4Q/WEp92ed7nDI/AAAAAAAAArk/u2A0ZCXRMDUsHkkxmKkcQc0ai33JqlzRgCLcB/s72-c/numbers-time-watch-white.jpg
+cloudinary_src: posts/2016-12-09-alarmy-v-androidu__1.jpg
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-4242630700744006367
 blogger_orig_url: http://blog.fragaria.cz/2016/12/alarmy-v-androidu.html
 ---
@@ -20,7 +20,7 @@ budoucnosti. A jak už to tak na Androidu bývá, nejedná se o mechanizmus
 jeden, ale hned
 několik.
 
-[![](https://4.bp.blogspot.com/-vEW67W0Rf4Q/WEp92ed7nDI/AAAAAAAAArk/u2A0ZCXRMDUsHkkxmKkcQc0ai33JqlzRgCLcB/s320/numbers-time-watch-white.jpg)](https://4.bp.blogspot.com/-vEW67W0Rf4Q/WEp92ed7nDI/AAAAAAAAArk/u2A0ZCXRMDUsHkkxmKkcQc0ai33JqlzRgCLcB/s1600/numbers-time-watch-white.jpg)
+{% include figure.html cloudinary_src='posts/2016-12-09-alarmy-v-androidu__1.jpg' %}
 
 ### K čemu alarmy?
 
@@ -123,13 +123,65 @@ doplnit o neefektivní mechanizmus založený na Alarm Manageru.
 
 Nejprve přidáme gradle závislost:
 
+{% highlight gradle %}
+compile 'com.firebase:firebase-jobdispatcher:0.5.0'
+{% endhighlight %}
+
 Vytvoříme vlastní službu:
+
+{% highlight java %}
+import com.firebase.jobdispatcher.JobParameters;
+import com.firebase.jobdispatcher.JobService;
+
+public class SmogService extends JobService {
+	@Override
+	public boolean onStartJob(JobParameters job) {
+		// Provést komunikaci se serverem a např. vyhodit notifikaci
+		return false;
+	}
+
+	@Override
+	public boolean onStopJob(JobParameters job) {
+		return false;
+	}
+}
+{% endhighlight %}
 
 Kterou zaregistrujeme do manifest.xml:
 
+{% highlight xml %}
+<service
+	android:exported="false"
+	android:name=".SmogService">
+	<intent-filter>
+		<action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE"/>"
+	</intent-filter>
+</service>
+{% endhighlight %}
+
 A nyní už to jen celé spustit:
 
+{% highlight java %}
+Int periodInSec = 10 * 60 // 10 minut perioda
+int windowStart =periodInSec - 60;
+int windowEnd = periodInSec + 60;
+Job job = dispatcher.newJobBuilder()
+	.setTag(JOB_TAG) // Označení jobu
+	.setService(SmogService.class) // Naše služba
+	.setRecurring(true) // Opakuj
+	.setLifetime(Lifetime.FOREVER) // Donekonečna, dokud není expicitně zastaveno
+	.setReplaceCurrent(true) // Přepiš job pokud již existuje
+	.setConstraints(Constraint.ON_ANY_NETWORK) // Je třeba připoení k internetu, jinak se nespustí
+	.setTrigger(Trigger.executionWindow(windowStart, windowEnd)) //Kdy se má spuštět
+	.build();
+dispatcher.mustSchedule(myJob); // Konečně spustit
+{% endhighlight %}
+
 A pokud bychom to chtěli vypnout:
+
+{% highlight java %}
+dispatcher.cancel(JOB_TAG);
+{% endhighlight %}
 
 ### Závěrem
 

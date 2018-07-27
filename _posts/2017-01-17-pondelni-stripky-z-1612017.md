@@ -11,7 +11,7 @@ tags:
 - elastic
 - uber
 modified_time: '2017-01-17T18:38:24.809+01:00'
-thumbnail: https://2.bp.blogspot.com/-Z7g5Nqp-dKg/WH5Vk0YokMI/AAAAAAAAAx8/Tc3BySqHbp0iAod_ohSQpt5IvSEINdgZQCPcB/s72-c/_ko52yozjtq-john-cobb.jpg
+cloudinary_src: posts/2017-01-17-pondelni-stripky-z-1612017__1.jpg
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-794134394114307598
 blogger_orig_url: http://blog.fragaria.cz/2017/01/pondelni-stripky-z-1612017.html
 ---
@@ -25,7 +25,7 @@ data](https://movement.uber.com/cities) o dopravě, která nasbíral za
 dobu svého
 fungování.
 
-[![](https://2.bp.blogspot.com/-Z7g5Nqp-dKg/WH5Vk0YokMI/AAAAAAAAAx8/Tc3BySqHbp0iAod_ohSQpt5IvSEINdgZQCPcB/s400/_ko52yozjtq-john-cobb.jpg)](https://2.bp.blogspot.com/-Z7g5Nqp-dKg/WH5Vk0YokMI/AAAAAAAAAx8/Tc3BySqHbp0iAod_ohSQpt5IvSEINdgZQCPcB/s1600/_ko52yozjtq-john-cobb.jpg)
+{% include figure.html cloudinary_src='posts/2017-01-17-pondelni-stripky-z-1612017__1.jpg' %}
 
 Zatím to vypadá, že budou přístupná pouze přes proprietární prohlížeč a
 nikoliv ve formě API. To nás trošku mrzí. Navíc máme obavy o to, zda
@@ -53,7 +53,7 @@ Ještě jedno bezpečnostní upozornění. Rozmohl se nám tady takový nešvar 
 lidé často vystavují na internety databáze a kašlou na
 bezpečnost.
 
-[![](https://3.bp.blogspot.com/-E5KFGs-Q3to/WH5WNxV35MI/AAAAAAAAAyA/Lxn_oe1qhdsBPshyPdWwhMRkZq8oz2KsgCLcB/s400/ocrpjce6gpk-vitaly.jpg)](https://3.bp.blogspot.com/-E5KFGs-Q3to/WH5WNxV35MI/AAAAAAAAAyA/Lxn_oe1qhdsBPshyPdWwhMRkZq8oz2KsgCLcB/s1600/ocrpjce6gpk-vitaly.jpg)
+{% include figure.html cloudinary_src='posts/2017-01-17-pondelni-stripky-z-1612017__1.jpg' %}
 
 Pak se nemůžou divit, že jim někdo zašifruje data a pak požaduje
 výkupné. Minulý týden to postihlo [více
@@ -78,7 +78,7 @@ bleskově přepínat mezi jenotlivými účty u GMailu a webového Outlooku. A
 to jak mail, tak kalendář a
 disk.
 
-<https://cdn3.tryshift.com/static/images/hero-animation@2x.gif?t=1484425476>
+{% include figure.html src='https://cdn3.tryshift.com/static/images/hero-animation@2x.gif?t=1484425476' %}
 
 Pro lidi, kteří jsou zvyklí používat primárně mail v prohlížeči to může
 být zajímavá alternativa ke spoustě otevřených záložek v prohlížeči.

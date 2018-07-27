@@ -8,7 +8,7 @@ tags:
 - estonsko
 - e-government
 modified_time: '2017-02-01T11:06:55.188+01:00'
-thumbnail: https://2.bp.blogspot.com/-qRSCwNBoN1Y/WJGzJ36yXwI/AAAAAAAAAzU/S1i9f-zUsfQNchsNjMtPokstMp2cnH4ugCLcB/s72-c/4ppzkfd6beg-patryk-gradys.jpg
+cloudinary_src: posts/2017-02-01-bude-se-nekdy-po-internetu-volit-i-v__1.jpg
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-1659312037260598960
 blogger_orig_url: http://blog.fragaria.cz/2017/02/bude-se-nekdy-po-internetu-volit-i-v.html
 ---
@@ -25,7 +25,7 @@ inspirovat v jediné zemi na světě, kde jsou již od roku 2005 volby po
 internetu celostátně právně uznávanou
 alternativou.
 
-[![](https://2.bp.blogspot.com/-qRSCwNBoN1Y/WJGzJ36yXwI/AAAAAAAAAzU/S1i9f-zUsfQNchsNjMtPokstMp2cnH4ugCLcB/s400/4ppzkfd6beg-patryk-gradys.jpg)](https://2.bp.blogspot.com/-qRSCwNBoN1Y/WJGzJ36yXwI/AAAAAAAAAzU/S1i9f-zUsfQNchsNjMtPokstMp2cnH4ugCLcB/s1600/4ppzkfd6beg-patryk-gradys.jpg)
+{% include figure.html cloudinary_src='posts/2017-02-01-bude-se-nekdy-po-internetu-volit-i-v__1.jpg' %}
 
 Skutečně, i přes snahy a pokusy například v
 [Norsku](http://www.bbc.com/news/technology-28055678),
@@ -41,10 +41,7 @@ státem vydávaná a po internetu ověřitelná jednotná identifikace voličů
 technické řešení volebního
 systému.
 
-|                                                                                                                                                                                                                                                                                                    |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| [![](https://4.bp.blogspot.com/-Btpi03HaShI/WJDeTgb2i4I/AAAAAAAAAaw/5DJ0FRvaOmIeqLe-H94AIRb-lt1QG8y5wCLcB/s640/Screenshot_2017-01-31_19-51-20.png)](https://4.bp.blogspot.com/-Btpi03HaShI/WJDeTgb2i4I/AAAAAAAAAaw/5DJ0FRvaOmIeqLe-H94AIRb-lt1QG8y5wCLcB/s1600/Screenshot_2017-01-31_19-51-20.png) |
-|                                                                                                               Jak moc důvěřujete volbám přes internet? Jak by to asi dopadlo u nás?                                                                                                                |
+{% include figure.html cloudinary_src='posts/2017-02-01-bude-se-nekdy-po-internetu-volit-i-v__2.png' caption='Jak moc důvěřujete volbám přes internet? Jak by to asi dopadlo u nás?' %}
 
 ## Volební proces
 
@@ -57,10 +54,8 @@ není vůbec težké jejich svět napojit na další systémy, ať registr voli�
 nebo software pro počítání
 hlasů.
 
-|                                                                                                                                                  |
-| :----------------------------------------------------------------------------------------------------------------------------------------------: |
-| <https://4.bp.blogspot.com/-5l4w_qQQMMc/WI4_LjAIIwI/AAAAAAAAAZ8/kxX8evJwVcc7HrZpynO1aBizAgAPKDHWQCLcB/s1600/RK2015_Haaletamisviisid_ENG_500.jpg> |
-|                           Volební období pro volby do národního parlamentu 2015 ([zdroj](http://www.vvk.ee/?lang=en))                            |
+{% include figure.html cloudinary_src='posts/2017-02-01-bude-se-nekdy-po-internetu-volit-i-v__3.jpg' caption='Volební období pro volby do národního parlamentu 2015 <a href="http://www.vvk.ee?lang=en">zdroj</a>' %}
+
 
 Samotné období voleb vždy běží delší čas a je završené volební nedělí.
 Volení po internetu je možné pouze v několika prvních dnech, a vyznačuje
@@ -73,10 +68,7 @@ držel pistoli u hlavy, pořád máte možnost jít za plentu a hlasovat tak,
 jak vám velí
 svědomí.
 
-|                                                                                                                                                                                                                                                                                                    |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| [![](https://3.bp.blogspot.com/-CVQ5BoMKXQI/WJDeTaU11zI/AAAAAAAAAas/wGm33kzMH6k04682c1djLdGRoavTpriXgCLcB/s640/Screenshot_2017-01-31_19-49-18.png)](https://3.bp.blogspot.com/-CVQ5BoMKXQI/WJDeTaU11zI/AAAAAAAAAas/wGm33kzMH6k04682c1djLdGRoavTpriXgCLcB/s1600/Screenshot_2017-01-31_19-49-18.png) |
-|                                                                                                                            Změnit svůj hlas můžete, ale málokdo to dělá                                                                                                                            |
+{% include figure.html cloudinary_src='posts/2017-02-01-bude-se-nekdy-po-internetu-volit-i-v__4.png' caption='Změnit svůj hlas můžete, ale málokdo to dělá' %}
 
 Ve dnech označných na obrázku jako *No voting*, se shromažďují dosavadní
 papírové hlasy a případně se jimi přebíjí ty elektronické. Zároveň jde o
@@ -115,10 +107,7 @@ asymetrická kryptografie, která v podstatě simuluje dvojobálkové schéma
 používané u korespondenčních
 voleb.
 
-|                                                                                                                                                                       |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| <https://2.bp.blogspot.com/-m3xmaVpue9s/WI5Mhv8FsBI/AAAAAAAAAaM/fdVb88bOqDcMCyB9OpK48hXdGzE25QzrgCLcB/s1600/Fig-2-Double-envelope-system-used-in-Internet-Voting.png> |
-|    Dvě obálky, a co se s nimi potom děje ([zdroj](https://www.researchgate.net/publication/281348221_Internet_Voting_Experiences_From_Five_Elections_in_Estonia))     |
+{% include figure.html cloudinary_src='posts/2017-02-01-bude-se-nekdy-po-internetu-volit-i-v__5.png' caption='Dvě obálky, a co se s nimi potom děje <a href="https://www.researchgate.net/publication/281348221_Internet_Voting_Experiences_From_Five_Elections_in_Estonia">zdroj</a>' %}
 
 Každé volby mají unikátní volební klíč. Veřejná část klíče je ve volební
 aplikaci u voliče. Privátní část klíče je fyzicky rozdělená mezi členy
@@ -161,10 +150,7 @@ všech odevzdaných hlasů. Naopak se nijak nepotvrdilo původní očekávání,
 obyvatel, které se voleb tradičně
 neúčastní.
 
-|                                                                                                                                                                                                                                                                                                    |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| [![](https://2.bp.blogspot.com/-QHkXQ2b1p6U/WJDeTRjYBRI/AAAAAAAAAa0/NvFcJpyHE-wiI4SQFnDBJ5EnU-gWDkvrQCLcB/s640/Screenshot_2017-01-31_19-48-04.png)](https://2.bp.blogspot.com/-QHkXQ2b1p6U/WJDeTRjYBRI/AAAAAAAAAa0/NvFcJpyHE-wiI4SQFnDBJ5EnU-gWDkvrQCLcB/s1600/Screenshot_2017-01-31_19-48-04.png) |
-|                                                                                                                      Po internetu volí celá rodina - včetně babiček a děděčků                                                                                                                      |
+{% include figure.html cloudinary_src='posts/2017-02-01-bude-se-nekdy-po-internetu-volit-i-v__6.png' caption='Po internetu volí celá rodina - včetně babiček a děděčků' %}
 
 Ostatně i samotní estonští představitelé říkají, že není jejich cílem
 klasické hlasování vymýtit, chtějí pouze nabídnout další alternativu pro
@@ -207,10 +193,7 @@ bez internetového hlasování, a je tak otázkou, jestli by online
 hlasování bylo zhoršením nebo zlepšením současného
 stavu.
 
-|                                                                                                                                                                                                                                                                                                    |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| [![](https://1.bp.blogspot.com/-3S3Tg2Gpios/WJDeT33NiXI/AAAAAAAAAa4/5eWw2EBpiHkpgHZJ94zpe5CUf8JxGS58wCLcB/s640/Screenshot_2017-01-31_19-54-03.png)](https://1.bp.blogspot.com/-3S3Tg2Gpios/WJDeT33NiXI/AAAAAAAAAa4/5eWw2EBpiHkpgHZJ94zpe5CUf8JxGS58wCLcB/s1600/Screenshot_2017-01-31_19-54-03.png) |
-|                                                                                                                       Podíl internetového hlasování parkticky neustále roste                                                                                                                       |
+{% include figure.html cloudinary_src='posts/2017-02-01-bude-se-nekdy-po-internetu-volit-i-v__7.png' caption='Podíl internetového hlasování parkticky neustále roste' %}
 
 Ani v Estonsku není snahou volit pouze po internetu, všichni si rizika
 uvědomují, proto stále zůstává hlavním pilířem volebního systému
@@ -219,7 +202,8 @@ v zahraničí a s vědomím  všech rizik je to docela fajn věc. Dokonce si
 toho všimla i topící
 se [TOP 09](http://www.top09.cz/files/soubory/vize-cr-2030-uspesna-zeme-odolna-spolecnost_1696.pdf).
 Tak si to třeba v roce 2030 vyzkoušíme i v těch Kotěhůlkách.
-**
+
+
 *Poznámka: Další zkušenosti a informace může zvídavý čtenář načerpat
 v [této
 publikaci](http://skytte.ut.ee/sites/default/files/skytte/e_voting_in_estonia_vassil_solvak_a5_web.pdf),

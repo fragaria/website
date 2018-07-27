@@ -7,7 +7,7 @@ tags:
 - elasticsearch
 - elastic
 modified_time: '2016-05-09T13:45:20.616+02:00'
-thumbnail: https://3.bp.blogspot.com/-TeWaNwTl41E/Vxnz4uVgZII/AAAAAAAAHzw/l7U3NOIjPSsEFtSjY49q62mW2U_McOiUQCLcB/s72-c/20160318_085008.jpg
+cloudinary_src: posts/2016-05-09-fragaria-elastic__1.jpg
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-5689473220486716795
 blogger_orig_url: http://blog.fragaria.cz/2016/05/fragaria-elastic.html
 ---
@@ -54,7 +54,7 @@ Liftago](http://blog.fragaria.cz/2016/02/jak-sobe-liftago-s-jistotou-privolati.h
 Elastic nás zásobuje spoustou parádních samolepek, které rádi rozdáváme
 dál.
 
-[![](https://3.bp.blogspot.com/-TeWaNwTl41E/Vxnz4uVgZII/AAAAAAAAHzw/l7U3NOIjPSsEFtSjY49q62mW2U_McOiUQCLcB/s320/20160318_085008.jpg)](https://3.bp.blogspot.com/-TeWaNwTl41E/Vxnz4uVgZII/AAAAAAAAHzw/l7U3NOIjPSsEFtSjY49q62mW2U_McOiUQCLcB/s1600/20160318_085008.jpg)
+{% include figure.html cloudinary_src='posts/2016-05-09-fragaria-elastic__1.jpg' %}
 
 [Přijďte si k nám](http://www.fragaria.cz/) pokecat o možnostech
 Elasticsearch a odneste si novou ozdobu na svůj notebook.

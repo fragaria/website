@@ -9,7 +9,7 @@ tags:
 - kalhoty
 - report-uri
 modified_time: '2017-01-24T13:52:17.028+01:00'
-thumbnail: https://1.bp.blogspot.com/-1m372N2IuQ0/WIcSzGbwS3I/AAAAAAAAAy0/bZurnIWrbeslkr0s8CKcUyTGlLtwo2FaQCLcB/s72-c/hy99meknjhm-sandis-helvigs.jpg
+cloudinary_src: posts/2017-01-24-pondelni-stripky-z-2312017__1.jpg
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-4405088734590585560
 blogger_orig_url: http://blog.fragaria.cz/2017/01/pondelni-stripky-z-2312017.html
 ---
@@ -40,8 +40,7 @@ Architekt a pěstitel Filip už přesně tuší, co na ní bude růst a Mates
 připravuje soutěž o zahrádkáře
 měsíce.
 
-[![](https://1.bp.blogspot.com/-1m372N2IuQ0/WIcSzGbwS3I/AAAAAAAAAy0/bZurnIWrbeslkr0s8CKcUyTGlLtwo2FaQCLcB/s400/hy99meknjhm-sandis-helvigs.jpg)](https://1.bp.blogspot.com/-1m372N2IuQ0/WIcSzGbwS3I/AAAAAAAAAy0/bZurnIWrbeslkr0s8CKcUyTGlLtwo2FaQCLcB/s1600/hy99meknjhm-sandis-helvigs.jpg)
-*Návrh našeho nového kanclu (vizualizace)*
+{% include figure.html cloudinary_src='posts/2017-01-24-pondelni-stripky-z-2312017__1.jpg' caption='Návrh našeho nového kanclu (vizualizace)' %}
 
 ### Observables, RxJS a AngularJS 2.0
 

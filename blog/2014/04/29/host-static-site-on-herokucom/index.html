@@ -9,7 +9,7 @@
     <title>Host a static site on heroku.com  | fragaria.cz</title>
     <meta name="author" content="Fragaria s.r.o." />
     <meta name="robots" content="index,follow" />
-    <meta name="description" content="Recently I needed to publish a simple HTML / CSS / JS GUI prototypeapplication for our client. Just for them to see how it would look likewith basic workflow.So I asked our administrator where should I put it. He told me thatdespite of it’s very easy to have some Apache running on our virtual, wedidn’t have something like tha...">
+    <meta name="description" content="Recently I needed to publish a simple HTML / CSS / JS GUI prototypeapplication for our client. Just for them to see how it would look likewith basic workflow.">
     <meta name="keywords" content="fragaria, software, vývoj software, webové aplikace, python, javascript, angular, elasticsearch, html, css, heroku, publish site without hosting, static site, deployment" />
     <!-- Favicons -->
     
@@ -17,7 +17,7 @@
     <meta property="og:url"           content="https://fragaria.cz/website/blog/2014/04/29/host-static-site-on-herokucom/" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Host a static site on heroku.com  | fragaria.cz" />
-    <meta property="og:description"   content="Recently I needed to publish a simple HTML / CSS / JS GUI prototypeapplication for our client. Just for them to see how it would look likewith basic workflow.So I asked our administrator where should I put it. He told me thatdespite of it’s very easy to have some Apache running on our virtual, wedidn’t have something like tha..." />
+    <meta property="og:description"   content="Recently I needed to publish a simple HTML / CSS / JS GUI prototypeapplication for our client. Just for them to see how it would look likewith basic workflow." />
 
     
         <meta property="og:image"         content="" />
@@ -87,8 +87,9 @@
             <div class="article__content">
                 <p>Recently I needed to publish a simple HTML / CSS / JS GUI prototype
 application for our client. Just for them to see how it would look like
-with basic workflow.
-So I asked our administrator where should I put it. He told me that
+with basic workflow.</p>
+
+<p>So I asked our administrator where should I put it. He told me that
 despite of it’s very easy to have some Apache running on our virtual, we
 didn’t have something like that because there’s no need for it.</p>
 
@@ -96,8 +97,9 @@ didn’t have something like that because there’s no need for it.</p>
 <a href="http://heroku.com/">heroku.com</a> provides free app hosting with full git
 support for projects based on all modern technologies. So I created my
 account, added my app, cloned the project and pushed my HTML site to
-heroku.
-I expected heroku will magically consider my app to be HTML site and
+heroku.</p>
+
+<p>I expected heroku will magically consider my app to be HTML site and
 create apache server for it. But when I tried to push it, heroku
 replied: “Push rejected, no Cedar-supported app detected”. Heroku also
 thinks that nobody needs it.</p>
@@ -106,10 +108,13 @@ thinks that nobody needs it.</p>
 fool heroku a bit - mimic a php application by simply create empty
 index.php file:</p>
 
-<p><code class="highlighter-rouge">touch index.php </code>
-`  `and turn php engine on apache off:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>touch index.php
+</code></pre></div></div>
 
-<p><code class="highlighter-rouge">echo 'php_flag engine off' &gt; .htaccess</code></p>
+<p>and turn php engine on apache off:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo 'php_flag engine off' &gt; .htaccess
+</code></pre></div></div>
 
 <p>When you add these two files to the app you have static site hosted on
 heroku.com.</p>

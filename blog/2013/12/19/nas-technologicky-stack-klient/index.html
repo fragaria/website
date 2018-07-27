@@ -132,14 +132,11 @@ ukecaný.
 <a href="http://coffeescript.org/">Coffescript</a> je něco jako Groovy pro Javu.
 Konečně můžu napsat:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for x in [1, 2, 3]:
- console.log("Number: #{x}")
-</code></pre></div></div>
+<figure class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="k">for</span> <span class="nx">x</span> <span class="k">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span><span class="o">:</span>
+    <span class="nx">console</span><span class="p">.</span><span class="na">log</span><span class="p">(</span><span class="s">"Number: </span><span class="si">#{</span><span class="nx">x</span><span class="si">}</span><span class="s">"</span><span class="p">)</span></code></pre></figure>
 
-<p>a nemusím počítat indexy pole jak trotl.</p>
-
-<p>Tohle je samozřejmě jen jedna z výhod Coffeescriptu, je jich ještě
-záhon.</p>
+<p>a nemusím počítat indexy pole jak trotl. Tohle je samozřejmě jen jedna z výhod
+Coffeescriptu, je jich ještě záhon.</p>
 
 <p>Na druhou stranu, nešikovný “bastlič” dokáže v Coffeescriptu kód dost
 zašmodrchat. Ale to platí asi ve všech jazycích.</p>
@@ -168,13 +165,12 @@ bower install angular
 
 <p>a závislosti se ukládají do <code class="highlighter-rouge">bower.json</code> v pěkně čitelné podobě:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"dependencies": {
-    "angular": "v1.2.0-rc.2",
-    "bootstrap": "v3.0.0",
-    "jquery": "~2.0.3",
-    "jquery-ui": "~1.10.3"
-}
-</code></pre></div></div>
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="s2">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"angular"</span><span class="p">:</span><span class="w"> </span><span class="s2">"v1.2.0-rc.2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"bootstrap"</span><span class="p">:</span><span class="w"> </span><span class="s2">"v3.0.0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"jquery"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~2.0.3"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"jquery-ui"</span><span class="p">:</span><span class="w"> </span><span class="s2">"~1.10.3"</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
 
 <p>No a Grunt pěkně zkompiluje Coffeescripty do Javascriptů, prožene je
 testy, zmenší je, z LESS souborů udělá CSS soubory a vůbec připraví

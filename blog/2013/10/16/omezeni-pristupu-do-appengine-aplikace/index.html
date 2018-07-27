@@ -101,20 +101,80 @@ přihlášení uživatele – omezení na Google Apps domény je pro nás OK.</p
 
 <p>Postup, který jsme používali dosud je podobný jako například v <a href="http://blog.abahgat.com/2013/01/07/user-authentication-with-webapp2-on-google-app-engine/">tomto
 článku</a>.
-Připravíme si anotaci <strong>@user_required</strong>, která zkontroluje uživatele a
+Připravíme si anotaci <code class="highlighter-rouge">@user_required</code>, která zkontroluje uživatele a
 tu “nalepíme” na všechny metody příslušných HTTP handlerů. To ale
 znamená, že máme anotace rozeseté všude a je snadné jí někde
 zapomenout.</p>
 
 <p>Dneska <a href="https://plus.google.com/115351013889485284951">+Robin Gottfried</a>
 přišel s mnohem elegantnějším řešením.
-Využívá metodu <strong>__call__()</strong> z webapp2, přes kterou procházejí
+Využívá metodu <code class="highlighter-rouge">__call__()</code> z webapp2, přes kterou procházejí
 všechny requesty v aplikaci a kontrolu dělá tam.</p>
 
 <p>Asi takhle:</p>
 
-<p>Samozřejmě je nutné místo standardní <strong>WSGIApplication</strong>  použít vlastní
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">utils</span> <span class="kn">import</span> <span class="n">SecureApplication</span>
+
+<span class="n">routes</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="s">'/route1'</span><span class="p">,</span> <span class="s">'app.views.view1'</span><span class="p">),</span>
+<span class="p">)</span>
+
+<span class="n">handler</span> <span class="o">=</span> <span class="n">SecureApplication</span><span class="p">(</span><span class="n">routes</span><span class="o">=</span><span class="n">routes</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="n">settings</span><span class="p">[</span><span class="s">'DEBUG'</span><span class="p">])</span></code></pre></figure>
+
+<p>Samozřejmě je nutné místo standardní <code class="highlighter-rouge">WSGIApplication</code>  použít vlastní
 podtřídu:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">google.appengine.api</span> <span class="kn">import</span> <span class="n">users</span>
+<span class="kn">from</span> <span class="nn">webapp2</span> <span class="kn">import</span> <span class="n">WSGIApplication</span>
+<span class="kn">from</span> <span class="nn">webob</span> <span class="kn">import</span> <span class="n">exc</span>
+
+<span class="k">class</span> <span class="nc">SecureApplication</span><span class="p">(</span><span class="n">WSGIApplication</span><span class="p">):</span>
+    <span class="s">""" WSGIApplication which checks if user belongs to one of allowed domains. """</span>
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">environ</span><span class="p">,</span> <span class="n">start_response</span><span class="p">):</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">'calling request as </span><span class="si">%</span><span class="s">s'</span> <span class="o">%</span> <span class="n">users</span><span class="o">.</span><span class="n">get_current_user</span><span class="p">())</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">request_context_class</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">environ</span><span class="p">)</span> <span class="k">as</span> <span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">authorize_user</span><span class="p">():</span>
+                    <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">SecureApplication</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__call__</span><span class="p">(</span><span class="n">environ</span><span class="p">,</span> <span class="n">start_response</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="n">exc</span><span class="o">.</span><span class="n">HTTPForbidden</span><span class="p">(</span><span class="n">detail</span><span class="o">=</span><span class="s">"User not allowed to access application!"</span><span class="p">)</span>
+            <span class="k">except</span> <span class="nb">Exception</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="c"># Try to handle it with a custom error handler.</span>
+                    <span class="n">rv</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handle_exception</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">rv</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                        <span class="n">response</span> <span class="o">=</span> <span class="n">rv</span>
+                <span class="k">except</span> <span class="n">exc</span><span class="o">.</span><span class="n">HTTPException</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
+                    <span class="c"># Use the HTTP exception as response.</span>
+                    <span class="n">response</span> <span class="o">=</span> <span class="n">e</span>
+                <span class="k">except</span> <span class="nb">Exception</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
+                    <span class="c"># Error wasn't handled so we have nothing else to do.</span>
+                    <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_internal_error</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">response</span><span class="p">(</span><span class="n">environ</span><span class="p">,</span> <span class="n">start_response</span><span class="p">)</span>
+            <span class="k">except</span> <span class="nb">Exception</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_internal_error</span><span class="p">(</span><span class="n">e</span><span class="p">)(</span><span class="n">environ</span><span class="p">,</span> <span class="n">start_response</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">authorize_user</span><span class="p">(</span><span class="n">allowed_domains</span><span class="p">):</span>
+    <span class="s">""" Checks if user is authorized to use the application. If user is not from one of allowed domains it returns
+    false."""</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">users</span><span class="o">.</span><span class="n">get_current_user</span><span class="p">()</span>
+    <span class="n">email_info</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">'@'</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">email_info</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s">'Cannot resolve domain for current user: </span><span class="si">%</span><span class="s">r'</span> <span class="o">%</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span><span class="p">())</span>
+        <span class="k">return</span> <span class="bp">False</span>
+
+    <span class="n">domain</span> <span class="o">=</span> <span class="n">email_info</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">domain</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">allowed_domains</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">False</span>
+
+    <span class="k">return</span> <span class="bp">True</span></code></pre></figure>
+
 
             </div>
         </div>

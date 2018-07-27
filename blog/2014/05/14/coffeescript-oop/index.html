@@ -99,16 +99,24 @@ vůbec nezkusila.</p>
 
 <p>Nejjednodušší třída vypadá takto:</p>
 
-<p>toString: () -&gt; … vytvoří metodu Person.prototype.toString.</p>
+<figure class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="k">class</span> <span class="nx">Person</span>
+    <span class="na">constructor</span><span class="o">:</span> <span class="p">(</span><span class="vi">@</span><span class="na">name</span><span class="p">)</span> <span class="o">-&gt;</span>
 
-<p> constructor: () … je speciální metoda konstruktoru objektu.</p>
+    <span class="na">toString</span><span class="o">:</span> <span class="o">-&gt;</span>
+        <span class="s">"člověk </span><span class="si">#{</span><span class="vi">@</span><span class="na">name</span><span class="si">}</span><span class="s">"</span>
 
-<p> @ … zavináč je nejdůležitější znak pro objekty v CS, takže:</p>
+
+<span class="nx">person</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s">"Jan Novák"</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="na">log</span> <span class="s">"%s"</span><span class="p">,</span> <span class="nx">person</span>
+<span class="c1">#&gt; člověk Jan Novák</span></code></pre></figure>
 
 <ul>
-  <li> @name … odkazuje na this.name.</li>
-  <li> (@name) -&gt; … zavináč v argumentu funkce zajistí automatické
-uložení do this.name před zavoláním metody.</li>
+  <li><code class="highlighter-rouge">toString: () -\&gt;</code> … vytvoří metodu Person.prototype.toString.</li>
+  <li><code class="highlighter-rouge">constructor: ()</code> … je speciální metoda konstruktoru objektu.</li>
+  <li><code class="highlighter-rouge">@</code> … zavináč je nejdůležitější znak pro objekty v CS, takže:</li>
+  <li> <code class="highlighter-rouge">@name</code> … odkazuje na <code class="highlighter-rouge">this.name</code>.</li>
+  <li> <code class="highlighter-rouge">(@name) -\&gt;</code> … zavináč v argumentu funkce zajistí automatické
+uložení do <code class="highlighter-rouge">this.name</code> před zavoláním metody.</li>
 </ul>
 
 <h3 id="statické-metody--properties">Statické metody / properties</h3>
@@ -116,34 +124,60 @@ uložení do this.name před zavoláním metody.</li>
 <p>Ke třídám patří statické metody. Jako vše kolem kafe-objektů i statické
 vlastnosti se zapisují pomocí zavináče</p>
 
+<figure class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="k">class</span> <span class="nx">Person</span>
+    <span class="c1"># ...</span>
+
+    <span class="vi">@</span><span class="na">fromNames</span><span class="o">:</span> <span class="p">(</span><span class="nx">names</span><span class="p">)</span> <span class="o">-&gt;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="k">new</span> <span class="err">@</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="k">for</span> <span class="nx">name</span> <span class="k">in</span> <span class="nx">names</span><span class="p">)</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="na">log</span> <span class="s">"%s"</span><span class="p">,</span> <span class="nx">Person</span><span class="p">.</span><span class="na">fromNames</span><span class="p">([</span><span class="s">'Honza'</span><span class="p">,</span> <span class="s">'Michal'</span><span class="p">,</span> <span class="s">'Zdeněk'</span><span class="p">])</span>
+<span class="c1">#&gt; člověk Honza, člověk Michal, člověk Zdeněk</span></code></pre></figure>
+
 <ul>
-  <li>@ před názvem metody - vytvoří metodu jako statickou (jako metodu
+  <li><code class="highlighter-rouge">@</code> před názvem metody - vytvoří metodu jako statickou (jako metodu
 třídy)</li>
-  <li>Ve statické metodě zastupuje @ třídu, a protože třída je v JS to
-stejné jako konstruktor, new @(name) vytvoří novou instanci aktuální
+  <li>Ve statické metodě zastupuje <code class="highlighter-rouge">@</code> třídu, a protože třída je v JS to
+stejné jako konstruktor, <code class="highlighter-rouge">new @(name)</code> vytvoří novou instanci aktuální
 třídy.</li>
   <li>Podobně lze přistupovat ke statickým metodám z instance
-(@fromNames zde stoprocentně nefunguje). Jen je třeba si uvědomit,
-že konstruktor je pod @constructor a @constructor is Person, tedy
+(<code class="highlighter-rouge">@fromNames</code> zde stoprocentně nefunguje). Jen je třeba si uvědomit,
+že konstruktor je pod <code class="highlighter-rouge">@constructor</code> a <code class="highlighter-rouge">@constructor is Person</code>, tedy
 naši metodu můžeme z instance zavolat jako
-@constructor.fromNames(…).</li>
+<code class="highlighter-rouge">@constructor.fromNames(...)</code>.</li>
 </ul>
 
 <h3 id="dědění">Dědění</h3>
 
 <p>Vlastně největší výhodou tříd v CoffeeScriptu je přehledné dědění:</p>
 
-<p>extends - je samozřejmé klíčové slovo CoffeeScriptu</p>
+<figure class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="k">class</span> <span class="nx">Employee</span> <span class="k">extends</span> <span class="nx">Person</span>
+    <span class="na">constructor</span><span class="o">:</span> <span class="p">(</span><span class="vi">@</span><span class="na">name</span><span class="p">,</span> <span class="vi">@</span><span class="na">department</span><span class="o">=</span><span class="s">"Obchodní odd."</span><span class="p">)</span> <span class="o">-&gt;</span>
+        <span class="k">super</span>
+    <span class="na">toString</span><span class="o">:</span> <span class="o">-&gt;</span>
+        <span class="k">super</span><span class="p">()</span> <span class="o">+</span> <span class="s">" z </span><span class="si">#{</span><span class="vi">@</span><span class="na">department</span><span class="si">}</span><span class="s">"</span>
+<span class="nx">console</span><span class="p">.</span><span class="na">log</span> <span class="nx">Employee</span><span class="p">.</span><span class="na">__super__</span><span class="p">.</span><span class="na">constructor</span> <span class="o">is</span> <span class="nx">Person</span>
+<span class="c1">#&gt; true</span>
 
-<p>Employee.__super__.constructor - uchovává odkaz na předka (v tomto
-případě Person)</p>
+<span class="nx">honza</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Employee</span><span class="p">(</span><span class="s">"Honza"</span><span class="p">,</span> <span class="s">"IT"</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="na">log</span> <span class="s">"%s"</span><span class="p">,</span> <span class="nx">honza</span>
+<span class="c1">#&gt; člověk Honza z IT</span>
 
-<p>super - trochu nesystematicky</p>
+<span class="c1"># korektně se dědí i statické metody ...</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="na">log</span> <span class="s">"%s"</span><span class="p">,</span> <span class="nx">Employee</span><span class="p">.</span><span class="na">fromNames</span><span class="p">([</span><span class="s">"Marek"</span><span class="p">,</span> <span class="s">"Matouš"</span><span class="p">])</span>
+<span class="c1">#&gt; člověk Maker z Obchodní odd., člověk Matouš z Obchodní odd.</span></code></pre></figure>
+
+<p><code class="highlighter-rouge">extends</code> - je samozřejmé klíčové slovo CoffeeScriptu</p>
+
+<p><code class="highlighter-rouge">Employee.__super__.constructor</code> - uchovává odkaz na předka (v tomto
+případě <code class="highlighter-rouge">Person</code>)</p>
+
+<p><code class="highlighter-rouge">super </code>- trochu nesystematicky:</p>
 
 <ul>
   <li>bez argumentů a závorek zavolá stejnojmennou metodu nad rodičem a
 přepoužije aktuální argumenty (tj.
-Employee.__super__.constructor.apply(this, arguments))</li>
+<code class="highlighter-rouge">Employee.__super__.constructor.apply(this, arguments)</code>)</li>
   <li>se závorkami nebo s argumenty zavolá metodu předka pouze s těmito
 argumenty</li>
 </ul>
@@ -153,13 +187,35 @@ argumenty</li>
 <p>Kdo programuje v Java/CoffeeScriptu, setkal se určitě s problémem
 vázaných metod. Jednoduchý příklad:</p>
 
+<figure class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="nx">print</span> <span class="o">=</span> <span class="nx">console</span><span class="p">.</span><span class="na">log</span><span class="p">;</span>
+<span class="nx">print</span><span class="p">(</span><span class="s">"test"</span><span class="p">);</span>
+<span class="c1">#&gt; Error: Invalid invocation</span></code></pre></figure>
+
 <p>JavaScript u metod neuchová informaci, ke kterému objektu patří, takže
 při jejich volání bez plně kvalifikovaného jména přijde metoda o
-referenci na this.
-To je u asynchronního jazyka, kde každý program je plný callbacků,
+referenci na <code class="highlighter-rouge">this</code>.</p>
+
+<p>To je u asynchronního jazyka, kde každý program je plný callbacků,
 veliká otrava. Samozřejmě to lze různě obejít a obchází se to (pomocí
-function.bind či self = this), ale CoffeeScript má vlastní pěkné řešení
-v podobě konstrukce =&gt;</p>
+<code class="highlighter-rouge">function.bind</code> či <code class="highlighter-rouge">self = this</code>), ale CoffeeScript má vlastní pěkné řešení
+v podobě konstrukce <code class="highlighter-rouge">=\&gt;</code></p>
+
+<figure class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="k">class</span> <span class="nx">Person</span>
+    <span class="na">constructor</span><span class="o">:</span> <span class="p">(</span><span class="vi">@</span><span class="na">name</span><span class="p">)</span> <span class="o">-&gt;</span>
+
+    <span class="na">showMe</span><span class="o">:</span> <span class="o">-&gt;</span>
+        <span class="nx">console</span><span class="p">.</span><span class="na">log</span><span class="p">(</span><span class="s">"Person(</span><span class="si">#{</span><span class="vi">@</span><span class="na">name</span><span class="si">}</span><span class="s">)"</span><span class="p">)</span>
+
+    <span class="na">showMeBinded</span><span class="o">:</span> <span class="o">=&gt;</span>
+        <span class="nx">console</span><span class="p">.</span><span class="na">log</span><span class="p">(</span><span class="s">"Person(</span><span class="si">#{</span><span class="vi">@</span><span class="na">name</span><span class="si">}</span><span class="s">)"</span><span class="p">)</span>
+
+<span class="nx">pavel</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s">"Pavel"</span><span class="p">)</span>
+<span class="nx">pavel</span><span class="p">.</span><span class="na">showMe</span><span class="p">()</span>
+<span class="c1">#&gt; Person(Pavel)</span>
+<span class="nx">setTimeout</span><span class="p">(</span><span class="nx">pavel</span><span class="p">.</span><span class="na">showMe</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="c1">#&gt; Person(undefined)</span>
+<span class="nx">setTimeout</span><span class="p">(</span><span class="nx">pavel</span><span class="p">.</span><span class="na">showMeBinded</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="c1">#&gt; Person(Pavel)</span></code></pre></figure>
 
 <h3 id="použití-tříd-v-angularjs">Použití tříd v AngularJS</h3>
 
@@ -169,6 +225,31 @@ námitka, kterou slyším, je: <em>Scope nebo Servisu ale nemůžeš jednoduše
 dědit.</em></p>
 
 <p>Takže, chlapci, můžeš! Stačí jen kávu správně dávkovat v injekcích:</p>
+
+<figure class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="nx">angular</span><span class="p">.</span><span class="na">module</span><span class="p">(</span><span class="s">'app'</span><span class="p">).</span><span class="na">service</span> <span class="s">'BaseElement'</span><span class="p">,</span> <span class="p">(</span><span class="nx">$compile</span><span class="p">,</span> <span class="nx">$sce</span><span class="p">)</span> <span class="o">-&gt;</span>
+    <span class="k">class</span> <span class="nx">BaseElement</span>
+        <span class="na">constructor</span><span class="o">:</span> <span class="p">(</span><span class="vi">@</span><span class="na">scope</span><span class="p">,</span> <span class="vi">@</span><span class="na">element</span><span class="p">)</span> <span class="o">-&gt;</span>
+            <span class="vi">@</span><span class="na">element</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="nx">$compile</span><span class="p">(</span><span class="vi">@</span><span class="na">constructor</span><span class="p">.</span><span class="na">template</span><span class="p">)(</span><span class="nx">scope</span><span class="p">))</span>
+            <span class="nx">scope</span><span class="p">.</span><span class="na">$watch</span> <span class="s">'value'</span><span class="p">,</span> <span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="o">=&gt;</span>
+                <span class="nx">console</span><span class="p">.</span><span class="na">log</span> <span class="s">'new value %j'</span><span class="p">,</span> <span class="nx">scope</span><span class="p">.</span><span class="na">value</span>
+                <span class="vi">@</span><span class="na">value</span> <span class="o">=</span> <span class="nx">value</span>
+                <span class="nx">scope</span><span class="p">.</span><span class="na">html</span> <span class="o">=</span> <span class="nx">$sce</span><span class="p">.</span><span class="na">trustAsHtml</span><span class="p">(</span><span class="vi">@</span><span class="na">generateHtml</span><span class="p">())</span>
+
+        <span class="vi">@</span><span class="na">template</span><span class="o">:</span> <span class="s">'&lt;div ng-bind-html="html"&gt;&lt;/div&gt;'</span>
+        <span class="vi">@</span><span class="na">getConfig</span><span class="o">:</span> <span class="p">()</span> <span class="o">-&gt;</span>
+            <span class="na">restrict</span><span class="o">:</span> <span class="s">'E'</span>
+            <span class="na">scope</span><span class="o">:</span>
+                <span class="na">value</span><span class="o">:</span> <span class="s">'='</span>
+            <span class="na">link</span><span class="o">:</span> <span class="p">(</span><span class="nx">scope</span><span class="p">,</span> <span class="nx">element</span><span class="p">)</span> <span class="o">=&gt;</span>
+                <span class="k">new</span> <span class="err">@</span><span class="p">(</span><span class="nx">scope</span><span class="p">,</span> <span class="nx">element</span><span class="p">)</span>
+
+<span class="nx">angular</span><span class="p">.</span><span class="na">module</span><span class="p">(</span><span class="s">'app'</span><span class="p">).</span><span class="na">directive</span> <span class="s">'myElement'</span><span class="p">,</span> <span class="p">(</span><span class="nx">BaseElement</span><span class="p">)</span> <span class="o">-&gt;</span>
+    <span class="k">class</span> <span class="nx">MyElement</span> <span class="k">extends</span> <span class="nx">BaseElement</span>
+        <span class="na">generateHtml</span><span class="o">:</span> <span class="p">()</span> <span class="o">=&gt;</span>
+            <span class="k">return</span> <span class="s">"&lt;b&gt;My element: </span><span class="si">#{</span><span class="vi">@</span><span class="na">value</span><span class="si">}</span><span class="s">&lt;/b&gt;"</span>
+
+    <span class="k">return</span> <span class="nx">MyElement</span><span class="p">.</span><span class="na">getConfig</span><span class="p">()</span></code></pre></figure>
+
 
             </div>
         </div>

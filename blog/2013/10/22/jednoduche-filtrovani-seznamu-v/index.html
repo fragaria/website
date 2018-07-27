@@ -20,7 +20,7 @@
     <meta property="og:description"   content="V našem posledním projektu chceme (čistě v Javascriptu) mít vyhledávacífiltr nad seznamem objektů. Asi nějaktakhle:" />
 
     
-        <meta property="og:image"         content="http://1.bp.blogspot.com/-kGr-9BvaeUM/UmQMDIRaFpI/AAAAAAAAAQo/GgoCPC4fIo4/s72-c/Screen+Shot+2013-10-18+at+13.20.22.png" />
+        <meta property="og:image"         content="" />
     
 
     <link rel="stylesheet" href="/website/assets/styles.css">
@@ -64,8 +64,6 @@
         <meta itemprop="headline" content="Jednoduché filtrování seznamů v AngularJS">
 
         
-            <meta itemprop="image" content="http://1.bp.blogspot.com/-kGr-9BvaeUM/UmQMDIRaFpI/AAAAAAAAAQo/GgoCPC4fIo4/s72-c/Screen+Shot+2013-10-18+at+13.20.22.png">
-        
 
         <div itemprop="publisher" itemtype="http://schema.org/Organization" class="hidden" itemscope>
             <div itemprop="logo" itemtype="http://schema.org/ImageObject" itemscope="">
@@ -91,7 +89,10 @@
 filtr nad seznamem objektů. Asi nějak
 takhle:</p>
 
-<p><a href="http://1.bp.blogspot.com/-kGr-9BvaeUM/UmQMDIRaFpI/AAAAAAAAAQo/GgoCPC4fIo4/s1600/Screen+Shot+2013-10-18+at+13.20.22.png"><img src="http://1.bp.blogspot.com/-kGr-9BvaeUM/UmQMDIRaFpI/AAAAAAAAAQo/GgoCPC4fIo4/s640/Screen+Shot+2013-10-18+at+13.20.22.png" alt="" /></a></p>
+<figure>
+<img src="https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2013-10-22-jednoduche-filtrovani-seznamu-v__1.png" />
+
+</figure>
 
 <p>Jenže objekty můžou obsahovat vnořené objekty, které obsahují vnořené
 objekty s dalšími vnořenými objekty – chápete, kam mířím?</p>
@@ -103,7 +104,7 @@ přeskakovali funkce atd. atd. </p>
 určitě je v něm nějaká chyba a jistě se už našel někdo, kdo to napsal
 líp.</p>
 
-<p>No jasně – a byl to ten chlápek co psal JSON.stringify()!</p>
+<p>No jasně – a byl to ten chlápek co psal <code class="highlighter-rouge">JSON.stringify()</code>!</p>
 
 <p>Když se postavíme na ramena obrů a použijeme JSON (a
 <a href="http://underscorejs.org/">Underscore.JS</a>), tak se s vyhledáváním
@@ -112,6 +113,29 @@ dostaneme na 5 řádek jednoduchého kódu.</p>
 <p>Když přidáme vyhledávání podle více klíčových slov, validace vstupů a
 možnost ignorovat některé properties objektu, tak jsme pořád na 22.
 řádcích:</p>
+
+<figure class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="nx">angular</span><span class="p">.</span><span class="na">module</span><span class="p">(</span><span class="s">"filters"</span><span class="p">,</span> <span class="p">[])</span>
+    <span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="s">'matchAllToProperties'</span><span class="p">,</span> <span class="p">()</span> <span class="o">-&gt;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="nx">input</span><span class="p">,</span> <span class="nx">query</span><span class="p">,</span> <span class="nx">exclude</span><span class="p">)</span> <span class="o">-&gt;</span>
+            <span class="k">if</span> <span class="o">not</span> <span class="nx">input</span> <span class="o">or</span> <span class="o">not</span> <span class="nx">query</span>
+                <span class="k">return</span> <span class="nx">input</span>
+
+            <span class="nx">bits</span> <span class="o">=</span> <span class="p">(</span><span class="nx">b</span><span class="p">.</span><span class="na">toLowerCase</span><span class="p">()</span> <span class="k">for</span> <span class="nx">b</span> <span class="k">in</span> <span class="nx">query</span><span class="p">.</span><span class="na">split</span><span class="p">(</span><span class="s">' '</span><span class="p">)</span> <span class="k">when</span> <span class="nx">b</span> <span class="o">isnt</span> <span class="s">' '</span><span class="p">)</span>
+
+            <span class="nx">filtered</span> <span class="o">=</span> <span class="p">[]</span>
+
+            <span class="k">for</span> <span class="nx">item</span> <span class="k">in</span> <span class="nx">input</span>
+                <span class="nx">item_copy</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="na">copy</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span>
+
+                <span class="c1">#Remove fields in which we don't want to search</span>
+                <span class="nx">_</span><span class="p">.</span><span class="na">each</span><span class="p">(</span><span class="nx">exclude</span><span class="p">,</span> <span class="p">(</span><span class="nx">prop</span><span class="p">)</span><span class="o">-&gt;</span> <span class="k">delete</span> <span class="nx">item_copy</span><span class="p">[</span><span class="nx">prop</span><span class="p">])</span>
+
+                <span class="nx">json</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="na">stringify</span><span class="p">(</span><span class="nx">item_copy</span><span class="p">).</span><span class="na">toLowerCase</span><span class="p">()</span>
+                <span class="k">if</span> <span class="nx">_</span><span class="p">.</span><span class="na">every</span><span class="p">(</span><span class="nx">bits</span><span class="p">,</span> <span class="p">(</span><span class="nx">bit</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nx">json</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="nx">bit</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+                    <span class="nx">filtered</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="nx">filtered</span>
+    <span class="p">)</span></code></pre></figure>
 
 <p>Řídíme se zásadou, že
 jedno <a href="http://plnkr.co/edit/vDzh0i?p=preview">demo</a> řekne víc než tisíc

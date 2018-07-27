@@ -16,7 +16,6 @@ tags:
 - amazon lambda
 - pyvec
 modified_time: '2015-11-10T09:44:01.367+01:00'
-thumbnail: http://2.bp.blogspot.com/-lmk0nJAZX0c/VkGrAm4PmtI/AAAAAAAAE1M/bu1YbDDpSqA/s72-c/pycon-cz-logo-fb-52d063c4.png
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-1142068246988918085
 blogger_orig_url: http://blog.fragaria.cz/2015/11/podzimni-stripky.html
 ---
@@ -71,8 +70,6 @@ Brně.
 
 Lístky už ale nejsou ...
 ;-)
-
-[![](http://2.bp.blogspot.com/-lmk0nJAZX0c/VkGrAm4PmtI/AAAAAAAAE1M/bu1YbDDpSqA/s200/pycon-cz-logo-fb-52d063c4.png)](https://cz.pycon.org/2015/)
 
 ### Uprchlíci
 

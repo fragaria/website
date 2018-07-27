@@ -10,7 +10,7 @@ tags:
 - agile
 - git
 modified_time: '2015-09-22T15:31:20.331+02:00'
-thumbnail: http://3.bp.blogspot.com/-wfyKBaMCdlk/VgFO8LnIvVI/AAAAAAAAA-I/h8kqrlus_1I/s72-c/git-illustration.png
+cloudinary_src: posts/2015-09-22-git-proces-vyvoja-nasadzovania__1.png
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-5589035804181042989
 blogger_orig_url: http://blog.fragaria.cz/2015/09/git-proces-vyvoja-nasadzovania.html
 ---
@@ -22,7 +22,7 @@ Na momentálnych projektoch vyvýjame pomocou SCRUM-u a snažíme sa každý
 sprint dodať použiteľnú a nasaditeľnú verziu
 produktu.
 
-![](http://3.bp.blogspot.com/-wfyKBaMCdlk/VgFO8LnIvVI/AAAAAAAAA-I/h8kqrlus_1I/s320/git-illustration.png)
+{% include figure.html cloudinary_src='posts/2015-09-22-git-proces-vyvoja-nasadzovania__1.png' %}
 
 Aby sme dosiahli požadovaný efekt, navrhli sme systém troch prostredí,
 Sandbox, Preproduction a Production.

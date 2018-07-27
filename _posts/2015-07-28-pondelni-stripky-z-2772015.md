@@ -9,12 +9,10 @@ tags:
 - znaps monoid
 - jeep
 modified_time: '2015-07-28T09:08:57.103+02:00'
-thumbnail: http://4.bp.blogspot.com/-8C6bakoP0fU/Vbcpy78ur8I/AAAAAAAAAjc/7tYfuM0YSYM/s72-c/Screen%2BShot%2B2015-07-28%2Bat%2B09.05.21.png
+cloudinary_src: posts/2015-07-28-pondelni-stripky-z-2772015__1.png
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-5560432340063782336
 blogger_orig_url: http://blog.fragaria.cz/2015/07/pondelni-stripky-z-2772015.html
 ---
-
-# Pondělní střípky z 27.7.2015
 
 Dneska toho máme na programu ZNAPS, font Monoid, roboty pro platformu
 Telegram a hackování aut.
@@ -52,7 +50,7 @@ Mono](http://font.ubuntu.com/#charset-mono-regular).
 Dalším do sbírky je
 [Monoid](http://larsenwork.com/monoid/).
 
-[![](http://4.bp.blogspot.com/-8C6bakoP0fU/Vbcpy78ur8I/AAAAAAAAAjc/7tYfuM0YSYM/s640/Screen%2BShot%2B2015-07-28%2Bat%2B09.05.21.png)](http://4.bp.blogspot.com/-8C6bakoP0fU/Vbcpy78ur8I/AAAAAAAAAjc/7tYfuM0YSYM/s1600/Screen%2BShot%2B2015-07-28%2Bat%2B09.05.21.png)
+{% include figure.html cloudinary_src='posts/2015-07-28-pondelni-stripky-z-2772015__1.png' %}
 
 Proti předchozím fontům má dvě výhody:
 

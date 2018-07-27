@@ -8,7 +8,7 @@ tags:
 - webassembly
 - asm.js
 modified_time: '2015-07-23T12:50:42.325+02:00'
-thumbnail: http://4.bp.blogspot.com/-HRuz6pT1KDo/VawKmZseNgI/AAAAAAAAAAY/KMdIChZwKss/s72-c/Diagram1.png
+cloudinary_src: posts/2015-07-23-webassembly-cesta-k-nemu__1.png
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-6543258345287958170
 blogger_orig_url: http://blog.fragaria.cz/2015/07/webassembly-cesta-k-nemu.html
 ---
@@ -38,7 +38,7 @@ C nebo C++ do binární formy (v tomto případě pomocí LLVM) zjednodušeně
 funguje nějak
 takhle:
 
-[![](http://4.bp.blogspot.com/-HRuz6pT1KDo/VawKmZseNgI/AAAAAAAAAAY/KMdIChZwKss/s640/Diagram1.png)](http://4.bp.blogspot.com/-HRuz6pT1KDo/VawKmZseNgI/AAAAAAAAAAY/KMdIChZwKss/s1600/Diagram1.png)
+{% include figure.html cloudinary_src='posts/2015-07-23-webassembly-cesta-k-nemu__1.png' %}
 
   - Frontend je komponenta zodpovědná za převod původního jazyka (např.
     C, C++, ale i jiných) do jakéhosi mezijazyka, tzv. Intermediate
@@ -56,7 +56,7 @@ napsaný, dejme tomu, v C++, přeložit ho pomocí Emscripten do JavaScriptu
 a pustit v prohlížeči. Schematicky
 znázorněno:
 
-[![](http://1.bp.blogspot.com/-V3DVwO6_7Gc/VawKor0ZtFI/AAAAAAAAAAg/Eya3ghISLs4/s640/Diagram2.png)](http://1.bp.blogspot.com/-V3DVwO6_7Gc/VawKor0ZtFI/AAAAAAAAAAg/Eya3ghISLs4/s1600/Diagram2.png)
+{% include figure.html cloudinary_src='posts/2015-07-23-webassembly-cesta-k-nemu__2.png' %}
 
 A zde již do hry vstupuje asm.js.
 

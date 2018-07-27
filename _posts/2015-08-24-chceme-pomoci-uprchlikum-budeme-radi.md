@@ -6,7 +6,7 @@ author: Martin Burián
 tags:
 - sociální odpovědnost
 modified_time: '2015-09-01T10:20:20.972+02:00'
-thumbnail: http://1.bp.blogspot.com/-VWRnLzr_eVs/VeVfnOB_FTI/AAAAAAAAEag/nWJee2qiPyA/s72-c/2015-08-31-870.jpg
+cloudinary_src: posts/2015-08-24-chceme-pomoci-uprchlikum-budeme-radi__1.jpg
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-91939331689386814
 blogger_orig_url: http://blog.fragaria.cz/2015/08/chceme-pomoci-uprchlikum-budeme-radi.html
 ---

@@ -53,6 +53,21 @@ $article-content-width: 40rem;
         // default anchor style
         @include anchorStyle(true);
     }
+
+    .inline-figure-container {
+        display: flex;
+        justify-content: space-around;
+
+        > figure {
+            + figure {
+                margin-left: 1rem;
+            }
+
+            img {
+                max-height: 14rem;
+            }
+        }
+    }
 }
 
 .article__misc {

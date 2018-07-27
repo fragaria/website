@@ -11,7 +11,7 @@ tags:
 - vim
 - nwjs
 modified_time: '2016-02-15T16:39:29.768+01:00'
-thumbnail: https://3.bp.blogspot.com/-gfNacjsLK9o/VsHszG68emI/AAAAAAAAAmg/oZ5S6eARacI/s72-c/Screen%2BShot%2B2016-02-15%2Bat%2B16.20.14.png
+cloudinary_src: posts/2016-02-15-pondelni-stripky-z-1522016__1.png
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-1731258635387998818
 blogger_orig_url: http://blog.fragaria.cz/2016/02/pondelni-stripky-z-1522016.html
 ---
@@ -88,7 +88,7 @@ minut – kdyby se nemusela ovládat jako Vim. Takhle jsem po hodině na
 konci prvního levelu a mám chuť se
 zabít.
 
-[![](https://3.bp.blogspot.com/-gfNacjsLK9o/VsHszG68emI/AAAAAAAAAmg/oZ5S6eARacI/s640/Screen%2BShot%2B2016-02-15%2Bat%2B16.20.14.png)](https://3.bp.blogspot.com/-gfNacjsLK9o/VsHszG68emI/AAAAAAAAAmg/oZ5S6eARacI/s1600/Screen%2BShot%2B2016-02-15%2Bat%2B16.20.14.png)
+{% include figure.html cloudinary_src='posts/2016-02-15-pondelni-stripky-z-1522016__1.png' %}
 
 Pokud máte chuť na trochu sebetrýznění, hurá do toho.
 

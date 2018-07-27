@@ -8,7 +8,7 @@ tags:
 - kryptografie
 - sudoku
 modified_time: '2016-04-27T13:39:06.318+02:00'
-thumbnail: https://1.bp.blogspot.com/-etUeXi5dXfk/VxU3ivmXC5I/AAAAAAAAOco/On3vq6AD6nooK66rHqUl7c774lNxyWxxACK4B/s72-c/graph-gray.png
+cloudinary_src: posts/2016-04-27-zero-knowledge-proofs__1.png
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-6958119050761583574
 blogger_orig_url: http://blog.fragaria.cz/2016/04/zero-knowledge-proofs.html
 ---
@@ -136,7 +136,7 @@ Situaci si můžeme nakreslit jako následující graf, vrcholy jsou pozice
 vysílaců a hrany označují možné
 rušení:
 
-[![](https://1.bp.blogspot.com/-etUeXi5dXfk/VxU3ivmXC5I/AAAAAAAAOco/On3vq6AD6nooK66rHqUl7c774lNxyWxxACK4B/s320/graph-gray.png)](http://1.bp.blogspot.com/-etUeXi5dXfk/VxU3ivmXC5I/AAAAAAAAOco/On3vq6AD6nooK66rHqUl7c774lNxyWxxACK4B/s1600/graph-gray.png)
+{% include figure.html cloudinary_src='posts/2016-04-27-zero-knowledge-proofs__1.png' %}
 
 Potřebujeme vrcholy tohoto grafu obarvit třemi barvami tak, aby žádní
 dva sousedé neměli stejnou barvu. V případě těchto několika málo vrcholů
@@ -145,7 +145,7 @@ desítkách nebo stovkách vrcholů může být řešení velmi složité
 (NP-hard). V tomto případě není ani jisté, že řešení existuje.
 \[<https://en.wikipedia.org/wiki/Graph_coloring>\]
 
-[![](https://1.bp.blogspot.com/-6IIzHV3iF0s/VxU3rq3LKUI/AAAAAAAAOcw/L94T1xc28LUOCcqLiKI6Lf_c2P37mqp2wCK4B/s320/graph-color.png)](http://1.bp.blogspot.com/-6IIzHV3iF0s/VxU3rq3LKUI/AAAAAAAAOcw/L94T1xc28LUOCcqLiKI6Lf_c2P37mqp2wCK4B/s1600/graph-color.png)
+{% include figure.html cloudinary_src='posts/2016-04-27-zero-knowledge-proofs__2.png' %}
 
 Zadáme tedy tento problém k řešení našemu IT oddělení, ale máme příliš
 mnoho vysílačů a řešení se nedaří nalézt. Na obědě se náhodou potkáme s
@@ -169,10 +169,7 @@ třemi barvami (libovolnou permutací barev), tak aby žádné dvě stejné
 nespojovala hrana (tnz. platné řešení) a vrcholy zakryjí
 klobouky.
 
-|                                                                                                                                                                                                                                                                                 |
-| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| [![](https://1.bp.blogspot.com/-Q4jYlwfBk_E/VxU5aBWxcAI/AAAAAAAAOc4/aIIwu1hJH0Itb0z9SVvcpT2w-tmxrr8ngCK4B/s400/graph-colors-examples.png)](http://1.bp.blogspot.com/-Q4jYlwfBk_E/VxU5aBWxcAI/AAAAAAAAOc4/aIIwu1hJH0Itb0z9SVvcpT2w-tmxrr8ngCK4B/s1600/graph-colors-examples.png) |
-|                                                                                                               Dva příklady obarvení - oba jsou správným řešením.                                                                                                                |
+{% include figure.html cloudinary_src='posts/2016-04-27-zero-knowledge-proofs__3.png' caption='Dva příklady obarvení - oba jsou správným řešením.' %}
 
 Následně můžou opět do stodoly vstoupit naši pracovníci a odstranit
 právě dva klobouky spojené hranou. Přesvědčí se, že odkryté vrcholy
@@ -180,10 +177,7 @@ mají různou barvu. Následně opustí stodolu, Google smaže barvu ze všech
 vrcholů a opět nabarví vrcholy třemi barvami v jiném, náhodném
 pořadí.
 
-|                                                                                                                                                                                                                                                                 |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| [![](https://4.bp.blogspot.com/-84FDOR4uBU8/VxU6iFyww7I/AAAAAAAAOdE/H5ywpEbRF80CUZhoKk7Mv8mfuz006gxyACK4B/s320/graph-covered.png)](http://4.bp.blogspot.com/-84FDOR4uBU8/VxU6iFyww7I/AAAAAAAAOdE/H5ywpEbRF80CUZhoKk7Mv8mfuz006gxyACK4B/s1600/graph-covered.png) |
-|                                                                                My máme možnost vidět pouze toto. Situace odpovídá platnému řešení, ale vůbec nám nic nenapovídá.                                                                                |
+{% include figure.html cloudinary_src='posts/2016-04-27-zero-knowledge-proofs__4.png' caption='My máme možnost vidět pouze toto. Situace odpovídá platnému řešení, ale vůbec nám nic nenapovídá.' %}
 
 Zase vstoupíme my, odkryjeme dva klobouky a přesvědčíme se, že barvy pod
 nimi jsou různé. Tento proces opakujeme dostatečně dlouho, než si budeme
@@ -258,20 +252,7 @@ není).
 
 ## Doporučené čtení
 
-[wikipedia](https://en.wikipedia.org/wiki/Zero-knowledge_proof#Discrete_log_of_a_given_value) s
-příklady na diskrétní logaritmus a ověření znalosti Hamiltonovy kružnice
-
-[Crypton](https://crypton.io/) js framework
-[Advanced Cryptography
-lectures](http://cs.nyu.edu/courses/fall09/G22.3220-001/index.html) na
-NYU
-
-[Anonize](http://anonize.org/assets/anonize-oak-camera.pdf) - anonymní
-hlasovací systém
-
-[Fiat-Shamir
-heuristic](https://en.wikipedia.org/wiki/Fiat%E2%80%93Shamir_heuristic) -
-diskrétní logaritmus
-[Feige–Fiat–Shamir identification
-scheme](https://en.wikipedia.org/wiki/Feige%E2%80%93Fiat%E2%80%93Shamir_identification_scheme) -
-faktorizace čísla
+ - [wikipedia](https://en.wikipedia.org/wiki/Zero-knowledge_proof#Discrete_log_of_a_given_value) s příklady na diskrétní logaritmus a ověření znalosti Hamiltonovy kružnice
+ - [Crypton](https://crypton.io/) js framework [Advanced Cryptography lectures](http://cs.nyu.edu/courses/fall09/G22.3220-001/index.html) na NYU
+ - [Anonize](http://anonize.org/assets/anonize-oak-camera.pdf) - anonymní hlasovací systém
+ - [Fiat-Shamir heuristic](https://en.wikipedia.org/wiki/Fiat%E2%80%93Shamir_heuristic) - diskrétní logaritmus [Feige–Fiat–Shamir identification scheme](https://en.wikipedia.org/wiki/Feige%E2%80%93Fiat%E2%80%93Shamir_identification_scheme) - faktorizace čísla

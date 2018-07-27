@@ -8,7 +8,7 @@ tags:
 - liftago
 - elastic
 modified_time: '2016-02-17T10:49:58.860+01:00'
-thumbnail: https://4.bp.blogspot.com/-896XV5frRmc/VsCw-5YBySI/AAAAAAAAAmQ/aFHYxvz2wMQ/s72-c/Screen%2BShot%2B2016-02-14%2Bat%2B17.52.37.png
+cloudinary_src: posts/2016-02-17-jak-sobe-liftago-s-jistotou-privolati__1.png
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-1469978181235135253
 blogger_orig_url: http://blog.fragaria.cz/2016/02/jak-sobe-liftago-s-jistotou-privolati.html
 ---
@@ -44,7 +44,7 @@ některý z parametrů bude signalizovat problém.
 Vypadalo by to třeba
 takhle:
 
-[![](https://4.bp.blogspot.com/-896XV5frRmc/VsCw-5YBySI/AAAAAAAAAmQ/aFHYxvz2wMQ/s640/Screen%2BShot%2B2016-02-14%2Bat%2B17.52.37.png)](https://4.bp.blogspot.com/-896XV5frRmc/VsCw-5YBySI/AAAAAAAAAmQ/aFHYxvz2wMQ/s1600/Screen%2BShot%2B2016-02-14%2Bat%2B17.52.37.png)
+{% include figure.html cloudinary_src='posts/2016-02-17-jak-sobe-liftago-s-jistotou-privolati__1.png' %}
 
 No ale, protože v Liftagu nepracuji, musím se spokojit s analýzou dat
 ex-post.
@@ -56,7 +56,7 @@ kterou jedete. Hezky je to vidět z grafu, který srovnává průměrný počet
 nabídek, se vzdáleností na kterou chcete
 jet:
 
-[![](https://2.bp.blogspot.com/-fYMLtIDcbNM/VsCYuk848pI/AAAAAAAAAkk/pSQUiWmsSII/s640/Screen%2BShot%2B2016-02-14%2Bat%2B16.08.43.png)](https://2.bp.blogspot.com/-fYMLtIDcbNM/VsCYuk848pI/AAAAAAAAAkk/pSQUiWmsSII/s1600/Screen%2BShot%2B2016-02-14%2Bat%2B16.08.43.png)
+{% include figure.html cloudinary_src='posts/2016-02-17-jak-sobe-liftago-s-jistotou-privolati__2.png' %}
 
 Zub na začátku ukazuje, že pokud jedete na vzdálenost kratší než 3 km,
 je výhodnější cíl vůbec nezadávat. Pokud jedete dále než 5 km, určitě
@@ -66,7 +66,7 @@ Další graf ukazuje, jak daleko je taxikář ochotný pro vás dojet – a to
 zvlášť v denních a zvlášť v nočních
 hodinách:
 
-[![](https://1.bp.blogspot.com/-iq2sX7uJC9U/VsCorI4YRAI/AAAAAAAAAls/RX0FeYagI_A/s640/Screen%2BShot%2B2016-02-14%2Bat%2B17.16.39.png)](https://1.bp.blogspot.com/-iq2sX7uJC9U/VsCorI4YRAI/AAAAAAAAAls/RX0FeYagI_A/s1600/Screen%2BShot%2B2016-02-14%2Bat%2B17.16.39.png)
+{% include figure.html cloudinary_src='posts/2016-02-17-jak-sobe-liftago-s-jistotou-privolati__3.png' %}
 
 *Osa X je vzdálenost cíle, osa Y průměrná dojezdová vzdálenost
 taxíku.*
@@ -82,7 +82,7 @@ daty](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-agg
 Zkusil jsem jí použít na zakázky, kde zákazník nezadá
 cíl:
 
-[![](https://3.bp.blogspot.com/-Qqn9LvhLzfw/VsCd2zKwdsI/AAAAAAAAAk0/aQ0XgEvG6NQ/s640/Screen%2BShot%2B2016-02-14%2Bat%2B16.26.53.png)](https://3.bp.blogspot.com/-Qqn9LvhLzfw/VsCd2zKwdsI/AAAAAAAAAk0/aQ0XgEvG6NQ/s1600/Screen%2BShot%2B2016-02-14%2Bat%2B16.26.53.png)
+{% include figure.html cloudinary_src='posts/2016-02-17-jak-sobe-liftago-s-jistotou-privolati__4.png' %}
 
 Je vidět, že pokud nezadáte cíl ve všední den, máte celkem slušnou
 šanci, že domů přeci jen pojedete – abnormálně často se vyskytuje stav
@@ -94,7 +94,7 @@ bez zadaného cíle, s cílem do 3 km a s cílem delším než 3 km. Výsledkem
 je graf s průměrným počtem nabídek v závislosti na denní
 době:
 
-[![](https://1.bp.blogspot.com/-OarpiYdupNg/VsCgKDsLfEI/AAAAAAAAAlA/SaSFVwAKEaY/s640/Screen%2BShot%2B2016-02-14%2Bat%2B16.39.24.png)](https://1.bp.blogspot.com/-OarpiYdupNg/VsCgKDsLfEI/AAAAAAAAAlA/SaSFVwAKEaY/s1600/Screen%2BShot%2B2016-02-14%2Bat%2B16.39.24.png)
+{% include figure.html cloudinary_src='posts/2016-02-17-jak-sobe-liftago-s-jistotou-privolati__5.png' %}
 
 A hle\! Mezi 20:00 a 24:00 má člověk, který nezadá cíl, poloviční šanci,
 že sežene taxíka.
@@ -109,7 +109,7 @@ Protože jeden graf nahradí tři odstavce, přidávám počet pokusů o
 zavolání odvozu v průběhu
 dne:
 
-[![](https://2.bp.blogspot.com/-uvViikq_lpw/VsClVY_bAcI/AAAAAAAAAlQ/MjQzTAa481U/s640/Screen%2BShot%2B2016-02-14%2Bat%2B17.02.28.png)](https://2.bp.blogspot.com/-uvViikq_lpw/VsClVY_bAcI/AAAAAAAAAlQ/MjQzTAa481U/s1600/Screen%2BShot%2B2016-02-14%2Bat%2B17.02.28.png)
+{% include figure.html cloudinary_src='posts/2016-02-17-jak-sobe-liftago-s-jistotou-privolati__6.png' %}
 
 Vidíte, že po půlnoci nastává největší špička, kterou taxikáři
 nezvládají.
@@ -118,7 +118,7 @@ Další srovnání počtu uskutečněných jízd (stav F) a počtu lidí, kteř�
 nedostali žádnou nabídku (stav NO) v průběhu
 dne:
 
-[![](https://3.bp.blogspot.com/-sCKvEXRccGE/VsCm2FRgu4I/AAAAAAAAAlg/IASSgO4fmYE/s640/Screen%2BShot%2B2016-02-14%2Bat%2B17.07.45.png)](https://3.bp.blogspot.com/-sCKvEXRccGE/VsCm2FRgu4I/AAAAAAAAAlg/IASSgO4fmYE/s1600/Screen%2BShot%2B2016-02-14%2Bat%2B17.07.45.png)
+{% include figure.html cloudinary_src='posts/2016-02-17-jak-sobe-liftago-s-jistotou-privolati__7.png' %}
 
 Počet uskutečněných jízd je zhruba stejný před půlnocí i po půlnoci, ale
 počet odmítnutých zákazníků je po půlnoci několikanásobný. V grafu jsem
@@ -128,7 +128,7 @@ S tím koresponduje i vzdálenost, na kterou je taxík ochotný přijet. Opět
 v průběhu
 času:
 
-[![](https://1.bp.blogspot.com/-QW3xK9_vZMo/VsCs2g8GzBI/AAAAAAAAAl4/TtNh0k_olIk/s640/Screen%2BShot%2B2016-02-14%2Bat%2B17.33.54.png)](https://1.bp.blogspot.com/-QW3xK9_vZMo/VsCs2g8GzBI/AAAAAAAAAl4/TtNh0k_olIk/s1600/Screen%2BShot%2B2016-02-14%2Bat%2B17.33.54.png)
+{% include figure.html cloudinary_src='posts/2016-02-17-jak-sobe-liftago-s-jistotou-privolati__8.png' %}
 
 Vidíte, že přes den si pro vás šofér přijede průměrně z o kilometr větší
 vzdálenosti než v noci.
@@ -140,7 +140,7 @@ místa, odkud se volají taxíky ve dne a v noci. Ve dne hezky svítí
 office centra – hlavně Anděl, Křižíkova v Karlíně, I.P. Pavlova a Hlavní
 nádraží:
 
-[![](https://2.bp.blogspot.com/-pWKc7DERRrY/VsCtWrvKqDI/AAAAAAAAAl8/6k7c6TCaCCo/s640/Screen%2BShot%2B2016-02-14%2Bat%2B17.37.05.png)](https://2.bp.blogspot.com/-pWKc7DERRrY/VsCtWrvKqDI/AAAAAAAAAl8/6k7c6TCaCCo/s1600/Screen%2BShot%2B2016-02-14%2Bat%2B17.37.05.png)
+{% include figure.html cloudinary_src='posts/2016-02-17-jak-sobe-liftago-s-jistotou-privolati__9.png' %}
 
 A v noci? Nejvýraznější bod na mapě je bermudský trojúhelník v Dlouhé –
 zlatá mládež se vrací z Kozičky, Jamese Deana, případně z Bombaye.
@@ -148,7 +148,7 @@ Zajímavé je, že Václavské náměstí je oproti Dlouhé poloviční. Napadá
 jedině, že turisti Liftago neznají a používají
 konkurenci:
 
-[![](https://4.bp.blogspot.com/-zDLifwBVZ5w/VsCtluTUwlI/AAAAAAAAAmA/MiDOZxFLUDI/s640/Screen%2BShot%2B2016-02-14%2Bat%2B17.38.16.png)](https://4.bp.blogspot.com/-zDLifwBVZ5w/VsCtluTUwlI/AAAAAAAAAmA/MiDOZxFLUDI/s1600/Screen%2BShot%2B2016-02-14%2Bat%2B17.38.16.png)
+{% include figure.html cloudinary_src='posts/2016-02-17-jak-sobe-liftago-s-jistotou-privolati__10.png' %}
 
 ## Napadá vás něco dalšího?
 

@@ -25,6 +25,7 @@ a.button {
     padding: 0 2rem;
     line-height: 3rem;
     height: 3rem;
+    border: 0;
 
     @include buttonStyle(
         map-get(map-get($button-variants, primary), foreground),

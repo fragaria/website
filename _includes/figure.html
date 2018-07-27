@@ -1,10 +1,22 @@
 <figure>
-<img {% if include.alt %}alt="{{ include.alt }}"{% endif %} src="{%- if include.cloudinary_src -%}
-    {%- if include.format == 'gif' -%}
-        {% cloudinary_url include.cloudinary_src %}
+<img
+    {% if include.alt %}alt="{{ include.alt }}"{% endif %}
+
+    src="{%- if include.cloudinary_src -%}
+        {%- if include.format == 'gif' -%}
+            {% cloudinary_url include.cloudinary_src %}
+        {%- else -%}
+            {% cloudinary_url include.cloudinary_src width='640' crop='limit' quality='auto' dpr='2.0' format='jpg' %}
+        {%- endif -%}
     {%- else -%}
-        {% cloudinary_url include.cloudinary_src width='640' crop='limit' quality='auto' dpr='2.0' format='jpg' %}
-    {%- endif -%}
-    {%- else -%}{{ include.src }}{%- endif -%}" />
+        {{ include.src }}
+    {%- endif -%}"
+
+    srcset="{%- if include.cloudinary_src and include.format != 'gif' -%}
+        {% cloudinary_url include.cloudinary_src width='640' crop='limit' quality='auto' format='jpg' %} 1x,
+        {% cloudinary_url include.cloudinary_src width='640' crop='limit' quality='auto' format='jpg' dpr='2.0' %} 2x,
+        {% cloudinary_url include.cloudinary_src width='640' crop='limit' quality='auto' format='jpg' dpr='3.0' %} 3x
+    {%- endif -%}"
+/>
 {% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
 </figure>

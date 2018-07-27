@@ -215,19 +215,26 @@ a {
 
   // Tables.
   table {
-    @include sassline(eta, $headingtype, 2, 0, all);
+    @include sassline(eta, $bodytype, 2, 2, all);
 
-    font-family: getFontFamily($headingtype);
     font-feature-settings: 'liga', 'lnum', 'tnum', 'kern';
     font-style: normal;
-    font-weight: map-get($headingtype, regular);
     width: 100%;
 
     thead {
 
       th {
-        @include sassline(zeta, $headingtype, 2, 0, all);
+        font-family: getFontFamily($bodytype);
+        font-weight: map-get($bodytype, bold);
+        @include sassline(eta, $bodytype, 2, 0, all);
         padding-bottom: 1px;
+      }
+    }
+
+    tbody {
+      td {
+        font-family: getFontFamily($bodytype);
+        @include sassline(eta, $bodytype, 2, 0, all);
       }
     }
   }

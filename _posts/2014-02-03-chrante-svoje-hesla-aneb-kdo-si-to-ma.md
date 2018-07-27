@@ -7,7 +7,7 @@ tags:
 - open source
 - bezpečnost
 modified_time: '2014-02-03T16:06:24.023+01:00'
-thumbnail: http://4.bp.blogspot.com/-fLuor3e2438/Uu-lPRg5R9I/AAAAAAAAAcE/qh0MvSzunKk/s72-c/gorilla-splash.gif
+cloudinary_src: posts/2014-02-03-chrante-svoje-hesla-aneb-kdo-si-to-ma__1.gif
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-7303693901715937266
 blogger_orig_url: http://blog.fragaria.cz/2014/02/chrante-svoje-hesla-aneb-kdo-si-to-ma.html
 ---
@@ -39,10 +39,7 @@ alespoň trochu v bezpečí.
   - **integrace do webového prohlížeče** - Nice To Have
 :-)
 
-|                                                                                                      |
-| :--------------------------------------------------------------------------------------------------: |
-| <http://4.bp.blogspot.com/-fLuor3e2438/Uu-lPRg5R9I/AAAAAAAAAcE/qh0MvSzunKk/s1600/gorilla-splash.gif> |
-|                                           Password Gorilla                                           |
+{% include figure.html cloudinary_src='posts/2014-02-03-chrante-svoje-hesla-aneb-kdo-si-to-ma__1.gif' caption='Password Gorilla' %}
 
 Při hledání jsem našel jen několik aplikací pro ukládání "hesel", které
 by splňovaly to, co jsem požadoval. Nakonec jsem zvolil aplikaci
@@ -88,10 +85,7 @@ mnou vybraných aplikací vyřešil. Zároveň se ale ukazuje, že tento
 požadavek pro mě není zásadní a v tuto chvíli mě příliš
 nevadí.
 
-|                                                                                              |
-| :------------------------------------------------------------------------------------------: |
-| <http://2.bp.blogspot.com/-CEX2stlppzQ/Uu-mY_QyIGI/AAAAAAAAAcQ/Q90ZRl2fRw4/s1600/507295.png> |
-|                                          PasswdSafe                                          |
+{% include figure.html cloudinary_src='posts/2014-02-03-chrante-svoje-hesla-aneb-kdo-si-to-ma__2.png' caption='PasswdSafe' %}
 
 ### FAQ - aneb na co je dobré ještě myslet
 

@@ -7,13 +7,14 @@ tags:
 - boris
 - drogy
 modified_time: '2014-10-13T14:38:50.204+02:00'
-thumbnail: http://1.bp.blogspot.com/-tdxOMKBw-OQ/Umkag0f2-EI/AAAAAAAAARo/YvkL07rGzks/s72-c/boris-logo-70x202-black.png
+cloudinary_src: posts/2014-03-11-boris-moderni-system-pro-nepopularni__1.png
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-7969045734127053353
 blogger_orig_url: http://blog.fragaria.cz/2014/03/boris-moderni-system-pro-nepopularni.html
 ---
 
-<http://1.bp.blogspot.com/-tdxOMKBw-OQ/Umkag0f2-EI/AAAAAAAAARo/YvkL07rGzks/s1600/boris-logo-70x202-black.png>O
-[Borisovi](http://www.bor-is.cz/) jsme na blogu už[jednou
+{% include figure.html cloudinary_src='posts/2014-03-11-boris-moderni-system-pro-nepopularni__1.png' %}
+
+O [Borisovi](http://www.bor-is.cz/) jsme na blogu už [jednou
 psali](http://blog.fragaria.cz/2013/10/boris-nase-svedomi-je-zase-o-trochu.html).
 Jen pro připomenutí:
 [BorIS](http://www.bor-is.cz/)[](https://www.blogger.com/) je

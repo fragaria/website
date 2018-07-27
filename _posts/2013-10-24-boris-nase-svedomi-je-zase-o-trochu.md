@@ -3,9 +3,9 @@ layout: post
 title: BorIS - naše svědomí je zase o trochu čistší
 date: '2013-10-24T15:00:00.000+02:00'
 author: Martin Burián
-tags: 
+tags:
 modified_time: '2013-10-25T14:31:42.091+02:00'
-thumbnail: http://1.bp.blogspot.com/-tdxOMKBw-OQ/Umkag0f2-EI/AAAAAAAAARo/YvkL07rGzks/s72-c/boris-logo-70x202-black.png
+cloudinary_src: posts/2014-03-11-boris-moderni-system-pro-nepopularni__1.png
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-510880592025634827
 blogger_orig_url: http://blog.fragaria.cz/2013/10/boris-nase-svedomi-je-zase-o-trochu.html
 ---
@@ -29,8 +29,7 @@ o.s.](http://www.laxus.cz/)
 ### [BorIS](http://www.bor-is.cz/) je:
 
   - elektronická databáze pro evidenci výkonů v terénních programech
-    drogových
-    služeb;
+    drogových služeb;
   - [opensource](http://cs.wikipedia.org/wiki/Otev%C5%99en%C3%BD_software)
     řešení, jehož licence je zdarma;
   - projekt, který chceme dále rozvíjet a šířit po celé republice i za

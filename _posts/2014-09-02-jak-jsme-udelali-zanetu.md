@@ -9,7 +9,7 @@ tags:
 - presale
 - trello
 modified_time: '2014-12-22T15:25:50.004+01:00'
-thumbnail: http://1.bp.blogspot.com/-UPbxrZ9ufgY/VAVxMFlMBmI/AAAAAAAAAoM/SCpvotLJWzY/s72-c/obed.jpeg
+cloudinary_src: posts/2014-09-02-jak-jsme-udelali-zanetu__2.jpg
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-2040008569658632063
 blogger_orig_url: http://blog.fragaria.cz/2014/09/jak-jsme-udelali-zanetu.html
 ---
@@ -29,18 +29,20 @@ Tours](http://www.chinatours.cz/).
 
 ### Domlouvání projektu
 
-<span class="underline">Když to trochu přeženu, vypadal úvod asi
-takto:</span>
+Když to trochu přeženu, vypadal úvod asi takto:
+
 Zákazník: *Rádi bychom u Vás poptali vývoj systému na správu zájezdů,
 samozřejmě na míru.*
+
 Fraga: *Jasně, kolik na to máte cca peněz a co všechno to má umět?*
+
 Zákazník: *To bychom právě rádi zjistili z nabídek, z nichž si následně
 vybereme tu nej.*
+
 Fraga: *Aha ... mohli bychom Vám tedy nejprve představit jiný přístup k
 vývoji SW - jak pracujeme my?*
 
-### ~~Nabídka
-~~
+### ~~Nabídka~~
 
 Neplýtvali jsme časem sepisováním mnohastránkové nabídky, jejíž hlavní
 náplní je vejít se za každou cenu do předpokládaného rozpočtu, který je
@@ -96,7 +98,7 @@ jist, že naše kluky práce baví, děláme projekt, který má hlavu a patu, a
 zákazník k nám chodí rád. Jednou dostala paní Iveta i
 oběd.
 
-<http://1.bp.blogspot.com/-UPbxrZ9ufgY/VAVxMFlMBmI/AAAAAAAAAoM/SCpvotLJWzY/s1600/obed.jpeg>
+{% include figure.html cloudinary_src='posts/2014-09-02-jak-jsme-udelali-zanetu__1.jpg' %}
 
 ### Plán vs. skutečnost
 
@@ -127,4 +129,4 @@ je s naší prací spokojen natolik, že oba weby dodáváme my (vyjma
 grafiky). Administrace stránek je součást Žanety. Žaneta je totiž cool
 girl.
 
-<http://2.bp.blogspot.com/-44U82QyPo6E/VAbEB7FfA6I/AAAAAAAAAog/M8mMncNi8wM/s1600/zaneta.jpg>
+{% include figure.html cloudinary_src='posts/2014-09-02-jak-jsme-udelali-zanetu__2.jpg' %}

@@ -16,6 +16,7 @@ blogger_orig_url: http://blog.fragaria.cz/2014/04/host-static-site-on-herokucom.
 Recently I needed to publish a simple HTML / CSS / JS GUI prototype
 application for our client. Just for them to see how it would look like
 with basic workflow.
+
 So I asked our administrator where should I put it. He told me that
 despite of it's very easy to have some Apache running on our virtual, we
 didn't have something like that because there's no need for it.
@@ -25,6 +26,7 @@ After short investigation I've found out that
 support for projects based on all modern technologies. So I created my
 account, added my app, cloned the project and pushed my HTML site to
 heroku.
+
 I expected heroku will magically consider my app to be HTML site and
 create apache server for it. But when I tried to push it, heroku
 replied: "Push rejected, no Cedar-supported app detected". Heroku also
@@ -34,10 +36,11 @@ Luckily, Heroku supports php applications, so all we need to do is to
 fool heroku a bit - mimic a php application by simply create empty
 index.php file:
 
-`touch index.php `
-`  `and turn php engine on apache off:
+    touch index.php
 
-`echo 'php_flag engine off' > .htaccess`
+and turn php engine on apache off:
+
+    echo 'php_flag engine off' > .htaccess
 
 When you add these two files to the app you have static site hosted on
 heroku.com.

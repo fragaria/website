@@ -3,9 +3,9 @@ layout: post
 title: Jak děláme open source
 date: '2014-01-27T13:24:00.000+01:00'
 author: Martin Bílek
-tags: 
+tags:
 modified_time: '2014-05-20T14:37:41.940+02:00'
-thumbnail: http://4.bp.blogspot.com/-4_TIxZu4GqA/UuYYj7UYsZI/AAAAAAAAAbQ/I91pTb27W_M/s72-c/Screen+Shot+2014-01-27+at+09.22.10.png
+cloudinary_src: posts/2014-01-27-jak-delame-open-source__1.png
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-4020185454233508416
 blogger_orig_url: http://blog.fragaria.cz/2014/01/jak-delame-open-source.html
 ---
@@ -55,9 +55,8 @@ na [Pypi](https://pypi.python.org/pypi/ella/), kde má Ella každý měsíc
 tisíce
 stažení.
 
-<http://4.bp.blogspot.com/-4_TIxZu4GqA/UuYYj7UYsZI/AAAAAAAAAbQ/I91pTb27W_M/s1600/Screen+Shot+2014-01-27+at+09.22.10.png>
-
-<http://2.bp.blogspot.com/-19G9KD2Cg5k/UuYX64JDOUI/AAAAAAAAAbA/vy9yN6qjeY0/s1600/Screen+Shot+2014-01-27+at+09.24.18.png>
+{% include figure.html cloudinary_src='posts/2014-01-27-jak-delame-open-source__1.png' %}
+{% include figure.html cloudinary_src='posts/2014-01-27-jak-delame-open-source__2.png' %}
 
 ### GAP a GAPI
 
@@ -67,7 +66,7 @@ psali, takže zde přidám již jen několik čísel z
 [GitHubu](https://github.com/czervenka/gap) a
 [Pypi](https://pypi.python.org/pypi/gap).
 
-<http://1.bp.blogspot.com/-VqMZmauHCrA/UuY4A98ii0I/AAAAAAAAAbk/I8Xcb_9Srl0/s1600/Screen+Shot+2014-01-27+at+11.41.13.png>
+{% include figure.html cloudinary_src='posts/2014-01-27-jak-delame-open-source__3.png' %}
 
 ### BorIS
 
@@ -79,7 +78,7 @@ informaci o tom, že BorISe používá již cca 10 zařízení z ČR. Tím však
 ambice projektu zdaleka nekončí a těšíme se na to, až hranice ČR
 překročíme.
 
-<http://3.bp.blogspot.com/-kuxQWdFJBsY/UuY41glTa7I/AAAAAAAAAbw/0ecn2drqyMI/s1600/Screen+Shot+2014-01-27+at+11.44.43.png>
+{% include figure.html cloudinary_src='posts/2014-01-27-jak-delame-open-source__4.png' %}
 
 ### A co ještě máme?
 

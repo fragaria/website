@@ -66,19 +66,21 @@ svojom počítači nainštalovaný nodejs a jeho balíkovací systém **npm**.
 
 Štruktúra projektu je myslím vypovedajúca sama za seba:
 
-`src/`
-`   assets/`
-`       coffee/`
-`       less/`
-`   templates/`
-`       layouts/`
-`       pages/`
-`       partials/`
-`   i18n/`
-`   data/`
-`   Gruntfile.coffee`
-`   .bower.json`
-`   package.json `
+```
+src/
+   assets/
+       coffee/
+       less/
+   templates/
+       layouts/
+       pages/
+       partials/
+   i18n/
+   data/
+   Gruntfile.coffee
+   .bower.json
+  package.json
+```
 
 V `layouts` sa nachádza hlavná šablóna, ktorá je použitá pri generovaní
 každej stránky.

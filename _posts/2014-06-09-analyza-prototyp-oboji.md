@@ -25,10 +25,7 @@ manažer – v lepším případě přizná, že tomu vůbec nerozumí, v horš�
 schválí a v dalších fázích projektu není o překvapení
 nouze.
 
-|                                                                                             |
-| :-----------------------------------------------------------------------------------------: |
-| ![Entity diagram](http://upload.wikimedia.org/wikipedia/commons/7/72/ER_Diagram_MMORPG.png) |
-|                            Takhle si tu aplikaci představujete?                             |
+{% include figure.html src='http://upload.wikimedia.org/wikipedia/commons/7/72/ER_Diagram_MMORPG.png' caption='Takhle si tu aplikaci představujete?' %}
 
 Oproti tomu v případě prototypu zákazník ihned vidí, jak celá aplikace
 funguje a velmi rychle je odhalena většina nedomyšleností v zadání,

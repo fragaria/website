@@ -10,12 +10,12 @@ tags:
 - desktop
 - chrome
 modified_time: '2014-02-07T12:47:22.016+01:00'
-thumbnail: http://1.bp.blogspot.com/-9xbyhIhPz_c/UvOZHgiv77I/AAAAAAAAATg/UtDizEnZI7M/s72-c/Ilustracni_tea_clock.png
+cloudinary_src: posts/2014-02-07-piseme-desktopove-aplikace-v-html__1.png
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-34108286215423535
 blogger_orig_url: http://blog.fragaria.cz/2014/02/piseme-desktopove-aplikace-v-html.html
 ---
 
-<http://1.bp.blogspot.com/-9xbyhIhPz_c/UvOZHgiv77I/AAAAAAAAATg/UtDizEnZI7M/s1600/Ilustracni_tea_clock.png>
+{% include figure.html cloudinary_src='posts/2014-02-07-piseme-desktopove-aplikace-v-html__1.png' %}
 
 Nedávno jsem do mailu (díky Honzo\!), dostal článek o tom, že Chrome
 Desktop Apps už [fungují i na
@@ -39,8 +39,6 @@ Navíc u nových verzí Chrome je dole na liště tzv. Chrome App Launcher,
 což je jednoduchý způsob, jak spustit konkrétní
 aplikaci.
 
-<http://2.bp.blogspot.com/_CaL3IUbss-ZIuoVlndCzxRXGVe_-XU8ffHI2r4P-kBZdmMPHgONT_Xxk2Is_yW3GkcH_jtZQrsegqZu93pKftNT7lpW-LRY9-WXRYvpTMm6nTRdWOzSjmM4>
-
 ### Jak to šlo?
 
 [Zdrojový kód](https://github.com/krtek/Tea-clock) původní aplikace je
@@ -51,7 +49,7 @@ uživatelské rozhraní aplikace razantně zmenšit – aplikace má rozměr jen
 380x380
 pixelů.
 
-<http://2.bp.blogspot.com/-mfXxFK5pcQw/UvOXlsAD3JI/AAAAAAAAATE/4Vkwoc0gJ4s/s1600/Screen+Shot+2014-02-02+at+11.28.36.png>
+{% include figure.html cloudinary_src='posts/2014-02-07-piseme-desktopove-aplikace-v-html__2.png' %}
 
 V obou případech jsem použil [Twitter
 Bootstrap](http://getbootstrap.com/), nemusel jsem tedy nic vymýšlet a
@@ -110,6 +108,6 @@ z Chrome Web Store. A dejte mi vědět, jak chodí?
 A běží i na mobilu? No
 jéje\!
 
-<http://3.bp.blogspot.com/-QlcvLHxvtVk/UvOXmPDVUmI/AAAAAAAAATI/T2S8HEuTRjw/s1600/android.png>
+{% include figure.html cloudinary_src='posts/2014-02-07-piseme-desktopove-aplikace-v-html__3.png' %}
 
 Ale o tom až příště.

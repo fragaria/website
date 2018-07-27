@@ -3,7 +3,7 @@ layout: post
 title: Náš technologický stack - klient
 date: '2013-12-19T12:08:00.000+01:00'
 author: Lukáš Marek
-tags: 
+tags:
 modified_time: '2013-12-19T12:08:33.948+01:00'
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-796362602360585435
 blogger_orig_url: http://blog.fragaria.cz/2013/12/nas-technologicky-stack-klient.html
@@ -56,13 +56,13 @@ ukecaný.
 [Coffescript](http://coffeescript.org/) je něco jako Groovy pro Javu.
 Konečně můžu napsat:
 
-    for x in [1, 2, 3]:
-     console.log("Number: #{x}")
+{% highlight coffeescript %}
+for x in [1, 2, 3]:
+    console.log("Number: #{x}")
+{% endhighlight %}
 
-a nemusím počítat indexy pole jak trotl.
-
-Tohle je samozřejmě jen jedna z výhod Coffeescriptu, je jich ještě
-záhon.
+a nemusím počítat indexy pole jak trotl. Tohle je samozřejmě jen jedna z výhod
+Coffeescriptu, je jich ještě záhon.
 
 Na druhou stranu, nešikovný "bastlič" dokáže v Coffeescriptu kód dost
 zašmodrchat. Ale to platí asi ve všech jazycích.
@@ -90,12 +90,14 @@ ale instalují se pomocí:
 
 a závislosti se ukládají do `bower.json` v pěkně čitelné podobě:
 
-    "dependencies": {
-        "angular": "v1.2.0-rc.2",
-        "bootstrap": "v3.0.0",
-        "jquery": "~2.0.3",
-        "jquery-ui": "~1.10.3"
-    }
+{% highlight json %}
+"dependencies": {
+    "angular": "v1.2.0-rc.2",
+    "bootstrap": "v3.0.0",
+    "jquery": "~2.0.3",
+    "jquery-ui": "~1.10.3"
+}
+{% endhighlight %}
 
 No a Grunt pěkně zkompiluje Coffeescripty do Javascriptů, prožene je
 testy, zmenší je, z LESS souborů udělá CSS soubory a vůbec připraví

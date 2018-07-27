@@ -10,7 +10,7 @@ tags:
 - modules
 - angularjs
 modified_time: '2014-08-11T14:52:42.400+02:00'
-thumbnail: http://3.bp.blogspot.com/-vhRlyVNm9wM/U-TmRNSdkxI/AAAAAAAAAYA/o4H8WBdQHUk/s72-c/Screen+Shot+2014-08-08+at+15.44.22.png
+cloudinary_src: posts/2014-08-11-modular-menu-with-angularjs__1.png
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-413656719071260947
 blogger_orig_url: http://blog.fragaria.cz/2014/08/modular-menu-with-angularjs.html
 ---
@@ -19,10 +19,9 @@ Recently, I had to design an AngularJS application that would be highly
 modular. The idea was to let each module to create its own menu items
 and its own routes.
 
-The final application should look like
-this:
+The final application should look like this:
 
-<http://3.bp.blogspot.com/-vhRlyVNm9wM/U-TmRNSdkxI/AAAAAAAAAYA/o4H8WBdQHUk/s1600/Screen+Shot+2014-08-08+at+15.44.22.png>
+{% include figure.html cloudinary_src='posts/2014-08-11-modular-menu-with-angularjs__1.png' %}
 
 The menu on the left should be generated *on-the-fly*, based on the
 requirements of individual modules.

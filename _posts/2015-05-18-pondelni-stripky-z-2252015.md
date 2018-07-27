@@ -9,7 +9,7 @@ tags:
 - trenujpamet
 - dash
 modified_time: '2015-05-26T12:52:08.842+02:00'
-thumbnail: http://1.bp.blogspot.com/-_tOz57fyTrM/VVnWgI-um6I/AAAAAAAAAg4/ctMVG-2AlW0/s72-c/IMG_20150515_130931.jpg
+cloudinary_src: posts/2015-05-18-pondelni-stripky-z-2252015__1.jpg
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-5315211502016006051
 blogger_orig_url: http://blog.fragaria.cz/2015/05/pondelni-stripky-z-2252015.html
 ---
@@ -25,7 +25,7 @@ udělat externí obrazovku pro Mac (případně i pro PC). Funguje to
 relativně rychle a dobře, takže vřele
 doporučuji.
 
-[![](http://1.bp.blogspot.com/-_tOz57fyTrM/VVnWgI-um6I/AAAAAAAAAg4/ctMVG-2AlW0/s400/IMG_20150515_130931.jpg)](http://1.bp.blogspot.com/-_tOz57fyTrM/VVnWgI-um6I/AAAAAAAAAg4/ctMVG-2AlW0/s1600/IMG_20150515_130931.jpg)
+{% include figure.html cloudinary_src='posts/2015-05-18-pondelni-stripky-z-2252015__1.jpg' %}
 
 ### [Open Web Apps for Android](https://developer.mozilla.org/en/Marketplace/Options/Open_web_apps_for_android)
 
@@ -63,4 +63,4 @@ už jen mačkáš.
 My v kanclu máme místo dvou tlačítek (*kafe* a *pivko*) Martina &
 Martina.
 
-[![](http://3.bp.blogspot.com/-pOAJ-oHnpng/VVnWgapXY4I/AAAAAAAAAhE/-3KBvTepRCk/s400/IMG_20130214_094159.jpg)](http://3.bp.blogspot.com/-pOAJ-oHnpng/VVnWgapXY4I/AAAAAAAAAhE/-3KBvTepRCk/s1600/IMG_20130214_094159.jpg)
+{% include figure.html cloudinary_src='posts/2015-05-18-pondelni-stripky-z-2252015__2.jpg' %}

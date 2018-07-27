@@ -40,8 +40,12 @@ A tady pomůže Path Picker. Stačí poslat výstup příkazu přes *pajpu* do
 `fpp` a potom v přehledném rozhraní si vybrat jednotlivé soubory a hrát
 si s nimi.
 
+<iframe src="https://asciinema.org/a/19519/embed?" id="asciicast-iframe-19519" name="asciicast-iframe-19519" scrolling="no" allowfullscreen="true" style="overflow: hidden; margin: 0px; border: 0px; display: inline-block; width: 640px; float: none; visibility: visible; height: 499px;"></iframe>
+
 **Update:** Robin, náš vim guru, mě upozornil, že něco podobného umí i
 čistý vim, pomocí příkazu `gf` (go to file). Funguje to asi takhle:
+
+<iframe src="https://asciinema.org/a/19900/embed?" id="asciicast-iframe-19900" name="asciicast-iframe-19900" scrolling="no" allowfullscreen="true" style="overflow: hidden; margin: 0px; border: 0px; display: inline-block; width: 640px; float: none; visibility: visible; height: 499px;"></iframe>
 
 ### Rychlé tipy na závěr
 

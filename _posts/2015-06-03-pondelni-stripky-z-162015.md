@@ -8,7 +8,7 @@ tags:
 - github
 - svn
 modified_time: '2015-06-03T13:16:47.312+02:00'
-thumbnail: http://2.bp.blogspot.com/-PJqkZgIC2yo/VW66Xb-BmtI/AAAAAAAADn8/r8aqwVi91_s/s72-c/20150603_101512.jpg
+cloudinary_src: posts/2015-06-03-pondelni-stripky-z-162015__1.jpg
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-7027170660730151741
 blogger_orig_url: http://blog.fragaria.cz/2015/06/pondelni-stripky-z-162015.html
 ---
@@ -53,4 +53,4 @@ Jak je vidět, informačních střípků nebylo minulý týden mnoho. Nicméně
 ještě jedny střípky se nám
 "urodily".
 
-[![](http://2.bp.blogspot.com/-PJqkZgIC2yo/VW66Xb-BmtI/AAAAAAAADn8/r8aqwVi91_s/s320/20150603_101512.jpg)](http://2.bp.blogspot.com/-PJqkZgIC2yo/VW66Xb-BmtI/AAAAAAAADn8/r8aqwVi91_s/s1600/20150603_101512.jpg)
+{% include figure.html cloudinary_src='posts/2015-06-03-pondelni-stripky-z-162015__1.jpg' %}

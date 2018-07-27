@@ -9,7 +9,7 @@ tags:
 - divshot
 - charlieapp
 modified_time: '2015-03-09T13:25:57.678+01:00'
-thumbnail: http://1.bp.blogspot.com/-mRnmtn5_PA8/VP2PzKx6PKI/AAAAAAAAAf0/uASEomFO8PM/s72-c/Screen%2BShot%2B2015-03-09%2Bat%2B12.53.55.png
+cloudinary_src: posts/2015-03-09-pondelni-stripky-z-932015__1.png
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-4958115397799822342
 blogger_orig_url: http://blog.fragaria.cz/2015/03/pondelni-stripky-z-932015.html
 ---
@@ -31,7 +31,7 @@ jeho firmě. Navíc Charlie zkusí zjistit, jestli máte společné zájmy a
 ukáže pár posledních
 tweetů.
 
-[![](http://1.bp.blogspot.com/-mRnmtn5_PA8/VP2PzKx6PKI/AAAAAAAAAf0/uASEomFO8PM/s400/Screen%2BShot%2B2015-03-09%2Bat%2B12.53.55.png)](http://1.bp.blogspot.com/-mRnmtn5_PA8/VP2PzKx6PKI/AAAAAAAAAf0/uASEomFO8PM/s1600/Screen%2BShot%2B2015-03-09%2Bat%2B12.53.55.png)
+{% include figure.html cloudinary_src='posts/2015-03-09-pondelni-stripky-z-932015__1.png' %}
 
 ### Nativescript
 

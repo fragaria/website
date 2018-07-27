@@ -33,12 +33,14 @@ Jasně. Standardem v posílání hromadných mailů je
 projektů. Mailgun má ale velmi hezké API, takže posílání hromadných
 mailů je hračka. Koneckonců si to zkuste sami:
 
-    curl -s —user 'api:key-3ax6xnjp29jd6fds4gc373sgvjxteol0' \
-        https://api.mailgun.net/v2/samples.mailgun.org/messages \
-        -F from='Čtenář blogu <excited@samples.mailgun.org>' \
-        -F to='info@fragaria.cz' \
-        -F subject='Ahoj' \
-        -F text='Ahoj klucka z Fragarie!'
+{% highlight shell %}
+curl -s —user 'api:key-3ax6xnjp29jd6fds4gc373sgvjxteol0' \
+    https://api.mailgun.net/v2/samples.mailgun.org/messages \
+    -F from='Čtenář blogu <excited@samples.mailgun.org>' \
+    -F to='info@fragaria.cz' \
+    -F subject='Ahoj' \
+    -F text='Ahoj klucka z Fragarie!'
+{% endhighlight %}
 
 ### Hosting90
 

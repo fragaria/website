@@ -10,7 +10,7 @@ tags:
 - angularjs
 - android
 modified_time: '2015-05-11T13:09:37.752+02:00'
-thumbnail: http://4.bp.blogspot.com/-KgcQ8JceAMQ/VUdZuprHrZI/AAAAAAAAAgk/Z8vnHC1cPo4/s72-c/IMG_20150504_091637.jpg
+cloudinary_src: posts/2015-05-04-pondelni-stripky-z-452014__1.jpg
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-6188042518687843419
 blogger_orig_url: http://blog.fragaria.cz/2015/05/pondelni-stripky-z-452014.html
 ---
@@ -63,4 +63,4 @@ A rychlá zpráva na závěr. Kofein ve spreji nám už dorazil, právě ho
 intenzivně
 testujeme.
 
-[![](http://4.bp.blogspot.com/-KgcQ8JceAMQ/VUdZuprHrZI/AAAAAAAAAgk/Z8vnHC1cPo4/s400/IMG_20150504_091637.jpg)](http://4.bp.blogspot.com/-KgcQ8JceAMQ/VUdZuprHrZI/AAAAAAAAAgk/Z8vnHC1cPo4/s1600/IMG_20150504_091637.jpg)
+{% include figure.html cloudinary_src='posts/2015-05-04-pondelni-stripky-z-452014__1.jpg' %}

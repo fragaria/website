@@ -10,7 +10,7 @@ tags:
 - elasticsearch
 - python
 modified_time: '2014-11-14T10:22:42.664+01:00'
-thumbnail: http://4.bp.blogspot.com/-4Ws4a3qrwx0/VGDSstnVTBI/AAAAAAAAE-g/wufsc4l39kU/s72-c/Sni%CC%81mek%2Bobrazovky%2B2014-11-10%2Bv%C2%A015.58.11.png
+cloudinary_src: posts/2014-11-14-fulltext-cesky-pomoci-djanga__1.png
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-3491892572665389018
 blogger_orig_url: http://blog.fragaria.cz/2014/11/fulltext-cesky-pomoci-djanga.html
 ---
@@ -44,7 +44,9 @@ dokumentaci](http://www.elasticsearch.com/guide/en/elasticsearch/reference/curre
 
 Na Macu je postup za použítí Homebrew snadný jak facka:
 
-`brew install elasticsearch`
+{% highlight shell %}
+brew install elasticsearch
+{% endhighlight %}
 
 Jakmile bude mít Homebrew hotovo, musíme ještě udělat jednu věc.
 Elasticsearch totiž pochopitelně out-of-box neumí česky, což ho je
@@ -64,9 +66,14 @@ adresáře pro Elasticsearch. Na Macu to je adresář
 `/usr/local/Cellar/elasticsearch/[VERZE]/config`. Výsledkem by měla být
 následující adresářová struktura:
 
-`/config    /hunspell        /cs_CZ            cs_CZ.aff           
-cs_CZ.dic            settings.yml`
-`  `
+```
+/config
+    /hunspell
+        /cs_CZ
+            cs_CZ.aff           
+            cs_CZ.dic
+            settings.yml`
+```
 
 ### 2\. Instalace django-haystack
 
@@ -75,19 +82,44 @@ také potřebovat knihovnu **elasticsearch** s Pythoními bindingy. To
 uděláte snadno pomocí **pipu** (přičemž předpokládám, že virtualenv
 již máte aktivovaný):
 
-`pip install django-haystack elasticsearch`
-`  `Abychom mohli používat češtinu, budeme muset nainstalovat ještě
+{% highlight shell %}
+pip install django-haystack elasticsearch
+{% endhighlight %}
+
+Abychom mohli používat češtinu, budeme muset nainstalovat ještě
 vylepšený Elasticsearch backend, který nám umožní upravit konfiguraci:
 
-`pip install elasticstack `
-`  `Dále musíme tyto Django appky přidat do `INSTALLED_APPS`. Otevřeme
+{% highlight shell %}
+pip install elasticstack
+{% endhighlight %}
+
+Dále musíme tyto Django appky přidat do `INSTALLED_APPS`. Otevřeme
 si tedy `settings.py` naší aplikace a upravíme `INSTALLED_APPS` aby
 vypadaly cca takto:
+
+{% highlight python %}
+INSTALLED_APPS = [
+    ...
+    'haystack',
+    'elasticstack',
+    ...
+]
+{% endhighlight %}
 
 ### 3\. Konfigurace
 
 Nyní musíme haystack správně nakonfigurovat. Otevřeme si settings.py
 naší aplikace a přidáme následující kus kódu:
+
+{% highlight python %}
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'elasticstack.backends.ConfigurableElasticSearchEngine',
+        'URL': '127.0.0.1:9200',
+        'INDEX_NAME': 'my_custom_index',
+    },
+}
+{% endhighlight %}
 
 Toto nastavení říká, že pro fulltext se má použít backend z
 elasticstacku na adrese `127.0.0.1` a portu `9200` (což je výchozí
@@ -97,6 +129,41 @@ nastavení pro Elasticsearch). Náš index se bude jmenovat
 Abychom při vytváření indexu použili speciální konfiguraci pro češtinu a
 také náš český slovník, musíme přidat ještě další část, kterou opět
 umožňuje elasticstack:
+
+{% highlight python %}
+ELASTICSEARCH_INDEX_SETTINGS = {
+    'settings': {
+        'analysis': {
+            'analyzer' : {
+                'cs_hunspell': {
+                    'type': 'custom',
+                    'tokenizer': 'standard',
+                    'filter': ['stopwords_CZ', 'lowercase', 'hunspell_CZ', 'asciifolding', 'stopwords_CZ', 'remove_duplicities']
+                }
+            },
+            'filter': {
+                'stopwords_CZ': {
+                    'type': 'stop',
+                    'stopwords': ["právě", "že", "_czech_"],
+                    'ignore_case': True
+                },
+                'hunspell_CZ': {
+                    'type': 'hunspell',
+                    'locale': 'cs_CZ',
+                    'dedup': True,
+                    'recursion_level': 0
+                },
+                'remove_duplicities': {
+                    'type': 'unique',
+                    'only_on_same_position': True
+                }
+            }
+        }
+    }
+}
+
+ELASTICSEARCH_DEFAULT_ANALYZER = 'cs_hunspell'
+{% endhighlight %}
 
 Tato část si jistě zaslouží podrobnější popis.
 
@@ -148,6 +215,21 @@ aplikaci**, takže není nutné je někde uvádět, nebo registrovat.
 Příkladem jednoduché definice indexu může například následující
 třída:
 
+{% highlight python %}
+from haystack import indexes
+from myproject.app import models
+
+class PageIndex(indexes.SearchIndex, indexes.Indexable):
+    text = indexes.CharField(document=True, use_template=True)
+    title = indexes.CharField(model_attr='title', boost=5)
+
+    def get_model(self):
+        return models.Page
+
+    def index_queryset(self, using=None):
+        return self.get_model().objects.published()
+{% endhighlight %}
+
 Pojďme se blíže podívat na to, co tato definice říká. Jedná se o index
 nad modelem `Page`, který reprezentuje jednoduchou CMS stránku. Tento
 index bude mít dva atributy.
@@ -170,16 +252,20 @@ pouze atribut `text` a nic jiného. Ostatní atributy jsou uvedeny jen
 kvůli tomu, abychom mohli tyto při shodě zvýhodnit. Šablonu pro
 vygenerování textu django-haystack hledá na cestě:
 
-`[TEMPLATE_DIR]/search/indexes/[APP_LABEL]/[MODEL]_[NAZEV
-ATRIBUTU].txt`
+    [TEMPLATE_DIR]/search/indexes/[APP_LABEL]/[MODEL]_[NAZEV_ATRIBUTU].txt
 
 V našem případě by to tedy mohla být cesta:
 
-`templates/search/indexes/app/page_text.txt`
+    templates/search/indexes/app/page_text.txt
 
 V šabloně automaticky dostaneme k dispozici proměnnou `object`, která
 odpovídá instanci daného modelu, která se zrovna do indexu přidává.
 Obsah této šablony můžeme použít zhruba následující:
+
+    {{ object.title }}
+    {{ object.author.get_full_name }}
+    {{ object.perex|striptags }}
+    {{ object.content|striptags }}
 
 Do indexu tedy přidáváme informaci o titulku, celém jméně autora co
 stránku vytvořil, její perex (bez HTML značek) a celý její obsah (opět
@@ -194,8 +280,30 @@ Pokud jste se dostali až sem, můžeme nyní spustit Elasticsearch a
 vybudovat náš první index. Elasticsearch na Macu spustíme následovně a
 měl by nás uvítat konzolový výstup podobný tomu zde uvedenému.
 
+{% highlight shell %}
+you@computer:~$ elasticsearch --config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
+
+[2014-11-10 10:41:49,409][INFO ][node                     ] [Toad-In-Waiting] version[1.3.4], pid[99851], build[a70f3cc/2014-09-30T09:07:17Z]
+[2014-11-10 10:41:49,411][INFO ][node                     ] [Toad-In-Waiting] initializing ...
+[2014-11-10 10:41:58,357][INFO ][node                     ] [Toad-In-Waiting] initialized
+[2014-11-10 10:41:58,358][INFO ][node                     ] [Toad-In-Waiting] starting ...
+[2014-11-10 10:41:58,491][INFO ][transport                ] [Toad-In-Waiting] bound_address {inet[/127.0.0.1:9300]}, publish_address {inet[/127.0.0.1:9300]}
+[2014-11-10 10:41:58,511][INFO ][discovery                ] [Toad-In-Waiting] xaralis/oIhw_OW3Trim_30_TOz_Mw
+[2014-11-10 10:42:01,527][INFO ][cluster.service          ] [Toad-In-Waiting] new_master [Toad-In-Waiting][oIhw_OW3Trim_30_TOz_Mw][matrix][inet[/127.0.0.1:9300]], reason: zen-disco-join (elected_as_master)
+[2014-11-10 10:42:01,558][INFO ][http                     ] [Toad-In-Waiting] bound_address {inet[/127.0.0.1:9200]}, publish_address {inet[/127.0.0.1:9200]}
+[2014-11-10 10:42:01,559][INFO ][node                     ] [Toad-In-Waiting] started
+{% endhighlight %}
+
 V další konzoli spustíme management commad od haystacku, který zajistí
 vybudování indexu:
+
+{% highlight shell %}
+you@computer:/projects/myproject$ python manage.py rebuild_index --noinput
+
+Removing all documents from your index because you said so.
+All documents removed.
+Indexing 164 Stránky
+{% endhighlight %}
 
 Jakmile příkaz doběhne, máme vše připraveno k vyhledávání.
 
@@ -208,7 +316,55 @@ tento účel použít.
 
 Do našeho `urls.py` přidáme:
 
+{% highlight python %}
+...
+(r'^vyhledavani/', include('haystack.urls')),
+...
+{% endhighlight %}
+
 A zbývá již pouze vytvořit šablonu (`templates/search/search.html`):
+
+{% highlight html %}
+{% raw %}
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Vyhledávání</h2>
+
+    <form method="get" action=".">
+        <table>
+            {{ form.as_table }}
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <input type="submit" value="Hledat">
+                </td>
+            </tr>
+        </table>
+
+        {% if query %}
+            <h3>Výsledky</h3>
+
+            {% for result in page.object_list %}
+                <p>
+                    <a href="{{ result.object.get_absolute_url }}">{{ result.object.title }}</a>
+                </p>
+            {% empty %}
+                <p>Nic nebylo nalezeno.</p>
+            {% endfor %}
+
+            {% if page.has_previous or page.has_next %}
+                <div>
+                    {% if page.has_previous %}<a href="?q={{ query }}&amp;page={{ page.previous_page_number }}">{% endif %}&laquo; Předchozí{% if page.has_previous %}</a>{% endif %}
+                    |
+                    {% if page.has_next %}<a href="?q={{ query }}&amp;page={{ page.next_page_number }}">{% endif %}Následující &raquo;{% if page.has_next %}</a>{% endif %}
+                </div>
+            {% endif %}
+        {% endif %}
+    </form>
+{% endblock %}
+{% endraw %}
+{% endhighlight %}
 
 Když nyní do prohlížeče zadáte adresu /vyhledavani/, dostanete se na
 funkční stránku s vyhledáváním\! Elasticsearch bude umět česky a bude
@@ -225,4 +381,4 @@ vyhledávání na webu [CK Adventura](https://www.adventura.cz/),
 výsledek může vypadat třeba
 takhle:
 
-<http://4.bp.blogspot.com/-4Ws4a3qrwx0/VGDSstnVTBI/AAAAAAAAE-g/wufsc4l39kU/s1600/Sni%CC%81mek%2Bobrazovky%2B2014-11-10%2Bv%C2%A015.58.11.png>
+{% include figure.html cloudinary_src='posts/2014-11-14-fulltext-cesky-pomoci-djanga__1.png' %}

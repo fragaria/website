@@ -10,7 +10,7 @@ tags:
 - duckduckgo
 - angularjs
 modified_time: '2015-05-25T13:17:04.529+02:00'
-thumbnail: http://2.bp.blogspot.com/-hPLZGd5lDXk/VWMEAvKoxqI/AAAAAAAAAh0/CyiXMewlbYw/s72-c/Screen%2BShot%2B2015-05-25%2Bat%2B11.47.16.png
+cloudinary_src: posts/2015-05-25-pondelni-stripky-z-2552015__1.png
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-1722315939978469470
 blogger_orig_url: http://blog.fragaria.cz/2015/05/pondelni-stripky-z-2552015.html
 ---
@@ -30,14 +30,14 @@ Pokud jste ho tehdy zkusili, zřejmě jste zažili lehké zklamání –
 rozhodně nedosahoval kvalit Google, možná ani
 Seznamu.
 
-[![](http://2.bp.blogspot.com/-hPLZGd5lDXk/VWMEAvKoxqI/AAAAAAAAAh0/CyiXMewlbYw/s400/Screen%2BShot%2B2015-05-25%2Bat%2B11.47.16.png)](http://2.bp.blogspot.com/-hPLZGd5lDXk/VWMEAvKoxqI/AAAAAAAAAh0/CyiXMewlbYw/s1600/Screen%2BShot%2B2015-05-25%2Bat%2B11.47.16.png)
+{% include figure.html cloudinary_src='posts/2015-05-25-pondelni-stripky-z-2552015__1.png' %}
 
 Dnes je situace jiná. Duck Duck go už vyhledává celkem slušně, umí
 česky, má (podle mě) hezčí rozhraní než Google a celkem slušně rozumí
 kontextu
 dotazů.
 
-[![](http://3.bp.blogspot.com/-zQLA-tD3wHU/VWMEAtgLpQI/AAAAAAAAAh4/aCHK26EJ5D4/s400/Screen%2BShot%2B2015-05-25%2Bat%2B11.55.20.png)](http://3.bp.blogspot.com/-zQLA-tD3wHU/VWMEAtgLpQI/AAAAAAAAAh4/aCHK26EJ5D4/s1600/Screen%2BShot%2B2015-05-25%2Bat%2B11.55.20.png)
+{% include figure.html cloudinary_src='posts/2015-05-25-pondelni-stripky-z-2552015__2.png' %}
 
 ### Estonské e-občanství
 

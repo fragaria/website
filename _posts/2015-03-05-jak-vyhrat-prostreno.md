@@ -9,7 +9,7 @@ tags:
 - nodejs
 - prostreno
 modified_time: '2015-05-13T18:50:33.770+02:00'
-thumbnail: http://3.bp.blogspot.com/-dE37yw9kiTc/VPMxPANTwfI/AAAAAAAAAe4/wduKmRTPMm8/s72-c/Screen%2BShot%2B2015-03-01%2Bat%2B15.40.31.png
+cloudinary_src: posts/2015-03-05-jak-vyhrat-prostreno__1.png
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-3484533274118889772
 blogger_orig_url: http://blog.fragaria.cz/2015/03/jak-vyhrat-prostreno.html
 ---
@@ -45,7 +45,7 @@ Než se pustíme do samotného programování, je potřeba se podívat, jak
 stránky Prostřeno vůbec vypadají. Začneme na [stránce s nejstarším
 vysíláním](http://www.iprima.cz/prostreno/soutezici?day=1267448067).
 
-[![](http://3.bp.blogspot.com/-dE37yw9kiTc/VPMxPANTwfI/AAAAAAAAAe4/wduKmRTPMm8/s400/Screen%2BShot%2B2015-03-01%2Bat%2B15.40.31.png)](http://3.bp.blogspot.com/-dE37yw9kiTc/VPMxPANTwfI/AAAAAAAAAe4/wduKmRTPMm8/s1600/Screen%2BShot%2B2015-03-01%2Bat%2B15.40.31.png)
+{% include figure.html cloudinary_src='posts/2015-03-05-jak-vyhrat-prostreno__1.png' %}
 
 Vidíme pět soutěžících, z nichž František je označen korunkou – vítěz
 kola. Je poznat, že stránky dělal někdo zodpovědný – obrázek každého
@@ -59,15 +59,17 @@ Pro sběr dat jsem si připravil jednoduchý skript v NodeJS, který, který
 načte data ze stránek Primy a uloží je ve formátu JSON do databáze
 Elasticsearch. Formát uložených dat je následující:
 
-    {
-      "predkrm": "Kuřecí salát v broskvi",
-      "hlavni": "Candát s mandlovou nádivkou a šťouchané brambory",
-      "zakusek": "Líná hospodyňka",
-      "id": "jiri-mueller",
-      "winner": true,
-      "gender": "M",
-      "desc": "\n       Je ženatý, má čtyři děti ... atd."
-    }
+{% highlight json %}
+{
+  "predkrm": "Kuřecí salát v broskvi",
+  "hlavni": "Candát s mandlovou nádivkou a šťouchané brambory",
+  "zakusek": "Líná hospodyňka",
+  "id": "jiri-mueller",
+  "winner": true,
+  "gender": "M",
+  "desc": "\n       Je ženatý, má čtyři děti ... atd."
+}
+{% endhighlight %}
 
 Nebudu se tady pouštět do detailů a případného zájemce odkážu na
 [kompletní zdrojové
@@ -84,55 +86,55 @@ dat](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/searc
 Pojďme si pro začátek zjistit nejčastější vítězné polévky. Dotaz do
 Elasticsearch bude vypadat následovně:
 
-``` 
-  {
-    "query": {
-      "match": {
-        winner: true
-      }
-    },
-    "aggregations": {
-      "polevka": {
-        "terms": {
-          "field": "polevka",
-          "size": 10
-        }
+{% highlight json %}
+{
+  "query": {
+    "match": {
+      winner: true
+    }
+  },
+  "aggregations": {
+    "polevka": {
+      "terms": {
+        "field": "polevka",
+        "size": 10
       }
     }
   }
-```
+}
+{% endhighlight %}
 
 a odpověď Elasticsearch serveru bude:
 
-``` 
-  {
-    ...
-    },
-    "aggregations": {
-      "polevka": {
-        "doc_count_error_upper_bound": 5,
-        "sum_other_doc_count": 276,
-        "buckets": [{
-          "key": "polevka",
-          "doc_count": 69
-        }, {
-          "key": "vyvar",
-          "doc_count": 32
-        }, {
-          "key": "nudle",
-          "doc_count": 20
-        }, {
-          "key": "hovezi",
-          "doc_count": 18
-        }, {
-          "key": "kremova",
-          "doc_count": 18
-        }, ...
-        ]
-      }
+{% highlight json %}
+{
+  ...
+  },
+  "aggregations": {
+    "polevka": {
+      "doc_count_error_upper_bound": 5,
+      "sum_other_doc_count": 276,
+      "buckets": [{
+        "key": "polevka",
+        "doc_count": 69
+      }, {
+        "key": "vyvar",
+        "doc_count": 32
+      }, {
+        "key": "nudle",
+        "doc_count": 20
+      }, {
+        "key": "hovezi",
+        "doc_count": 18
+      }, {
+        "key": "kremova",
+        "doc_count": 18
+      }, ...
+      ]
     }
   }
-```
+}
+{% endhighlight %}
 
 Nejčastějším slovem mezi vítěznými polévkami je překvapivě **polévka**.
 To se dalo čekat. Ale hned na dalších místech je **vývar**, **nudle** a
@@ -144,61 +146,61 @@ Pod tímhle šíleným pojmem se skrývá užitečná pomůcka. Dokáže zjistit
 jaká slova se **vyskytují mezi vítěznými polévkami** a naopak **nejsou
 mezi ostatními**. Příklad? Tady je:
 
-``` 
-  {
-    "query": {
-      "match": {
-        winner: true
-      }
-    },
-    "aggregations": {
-      "polevka_odchylky": {
-        "terms": {
-          "field": "polevka",
-          "size": 10
-        }
+{% highlight json %}
+{
+  "query": {
+    "match": {
+      winner: true
+    }
+  },
+  "aggregations": {
+    "polevka_odchylky": {
+      "terms": {
+        "field": "polevka",
+        "size": 10
       }
     }
   }
-```
+}
+{% endhighlight %}
 
 a odpověď?
 
-``` 
-  {
-    ...
-    },
-    "aggregations": {
-      "polevka_odchylky": {
-        "doc_count": 245,
-        "buckets": [{
-          "key": "domacim",
-          "doc_count": 4,
-          "score": 0.05084548104956269,
-          "bg_count": 4
-        }, {
-          "key": "kremova",
-          "doc_count": 18,
-          "score": 0.037570060094008456,
-          "bg_count": 49
-        }, {
-          "key": "cibulova",
-          "doc_count": 4,
-          "score": 0.037411078717201174,
-          "bg_count": 5
-        }, {
-          "key": "celestynskymi",
-          "doc_count": 5,
-          "score": 0.026239067055393583,
-          "bg_count": 9
-        }, {
-          "key": "spenatova",
-          "doc_count": 3,
-          "score": 0.025539358600583092,
-          "bg_count": 4
-        }...
-        ]
-```
+{% highlight json %}
+{
+  ...
+  },
+  "aggregations": {
+    "polevka_odchylky": {
+      "doc_count": 245,
+      "buckets": [{
+        "key": "domacim",
+        "doc_count": 4,
+        "score": 0.05084548104956269,
+        "bg_count": 4
+      }, {
+        "key": "kremova",
+        "doc_count": 18,
+        "score": 0.037570060094008456,
+        "bg_count": 49
+      }, {
+        "key": "cibulova",
+        "doc_count": 4,
+        "score": 0.037411078717201174,
+        "bg_count": 5
+      }, {
+        "key": "celestynskymi",
+        "doc_count": 5,
+        "score": 0.026239067055393583,
+        "bg_count": 9
+      }, {
+        "key": "spenatova",
+        "doc_count": 3,
+        "score": 0.025539358600583092,
+        "bg_count": 4
+      }...
+      ]
+{% endhighlight %}
 
 Tady je vidět, že z celkem 4 polévek označených jako **domácí** všechny
 vyhrály. **Cibulové** polévky mají taky slušné skóre: čtyři z pěti.
@@ -224,17 +226,17 @@ nemusí zapínat sporák (36 z 38 nevyhrálo).
 
 Nejčastější vítězné menu vypadá nějak takhle:
 
-**Kuřecí salát**
-**Hovězí vývar**
-**Kuře s bramborem**
-**Koláč**
+  - **Kuřecí salát**
+  - **Hovězí vývar**
+  - **Kuře s bramborem**
+  - **Koláč**
 
 Ale černým koněm soutěže bude následují menu:
 
-**Pancetta** (nebo salát s rajčátky)
-**Domácí cibulová polévka** (pozor na to domácí\!)
-**Marinovaná vepřová pečeně s bramborem**
-**Čokoládové sufflé** (nebo palačinka nebo medovník)
+  - **Pancetta** (nebo salát s rajčátky)
+  - **Domácí cibulová polévka** (pozor na to domácí\!)
+  - **Marinovaná vepřová pečeně s bramborem**
+  - **Čokoládové sufflé** (nebo palačinka nebo medovník)
 
 Proč? Agregace podstatných výrazů říká, že když se jakékoliv z těchto
 jídel objevilo v soutěži, tak bylo součástí vítězného menu.

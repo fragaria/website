@@ -7,7 +7,7 @@ tags:
 - debug
 - nodejs
 modified_time: '2015-05-27T10:05:07.012+02:00'
-thumbnail: http://2.bp.blogspot.com/-4tu1uJoUPkc/VWLQzuJptyI/AAAAAAAAAhc/Isv16Hxfbd4/s72-c/node_inspector.png
+cloudinary_src: posts/2015-05-27-debugujeme-v-nodejs__1.png
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-2944406495491192110
 blogger_orig_url: http://blog.fragaria.cz/2015/05/debugujeme-v-nodejs.html
 ---
@@ -65,9 +65,11 @@ která nás blíže zajímají.
 
 Řekněme, že máme tuto jednoduchou funkci:
 
-    function foo(bar) {
-        return bar.reduce(function (curr, prev) {return curr + prev; }, 0);
-    }
+{% highlight javascript %}
+function foo(bar) {
+    return bar.reduce(function (curr, prev) {return curr + prev; }, 0);
+}
+{% endhighlight %}
 
 Dále si představme, že na nějakém místě v naší aplikaci čekáme, že tato
 funkce vrátí konkrétní číslo, třeba 90. Jenže ouha, vrácené číslo je 89.
@@ -75,10 +77,12 @@ Nejjednodušší způsob, jak zjistit proč, je podívat se, jaký argument
 funkce dostává. To můžeme udělat třeba tak, že na vhodné místo umístíme
 breakpoint:
 
-    function foo(bar) {
-        debugger; // Definováno v ECMAScript 5.
-        return bar.reduce(function (curr, prev) {return curr + prev; }, 0);
-    }
+{% highlight javascript %}
+function foo(bar) {
+    debugger; // Definováno v ECMAScript 5.
+    return bar.reduce(function (curr, prev) {return curr + prev; }, 0);
+}
+{% endhighlight %}
 
 Po spuštění aplikace v debug módu (a přeskočení úvodního breakpointu
 pomocí příkazu `cont`) se vykonávání kódu zastaví na řádce obsahující
@@ -147,7 +151,7 @@ použít na všechno, co bylo popsáno v minulé sekci, s plným pohodlím
 grafického uživatelského
 rozhraní.
 
-[![](http://2.bp.blogspot.com/-4tu1uJoUPkc/VWLQzuJptyI/AAAAAAAAAhc/Isv16Hxfbd4/s400/node_inspector.png)](http://2.bp.blogspot.com/-4tu1uJoUPkc/VWLQzuJptyI/AAAAAAAAAhc/Isv16Hxfbd4/s1600/node_inspector.png)
+{% include figure.html cloudinary_src='posts/2015-05-27-debugujeme-v-nodejs__1.png' %}
 
 Závěrem bych tak snad jen řekl, že se zdá, že ladit kód v Node.js není o
 nic těžší nebo jednodušší než na jiných platformách. Alespoň do chvíle,

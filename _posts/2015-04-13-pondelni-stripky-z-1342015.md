@@ -11,7 +11,7 @@ tags:
 - xps13
 - kotlin
 modified_time: '2015-04-13T11:56:05.531+02:00'
-thumbnail: http://3.bp.blogspot.com/-Rp3lFOb4CAM/VSuQaiOeyeI/AAAAAAAAAgM/jS4PFLMn8A4/s72-c/Screenshot%2B2015-04-13%2B10.37.55.png
+cloudinary_src: posts/2015-04-13-pondelni-stripky-z-1342015__1.png
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-4477384220821421398
 blogger_orig_url: http://blog.fragaria.cz/2015/04/pondelni-stripky-z-1342015.html
 ---
@@ -19,8 +19,7 @@ blogger_orig_url: http://blog.fragaria.cz/2015/04/pondelni-stripky-z-1342015.htm
 Ahoj, vítáme vás u dalších *Pondělních střípků*. Tentokrát se podíváme i
 na hardware.
 
-[View image](http://www.gettyimages.com/detail/85795845) |
-[gettyimages.com](http://www.gettyimages.com)
+<iframe src="//embed.gettyimages.com/embed/85795845?et=zRleQL9DSktvpgJVCQTSBw&amp;sig=xVuXJyfB5DMUMoBnj9pEBT_QeUiErBsqmHKYQaq4Jyw=" width="506" height="338" scrolling="no" frameborder="0" style="width: 100%;"></iframe>
 
 ### SnackHost
 
@@ -70,7 +69,7 @@ grafy jsou responsivní – to je za nás velké plus.
 Další výhodou je možnost stylování přes CSS a tvorba vlastních
 pluginů.
 
-[![](http://3.bp.blogspot.com/-Rp3lFOb4CAM/VSuQaiOeyeI/AAAAAAAAAgM/jS4PFLMn8A4/s400/Screenshot%2B2015-04-13%2B10.37.55.png)](http://3.bp.blogspot.com/-Rp3lFOb4CAM/VSuQaiOeyeI/AAAAAAAAAgM/jS4PFLMn8A4/s1600/Screenshot%2B2015-04-13%2B10.37.55.png)
+{% include figure.html cloudinary_src='posts/2015-04-13-pondelni-stripky-z-1342015__1.png' %}
 
 ### Great Cannon
 

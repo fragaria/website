@@ -51,3 +51,5 @@ Překlepy. Napíšu do konzole `gut push` místo `git push`. **Sakra**. A
 přesně takhle (tedy [anglicky fuck](https://github.com/nvbn/thefuck))
 se jmenuje šikovný nástroj, co opraví poslední špatně zadaný příkaz.
 Hele:
+
+<iframe src="https://asciinema.org/a/19258/embed?" id="asciicast-iframe-19258" name="asciicast-iframe-19258" scrolling="no" allowfullscreen="true" style="overflow: hidden; margin: 0px; border: 0px; display: inline-block; width: 640px; float: none; visibility: visible; height: 435px;"></iframe>

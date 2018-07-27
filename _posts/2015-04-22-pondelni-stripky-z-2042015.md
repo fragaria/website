@@ -41,9 +41,12 @@ si nemysleli, že se píše rok 2009.
 Ale víte, že jednotlivé operace v lodash se dají
 řetězit?
 
-`_(records).filter('user').map('user').filter('email').map('email').value();`
 
-[Příklad](http://jsfiddle.net/eyvy22kr/1/).
+    _(records).filter('user').map('user').filter('email').map('email').value();
+
+Příklad tady:
+
+<iframe width="100%" height="300" src="//jsfiddle.net/eyvy22kr/1/embedded/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 ### Watson kuchtík
 

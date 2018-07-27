@@ -9,7 +9,7 @@ tags:
 - sociální odpovědnost
 - django
 modified_time: '2015-07-01T10:58:00.641+02:00'
-thumbnail: http://1.bp.blogspot.com/-2tRUcg1VPYY/VYvpHHGxf5I/AAAAAAAAD00/YbBUSDQMlHE/s72-c/boris-screenshot.png
+cloudinary_src: posts/2015-07-01-boris-hodne-muziky-za-malo-penez__1.png
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-4633371177603778213
 blogger_orig_url: http://blog.fragaria.cz/2015/07/boris-hodne-muziky-za-malo-penez.html
 ---
@@ -21,6 +21,8 @@ a v
 [březnu 2014](http://blog.fragaria.cz/2014/03/boris-moderni-system-pro-nepopularni.html).
 BorIS nyní slaví tři roky provozu, hodilo by se proto v krátkosti
 poděkovat, zhodnotit a tak.
+
+{% include figure.html cloudinary_src='posts/2015-07-01-boris-hodne-muziky-za-malo-penez__1.png' %}
 
 Děkuji všem organizacím působících v drogových službách, které se nebojí
 přejít k systému Boris a také všem, kteří se na vývoji a rozvoji Borise
@@ -84,5 +86,3 @@ vyváženy úsměvy na tvářích pracovníků Vaší organizace.
     [MySQL](http://www.mysql.com/), [Gunicorn](http://gunicorn.org/)
   - Komunikace a řízení:
 [Trello](http://trello.com/)
-
-[![](http://1.bp.blogspot.com/-2tRUcg1VPYY/VYvpHHGxf5I/AAAAAAAAD00/YbBUSDQMlHE/s640/boris-screenshot.png)](http://1.bp.blogspot.com/-2tRUcg1VPYY/VYvpHHGxf5I/AAAAAAAAD00/YbBUSDQMlHE/s1600/boris-screenshot.png)

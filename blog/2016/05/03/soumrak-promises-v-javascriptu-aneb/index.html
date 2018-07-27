@@ -20,7 +20,7 @@
     <meta property="og:description"   content="Dnes si Hynek uzurpoval skoro dvacet minut, aby nám demonstroval jaknahradit promises reaktivním programováním v NodeJS.I Filip, který jinak rýpe do všeho, sledovalvýklad téměř bez dechu. Zkusím  tedy Hynkovu přednášku převyprávět ivám." />
 
     
-        <meta property="og:image"         content="https://4.bp.blogspot.com/-8plEfspkc7Q/VyhRs8Kci2I/AAAAAAAAAn4/bsY3ynVYj18C4-tdg5B6pLvYOmKqdXDkwCLcB/s72-c/236H.jpg" />
+        <meta property="og:image"         content="" />
     
 
     <link rel="stylesheet" href="/website/assets/styles.css">
@@ -64,8 +64,6 @@
         <meta itemprop="headline" content="Soumrak promises v Javascriptu aneb Pondělní střípky z 2.5.2016">
 
         
-            <meta itemprop="image" content="https://4.bp.blogspot.com/-8plEfspkc7Q/VyhRs8Kci2I/AAAAAAAAAn4/bsY3ynVYj18C4-tdg5B6pLvYOmKqdXDkwCLcB/s72-c/236H.jpg">
-        
 
         <div itemprop="publisher" itemtype="http://schema.org/Organization" class="hidden" itemscope>
             <div itemprop="logo" itemtype="http://schema.org/ImageObject" itemscope="">
@@ -101,21 +99,10 @@ nevíte, na co promises jsou, tak vítám do 21. století a doporučuju třeba
 <a href="http://www.html5rocks.com/en/tutorials/es6/promises/">tenhle
 článek</a>.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center"> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><a href="https://4.bp.blogspot.com/-8plEfspkc7Q/VyhRs8Kci2I/AAAAAAAAAn4/bsY3ynVYj18C4-tdg5B6pLvYOmKqdXDkwCLcB/s1600/236H.jpg"><img src="https://4.bp.blogspot.com/-8plEfspkc7Q/VyhRs8Kci2I/AAAAAAAAAn4/bsY3ynVYj18C4-tdg5B6pLvYOmKqdXDkwCLcB/s400/236H.jpg" alt="" /></a></td>
-    </tr>
-    <tr>
-      <td style="text-align: center">(c) http://www.gratisography.com</td>
-    </tr>
-  </tbody>
-</table>
+<figure>
+<img src="https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2016-05-03-soumrak-promises-v-javascriptu-aneb__1.jpg" />
+<figcaption>(c) http://www.gratisography.com</figcaption>
+</figure>
 
 <p>Anebo možná ne. Vypadá to, že i nad promises se začínají stahovat
 mračna. Standard ES6 totiž obsahuje tzv.
@@ -128,6 +115,40 @@ promises.</p>
 <p>Hynek nám to vysvětlil na příkladu unit testu. Následující kus kódu by
 mohl být třeba ze systému na prodej bannerové reklamy:</p>
 
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">it</span><span class="p">(</span><span class="s1">'should create new banner'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">organization</span><span class="p">;</span>
+    <span class="c1">//Inicializace dat</span>
+    <span class="c1">//Smažu všechny organizace</span>
+    <span class="nx">Organization</span><span class="p">.</span><span class="nx">removeAsync</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">//Poté vytvořím jednu testovací</span>
+        <span class="k">return</span> <span class="nx">Organization</span><span class="p">.</span><span class="nx">createAsync</span><span class="p">({</span>
+            <span class="na">name</span><span class="p">:</span> <span class="s1">'Fragaria s.r.o.'</span>
+        <span class="p">});</span>
+    <span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">org</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">organization</span> <span class="o">=</span> <span class="nx">org</span><span class="p">;</span>
+        <span class="c1">//Smažu všechny kampaně</span>
+        <span class="k">return</span> <span class="nx">Campaign</span><span class="p">.</span><span class="nx">removeAsync</span><span class="p">();</span>
+    <span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">//Poté vytvořím jednu testovací</span>
+        <span class="k">return</span> <span class="nx">Campaign</span><span class="p">.</span><span class="nx">createAsync</span><span class="p">({</span>
+            <span class="na">name</span><span class="p">:</span> <span class="s1">'Summer flash sale'</span>
+        <span class="p">});</span>
+    <span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">campaign</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//Vytvořím nový banner</span>
+        <span class="nx">server</span>
+            <span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'/banner'</span><span class="p">)</span>
+            <span class="p">.</span><span class="nx">send</span><span class="p">({</span>
+                <span class="na">name</span><span class="p">:</span> <span class="s1">'Funny kitten #2'</span><span class="p">,</span>
+                <span class="na">organization</span><span class="p">:</span> <span class="nx">organization</span><span class="p">.</span><span class="nx">_id</span><span class="p">.</span><span class="nx">toString</span><span class="p">(),</span>
+                <span class="na">campaign</span><span class="p">:</span> <span class="nx">campaign</span><span class="p">.</span><span class="nx">_id</span><span class="p">.</span><span class="nx">toString</span><span class="p">(),</span>
+            <span class="p">})</span>
+            <span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="s1">'Authorization'</span><span class="p">,</span> <span class="s1">'Bearer '</span> <span class="o">+</span> <span class="nx">adminAuthToken</span><span class="p">)</span>
+            <span class="c1">//A zkontroluju, že se podařilo</span>
+            <span class="p">.</span><span class="nx">expect</span><span class="p">(</span><span class="mi">201</span><span class="p">)</span>
+            <span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="nx">done</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">});</span></code></pre></figure>
+
 <p>I když je kód super jednoduchý a dobře okomentovaný, stejně je tam těch
 promises <strong>prostě moc</strong>. Dá se v tom možná vyznat, ale je to spousta
 <em>boilerplate</em> kódu a čitelnost trpí.</p>
@@ -135,6 +156,36 @@ promises <strong>prostě moc</strong>. Dá se v tom možná vyznat, ale je to sp
 <p>S použitím (zneužitím?) generátorů a
 <a href="http://bluebirdjs.com/docs/api/promise.coroutine.html">couroutine</a> z
 knihovny Bluebird se dostaneme k mnohem čitelnějšímu kódu:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">co</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'bluebird'</span><span class="p">).</span><span class="nx">coroutine</span><span class="p">;</span>
+
+<span class="nx">it</span><span class="p">(</span><span class="s1">'should create new banner'</span><span class="p">,</span> <span class="nx">co</span><span class="p">(</span><span class="kd">function</span><span class="o">*</span> <span class="p">(</span><span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//Inicializace dat</span>
+    <span class="c1">//Smažu všechny organizace</span>
+    <span class="k">yield</span> <span class="nx">Organization</span><span class="p">.</span><span class="nx">removeAsync</span><span class="p">();</span>
+    <span class="c1">//Poté vytvořím jednu testovací</span>
+    <span class="kd">var</span> <span class="nx">organization</span> <span class="o">=</span> <span class="k">yield</span> <span class="nx">Organization</span><span class="p">.</span><span class="nx">createAsync</span><span class="p">({</span>
+        <span class="na">name</span><span class="p">:</span> <span class="s1">'Fragaria s.r.o.'</span>
+    <span class="p">});</span>
+    <span class="c1">//Smažu všechny kampaně</span>
+    <span class="k">yield</span> <span class="nx">Campaign</span><span class="p">.</span><span class="nx">removeAsync</span><span class="p">();</span>
+    <span class="c1">//Poté vytvořím jednu testovací</span>
+    <span class="kd">var</span> <span class="nx">campaign</span> <span class="o">=</span> <span class="k">yield</span> <span class="nx">Campaign</span><span class="p">.</span><span class="nx">createAsync</span><span class="p">({</span>
+        <span class="na">name</span><span class="p">:</span> <span class="s1">'Summer flash sale'</span>
+    <span class="p">});</span>
+    <span class="c1">//Vytvořím nový banner</span>
+    <span class="nx">server</span>
+        <span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'/banner'</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">send</span><span class="p">({</span>
+            <span class="na">name</span><span class="p">:</span> <span class="s1">'Funny kitten #2'</span><span class="p">,</span>
+            <span class="na">organization</span><span class="p">:</span> <span class="nx">organization</span><span class="p">.</span><span class="nx">_id</span><span class="p">.</span><span class="nx">toString</span><span class="p">(),</span>
+            <span class="na">campaign</span><span class="p">:</span> <span class="nx">campaign</span><span class="p">.</span><span class="nx">_id</span><span class="p">.</span><span class="nx">toString</span><span class="p">(),</span>
+        <span class="p">})</span>
+        <span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="s1">'Authorization'</span><span class="p">,</span> <span class="s1">'Bearer '</span> <span class="o">+</span> <span class="nx">adminAuthToken</span><span class="p">)</span>
+        <span class="c1">//A zkontroluju, že se podařilo</span>
+        <span class="p">.</span><span class="nx">expect</span><span class="p">(</span><span class="mi">201</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="nx">done</span><span class="p">);</span>
+<span class="p">}));</span></code></pre></figure>
 
 <p>Jak to funguje? Všimněte si, že celý test je napsán jako <a href="https://developer.mozilla.org/cs/docs/Web/JavaScript/Reference/Statements/function*">generátorová
 funkce</a>

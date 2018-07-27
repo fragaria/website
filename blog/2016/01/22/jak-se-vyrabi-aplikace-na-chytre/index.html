@@ -20,7 +20,7 @@
     <meta property="og:description"   content="Když se v dubnu 2012 na Kickstarteru objevily hodinkyPebble s e-ink displayem, za měsíc získalyčástku přesahující deset milionů dolarů. Na jaře 2013 jste si o ně snámi mohlizasoutěžit." />
 
     
-        <meta property="og:image"         content="http://1.bp.blogspot.com/-QHnjsH8mG88/VppH0Jg9WGI/AAAAAAAAAAw/-3RzKDQj0k8/s72-c/ezgif.com-crop-mariopebble.gif" />
+        <meta property="og:image"         content="" />
     
 
     <link rel="stylesheet" href="/website/assets/styles.css">
@@ -64,8 +64,6 @@
         <meta itemprop="headline" content="Jak se vyrábí aplikace na chytré hodinky Pebble Time Round">
 
         
-            <meta itemprop="image" content="http://1.bp.blogspot.com/-QHnjsH8mG88/VppH0Jg9WGI/AAAAAAAAAAw/-3RzKDQj0k8/s72-c/ezgif.com-crop-mariopebble.gif">
-        
 
         <div itemprop="publisher" itemtype="http://schema.org/Organization" class="hidden" itemscope>
             <div itemprop="logo" itemtype="http://schema.org/ImageObject" itemscope="">
@@ -108,7 +106,23 @@ Cat</a>
 nebo třeba
 <a href="https://apps.getpebble.com/en_US/application/565510b84431a2820600000c?&amp;section=watchfaces">Hollyho</a>.</p>
 
-<p><a href="http://1.bp.blogspot.com/-QHnjsH8mG88/VppH0Jg9WGI/AAAAAAAAAAw/-3RzKDQj0k8/s1600/ezgif.com-crop-mariopebble.gif"><img src="http://1.bp.blogspot.com/-QHnjsH8mG88/VppH0Jg9WGI/AAAAAAAAAAw/-3RzKDQj0k8/s200/ezgif.com-crop-mariopebble.gif" alt="" /></a><a href="http://3.bp.blogspot.com/-ZMPYA14Jj-U/VppHzOMwt6I/AAAAAAAAAAo/VXP16d8CN3A/s1600/rsz_2016-01-10_131125.jpg"><img src="http://3.bp.blogspot.com/-ZMPYA14Jj-U/VppHzOMwt6I/AAAAAAAAAAo/VXP16d8CN3A/s200/rsz_2016-01-10_131125.jpg" alt="" /></a><a href="http://1.bp.blogspot.com/-SlmcBLxeKHA/VppH0nI0RrI/AAAAAAAAAA4/M0DM78GkT5Q/s1600/ezgif.com-crop-nyan.gif"><img src="http://1.bp.blogspot.com/-SlmcBLxeKHA/VppH0nI0RrI/AAAAAAAAAA4/M0DM78GkT5Q/s200/ezgif.com-crop-nyan.gif" alt="" /></a></p>
+<div class="inline-figure-container">
+  <figure>
+<img src="https://res.cloudinary.com/fragaria/image/upload//fragaria.cz/posts/2016-01-22-jak-se-vyrabi-aplikace-na-chytre__1.gif" />
+
+</figure>
+
+  <figure>
+<img src="https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2016-01-22-jak-se-vyrabi-aplikace-na-chytre__2.jpg" />
+
+</figure>
+
+  <figure>
+<img src="https://res.cloudinary.com/fragaria/image/upload//fragaria.cz/posts/2016-01-22-jak-se-vyrabi-aplikace-na-chytre__3.gif" />
+
+</figure>
+
+</div>
 
 <p>Pro vývojáře je k dispozici kombinované SDK v C a Javascriptu. Co z
 principu nezvládnou hodinky totiž Pebble outsourcuje do telefonu, kde
@@ -148,7 +162,10 @@ zobrazíme šipku ve správném směru. Ideálně by se pak šipka a počet metr
 měly v čase měnit podle toho, jak se k bankomatu
 přibližujeme.</p>
 
-<p><a href="http://3.bp.blogspot.com/-7AZD2b8YDec/VppH0IpZo8I/AAAAAAAAAA8/DDtATAFKx3c/s1600/DSC_0046.jpg">http://3.bp.blogspot.com/-7AZD2b8YDec/VppH0IpZo8I/AAAAAAAAAA8/DDtATAFKx3c/s1600/DSC_0046.jpg</a></p>
+<figure>
+<img src="https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2016-01-22-jak-se-vyrabi-aplikace-na-chytre__4.jpg" />
+
+</figure>
 
 <p>Začneme tím, že potřebujeme data nějak zobrazovat. Pebble pracuje s
 konceptem oken (obrazovek) a vrstev různého typu. Aby aplikace nebyla
@@ -177,9 +194,41 @@ a poslání dat do hodinek. Stejná funkce se volá na obě události
 definované v hodinkách, a to jsou spuštění aplikace a pravidelná žádost
 o refresh dat.</p>
 
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">navigator</span><span class="p">.</span><span class="nx">geolocation</span><span class="p">.</span><span class="nx">getCurrentPosition</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">position</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">xhrRequest</span><span class="p">(</span><span class="s1">'https://api.csas.cz/sandbox/webapi/api/v2/places?radius=500&amp;country=CZ&amp;types=ATM&amp;limit=1&amp;lat='</span> <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">latitude</span> <span class="o">+</span> <span class="s1">'&amp;lng='</span> <span class="o">+</span> <span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">.</span><span class="nx">longitude</span><span class="p">,</span>
+    <span class="s1">'GET'</span><span class="p">,</span>
+    <span class="s1">'7f29f5d5-c9d4-4266-8e6b-3733064da14x'</span><span class="p">,</span>
+    <span class="kd">function</span> <span class="p">(</span><span class="nx">status</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">response</span> <span class="o">=</span> <span class="p">{};</span>
+        <span class="kd">var</span> <span class="nx">json</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">data</span><span class="p">).</span><span class="nx">items</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+        <span class="nx">response</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">'KEY_DISTANCE'</span><span class="p">:</span> <span class="nx">json</span><span class="p">.</span><span class="nx">distance</span><span class="p">,</span>
+            <span class="s1">'KEY_DIRECTION'</span><span class="p">:</span> <span class="nx">computeBearing</span><span class="p">(</span><span class="nx">position</span><span class="p">.</span><span class="nx">coords</span><span class="p">,</span> <span class="p">{</span> <span class="c1">// computes azimuth</span>
+                <span class="na">latitude</span><span class="p">:</span> <span class="nx">json</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">lat</span><span class="p">,</span>
+                <span class="na">longitude</span><span class="p">:</span> <span class="nx">json</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">lng</span>
+            <span class="p">}),</span>
+            <span class="s1">'KEY_ADDRESS'</span><span class="p">:</span> <span class="nx">json</span><span class="p">.</span><span class="nx">address</span> <span class="o">+</span> <span class="s1">'</span><span class="err">\</span><span class="s1">n'</span> <span class="o">+</span> <span class="nx">json</span><span class="p">.</span><span class="nx">city</span><span class="p">,</span>
+            <span class="s1">'KEY_ACCESS_TYPE'</span><span class="p">:</span> <span class="nx">json</span><span class="p">.</span><span class="nx">accessType</span>
+        <span class="p">};</span>
+        <span class="nx">Pebble</span><span class="p">.</span><span class="nx">sendAppMessage</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span> <span class="c1">// send data to Pebble</span>
+    <span class="p">});</span>
+<span class="p">});</span></code></pre></figure>
+
 <p>V hodinkách potom zaslaná událost vyvolá
 <a href="https://github.com/JirkaChadima/pebble-csas-nearest/blob/master/src/ui.c#L54-L64">překreslení</a>
 kompletního UI a zobrazí získaná data na display.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="k">static</span> <span class="kt">void</span> <span class="nf">detail_window_set_place</span><span class="p">(</span><span class="n">Place</span> <span class="n">place</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">detail_window</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">detail_window</span> <span class="o">=</span> <span class="n">detail_window_init</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="n">text_layer_set_text</span><span class="p">(</span><span class="n">address_layer</span><span class="p">,</span> <span class="n">place</span><span class="p">.</span><span class="n">address</span><span class="p">);</span>
+    <span class="n">snprintf</span><span class="p">(</span><span class="n">distance_buffer</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">distance_buffer</span><span class="p">),</span> <span class="s">"%d m"</span><span class="p">,</span> <span class="n">place</span><span class="p">.</span><span class="n">distance</span><span class="p">);</span>
+    <span class="n">place_direction</span> <span class="o">=</span> <span class="n">place</span><span class="p">.</span><span class="n">direction</span><span class="p">;</span>
+    <span class="n">text_layer_set_text</span><span class="p">(</span><span class="n">distance_layer</span><span class="p">,</span> <span class="n">distance_buffer</span><span class="p">);</span>
+    <span class="n">text_layer_set_text</span><span class="p">(</span><span class="n">hours_layer</span><span class="p">,</span> <span class="n">place</span><span class="p">.</span><span class="n">hours</span><span class="p">);</span>
+    <span class="n">write_direction_to_ui</span><span class="p">();</span> <span class="c1">// computes orientation of arrow</span>
+<span class="p">}</span></code></pre></figure>
 
 <p>Ale jak namalovat šipku? A jak s ní točit podle aktuálního směru k
 bankomatu? Pebble nabízí přímé kreslení polygonů pomocí definice

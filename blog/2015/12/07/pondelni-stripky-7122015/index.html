@@ -117,35 +117,34 @@ nebo v podstatě libovolný programovací jazyk.</p>
 
 <p>Například:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/**
-  * @stylesheet buttons.less Buttons
-  * @parent Styles.baseline-elements
-  *
-  * @description
-  * All defined button styles and states belong here, 
-  * including any "helper class" button style options, 
-  * like `default`, `primary` etc.
-  * The same button styles have been applied to a button class, 
-  * for use on other html elements emulating a button.
-  *
-  * @demo demos/buttons/demo.html
-  **/
-button, .button {
-    background-color: @colorLinks;
-    border: 1px solid darken(@colorLinks, 10%);
-    color: @clear;
-    .text-shadow;
-        border-radius: 2px;
-        padding: 5px 15px;
-        position: relative;
-        font-size: 14px;
-        line-height: 18px;
-        text-decoration: none;
-    &amp;:hover, &amp;.active {
-        background-color: darken(@colorLinks, 10%);
-    }
-}
-</code></pre></div></div>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/**
+    * @stylesheet buttons.less Buttons
+    * @parent Styles.baseline-elements
+    *
+    * @description
+    * All defined button styles and states belong here,
+    * including any "helper class" button style options,
+    * like `default`, `primary` etc.
+    * The same button styles have been applied to a button class,
+    * for use on other html elements emulating a button.
+    *
+    * @demo demos/buttons/demo.html
+    **/</span>
+<span class="nt">button</span><span class="o">,</span> <span class="nc">.button</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="err">@</span><span class="n">colorLinks</span><span class="p">;</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="n">darken</span><span class="p">(</span><span class="err">@</span><span class="n">colorLinks</span><span class="p">,</span> <span class="m">10%</span><span class="p">);</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="err">@</span><span class="n">clear</span><span class="p">;</span>
+    <span class="err">.text-shadow;</span>
+        <span class="nl">border-radius</span><span class="p">:</span> <span class="m">2px</span><span class="p">;</span>
+        <span class="nl">padding</span><span class="p">:</span> <span class="m">5px</span> <span class="m">15px</span><span class="p">;</span>
+        <span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span>
+        <span class="nl">font-size</span><span class="p">:</span> <span class="m">14px</span><span class="p">;</span>
+        <span class="nl">line-height</span><span class="p">:</span> <span class="m">18px</span><span class="p">;</span>
+        <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+    <span class="err">&amp;:hover,</span> <span class="err">&amp;.active</span> <span class="err">{</span>
+        <span class="nl">background-color</span><span class="p">:</span> <span class="n">darken</span><span class="p">(</span><span class="err">@</span><span class="n">colorLinks</span><span class="p">,</span> <span class="m">10%</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="err">}</span></code></pre></figure>
 
 <h2 id="snyk">Snyk</h2>
 

@@ -67,8 +67,21 @@
     {% endif %}
 
     <!-- preload soon-to-be-loaded assets soon in the page lifecycle -->
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|PT+Serif:400,700&subset=latin-ext" as="style">
-    <link rel="preload" href="{{ '/assets/fonts/fragariacz-icons.ttf?p82sos' | relative_url }}" as="font">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|PT+Serif:400,700&subset=latin-ext" as="style" crossorigin>
+    <!-- preload OpenSansCondensed-Light latin, 300 -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/opensanscondensed/v12/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuXMR7eS2Ao.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- preload OpenSansCondensed-Light latin-ext, 300 -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/opensanscondensed/v12/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuvMR7eS2AopSg.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- preload OpenSansCondensed-Light latin, 700 -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/opensanscondensed/v12/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff0GmDuXMR7eS2Ao.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- preload OpenSansCondensed-Light latin-ext, 700 -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/opensanscondensed/v12/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff0GmDuvMR7eS2AopSg.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="preload" href="{{ '/assets/fonts/fragariacz-icons.ttf?p82sos' | relative_url }}" as="font" type="font/ttf" crossorigin="anonymous">
+
+
     <link rel="preload" href="{{ '/assets/js/' | relative_url }}{% if jekyll.environment == 'production' %}{{ 'site.js' | bust_js_cache }}{% else %}site.js{% endif %}" as="script">
 
     <link rel="stylesheet" href="{{ "/assets/" | relative_url }}{% if jekyll.environment == 'production' %}{{ 'styles.css' | bust_css_cache }}{% else %}styles.css{% endif %}">

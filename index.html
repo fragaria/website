@@ -39,7 +39,7 @@ layout: default
         <div class="v-home__company-content">
             <a href="tel:{{ site.company.phone }}" class="contact-button contact-button--phone v-home__company-phone">{{ site.company.phone }}</a>
             <a href="mailto:{{ site.company.email }}" class="contact-button contact-button--email v-home__company-email">{{ site.company.email }}</a>
-            <a href="{{ site.company.address.residence.map_link }}" class="contact-button contact-button--map v-home__company-map" target="_blank">Map to our office</a>
+            <a href="{{ site.company.address.residence.map_link }}" class="contact-button contact-button--map v-home__company-map" target="_blank" rel="noopener" >Map to our office</a>
 
             <article class="contact v-home__company-residence" itemprop="address" itemtype="https://schema.org/PostalAddress" itemscope>
                 <h1 class="delta">Residence</h1>

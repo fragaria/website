@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="https://fragaria.github.com/website/feed.xml" rel="self" type="application/atom+xml" /><link href="https://fragaria.github.com/website/" rel="alternate" type="text/html" /><updated>2018-07-30T15:20:29+00:00</updated><id>https://fragaria.github.com/website/</id><title type="html">fragaria.cz</title><subtitle>We are a software development company based in Czech Republic. Our specialization are state-of-the-art apps without compromises that you can rely on. JavaScript, Python, NodeJS, Angular or Vue.js... we know it all.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="https://fragaria.github.com/website/feed.xml" rel="self" type="application/atom+xml" /><link href="https://fragaria.github.com/website/" rel="alternate" type="text/html" /><updated>2018-07-30T15:40:33+00:00</updated><id>https://fragaria.github.com/website/</id><title type="html">fragaria.cz</title><subtitle>We are a software development company based in Czech Republic. Our specialization are state-of-the-art apps without compromises that you can rely on. JavaScript, Python, NodeJS, Angular or Vue.js... we know it all.
 </subtitle><entry><title type="html">Špehujeme používateľov na našich stránkach</title><link href="https://fragaria.github.com/website/blog/2018/07/25/spehujeme-pouzivatelov-na-nasich-strankach/" rel="alternate" type="text/html" title="Špehujeme používateľov na našich stránkach" /><published>2018-07-25T11:00:00+00:00</published><updated>2018-07-25T11:00:00+00:00</updated><id>https://fragaria.github.com/website/blog/2018/07/25/spehujeme-pouzivatelov-na-nasich-strankach</id><content type="html" xml:base="https://fragaria.github.com/website/blog/2018/07/25/spehujeme-pouzivatelov-na-nasich-strankach/">&lt;p&gt;Patrím medzi ľudí, ktorí majú radi spätnú väzbu na svoju prácu, no tú je na webe ťažké získať, kedže návštevníci nemajú čas sa k vám vyjadrovať.
 Jedine ak spravujete štátny portál. Preto sú tak obľúbené rôzne nástroje na sledovanie návštevnikov na stránkach a ich vyhodnotením sa vieme dostať k nepriamej spätnej väzbe.
 A že ich je.&lt;/p&gt;
@@ -8,13 +8,11 @@ A že ich je.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
-&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-03-28-blockchain-can-do__1.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2018-03-28-blockchain-can-do__1.jpg 1x,
-        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-03-28-blockchain-can-do__1.jpg 2x,
-        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2018-03-28-blockchain-can-do__1.jpg 3x&quot; /&gt;
-
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__1_ahtmgu.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__1_ahtmgu.jpg 1x,
+        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__1_ahtmgu.jpg 2x,
+        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__1_ahtmgu.jpg 3x&quot; /&gt;
+&lt;figcaption&gt;&lt;a href=&quot;https://unsplash.com/@ratushny?utm_medium=referral&amp;amp;utm_campaign=photographer-credit&amp;amp;utm_content=creditBadge&quot;&gt;Dmitry Ratushny&lt;/a&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://unsplash.com/@ratushny?utm_medium=referral&amp;amp;utm_campaign=photographer-credit&amp;amp;utm_content=creditBadge&quot;&gt;Dmitry Ratushny&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Dnes vám preto predstavím pár nástrojov, ktoré používam ja pri sledovaní používateľov na stránkach a zaspomínam v čom mi už za tie roky pomohli. Tému ako aj nástroje by som zahrnul do oblasti User Monitoring či User Profiling.&lt;/p&gt;
 
@@ -168,17 +166,17 @@ V našom prípade sa o zabezpečenie údajov starajú nástroje samotné. Na vá
 &lt;p&gt;Super vec je &lt;a href=&quot;https://chrome.google.com/webstore/detail/page-analytics-by-google/fnbdnhhicmebfgdgglcdacdapkcihcoh&quot;&gt;Page analytics chrome extension&lt;/a&gt;, ktorý umožňuje vidieť základné informácie pri príchode na stránku. Navyše umožňuje zobraziť základnú heatmapu s počtom kliknutí na odkazy.&lt;/p&gt;
 
 &lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
-&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/ 1x,
-        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/ 2x,
-        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/ 3x&quot; /&gt;
-&lt;figcaption&gt;Náhľad stránky zo zapnutým Page analytics pluginom&lt;/figcaption&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__2_sm5ty3.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__2_sm5ty3.jpg 1x,
+        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__2_sm5ty3.jpg 2x,
+        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__2_sm5ty3.jpg 3x&quot; /&gt;
+&lt;figcaption&gt;Náhľad stránky zo zapnutým Page analytics pluginom I.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
-&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/ 1x,
-        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/ 2x,
-        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/ 3x&quot; /&gt;
-&lt;figcaption&gt;Náhľad stránky zo zapnutým Page analytics pluginom&lt;/figcaption&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__3_agazmm.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__3_agazmm.jpg 1x,
+        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__3_agazmm.jpg 2x,
+        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__3_agazmm.jpg 3x&quot; /&gt;
+&lt;figcaption&gt;Náhľad stránky zo zapnutým Page analytics pluginom II.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Pre appky odporúčam mať na projekte pustený na monitore dashboard s real údajmi zo sledovania. Statické stránky podľa potreby prejdem aspoň raz za týždeň.&lt;/p&gt;
@@ -199,9 +197,9 @@ Podklad pre heatmapu si nástroj spraví sám a ponúka rozdelenie podľa typu z
 &lt;p&gt;Čo sa týka GDPR, tak dodatočne pridali možnosť trackovať len whitelistované input fieldy, či úplne ignorovať emailove adresy a numerické inputy.&lt;/p&gt;
 
 &lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
-&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/ 1x,
-        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/ 2x,
-        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/ 3x&quot; /&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__4_tl1olb.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__4_tl1olb.jpg 1x,
+        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__4_tl1olb.jpg 2x,
+        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__4_tl1olb.jpg 3x&quot; /&gt;
 &lt;figcaption&gt;Zoznam nahrávok používateľov&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -331,9 +329,9 @@ Podklad pre heatmapu si nástroj spraví sám a ponúka rozdelenie podľa typu z
 &lt;/ul&gt;
 
 &lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
-&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/ 1x,
-        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/ 2x,
-        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/ 3x&quot; /&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__5_ah69jw.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__5_ah69jw.jpg 1x,
+        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__5_ah69jw.jpg 2x,
+        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__5_ah69jw.jpg 3x&quot; /&gt;
 &lt;figcaption&gt;Dashboard testu&lt;/figcaption&gt;
 &lt;/figure&gt;</content><author><name>Lukáš Turský</name></author><category term="google analytics" /><category term="hotjar" /><category term="loggly" /><category term="page uptime" /><category term="user monitoring" /><category term="user recording" /><summary type="html">Patrím medzi ľudí, ktorí majú radi spätnú väzbu na svoju prácu, no tú je na webe ťažké získať, kedže návštevníci nemajú čas sa k vám vyjadrovať. Jedine ak spravujete štátny portál. Preto sú tak obľúbené rôzne nástroje na sledovanie návštevnikov na stránkach a ich vyhodnotením sa vieme dostať k nepriamej spätnej väzbe. A že ich je.</summary></entry><entry><title type="html">Blockchain? Can do!</title><link href="https://fragaria.github.com/website/blog/2018/03/28/blockchain-can-do/" rel="alternate" type="text/html" title="Blockchain? Can do!" /><published>2018-03-28T11:25:00+00:00</published><updated>2018-03-28T11:25:00+00:00</updated><id>https://fragaria.github.com/website/blog/2018/03/28/blockchain-can-do</id><content type="html" xml:base="https://fragaria.github.com/website/blog/2018/03/28/blockchain-can-do/">&lt;p&gt;Blockchain is the new sexy. Everybody is talking about it, people in
 lines in grocery stores are discussing Bitcoin price, big companies are

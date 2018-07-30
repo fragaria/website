@@ -1,11 +1,26 @@
-
 .blog-news__posts {
     display: grid;
     grid-template-rows: auto;
-    grid-gap: 2rem;
 
     @include deviceBreakpoint(tablet) {
         grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 2rem;
+    }
+
+    .blog-posting {
+        padding: 0 2rem;
+        border-right: 1px solid #000;
+
+        &:first-child {
+            // padding-left: 0
+        }
+
+        &:last-child {
+            // padding-right: 0;
+            border-right: none;
+        }
+
+        .blog-posting__headline {
+            @include sassline(delta, $seriftype, 3, 1, all);
+        }
     }
 }

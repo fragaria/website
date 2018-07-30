@@ -7,20 +7,32 @@
     }
 
     .blog-posting {
-        padding: 0 2rem;
-        border-right: 1px solid #000;
-
-        &:first-child {
-            // padding-left: 0
-        }
+        position: relative;
+        padding: 0 1rem;
+        margin-bottom: 4rem;
 
         &:last-child {
-            // padding-right: 0;
-            border-right: none;
+            margin-bottom: 0;
         }
 
+        @include deviceBreakpoint(tablet) {
+            margin-bottom: 0;
+            padding: 0 2rem;
+            border-right: 1px solid #000;
+
+            &:first-child {
+                // padding-left: 0
+            }
+
+            &:last-child {
+                // padding-right: 0;
+                border-right: none;
+            }
+        }
+
+
         .blog-posting__headline {
-            @include sassline(delta, $seriftype, 3, 1, all);
+            @include sassline(delta, $seriftype, 2, 1, all);
         }
     }
 }

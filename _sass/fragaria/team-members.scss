@@ -1,12 +1,3 @@
-@mixin memberProfileVariant($icon, $main) {
-    font-family: 'fragariacz-icons';
-
-    &:before {
-        color: $main;
-        content: $icon;
-    }
-}
-
 .team-members {
     display: grid;
     grid-template-columns: 1fr;
@@ -23,8 +14,12 @@
         grid-gap: 4rem;
     }
 
-    /* 4 columns on a row for tablet and up */
     @include deviceBreakpoint(tablet) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* 5 columns on a row for desktop and up */
+    @include deviceBreakpoint(desktop) {
         grid-template-columns: repeat(5, 1fr);
         grid-gap: 4rem;
     }
@@ -42,33 +37,15 @@
     // filter: grayscale(100%);
 }
 
+// .team-member:hover .team-member__avatar-image {
+//     filter: grayscale(0%);
+// }
+
 .team-member__body {
     text-align: center;
-}
 
-.team-member__profiles {
-    height: 2rem;
-}
-
-.team-member__profile {
-    @each $variantName, $variantSettings in $brands {
-        &--#{$variantName} {
-            @include memberProfileVariant(
-                map-get($variantSettings, icon),
-                map-get($variantSettings, main)
-            );
-        }
-    }
-
-    & + .team-member__profile {
-        margin-left: .25em;
+    .team-member__name {
+        @include sassline(epsilon, $seriftype, 2, 1, all);
     }
 }
 
-.team-member__profile-body {
-    display: none;
-}
-
-.team-member:hover .team-member__avatar-image {
-    // filter: grayscale(0%);
-}

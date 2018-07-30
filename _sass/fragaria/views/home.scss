@@ -2,7 +2,7 @@
     text-align: center;
     padding-bottom: 4rem;
 
-    @include deviceBreakpoint(desktop) {
+    @include deviceBreakpoint(tablet) {
         padding: 8rem 0 12rem;
     }
 }

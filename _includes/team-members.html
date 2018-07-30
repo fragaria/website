@@ -19,38 +19,10 @@
                 </picture>
             </div>
             <div class="team-member__body typeset">
-                <h1 itemprop="name" class="gamma">{{ member.name }}</h1>
+                <h1 itemprop="name" class="team-member__name gamma">{{ member.name }}</h1>
                 <p class="team-member__alt caption caption--nopad" itemprop="jobTitle">{{ member.alt }}</p>
                 <meta itemprop="gender" content="{{ member.gender }}">
                 <meta itemprop="nationality" content="{{ member.nationality }}">
-                <link itemprop="url" href="{{ member_url | relative_url }}">
-                <div class="team-member__profiles u-margin--top1">
-                    {% if member.profiles.twitter %}
-                        <a href="https://www.twitter.com/{{ member.profiles.twitter }}" target="_blank" rel="noopener" itemprop="sameAs" class="team-member__profile team-member__profile--twitter" title="Twitter">
-                            <span class="team-member__profile-body">Twitter</span>
-                        </a>
-                    {% endif %}
-                    {% if member.profiles.facebook %}
-                        <a href="https://www.facebok.com/{{ member.profiles.facebook }}" target="_blank" rel="noopener" itemprop="sameAs" class="team-member__profile team-member__profile--facebook" title="Facebook">
-                            <span class="team-member__profile-body">Facebook</span>
-                        </a>
-                    {% endif %}
-                    {% if member.profiles.gplus %}
-                        <a href="https://plus.google.com/{{ member.profiles.gplus }}" target="_blank" rel="noopener" itemprop="sameAs" class="team-member__profile team-member__profile--gplus" title="Google+">
-                            <span class="team-member__profile-body">Google+</span>
-                        </a>
-                    {% endif %}
-                    {% if member.profiles.linkedin %}
-                        <a href="https://www.linkedin.com/in/{{ member.profiles.twitter }}" target="_blank" rel="noopener" itemprop="sameAs" class="team-member__profile team-member__profile--linkedin" title="LinkedIn">
-                            <span class="team-member__profile-body">LinkedIn</span>
-                        </a>
-                    {% endif %}
-                    {% if member.profiles.github %}
-                        <a href="https://github.com/{{ member.profiles.github }}" target="_blank" rel="noopener" itemprop="sameAs" class="team-member__profile team-member__profile--github" title="GitHub">
-                            <span class="team-member__profile-body">GitHub</span>
-                        </a>
-                    {% endif %}
-                </div>
             </div>
         </article>
     {% endfor %}

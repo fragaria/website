@@ -38,6 +38,7 @@ exclude:
     - Gemfile
     - Gemfile.lock
     - __design
+    - assets/favicons/README.md
     - .sass-cache
 
 permalink: /blog/:year/:month/:day/:title/

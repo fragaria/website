@@ -28,30 +28,17 @@
     <meta name="robots" content="index,follow" />
     <meta name="description" content="{{ description }}">
     <meta name="keywords" content="{{ keywords }}" />
+
     <!-- Favicons -->
-    {% comment %}
-        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ 'assets/img/favicon/apple-touch-icon-57x57.png' | relative_url }}">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ 'assets/img/favicon/apple-touch-icon-114x114.png' | relative_url }}">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ 'assets/img/favicon/apple-touch-icon-72x72.png' | relative_url }}">
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ 'assets/img/favicon/apple-touch-icon-144x144.png' | relative_url }}">
-        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{ 'assets/img/favicon/apple-touch-icon-60x60.png' | relative_url }}">
-        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ 'assets/img/favicon/apple-touch-icon-120x120.png' | relative_url }}">
-        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ 'assets/img/favicon/apple-touch-icon-76x76.png' | relative_url }}">
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ 'assets/img/favicon/apple-touch-icon-152x152.png' | relative_url }}">
-        <link rel="icon" type="image/png" href="{{ 'assets/img/favicon/favicon-196x196.png' | relative_url }}" sizes="196x196">
-        <link rel="icon" type="image/png" href="{{ 'assets/img/favicon/favicon-96x96.png' | relative_url }}" sizes="96x96">
-        <link rel="icon" type="image/png" href="{{ 'assets/img/favicon/favicon-16x16.png' | relative_url }}" sizes="16x16">
-        <link rel="icon" type="image/png" href="{{ 'assets/img/favicon/favicon-32x32.png' | relative_url }}" sizes="32x32">
-        <link rel="icon" type="image/png" href="{{ 'assets/img/favicon/favicon-128x128.png' | relative_url }}" sizes="128x128">
-        <link rel="alternate" type="application/rss+xml" title="{{ site.organization.name }} RSS" href="{{ '/feed.xml' | relative_url }}">
-        <meta name="application-name" content="{{ site.organization.name | escape }}">
-        <meta name="msapplication-TileColor" content="#000000">
-        <meta name="msapplication-TileImage" content="{{ 'assets/img/favicon/mstile-144x144.png' | relative_url }}">
-        <meta name="msapplication-square70x70logo" content="{{ 'assets/img/favicon/mstile-70x70.png' | relative_url }}">
-        <meta name="msapplication-square150x150logo" content="{{ 'assets/img/favicon/mstile-150x150.png' | relative_url }}">
-        <meta name="msapplication-wide310x150logo" content="{{ 'assets/img/favicon/mstile-310x150.png' | relative_url }}">
-        <meta name="msapplication-square310x310logo" content="{{ 'assets/img/favicon/mstile-310x310.png' | relative_url }}">
-    {% endcomment %}
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicons/apple-touch-icon.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicons/favicon-32x32.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicons/favicon-16x16.png' | relative_url }}">
+    <link rel="manifest" href="{{ '/assets/favicons/site.webmanifest' | relative_url }}">
+    <link rel="mask-icon" href="{{ '/assets/favicons/safari-pinned-tab.svg' | relative_url }}" color="#ea272e">
+    <link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}">
+    <meta name="msapplication-TileColor" content="#ea272e">
+    <meta name="msapplication-config" content="{{ '/assets/favicons/browserconfig.xml' | relative_url }}">
+    <meta name="theme-color" content="#ea272e">
 
     <meta property="og:url"           content="{{ page.url | absolute_url }}" />
     <meta property="og:type"          content="website" />

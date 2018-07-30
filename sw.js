@@ -5,7 +5,7 @@ const urls = [];
 
 // Cache assets
 {% for asset in site.static_files -%}
-{%- if asset.path contains '/assets/fonts' or asset.path contains '/assets/icons' or asset.path contains '/assets/img' or asset.extname == '.js' -%}
+{%- if asset.path contains '/assets/fonts' or asset.path contains '/assets/icons' or asset.path contains '/assets/img' or asset.path contains '/assets/favicons' or asset.extname == '.js' -%}
 urls.push("{{ asset.path | relative_url }}");
 {%- endif -%}
 {%- endfor %}

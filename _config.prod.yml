@@ -32,4 +32,4 @@ service_worker:
     # Anyway, service worker will only be updated when all browser tabs are
     # closed due to various reasons.
     # See https://redfin.engineering/draft-service-workers-break-the-refresh-button-by-default-56f9417694 if unsure.
-    cache_version: 1
+    cache_version: 2

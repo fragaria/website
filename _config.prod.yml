@@ -1,3 +1,5 @@
+url: "https://www.fragaria.cz"
+
 plugins:
     - jekyll-sitemap
     - jekyll-feed

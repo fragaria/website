@@ -17,7 +17,7 @@
     ],
     "theme_color": "#ea272e",
     "background_color": "#ea272e",
-    "start_url": "https://www.fragaria.cz",
+    "start_url": "{{ site.url }}",
     "display": "standalone",
     "orientation": "portrait"
 }

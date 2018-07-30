@@ -2,7 +2,7 @@
   icon: icon--power
   description: No waterfalls here. We belive agile is the right way to do it.
 - title: Open source
-  icon: icon--gnu
+  icon: icon--open-source
   description: We support open source, and we regularly contribute to it.
 - title: Home office
   icon: icon--house

@@ -6,6 +6,28 @@ plugins:
     - octopress-autoprefixer
 
 autoprefixer:
-  browsers:
-      - last 2 versions
-  only_production: true
+    browsers:
+        - last 2 versions
+    only_production: true
+
+# Service worker
+# Features:
+# - allows for offline access
+# - enables preloading of URLs for near-instant loading of pages
+#
+# Our service worker is network-or-cache. It means it always tries to load
+# resources from the network when possible. Only in case response is slow or not
+# coming at all, cache is tried.
+service_worker:
+    enabled: true
+    # Cache version needs to be increased when service worker implementations
+    # needs to be changed. It's basically one of following scenarios:
+    #
+    # - new (more clever) service worker implementation
+    # - list of precached URLs changes - this is ESCPECIALLY TRUE FOR /offline/
+    #   fallback pages as it's only loaded when new service worker is released and never again.
+    #
+    # Anyway, service worker will only be updated when all browser tabs are
+    # closed due to various reasons.
+    # See https://redfin.engineering/draft-service-workers-break-the-refresh-button-by-default-56f9417694 if unsure.
+    cache_version: 1

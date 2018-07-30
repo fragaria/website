@@ -38,9 +38,15 @@ exclude:
     - Gemfile
     - Gemfile.lock
     - __design
+    - assets/favicons/README.md
     - .sass-cache
 
 permalink: /blog/:year/:month/:day/:title/
+
+service_worker:
+    # Only enabled in production, @see: _config.prod.yml
+    enabled: false
+    cache_version: 1
 
 # --------------------------- plugins ------------------------------------------
 

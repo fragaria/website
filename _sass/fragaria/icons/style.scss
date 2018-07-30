@@ -1,19 +1,19 @@
 @import "variables";
 
 @font-face {
-  font-family: 'fragariacz-icons';
-  src:  url('#{$icomoon-font-path}/fragariacz-icons.eot?p82sos');
-  src:  url('#{$icomoon-font-path}/fragariacz-icons.eot?p82sos#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/fragariacz-icons.ttf?p82sos') format('truetype'),
-    url('#{$icomoon-font-path}/fragariacz-icons.woff?p82sos') format('woff'),
-    url('#{$icomoon-font-path}/fragariacz-icons.svg?p82sos#fragariacz-icons') format('svg');
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?zc978f');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?zc978f#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?zc978f') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?zc978f') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?zc978f##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 [class^="icon--"], [class*=" icon--"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'fragariacz-icons' !important;
+  font-family: '#{$icomoon-font-family}' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -26,6 +26,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon--open-source {
+  &:before {
+    content: $icon--open-source; 
+  }
+}
 .icon--city {
   &:before {
     content: $icon--city; 
@@ -39,12 +44,6 @@
 .icon--thermometer {
   &:before {
     content: $icon--thermometer; 
-  }
-}
-.icon--gnu {
-  &:before {
-    content: $icon--gnu;     
-    color: #a42e2b;
   }
 }
 .icon--at {

@@ -43,7 +43,10 @@ exclude:
 
 permalink: /blog/:year/:month/:day/:title/
 
-use_sw: false
+service_worker:
+    # Only enabled in production, @see: _config.prod.yml
+    enabled: false
+    cache_version: 1
 
 # --------------------------- plugins ------------------------------------------
 

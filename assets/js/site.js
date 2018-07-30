@@ -151,9 +151,20 @@ function portfolioStrip(rootElem) {
     items.reverse().forEach(attachItemHandler);
 }
 
+/**
+ * Simple window reload handler.
+ * @param {HTMLElement} rootElem
+ */
+function siteReload(rootElem) {
+    rootElem.addEventListener('click', function () {
+        window.location.reload();
+    });
+}
+
 const handlers = [
     {className: 'js-sitenav', handler: siteMenu},
     {className: 'js-portfolio-strip', handler: portfolioStrip},
+    {className: 'js-site-reload-button', handler: siteReload},
 ];
 
 handlers.forEach(({className, handler}) => {

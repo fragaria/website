@@ -1,5 +1,341 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="https://fragaria.github.com/website/feed.xml" rel="self" type="application/atom+xml" /><link href="https://fragaria.github.com/website/" rel="alternate" type="text/html" /><updated>2018-07-30T14:59:49+00:00</updated><id>https://fragaria.github.com/website/</id><title type="html">fragaria.cz</title><subtitle>We are a software development company based in Czech Republic. Our specialization are state-of-the-art apps without compromises that you can rely on. JavaScript, Python, NodeJS, Angular or Vue.js... we know it all.
-</subtitle><entry><title type="html">Blockchain? Can do!</title><link href="https://fragaria.github.com/website/blog/2018/03/28/blockchain-can-do/" rel="alternate" type="text/html" title="Blockchain? Can do!" /><published>2018-03-28T11:25:00+00:00</published><updated>2018-03-28T11:25:00+00:00</updated><id>https://fragaria.github.com/website/blog/2018/03/28/blockchain-can-do</id><content type="html" xml:base="https://fragaria.github.com/website/blog/2018/03/28/blockchain-can-do/">&lt;p&gt;Blockchain is the new sexy. Everybody is talking about it, people in
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="https://fragaria.github.com/website/feed.xml" rel="self" type="application/atom+xml" /><link href="https://fragaria.github.com/website/" rel="alternate" type="text/html" /><updated>2018-07-30T15:20:29+00:00</updated><id>https://fragaria.github.com/website/</id><title type="html">fragaria.cz</title><subtitle>We are a software development company based in Czech Republic. Our specialization are state-of-the-art apps without compromises that you can rely on. JavaScript, Python, NodeJS, Angular or Vue.js... we know it all.
+</subtitle><entry><title type="html">Špehujeme používateľov na našich stránkach</title><link href="https://fragaria.github.com/website/blog/2018/07/25/spehujeme-pouzivatelov-na-nasich-strankach/" rel="alternate" type="text/html" title="Špehujeme používateľov na našich stránkach" /><published>2018-07-25T11:00:00+00:00</published><updated>2018-07-25T11:00:00+00:00</updated><id>https://fragaria.github.com/website/blog/2018/07/25/spehujeme-pouzivatelov-na-nasich-strankach</id><content type="html" xml:base="https://fragaria.github.com/website/blog/2018/07/25/spehujeme-pouzivatelov-na-nasich-strankach/">&lt;p&gt;Patrím medzi ľudí, ktorí majú radi spätnú väzbu na svoju prácu, no tú je na webe ťažké získať, kedže návštevníci nemajú čas sa k vám vyjadrovať.
+Jedine ak spravujete štátny portál. Preto sú tak obľúbené rôzne nástroje na sledovanie návštevnikov na stránkach a ich vyhodnotením sa vieme dostať k nepriamej spätnej väzbe.
+A že ich je.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Use the right tools to spy on people on your website”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-03-28-blockchain-can-do__1.jpg&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/2018-03-28-blockchain-can-do__1.jpg 1x,
+        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/2018-03-28-blockchain-can-do__1.jpg 2x,
+        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/2018-03-28-blockchain-can-do__1.jpg 3x&quot; /&gt;
+
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://unsplash.com/@ratushny?utm_medium=referral&amp;amp;utm_campaign=photographer-credit&amp;amp;utm_content=creditBadge&quot;&gt;Dmitry Ratushny&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Dnes vám preto predstavím pár nástrojov, ktoré používam ja pri sledovaní používateľov na stránkach a zaspomínam v čom mi už za tie roky pomohli. Tému ako aj nástroje by som zahrnul do oblasti User Monitoring či User Profiling.&lt;/p&gt;
+
+&lt;p&gt;Zameriam sa na vlastné projekty - menšie appky a prezetačné stránky. E-shopom a iným CMS systémov sa nevenujem (našťastie). Navyše tu sa už očakáva nasadenie marketingových služieb, kam zachádzať nechcem. Na druhej strane väčšie či korporátne appky si často vyžadujú mať časť trackovania in-house (interné logovanie, audit, support centrum).&lt;/p&gt;
+
+&lt;h2 id=&quot;eu-cookie-law&quot;&gt;EU Cookie law&lt;/h2&gt;
+
+&lt;p&gt;Než začneme, trošku politiky. Väčšina nástrojov využíva na sledovanie cookies a o tom potrebujeme ľudí na stránke informovať. Cookies slúžia na rôzne účely - funkcionálne, výkonnové, štatistické či marketingové. Niektoré sú potrebné pre správny beh stránky, iné plnia dodatočnú úlohu na zlepšenie používateľského zážitku, čo je náš prípad. Možností je veľa (ako pri všetkom), no ja používam overenú &lt;a href=&quot;https://cookieconsent.insites.com/&quot;&gt;cookieconsent službu&lt;/a&gt;. Fajn je, že je veľmi dobre customizovateľná a pripravená na použitie s GDPR. Podporuje viacero možností získania súhlasu.&lt;/p&gt;
+
+&lt;p&gt;Príklad informačného použitia&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Cookie Consent Screen --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/css&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;load&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Customize cookie consent&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cookieconsent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;initialise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  &lt;span class=&quot;s2&quot;&gt;&quot;palette&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;s2&quot;&gt;&quot;popup&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;background&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;#252e39&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+      &lt;span class=&quot;s2&quot;&gt;&quot;button&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;background&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;#14a7d0&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;s2&quot;&gt;&quot;content&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;s2&quot;&gt;&quot;link&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Privacy policy&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;s2&quot;&gt;&quot;href&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;privacy.html&quot;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;s2&quot;&gt;&quot;elements&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;s2&quot;&gt;&quot;messagelink&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&amp;lt;span id=&quot;cookieconsent:desc&quot; class=&quot;cc-message&quot;&amp;gt; &amp;lt;a aria-label=&quot;learn more about cookies&quot; tabindex=&quot;0&quot; class=&quot;cc-link&quot; href=&quot;&quot;&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/span&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;s2&quot;&gt;&quot;link&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&amp;lt;a aria-label=&quot;learn more about cookies&quot; tabindex=&quot;0&quot; class=&quot;cc-link&quot; href=&quot;&quot;&amp;gt;&amp;lt;/a&amp;gt;'&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;})});&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;gdpr-odbočka-než-začneme&quot;&gt;GDPR odbočka než začneme&lt;/h2&gt;
+
+&lt;p&gt;Čo sa týka GDPR samotného, v skratke musíte používateľa informovať o tom aké osobné údaje o ňom zbierate, ako s nimi nakladáte, potrebujete na to explicitné povolenie, ktoré musí mať možnosť odvolať :)
+V našom prípade sa o zabezpečenie údajov starajú nástroje samotné. Na vás zostáva získanie súhlasu v prípade ak zbierate údaje, ktoré môžu slúžiť na identifikáciu, nestačí len upozornenie. Čo vlastne znamená len krok naviac, kedy vám odklikne &lt;strong&gt;Povoliť&lt;/strong&gt;. Problémom môže byť zmazanie údajov, ak vám niekto tento súhlas neskôr zruší, keďže tento proces je tažšie automatizovateľný.&lt;/p&gt;
+
+&lt;p&gt;Pri mnou opisovaných použitiach však takéto údaje nezbieram - tj. údaje sú anonymné (nemajú povahu osobných údajov) a stačí informovanie ako doposiaľ. Samozrejme nástroje si generujú vlasný anonymný identifikátor používateľa. Každopádne je fajn mať pre každý prípad nasadenú &lt;strong&gt;privacy policy&lt;/strong&gt; stránku - &lt;a href=&quot;https://privacypolicies.com/&quot;&gt;dá sa vygenerovať napr. tu&lt;/a&gt;. Pri appkách je samozrejmá aj &lt;strong&gt;terms of service&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;nástroje&quot;&gt;Nástroje&lt;/h2&gt;
+
+&lt;p&gt;Každý nástroj vzyšiel z určitej potreby dozvedieť sa:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;či je stránka dostupná (Statuscake)&lt;/li&gt;
+  &lt;li&gt;koľko ľudí tam chodí a odkiaľ (Google Analytics, skr. GA)&lt;/li&gt;
+  &lt;li&gt;čo čítajú, ako prechádzajú stránku, v akom momente odídu (Hotjar)&lt;/li&gt;
+  &lt;li&gt;nastali nejaké chyby počas ich návštevy (Loggly)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Každý nástroj používam vo free variante, ktorá pre vybrané typy projektov postačuje, keď tak firma zaplatí.&lt;/p&gt;
+
+&lt;p&gt;Celú konfiguráciu mám schovanú v jednom skripte.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;devMode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hostname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;localhost&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;GOOGLE_ANALYTICS_KEY&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HOTJAR_ID&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;LOGGLY_KEY&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;devMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Development mode. Tracking not applied.'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;cm&quot;&gt;/* GOOGLE ANALYTICS - user analytics */&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'GoogleAnalyticsObject'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;q&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;q&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;l&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementsByTagName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parentNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;insertBefore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;})(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'script'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'//www.google-analytics.com/analytics.js'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'ga'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;nx&quot;&gt;ga&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'create'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;GOOGLE_ANALYTICS_KEY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'auto'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;ga&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'set'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'anonymizeIp'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// GDPR&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;ga&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'send'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'pageview'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;cm&quot;&gt;/* HOTJAR - recordings, heatmaps */&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;q&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;q&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_hjSettings&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hjid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HOTJAR_ID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;hjsv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementsByTagName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'head'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'script'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_hjSettings&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hjid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_hjSettings&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;hjsv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;appendChild&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;})(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'//static.hotjar.com/c/hotjar-'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'.js?sv='&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;cm&quot;&gt;/* LOGGLY - error logs */&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;headElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;logglyScriptElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;headElement&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementsByTagName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'head'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;logglyScriptElement&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'script'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;logglyScriptElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;logglyScriptElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;headElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;appendChild&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;logglyScriptElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+      &lt;span class=&quot;nx&quot;&gt;logglyScriptElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onload&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;_LTracker&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;_LTracker&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
+          &lt;span class=&quot;nx&quot;&gt;_LTracker&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+              &lt;span class=&quot;s1&quot;&gt;'logglyKey'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;LOGGLY_KEY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+              &lt;span class=&quot;s1&quot;&gt;'sendConsoleErrors'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+              &lt;span class=&quot;s1&quot;&gt;'tag'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'example-logs'&lt;/span&gt;
+          &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;})(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'//cloudfront.loggly.com/js/loggly.tracker-latest.min.js'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;google-analytics-je-základ&quot;&gt;Google Analytics je základ&lt;/h2&gt;
+
+&lt;p&gt;Slúži na automatické trackovanie používateľov ako prechádzajú stránky a poskytuje možnosť zaznamenávania udalostí. V podstate poskytuje trackovanie stránok a eventov. Google o vás vie zistiť množstvo vecí, tiez zaujímavejšie pre nás sú napr. vek, lokalita, pohlavie, údaje o zariadení a prehliadači.&lt;/p&gt;
+
+&lt;p&gt;Stránky (zmeny v URL) trackuje automaticky, pokiaľ nemáme SPA applikáciu, kde to zostáva na nás - stačí pribaliť wrapper pre danú frontend technológiu, alebo volať priamo. V prípade potreby umožňuje pre dané sledovanie nastaviť dodatočné hodnoty - tzv. dimenzie. Tie použíjeme napr. na internú identifikáciu používateľa - user id, user role atd.&lt;/p&gt;
+
+&lt;p&gt;Pekne vysvetlené GDPR pre GA je tu - &lt;a href=&quot;https://www.slideshare.net/mediocz/analytika-vs-gdpr-andre-heller&quot;&gt;Analytika vs. GDPR (André Heller)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Čo ma najčastejšie zaujímava:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;počet návštevníkov a koľko času tam strávia&lt;/li&gt;
+  &lt;li&gt;odkiaľ prišli
+    &lt;ul&gt;
+      &lt;li&gt;direct - dajú sa trackovať parametre url, prípadne ignorovať príchody crawlerov&lt;/li&gt;
+      &lt;li&gt;search - aký názov zadali pri vyhľadávaní?&lt;/li&gt;
+      &lt;li&gt;social - redirect z ktorých sociálnych sietí&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;ako často a kedy tam chodia resp. nechodia
+    &lt;ul&gt;
+      &lt;li&gt;určenie release / patch okien&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;rýchlosť načítania stránky
+    &lt;ul&gt;
+      &lt;li&gt;na čo sa čaká? je to pomalé? treba optimalizovať zdroje?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;najčastejší hardvér / softvér
+    &lt;ul&gt;
+      &lt;li&gt;poskytuje odpovede na otázky responzivity / potvrdenie mobil first prístupu&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Pekná vec je možnosť tvorby panelov, kde môžete mať naraz až 12 rôzných widgetov (graf, tabuľka, číslo, mapa …). Takéto panely je možné zdielať a použit na viacerých projektoch. Je tu &lt;a href=&quot;https://analytics.google.com/analytics/gallery/&quot;&gt;dostupný marketplace&lt;/a&gt; s množstom používateľských panelov podľa viacerých kritérií. Prípadne ich môžete vykradnúť a vystavať si vlastný.&lt;/p&gt;
+
+&lt;p&gt;Super vec je &lt;a href=&quot;https://chrome.google.com/webstore/detail/page-analytics-by-google/fnbdnhhicmebfgdgglcdacdapkcihcoh&quot;&gt;Page analytics chrome extension&lt;/a&gt;, ktorý umožňuje vidieť základné informácie pri príchode na stránku. Navyše umožňuje zobraziť základnú heatmapu s počtom kliknutí na odkazy.&lt;/p&gt;
+
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/ 1x,
+        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/ 2x,
+        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/ 3x&quot; /&gt;
+&lt;figcaption&gt;Náhľad stránky zo zapnutým Page analytics pluginom&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/ 1x,
+        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/ 2x,
+        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/ 3x&quot; /&gt;
+&lt;figcaption&gt;Náhľad stránky zo zapnutým Page analytics pluginom&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Pre appky odporúčam mať na projekte pustený na monitore dashboard s real údajmi zo sledovania. Statické stránky podľa potreby prejdem aspoň raz za týždeň.&lt;/p&gt;
+
+&lt;h2 id=&quot;hotjar-pre-nahrávanie-obrazovky&quot;&gt;Hotjar pre nahrávanie obrazovky&lt;/h2&gt;
+
+&lt;p&gt;Hotjar je môj naobľúbenejší nástroj, ktorý sa zameriava na sledovanie správania používateľa a poskytuje zber spätnej väzby. Predstavte si, že si môžete pustiť video záznam toho čo používateľ robil na vašej stránke. Vidíte ako hýbe myšou / prstom, kam skroluje po stránke, pauzy, ktoré pravedpodobne využíva na čítanie. Skrátka robí veci úplne inak ako ste si predstavovali. Tak túto top feature vám Hotjar ponúka v rámci nahrávania obrazovky na danej stránke. Samozrejmosťou je zopár ďalších štandardných features, ktoré si v skratke prejdeme. Celkovo má veľmi dobrú free ponuku a výrazné výhody oproti alternatívnym riešeniam.&lt;/p&gt;
+
+&lt;h3 id=&quot;heatmapy&quot;&gt;Heatmapy&lt;/h3&gt;
+
+&lt;p&gt;Štandardná feature, ktorá nesmie chýbať pri takomto nástroji.
+Podklad pre heatmapu si nástroj spraví sám a ponúka rozdelenie podľa typu zariadenia - mobil / tablet / desktop.&lt;/p&gt;
+
+&lt;h3 id=&quot;recordings&quot;&gt;Recordings&lt;/h3&gt;
+
+&lt;p&gt;Už spomínané nahrávanie stránky. Je možné nastaviť, či má nahrávať aj text vkladaný do formulárov, pričom ale vždy ignoruje authorizačné inputy pre name a password. Video môžeme triediť, tagovať či pridávať poznámky. To priam nabáda nasadiť na A/B testy, UX testy, či testovanie nových features na vybraných používateľoch.&lt;/p&gt;
+
+&lt;p&gt;Čo sa týka GDPR, tak dodatočne pridali možnosť trackovať len whitelistované input fieldy, či úplne ignorovať emailove adresy a numerické inputy.&lt;/p&gt;
+
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/ 1x,
+        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/ 2x,
+        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/ 3x&quot; /&gt;
+&lt;figcaption&gt;Zoznam nahrávok používateľov&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;ďalšie-vlastnosti&quot;&gt;Ďalšie vlastnosti&lt;/h3&gt;
+
+&lt;p&gt;Toto podľa mňa pridali dodatočne aby toho mali viac v ponuke, no je to jednoduché a robí to čo má. Ďalej tu máme:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Analýzu formulárov
+    &lt;ul&gt;
+      &lt;li&gt;v akom momente ľudia opustia formulár&lt;/li&gt;
+      &lt;li&gt;super pre appky s formulármi&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Analýza konverzie medzi stránkami
+    &lt;ul&gt;
+      &lt;li&gt;analýza prechodu medzi viacstránkovým formulárom, či viacerými stránkami - typicky jednávka&lt;/li&gt;
+      &lt;li&gt;nepoužívam, dá sa riešiť cez Google Analytics&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Feedback
+    &lt;ul&gt;
+      &lt;li&gt;automatický pridá feedback štítok na stránku&lt;/li&gt;
+      &lt;li&gt;vyber smajlíka podľa nálady + vyber časť stránky + napíš kritiku ak chceš =&amp;gt; pošli&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Prieskum spokojnosti
+    &lt;ul&gt;
+      &lt;li&gt;možnosť zobraziť pri odchode&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Anketa
+    &lt;ul&gt;
+      &lt;li&gt;napr. akú ďalšiu feature máme pridať&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;najčastejšie-problémy&quot;&gt;Najčastejšie problémy&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;s navigáciou na stránke
+    &lt;ul&gt;
+      &lt;li&gt;pochopením menu&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;s vypĺňaním formuláru
+    &lt;ul&gt;
+      &lt;li&gt;hlavne selektory (datepicker, multiselect)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;častokrát sa snažia klikať na zvýraznený text (následok flat designu)
+    &lt;ul&gt;
+      &lt;li&gt;je treba zadefinovať dizajn tlačítok&lt;/li&gt;
+      &lt;li&gt;nezvýrazňovať text zároveň farbou a boldom&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;s vypĺňaním zložitejších formulárov
+    &lt;ul&gt;
+      &lt;li&gt;hlavne selektory (datepicker, multiselect)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;ľudia uprednostňujú mapu na vyhľadávanie&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;pozorovania-z-personálnej-stránky&quot;&gt;Pozorovania z personálnej stránky&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;veľa ľudí hýbe s myšou ako postupne číta text
+    &lt;ul&gt;
+      &lt;li&gt;vidieť čo si prečítali, čo nie, čo je zle rozdelené&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;recruiteri chcú všetko vidieť hneď, nechce sa im skrolovať ani zbytočne klikať, hľadajú len - základné info (keywords) a idú na kontakt
+    &lt;ul&gt;
+      &lt;li&gt;hneď na začiatku prezentujem aktuálny stav, job description, availability, link na CV a email&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;pred pohovorom viem povedať, či sa na mňa ľudia pripravujú
+    &lt;ul&gt;
+      &lt;li&gt;vačšina si prezrie profil tak hodinku pred stretnutím&lt;/li&gt;
+      &lt;li&gt;hodinku pred termínom prejdem dlhšie nahrávky na webe, väčšinou si čítaju o posledných projektoch - pridajte tam zaujímavosti&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;loggly-pre-odchytávanie-chyb&quot;&gt;Loggly pre odchytávanie chyb&lt;/h2&gt;
+
+&lt;p&gt;Toto ma naučili používať chalani v “Spořke”. Dovtedy som logovanie chýb neriešil, alebo som si to posielal na vlastný error endpoint na server. Ak viete používať Kibanu a nechce sa vám riešiť Logstash, tak loggly je riešenie. Ja osobne ho používam len na logovanie chýb. Jinde tam o vás logujú celý príbeh. Takže kto čo potrebuje.&lt;/p&gt;
+
+&lt;p&gt;Fajn je, že JS knižnica poskytuje v rámci konfigurácie priamo možnosť odchytávať chyby. Samozrejmosťou je aj možnosť custom logovania - napr. v rámci spracovania http requestov. Čo sa mne páči je možnosť pridávania tagov / custom labelov. To mi umožňuje logovať problémy z viacerých stránok do jedného worskpaceu a v rámci query to jednoducho oddeliť.&lt;/p&gt;
+
+&lt;p&gt;V rámci free plánu toho neponúka veľa, určite sa nájdu aj zaujímavejšie riešenia, no jeho ohromnou výhodou je podpora a konfigurovateľnosť. Je možné ho využiť aj na backende a v prípade klienta existuje viacero wrapperov pre každý významnejší framework.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;PS: nezabudnite vybuildiť source mapu, ináč zo stacketraceu nič zmysluplné nedostanete.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;statuscake-pre-prípad-výpadku&quot;&gt;StatusCake pre prípad výpadku&lt;/h2&gt;
+
+&lt;p&gt;StatusCake je jednoduchý tool, ktorý používam na monitorovanie dostupnosti stránok (page uptime). Aktuálne mám nastavených 6 testov, každý zbehne raz za 30 min. Akonáhle nastane výpadok, obdržím email. Všetko v rámci free plánu.&lt;/p&gt;
+
+&lt;p&gt;V rámci testov môžem nastaviť:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;typ testu (http, ssh, ping, dns)&lt;/li&gt;
+  &lt;li&gt;threshold pre upozornenia&lt;/li&gt;
+  &lt;li&gt;test locations&lt;/li&gt;
+  &lt;li&gt;frekvenciu (15-30 min, 1hod, 1den)&lt;/li&gt;
+  &lt;li&gt;pre appky sa hodí - testovanie s basic auth, custom HTTP headers či form data v requeste&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Uptime monitoring je fajn vec, obzvlášť ak máte:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;aplikácie v cloude
+    &lt;ul&gt;
+      &lt;li&gt;spôsob ako im zabrániť v uspávaní&lt;/li&gt;
+      &lt;li&gt;ľahko odhalíte ak ste prečerpali denní limit&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;vám hrozí DDoS útok
+    &lt;ul&gt;
+      &lt;li&gt;ak človek robí politický motivovaný web&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;content-block__cover--mobile&quot;&gt;
+&lt;img src=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/&quot; srcset=&quot;https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto/fragaria.cz/posts/ 1x,
+        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_2.0/fragaria.cz/posts/ 2x,
+        https://res.cloudinary.com/fragaria/image/upload/w_640,c_limit,f_jpg,q_auto,dpr_3.0/fragaria.cz/posts/ 3x&quot; /&gt;
+&lt;figcaption&gt;Dashboard testu&lt;/figcaption&gt;
+&lt;/figure&gt;</content><author><name>Lukáš Turský</name></author><category term="google analytics" /><category term="hotjar" /><category term="loggly" /><category term="page uptime" /><category term="user monitoring" /><category term="user recording" /><summary type="html">Patrím medzi ľudí, ktorí majú radi spätnú väzbu na svoju prácu, no tú je na webe ťažké získať, kedže návštevníci nemajú čas sa k vám vyjadrovať. Jedine ak spravujete štátny portál. Preto sú tak obľúbené rôzne nástroje na sledovanie návštevnikov na stránkach a ich vyhodnotením sa vieme dostať k nepriamej spätnej väzbe. A že ich je.</summary></entry><entry><title type="html">Blockchain? Can do!</title><link href="https://fragaria.github.com/website/blog/2018/03/28/blockchain-can-do/" rel="alternate" type="text/html" title="Blockchain? Can do!" /><published>2018-03-28T11:25:00+00:00</published><updated>2018-03-28T11:25:00+00:00</updated><id>https://fragaria.github.com/website/blog/2018/03/28/blockchain-can-do</id><content type="html" xml:base="https://fragaria.github.com/website/blog/2018/03/28/blockchain-can-do/">&lt;p&gt;Blockchain is the new sexy. Everybody is talking about it, people in
 lines in grocery stores are discussing Bitcoin price, big companies are
 pouring tons of money in research. Everybody just wants to be a part of
 it. And from now on, so are we! It turns out, it’s just another young
@@ -1712,112 +2048,4 @@ ncu &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt
 took quite some time on research, programming and writing. I’m kinda
 wondering how maintaining of it will go, so about it later.&lt;/p&gt;
 
-&lt;p&gt;Cheers, &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install rodnecislo&lt;/code&gt; and go opensource.&lt;/p&gt;</content><author><name>Jakub Podlaha</name></author><category term="npm" /><category term="package" /><category term="javascript" /><category term="publish" /><summary type="html">Going down the path of node package creator - guide to create npm package and publish it to npm repository.</summary></entry><entry><title type="html">Co je nového v Ionic 3</title><link href="https://fragaria.github.com/website/blog/2017/05/26/co-je-noveho-v-ionic-3_26/" rel="alternate" type="text/html" title="Co je nového v Ionic 3" /><published>2017-05-26T11:24:00+00:00</published><updated>2017-05-26T11:24:00+00:00</updated><id>https://fragaria.github.com/website/blog/2017/05/26/co-je-noveho-v-ionic-3_26</id><content type="html" xml:base="https://fragaria.github.com/website/blog/2017/05/26/co-je-noveho-v-ionic-3_26/">&lt;p&gt;Jak jsme si ukázali
-&lt;a href=&quot;http://blog.fragaria.cz/2017/03/vytvorte-si-appku-v-angularu.html&quot;&gt;minule&lt;/a&gt;,
-Ionic je oblíbený framework na tvorbu hybridních mobilních aplikací.
-Nyní je již k dipozici Ionic ve verzi 3. Co přinesl nového?&lt;/p&gt;
-
-&lt;h3 id=&quot;změny-pod-kapotou&quot;&gt;Změny pod kapotou&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Změny ve verzi 3 nejsou nijak dramatické. Po vzoru Angularu se ruší
-číslování verzí a framework bude označován jen jako “Ionic”.&lt;/li&gt;
-  &lt;li&gt;Framework by měl mít rychlejší start a celkově být stabilnější. Jeho
-celková velikost se také změnšila.&lt;/li&gt;
-  &lt;li&gt;Stěžejní a pro nás nejvýraznější změnou je podpora Angularu 4.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Při přechodu z verze 1 na verzi 2 u příkazu ionic start pro vytvoření
-nového projektu přibyl argument &lt;code class=&quot;highlighter-rouge&quot;&gt;--v2&lt;/code&gt;, který definoval vytvoření projektu
-ve verzi 2. Pokud chceme vytvořit projekt verze 3, pak stačí zadat jen
-ionic start s tím, že se nainstaluje ta nejnovější dostupná verze (platí
-od Ionic CLI v2.2.3, ve staších verzích CLI musíte pro nejnovější verzi
-Ionicu zadat argument &lt;code class=&quot;highlighter-rouge&quot;&gt;--v2&lt;/code&gt;).
- &lt;/p&gt;
-
-&lt;h3 id=&quot;dekorátor-ionicpage&quot;&gt;Dekorátor IonicPage&lt;/h3&gt;
-
-&lt;p&gt;Ionic nepoužívá Router, namísto něj má tzv. &lt;em&gt;deep link system&lt;/em&gt;, kdy se o
-přechod mezi Pages stará NavController, který má metody Push a Pop.
-Do funkce Push se vkládá název komponenty, na kterou chceme přesměrovat,
-například:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;navCtrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'MyPage'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Pokud bychom si komponentu chtěli označit jinak, můžeme využít parametru
-name v dekorátoru IonicPage, díky kterému pak linkujeme na komponentu
-díky vlastní proměnné: &lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;IonicPage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'my-page'&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-
-&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;Component&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
-
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;MyPage&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{...}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Následně na tuto komponentu můžeme linkovat přes proměnnou nastavenou v
-dekorátoru:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;navCtrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'MyPage'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Další vlastností dekorátoru IonicPage je atribut segment, který definuje
-URL parametr pro danou komponentu v případě, že je zrovna aktivní:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;IonicPage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'my-page'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;segment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'some-path'&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;V URL se daná komponenta zobazí následovně: &lt;code class=&quot;highlighter-rouge&quot;&gt;http://localhost:8101/\#/some-path&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Do proměnné &lt;em&gt;segment&lt;/em&gt; se dá vložit i dynamická proměnná, a to ve formátu
-&lt;code class=&quot;highlighter-rouge&quot;&gt;:variable&lt;/code&gt;, příklad:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;IonicPage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'detail-page'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;segment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'detail/:id'&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Samotná proměnná se předává v metodě Push, odkazující na naší
-komponentu. Více o IonicPage dekorátoru se můžete dozvědět v &lt;a href=&quot;http://ionicframework.com/docs/api/navigation/IonicPage/&quot;&gt;oficiální
-dokumentaci&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;lazy-loading&quot;&gt;Lazy loading&lt;/h3&gt;
-
-&lt;p&gt;Jednou z features nového Ionicu je i možnost nastavit si lazy loading,
-který znatelně zrychlí celou aplikaci. Lazy loading však není plně
-odladěn a stále má nedostatky. Autoři Ionicu se na svém
-&lt;a href=&quot;https://blog.ionic.io/ionic-3-0-has-arrived/&quot;&gt;blogu&lt;/a&gt; dokonce zmiňují,
-že hledají testery a ocenili by pomoc komunity při testování lazy
-loadingu.&lt;/p&gt;
-
-&lt;h3 id=&quot;vhozená-rukavice&quot;&gt;Vhozená rukavice&lt;/h3&gt;
-
-&lt;p&gt;Nic není perfektní a nová verze Ionicu není vyjímkou. Mezi nedostatky,
-které si zaslouží péči patří:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Chybné updatování URL adres při pushnutí se do komponenty nejvyšší
-úrovně, která využívá nav-tabs.&lt;/li&gt;
-  &lt;li&gt;Deep linking funguje zatím jen v jednom navigačním zásobníku, což
-znamená že při použití rozdělených panelů (tzv. Ionic split pane)
-nebude URL navigace fungovat správně.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;co-bude-dál&quot;&gt;Co bude dál&lt;/h3&gt;
-
-&lt;p&gt;Vývojáři z Ionicu se chtějí zaměřit především na zrychlení startu
-aplikace a na zvýšení rychlosti. Průběžně budou zpracovávat uživatelský
-feedback k sekci lazy loadingu. Samozřejmostí je další oprava bugů v
-celém frameworku.
-Vývojáři z Ionicu se chtějí zaměřit především na rychlost celé aplikace,
-především pak její start. Ionic není dokonalý, ale jak jsem psal výše,
-vývojáři Ionicu budou rádi za vaše náměty a pomoc. Třeba pak budete mít
-dobrý pocit, že jste něco vrátili opensource komunitě.&lt;/p&gt;
-
-&lt;p&gt;Koho by zajímal další progres Ionicu, může je sledovat na
-&lt;a href=&quot;https://twitter.com/ionicframework&quot;&gt;Twitteru&lt;/a&gt; nebo se mrknout na jejich
-&lt;a href=&quot;https://blog.ionic.io/&quot;&gt;blog&lt;/a&gt;.&lt;/p&gt;</content><author><name>Jarda Brchel</name></author><category term="ionic" /><category term="mobily" /><category term="javascript" /><category term="angularjs" /><summary type="html">Jak jsme si ukázali minule, Ionic je oblíbený framework na tvorbu hybridních mobilních aplikací. Nyní je již k dipozici Ionic ve verzi 3. Co přinesl nového?</summary></entry></feed>
+&lt;p&gt;Cheers, &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install rodnecislo&lt;/code&gt; and go opensource.&lt;/p&gt;</content><author><name>Jakub Podlaha</name></author><category term="npm" /><category term="package" /><category term="javascript" /><category term="publish" /><summary type="html">Going down the path of node package creator - guide to create npm package and publish it to npm repository.</summary></entry></feed>

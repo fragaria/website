@@ -42,6 +42,8 @@ exclude:
 
 permalink: /blog/:year/:month/:day/:title/
 
+use_sw: false
+
 # --------------------------- plugins ------------------------------------------
 
 paginate_path: "/blog/archive/:num/"

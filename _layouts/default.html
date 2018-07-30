@@ -20,11 +20,7 @@ layout: compress
             <p>Thanks for your understanding.</p>
         </div>
 
-        <div class="page-container__inner">
-            {% include sitenav.html %}
-            {{ content }}
-            {% include footer.html %}
-        </div>
+        {{ content }}
 
         <script src="{{ '/assets/js/' | relative_url }}{% if jekyll.environment == 'production' %}{{ 'site.js' | bust_js_cache }}{% else %}site.js{% endif %}"></script>
     </body>

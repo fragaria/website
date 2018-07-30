@@ -5,7 +5,7 @@ layout: default
 <div class="content-block typeset" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="{{ site.company.official_name }}">
     <section class="v-home__hero">
-        <h1 class="v-home__hero-headline">We build software that <i>works</i>.<br>No <i>half-baked</i> solutions, no <i>false</i> promises.<br>Just state-of-the-art <i>code</i>.</h1>
+        <h1 class="v-home__hero-headline">We build software that <i>works</i>.<br>No <i>half-baked</i> solutions, no <i>false</i> promises.</h1>
     </section>
     <section class="v-home__portfolio">
         <h1 class="splitting-headline" id="works">
@@ -16,6 +16,10 @@ layout: default
     </section>
 
     <section class="v-home__blog content-block__cover--mobile">
+        <h1 class="splitting-headline" id="blog">
+            <span class="splitting-headline__fill">Latest blog posts</span>
+        </h1>
+
         {% include blog-news.html %}
     </section>
 

@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|PT+Serif:400,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=latin-ext');
+// @import url('https://fonts.googleapis.com/css?family=PT+Serif:400,700&subset=latin-ext');
 
 // Colors
 $palette: (
@@ -64,7 +66,7 @@ $code-background-color: map-get($palette, gray-light);
 
 $selection-color: map-get($palette, red);
 
-$blog-listing-splitter-border-color: map-get($palette, gray-semilight);
+$blog-listing-splitter-border-color: map-get($palette, black);
 
 // Aliases for Sassline breakpoints, @see: $breakpoints
 $breakpoint-aliases: (
@@ -159,16 +161,11 @@ $gutterwidths: (
 );
 
 $bodytype: (
-    font-family: "'PT serif', serif",
+    font-family: "'Times New Roman', serif",
     regular: 400,
     bold: 700,
     italic: italic,
     cap-height: 0.65
-    // font-family: "'Times New Roman', serif",
-    // regular: 400,
-    // bold: 700,
-    // italic: italic,
-    // cap-height: 0.65
 );
 
 $headingtype: (
@@ -198,4 +195,12 @@ $sansseriftype: (
     semi: 700,
     bold: 700,
     cap-height: 0.79
+);
+
+$seriftype: (
+    font-family: '"PlayFair Display SC", serif',
+    regular: 400,
+    bold: 400,
+    italic: italic,
+    cap-height: 0.82
 );

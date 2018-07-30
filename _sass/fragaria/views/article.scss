@@ -12,14 +12,14 @@ $article-content-width: 40rem;
         margin-left: auto;
         margin-right: auto;
 
-        @include sassline(alpha, $headingtype, $lineheight: 3, $breakpoint: all);
+        @include sassline(alpha, $seriftype, $lineheight: 3, $breakpoint: all);
 
         @include deviceBreakpoint(tablet) {
-            @include sassline(alpha, $headingtype, $lineheight: 4, $breakpoint: all);
+            @include sassline(alpha, $seriftype, $lineheight: 4, $breakpoint: all);
         }
 
         @include deviceBreakpoint(desktop) {
-            @include sassline(alpha, $headingtype, $lineheight: 5, $breakpoint: all);
+            @include sassline(alpha, $seriftype, $lineheight: 5, $breakpoint: all);
         }
 
     }

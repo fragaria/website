@@ -3,29 +3,35 @@
     display: flex;
 
     &--horizontal .blog-posting__body {
-        padding-bottom: 2rem;
+        flex-direction: column;
+        padding-bottom: 4rem;
 
         @include deviceBreakpoint(tablet) {
             flex-direction: row;
-
-
-            .blog-posting__media {
-                margin-left: 2rem;
-                margin-top: 0;
-                min-width: 33.333%;
-            }
-
-            .blog-posting__image {
-                display: block;
-            }
         }
 
+        .blog-posting__media {
+            margin: 10px 0 0;
+            flex: inherit;
+            filter: grayscale(0);
+        }
+
+        .blog-posting__media {
+            margin-left: 2rem;
+            margin-top: 0;
+            min-width: 33.333%;
+        }
+
+        .blog-posting__image {
+            display: block;
+        }
     }
 
     &--featured .blog-posting__body {
         position: relative;
         display: block;
         text-align: center;
+        margin-bottom: 2rem;
 
         .blog-posting__media {
             position: absolute;
@@ -52,7 +58,7 @@
             text-transform: uppercase;
             text-decoration: none;
 
-            @include sassline(alpha, $headingtype, 4, 1, all);
+            @include sassline(alpha, $seriftype, 4, 1, all);
         }
 
         .blog-posting__content,
@@ -70,6 +76,11 @@
             margin-right: auto;
             font-weight: bold;
             @include sassline(epsilon, $bodytype, 2, 1, all);
+        }
+
+        .blog-posting__cta-button:hover {
+            background: $body-background;
+            color: $text-color;
         }
     }
 }
@@ -98,12 +109,16 @@
     }
 
     .blog-posting__meta {
-        color: map-get($palette, gray-dark);
         @include baseline(zeta, $bodytype, $below: 1);
     }
 
     .blog-posting__headline {
-        text-decoration: underline;
+        font-family: getFontFamily($seriftype);
+        font-weight: 400;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        // @include sassline(alpha, $seriftype, 4, 1, all);
     }
 
     &:hover .blog-posting__meta {

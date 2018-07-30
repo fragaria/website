@@ -1,5 +1,4 @@
 @mixin anchorStyle($emphasize: false) {
-    font-weight: bold;
     text-decoration: underline;
 
     @if ($emphasize) {

@@ -25,7 +25,7 @@
 
     /* 4 columns on a row for tablet and up */
     @include deviceBreakpoint(tablet) {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         grid-gap: 4rem;
     }
 }

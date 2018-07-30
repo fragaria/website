@@ -8,13 +8,23 @@
     padding-bottom: 2rem;
 
     // second top border
-    @include baselineAwareBorder($color: map-get($palette, gray-semilight), $orientation: 'top', $width: 1px, $offset: 0);
+    @include baselineAwareBorder($color: map-get($palette, black), $orientation: 'top', $width: 2px, $offset: 0);
 
     @include deviceBreakpoint(tablet) {
         align-items: flex-start;
         flex-direction: row;
         margin-top: 4rem;
         padding-bottom: 6rem;
+    }
+
+    &:after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        top: -5px;
+        width: 100%;
+        background: map-get($palette, black);
+        height: 2px
     }
 }
 
@@ -42,7 +52,7 @@
     margin-top: 1rem;
     font-family: getFontFamily($sansseriftype);
     letter-spacing: .09em;
-    color: map-get($palette, gray-dark);
+    // color: map-get($palette, gray-dark);
     text-align: center;
 
     @include sassline(theta, $sansseriftype, 1, 0);

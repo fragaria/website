@@ -23,7 +23,7 @@ video {
 body {
   @include fontsize(eta, all);
 
-  font-family: getFontFamily($bodytype);;
+  font-family: getFontFamily($bodytype);
   font-style: normal;
   font-weight: map-get($bodytype, regular);
   line-height: 2rem;

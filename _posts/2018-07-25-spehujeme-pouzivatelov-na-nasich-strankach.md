@@ -11,7 +11,7 @@ tags:
 - user monitoring
 - user recording
 modified_time: '2018-07-25T13:00:00.000+02:00'
-cloudinary_src: posts/2018-03-28-blockchain-can-do__1.jpg
+cloudinary_src: posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__1_ahtmgu.jpg
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-2449955145126440509
 blogger_orig_url: http://blog.fragaria.cz/2018/07/spehujeme-pouzivatelov-na-nasich.html
 ---
@@ -22,8 +22,7 @@ A že ich je.
 
 > "Use the right tools to spy on people on your website"
 
-{% include figure.html cloudinary_src="posts/2018-03-28-blockchain-can-do__1.jpg" %}
-[Dmitry Ratushny](https://unsplash.com/@ratushny?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge)
+{% include figure.html cloudinary_src="posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__1_ahtmgu.jpg" caption='<a href="https://unsplash.com/@ratushny?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge">Dmitry Ratushny</a>' %}
 
 Dnes vám preto predstavím pár nástrojov, ktoré používam ja pri sledovaní používateľov na stránkach a zaspomínam v čom mi už za tie roky pomohli. Tému ako aj nástroje by som zahrnul do oblasti User Monitoring či User Profiling.
 
@@ -164,9 +163,8 @@ Pekná vec je možnosť tvorby panelov, kde môžete mať naraz až 12 rôzných
 
 Super vec je [Page analytics chrome extension](https://chrome.google.com/webstore/detail/page-analytics-by-google/fnbdnhhicmebfgdgglcdacdapkcihcoh), ktorý umožňuje vidieť základné informácie pri príchode na stránku. Navyše umožňuje zobraziť základnú heatmapu s počtom kliknutí na odkazy.
 
-{% include figure.html cloudinary_src="posts/" caption="Náhľad stránky zo zapnutým Page analytics pluginom" %}
-
-{% include figure.html cloudinary_src="posts/" caption="Náhľad stránky zo zapnutým Page analytics pluginom" %}
+{% include figure.html cloudinary_src="posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__2_sm5ty3.jpg" caption="Náhľad stránky zo zapnutým Page analytics pluginom I." %}
+{% include figure.html cloudinary_src="posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__3_agazmm.jpg" caption="Náhľad stránky zo zapnutým Page analytics pluginom II." %}
 
 Pre appky odporúčam mať na projekte pustený na monitore dashboard s real údajmi zo sledovania. Statické stránky podľa potreby prejdem aspoň raz za týždeň.
 
@@ -185,7 +183,7 @@ Už spomínané nahrávanie stránky. Je možné nastaviť, či má nahrávať a
 
 Čo sa týka GDPR, tak dodatočne pridali možnosť trackovať len whitelistované input fieldy, či úplne ignorovať emailove adresy a numerické inputy.
 
-{% include figure.html cloudinary_src="posts/" caption="Zoznam nahrávok používateľov" %}
+{% include figure.html cloudinary_src="posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__4_tl1olb.jpg" caption="Zoznam nahrávok používateľov" %}
 
 ### Ďalšie vlastnosti
 
@@ -258,4 +256,4 @@ V rámci testov môžem nastaviť:
 - vám hrozí DDoS útok
   - ak človek robí politický motivovaný web
 
-{% include figure.html cloudinary_src="posts/" caption="Dashboard testu" %}
+{% include figure.html cloudinary_src="posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__5_ah69jw.jpg" caption="Dashboard testu" %}

@@ -1,0 +1,53 @@
+.old-ie {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: map-get($palette, red);
+}
+
+.old-ie-warning {
+    display: none;
+}
+
+.old-ie .page-container__inner {
+    display: none;
+}
+
+.old-ie .old-ie-warning {
+    position: absolute;
+    width: 768px;
+    height: 450px;
+    top: 50%;
+    left: 50%;
+    margin-top: -225px;
+    margin-left: -384px;
+    color: map-get($palette, white);
+
+    h1 {
+        font-family: getFontFamily($headingtype);
+        font-weight: bold;
+        text-transform: lowercase;
+        @include sassline(beta, $headingtype, 3, 2, all);
+    }
+
+    p {
+        font-family: getFontFamily($bodytype);
+        @include sassline(zeta, $bodytype, 2, 1, all);
+    }
+
+    a, a:hover {
+        color: map-get($palette, white);
+        font-family: getFontFamily($bodytype);
+        text-decoration: underline;
+        @include sassline(zeta, $bodytype, 2, 1, all);
+    }
+
+    b {
+        font-weight: bold;
+    }
+
+    img {
+        width: 5rem;
+    }
+}

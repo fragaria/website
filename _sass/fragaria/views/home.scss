@@ -33,16 +33,9 @@
     margin-bottom: 2rem;
 }
 
+.v-home__blog,
 .v-home__team,
 .v-home__company {
-    margin-top: 4rem;
-
-    @include deviceBreakpoint(desktop) {
-        margin-top: 10rem;
-    }
-}
-
-.v-home__blog {
     margin-top: 4rem;
 
     @include deviceBreakpoint(tablet) {

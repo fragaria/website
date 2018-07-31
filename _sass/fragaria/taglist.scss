@@ -1,29 +1,8 @@
-.taglist {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: -1rem;
-    margin-left: -0.5rem;
-
-    @include deviceBreakpoint(tablet) {
-        justify-content: left;
-    }
-}
-
 .taglist__tag {
     display: inline-block;
-    height: 2rem;
-    line-height: 2rem;
-    background-color: map-get($palette, gray-medium);
-    padding-left: .5em;
-    padding-right: .5em;
-    margin-top: 1rem;
-    margin-left: .5rem;
-    color: map-get($palette, gray-dark);
+    margin-right: .5rem;
 
-    @include fontsize(eta);
-
-    &:hover {
-        color: $primary-color;
+    &:last-child {
+        margin: 0
     }
 }

@@ -32,7 +32,7 @@
 
 
         .blog-posting__headline {
-            @include sassline(delta, $seriftype, 2, 1, all);
+            @include sassline(delta, $seriftype, 3, 1, all);
         }
     }
 }

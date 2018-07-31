@@ -4,6 +4,10 @@
     @if ($emphasize) {
         color: map-get($palette, red);
     }
+
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 .anchor--default {
@@ -11,6 +15,5 @@
 }
 
 .anchor--emphasized {
-    font-family: getFontFamily($headingtype);
     @include anchorStyle(true);
 }

@@ -1,7 +1,7 @@
-<div class="portfolio-strip js-portfolio-strip">
+<div class="portfolio-strip">
     <div class="portfolio-strip__items">
         {% for project in site.data.portfolio %}
-            <article class="portfolio-project js-portfolio-strip-item" itemtype="https://schema.org/SoftwareApplication" itemscope>
+            <article class="portfolio-project" itemtype="https://schema.org/SoftwareApplication" itemscope>
                 <meta itemprop="applicationCategory" content="website">
                 <meta itemprop="operatingSystem" content="all">
 
@@ -12,48 +12,26 @@
                     <meta itemprop="name" content="{{ site.company.official_name }}">
                 </span>
 
+                <div class="portfolio-project-detail">
+                    <h1 class="portfolio-project__headline">{{ project.title }}</h1>
+
+                    <!-- <div class="caption portfolio-project__subheadline">{{ project.job }}</div> -->
+
+                    {% if project.website %}
+                        <div class="portfolio-project-detail__resources">
+                            <a class="anchor anchor--emphasized" href="{{ project.website.href }}">{{ project.website.caption }}</a>
+                        </div>
+                    {% endif %}
+
+                    <div class="portfolio-project-detail__resources">{{ project.desc }}</div>
+
+                    {% include posts/taglist.html tags=project.tags %}
+                </div>
+
                 <div class="portfolio-project__media">
                     <img class="portfolio-project__image" src="{% cloudinary_url project.img crop='fit' height='128' width='128' format='png' quality='auto' dpr='2.0' %}" alt="{{ project.title }}">
                 </div>
-                <div class="portfolio-project__label">
-                    <h1 class="portfolio-project__headline">{{ project.title }}</h1>
-                    <div class="caption portfolio-project__subheadline">{{ project.job }}</div>
-                </div>
-                <!-- @note: template will not be visible, it's only copied down to the detail container -->
-                <div class="portfolio-project-detail portfolio-project-detail--template js-portfolio-strip-item-template">
-                    <div class="portfolio-project-detail__desc">
-                        <p>{{ project.desc }}</p>
-
-                        <div class="portfolio-project-detail__resources">
-                            {% include posts/taglist.html tags=project.tags %}
-                            {% if project.website %}
-                            <div>
-                                <a class="anchor anchor--default" href="{{ project.website.href }}">{{ project.website.caption }}</a>
-                            </div>
-                            {% endif %}
-                        </div>
-                    </div>
-                    {% if project.gallery %}
-                        <div class="portfolio-project-detail__gallery">
-                            {% for image in project.gallery %}
-                                <img itemprop="screenshot" class="portfolio-project-detail__gallery-item" src="{{ image }}" alt="{{ project.title }} visualisation ({{ forloop.index + 1 }} / {{ project.gallery.size }})">
-                            {% endfor %}
-                        </div>
-                    {% endif %}
-                </div>
             </article>
         {% endfor %}
-    </div>
-    <div class="portfolio-strip__detail-container   js-portfolio-detail-container">
-        <div class="portfolio-strip__detail-triangle-wrap">
-            <div class="portfolio-strip__detail-triangle  js-portfolio-detail-container__triangle"></div>
-        </div>
-        <div class="portfolio-strip__detail-container-body">
-            <!-- carousel viewport, stays constant -->
-            <div class="js-portfolio-detail-container__viewport">
-                <!-- carousel body, moves on x-axis -->
-                <div class="js-portfolio-detail-container__body"></div>
-            </div>
-        </div>
     </div>
 </div>

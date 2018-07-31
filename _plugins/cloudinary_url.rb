@@ -91,7 +91,19 @@ module Jekyll
             transformations_string = ""
             transformation_options.each do |key, shortcode|
                 if @args[key.to_sym]
-                    transformations << "#{shortcode}_#{@args[key.to_sym]}"
+                    val = ""
+
+                    begin
+                        if context[@args[key.to_sym]]
+                            val = context[@args[key.to_sym]]
+                        else
+                            val = @args[key.to_sym]
+                        end
+                    rescue
+                        val = @args[key.to_sym]
+                    end
+
+                    transformations << "#{shortcode}_#{val}"
                 end
             end
 

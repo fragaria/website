@@ -21,7 +21,7 @@ Aby se nejednalo jen o osobní zpověď, snažím se zde zahrnout co možná
 nejvíce postřehů, které se snad zcela neutonou v poněkud krkolomném
 slohu.
 
-{% include figure.html cloudinary_src='posts/2017-11-10-ohlednuti-ex-vedce__1.jpg' %}
+{% include figure.html cloudinary_src='posts/2017-11-10-ohlednuti-ex-vedce__1.jpg' sizing='wide' %}
 
 ### Kdo je to fyzik?
 

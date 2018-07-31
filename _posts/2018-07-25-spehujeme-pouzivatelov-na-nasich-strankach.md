@@ -22,7 +22,7 @@ A že ich je.
 
 > "Use the right tools to spy on people on your website"
 
-{% include figure.html cloudinary_src="posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__1_ahtmgu.jpg" caption='<a href="https://unsplash.com/@ratushny?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge">Dmitry Ratushny</a>' %}
+{% include figure.html cloudinary_src="posts/2018-07-25-spehujeme-pouzivatelov-na-nasich-strankach__1_ahtmgu.jpg" caption='<a href="https://unsplash.com/@ratushny?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge">Dmitry Ratushny</a>' sizing='wide' %}
 
 Dnes vám preto predstavím pár nástrojov, ktoré používam ja pri sledovaní používateľov na stránkach a zaspomínam v čom mi už za tie roky pomohli. Tému ako aj nástroje by som zahrnul do oblasti User Monitoring či User Profiling.
 

@@ -1,24 +1,32 @@
-<figure class="content-block__cover--mobile">
+{% if include.sizing == 'wide' %}
+    {% assign img_width = 1120 %}
+{% else %}
+    {% assign img_width = 640 %}
+{% endif %}
+<figure class="figure content-block__cover--mobile {% if include.sizing == 'wide' %}figure--wide{% endif %}">
 <img
     {% if include.alt %}alt="{{ include.alt }}"{% endif %}
 
     src="{%- if include.cloudinary_src -%}
         {%- if include.format == 'gif' -%}
-            {% cloudinary_url include.cloudinary_src %}
+            {% cloudinary_url include.cloudinary_src format='auto' %}
         {%- else -%}
-            {% cloudinary_url include.cloudinary_src width='640' crop='limit' quality='auto' dpr='2.0' format='jpg' %}
+            {% cloudinary_url include.cloudinary_src width=img_width crop='limit' quality='auto' dpr='2.0' format='auto' %}
         {%- endif -%}
     {%- else -%}
         {{ include.src }}
     {%- endif -%}"
 
     srcset="{%- if include.cloudinary_src and include.format != 'gif' -%}
-        {% cloudinary_url include.cloudinary_src width='640' crop='limit' quality='auto' format='jpg' %} 1x,
-        {% cloudinary_url include.cloudinary_src width='640' crop='limit' quality='auto' format='jpg' dpr='2.0' %} 2x,
-        {% cloudinary_url include.cloudinary_src width='640' crop='limit' quality='auto' format='jpg' dpr='3.0' %} 3x
+        {% cloudinary_url include.cloudinary_src width='480' crop='limit' quality='auto' format='auto' %} 480w,
+        {% cloudinary_url include.cloudinary_src width='640' crop='limit' quality='auto' format='auto' %} 640w,
+        {% cloudinary_url include.cloudinary_src width='1280' crop='limit' quality='auto' format='auto' %} 1280w,
+        {% cloudinary_url include.cloudinary_src width='1920' crop='limit' quality='auto' format='auto' %} 1920w,
+        {% cloudinary_url include.cloudinary_src width='1120' crop='limit' quality='auto' format='auto' %} 1120w,
+        {% cloudinary_url include.cloudinary_src width='2240' crop='limit' quality='auto' format='auto' %} 2240w,
     {%- endif -%}"
 
-    class="js-fix-baseline"
+    class="figure__image js-fix-baseline"
 />
-{% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
+{% if include.caption %}<figcaption class="figure__caption">{{ include.caption }}</figcaption>{% endif %}
 </figure>

@@ -55,22 +55,28 @@ $article-content-width: 40rem;
     }
 
     // basic image
-    // todo: align to baseline somehow?
-    figure:not(.highlight) {
+    .figure:not(.highlight) {
         text-align: center;
         margin-bottom: 2rem;
 
-        img {
-            // images without display: block get unspecified margin added by browsers
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+        &.figure--wide {
+            @include deviceBreakpoint(desktop) {
+                margin-left: -15rem;
+                margin-right: -15rem;
+            }
         }
+    }
 
-        figcaption {
-            font-weight: bold;
-            @include sassline(theta, $bodytype, $lineheight: 2, $below: 0, $breakpoint: all);
-        }
+    .figure__image {
+        // images without display: block get unspecified margin added by browsers
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .figure__caption {
+        font-weight: bold;
+        @include sassline(theta, $bodytype, $lineheight: 2, $below: 0, $breakpoint: all);
     }
 
     .inline-figure-container {

@@ -22,7 +22,7 @@ it. And from now on, so are we\! It turns out, it's just another young
 technology that we can
 handle.
 
-{% include figure.html cloudinary_src="posts/2018-03-28-blockchain-can-do__1.jpg" %}
+{% include figure.html cloudinary_src="posts/2018-03-28-blockchain-can-do__1.jpg" sizing='wide' %}
 
 ## Not that hard
 

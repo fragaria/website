@@ -26,21 +26,18 @@
             {% endif %}
         </div>
         {% if include.post.cloudinary_src %}
-            {% if include.media_sizing == 'large' %}
-                <div class="blog-posting__media" style="
-                    background-image: url('{% cloudinary_url include.post.cloudinary_src width='1280' height='800' crop='fit' quality='auto' format='jpg' %}');
-                    background-image: -webkit-image-set(url({% cloudinary_url include.post.cloudinary_src width='1280' height='800' crop='fit' quality='auto' format='jpg' %}) 1x,url({% cloudinary_url include.post.cloudinary_src width='1280' height='800' crop='fit' quality='auto' format='jpg' dpr='2.0' %}) 2x)
-                ">
-                    <img itemprop="image" src="{% cloudinary_url include.post.cloudinary_src width='1280' height='800' crop='fit' quality='auto' format='jpg' %}" class="blog-posting__image" />
-                </div>
-            {% else %}
-                    <div class="blog-posting__media" style="
-                    background-image: url('{% cloudinary_url include.post.cloudinary_src width='640' crop='fit' quality='auto' format='jpg' %}');
-                    background-image: -webkit-image-set(url({% cloudinary_url include.post.cloudinary_src width='640' crop='fit' quality='auto' format='jpg' %}) 1x,url({% cloudinary_url include.post.cloudinary_src width='640' crop='fit' quality='auto' dpr='2.0' format='jpg' %}) 2x)
-                ">
-                    <img itemprop="image" src="{% cloudinary_url include.post.cloudinary_src width='1280' height='800' crop='fit' quality='auto' format='jpg' %}" class="blog-posting__image" />
-                </div>
-            {% endif %}
+            <div class="blog-posting__media" style="
+                {%- if include.media_sizing == 'large' -%}
+                background-image: url('{% cloudinary_url include.post.cloudinary_src width='1280' height='800' crop='fit' quality='auto' format='auto' %}');
+                background-image: -webkit-image-set(url({% cloudinary_url include.post.cloudinary_src width='1280' height='800' crop='fit' quality='auto' format='auto' dpr='1.0' %}) 1x, url({% cloudinary_url include.post.cloudinary_src width='1280' height='800' crop='fit' quality='auto' format='auto' dpr='2.0' %}) 2x);
+                {%- else -%}
+                background-image: url('{% cloudinary_url include.post.cloudinary_src width='400' height='240' crop='fit' quality='auto' format='auto' dpr='1.0' %}');
+                background-image: -webkit-image-set(url({% cloudinary_url include.post.cloudinary_src width='400' height='240' crop='fit' quality='auto' format='auto' dpr='1.0' %}) 1x, url({% cloudinary_url include.post.cloudinary_src width='400' height='240' crop='fit' quality='auto' format='auto' dpr='2.0' %}) 2x);
+                {%- endif -%}
+            ">
+                <!-- image is hidden in css, it's here only for metadata-->
+                <img itemprop="image" src="{% cloudinary_url include.post.cloudinary_src width='480' height='240' crop='fit' quality='auto' format='auto' dpr='1.0' %}" class="blog-posting__image" />
+            </div>
         {% endif %}
     </a>
 </article>

@@ -22,7 +22,7 @@ Mimochodem, Elasticsearch verze 6.0 bude představen 6. prosince 2017 v
 17.00 hodin. Pokud máte chuť, můžete celou událost [sledovat
 online](https://www.elastic.co/live/v6?elektra=home&storm=banner).
 
-{% include figure.html cloudinary_src="posts/2017-12-01-elasticsearch-60-se-blizi__1.jpg" %}
+{% include figure.html cloudinary_src="posts/2017-12-01-elasticsearch-60-se-blizi__1.jpg" sizing='wide' %}
 
 Protože jsme Elasticsearch na blogu chvíli zanedbávali, vypíchnu tu pár
 novinek verze 6.0 (a někdy i 5.0).

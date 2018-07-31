@@ -11,17 +11,14 @@ $article-content-width: 40rem;
         max-width: 13em;
         margin-left: auto;
         margin-right: auto;
+        font-family: getFontFamily($seriftype);
+        font-weight: 400;
 
         @include sassline(alpha, $seriftype, $lineheight: 3, $breakpoint: all);
 
         @include deviceBreakpoint(tablet) {
-            @include sassline(alpha, $seriftype, $lineheight: 4, $breakpoint: all);
+            @include sassline(alpha, $seriftype, $lineheight: 6, $breakpoint: all);
         }
-
-        @include deviceBreakpoint(desktop) {
-            @include sassline(alpha, $seriftype, $lineheight: 5, $breakpoint: all);
-        }
-
     }
 }
 
@@ -52,6 +49,23 @@ $article-content-width: 40rem;
     a {
         // default anchor style
         @include anchorStyle(true);
+    }
+
+    h1, h2, h3 {
+        font-family: getFontFamily($seriftype);
+        font-weight: 400;
+    }
+
+    h1 {
+        @include sassline(gamma, $seriftype, $lineheight: 3, $below: .5, $breakpoint: all);
+    }
+
+    h2 {
+        @include sassline(delta, $seriftype, $lineheight: 3, $below: .5, $breakpoint: all);
+    }
+
+    h3 {
+        @include sassline(epsilon, $seriftype, $lineheight: 3, $below: .5, $breakpoint: all);
     }
 
     // basic image

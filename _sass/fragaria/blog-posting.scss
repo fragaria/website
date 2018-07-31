@@ -49,6 +49,7 @@
             padding: 3rem 1rem;
             z-index: 1;
 
+
             @include deviceBreakpoint(tablet) {
                 padding: 6rem 2rem 5rem 2rem;
             }

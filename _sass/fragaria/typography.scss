@@ -57,7 +57,7 @@ a {
 .typeset {
   // Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
   p {
-    @include baseline($fontsize: zeta, $font: $bodytype, $lineheight: 2, $below: 2, $breakpoint: all);
+    @include baseline($fontsize: zeta, $font: $bodytype, $lineheight: 2, $below: 1, $breakpoint: all);
 
     font-feature-settings: 'kern', 'onum', 'liga';
   }
@@ -72,17 +72,17 @@ a {
 
   // Heading level 1.
   h1, .alpha {
-    @include sassline($fontsize: gamma, $font: $headingtype, $lineheight: 3, $below: 1, $breakpoint: all);
+    @include sassline($fontsize: gamma, $font: $headingtype, $lineheight: 3, $below: 0, $breakpoint: all);
   }
 
   // Heading level 2.
   h2, .beta {
-    @include sassline(delta, $headingtype, 3, 1, all);
+    @include sassline(delta, $headingtype, 3, 0, all);
   }
 
   // Heading level 3.
   h3, .gamma {
-    @include sassline(epsilon, $headingtype, 3, 1, all);
+    @include sassline(epsilon, $headingtype, 3, 0, all);
   }
 
   // Heading level 4.
@@ -113,9 +113,9 @@ a {
       }
 
       ol, ul {
-        padding-top: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0;
         margin-left: 2rem;
+        padding-top: 0;
       }
     }
   }

@@ -175,7 +175,7 @@ function siteReload(rootElem) {
  * For other objects, This function will add either positive or negative margin
  * to the object whichever is closer to the next baseline grid line.
  *
- * @param {HTMLElement} rootElem
+ * @param {HTMLElement} element
  */
 function fixBaseline(element) {
     function _fix() {

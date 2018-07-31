@@ -55,7 +55,6 @@
         }
 
         .blog-posting__headline {
-            text-transform: uppercase;
             text-decoration: none;
 
             @include sassline(alpha, $seriftype, 4, 1, all);

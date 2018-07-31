@@ -13,7 +13,8 @@
     @include deviceBreakpoint(tablet) {
         align-items: flex-start;
         flex-direction: row;
-        margin-top: 4rem;
+        margin-top: 8rem;
+        padding-top: 2rem;
         padding-bottom: 6rem;
     }
 
@@ -52,7 +53,6 @@
     margin-top: 1rem;
     font-family: getFontFamily($sansseriftype);
     letter-spacing: .09em;
-    // color: map-get($palette, gray-dark);
     text-align: center;
 
     @include sassline(theta, $sansseriftype, 1, 0);
@@ -77,9 +77,6 @@
     }
 }
 
-.footer__social-icon {
-    color: map-get($palette, gray-dark);
-}
 
 .footer__social-icon + .footer__social-icon {
     margin-left: .5em;

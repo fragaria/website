@@ -11,8 +11,8 @@
                     {% elsif member.avatar.src == 'gravatar' %}
                         <img class="team-member__avatar-image" src="{{ member.profiles.gravatar | to_gravatar }}?s=300" alt="{{ member.name }}" itemprop="contentUrl" />
                     {% elsif member.avatar.src == 'cloudinary' %}
-                        <source srcset="{% cloudinary_url member.avatar.cloudinary crop='fit' height='300' width='300' quality='auto' dpr='2.0' %}" media="(min-width: 480px)" />
-                        <img class="team-member__avatar-image" src="{% cloudinary_url member.avatar.cloudinary crop='fit' height='128' width='128' quality='auto' dpr='2.0' %}" alt="{{ member.name }}" itemprop="contentUrl" />
+                        <source srcset="{% cloudinary_url member.avatar.cloudinary crop='fit' height='300' width='300' quality='auto' format='auto' dpr='2.0' %}" media="(min-width: 480px)" />
+                        <img class="team-member__avatar-image" src="{% cloudinary_url member.avatar.cloudinary crop='fit' height='128' width='128' quality='auto' format='auto' dpr='2.0' %}" alt="{{ member.name }}" itemprop="contentUrl" />
                     {% else %}
                         <img class="team-member__avatar-image" src="{{ member.avatar.img }}" alt="{{ member.name }}" itemprop="contentUrl" />
                     {% endif %}

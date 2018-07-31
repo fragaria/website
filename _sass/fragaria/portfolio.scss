@@ -5,6 +5,7 @@
 .portfolio-strip__items {
     display: grid;
     grid-template-columns: auto;
+    grid-template-columns: 1fr;
 
     @include deviceBreakpoint(tablet) {
         grid-template-columns: 1fr 1fr;

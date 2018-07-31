@@ -11,15 +11,15 @@
         }
 
         .blog-posting__media {
-            margin: 10px 0 0;
             flex: inherit;
-            filter: grayscale(0);
-        }
-
-        .blog-posting__media {
-            margin-left: 2rem;
-            margin-top: 0;
+            margin: 2rem 0 0;
             min-width: 33.333%;
+            filter: grayscale(0);
+
+            @include deviceBreakpoint(tablet) {
+                margin-left: 2rem;
+                margin-top: 0;
+            }
         }
 
         .blog-posting__image {

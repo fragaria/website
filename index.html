@@ -34,23 +34,36 @@ layout: blank
     </section>
 
     <section class="v-home__company">
-        <h1>Get in touch</h1>
-        <p class="caption">Do you want to hire us or just have chat about web apps? Arrange a meeting.</p>
+        <h1 class="splitting-headline" id="team">
+            <span class="splitting-headline__fill">Get in touch</span>
+        </h1>
 
         <meta itemprop="email" content="{{ site.company.email }}">
         <meta itemprop="telephone" content="{{ site.company.phone }}">
 
         <div class="v-home__company-content">
-            <a href="tel:{{ site.company.phone }}" class="contact-button contact-button--phone v-home__company-phone">{{ site.company.phone }}</a>
-            <a href="mailto:{{ site.company.email }}" class="contact-button contact-button--email v-home__company-email">{{ site.company.email }}</a>
-            <a href="{{ site.company.address.residence.map_link }}" class="contact-button contact-button--map v-home__company-map" target="_blank" rel="noopener" >Map to our office</a>
-
             <article class="contact v-home__company-residence" itemprop="address" itemtype="https://schema.org/PostalAddress" itemscope>
                 <h1 class="delta">Residence</h1>
                 <p class="contact__line">{{ site.company.official_name }}</p>
                 <p class="contact__line" itemprop="streetAddress">{{ site.company.address.residence.line1 }}</p>
                 <p class="contact__line" itemprop="postalCode">{{ site.company.address.residence.line2 }}</p>
                 <p class="contact__line" itemprop="addressLocality">{{ site.company.address.residence.line3 }}</p>
+
+                <br>
+
+                <p class="contact__line" itemprop="companyPhoneNumber">
+                    <a class="anchor anchor--emphasized" href="tel:{{ site.company.phone }}">{{ site.company.phone }}</a>
+                </p>
+
+                <p class="contact__line" itemprop="companyEmal">
+                    <a class="anchor anchor--emphasized" href="mailto:{{ site.company.email }}" >{{ site.company.email }}</a>
+                </p>
+
+                <p class="contact__line" itemprop="companyResidenceMap">
+                    <a class="anchor anchor--emphasized" href="{{ site.company.address.residence.map_link }}" target="_blank" rel="noopener" >Map to our office</a>
+                </p>
+
+
             </article>
 
             <article class="contact v-home__company-billing">

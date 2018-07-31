@@ -211,7 +211,7 @@ function fixBaseline(element) {
 
 const handlers = [
     {className: 'js-sitenav', handler: siteMenu},
-    {className: 'js-portfolio-strip', handler: portfolioStrip},
+    // {className: 'js-portfolio-strip', handler: portfolioStrip},
     {className: 'js-site-reload-button', handler: siteReload},
     {className: 'js-fix-baseline', handler: fixBaseline},
 ];

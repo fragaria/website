@@ -161,10 +161,59 @@ function siteReload(rootElem) {
     });
 }
 
+/**
+ * This function will augment arbitrary block objects not to break baseline text
+ * flow if they have height that is not a straight mutiple of baseline grid size.
+ * It is primarily meant for images which have arbitrary height that
+ * will break the baseline flow of text that follows after them.
+ *
+ * Imagine you have baseline grid of 16px and image has height of 72px. This
+ * would make all the trailing text shifted against baseline by 8px (72 - 16 * 4 = 8).
+ *
+ * For images, this function will fix their height to a integer rem value (floored).
+ *
+ * For other objects, This function will add either positive or negative margin
+ * to the object whichever is closer to the next baseline grid line.
+ *
+ * @param {HTMLElement} rootElem
+ */
+function fixBaseline(element) {
+    function _fix() {
+        // Get actual size of 1 rem in px
+        const remSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+        const elemHeight = element.getBoundingClientRect().height;
+        const elemHeightInRem = elemHeight / remSize;
+
+        // Fix images using setting their height to a direct multiple of 1rem
+        if (element instanceof HTMLImageElement) {
+            if (elemHeightInRem % 1 !== 0) {
+                element.style.height = Math.floor(elemHeightInRem) + 'rem';
+            }
+        }
+        // Fix other elements by adjusting their margin
+        else {
+            const heightDecimalPart = elemHeightInRem % 1;
+            const marginInRem = heightDecimalPart > 0.5 ?
+                1 - heightDecimalPart :
+                heightDecimalPart * -1;
+            element.style.marginBottom = marginInRem + 'rem';
+        }
+    }
+
+    // Wait for image to load.
+    if (element instanceof HTMLImageElement) {
+        element.complete ? _fix() : element.onload = _fix;
+    } else {
+        _fix();
+    }
+
+}
+
 const handlers = [
     {className: 'js-sitenav', handler: siteMenu},
     {className: 'js-portfolio-strip', handler: portfolioStrip},
     {className: 'js-site-reload-button', handler: siteReload},
+    {className: 'js-fix-baseline', handler: fixBaseline},
 ];
 
 handlers.forEach(({className, handler}) => {

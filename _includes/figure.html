@@ -17,6 +17,8 @@
         {% cloudinary_url include.cloudinary_src width='640' crop='limit' quality='auto' format='jpg' dpr='2.0' %} 2x,
         {% cloudinary_url include.cloudinary_src width='640' crop='limit' quality='auto' format='jpg' dpr='3.0' %} 3x
     {%- endif -%}"
+
+    class="js-fix-baseline"
 />
 {% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}
 </figure>

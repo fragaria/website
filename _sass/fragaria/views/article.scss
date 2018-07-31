@@ -58,10 +58,18 @@ $article-content-width: 40rem;
     // todo: align to baseline somehow?
     figure:not(.highlight) {
         text-align: center;
+        margin-bottom: 2rem;
+
+        img {
+            // images without display: block get unspecified margin added by browsers
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
         figcaption {
             font-weight: bold;
-            @include sassline(theta, $bodytype, $lineheight: 2, $below: 2, $breakpoint: all);
+            @include sassline(theta, $bodytype, $lineheight: 2, $below: 0, $breakpoint: all);
         }
     }
 
@@ -86,7 +94,7 @@ $article-content-width: 40rem;
     flex-direction: column;
     align-items: center;
     margin-bottom: 3rem;
-    margin-top: 6rem;
+    padding-top: 4rem;
 
     .article__miscitem + .article__miscitem {
         margin-top: 1rem;

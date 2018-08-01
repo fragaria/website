@@ -1,7 +1,7 @@
-<div class="blog-news">
-    <div class="blog-news__posts">
-        {% for post in site.posts limit:3 %}
-            {% include posts/listing/standard.html post=post %}
-        {% endfor %}
-    </div>
+<div class="blog-listing blog-listing--nofirstdivider">
+    {% for post in site.posts limit:3 %}
+        <div class="blog-listing__post">
+            {% include posts/listing/standard.html post=post class='blog-listing__post-inner' %}
+        </div>
+    {% endfor %}
 </div>

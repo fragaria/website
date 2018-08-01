@@ -55,7 +55,7 @@ přiřazovat pojmenovaný typ.
 
 Takže si v Angularu podobně jako v [tomhle
 návodu](https://www.npmjs.com/package/ng2-socket-io) napíšeme tupoučký
-wrapper a službičku...
+wrapper a službičku&hellip;
 
 {% highlight javascript %}
 // .. omit some imports
@@ -131,7 +131,7 @@ export class WrappedSocket {
 }
 {% endhighlight %}
 
-...a na dalších 20 řádkách si ten tunel ještě pustíme. No, a to je
+&hellip;a na dalších 20 řádkách si ten tunel ještě pustíme. No, a to je
 vlastně všechno. Zbytek aplikace jsou tradiční nezajímavé formulářové
 inputy, validace a taky on-screen klávesnice. Třeba trochu upravená
 [tahleta](https://github.com/protacon/ng-virtual-keyboard).

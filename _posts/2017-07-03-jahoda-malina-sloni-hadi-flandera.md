@@ -19,12 +19,12 @@ blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-58184967843900612
 blogger_orig_url: http://blog.fragaria.cz/2017/07/jahoda-malina-sloni-hadi-flandera.html
 ---
 
-Přijde takhle klient do kanceláře a povídá: "Máme tady takovou velkou
+Přijde takhle klient do kanceláře a povídá: _<q>Máme tady takovou velkou
 mašinu a k ní si můžeme koupit příšerně drahý ovládací panel. Nesvedli
-byste pro nás udělat něco levnějšího?" Technicky zdatný ředitel
-společnosti nesměle dí: "To bychom asi svedli." Klientovi se rozzáří
-očka a tichým hlasem dodá: "Ale potřebovali bychom, aby to fungovalo ve
-skoro reálném čase a máme tu na to nějaká volná Raspberry Pi."
+byste pro nás udělat něco levnějšího?</q>_ Technicky zdatný ředitel
+společnosti nesměle dí: _<q>To bychom asi svedli.</q>_ Klientovi se rozzáří
+očka a tichým hlasem dodá: _<q>Ale potřebovali bychom, aby to fungovalo ve
+skoro reálném čase a máme tu na to nějaká volná Raspberry Pi.</q>_
 
 Kromě výkonnosti Raspberry jsme také podle zadání docela omezeni v
 technologickém rozletu: nějaký ten webový frontend, kde se budou data

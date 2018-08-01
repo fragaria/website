@@ -1,17 +1,16 @@
 // Typography
 // ---------------------------------------
-
 // Setting root sizes and base styles.
 html {
-  @include rootsize;
-
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+    @include rootsize;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -ms-text-size-adjust: 100%;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 audio,
@@ -21,383 +20,425 @@ video {
 
 // Site-wide base styles.
 body {
-  @include fontsize(eta, all);
-
-  font-family: getFontFamily($bodytype);
-  font-style: normal;
-  font-weight: map-get($bodytype, regular);
-  line-height: 2rem;
-  color: $text-color;
-  background: $body-background;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  overflow-x: hidden;
+    @include fontsize(eta, all);
+    font-family: getFontFamily($bodytype);
+    font-style: normal;
+    font-weight: map-get($bodytype, regular);
+    line-height: 2rem;
+    color: $text-color;
+    background: $body-background;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
 }
 
 // Links.
 a {
-  color: $anchor-color;
-  text-decoration: none;
-  transition: color .1s, background-color .1s;
-
-  &:hover, &:active, &:focus {
-    color: $anchor-hover-color;
-  }
+    color: $anchor-color;
+    text-decoration: none;
+    transition: color 0.1s, background-color 0.1s;
+    &:hover,
+    &:active,
+    &:focus {
+        color: $anchor-hover-color;
+    }
 }
 
 // Text selection
 ::selection {
-  background: $selection-color;
-  color: map-get($palette, white);
-  text-shadow: none;
+    background: $selection-color;
+    color: map-get($palette, white);
+    text-shadow: none;
 }
 
 // Styles for typeset text.
 .typeset {
-  // Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
-  p {
-    @include baseline($fontsize: zeta, $font: $bodytype, $lineheight: 2, $below: 1, $breakpoint: all);
-
-    font-feature-settings: 'kern', 'onum', 'liga';
-  }
-
-  // Headings. OpenType ligatures, discretionary ligatures and lining figures enabled if available.
-  h1, h2, h3, h4, h5, h6 {
-    font-family: getFontFamily($headingtype);
-    font-feature-settings: 'dlig', 'liga', 'lnum', 'kern';
-    font-style: normal;
-    font-weight: map-get($headingtype, bold);
-  }
-
-  // Heading level 1.
-  h1, .alpha {
-    @include sassline($fontsize: gamma, $font: $headingtype, $lineheight: 3, $below: 0, $breakpoint: all);
-  }
-
-  // Heading level 2.
-  h2, .beta {
-    @include sassline(delta, $headingtype, 3, 0, all);
-  }
-
-  // Heading level 3.
-  h3, .gamma {
-    @include sassline(epsilon, $headingtype, 3, 0, all);
-  }
-
-  // Heading level 4.
-  h4, .delta {
-    @include sassline(zeta, $headingtype, 2, 0, all);
-  }
-
-  // Heading level 5.
-  h5, .epsilon {
-    @include sassline(eta, $headingtype, 2, 0, all);
-  }
-
-  // Heading level 6.
-  h6, .zeta {
-    @include sassline(theta, $headingtype, 2, 0, all);
-  }
-
-  // Lists.
-  ul, ol {
-    @include baseline(eta, $bodytype, 2, 2, all);
-
-    li {
-      font-feature-settings: 'kern', 'onum', 'liga';
-      margin-left: 2rem;
-
-      @include breakpoint(break-1) {
-        margin-left: 0;
-      }
-
-      ol, ul {
-        margin-bottom: 0;
-        margin-left: 2rem;
-        padding-top: 0;
-      }
-    }
-  }
-
-  // Ordered lists.
-  ol {
-    list-style-type: none;
-
-    li {
-      counter-increment: top-level;
-
-      &:before {
-        content: counter(top-level) '.';
-        font-feature-settings: 'lnum', 'tnum';
-        margin-left: -3rem;
-        position: absolute;
-        text-align: right;
-        width: 2em;
-      }
-
-      ul {
-
-        li {
-
-          &:before {
-            content: '';
-          }
-
-          ol {
-
-            li {
-              counter-increment: alt-level;
-
-              &:before {
-                content: counter(alt-level) '.';
-              }
-            }
-          }
-        }
-      }
-
-      ol {
-
-        li {
-          counter-increment: sub-level;
-
-          &:before {
-            content: counter(top-level) '.' counter(sub-level);
-          }
-
-          ul {
-
-            li {
-
-              &:before {
-                content: '';
-              }
-            }
-          }
-
-          ol {
-
-            li {
-              counter-increment: sub-sub-level;
-
-              &:before {
-                content: counter(top-level) '.' counter(sub-level) '.' counter(sub-sub-level);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  // Definition lists.
-  dl {
-    @include baseline(zeta, $bodytype, 2, 2, all);
-
-    dt, dd {
-      font-feature-settings: 'kern', 'onum', 'liga';
-      margin-left: 2rem;
-
-      @include breakpoint(break-1) {
-        margin-left: 0;
-      }
-    }
-
-    dt {
-      font-weight: map-get($bodytype, bold);
-    }
-
-    dd + dt {
-      padding-top: 1rem;
-    }
-  }
-
-  // Tables.
-  table {
-    @include sassline(eta, $bodytype, 2, 2, all);
-
-    font-feature-settings: 'liga', 'lnum', 'tnum', 'kern';
-    font-style: normal;
-    width: 100%;
-
-    thead {
-
-      th {
-        font-family: getFontFamily($bodytype);
-        font-weight: map-get($bodytype, bold);
-        @include sassline(eta, $bodytype, 2, 0, all);
-        padding-bottom: 1px;
-      }
-    }
-
-    tbody {
-      td {
-        font-family: getFontFamily($bodytype);
-        @include sassline(eta, $bodytype, 2, 0, all);
-      }
-    }
-  }
-
-  // Bold.
-  b, strong, .bold {
-    font-weight: map-get($bodytype, bold);
-  }
-
-  // Italic.
-  em, i, .italic {
-    font-style: map-get($bodytype, italic);
-  }
-
-  // Caption and inline small text.
-  small, .caption {
-    @include fontsize(theta, all);
-
-    font-family: getFontFamily($headingtype);
-    font-style: normal;
-    font-weight: map-get($headingtype, semi);
-  }
-
-  small {
-    line-height: 1rem;
-  }
-
-  .caption {
-    @include baseline(theta, $headingtype, 2, 2, all);
-
-    color: $caption-color;
-
-    &--nopad {
-      @include baseline(theta, $headingtype, 2, 0, all);
-    }
-  }
-
-  // Nice spacing for captions.
-  h1 + .caption, .alpha + .caption, h2 + .caption, .beta + .caption, h3 + .caption, .gamma + .caption {
-    margin-top: -1.5rem;
-  }
-
-  .delta + .caption, .epsilon + .caption, .zeta + .caption {
-    margin-top: 0rem;
-  }
-
-  // Quotes.
-  blockquote {
-
+    // Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
     p {
-      border-left: 0.15rem solid $anchor-color;
-      font-style: map-get($bodytype, italic);
-      padding-left: 1rem;
+        @include baseline(
+            $fontsize: zeta,
+            $font: $bodytype,
+            $lineheight: 2,
+            $below: 1,
+            $breakpoint: all
+        );
+        font-feature-settings: "kern", "onum", "liga";
+    }
 
-      // Add spacing below blockquote paragraphs to align to baseline grid.
-      $get-scale: map-get($modular-scale, scale-0);
-      $get-size: map-get($get-scale, zeta);
-      $rootsize: nth($sizes, 1);
-      $baseline-shift: #{($get-size / 2 * ((2 * $rootsize / $get-size) - map-get($bodytype, cap-height))) / $rootsize + 0.00001};
-      $baseline-push: #{3 - (($get-size * ((2 * $rootsize / $get-size) - map-get($bodytype, cap-height))) / $rootsize + 0.00001)};
+    p + .figure {
+        margin-top: 2rem;
+    }
 
-      margin-bottom: #{$baseline-push}rem;
-      padding-bottom: #{$baseline-shift}rem;
+    // Headings. OpenType ligatures, discretionary ligatures and lining figures enabled if available.
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: getFontFamily($headingtype);
+        font-feature-settings: "dlig", "liga", "lnum", "kern";
+        font-style: normal;
+        font-weight: map-get($headingtype, bold);
+    }
 
-      @for $i from 2 through $breakpoints-limit {
-        $get-scale: map-get($modular-scale, scale-#{$i - 1});
-        $get-size: map-get($get-scale, zeta);
-        $rootsize: nth($sizes, $i);
-        $baseline-shift: #{($get-size / 2 * ((2 * $rootsize / $get-size) - map-get($bodytype, cap-height))) / $rootsize + 0.00001};
-        $baseline-push: #{3 - (($get-size * ((2 * $rootsize / $get-size) - map-get($bodytype, cap-height))) / $rootsize + 0.00001)};
+    // Heading level 1.
+    h1,
+    .alpha {
+        @include sassline(
+            $fontsize: gamma,
+            $font: $headingtype,
+            $lineheight: 3,
+            $below: 0,
+            $breakpoint: all
+        );
+    }
 
-        @media screen and (min-width: nth($points, $i) / 16 * 1em ) {
-          margin-bottom: #{$baseline-push}rem;
-          padding-bottom: #{$baseline-shift}rem;
+    // Heading level 2.
+    h2,
+    .beta {
+        @include sassline(delta, $headingtype, 3, 0, all);
+    }
+
+    // Heading level 3.
+    h3,
+    .gamma {
+        @include sassline(epsilon, $headingtype, 3, 0, all);
+    }
+
+    // Heading level 4.
+    h4,
+    .delta {
+        @include sassline(zeta, $headingtype, 2, 0, all);
+    }
+
+    // Heading level 5.
+    h5,
+    .epsilon {
+        @include sassline(eta, $headingtype, 2, 0, all);
+    }
+
+    // Heading level 6.
+    h6,
+    .zeta {
+        @include sassline(theta, $headingtype, 2, 0, all);
+    }
+
+    // Lists.
+    ul,
+    ol {
+        @include baseline(eta, $bodytype, 2, 2, all);
+        li {
+            font-feature-settings: "kern", "onum", "liga";
+            margin-left: 2rem;
+            @include breakpoint(break-1) {
+                margin-left: 0;
+            }
+            ol,
+            ul {
+                margin-bottom: 0;
+                margin-left: 2rem;
+                padding-top: 0;
+            }
         }
-      }
     }
 
-    @include breakpoint(break-1) {
-      margin-left: -1rem;
+    // Ordered lists.
+    ol {
+        list-style-type: none;
+        li {
+            counter-increment: top-level;
+            &:before {
+                content: counter(top-level) ".";
+                font-feature-settings: "lnum", "tnum";
+                margin-left: -3rem;
+                position: absolute;
+                text-align: right;
+                width: 2em;
+            }
+            ul {
+                li {
+                    &:before {
+                        content: "";
+                    }
+                    ol {
+                        li {
+                            counter-increment: alt-level;
+                            &:before {
+                                content: counter(alt-level) ".";
+                            }
+                        }
+                    }
+                }
+            }
+            ol {
+                li {
+                    counter-increment: sub-level;
+                    &:before {
+                        content: counter(top-level) "." counter(sub-level);
+                    }
+                    ul {
+                        li {
+                            &:before {
+                                content: "";
+                            }
+                        }
+                    }
+                    ol {
+                        li {
+                            counter-increment: sub-sub-level;
+                            &:before {
+                                content: counter(top-level) "."
+                                    counter(sub-level) "."
+                                    counter(sub-sub-level);
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
-  }
 
-  // Horizontal rule.
-  hr {
-    width: 100%;
-    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%, $hr-color 50%);
-    background-position: 0 50%;
-    background-repeat: repeat-x;
-    background-size: 100% 0.15rem;
-    border: 0;
-    margin: 0;
-    padding-bottom: 2rem;
-    padding-top: 2rem;
-  }
+    // Definition lists.
+    dl {
+        @include baseline(zeta, $bodytype, 2, 2, all);
+        dt,
+        dd {
+            font-feature-settings: "kern", "onum", "liga";
+            margin-left: 2rem;
+            @include breakpoint(break-1) {
+                margin-left: 0;
+            }
+        }
+        dt {
+            font-weight: map-get($bodytype, bold);
+        }
+        dd + dt {
+            padding-top: 1rem;
+        }
+    }
 
-  // Code blocks
-  pre.highlight {
-    background-color: $code-background-color;
-    font-family: getFontFamily($monospacetype);
-    display: block;
-    margin-bottom: 2rem;
-    padding: 1rem;
-    white-space: pre;
-    white-space: pre-wrap;
-    word-break: break-all;
-    word-wrap: break-word;
-    line-height: 1rem;
+    // Tables.
+    table {
+        @include sassline(eta, $bodytype, 2, 2, all);
+        font-feature-settings: "liga", "lnum", "tnum", "kern";
+        font-style: normal;
+        width: 100%;
+        thead {
+            th {
+                font-family: getFontFamily($bodytype);
+                font-weight: map-get($bodytype, bold);
+                @include sassline(eta, $bodytype, 2, 0, all);
+                padding-bottom: 1px;
+            }
+        }
+        tbody {
+            td {
+                font-family: getFontFamily($bodytype);
+                @include sassline(eta, $bodytype, 2, 0, all);
+            }
+        }
+    }
+
+    // Bold.
+    b,
+    strong,
+    .bold {
+        font-weight: map-get($bodytype, bold);
+    }
+
+    // Italic.
+    em,
+    i,
+    .italic {
+        font-style: map-get($bodytype, italic);
+    }
+
+    // Caption and inline small text.
+    small,
+    .caption {
+        @include fontsize(theta, all);
+        font-family: getFontFamily($headingtype);
+        font-style: normal;
+        font-weight: map-get($headingtype, semi);
+    }
+
+    small {
+        line-height: 1rem;
+    }
+
+    .caption {
+        @include baseline(theta, $headingtype, 2, 2, all);
+        color: $caption-color;
+        &--nopad {
+            @include baseline(theta, $headingtype, 2, 0, all);
+        }
+    }
+
+    // Nice spacing for captions.
+    h1 + .caption,
+    .alpha + .caption,
+    h2 + .caption,
+    .beta + .caption,
+    h3 + .caption,
+    .gamma + .caption {
+        margin-top: -1.5rem;
+    }
+
+    .delta + .caption,
+    .epsilon + .caption,
+    .zeta + .caption {
+        margin-top: 0rem;
+    }
+
+    // Quotes.
+    blockquote {
+        p {
+            border-left: 0.15rem solid $anchor-color;
+            font-style: map-get($bodytype, italic);
+            padding-left: 1rem; // Add spacing below blockquote paragraphs to align to baseline grid.
+            $get-scale: map-get($modular-scale, scale-0);
+            $get-size: map-get($get-scale, zeta);
+            $rootsize: nth($sizes, 1);
+            $baseline-shift: #{(
+                    $get-size / 2 *
+                        (
+                            (2 * $rootsize / $get-size) -
+                                map-get($bodytype, cap-height)
+                        )
+                ) / $rootsize + 0.00001};
+            $baseline-push: #{3 -
+                (
+                    (
+                            $get-size *
+                                (
+                                    (2 * $rootsize / $get-size) -
+                                        map-get($bodytype, cap-height)
+                                )
+                        ) / $rootsize + 0.00001
+                )};
+            margin-bottom: #{$baseline-push}rem;
+            padding-bottom: #{$baseline-shift}rem;
+            @for $i from 2 through $breakpoints-limit {
+                $get-scale: map-get($modular-scale, scale-#{$i - 1});
+                $get-size: map-get($get-scale, zeta);
+                $rootsize: nth($sizes, $i);
+                $baseline-shift: #{(
+                        $get-size /
+                            2 *
+                            (
+                                (2 * $rootsize / $get-size) -
+                                    map-get($bodytype, cap-height)
+                            )
+                    ) /
+                    $rootsize +
+                    0.00001};
+                $baseline-push: #{3 -
+                    (
+                        (
+                                $get-size *
+                                    (
+                                        (2 * $rootsize / $get-size) -
+                                            map-get($bodytype, cap-height)
+                                    )
+                            ) /
+                            $rootsize +
+                            0.00001
+                    )};
+                @media screen and (min-width: nth($points, $i) / 16 * 1em) {
+                    margin-bottom: #{$baseline-push}rem;
+                    padding-bottom: #{$baseline-shift}rem;
+                }
+            }
+        }
+
+        @include breakpoint(break-1) {
+            margin-left: -1rem;
+        }
+    }
+
+    // Horizontal rule.
+    hr {
+        width: 100%;
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 50%,
+            $hr-color 50%
+        );
+        background-position: 0 50%;
+        background-repeat: repeat-x;
+        background-size: 100% 0.15rem;
+        border: 0;
+        margin: 0;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+
+    // Code blocks
+    pre.highlight {
+        background-color: $code-background-color;
+        font-family: getFontFamily($monospacetype);
+        display: block;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        white-space: pre;
+        white-space: pre-wrap;
+        word-break: break-all;
+        word-wrap: break-word;
+        line-height: 1rem;
+        code {
+            @include fontsize(iota, all);
+        }
+    }
 
     code {
-      @include fontsize(iota, all);
+        font-family: getFontFamily($monospacetype);
+        background-color: $code-background-color;
+        white-space: pre;
     }
-  }
 
-  code {
-    font-family: getFontFamily($monospacetype);
-    background-color: $code-background-color;
-    white-space: pre;
-  }
-
-  // Code block
-  figure.highlight {
-    margin-bottom: 2rem;
-    background-color: $code-background-color;
-    overflow-x: scroll;
-    line-height: 1rem;
-    font-family: getFontFamily($monospacetype);
-
-    code {
-      @include fontsize(iota, all);
-      @include codeHighlight();
-
-      display: inline-block;
-      padding: 1rem;
+    // Code block
+    figure.highlight {
+        margin-bottom: 2rem;
+        background-color: $code-background-color;
+        overflow-x: scroll;
+        line-height: 1rem;
+        font-family: getFontFamily($monospacetype);
+        code {
+            @include fontsize(iota, all);
+            @include codeHighlight();
+            display: inline-block;
+            padding: 1rem;
+        }
     }
-  }
 
-  // Inline code
-  code.highlighter-rouge {
-    padding: 0 .2em;
-  }
+    // Inline code
+    code.highlighter-rouge {
+        padding: 0 0.2em;
+    }
 
-  // Letter space those capitals people, Jan Tschichold would be proud.
-  .upper {
-    font-kerning: normal;
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
-  }
+    // Letter space those capitals people, Jan Tschichold would be proud.
+    .upper {
+        font-kerning: normal;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+    }
 
-  // Real small caps.
-  .small-caps {
-    font-feature-settings: 'smcp', 'kern';
-    font-kerning: normal;
-    letter-spacing: 0.1rem;
-  }
+    // Real small caps.
+    .small-caps {
+        font-feature-settings: "smcp", "kern";
+        font-kerning: normal;
+        letter-spacing: 0.1rem;
+    }
 
-  // Consistent height numbers with OpenType.
-  .lining-numerals {
-    font-feature-settings: 'lnum', 'kern';
-  }
+    // Consistent height numbers with OpenType.
+    .lining-numerals {
+        font-feature-settings: "lnum", "kern";
+    }
 
-  // Ascending and descending numbers with OpenType.
-  .oldstyle-numerals {
-    font-feature-settings: 'onum', 'kern';
-  }
+    // Ascending and descending numbers with OpenType.
+    .oldstyle-numerals {
+        font-feature-settings: "onum", "kern";
+    }
 }

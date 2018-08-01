@@ -3,6 +3,7 @@ layout: post
 title: Fragaria <3 Elastic
 date: '2016-05-09T13:30:00.004+02:00'
 author: Lukáš Marek
+lang: cs
 tags:
 - elasticsearch
 - elastic

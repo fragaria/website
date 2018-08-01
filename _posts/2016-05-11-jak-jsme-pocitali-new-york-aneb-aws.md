@@ -3,6 +3,7 @@ layout: post
 title: Jak jsme počítali New York aneb AWS Lambda v praxi
 date: '2016-05-11T12:19:00.000+02:00'
 author: Jirka Chadima
+lang: cs
 tags:
 - d21
 - ocr

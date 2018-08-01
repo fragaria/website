@@ -3,6 +3,7 @@ layout: post
 title: Pondělní střípky z 18.5.2015
 date: '2015-05-18T14:12:00.002+02:00'
 author: Lukáš Marek
+lang: cs
 tags:
 - stripky
 - firefox

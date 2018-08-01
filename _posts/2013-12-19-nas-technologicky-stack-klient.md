@@ -3,7 +3,14 @@ layout: post
 title: Náš technologický stack - klient
 date: '2013-12-19T12:08:00.000+01:00'
 author: Lukáš Marek
+lang: cs
 tags:
+    - bootstrap
+    - coffeescript
+    - angularjs
+    - jasmine
+    - grunt
+    - bower
 modified_time: '2013-12-19T12:08:33.948+01:00'
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-796362602360585435
 blogger_orig_url: http://blog.fragaria.cz/2013/12/nas-technologicky-stack-klient.html

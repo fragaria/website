@@ -3,6 +3,7 @@ layout: post
 title: Zo studnice SK pop music
 date: '2017-05-15T13:21:00.002+02:00'
 author: Tibor Kulčár
+lang: sk
 tags:
 - music
 - playlist

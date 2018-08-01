@@ -3,6 +3,7 @@ layout: post
 title: Píšeme desktopové aplikace v HTML
 date: '2014-02-07T12:47:00.001+01:00'
 author: Lukáš Marek
+lang: cs
 tags:
 - chrome desktop apps
 - bootstrap

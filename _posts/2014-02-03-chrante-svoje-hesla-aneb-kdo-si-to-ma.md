@@ -3,6 +3,7 @@ layout: post
 title: Chraňte svoje hesla! Aneb kdo si to má všechno pamatovat?
 date: '2014-02-03T15:35:00.000+01:00'
 author: Martin Bílek
+lang: cs
 tags:
 - open source
 - bezpečnost

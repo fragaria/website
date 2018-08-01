@@ -3,6 +3,7 @@ layout: post
 title: Host a static site on heroku.com
 date: '2014-04-29T15:43:00.002+02:00'
 author: Tibor Kulčár
+lang: en
 tags:
 - heroku
 - publish site without hosting

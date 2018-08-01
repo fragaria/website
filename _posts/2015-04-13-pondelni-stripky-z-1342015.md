@@ -3,6 +3,7 @@ layout: post
 title: Pondělní střípky z 13.4.2015
 date: '2015-04-13T11:44:00.001+02:00'
 author: Lukáš Marek
+lang: cs
 tags:
 - stripky
 - chartist

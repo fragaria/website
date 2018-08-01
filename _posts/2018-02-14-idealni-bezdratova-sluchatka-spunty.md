@@ -3,6 +3,7 @@ layout: post
 title: Ideální bezdrátová sluchátka - špunty
 date: '2018-02-14T09:05:00.000+01:00'
 author: Lukáš Marek
+lang: cs
 tags:
 - rha
 - aac

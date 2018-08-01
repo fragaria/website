@@ -3,7 +3,13 @@ layout: post
 title: BorIS - naše svědomí je zase o trochu čistší
 date: '2013-10-24T15:00:00.000+02:00'
 author: Martin Burián
+lang: cs
 tags:
+- boris
+- django
+- git
+- mysql
+- opensource
 modified_time: '2013-10-25T14:31:42.091+02:00'
 cloudinary_src: posts/2014-03-11-boris-moderni-system-pro-nepopularni__1.png
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-510880592025634827

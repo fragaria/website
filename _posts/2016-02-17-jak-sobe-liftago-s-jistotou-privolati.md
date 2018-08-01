@@ -3,6 +3,7 @@ layout: post
 title: Jak sobě Liftago s jistotou přivolati?
 date: '2016-02-17T10:49:00.000+01:00'
 author: Lukáš Marek
+lang: cs
 tags:
 - elasticsearch
 - liftago

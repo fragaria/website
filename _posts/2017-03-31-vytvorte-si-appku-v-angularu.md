@@ -3,6 +3,7 @@ layout: post
 title: Vytvořte si appku v Angularu, aneb výhody frameworku Ionic 2
 date: '2017-03-31T09:52:00.000+02:00'
 author: Jarda Brchel
+lang: cs
 tags:
 - ionic
 - mobily

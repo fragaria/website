@@ -3,6 +3,7 @@ layout: post
 title: Soumrak promises v Javascriptu aneb Pondělní střípky z 2.5.2016
 date: '2016-05-03T09:13:00.000+02:00'
 author: Lukáš Marek
+lang: cs
 tags:
 - stripky
 - async

@@ -3,6 +3,7 @@ layout: post
 title: Pondělní střípky z 2.3.2015
 date: '2015-03-02T15:18:00.000+01:00'
 author: Lukáš Marek
+lang: cs
 tags:
 - stripky
 - azure

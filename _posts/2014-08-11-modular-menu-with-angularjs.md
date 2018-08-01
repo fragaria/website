@@ -3,6 +3,7 @@ layout: post
 title: Creating Modular Menus in AngularJS
 date: '2014-08-11T14:48:00.001+02:00'
 author: Lukáš Marek
+lang: en
 tags:
 - menu
 - dynamic

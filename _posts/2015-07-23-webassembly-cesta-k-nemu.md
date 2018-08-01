@@ -3,6 +3,7 @@ layout: post
 title: WebAssembly a cesta k němu
 date: '2015-07-23T12:31:00.000+02:00'
 author: Hynek Urban
+lang: cs
 tags:
 - javascript
 - webassembly

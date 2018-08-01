@@ -3,6 +3,7 @@ layout: post
 title: BorIS - hodně muziky za málo peněz
 date: '2015-07-01T10:44:00.000+02:00'
 author: Martin Burián
+lang: cs
 tags:
 - boris
 - open source

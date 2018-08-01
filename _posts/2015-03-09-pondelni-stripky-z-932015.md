@@ -3,6 +3,7 @@ layout: post
 title: Pondělní střípky z 9.3.2015
 date: '2015-03-09T13:20:00.002+01:00'
 author: Lukáš Marek
+lang: cs
 tags:
 - stripky
 - nativescript

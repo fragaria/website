@@ -2,7 +2,8 @@
 layout: post
 title: Ohlédnutí ex-vědce
 date: '2017-11-10T01:09:00.000+01:00'
-author: Kamil
+author: Kamil Daněk
+lang: cs
 tags:
 - fyzika
 - angularjs

@@ -3,6 +3,7 @@ layout: post
 title: Pondělní střípky z 27.4.2014
 date: '2015-04-28T21:13:00.000+02:00'
 author: Lukáš Marek
+lang: cs
 tags:
 - lets encrypt
 - stripky

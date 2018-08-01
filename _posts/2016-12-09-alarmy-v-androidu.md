@@ -3,6 +3,7 @@ layout: post
 title: Alarmy v Androidu
 date: '2016-12-09T10:48:00.000+01:00'
 author: Milan Slezák
+lang: cs
 tags:
 - alarm
 - android

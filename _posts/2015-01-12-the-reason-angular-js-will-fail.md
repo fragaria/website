@@ -3,6 +3,7 @@ layout: post
 title: The reason Angular JS will fail. Revisited!
 date: '2015-01-12T09:00:00.000+01:00'
 author: Lukáš Marek
+lang: en
 tags:
 - jquery
 - angularjs

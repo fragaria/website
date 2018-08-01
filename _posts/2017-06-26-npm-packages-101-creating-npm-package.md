@@ -3,6 +3,7 @@ layout: post
 title: 'NPM packages 101: Creating npm package'
 date: '2017-06-26T11:52:00.000+02:00'
 author: Jakub Podlaha
+lang: en
 tags:
 - npm
 - package

@@ -3,6 +3,7 @@ layout: post
 title: Na dovolenou s Angularem
 date: '2017-01-26T09:38:00.000+01:00'
 author: Lukáš Marek
+lang: cs
 tags:
 - slivovice
 - angularjs

@@ -3,6 +3,7 @@ layout: post
 title: Co je u nás nového?
 date: '2016-07-12T15:32:00.000+02:00'
 author: Martin Burián
+lang: cs
 tags:
 - kancl
 - fragaria

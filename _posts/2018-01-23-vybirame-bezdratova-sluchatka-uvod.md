@@ -3,6 +3,7 @@ layout: post
 title: Ideální bezdrátová sluchátka - díl 1.
 date: '2018-01-23T10:43:00.000+01:00'
 author: Lukáš Marek
+lang: cs
 tags:
 - aac
 - sluchátka

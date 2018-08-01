@@ -3,6 +3,7 @@ layout: post
 title: Co je nového v Ionic 3
 date: '2017-05-26T13:24:00.001+02:00'
 author: Jarda Brchel
+lang: cs
 tags:
 - ionic
 - mobily

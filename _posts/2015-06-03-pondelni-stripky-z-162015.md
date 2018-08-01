@@ -3,6 +3,7 @@ layout: post
 title: Pondělní střípky z 1.6.2015
 date: '2015-06-03T11:01:00.000+02:00'
 author: Martin Burián
+lang: cs
 tags:
 - stripky
 - github

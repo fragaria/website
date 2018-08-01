@@ -3,6 +3,7 @@ layout: post
 title: Jak jsme udělali Žanetu
 date: '2014-09-02T09:27:00.000+02:00'
 author: Martin Burián
+lang: cs
 tags:
 - scrum
 - agile

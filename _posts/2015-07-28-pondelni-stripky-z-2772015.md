@@ -3,6 +3,7 @@ layout: post
 title: 'Pondělní střípky z 27.7.2015 '
 date: '2015-07-28T09:08:00.000+02:00'
 author: Lukáš Marek
+lang: cs
 tags:
 - stripky
 - telegram

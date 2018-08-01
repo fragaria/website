@@ -3,7 +3,11 @@ layout: post
 title: Náš technologický stack - server
 date: '2014-01-02T14:15:00.000+01:00'
 author: Lukáš Marek
-tags: 
+lang: cs
+tags:
+- appengine
+- pip
+- python
 modified_time: '2014-01-02T14:18:25.662+01:00'
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-5772322115932454085
 blogger_orig_url: http://blog.fragaria.cz/2014/01/nas-technologicky-stack-server.html

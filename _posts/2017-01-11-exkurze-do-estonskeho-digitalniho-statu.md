@@ -3,6 +3,7 @@ layout: post
 title: Exkurze do estonského digitálního státu
 date: '2017-01-11T12:40:00.000+01:00'
 author: Jirka Chadima
+lang: cs
 tags:
 - egon
 - estonsko

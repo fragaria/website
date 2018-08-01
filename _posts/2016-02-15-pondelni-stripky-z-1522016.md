@@ -3,6 +3,7 @@ layout: post
 title: Pondělní střípky z 15.2.2016
 date: '2016-02-15T16:38:00.000+01:00'
 author: Lukáš Marek
+lang: cs
 tags:
 - volby
 - oclazyload

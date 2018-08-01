@@ -3,6 +3,7 @@ layout: post
 title: Jak se vyrábí aplikace na chytré hodinky Pebble Time Round
 date: '2016-01-22T09:04:00.001+01:00'
 author: Jirka Chadima
+lang: cs
 tags:
 - pebble
 - javascript

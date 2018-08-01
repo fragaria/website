@@ -3,6 +3,7 @@ layout: post
 title: Ako vyrobiť statický web efektívne
 date: '2014-10-20T13:37:00.002+02:00'
 author: Tibor Kulčár
+lang: sk
 tags:
 - npm
 - less

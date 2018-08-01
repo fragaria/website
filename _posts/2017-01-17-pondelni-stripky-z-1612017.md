@@ -3,6 +3,7 @@ layout: post
 title: Pondělní střípky z 16.1.2017
 date: '2017-01-17T18:38:00.000+01:00'
 author: Lukáš Marek
+lang: cs
 tags:
 - stripky
 - elasticsearch

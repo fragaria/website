@@ -3,6 +3,7 @@ layout: post
 title: Jak děláme open source
 date: '2014-01-27T13:24:00.000+01:00'
 author: Martin Bílek
+lang: cs
 tags:
 modified_time: '2014-05-20T14:37:41.940+02:00'
 cloudinary_src: posts/2014-01-27-jak-delame-open-source__1.png

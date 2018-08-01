@@ -3,6 +3,7 @@ layout: post
 title: Bude se někdy po internetu volit i v Kotěhůlkách?
 date: '2017-02-01T10:27:00.001+01:00'
 author: Jirka Chadima
+lang: cs
 tags:
 - volby
 - estonsko

@@ -3,6 +3,7 @@ layout: post
 title: Jednoduché filtrování seznamů v AngularJS
 date: '2013-10-22T11:53:00.000+02:00'
 author: Lukáš Marek
+lang: cs
 tags:
 - javascript
 - angularjs

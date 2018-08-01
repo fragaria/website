@@ -3,6 +3,7 @@ layout: post
 title: Podzimní střípky
 date: '2015-11-09T14:35:00.001+01:00'
 author: Martin Burián
+lang: cs
 tags:
 - lets encrypt
 - open source

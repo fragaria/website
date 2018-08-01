@@ -3,6 +3,7 @@ layout: post
 title: Zápisky z cest krajem Krakonošovým
 date: '2016-09-20T09:50:00.000+02:00'
 author: Jirka Chadima
+lang: cs
 tags:
 - kancl
 - fragaria

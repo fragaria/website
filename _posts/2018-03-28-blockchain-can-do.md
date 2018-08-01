@@ -3,6 +3,7 @@ layout: post
 title: Blockchain? Can do!
 date: '2018-03-28T13:25:00.001+02:00'
 author: Jirka Chadima
+lang: cs
 tags:
 - windingtree
 - crypto

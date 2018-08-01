@@ -2,7 +2,8 @@
 layout: post
 title: Zero knowledge proofs
 date: '2016-04-27T10:46:00.000+02:00'
-author: pavel vojacek
+author: Pavel Vojáček
+lang: cs
 tags:
 - zero knowledge
 - kryptografie

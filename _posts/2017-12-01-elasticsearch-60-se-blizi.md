@@ -3,6 +3,7 @@ layout: post
 title: Elasticsearch 6.0 se blíží
 date: '2017-12-01T13:24:00.000+01:00'
 author: Lukáš Marek
+lang: cs
 tags:
 - elasticsearch
 - pivo

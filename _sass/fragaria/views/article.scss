@@ -45,6 +45,8 @@ $article-content-width: 40rem;
 
 .article__content {
     text-align: left;
+    // Will try to add word-breaking hypens according to post language (which defaults to EN).
+    hyphens: auto;
 
     a {
         // default anchor style

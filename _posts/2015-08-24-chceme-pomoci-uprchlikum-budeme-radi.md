@@ -3,6 +3,7 @@ layout: post
 title: Chceme pomoci uprchlíkům a budeme rádi, pokud se zapojíte
 date: '2015-08-24T15:44:00.002+02:00'
 author: Martin Burián
+lang: cs
 tags:
 - sociální odpovědnost
 modified_time: '2015-09-01T10:20:20.972+02:00'

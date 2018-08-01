@@ -3,6 +3,7 @@ layout: post
 title: Analýza? Prototyp? Obojí!
 date: '2014-06-09T14:29:00.000+02:00'
 author: Lukáš Marek
+lang: cs
 tags:
 - prototyp
 - mockup

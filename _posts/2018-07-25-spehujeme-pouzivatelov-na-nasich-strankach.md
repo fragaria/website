@@ -3,6 +3,7 @@ layout: post
 title: Špehujeme používateľov na našich stránkach
 date: '2018-07-25T13:00:00.000+02:00'
 author: Lukáš Turský
+lang: sk
 tags:
 - google analytics
 - hotjar

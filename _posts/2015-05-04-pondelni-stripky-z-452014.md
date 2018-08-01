@@ -3,6 +3,7 @@ layout: post
 title: Pondělní střípky z 4.5.2014
 date: '2015-05-04T13:37:00.000+02:00'
 author: Lukáš Marek
+lang: cs
 tags:
 - sprayable
 - stripky

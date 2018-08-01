@@ -3,7 +3,8 @@ layout: post
 title: Pondělní střípky z 20.7.2015
 date: '2015-07-21T11:34:00.000+02:00'
 author: Martin Burián
-tags: 
+lang: cs
+tags:
 modified_time: '2015-07-21T11:34:33.800+02:00'
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-8596248105008942346
 blogger_orig_url: http://blog.fragaria.cz/2015/07/pondelni-stripky-z-2072015.html

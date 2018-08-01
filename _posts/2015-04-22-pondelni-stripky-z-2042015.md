@@ -3,6 +3,7 @@ layout: post
 title: Pondělní střípky z 20.4.2015
 date: '2015-04-22T18:28:00.000+02:00'
 author: Lukáš Marek
+lang: cs
 tags:
 - stripky
 - lodash

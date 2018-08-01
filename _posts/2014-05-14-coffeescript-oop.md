@@ -3,6 +3,7 @@ layout: post
 title: CoffeeScript a OOP
 date: '2014-05-14T10:43:00.000+02:00'
 author: Robin Gottfried
+lang: cs
 tags:
 - oop
 - javascript

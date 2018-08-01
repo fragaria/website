@@ -3,6 +3,7 @@ layout: post
 title: Mapujeme adresy do českých krajů
 date: '2018-02-05T09:56:00.000+01:00'
 author: Jirka Chadima
+lang: cs
 tags:
 - geodata
 - openstreetmap

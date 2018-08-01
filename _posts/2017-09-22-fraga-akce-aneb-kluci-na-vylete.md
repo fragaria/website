@@ -3,6 +3,7 @@ layout: post
 title: Fraga akce aneb kluci na výletě
 date: '2017-09-22T12:47:00.003+02:00'
 author: Daniela Borošová
+lang: sk
 tags:
 - kancl
 - fragaria

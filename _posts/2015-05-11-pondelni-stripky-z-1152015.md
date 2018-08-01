@@ -3,6 +3,7 @@ layout: post
 title: Pondělní střípky z 11.5.2015
 date: '2015-05-11T12:55:00.000+02:00'
 author: Lukáš Marek
+lang: cs
 tags:
 - stripky
 - path picker

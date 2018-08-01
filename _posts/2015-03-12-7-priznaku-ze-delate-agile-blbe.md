@@ -3,6 +3,7 @@ layout: post
 title: 7 příznaků, že děláte Agile blbě
 date: '2015-03-12T10:36:00.000+01:00'
 author: Martin Burián
+lang: cs
 tags:
 - scrum
 - agile

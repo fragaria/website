@@ -3,6 +3,7 @@ layout: post
 title: GIT - proces vývoja a nasadzovania
 date: '2015-09-22T15:28:00.000+02:00'
 author: Tibor Kulčár
+lang: sk
 tags:
 - scrum
 - verzování

@@ -3,6 +3,7 @@ layout: post
 title: Pondělní střípky z 13.2.2017
 date: '2017-02-15T10:41:00.001+01:00'
 author: Martin Burián
+lang: cs
 tags:
 - stripky
 - kancl

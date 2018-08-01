@@ -3,6 +3,7 @@ layout: post
 title: Pondělní střípky z 22.6.2015
 date: '2015-06-23T22:14:00.000+02:00'
 author: Lukáš Marek
+lang: cs
 tags:
 - stripky
 - infer

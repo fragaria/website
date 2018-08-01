@@ -3,6 +3,7 @@ layout: post
 title: Optimalizace rychlosti webu
 date: '2013-11-14T14:26:00.000+01:00'
 author: Martin Bílek
+lang: cs
 tags:
 - optimalizace
 - page speed

@@ -3,6 +3,7 @@ layout: post
 title: Pondělní střípky z 30.3.2015
 date: '2015-03-30T19:57:00.000+02:00'
 author: Lukáš Marek
+lang: cs
 tags:
 - stripky
 - groovy

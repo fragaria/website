@@ -3,6 +3,7 @@ layout: post
 title: BorIS - moderní systém pro nepopulární sektor
 date: '2014-03-11T12:22:00.000+01:00'
 author: Martin Burián
+lang: cs
 tags:
 - boris
 - drogy

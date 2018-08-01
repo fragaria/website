@@ -3,6 +3,7 @@ layout: post
 title: Angular.js daterangepicker
 date: '2014-03-13T15:50:00.000+01:00'
 author: Lukáš Marek
+lang: cs
 tags:
 - open source
 - javascript

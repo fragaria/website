@@ -3,6 +3,7 @@ layout: post
 title: Omezení přístupu do AppEngine aplikace
 date: '2013-10-16T10:19:00.004+02:00'
 author: Lukáš Marek
+lang: cs
 tags:
 - gae
 - google app engine

@@ -3,6 +3,7 @@ layout: post
 title: Pondělní střípky z 9.1.2017
 date: '2017-01-10T08:38:00.001+01:00'
 author: Lukáš Marek
+lang: cs
 tags:
 - stripky
 - destilat

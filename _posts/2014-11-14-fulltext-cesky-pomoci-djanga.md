@@ -3,6 +3,7 @@ layout: post
 title: Fulltext česky pomocí Djanga a Elasticsearch
 date: '2014-11-14T10:00:00.000+01:00'
 author: Filip Vařecha
+lang: cs
 tags:
 - search
 - fulltext

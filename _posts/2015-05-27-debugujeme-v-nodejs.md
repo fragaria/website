@@ -3,6 +3,7 @@ layout: post
 title: Debugujeme v Node.js
 date: '2015-05-27T09:00:00.000+02:00'
 author: Hynek Urban
+lang: cs
 tags:
 - debug
 - nodejs

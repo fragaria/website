@@ -3,6 +3,7 @@ layout: post
 title: Jak vyhrát Prostřeno?
 date: '2015-03-05T10:55:00.000+01:00'
 author: Lukáš Marek
+lang: cs
 tags:
 - npm
 - elasticsearch

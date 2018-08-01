@@ -3,6 +3,7 @@ layout: post
 title: Jahoda, malina, sloni, hadi, flanděra, angular
 date: '2017-07-03T12:56:00.000+02:00'
 author: Jirka Chadima
+lang: cs
 tags:
 - sqlite
 - javascript

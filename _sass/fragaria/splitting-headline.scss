@@ -1,8 +1,12 @@
 .splitting-headline {
     position: relative;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
     text-align: center;
     text-transform: uppercase;
+
+    @include deviceBreakpoint(tablet) {
+        padding-bottom: 5rem;
+    }
 
     &:before {
         content: '';

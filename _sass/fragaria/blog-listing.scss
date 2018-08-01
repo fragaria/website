@@ -17,6 +17,11 @@
         padding: 2rem 0 3rem;
     }
 
+    &:first-child {
+        padding-top: 0
+    }
+
+
     &:first-child,
     & + & {
         @include baselineAwareBorder($color: $blog-listing-splitter-border-color, $orientation: 'top');

@@ -131,7 +131,7 @@
         text-transform: uppercase;
         text-decoration: none;
 
-        @include sassline(delta, $seriftype, 3, 1, all);
+        @include sassline(gamma, $seriftype, 3, 1, all);
     }
 
     &:hover .blog-posting__meta {

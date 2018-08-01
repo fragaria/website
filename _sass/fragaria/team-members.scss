@@ -1,3 +1,15 @@
+@mixin memberProfileVariant($icon, $main) {
+    font-family: 'fragariacz-icons';
+
+    &:before {
+        content: $icon;
+    }
+
+    &:hover:before {
+        color: $main;
+    }
+}
+
 .team-members {
     display: grid;
     grid-template-columns: 1fr;
@@ -25,6 +37,13 @@
     }
 }
 
+.team-member:hover {
+    .team-member__profiles {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 .team-member__avatar {
     text-align: center;
 }
@@ -34,18 +53,47 @@
     display: block;
     margin: auto;
     width: 8rem;
-    // filter: grayscale(100%);
 }
-
-// .team-member:hover .team-member__avatar-image {
-//     filter: grayscale(0%);
-// }
 
 .team-member__body {
     text-align: center;
 
     .team-member__name {
-        @include sassline(epsilon, $seriftype, 2, 1, all);
+        @include sassline(epsilon, $seriftype, 2, 2, all);
     }
+
+    .team-member__alt.caption {
+        @include sassline(theta, $seriftype, 1.5, 1, all);
+    }
+}
+
+.team-member__profiles {
+    display: block;
+    height: 2rem;
+    // transition: all .5s cubic-bezier(1.000, 0.000, 0.000, 1.000);
+    // Needed to write separate rule for timing function - doesn't worked well in online line definition
+    transition: all .5s;
+    transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+    opacity: 0;
+    transform: scale(.002);
+}
+
+.team-member__profile {
+    @each $variantName, $variantSettings in $brands {
+        &--#{$variantName} {
+            @include memberProfileVariant(
+                map-get($variantSettings, icon),
+                map-get($variantSettings, main)
+            );
+        }
+    }
+
+    & + .team-member__profile {
+        margin-left: .25em;
+    }
+}
+
+.team-member__profile-body {
+    display: none
 }
 

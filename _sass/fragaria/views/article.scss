@@ -47,6 +47,7 @@ $article-content-width: 40rem;
     text-align: left;
     // Will try to add word-breaking hypens according to post language (which defaults to EN).
     hyphens: auto;
+    @include sassline(zeta, $seriftype, $lineheight: 2, $below: .5, $breakpoint: all);
 
     a {
         // default anchor style
@@ -59,15 +60,15 @@ $article-content-width: 40rem;
     }
 
     h1 {
-        @include sassline(gamma, $seriftype, $lineheight: 3, $below: .5, $breakpoint: all);
+        @include sassline(gamma, $seriftype, $lineheight: 3, $below: .75, $breakpoint: all);
     }
 
     h2 {
-        @include sassline(delta, $seriftype, $lineheight: 3, $below: .5, $breakpoint: all);
+        @include sassline(delta, $seriftype, $lineheight: 3, $below: .75, $breakpoint: all);
     }
 
     h3 {
-        @include sassline(epsilon, $seriftype, $lineheight: 3, $below: .5, $breakpoint: all);
+        @include sassline(epsilon, $seriftype, $lineheight: 3, $below: .75, $breakpoint: all);
     }
 
     // basic image

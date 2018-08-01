@@ -54,3 +54,12 @@
         grid-area: other;
     }
 }
+
+.v-home__blog {
+    .blog-listing__post:first-child {
+        padding-top: 0
+    }
+}
+
+
+

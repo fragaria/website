@@ -37,11 +37,15 @@ body {
 a {
     color: $anchor-color;
     text-decoration: none;
-    transition: color 0.1s, background-color 0.1s;
-    &:hover,
-    &:active,
-    &:focus {
-        color: $anchor-hover-color;
+
+    &:not(&.nohover) {
+        transition: #{$anchor-hover-transition};
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $anchor-hover-color;
+        }
     }
 }
 
@@ -54,6 +58,7 @@ a {
 
 // Styles for typeset text.
 .typeset {
+
     // Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
     p {
         @include baseline(

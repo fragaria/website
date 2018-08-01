@@ -55,6 +55,7 @@ $text-color: $primary-color;
 
 $anchor-color: $primary-color;
 $anchor-hover-color: map-get($palette, red);
+$anchor-hover-transition: 'color .1s ease-in-out';
 
 $border-color: $primary-color;
 

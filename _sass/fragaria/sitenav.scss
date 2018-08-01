@@ -72,7 +72,7 @@ $sitenav-body-height: (
     min-height: 100vh;
 
     padding: 4rem 7rem 2rem;
-    transform: translateY(-120%);
+    transform: translateY(-100%);
     transition: transform .3s $sitenav-slide-transition;
 }
 
@@ -93,7 +93,11 @@ $sitenav-body-height: (
     }
 
     .sitenav__link {
-        @include sassline(alpha, $sansseriftype, 4, 1, all);
+        @include sassline(alpha, $sansseriftype, 3.5, 1, all);
+
+        @include deviceBreakpoint(tablet) {
+            @include sassline(alpha, $sansseriftype, 5, 1, all);
+        }
     }
 }
 

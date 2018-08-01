@@ -28,11 +28,15 @@
         {% if include.post.cloudinary_src %}
             <div class="blog-posting__media" style="
                 {%- if include.media_sizing == 'large' -%}
-                background-image: url('{% cloudinary_url include.post.cloudinary_src width='1280' height='800' crop='fit' quality='auto' format='auto' %}');
-                background-image: -webkit-image-set(url({% cloudinary_url include.post.cloudinary_src width='1280' height='800' crop='fit' quality='auto' format='auto' dpr='1.0' %}) 1x, url({% cloudinary_url include.post.cloudinary_src width='1280' height='800' crop='fit' quality='auto' format='auto' dpr='2.0' %}) 2x);
+                background:
+                    linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)),
+                    url('{% cloudinary_url include.post.cloudinary_src width='1280' height='800' crop='fit' quality='auto' format='auto' %}') center,
+                    -webkit-image-set(url({% cloudinary_url include.post.cloudinary_src width='1280' height='800' crop='fit' quality='auto' format='auto' dpr='1.0' %}) 1x, url({% cloudinary_url include.post.cloudinary_src width='1280' height='800' crop='fit' quality='auto' format='auto' dpr='2.0' %}) 2x) center;
                 {%- else -%}
-                background-image: url('{% cloudinary_url include.post.cloudinary_src width='400' height='240' crop='fit' quality='auto' format='auto' dpr='1.0' %}');
-                background-image: -webkit-image-set(url({% cloudinary_url include.post.cloudinary_src width='400' height='240' crop='fit' quality='auto' format='auto' dpr='1.0' %}) 1x, url({% cloudinary_url include.post.cloudinary_src width='400' height='240' crop='fit' quality='auto' format='auto' dpr='2.0' %}) 2x);
+                background:
+                    linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)),
+                    url('{% cloudinary_url include.post.cloudinary_src width='400' height='240' crop='fit' quality='auto' format='auto' dpr='1.0' %}') center,
+                    -webkit-image-set(url({% cloudinary_url include.post.cloudinary_src width='400' height='240' crop='fit' quality='auto' format='auto' dpr='1.0' %}) 1x, url({% cloudinary_url include.post.cloudinary_src width='400' height='240' crop='fit' quality='auto' format='auto' dpr='2.0' %}) 2x) center;
                 {%- endif -%}
             ">
                 <!-- image is hidden in css, it's here only for metadata-->

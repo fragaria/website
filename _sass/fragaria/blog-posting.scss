@@ -101,6 +101,8 @@
 // this has to be scoped so it beats specificity of .typeset
 .blog-posting {
     .blog-posting__excerpt {
+        hyphens: auto;
+
         @include sassline(eta, $bodytype, 2, 0, all);
     }
 

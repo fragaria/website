@@ -2,7 +2,7 @@
 layout: blank
 ---
 
-<article itemtype="https://schema.org/TechArticle" itemscope class="article" lang="{% if page.lang %}{{ page.lang }}{% else %}en{% endif %}">
+<article itemtype="https://schema.org/TechArticle" itemscope class="article" lang="{{ page.lang }}">
     <div class="content-block typeset">
         <h1 itemprop="name" class="article__headline">{{ page.title }}</h1>
         <meta itemprop="headline" content="{{ page.title }}">

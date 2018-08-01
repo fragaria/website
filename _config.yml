@@ -43,10 +43,14 @@ exclude:
 
 permalink: /blog/:year/:month/:day/:title/
 
-service_worker:
-    # Only enabled in production, @see: _config.prod.yml
-    enabled: false
-    cache_version: 1
+defaults:
+    -
+        scope:
+            path: _posts
+        values:
+            layout: post
+            lang: en
+            tags: []
 
 # --------------------------- plugins ------------------------------------------
 
@@ -69,6 +73,12 @@ cloudinary:
     cloud_path_prefix: fragaria.cz/
 
 # ---------------------- custom configuration ----------------------------------
+
+service_worker:
+    # Only enabled in production, @see: _config.prod.yml
+    enabled: false
+    cache_version: 1
+
 
 company:
     website_title: fragaria.cz

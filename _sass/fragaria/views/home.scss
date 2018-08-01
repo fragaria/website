@@ -1,6 +1,7 @@
 .v-home__hero {
     text-align: center;
     padding-bottom: 4rem;
+    padding: 6rem 0 10rem;
 
     @include deviceBreakpoint(tablet) {
         padding: 8rem 0 12rem;
@@ -13,11 +14,7 @@
     margin-right: auto;
     text-align: center;
 
-    @include sassline(delta, $headingtype, 2, 0, all);
-
-    @include deviceBreakpoint(mobile) {
-        @include sassline(delta, $headingtype, 3, 0, all);
-    }
+    @include sassline(delta, $headingtype, 3, 0, all);
 
     @include deviceBreakpoint(tablet) {
         @include sassline(beta, $headingtype, 5, 0, all);

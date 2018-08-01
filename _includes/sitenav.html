@@ -1,19 +1,21 @@
 <div class="content-block js-sitenav sitenav-wrapper">
-    <nav class="sitenav content-block__cover--mobile" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-        <a href="{{ '/' | relative_url }}">
-            <img alt="{{ site.company.official_name }}" class="sitenav__brand" src="{{ '/assets/img/strawberry.svg' | relative_url }}">
-        </a>
+    <nav class="sitenav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+
+        <div class="sitenav__menu">
+            <a href="{{ '/' | relative_url }}" class="typeset__anchor--nounderline" itemprop="url"><span itemprop="name">Fragaria</span></a>
+
+            <a href="{{ '/' | relative_url }}">
+                <img alt="{{ site.company.official_name }}" class="sitenav__brand" src="{{ '/assets/img/strawberry.svg' | relative_url }}">
+            </a>
+
+            <a href="#" class="js-sitenav-menu-toggle">Menu</a>
+        </div>
 
         <ul class="sitenav__linkset">
-            <li class="sitenav__linkset-item sitenav__linkset-item--main"><a href="{{ '/' | relative_url }}" class="sitenav__link typeset__anchor--nounderline" itemprop="url"><span itemprop="name">Fragaria.cz</span></a></li>
             {% for menuitem in site.data.sitenav %}
                 <li class="sitenav__linkset-item {% if page.url contains menuitem.url %}sitenav__linkset-item--active{% endif %} js-sitenav-link"><a href="{{ menuitem.url | relative_url }}" class="sitenav__link typeset__anchor--nounderline" itemprop="url"><span itemprop="name">{{ menuitem.name }}</span></a></li>
             {% endfor %}
         </ul>
-
-        <div class="sitenav__menu-toggle typeset">
-            <a href="#" class="sitenav__menu-toggle-link js-sitenav-menu-toggle">Menu</a>
-        </div>
     </nav>
 </div>
 

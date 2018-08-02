@@ -95,7 +95,7 @@ $article-content-width: 40rem;
     // basic image
     .figure:not(.highlight) {
         text-align: center;
-        margin-bottom: 2rem;
+        padding-bottom: 2rem;
 
         &.figure--wide {
             @include deviceBreakpoint(desktop) {

@@ -330,6 +330,10 @@ a {
         }
     }
 
+    blockquote + .figure {
+        padding-top: 1rem;
+    }
+
     // Horizontal rule.
     hr {
         width: 100%;

@@ -136,7 +136,8 @@ a {
         @include baseline(eta, $bodytype, 2, 2, all);
         li {
             font-feature-settings: "kern", "onum", "liga";
-            margin-left: 1.4rem;
+            margin-left: 2rem;
+
             @include breakpoint(break-1) {
                 margin-left: 0;
             }
@@ -366,7 +367,8 @@ a {
     code {
         font-family: getFontFamily($monospacetype);
         background-color: $code-background-color;
-        white-space: pre;
+        font-size: 1rem;
+        word-break: break-word;
     }
 
     // Code block

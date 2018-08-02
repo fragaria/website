@@ -37,13 +37,6 @@
     }
 }
 
-.team-member:hover {
-    .team-member__profiles {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
 .team-member__avatar {
     text-align: center;
 }
@@ -70,12 +63,6 @@
 .team-member__profiles {
     display: block;
     height: 2rem;
-    // transition: all .5s cubic-bezier(1.000, 0.000, 0.000, 1.000);
-    // Needed to write separate rule for timing function - doesn't worked well in online line definition
-    transition: all .5s;
-    transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
-    opacity: 0;
-    transform: scale(.002);
 }
 
 .team-member__profile {

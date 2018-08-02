@@ -12,8 +12,8 @@
     @include deviceBreakpoint(tablet) {
         grid-template-areas:
             "main"
-            "latest"
             "featured"
+            "latest"
             "other";
 
         // space out individual home sections
@@ -59,7 +59,12 @@
     .blog-listing__post:first-child {
         padding-top: 0
     }
+
+    .blog-listing__cta {
+        text-align: center;
+
+        @include deviceBreakpoint(tablet) {
+            margin-top: 3rem;
+        }
+    }
 }
-
-
-

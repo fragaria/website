@@ -149,5 +149,4 @@ zač.
 
 Příští týden se podíváme na bezdrátová sluchátka do uší (pecky).
 
-*<span class="underline">Redakční poznámka:</span> Tento blog stál Krtka
-opravdu dost peněz, tak doufáme v rekordní čtenost.*
+*Redakční poznámka: Tento blog stál Krtka opravdu dost peněz, tak doufáme v rekordní čtenost.*

@@ -57,7 +57,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 
     <!-- preload Google Webfonts stylesheet -->
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|PT+Serif:400,700&amp;subset=latin-ext" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Playfair+Display+SC&amp;subset=latin-ext" as="style">
     <!-- preload OpenSansCondensed-Light latin, 300 -->
     <link rel="preload" href="https://fonts.gstatic.com/s/opensanscondensed/v12/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuXMR7eS2Ao.woff2" as="font" type="font/woff2" crossorigin>
     <!-- preload OpenSansCondensed-Light latin-ext, 300 -->
@@ -66,10 +66,13 @@
     <link rel="preload" href="https://fonts.gstatic.com/s/opensanscondensed/v12/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff0GmDuXMR7eS2Ao.woff2" as="font" type="font/woff2" crossorigin>
     <!-- preload OpenSansCondensed-Light latin-ext, 700 -->
     <link rel="preload" href="https://fonts.gstatic.com/s/opensanscondensed/v12/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff0GmDuvMR7eS2AopSg.woff2" as="font" type="font/woff2" crossorigin>
-
-    <link rel="preload" href="{{ '/assets/fonts/fragariacz-icons.ttf?p82sos' | relative_url }}" as="font" type="font/ttf" crossorigin="anonymous">
-
-
+    <!-- preload PlayFairDisplaySC regular latin, 400 -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/playfairdisplaysc/v7/ke85OhoaMkR6-hSn7kbHVoFf7ZfgMPr_lbcMEOE1I4otKg.woff2" as="font" type="font/woff2" crossorigin="">
+    <!-- preload PlayFairDisplaySC regular latin-ext, 400 -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/playfairdisplaysc/v7/ke85OhoaMkR6-hSn7kbHVoFf7ZfgMPr_lbkMEOE1I4o.woff2" as="font" type="font/woff2" crossorigin="">
+    <!-- preload fragaria icon set -->
+    <link rel="preload" href="{{ '/assets/fonts/fragariacz-icons.ttf?zc978f' | relative_url }}" as="font" type="font/ttf" crossorigin="anonymous">
+    <!-- preload javascript file -->
     <link rel="preload" href="{{ '/assets/js/' | relative_url }}{% if jekyll.environment == 'production' %}{{ 'site.js' | bust_js_cache }}{% else %}site.js{% endif %}" as="script">
 
     <link rel="stylesheet" href="{{ "/assets/" | relative_url }}{% if jekyll.environment == 'production' %}{{ 'styles.css' | bust_css_cache }}{% else %}styles.css{% endif %}">

@@ -310,7 +310,7 @@ a {
         /**
          * We need to ensure, whole `p` gets contained in the blockquote (including
          * the bottom margin). This is beacuse otherwise, `border-left` would
-         * be incomplete, not fill whole space of the blockquote.
+         * be incomplete, not filling whole space of the blockquote.
          */
         &:after {
             content: ' ';

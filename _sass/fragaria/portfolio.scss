@@ -1,3 +1,8 @@
+$portfolio-project-media-width: (
+    mobile: 4rem,
+    tablet: 7rem,
+);
+
 .portfolio-strip {
     position: relative;
 }
@@ -15,10 +20,8 @@
 }
 
 .portfolio-project {
-    display: flex;
-    flex-direction: column-reverse;
-    margin-bottom: 4rem;
-    padding-bottom: 4rem;
+    margin-bottom: 2rem;
+    padding-bottom: 3rem;
     border-bottom: 1px solid #000;
 
     &:last-child {
@@ -28,7 +31,6 @@
     }
 
     @include deviceBreakpoint(tablet) {
-        flex-direction: row;
         padding: 0 2rem;
         margin-bottom: 0;
         border-bottom: none;
@@ -41,23 +43,26 @@
     .portfolio-project__headline {
         @include sassline(epsilon, $seriftype, 2, 1, all);
     }
+
+    .portfolio-project__media {
+        float: right;
+        max-width: map-get($portfolio-project-media-width, mobile);
+
+        @include sassline(epsilon, $seriftype, 2, 1, all);
+
+        @include deviceBreakpoint(tablet) {
+            max-width: map-get($portfolio-project-media-width, tablet);
+        }
+    }
 }
 
 
 .portfolio-project-detail {
     @include deviceBreakpoint(tablet) {
-        padding-right: 2rem;
+        padding-right: map-get($portfolio-project-media-width, tablet) + 2rem;
     }
 
     .portfolio-project-detail__resources {
         @include sassline(eta, $seriftype, 2, 1, all);
-    }
-}
-
-.portfolio-project__media {
-    align-self: start;
-
-    img {
-        max-width: 100px;
     }
 }

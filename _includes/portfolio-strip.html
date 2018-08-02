@@ -12,9 +12,13 @@
                     <meta itemprop="name" content="{{ site.company.official_name }}">
                 </span>
 
-                <div class="portfolio-project-detail">
-                    <h1 class="portfolio-project__headline">{{ project.title }}</h1>
+                <div class="portfolio-project__media">
+                    <img class="portfolio-project__image" src="{% cloudinary_url project.img crop='fit' height='128' width='128' format='png' quality='auto' dpr='2.0' %}" alt="{{ project.title }}">
+                </div>
 
+                <h1 class="portfolio-project__headline">{{ project.title }}</h1>
+
+                <div class="portfolio-project-detail">
                     <!-- <div class="caption portfolio-project__subheadline">{{ project.job }}</div> -->
 
                     {% if project.website %}
@@ -28,9 +32,6 @@
                     {% include posts/taglist.html tags=project.tags %}
                 </div>
 
-                <div class="portfolio-project__media">
-                    <img class="portfolio-project__image" src="{% cloudinary_url project.img crop='fit' height='128' width='128' format='png' quality='auto' dpr='2.0' %}" alt="{{ project.title }}">
-                </div>
             </article>
         {% endfor %}
     </div>

@@ -47,9 +47,6 @@
     grid-template-rows: auto;
     grid-gap: 1rem 0;
     grid-template-areas:
-        "phone"
-        "email"
-        "map"
         "residence"
         "billing"
         "contactform";
@@ -59,7 +56,6 @@
         grid-template-rows: auto;
         grid-gap: 1rem 1rem;
         grid-template-areas:
-            "phone       email    map"
             "residence  billing none"
             "contactform contactform contactform"
         ;
@@ -70,16 +66,12 @@
         grid-template-rows: auto;
         grid-gap: 2rem 4rem;
         grid-template-areas:
-            "phone     email   map         .          "
             "residence billing contactform contactform"
         ;
     }
 
 }
 
-.v-home__company-phone       { grid-area: phone; }
-.v-home__company-email       { grid-area: email; }
-.v-home__company-map         { grid-area: map; }
 .v-home__company-residence   { grid-area: residence; }
 .v-home__company-billing     { grid-area: billing; }
 .v-home__company-contactform { grid-area: contactform; }

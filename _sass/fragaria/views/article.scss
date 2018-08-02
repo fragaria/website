@@ -1,10 +1,11 @@
 $article-content-width: 40rem;
 
 .article {
+    padding-top: 2rem;
     text-align: center;
 
     @include deviceBreakpoint(tablet) {
-        padding-top: 3rem;
+        padding-top: 5rem;
     }
 
     .article__headline {
@@ -47,7 +48,6 @@ $article-content-width: 40rem;
     text-align: left;
     // Will try to add word-breaking hypens according to post language (which defaults to EN).
     hyphens: auto;
-    @include sassline(zeta, $seriftype, $lineheight: 2, $below: .5, $breakpoint: all);
 
     a {
         // default anchor style
@@ -60,15 +60,36 @@ $article-content-width: 40rem;
     }
 
     h1 {
-        @include sassline(gamma, $seriftype, $lineheight: 3, $below: .75, $breakpoint: all);
+        @include sassline(gamma, $seriftype, $lineheight: 3, $below: 0, $breakpoint: all);
+
+        @include deviceBreakpoint(tablet) {
+           @include sassline(gamma, $seriftype, $lineheight: 3, $below: 1, $breakpoint: all);
+        }
     }
 
     h2 {
-        @include sassline(delta, $seriftype, $lineheight: 3, $below: .75, $breakpoint: all);
+        @include sassline(delta, $seriftype, $lineheight: 2, $below: 0, $breakpoint: all);
+
+        @include deviceBreakpoint(tablet) {
+            @include sassline(delta, $seriftype, $lineheight: 3, $below: 1, $breakpoint: all);
+        }
     }
 
     h3 {
-        @include sassline(epsilon, $seriftype, $lineheight: 3, $below: .75, $breakpoint: all);
+        @include sassline(epsilon, $seriftype, $lineheight: 3, $below: 0, $breakpoint: all);
+
+        @include deviceBreakpoint(tablet) {
+            @include sassline(epsilon, $seriftype, $lineheight: 2, $below: 1, $breakpoint: all);
+        }
+    }
+
+    p {
+        @include sassline(zeta, $seriftype, $lineheight: 2, $below: 1, $breakpoint: all);
+
+        // + h2,
+        // + h3 {
+        //     margin-top: 2rem;
+        // }
     }
 
     // basic image

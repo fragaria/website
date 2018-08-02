@@ -63,7 +63,11 @@
         .blog-posting__headline {
             text-decoration: none;
 
-            @include sassline(alpha, $seriftype, 4, 1, all);
+            @include sassline(alpha, $seriftype, 3, 1, all);
+
+            @include deviceBreakpoint(tablet) {
+                @include sassline(alpha, $seriftype, 4, 1, all);
+            }
         }
 
         .blog-posting__meta {
@@ -131,7 +135,11 @@
         text-transform: uppercase;
         text-decoration: none;
 
-        @include sassline(gamma, $seriftype, 3, 1, all);
+        @include sassline(delta, $seriftype, 2, 0, all);
+
+        @include deviceBreakpoint(tablet) {
+            @include sassline(gamma, $seriftype, 3, 1, all);
+        }
     }
 
     &:hover .blog-posting__meta {

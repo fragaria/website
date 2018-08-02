@@ -26,7 +26,8 @@
             {% endif %}
         </div>
         {% if include.post.cloudinary_src %}
-            <div class="blog-posting__media" style="
+        <div class="blog-posting__media">
+            <div class="blog-posting__media-fill" style="
                 {%- if include.media_sizing == 'large' -%}
                     {%- include posts/listing/standard.bgimage.html src=include.post.cloudinary_src darken=include.media_darken width='1280' height='800' -%}
                 {%- elsif include.media_sizing == 'medium' -%}
@@ -39,6 +40,7 @@
                 <!-- image is hidden in css, it's here only for metadata-->
                 <img itemprop="image" src="{% cloudinary_url include.post.cloudinary_src width='480' height='240' crop='fit' quality='auto' format='auto' dpr='1.0' %}" class="blog-posting__image" />
             </div>
+        </div>
         {% endif %}
     </a>
 </article>

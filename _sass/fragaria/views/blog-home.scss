@@ -12,8 +12,8 @@
     @include deviceBreakpoint(tablet) {
         grid-template-areas:
             "main"
-            "featured"
             "latest"
+            "featured"
             "other";
 
         // space out individual home sections

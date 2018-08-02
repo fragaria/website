@@ -12,8 +12,8 @@ $sitenav-body-height: (
     background: map-get($palette, white);
 
     @include deviceBreakpoint(tablet) {
-       height: map-get($sitenav-body-height, desktop) + 1rem;
-   }
+        height: map-get($sitenav-body-height, desktop) + 1rem;
+    }
 }
 
 
@@ -30,8 +30,8 @@ $sitenav-body-height: (
     background: map-get($palette, white);
 
     @include deviceBreakpoint(tablet) {
-       height: map-get($sitenav-body-height, desktop) + 1rem;
-   }
+        height: map-get($sitenav-body-height, desktop) + 1rem;
+    }
 }
 
 // logo image
@@ -73,6 +73,7 @@ $sitenav-body-height: (
 
     transform: translateY(-100%);
     transition: transform .3s $sitenav-slide-transition;
+    will-change: transform;
 }
 
 /* .sitenav__linkset-item styles */

@@ -1,11 +1,11 @@
 .footer {
     position: relative;
-    margin-top: 2rem;
+    margin-top: 4rem;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
 
     // second top border
     @include baselineAwareBorder($color: map-get($palette, black), $orientation: 'top', $width: 2px, $offset: 0);
@@ -14,7 +14,7 @@
         align-items: flex-start;
         flex-direction: row;
         margin-top: 8rem;
-        padding-top: 2rem;
+        padding-top: 3rem;
         padding-bottom: 6rem;
     }
 

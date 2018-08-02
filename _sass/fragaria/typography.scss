@@ -299,63 +299,29 @@ a {
 
     // Quotes.
     blockquote {
+        border-left: .15rem solid $border-color;
+
         p {
-            border-left: 0.15rem solid $anchor-color;
             font-style: map-get($bodytype, italic);
-            padding-left: 1rem; // Add spacing below blockquote paragraphs to align to baseline grid.
-            $get-scale: map-get($modular-scale, scale-0);
-            $get-size: map-get($get-scale, zeta);
-            $rootsize: nth($sizes, 1);
-            $baseline-shift: #{(
-                    $get-size / 2 *
-                        (
-                            (2 * $rootsize / $get-size) -
-                                map-get($bodytype, cap-height)
-                        )
-                ) / $rootsize + 0.00001};
-            $baseline-push: #{3 -
-                (
-                    (
-                            $get-size *
-                                (
-                                    (2 * $rootsize / $get-size) -
-                                        map-get($bodytype, cap-height)
-                                )
-                        ) / $rootsize + 0.00001
-                )};
-            margin-bottom: #{$baseline-push}rem;
-            padding-bottom: #{$baseline-shift}rem;
-            @for $i from 2 through $breakpoints-limit {
-                $get-scale: map-get($modular-scale, scale-#{$i - 1});
-                $get-size: map-get($get-scale, zeta);
-                $rootsize: nth($sizes, $i);
-                $baseline-shift: #{(
-                        $get-size /
-                            2 *
-                            (
-                                (2 * $rootsize / $get-size) -
-                                    map-get($bodytype, cap-height)
-                            )
-                    ) /
-                    $rootsize +
-                    0.00001};
-                $baseline-push: #{3 -
-                    (
-                        (
-                                $get-size *
-                                    (
-                                        (2 * $rootsize / $get-size) -
-                                            map-get($bodytype, cap-height)
-                                    )
-                            ) /
-                            $rootsize +
-                            0.00001
-                    )};
-                @media screen and (min-width: nth($points, $i) / 16 * 1em) {
-                    margin-bottom: #{$baseline-push}rem;
-                    padding-bottom: #{$baseline-shift}rem;
-                }
-            }
+            padding-left: 1rem;
+
+        }
+
+        /**
+         * We need to ensure, whole `p` gets contained in the blockquote (including
+         * the bottom margin). This is beacuse otherwise, `border-left` would
+         * be incomplete, not fill whole space of the blockquote.
+         */
+        &:after {
+            content: ' ';
+            clear: both;
+            display: block;
+            // A little nasty trick to ensure p is contained. We include a small,
+            // invisible content that results in margin being contained within
+            // the blockquote.
+            border-bottom: 1px transparent solid;
+            // Compensation for the 1px shift of the above border.
+            margin-bottom: -1px;
         }
 
         @include breakpoint(break-1) {

@@ -26,12 +26,12 @@
         grid-gap: 4rem;
     }
 
-    @include deviceBreakpoint(tablet) {
+    @include deviceBreakpoint(tablet-small) {
         grid-template-columns: repeat(4, 1fr);
     }
 
     /* 5 columns on a row for desktop and up */
-    @include deviceBreakpoint(desktop) {
+    @include deviceBreakpoint(tablet) {
         grid-template-columns: repeat(5, 1fr);
         grid-gap: 4rem;
     }

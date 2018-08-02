@@ -16,7 +16,7 @@
 
     @include sassline(beta, $headingtype, 3, 0, all);
 
-    @include deviceBreakpoint(tablet) {
+    @include deviceBreakpoint(tablet-small) {
         @include sassline(beta, $headingtype, 5, 0, all);
     }
 

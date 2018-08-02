@@ -1,6 +1,6 @@
 $portfolio-project-media-width: (
     mobile: 4rem,
-    tablet: 7rem,
+    tablet-small: 7rem,
 );
 
 .portfolio-strip {
@@ -12,7 +12,7 @@ $portfolio-project-media-width: (
     grid-template-columns: auto;
     grid-template-columns: 1fr;
 
-    @include deviceBreakpoint(tablet) {
+    @include deviceBreakpoint(tablet-small) {
         grid-template-columns: 1fr 1fr;
         grid-row-gap: 4rem;
     }
@@ -30,7 +30,7 @@ $portfolio-project-media-width: (
         border-bottom: none;
     }
 
-    @include deviceBreakpoint(tablet) {
+    @include deviceBreakpoint(tablet-small) {
         padding: 0 2rem;
         margin-bottom: 0;
         border-bottom: none;
@@ -50,16 +50,16 @@ $portfolio-project-media-width: (
 
         @include sassline(epsilon, $seriftype, 2, 1, all);
 
-        @include deviceBreakpoint(tablet) {
-            max-width: map-get($portfolio-project-media-width, tablet);
+        @include deviceBreakpoint(tablet-small) {
+            max-width: map-get($portfolio-project-media-width, tablet-small);
         }
     }
 }
 
 
 .portfolio-project-detail {
-    @include deviceBreakpoint(desktop) {
-        padding-right: map-get($portfolio-project-media-width, tablet) + 2rem;
+    @include deviceBreakpoint(tablet) {
+        padding-right: map-get($portfolio-project-media-width, tablet-small) + 2rem;
     }
 
     .portfolio-project-detail__resources {

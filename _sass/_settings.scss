@@ -75,8 +75,9 @@ $page-container-max-width: 88rem;
 $breakpoint-aliases: (
     zero: break-0,
     mobile: break-1,
-    tablet: break-2,
-    desktop: break-3,
+    tablet-small: break-2,
+    tablet: break-3,
+    desktop: break-4,
 );
 
 // Buttons
@@ -117,15 +118,17 @@ $sharebox-variants: (
 // Breakpoint sizes from px to ems. Add more values here to add more breakpoints.
 // Change names if you prefer, it wont break the mixin as long as they are strings not just numbers.
 $breakpoints: (
-    // zero
-    break-0: 0,
-    // mobile
-    break-1: 480, // 1 rem * 30
-    // tablet
-    break-2: 768, // 1 rem * 48
-    // desktop
-    break-3: 1280, // 1rem * 80
+    break-0: 0,     // 0px       Mobile first
+    break-1: 640,   // 640px   ~ Small tablet up
+    break-2: 800,   // 800px   ~ Large tablet up
+    break-3: 1024,  // 1024px  ~ Desktop up
+    break-4: 1600   // 1600px  ~ Large desktop up
 );
+
+
+$breakpoints: (
+) !default;
+
 
 // Root font-sizes for each breakpoint. Set to half desired line-height of body text.
 // ! Make sure to have as many sizes as breakpoints above.
@@ -134,6 +137,7 @@ $rootsizes: (
     rootsize-1: 16,   // 28px line-height body text
     rootsize-2: 16,   // 30px line-height body text
     rootsize-3: 16,   // 34px line-height body text
+    rootsize-4: 16,   // 34px line-height body text
 );
 
 // Set the optimum line-length for your text (based on typeface).
@@ -144,16 +148,18 @@ $measures: (
     measure-0: 500,  // 500px wide
     measure-1: 550,  // 550px wide
     measure-2: 600,  // 600px wide
-    measure-3: 680  // 680px wide
+    measure-3: 680,  // 680px wide
+    measure-4: 800  // 680px wide
 );
 
 // Set the max-widths for containers (based on design).
 // ! Make sure to have as many widths as breakpoints above.
 $maxwidths: (
     width-0: 480,
-    width-1: 768,
-    width-2: 1280,
-    width-3: 1300,
+    width-1: 648,
+    width-2: 800,
+    width-3: 1024,
+    width-4: 1600,
 );
 
 // Gutter widths

@@ -6,19 +6,24 @@
         flex-direction: column;
         padding-bottom: 4rem;
 
-        @include deviceBreakpoint(tablet) {
-            flex-direction: row;
-        }
-
         .blog-posting__media {
             flex: inherit;
             margin: 2rem 0 0;
-            min-width: 33.333%;
             filter: grayscale(0);
 
             @include deviceBreakpoint(tablet) {
                 margin-left: 2rem;
                 margin-top: 0;
+                min-height: 29rem;
+            }
+        }
+
+        @include deviceBreakpoint(tablet) {
+            flex-direction: row;
+
+            .blog-posting__content,
+            .blog-posting__media {
+                flex: 1;
             }
         }
     }
@@ -46,7 +51,6 @@
             z-index: 0;
             filter: grayscale(0);
             margin: 0;
-            background-position: cover;
         }
 
         .blog-posting__content {

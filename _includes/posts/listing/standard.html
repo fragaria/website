@@ -35,7 +35,6 @@
                 {%- else -%}
                     {%- include posts/listing/standard.bgimage.html src=include.post.cloudinary_src darken=include.media_darken width='400' height='400' -%}
                 {%- endif -%}
-                background-size: cover;
             ">
                 <!-- image is hidden in css, it's here only for metadata-->
                 <img itemprop="image" src="{% cloudinary_url include.post.cloudinary_src width='480' height='240' crop='fit' quality='auto' format='auto' dpr='1.0' %}" class="blog-posting__image" />

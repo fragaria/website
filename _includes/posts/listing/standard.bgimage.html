@@ -1,4 +1,4 @@
 background:
     {% if include.darken %}linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)),{% endif %}
-    url('{% cloudinary_url include.src width='{{ include.width }}' height='{{ include.height }}' crop='fit' quality='auto' format='auto' %}') no-repeat center center,
-    -webkit-image-set(url({% cloudinary_url include.src width='{{ include.width }}' height='{{ include.height }}' crop='fit' quality='auto' format='auto' dpr='1.0' %}) 1x, url({% cloudinary_url include.src width='{{ include.width }}' height='{{ include.height }}' crop='fit' quality='auto' format='auto' dpr='2.0' %}) 2x) no-repeat center center;
+    url('{% cloudinary_url include.src width='{{ include.width }}' height='{{ include.height }}' crop='fill' quality='auto' format='auto' %}') no-repeat center center,
+    -webkit-image-set(url({% cloudinary_url include.src width='{{ include.width }}' height='{{ include.height }}' crop='fill' quality='auto' format='auto' dpr='1.0' %}) 1x, url({% cloudinary_url include.src width='{{ include.width }}' height='{{ include.height }}' crop='fill' quality='auto' format='auto' dpr='2.0' %}) 2x) no-repeat center center;

@@ -176,7 +176,7 @@
     @include deviceBreakpoint(tablet) {
         transition-property: filter, transform;
         transition-duration: .4s;
-        transition-timing-function: ease;
+        transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
         transform: scale(1);
         filter: grayscale(100%);
     }

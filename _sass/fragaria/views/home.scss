@@ -14,7 +14,7 @@
     margin-right: auto;
     text-align: center;
 
-    @include sassline(delta, $headingtype, 3, 0, all);
+    @include sassline(beta, $headingtype, 3, 0, all);
 
     @include deviceBreakpoint(tablet) {
         @include sassline(beta, $headingtype, 5, 0, all);

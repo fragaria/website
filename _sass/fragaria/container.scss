@@ -4,7 +4,7 @@
 
 .page-container__inner {
     width: 100%;
-    max-width: deviceBreakpointWidth(desktop);
+    max-width: $page-container-max-width;
     margin-left: auto;
     margin-right: auto;
     text-align: left;

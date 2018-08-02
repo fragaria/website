@@ -69,6 +69,8 @@ $selection-color: map-get($palette, red);
 
 $blog-listing-splitter-border-color: map-get($palette, black);
 
+$page-container-max-width: 88rem;
+
 // Aliases for Sassline breakpoints, @see: $breakpoints
 $breakpoint-aliases: (
     zero: break-0,
@@ -122,7 +124,7 @@ $breakpoints: (
     // tablet
     break-2: 768, // 1 rem * 48
     // desktop
-    break-3: 1408, // 1rem * 88
+    break-3: 1280, // 1rem * 80
 );
 
 // Root font-sizes for each breakpoint. Set to half desired line-height of body text.

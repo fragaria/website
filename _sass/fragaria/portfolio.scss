@@ -58,7 +58,7 @@ $portfolio-project-media-width: (
 
 
 .portfolio-project-detail {
-    @include deviceBreakpoint(tablet) {
+    @include deviceBreakpoint(desktop) {
         padding-right: map-get($portfolio-project-media-width, tablet) + 2rem;
     }
 

@@ -1,5 +1,5 @@
 @mixin anchorStyle($emphasize: false) {
-    text-decoration: underline;
+    @include underlineSkippingDescenders();
 
     @if ($emphasize) {
         color: map-get($palette, red);

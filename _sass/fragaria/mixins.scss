@@ -191,3 +191,9 @@
     .vi { color: #008080 } /* Name.Variable.Instance */
     .il { color: #009999 } /* Literal.Number.Integer.Long */
 }
+
+@mixin underlineSkippingDescenders() {
+    text-decoration: underline;
+    text-decoration-skip: objects edges leading-spaces trailing-spaces;
+    text-decoration-skip-ink: auto;
+}

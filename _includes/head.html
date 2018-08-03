@@ -22,7 +22,8 @@
     {% capture keywords %}{{ site.keywords }}{% if page.keywords %}, {{ page.keywords }}{% endif %}{% if page.tags %}, {{ page.tags | join: ', ' }}{% endif %}{% endcapture %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="HandheldFriendly" content="true" />
     <title>{{ title }}</title>
     <meta name="author" content="{{ site.company.official_name }}" />
     <meta name="robots" content="index,follow" />

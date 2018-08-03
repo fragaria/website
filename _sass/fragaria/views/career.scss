@@ -1,86 +1,60 @@
 $full-view-break: 1000px;
 
+.v-career .hero {
+    padding-bottom: 2rem
+}
+
+.v-career-section .v-career-section--content {
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    p {
+        @include sassline(zeta, $bodytype, $lineheight: 2);
+    }
+}
+
 // spacing of individual section blocks
 .v-career-section + .v-career-section {
     margin-top: 4rem;
 }
 
-// --halfsplit means it has two columns on a single row
-.v-career-section--halfsplit {
-    display: grid;
-    // columns are displayed below each other on mobile
-    grid-template-areas:
-        "first"
-        "second";
-    grid-template-rows: auto;
-    grid-gap: 2rem;
-
-    // columns are displayed next to each other on desktop
-    @media (min-width: $full-view-break) {
-        grid-template-areas: "first second";
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 10rem;
-    }
-
-    .v-career-section__block:first-child {
-        grid-area: first;
-    }
-    .v-career-section__block:last-child {
-        grid-area: second;
-    }
-}
-
-// in --reversed mode, columns are swapped
-.v-career-section--halfsplit.v-career-section--reversed {
-    // ...but only on desktop
-    @media (min-width: $full-view-break) {
-        .v-career-section__block:first-child {
-            grid-area: second;
-        }
-        .v-career-section__block:last-child {
-            grid-area: first;
-        }
-    }
-}
-
 .v-career-section {
     // section headline
     .v-career-section__headline {
-        // hide typography breaks on mobile
-        br {
-            display: none;
-        }
+        text-align: center;
 
         i {
+            font-style: normal;
             color: map-get($palette, red);
         }
 
-        @include sassline(alpha, $headingtype, $lineheight: 4);
+        @include sassline(beta, $headingtype, $lineheight: 3);
 
         @include deviceBreakpoint(tablet) {
-            @include sassline(alpha, $headingtype, $lineheight: 5, $breakpoint: all);
-
-            // display typography breaks on desktop
-            br {
-                display: block;
-            }
+            @include sassline(beta, $headingtype, $lineheight: 4, $breakpoint: all);
         }
     }
 }
 
 // special section that has emphasized background
 .v-career-section--emphasized {
+    max-width: 60rem;
+    margin-right: auto;
+    margin-left: auto;
+
+    padding: 3rem;
+
     background-color: map-get($palette, red);
     color: map-get($palette, white);
-    padding: 3rem;
 }
 
 // align 'contact us' button
 .v-career-section__contactbutton {
-    align-self: center;
+    margin-top: 2rem;
 
-    @media (min-width: $full-view-break) {
-        justify-self: right;
+    .button:hover {
+        background-color: map-get($palette, white);
+        color: map-get($palette, red);
     }
 }
 
@@ -88,13 +62,15 @@ $full-view-break: 1000px;
 // grid for facts about the company
 .v-career-facts-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    grid-gap: 0 2rem;
+    grid-gap: 0 3rem;
 
-    @include deviceBreakpoint(mobile) {
-        grid-template-columns: 1fr 1fr;
-    }
+    padding-top: 4rem;
+
+    // @include deviceBreakpoint(mobile) {
+    //     grid-template-columns: 1fr 1fr 1fr;
+    // }
 }
 
 .v-career-facts-grid__item {
@@ -106,7 +82,8 @@ $full-view-break: 1000px;
 }
 
 .v-career-facts-grid .v-career-facts-grid__icon {
-    font-size: 2rem;
+    margin-top: 1rem;
+    font-size: 3rem;
 
     &:before {
         color: map-get($palette, red) !important;
@@ -119,12 +96,15 @@ $full-view-break: 1000px;
 // grid for technologies used in the company
 .v-career-tech-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-gap: 3rem 2rem;
 
+    padding-top: 3rem;
+    margin-bottom: 6rem;
+
     @include deviceBreakpoint(mobile) {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
 }
 

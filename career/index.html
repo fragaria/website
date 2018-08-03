@@ -23,13 +23,16 @@ keywords: career, jobs, about
     <meta itemprop="industry" content="web application development">
     <meta itemprop="title" content="web application developer">
 
-    <section class="v-career-section v-career-section--halfsplit v-career-section--reversed">
-        <div class="v-career-section__block">
-            <h1 class="v-career-section__headline">Career <br>in <i>Fragaria</i></h1>
+    <section class="hero">
+        <h1 class="hero-headline">Career in <i>Fragaria</i></h1>
+    </section>
+
+    <section class="v-career-section">
+        <div class="v-career-section--content">
             <p>Fragaria is a company with some serious software development history. The company is built upon people with real skills. You can be sure to learn a lot. Fast.</p>
             <p>Besides developing great software, we like being people too. That's why we value friendship and understanding as our top priorities. Expect a great team full of interesting characters. Beers and parties included.</p>
         </div>
-        <div class="v-career-section__block">
+        <div class="v-career-section--content">
             <div class="v-career-facts-grid">
                 {% for fact in site.data.facts %}
                     <div class="v-career-facts-grid__item">
@@ -42,7 +45,7 @@ keywords: career, jobs, about
         </div>
     </section>
 
-    <section class="v-career-section v-career-section--emphasized v-career-section--halfsplit v-career-section--main content-block__cover--mobile">
+    <section class="v-career-section v-career-section--emphasized v-career-section--main content-block__cover--mobile">
         <div class="v-career-section__block">
             <h1>Have we grabbed your attention?<br>Don't hesitate to get in touch.</h1>
         </div>
@@ -51,20 +54,19 @@ keywords: career, jobs, about
         </div>
     </section>
 
-    <section class="v-career-section v-career-section--halfsplit">
-        <div class="v-carrer-section__block">
-            <h1 class="v-career-section__headline">What<br> <i>technologies</i><br> do we use?</h1>
+    <section class="v-career-section">
+        <div class="v-career-section--content">
+            <h1 class="v-career-section__headline">What <i>technologies</i> <br> do we use?</h1>
             <p>
                 We enjoy working with the best tools currently available.<br>
                 Code quality is paramount to us, but we're not shy of prototyping with emerging technologies and frameworks.
             </p>
         </div>
-        <div class="v-career-section__block">
+        <div class="v-career-section--content">
             <div class="v-career-tech-grid">
                 {% for tech in site.data.tech %}
                     <div class="v-career-tech-grid__item">
-                        <img class="v-career-tech-grid__image" src="{{ tech.img | relative_url }}" alt="{{ tech.title }}">
-                        <h2 class="v-career-tech-grid__title">{{ tech.title }}</h2>
+                        <img class="v-career-tech-grid__image" src="{{ tech.img | relative_url }}" alt="{{ tech.title }}" title="Not familiar? It's ok, we'll tell you everything!">
                     </div>
                 {% endfor %}
             </div>

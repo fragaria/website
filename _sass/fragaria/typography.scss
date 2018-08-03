@@ -419,3 +419,31 @@ a {
         font-feature-settings: "onum", "kern";
     }
 }
+
+.hero {
+    text-align: center;
+    padding-bottom: 4rem;
+    padding: 6rem 0 10rem;
+
+    @include deviceBreakpoint(tablet) {
+        padding: 8rem 0 12rem;
+    }
+}
+
+.hero .hero-headline {
+    max-width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    @include sassline(beta, $headingtype, 3, 0, all);
+
+    @include deviceBreakpoint(tablet-small) {
+        @include sassline(beta, $headingtype, 5, 0, all);
+    }
+
+    i {
+        font-style: normal;
+        color: map-get($palette, red);
+    }
+}

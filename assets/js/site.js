@@ -6,6 +6,14 @@ function siteMenu(rootElem) {
         toggle.addEventListener('click', function () {
             rootElem.classList.remove('sitenav-wrapper--noanim');
             rootElem.classList.toggle('sitenav-wrapper--show');
+
+            if (toggle.classList.contains('is-active')) {
+                toggle.classList.remove('is-active');
+                toggle.setAttribute('aria-expanded', 'false');
+            } else {
+                toggle.classList.add('is-active');
+                toggle.setAttribute('aria-expanded', 'true');
+            }
         });
     }
 
@@ -13,7 +21,13 @@ function siteMenu(rootElem) {
         link.addEventListener('click', function () {
             rootElem.classList.add('sitenav-wrapper--noanim');
             rootElem.classList.remove('sitenav-wrapper--show');
+
+            for (let toggle of toggles) {
+                toggle.classList.remove('is-active');
+                toggle.setAttribute('aria-expanded', 'false');
+            }
         });
+
     }
 }
 

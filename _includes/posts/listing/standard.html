@@ -18,7 +18,12 @@
                 <meta itemprop="datePublished" content="{{ include.post.date | date_to_xmlschema }}" />
                 <link itemprop="mainEntityOfPage" href="{{ include.post.url }}" />
             </p>
-            <p itemprop="description" class="blog-posting__excerpt">{{ include.post.excerpt | strip_html | truncatewords: 45 }}</p>
+            {% if include.is_fist %}
+                <p itemprop="description" class="blog-posting__excerpt">{{ include.post.excerpt | strip_html | truncatewords: 75 }}</p>
+            {% else %}
+                <p itemprop="description" class="blog-posting__excerpt">{{ include.post.excerpt | strip_html | truncatewords: 40 }}</p>
+            {% endif %}
+
             {% if include.show_cta %}
             <div class="blog-posting__cta">
                 <span class="button blog-posting__cta-button">Read</span>

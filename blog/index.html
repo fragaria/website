@@ -15,7 +15,7 @@ keywords: blog, posts
 
     {% assign first_post = other_posts | first %}
 
-    {% include posts/listing/standard.html post=first_post class='blog-posting--horizontal v-blog-home__main v-blog-home__section' media_sizing='medium' %}
+    {% include posts/listing/standard.html post=first_post is_fist=true class='blog-posting--horizontal v-blog-home__main v-blog-home__section' media_sizing='medium' %}
 
     <div class="v-blog-home__posts v-blog-home__posts--latest   v-blog-home__section v-blog-home__section--tablet-padtop v-blog-home__section--nodivider   blog-listing blog-listing--nofirstdivider">
         {% for post in other_posts offset: 1 limit: 3 %}

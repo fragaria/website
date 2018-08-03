@@ -11,9 +11,9 @@
             filter: grayscale(0);
 
             @include deviceBreakpoint(tablet) {
-                margin-left: 2rem;
+                margin-left: 3rem;
                 margin-top: 0;
-                min-height: 29rem;
+                min-height: 25rem;
             }
         }
 

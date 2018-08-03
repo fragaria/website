@@ -4,12 +4,14 @@ function siteMenu(rootElem) {
 
     for (let toggle of toggles) {
         toggle.addEventListener('click', function () {
+            rootElem.classList.remove('sitenav-wrapper--noanim');
             rootElem.classList.toggle('sitenav-wrapper--show');
         });
     }
 
     for (let link of links) {
         link.addEventListener('click', function () {
+            rootElem.classList.add('sitenav-wrapper--noanim');
             rootElem.classList.remove('sitenav-wrapper--show');
         });
     }

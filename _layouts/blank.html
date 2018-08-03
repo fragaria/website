@@ -2,8 +2,28 @@
 layout: default
 ---
 
-<div class="page-container__inner">
-    {% include sitenav.html %}
-    {{ content }}
-    {% include footer.html %}
+<div class="page-container__inner js-sitenav sitenav-wrapper">
+    <div class="content-block">
+        <nav class="sitenav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+            <div class="sitenav__menu">
+                <a href="{{ '/' | relative_url }}" class="typeset__anchor--nounderline" itemprop="url"><span itemprop="name">Fragaria</span></a>
+
+                <a href="{{ '/' | relative_url }}">
+                    <img alt="{{ site.company.official_name }}" class="sitenav__brand" src="{{ '/assets/img/strawberry.svg' | relative_url }}">
+                </a>
+
+                <a href="#" class="js-sitenav-menu-toggle">Menu</a>
+            </div>
+
+            <ul class="sitenav__linkset">
+                {% for menuitem in site.data.sitenav %}
+                    <li class="sitenav__linkset-item {% if page.url contains menuitem.url %}sitenav__linkset-item--active{% endif %} js-sitenav-link"><a href="{{ menuitem.url | relative_url }}" class="sitenav__link typeset__anchor--nounderline" itemprop="url"><span itemprop="name">{{ menuitem.name }}</span></a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+    <div class="sitenav-wrapper__push">
+        {{ content }}
+        {% include footer.html %}
+    </div>
 </div>

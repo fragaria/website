@@ -5,7 +5,6 @@ function siteMenu(rootElem) {
     for (let toggle of toggles) {
         toggle.addEventListener('click', function () {
             rootElem.classList.toggle('sitenav-wrapper--show');
-            toggle.classList.toggle('sitenav__menu-toggle-link--active');
         });
     }
 
@@ -13,10 +12,6 @@ function siteMenu(rootElem) {
         link.addEventListener('click', function () {
             rootElem.classList.remove('sitenav-wrapper--show');
         });
-
-        for (let toggle of toggles) {
-            toggle.classList.remove('sitenav__menu-toggle-link--active');
-        }
     }
 }
 

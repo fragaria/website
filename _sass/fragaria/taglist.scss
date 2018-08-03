@@ -1,5 +1,12 @@
 .taglist {
-    text-align: left
+    text-align: center;
+    margin-top: -1rem;
+
+    @include sassline(eta, $bodytype, $below: 1);
+
+    @include deviceBreakpoint(tablet) {
+        text-align: left;
+    }
 }
 
 .taglist__tag {
@@ -7,6 +14,6 @@
     margin-right: .5rem;
 
     &:last-child {
-        margin: 0
+        margin: 0;
     }
 }

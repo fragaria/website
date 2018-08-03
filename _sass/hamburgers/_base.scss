@@ -68,3 +68,11 @@
     bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
   }
 }
+
+.hamburger:hover .hamburger-inner {
+  &,
+  &::before,
+  &::after {
+    background-color: map-get($palette, red);
+  }
+}

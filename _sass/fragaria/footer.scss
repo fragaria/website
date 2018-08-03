@@ -77,6 +77,13 @@
     }
 }
 
+.footer__social-icon {
+    transition: #{$anchor-hover-transition};
+
+    &:hover {
+        color: map-get($palette, red);
+    }
+}
 
 .footer__social-icon + .footer__social-icon {
     margin-left: .5em;

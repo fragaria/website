@@ -61,6 +61,14 @@ $sitenav-slide-transition: cubic-bezier(0.17, 0.04, 0.03, 0.94);
     }
 }
 
+.sitenav__company {
+    transition: #{$anchor-hover-transition};
+
+    &:hover {
+        color: map-get($palette, red);
+    }
+}
+
 /* List of menu links */
 .sitenav__linkset {
     display: flex;

@@ -213,3 +213,17 @@ $seriftype: (
     italic: italic,
     cap-height: 0.82
 );
+
+
+// Hamburger settings
+// @see: https://jonsuh.com/hamburgers/
+
+$hamburger-padding-x: 0;
+$hamburger-padding-y: 0;
+$hamburger-layer-width: 1.5rem;
+$hamburger-layer-height: 3px;
+$hamburger-layer-spacing: 5px;
+$hamburger-layer-color: $primary-color;
+$hamburger-layer-border-radius: 0;
+$hamburger-hover-opacity: 1;
+$hamburger-types: (collapse);

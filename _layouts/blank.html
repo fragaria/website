@@ -12,7 +12,11 @@ layout: default
                     <img alt="{{ site.company.official_name }}" class="sitenav__brand" src="{{ '/assets/img/strawberry.svg' | relative_url }}">
                 </a>
 
-                <a href="#" class="js-sitenav-menu-toggle">Menu</a>
+                <button class="hamburger hamburger--collapse js-sitenav-menu-toggle" type="button" aria-label="Menu" aria-controls="navigation" aria-expanded="false">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
             </div>
 
             <ul class="sitenav__linkset">

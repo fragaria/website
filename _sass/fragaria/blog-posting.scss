@@ -7,7 +7,6 @@
         padding-bottom: 4rem;
 
         .blog-posting__media {
-            flex: inherit;
             margin: 2rem 0 0;
             filter: grayscale(0);
 
@@ -18,13 +17,14 @@
             }
         }
 
+        .blog-posting__content,
+        .blog-posting__media {
+            flex: 1;
+        }
+
         @include deviceBreakpoint(tablet) {
             flex-direction: row;
 
-            .blog-posting__content,
-            .blog-posting__media {
-                flex: 1;
-            }
         }
     }
 
@@ -164,14 +164,14 @@
     flex: 1;
     min-height: 8rem;
     margin-top: 2rem;
-    background-size: cover;
-    background-position: center;
     overflow: hidden;
 }
 
 .blog-posting__media-fill {
     width: 100%;
     height: 100%;
+    background-size: cover;
+    background-position: center;
 
     @include deviceBreakpoint(tablet) {
         transition-property: filter, transform;

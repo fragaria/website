@@ -12,24 +12,25 @@
     // prevent item being cut in the middle by multicolumn layout
     display: inline-block;
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+
     @include baselineAwareBorder($orientation: 'bottom', $width: 4px, $offset: -3px, $size: 3rem);
 
     @include deviceBreakpoint(tablet) {
         @include baselineAwareBorderCancel($orientation: 'bottom');
 
         &:not(:nth-child(4n+4)) {
-            @include baselineAwareBorder($orientation: 'bottom', $width: 4px, $offset: -3px, $size: 3rem);
+            @include baselineAwareBorder($orientation: 'bottom', $width: 4px, $offset: -1rem, $size: 3rem);
         }
     }
 }
 
 // this has to be scoped so it beats specificity of .typeset
 .post-overview .post-overview__post-headline {
-    font-family: getFontFamily($headingtype);
-    text-decoration: underline;
+    font-family: getFontFamily($bodytype);
+    font-weight: normal;
 
-    @include sassline(eta, $headingtype, 2, 0, all);
+    @include sassline(eta, $bodytype, 2, 0, all);
 }
 
 .post-overview__pubdate {

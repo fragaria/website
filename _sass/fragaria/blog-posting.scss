@@ -143,7 +143,6 @@
     .blog-posting__headline {
         font-family: getFontFamily($seriftype);
         font-weight: 400;
-        text-transform: uppercase;
         text-decoration: none;
 
         @include sassline(delta, $seriftype, 2, 0, all);

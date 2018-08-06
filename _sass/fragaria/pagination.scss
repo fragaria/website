@@ -1,13 +1,22 @@
 .pagination {
-    @include sassline(delta, $headingtype, 2, 0, all);
+    @include sassline(gamma, $headingtype, 2, 0, all);
 
     display: flex;
     flex-direction: column;
     align-items: center;
     list-style-type: none;
-    font-family: getFontFamily($headingtype);
-    font-weight: bold;
-    text-decoration: underline;
+
+
+    .pagination__anchor {
+        font-family: getFontFamily($headingtype);
+        font-weight: bold;
+
+        &:hover {
+            color: map-get($palette, red);
+            text-decoration: underline;
+        }
+
+    }
 
     @include deviceBreakpoint(tablet) {
         flex-direction: row;

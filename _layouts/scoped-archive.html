@@ -4,7 +4,7 @@ layout: archive
 
 {%- capture title -%}
     {%- if page.type == 'tag' -%}
-        Posts tagged with <q>{{ page.title }}</q>
+        Posts tagged with <i><q>{{ page.title }}</q></i>
     {%- elsif page.type == 'year' -%}
         Posts in {{ page.date | date: '%Y' }}
     {%- elsif page.type == 'month' -%}
@@ -13,6 +13,7 @@ layout: archive
 {%- endcapture -%}
 
 <header class="typeset">
-    <h1 itemprop="headline" class="gamma">{{ title }}</h1>
+    <section class="hero">
+        <h1 itemprop="headline" class="hero-headline">{{ title }}</h1>
+    </section>
 </header>
-

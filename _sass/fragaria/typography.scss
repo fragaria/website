@@ -430,20 +430,38 @@ a {
     }
 }
 
-.hero .hero-headline {
-    max-width: 40em;
-    margin-left: auto;
-    margin-right: auto;
+.hero {
+    display: flex;
+    justify-content: space-between;
     text-align: center;
 
-    @include sassline(beta, $headingtype, 3, 0, all);
+    .hero-headline,
+    .hero-paginator {
+        @include sassline(beta, $headingtype, 3, 0, all);
 
-    @include deviceBreakpoint(tablet-small) {
-        @include sassline(beta, $headingtype, 5, 0, all);
+        @include deviceBreakpoint(tablet-small) {
+            @include sassline(beta, $headingtype, 5, 0, all);
+        }
     }
 
-    i {
-        font-style: normal;
-        color: map-get($palette, red);
+    .hero-headline {
+        max-width: 40em;
+        margin: 0 auto;
+
+        i {
+            font-style: normal;
+            color: map-get($palette, red);
+        }
+
+    }
+
+    .hero-paginator {
+        font-weight: bold;
+        font-size: 500%;
+
+        &:hover {
+            color: map-get($palette, red);
+            text-decoration: underline;
+        }
     }
 }

@@ -4,18 +4,35 @@
     align-items: center;
     justify-content: space-around;
     height: 100vh;
-    background:
-        linear-gradient(rgba(255, 255, 255, .95), rgba(255, 255, 255, .95)),
-        url('#{$base-url}assets/img/strawberry.svg') center;
+    background: map-get($palette, red);
+    color: map-get($palette, white);
     padding: 1rem;
+
+    .button {
+        &:hover {
+            background: map-get($palette, white);
+            color: map-get($palette, black);
+        }
+    }
 }
 
 .v-offline .v-offline__inner {
     h1 {
-        @include sassline(beta, $headingtype, $lineheight: 3, $below: 2, $breakpoint: all);
+        @include sassline(alpha, $headingtype, $lineheight: 3, $below: 2, $breakpoint: all);
 
-        @include deviceBreakpoint(mobile) {
-            @include sassline(beta, $headingtype, $lineheight: 4, $below: 2, $breakpoint: 1);
+        @include deviceBreakpoint(tablet-small) {
+            @include sassline(beta, $headingtype, $lineheight: 5, $below: 2, $breakpoint: all);
         }
+    }
+
+
+    h3 {
+        @include sassline(delta, $headingtype, $lineheight: 3, $below: 4, $breakpoint: all);
+    }
+
+    img {
+        height: 6rem;
+
+        @include sassline(delta, $headingtype, 0, 2)
     }
 }

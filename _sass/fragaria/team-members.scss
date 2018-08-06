@@ -84,3 +84,29 @@
     display: none
 }
 
+
+// special section that has emphasized background
+.career-teaser {
+    margin-right: auto;
+    margin-left: auto;
+
+    padding: 3rem;
+
+    background-color: map-get($palette, red);
+    color: map-get($palette, white);
+
+    &.career-teaser--short {
+        max-width: 60rem;
+    }
+}
+
+// align 'contact us' button
+.career-teaser__contactbutton {
+    margin-top: 2rem;
+
+    .button:hover {
+        background-color: map-get($palette, white);
+        color: map-get($palette, red);
+    }
+}
+

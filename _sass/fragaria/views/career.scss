@@ -36,29 +36,6 @@ $full-view-break: 1000px;
     }
 }
 
-// special section that has emphasized background
-.v-career-section--emphasized {
-    max-width: 60rem;
-    margin-right: auto;
-    margin-left: auto;
-
-    padding: 3rem;
-
-    background-color: map-get($palette, red);
-    color: map-get($palette, white);
-}
-
-// align 'contact us' button
-.v-career-section__contactbutton {
-    margin-top: 2rem;
-
-    .button:hover {
-        background-color: map-get($palette, white);
-        color: map-get($palette, red);
-    }
-}
-
-
 // grid for facts about the company
 .v-career-facts-grid {
     display: grid;

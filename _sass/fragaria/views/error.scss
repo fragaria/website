@@ -1,4 +1,4 @@
-.v-offline {
+.v-error {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,7 +16,7 @@
     }
 }
 
-.v-offline .v-offline__inner {
+.v-error .v-error__inner {
     h1 {
         @include sassline(alpha, $headingtype, $lineheight: 3, $below: 2, $breakpoint: all);
 

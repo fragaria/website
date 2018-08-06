@@ -58,8 +58,6 @@
     src: github
   profiles:
     github: tibor-kulcar
-    twitter: tiborkulcar
-    linkedin: tiborkulcar
 - name: Hynek Urban
   alt: Skeptický Sudeťák
   nationality: Czech
@@ -76,8 +74,6 @@
     src: github
   profiles:
     github: ondrejchmelar
-    twitter: AndyTheEntity
-    linkedin: ondrejchmelar
 - name: Pavel Vojáček
   alt: Ten, co spraví i zubařský rentgen
   nationality: Czech
@@ -87,7 +83,6 @@
   profiles:
     github: pavel-mxsf
     twitter: pavel_mxsf
-    linkedin: pavel-vojacek-14420713
 - name: Jirka Chadima
   alt: Konzultant
   nationality: Czech

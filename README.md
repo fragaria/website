@@ -16,9 +16,11 @@
         - [Installing the app](#installing-the-app)
     - [Launching the app](#launching-the-app)
     - [Using Docker](#using-docker)
-    - [Creating posts](#creating-posts)
+- [Creating posts](#creating-posts)
     - [Providing images for the posts](#providing-images-for-the-posts)
     - [Including images within the post body](#including-images-within-the-post-body)
+    - [Including Youtube videos in the post body](#including-youtube-videos-in-the-post-body)
+    - [Including embeddables like iframes](#including-embeddables-like-iframes)
 
 # Development
 
@@ -142,7 +144,7 @@ docker-compose up
 First boot might take some time, but you should be presented with a running
 app after a while.
 
-## Creating posts
+# Creating posts
 
 The recommended way to add a new post is a pull request. Simply fork the
 repository, create your new post and make a PR. You can verify your post
@@ -200,3 +202,13 @@ you can embed your image by typing:
 
 You can omit the the `caption` argument.
 
+## Including Youtube videos in the post body
+
+Just type:
+
+    {% include youtube.html id='[youtube video id]' %}
+
+## Including embeddables like iframes
+
+You can embed iframes normally like you would do in a HTML document. Jekyll
+understands HTML syntax within markdown documents too.

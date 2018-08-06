@@ -11,6 +11,7 @@
     - [Including images within the post body](#including-images-within-the-post-body)
     - [Including Youtube videos in the post body](#including-youtube-videos-in-the-post-body)
     - [Including embeddables like iframes](#including-embeddables-like-iframes)
+    - [Highlighting code blocks](#highlighting-code-blocks)
 - [Development](#development)
     - [Installation](#installation)
         - [Install build dependencies](#install-build-dependencies)
@@ -90,6 +91,16 @@ Just type:
 
 You can embed iframes normally like you would do in a HTML document. Jekyll
 understands HTML syntax within markdown documents too.
+
+## Highlighting code blocks
+
+Use `{% highlight %}` tag for that:
+
+    {% highlight html %}
+    <my-code></my-code>
+    {% endhighlight %}
+
+You can also enable line numbers with: `{% highlight html linenos %}`.
 
 # Development
 

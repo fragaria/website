@@ -63,7 +63,8 @@ $hr-color: $primary-color;
 
 $caption-color: map-get($palette, black);
 
-$code-background-color: map-get($palette, gray-light);
+$code-inline-background-color: map-get($palette, gray-light);
+$code-block-background-color: map-get($palette, gray-light);
 
 $selection-color: map-get($palette, red);
 

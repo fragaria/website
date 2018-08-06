@@ -73,6 +73,11 @@ cloudinary:
     cloud_name: fragaria
     cloud_path_prefix: fragaria.cz/
 
+jekyll_tidy:
+    exclude: ["index.html"]
+    compress_html: true
+    ignore_env: development
+
 # ---------------------- custom configuration ----------------------------------
 
 service_worker:

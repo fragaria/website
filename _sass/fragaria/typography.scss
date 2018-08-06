@@ -226,7 +226,7 @@ a {
     }
 
     // Tables.
-    table {
+    table:not(.rouge-table) {
         @include sassline(eta, $bodytype, 2, 2, all);
         font-feature-settings: "liga", "lnum", "tnum", "kern";
         font-style: normal;
@@ -352,47 +352,36 @@ a {
     }
 
     // Code blocks
-    pre.highlight {
-        background-color: $code-background-color;
-        font-family: getFontFamily($monospacetype);
-        display: block;
-        margin-bottom: 2rem;
-        padding: 1rem;
-        white-space: pre;
-        white-space: pre-wrap;
-        word-break: break-all;
-        word-wrap: break-word;
-        line-height: 1rem;
-        code {
-            @include fontsize(iota, all);
-        }
-    }
 
-    code {
+    // Inline code
+    code.highlighter-rouge {
         font-family: getFontFamily($monospacetype);
-        background-color: $code-background-color;
+        background-color: $code-inline-background-color;
         font-size: 1rem;
         word-break: break-word;
+        padding: 0 0.2em;
     }
 
     // Code block
     figure.highlight {
         margin-bottom: 1rem;
-        background-color: $code-background-color;
+        background-color: $code-block-background-color;
         overflow-x: scroll;
         line-height: 1rem;
         font-family: getFontFamily($monospacetype);
+
         code {
             @include fontsize(iota, all);
             @include codeHighlight();
             display: inline-block;
             padding: 1rem;
         }
-    }
 
-    // Inline code
-    code.highlighter-rouge {
-        padding: 0 0.2em;
+        // Line numbers
+        .lineno {
+            color: map-get($palette, gray-medium);
+            margin-right: 1rem;
+        }
     }
 
     // Letter space those capitals people, Jan Tschichold would be proud.

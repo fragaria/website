@@ -38,6 +38,7 @@ exclude:
     - Gemfile
     - Gemfile.lock
     - __design
+    - __tools
     - assets/favicons/README.md
     - .sass-cache
 

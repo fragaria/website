@@ -16,6 +16,9 @@
         - [Installing the app](#installing-the-app)
     - [Launching the app](#launching-the-app)
     - [Using Docker](#using-docker)
+    - [Creating posts](#creating-posts)
+    - [Providing images for the posts](#providing-images-for-the-posts)
+    - [Including images within the post body](#including-images-within-the-post-body)
 
 # Development
 
@@ -138,3 +141,62 @@ docker-compose up
 
 First boot might take some time, but you should be presented with a running
 app after a while.
+
+## Creating posts
+
+The recommended way to add a new post is a pull request. Simply fork the
+repository, create your new post and make a PR. You can verify your post
+looks OK on your local installation.
+
+Posts are kept in `_posts` folder. They are simple Markdown documents with
+a header that contains [jekyll front matter](https://jekyllrb.com/docs/frontmatter/)
+written in YAML. Take a look at other files in `_posts` for the reference
+what can be included.
+
+Post files should be written in Markdown otherwise and the files **have to be named**
+in following format:
+
+    [year]-[month]-[day]-[slugified post title].md
+
+E.g.: `2014-10-20-ako-vyrobit-staticky-web-efektivne.md`
+
+At minimum, following properties need to be declared in the front matter:
+
+- `title`: title of your post
+- `date`: publication date of the post in ISO format (e.g. 2014-10-20T13:37:00.002+02:00)
+- `author`: your name
+- `lang`: language of the post (cs, sk, en)... we generally recommend writing all posts in English
+- `tags`: keywords of the post as a YAML array
+
+## Providing images for the posts
+
+Images should be provided in high resolution so that we can serve it in good
+quality for retina displays too. Always make sure your image is at least in
+Full-HD resolution. More is even better.
+
+All post images are hosted on Cloudinary. There is a image upload script in
+the `__tools` directory that you can use to upload your image.
+
+Simply navigate to the directory, run `npm install` and then run the command:
+
+    ./images upload [path to your image]
+
+The result will be something like:
+
+    Upload successful.
+    Public ID:  posts/osi_rllzfu
+
+Note the `Public ID` string. You can use this string as `cloudinary_src`
+attribute in the post **front matter**. This will serve as the post's main
+image.
+
+## Including images within the post body
+
+To include image within the post body, start by uploading the image using
+the `__tools/images` script described above. Once you have your `Public ID`,
+you can embed your image by typing:
+
+    {% include figure.html cloudinary_src='[Public ID]' caption='[optional caption]' %}
+
+You can omit the the `caption` argument.
+

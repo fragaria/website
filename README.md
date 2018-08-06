@@ -19,6 +19,8 @@
     - [Creating posts](#creating-posts)
     - [Providing images for the posts](#providing-images-for-the-posts)
     - [Including images within the post body](#including-images-within-the-post-body)
+    - [Including Youtube videos in the post body](#including-youtube-videos-in-the-post-body)
+    - [Including embeddables like iframes](#including-embeddables-like-iframes)
 
 # Development
 
@@ -200,3 +202,13 @@ you can embed your image by typing:
 
 You can omit the the `caption` argument.
 
+## Including Youtube videos in the post body
+
+Just type:
+
+    {% include youtube.html id='[youtube video id]' %}
+
+## Including embeddables like iframes
+
+You can embed iframes normally like you would do in a HTML document. Jekyll
+understands HTML syntax within markdown documents too.

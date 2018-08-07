@@ -121,8 +121,8 @@ $sitenav-slide-transition: cubic-bezier(0.17, 0.04, 0.03, 0.94);
     transform: translate3d(0, map-get($sitenav-push-negative, mobile), 0);
     opacity: 0;
     pointer-events: none;
-    transition: transform .3s $sitenav-slide-transition;
-    transition-property: opacity, transform;
+    transition: transform .3s $sitenav-slide-transition, opacity .15s $sitenav-slide-transition;
+    // transition-property: opacity, transform;
     will-change: opacity, transform,;
 
     @include deviceBreakpoint(tablet) {

@@ -5,12 +5,31 @@ $portfolio-project-media-width: (
 
 .portfolio-strip {
     position: relative;
+
+    .portfolio-strip__show-more {
+        display: none;
+    }
+
+    .portfolio-project--hidden {
+        display: block;
+    }
+
+    &--collapsed {
+        .portfolio-strip__show-more {
+            display: block;
+        }
+        .portfolio-project--hidden {
+            display: none;
+        }
+    }
 }
 
 .portfolio-strip__items {
     display: grid;
     grid-template-columns: auto;
     grid-template-columns: 1fr;
+
+
 
     @include deviceBreakpoint(tablet-small) {
         grid-template-columns: 1fr 1fr;

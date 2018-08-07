@@ -55,3 +55,15 @@
     - angular
     - django
     - elasticsearch
+- title: Další projekt
+  job: lorem ipsum whatever
+  desc: >
+    Martin Armstrong on his blog about the plans of abolishing cash: “I doubt that the USA will be able to move to a cashless society as easily as Europe. The dollar is used around the world and cancelling that outstanding money supply would bring tremendous international unrest. Additionally, the USA is not in crisis financially, as is the case in Europe.
+  img: portfolio/adventura.jpg
+  website:
+    href: https://www.adventura.cz
+    caption: adventura.cz
+  tags:
+    - angular
+    - django
+    - elasticsearch

@@ -16,7 +16,7 @@
 
         <ul class="sitenav__linkset">
             {% for menuitem in site.data.sitenav %}
-                <li class="sitenav__linkset-item {% if include.current_url contains menuitem.url %}sitenav__linkset-item--active{% endif %} js-sitenav-link"><a href="{{ menuitem.url | relative_url }}" class="sitenav__link typeset__anchor--nounderline" itemprop="url"><span itemprop="name">{{ menuitem.name }}</span></a></li>
+                <li class="sitenav__linkset-item js-sitenav-link"><a href="{{ menuitem.url | relative_url }}" class="sitenav__link typeset__anchor--nounderline" itemprop="url"><span itemprop="name">{{ menuitem.name }}</span></a></li>
             {% endfor %}
         </ul>
     </nav>

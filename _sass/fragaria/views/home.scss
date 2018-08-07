@@ -51,13 +51,13 @@
         "billing"
         "contactform";
 
-    @include deviceBreakpoint(tablet) {
+    @include deviceBreakpoint(tablet-small) {
         grid-template-columns: auto;
         grid-template-rows: auto;
         grid-gap: 1rem 1rem;
         grid-template-areas:
-            "residence  billing none"
-            "contactform contactform contactform"
+            "residence contactform"
+            "billing contactform"
         ;
     }
 

@@ -170,9 +170,11 @@
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
+    background-repeat: no-repeat;
 
     @include deviceBreakpoint(tablet) {
+        background-size: initial;
         transition-property: filter, transform;
         transition-duration: .8s;
         transition-timing-function: cubic-bezier(.2,1,.2,1);

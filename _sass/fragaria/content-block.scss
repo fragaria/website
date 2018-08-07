@@ -11,11 +11,11 @@
 .content-block {
     @include cbPadding(1rem);
 
-    @include deviceBreakpoint(tablet) {
+    @include deviceBreakpoint(tablet-small) {
         @include cbPadding(2rem);
     }
 
-    @include deviceBreakpoint(desktop) {
+    @include deviceBreakpoint(tablet) {
         @include cbPadding(4rem);
     }
 }
@@ -23,11 +23,11 @@
 .content-block__cover {
     @include cbMargin(-1rem);
 
-    @include deviceBreakpoint(tablet) {
+    @include deviceBreakpoint(tablet-small) {
         @include cbMargin(-2rem);
     }
 
-    @include deviceBreakpoint(desktop) {
+    @include deviceBreakpoint(tablet) {
         @include cbMargin(-4rem);
     }
 }
@@ -35,7 +35,7 @@
 .content-block__cover--mobile {
     @include cbMargin(-1rem);
 
-    @include deviceBreakpoint(tablet) {
+    @include deviceBreakpoint(tablet-small) {
         @include cbMargin(0);
     }
 }

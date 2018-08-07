@@ -32,6 +32,9 @@
 
     /* 5 columns on a row for desktop and up */
     @include deviceBreakpoint(tablet) {
+        max-width: 70rem;
+        margin-right: auto;
+        margin-left: auto;
         grid-template-columns: repeat(5, 1fr);
         grid-gap: 4rem;
     }

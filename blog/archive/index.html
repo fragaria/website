@@ -7,7 +7,7 @@ keywords: blog, posts
 <header class="typeset">
     <section class="hero">
         {% if paginator.previous_page %}
-        <a class="hero__paginator" href="{{ paginator.previous_page_path | relative_url }}"><</a>
+        <a class="hero__paginator" itemprop="relatedLink/pagination" href="{{ paginator.previous_page_path | relative_url }}"><</a>
         {% else %}
         <div class="hero__paginator hero__paginator--blank"></div>
         {% endif %}
@@ -17,7 +17,7 @@ keywords: blog, posts
         </h1>
 
         {% if paginator.next_page %}
-        <a class="hero__paginator" href="{{ paginator.next_page_path | relative_url }}">></a>
+        <a class="hero__paginator" itemprop="relatedLink/pagination" href="{{ paginator.next_page_path | relative_url }}">></a>
         {% else %}
         <div class="hero__paginator hero__paginator--blank"></div>
         {% endif %}

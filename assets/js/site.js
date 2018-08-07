@@ -89,10 +89,23 @@ function fixBaseline(element) {
 
 }
 
+/**
+ * Expand portfolio strip on click and hide 'Show more' button at the same time.
+ * @param {HTMLElement} element
+ */
+function expandPortfolio(element) {
+    const toggle = element.getElementsByClassName('js-portfolio-strip__expand-toggle')[0];
+
+    toggle.addEventListener('click', function () {
+        element.classList.remove('portfolio-strip--collapsed');
+    });
+}
+
 const handlers = [
     {className: 'js-sitenav', handler: siteMenu},
     {className: 'js-site-reload-button', handler: siteReload},
     {className: 'js-fix-baseline', handler: fixBaseline},
+    {className: 'js-portfolio-strip', handler: expandPortfolio},
 ];
 
 handlers.forEach(({className, handler}) => {

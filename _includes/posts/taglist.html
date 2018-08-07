@@ -1,4 +1,4 @@
-<div class="taglist" itemscope itemtype="http://schema.org/WebPage">
+<div class="taglist {% if include.class %}{{ include.class }}{% endif %}" itemscope itemtype="http://schema.org/WebPage">
     {% for tag in include.tags %}
         {% capture url %}/blog/archive/tag/{{ tag | slugify: 'pretty' }}/{% endcapture %}
         <a class="taglist__tag anchor anchor--emphasized" href="{{ url | relative_url }}" itemprop="relatedLink">{{ tag }}{% if forloop.last == false %}, {% endif %}</a>

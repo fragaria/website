@@ -91,6 +91,7 @@
 
 .v-home__cta-row {
     text-align: center;
+    margin-top: 2rem;
 
     @include deviceBreakpoint(tablet) {
         margin-top: 3rem;

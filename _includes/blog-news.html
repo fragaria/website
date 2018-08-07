@@ -1,4 +1,4 @@
-<div class="blog-listing blog-listing--nofirstdivider">
+<div class="blog-listing blog-listing--nofirstdivider blog-listing--nolastpad">
     {% for post in site.posts limit:3 %}
         <div class="blog-listing__post">
             {% include posts/listing/standard.html post=post class='blog-listing__post-inner' %}

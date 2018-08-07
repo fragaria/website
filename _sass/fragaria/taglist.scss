@@ -7,6 +7,10 @@
     @include deviceBreakpoint(tablet) {
         text-align: left;
     }
+
+    &--leftbound {
+        text-align: left;
+    }
 }
 
 .taglist__tag {

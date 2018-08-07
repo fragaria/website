@@ -1,0 +1,63 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 4rem;
+    padding: 6rem 0;
+
+    @include deviceBreakpoint(tablet-small) {
+        padding: 6rem 0 10rem;
+    }
+
+    @include deviceBreakpoint(tablet) {
+        padding: 8rem 0 12rem;
+    }
+
+    // need to be scoped to take precendence over .typest
+    .hero__headline {
+        @include sassline(beta, $headingtype, 3, 0, all);
+
+        @include deviceBreakpoint(tablet-small) {
+            @include sassline(beta, $headingtype, 5, 0, all);
+        }
+    }
+
+    .hero__headline {
+        max-width: 40em;
+        margin: 0 auto;
+
+        i {
+            font-style: normal;
+            color: map-get($palette, red);
+        }
+
+    }
+
+    .hero__paginator {
+        font-weight: bold;
+        min-width: 4rem;
+        font-family: getFontFamily($headingtype);
+        font-size: 300%;
+
+        @include deviceBreakpoint(tablet-small) {
+            font-size: 500%;
+        }
+
+        &:hover {
+            color: map-get($palette, red);
+        }
+
+        &:first-of-type {
+            text-align: left;
+        }
+
+        &:nth-of-type(2) {
+            text-align: right;
+        }
+
+        &--blank {
+            visibility: hidden;
+        }
+    }
+}

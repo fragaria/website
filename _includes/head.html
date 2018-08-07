@@ -30,17 +30,6 @@
     <meta name="description" content="{{ description }}">
     <meta name="keywords" content="{{ keywords }}" />
 
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicons/apple-touch-icon.png' | relative_url }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicons/favicon-32x32.png' | relative_url }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicons/favicon-16x16.png' | relative_url }}">
-    <link rel="manifest" href="{{ '/assets/favicons/site.webmanifest' | relative_url }}">
-    <link rel="mask-icon" href="{{ '/assets/favicons/safari-pinned-tab.svg' | relative_url }}" color="#ea272e">
-    <link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}">
-    <meta name="msapplication-TileColor" content="#ea272e">
-    <meta name="msapplication-config" content="{{ '/assets/favicons/browserconfig.xml' | relative_url }}">
-    <meta name="theme-color" content="#ea272e">
-
     <meta property="og:url"           content="{{ page.url | absolute_url }}" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="{{ title }}" />
@@ -54,35 +43,6 @@
         <meta property="og:image"         content="{{ 'assets/img/strawberry_1200-600.png' | absolute_url }}" />
     {% endif %}
 
-    <!-- preload soon-to-be-loaded assets soon in the page lifecycle -->
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-
-    <!-- preload Google Webfonts stylesheet -->
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Playfair+Display+SC&amp;subset=latin-ext" as="style">
-    <!-- preload OpenSansCondensed-Light latin, 300 -->
-    <link rel="preload" href="https://fonts.gstatic.com/s/opensanscondensed/v12/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuXMR7eS2Ao.woff2" as="font" type="font/woff2" crossorigin>
-    <!-- preload OpenSansCondensed-Light latin-ext, 300 -->
-    <link rel="preload" href="https://fonts.gstatic.com/s/opensanscondensed/v12/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuvMR7eS2AopSg.woff2" as="font" type="font/woff2" crossorigin>
-    <!-- preload OpenSansCondensed-Light latin, 700 -->
-    <link rel="preload" href="https://fonts.gstatic.com/s/opensanscondensed/v12/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff0GmDuXMR7eS2Ao.woff2" as="font" type="font/woff2" crossorigin>
-    <!-- preload OpenSansCondensed-Light latin-ext, 700 -->
-    <link rel="preload" href="https://fonts.gstatic.com/s/opensanscondensed/v12/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff0GmDuvMR7eS2AopSg.woff2" as="font" type="font/woff2" crossorigin>
-    <!-- preload PlayFairDisplaySC regular latin, 400 -->
-    <link rel="preload" href="https://fonts.gstatic.com/s/playfairdisplaysc/v7/ke85OhoaMkR6-hSn7kbHVoFf7ZfgMPr_lbcMEOE1I4otKg.woff2" as="font" type="font/woff2" crossorigin="">
-    <!-- preload PlayFairDisplaySC regular latin-ext, 400 -->
-    <link rel="preload" href="https://fonts.gstatic.com/s/playfairdisplaysc/v7/ke85OhoaMkR6-hSn7kbHVoFf7ZfgMPr_lbkMEOE1I4o.woff2" as="font" type="font/woff2" crossorigin="">
-    <!-- preload fragaria icon set -->
-    <link rel="preload" href="{{ '/assets/fonts/fragariacz-icons.ttf?zc978f' | relative_url }}" as="font" type="font/ttf" crossorigin="anonymous">
-    <!-- preload javascript file -->
-    <link rel="preload" href="{{ '/assets/js/' | relative_url }}{% if jekyll.environment == 'production' %}{{ 'site.js' | bust_js_cache }}{% else %}site.js{% endif %}" as="script">
-
-    <link rel="stylesheet" href="{{ "/assets/" | relative_url }}{% if jekyll.environment == 'production' %}{{ 'styles.css' | bust_css_cache }}{% else %}styles.css{% endif %}">
-    <link rel="alternate" type="application/atom+xml" href="{{ '/feed.xml' | relative_url }}" title="Atom feed for this page"/>
-    <link rel="self" type="application/atom+xml" href="{{ '/feed.xml' | relative_url }}"/>
-
-    {% if site.service_worker.enabled %}
-    <!-- register service worker -->
-    <script type="text/javascript" src="{{ '/assets/js/register-sw.js' | relative_url }}"></script>
-    {% endif %}
+    {% include_cached head-static.html %}
 </head>
 

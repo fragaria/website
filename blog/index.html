@@ -15,26 +15,26 @@ keywords: blog, posts
 
     {% assign first_post = other_posts | first %}
 
-    {% include posts/listing/standard.html post=first_post excerpt_words=75 class='blog-posting--horizontal v-blog-home__main v-blog-home__section' media_sizing='medium' %}
+    {% include_cached posts/listing/standard.html post=first_post excerpt_words=75 class='blog-posting--horizontal v-blog-home__main v-blog-home__section' media_sizing='medium' %}
 
     <div class="v-blog-home__posts v-blog-home__posts--latest   v-blog-home__section v-blog-home__section--tablet-padtop v-blog-home__section--nodivider   blog-listing blog-listing--nofirstdivider">
         {% for post in other_posts offset: 1 limit: 3 %}
             <div class="blog-listing__post">
-                {% include posts/listing/standard.html post=post class='blog-listing__post-inner blog-listing__post--tablet-margin' %}
+                {% include_cached posts/listing/standard.html post=post class='blog-listing__post-inner blog-listing__post--tablet-margin' %}
             </div>
         {% endfor %}
     </div>
 
     {% if featured_post %}
         <div class="v-blog-home__section v-blog-home__section--tablet-padtop v-blog-home__section--nodivider  content-block__cover--mobile">
-            {% include posts/listing/standard.html post=featured_post class='blog-posting--featured  v-blog-home__featured' show_cta=true media_sizing='large' media_darken=true %}
+            {% include_cached posts/listing/standard.html post=featured_post class='blog-posting--featured  v-blog-home__featured' show_cta=true media_sizing='large' media_darken=true %}
         </div>
     {% endif %}
 
     <div class="v-blog-home__posts v-blog-home__posts--other   v-blog-home__section   blog-listing blog-listing--rowdivider blog-listing--nolastpad">
         {% for post in other_posts offset: 4 limit: 6 %}
             <div class="blog-listing__post">
-                {% include posts/listing/standard.html post=post class="blog-listing__post-inner  blog-listing__post--tablet-magin" %}
+                {% include_cached posts/listing/standard.html post=post class="blog-listing__post-inner  blog-listing__post--tablet-magin" %}
             </div>
         {% endfor %}
     </div>

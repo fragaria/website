@@ -25,6 +25,7 @@ group :jekyll_plugins do
   gem 'jekyll-environment-variables'
   gem 'octopress-autoprefixer'
   gem 'jekyll-tidy'
+  gem 'jekyll-include-cache'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

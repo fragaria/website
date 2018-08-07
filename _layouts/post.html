@@ -40,10 +40,10 @@ layout: blank
     <div class="content-block">
         <div class="article__misc">
             <div class="article__miscitem">
-                {% include posts/taglist.html tags=page.tags %}
+                {% include_cached posts/taglist.html tags=page.tags %}
             </div>
             <div class="article__miscitem">
-                {% include posts/sharebox.html %}
+                {% include_cached posts/sharebox.html title=page.title url=page.url %}
             </div>
         </div>
     </div>

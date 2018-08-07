@@ -41,6 +41,8 @@ exclude:
     - __tools
     - assets/favicons/README.md
     - .sass-cache
+    - .travis
+    - README.md
 
 permalink: /blog/:year/:month/:day/:title/
 
@@ -59,15 +61,18 @@ paginate_path: "/blog/archive/:num/"
 paginate: 12
 
 jekyll-archives:
+    # Archives disabled for devel in order to speed things up
+    # Run jekyll with archive support to try it.
+    # bundle exec jekyll serve --config '_config.yml,_config.witharchives.yml'
     enabled:
-        - year
-        - month
-        - tags
+        #- year
+        #- month
+        #- tags
     layout: scoped-archive
     permalinks:
         year: /blog/archive/year/:year/
         month: /blog/archive/month/:year-:month/
-        tag: /blog/archive/tag/:name/
+        #tag: /blog/archive/tag/:name/
 
 cloudinary:
     cloud_name: fragaria

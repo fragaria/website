@@ -1,7 +1,7 @@
 language: ruby
 rvm:
     - 2.5.1
-script: "JEKYLL_ENV=production bundle exec jekyll build --config '_config.yml,_config.prod.yml,_config.sandbox.yml'"
+script: "JEKYLL_ENV=production bundle exec jekyll build --config '_config.yml,_config.witharchives.yml,_config.prod.yml,_config.sandbox.yml'"
 
 deploy:
     provider: pages

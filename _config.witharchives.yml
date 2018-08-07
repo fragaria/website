@@ -1,0 +1,11 @@
+# Enable tag pages too (this are slow)
+jekyll-archives:
+    enabled:
+        - year
+        - month
+        - tags
+    layout: scoped-archive
+    permalinks:
+        year: /blog/archive/year/:year/
+        month: /blog/archive/month/:year-:month/
+        tag: /blog/archive/tag/:name/

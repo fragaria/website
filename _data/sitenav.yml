@@ -1,5 +1,5 @@
-- name: Works
-  url: /#works
+- name: Projects
+  url: /#projects
 - name: Team
   url: /#team
 - name: Blog

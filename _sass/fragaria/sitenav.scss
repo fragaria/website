@@ -39,6 +39,11 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
     // Menu is above the linkset and the linkset slides from the bottom of it
     z-index: 2;
     background: map-get($palette, white);
+
+    @include deviceBreakpoint(tablet) {
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+    }
 }
 
 // logo image
@@ -68,6 +73,7 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
 }
 
 .sitenav__company {
+    padding: 1rem 1.5rem;
     transition: #{$anchor-hover-transition};
 
     &:hover {
@@ -80,6 +86,7 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
     display: flex;
     width: 100%;
     height: map-get($sitenav-push, mobile);
+    min-height: 8rem;
     padding-top: map-get($sitenav-menu-height, mobile)/2;
     list-style-type: none;
     flex-direction: column;

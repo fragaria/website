@@ -32,7 +32,8 @@
 
 .v-home__blog,
 .v-home__team,
-.v-home__company {
+.v-home__company,
+.v-home__career {
     margin-top: 4rem;
 
     @include deviceBreakpoint(tablet) {
@@ -70,6 +71,14 @@
         ;
     }
 
+}
+
+.v-home__career-content {
+    p {
+        max-width: $article-content-width;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 
 .v-home__company-residence   { grid-area: residence; }

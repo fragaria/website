@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?zc978f');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?zc978f#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?zc978f') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?zc978f') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?zc978f##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?msgmt6');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?msgmt6#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?msgmt6') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?msgmt6') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?msgmt6##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -49,6 +49,11 @@
 .icon--at {
   &:before {
     content: $icon--at; 
+  }
+}
+.icon--paw {
+  &:before {
+    content: $icon--paw; 
   }
 }
 .icon--power {

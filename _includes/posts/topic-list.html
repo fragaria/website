@@ -1,12 +1,20 @@
+{% capture tags -%}
+  {%- for tag in site.tags -%}
+    {{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}|
+  {%- endfor -%}
+{% endcapture %}
+
+{% assign sortedtags = tags | split:'|' | sort | reverse %}
+
 <ul class="topic-list">
-    {% capture tags %}
-        {% for tag in site.tags %}
-            {% if tag[1].size > 1 %}
-            <li data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}">
-                <a itemprop="relatedLink" class="anchor--emphasized" href="{{ site.baseurl }}blog/archive/tag/{{ tag[0] | slugify: 'pretty' }}/">{{ tag[0] }}</a> ({{ tag[1].size }})
-            </li>
-            {% endif %}
-        {% endfor %}
-    {% endcapture %}
-    {{ tags | split:'</li>' | sort | join:'</li>' }}
+    {% for tag in sortedtags %}
+        {% assign tagitems = tag | split: '#' %}
+        {% assign tagname = tagitems[1] %}
+        {% assign tagsize = tagitems[2] | to_integer %}
+        {% if tagsize > 1 %}
+        <li>
+            <a itemprop="relatedLink" class="anchor--emphasized" href="{{ site.baseurl }}blog/archive/tag/{{ tagname | slugify: 'pretty' }}/">{{ tagname }}</a> ({{ tagsize }})
+        </li>
+        {% endif %}
+    {% endfor %}
 </ul>

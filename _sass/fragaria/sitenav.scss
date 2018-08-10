@@ -40,9 +40,9 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
     z-index: 2;
     background: map-get($palette, white);
 
-    @include deviceBreakpoint(tablet) {
-        margin-left: -1.5rem;
-        margin-right: -1.5rem;
+    @include deviceBreakpoint(tablet-small) {
+        margin-left: -1rem;
+        margin-right: -1rem;
     }
 }
 
@@ -73,7 +73,7 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
 }
 
 .sitenav__company {
-    padding: 1rem 1.5rem;
+    padding: 1rem;
     transition: #{$anchor-hover-transition};
 
     &:hover {

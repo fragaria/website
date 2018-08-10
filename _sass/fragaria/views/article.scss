@@ -68,10 +68,10 @@ $article-content-width: 40rem;
     }
 
     h2 {
-        @include sassline(delta, $seriftype, $lineheight: 2, $below: 0, $breakpoint: all);
+        @include sassline(delta, $seriftype, $lineheight: 2, $below: 0, $above: 2, $breakpoint: all);
 
         @include deviceBreakpoint(tablet) {
-            @include sassline(delta, $seriftype, $lineheight: 3, $below: 1, $breakpoint: all);
+            @include sassline(delta, $seriftype, $lineheight: 3, $below: 1, $above: 3, $breakpoint: all);
         }
     }
 
@@ -85,11 +85,6 @@ $article-content-width: 40rem;
 
     p {
         @include sassline(zeta, $seriftype, $lineheight: 2, $below: 1, $breakpoint: all);
-
-        // + h2,
-        // + h3 {
-        //     margin-top: 2rem;
-        // }
     }
 
     // basic image

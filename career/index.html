@@ -63,9 +63,9 @@ keywords: career, jobs, about
         <div class="v-career-section--content">
             <div class="v-career-tech-grid">
                 {% for tech in site.data.tech %}
-                    <div class="v-career-tech-grid__item">
+                    <a href="{{ tech.url }}" class="v-career-tech-grid__item">
                         <img class="v-career-tech-grid__image" src="{{ tech.img | relative_url }}" alt="{{ tech.title }}" title="Not familiar? It's ok, we'll tell you everything!">
-                    </div>
+                    </a>
                 {% endfor %}
             </div>
         </div>

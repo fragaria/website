@@ -1,32 +1,48 @@
 - title: HTML5
   img: /assets/img/html5.svg
+  url: https://www.w3schools.com/html/html5_intro.asp
 - title: Angular
   img: /assets/img/angular.svg
+  url: https://angular.io
 - title: Vue.js
   img: /assets/img/vuejs.svg
+  url: https://vuejs.org
 - title: React
   img: /assets/img/react.svg
+  url: https://reactjs.org
 - title: NodeJS
   img: /assets/img/nodejs.svg
+  url: https://nodejs.org
 - title: Python
   img: /assets/img/python.svg
+  url: https://www.python.org
 - title: JavaScript
   img: /assets/img/javascript.svg
+  url: https://developer.mozilla.org/bm/docs/Web/JavaScript
 - title: TypeScript
   img: /assets/img/typescript.svg
+  url: https://www.typescriptlang.org
 - title: Java
   img: /assets/img/java.svg
+  url: https://www.java.com
 - title: Ethereum
-  img: /assets/img/ethereum.svg
+  img: /assets/img/Ethereum.svg
+  url: https://www.ethereum.org
 - title: MongoDB
   img: /assets/img/mongodb.svg
+  url: https://www.mongodb.com
 - title: ElasticSearch
   img: /assets/img/elasticsearch.svg
+  url: https://www.elastic.co
 - title: Docker
   img: /assets/img/docker.png
+  url: https://www.docker.com
 - title: Kubernetes
   img: /assets/img/kubernetes.svg
+  url: https://kubernetes.io
 - title: AWS
   img: /assets/img/aws.svg
+  url: https://aws.amazon.com
 - title: Linux
   img: /assets/img/linux.svg
+  url: https://en.wikipedia.org/wiki/Linux

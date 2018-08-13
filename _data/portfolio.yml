@@ -25,7 +25,7 @@
     caption: windingtree.com
 - title: Logman
   desc: >
-    Logman is the <i>central logging facility</i> in Komerční banka. It’s not just a log storage though. It also makes browsing the logs a breeze as they can be looked up and visualized in <a class="anchor anchor--emphasized" href="https://www.elastic.co/products/kibana">Kibana</a> (along with all the necessary details like comprehensive permissions setup). Given the large volume, scaling using Kubernetes is a no-brainer.
+    Logman is the <i>central logging facility</i> in Komerční banka (Societe Generale Group). It’s not just a log storage though. It also makes browsing the logs a breeze as they can be looked up and visualized in <a class="anchor anchor--emphasized" href="https://www.elastic.co/products/kibana">Kibana</a> (along with all the necessary details like comprehensive permissions setup). Given the large volume, scaling using Kubernetes is a no-brainer.
   img: portfolio/elasticsearch.png
   tags:
     - elasticsearch
@@ -36,7 +36,7 @@
     caption: kb.cz
 - title: Moje zdravé finance
   desc: >
-    Being a part of the George internet banking, the Moje zdráve finance app has been used by more than 200,000&nbsp;clients of Česká spořitelna for their daily expense management. It also plays an important role as a financial counseling tool used by bankers at the Česká spořitelna branches all around Czech Republic.
+    Being a part of the George internet banking, the Moje zdráve finance app has been used by more than 200,000&nbsp;clients of Česká spořitelna (Erste Group) for their daily expense management. It also plays an important role as a financial counseling tool used by bankers at the Česká spořitelna branches all around Czech Republic.
   img: portfolio/csas.png
   tags:
     - angular
@@ -70,7 +70,7 @@
     caption: adventura.cz
 - title: Fast
   desc: >
-    Since we have long experience with the frontend development, we’ve assisted with creating the whole frontend development strategy for new web apps (both internal and external) made by Komerční banka.
+    Since we have long experience with the frontend development, we’ve assisted with creating the whole frontend development strategy for new web apps (both internal and external) made by Komerční banka (Societe Generale Group).
   img: portfolio/kb.png
   tags:
     - angular
@@ -81,7 +81,7 @@
     caption: kb.cz
 - title: Saifu&mdash;mobile wallet of Česká spořitelna
   desc: >
-    We’re participating in development of a <i>mobile payments electronic wallet</i> for Česká spořitelna. We are working on the server-side solution, mobile application and we were collaborating on the concept of plugins, which will enable rapid prototyping and testing of new functionality.
+    We’re participating in development of a <i>mobile payments electronic wallet</i> for Česká spořitelna (Erste Group). We are working on the server-side solution, mobile application and we were collaborating on the concept of plugins, which will enable rapid prototyping and testing of new functionality.
   img: portfolio/saifu.png
   tags:
     - java
@@ -101,7 +101,7 @@
     caption: WebAPI Developers on Twitter
 - title: Pathfinder
   desc: >
-    We’ve delivered a complete frontend solution for one of the Pathfinder transformation project apps for Komerční banka. Besides featuring new tools for the loan management, it’s also packed with bunch of innovations. This is the first flagship project that puts our frontend development strategy implemented in the Fast project in place.
+    We’ve delivered a complete frontend solution for one of the Pathfinder transformation project apps for Komerční banka (Societe Generale Group). Besides featuring new tools for the loan management, it’s also packed with bunch of innovations. This is the first flagship project that puts our frontend development strategy implemented in the Fast project in place.
   img: portfolio/kb.png
   tags:
     - angular

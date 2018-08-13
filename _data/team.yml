@@ -9,7 +9,7 @@
     twitter: martin_burian
     linkedin: martinburi8n
 - name: Martin Bílek
-  alt: Především otec
+  alt: Love ’n’ truthnik
   nationality: Czech
   gender: male
   avatar:
@@ -19,7 +19,7 @@
     twitter: ajtea
     linkedin: martin-b%C3%ADlek-47699542
 - name: Lukáš Marek
-  alt: Digitální plešoun
+  alt: Digital baldy
   nationality: Czech
   gender: male
   avatar:
@@ -30,7 +30,7 @@
     twitter: krtek_cz
     linkedin: krtek
 - name: Robin Gottfried
-  alt: Pábitel
+  alt: Charmer
   nationality: Czech
   gender: male
   avatar:
@@ -40,18 +40,17 @@
     twitter: czervenka
     linkedin: robingottfried
 - name: Filip Vařecha
-  alt: Věčný optimista
+  alt: True optimist
   nationality: Czech
   gender: male
   avatar:
     src: github
   profiles:
     github: xaralis
-    twitter: xaralis
     facebook: filip.varecha
     linkedin: filip-varecha
 - name: Tibor Kulčár
-  alt: Aristokrat
+  alt: Aristocrat
   nationality: Slovak
   gender: male
   avatar:
@@ -59,7 +58,7 @@
   profiles:
     github: tibor-kulcar
 - name: Hynek Urban
-  alt: Skeptický Sudeťák
+  alt: Skeptic
   nationality: Czech
   gender: male
   avatar:
@@ -67,7 +66,7 @@
   profiles:
     github: hynek-urban
 - name: Ondřej Chmelař
-  alt: Ferda Mravenec
+  alt: Allrounder
   nationality: Czech
   gender: male
   avatar:
@@ -75,7 +74,7 @@
   profiles:
     github: ondrejchmelar
 - name: Pavel Vojáček
-  alt: Ten, co spraví i zubařský rentgen
+  alt: Macgyver
   nationality: Czech
   gender: male
   avatar:
@@ -84,7 +83,7 @@
     github: pavel-mxsf
     twitter: pavel_mxsf
 - name: Jirka Chadima
-  alt: Konzultant
+  alt: The Consultant
   nationality: Czech
   gender: male
   avatar:
@@ -94,7 +93,7 @@
     twitter: JirkaChadima
     linkedin: jirichadima
 - name: Lukáš Turský
-  alt: Vrták
+  alt: Nitpick
   nationality: Slovak
   gender: male
   avatar:
@@ -104,7 +103,7 @@
     twitter: xtursky
     linkedin: lukas-tursky-79584247
 - name: Milan Slezák
-  alt: Milan do každé firmy
+  alt: Mr. Android
   nationality: Czech
   gender: male
   avatar:
@@ -113,7 +112,7 @@
   profiles:
     linkedin: slezakm
 - name: Michal Dub
-  alt: Nimrod
+  alt: Artefact
   nationality: Czech
   gender: male
   avatar:
@@ -130,15 +129,17 @@
   profiles:
     linkedin: daniela-boro%C5%A1ov%C3%A1-1521833b
 - name: Kamil Daněk
-  alt: Ex-vědec
+  alt: Ex-scientist
   nationality: Czech
   gender: male
   avatar:
     src: cloudinary
     cloudinary: people/kamil-danek.jpg
   profiles:
+    github: kdanek
+    linkedin: kamil-danek-12414652
 - name: Adam David
-  alt: Kodér remote
+  alt: Noncommuter
   nationality: Czech
   gender: male
   avatar:
@@ -147,7 +148,7 @@
   profiles:
     gravatar: adam.david@fragaria.cz
 - name: Ondřej Pudiš
-  alt: Mladá krev
+  alt: Youngblood
   nationality: Czech
   gender: male
   avatar:
@@ -155,7 +156,7 @@
     cloudinary: people/ondrej-pudis.jpg
   profiles:
 - name: Marta Vaňková
-  alt: Duše Fostera
+  alt: Psyche
   nationality: Czech
   gender: female
   avatar:

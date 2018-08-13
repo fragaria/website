@@ -70,10 +70,10 @@
         .blog-posting__headline {
             text-decoration: none;
 
-            @include sassline(alpha, $seriftype, 3, 1, all);
+            @include sassline(alpha, $headingtype, 3, 1, all);
 
             @include deviceBreakpoint(tablet) {
-                @include sassline(alpha, $seriftype, 4, 1, all);
+                @include sassline(alpha, $headingtype, 4, 1, all);
             }
         }
 
@@ -82,11 +82,11 @@
         }
 
         .blog-posting__excerpt {
-            max-width: deviceBreakpointWidth(tablet);
+            max-width: deviceBreakpointWidth(tablet-small);
             margin-left: auto;
             margin-right: auto;
             font-weight: bold;
-            @include sassline(epsilon, $bodytype, 2, 1, all);
+            @include sassline(zeta, $bodytype, 2, 1, all);
         }
 
         .blog-posting__cta-button:hover {
@@ -141,15 +141,10 @@
     }
 
     .blog-posting__headline {
-        font-family: getFontFamily($seriftype);
-        font-weight: 400;
+        font-family: getFontFamily($headingtype);
         text-decoration: none;
 
-        @include sassline(delta, $seriftype, 2, 0, all);
-
-        @include deviceBreakpoint(tablet) {
-            @include sassline(gamma, $seriftype, 3, 1, all);
-        }
+        @include sassline(gamma, $headingtype, 3, 1, all);
     }
 }
 

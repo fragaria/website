@@ -13,9 +13,8 @@
 .form-label {
     display: block;
     font-family: getFontFamily($headingtype);
-    font-weight: bold;
 
-    @include sassline(epsilon, $headingtype, 2, 1);
+    @include sassline(eta, $headingtype, 2, 1);
 }
 
 .form-control {

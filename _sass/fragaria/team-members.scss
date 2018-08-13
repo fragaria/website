@@ -51,14 +51,15 @@
 }
 
 .team-member__body {
+    margin-top: 1rem;
     text-align: center;
 
     .team-member__name {
-        @include sassline(epsilon, $seriftype, 2, 2, all);
+        @include sassline(epsilon, $headingtype, 1.5, 2, all);
     }
 
-    .team-member__alt.caption {
-        @include sassline(theta, $seriftype, 1.5, 1, all);
+    .caption {
+
     }
 }
 

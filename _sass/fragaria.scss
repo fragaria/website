@@ -1,6 +1,7 @@
 @charset "utf-8";
 
-// This has to go first so that icons are loaded OK.
+// This has to go first so that fonts are loaded OK.
+$web-font-path: '#{$base-url}assets/fonts';
 $icomoon-font-path: '#{$base-url}assets/fonts';
 
 // Import frameworks & theme styles

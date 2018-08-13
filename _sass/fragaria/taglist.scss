@@ -1,8 +1,5 @@
 .taglist {
     text-align: center;
-    margin-top: -1rem; // a little nicer alignment with sharebox
-
-    @include sassline(eta, $bodytype, $below: 1);
 
     @include deviceBreakpoint(tablet) {
         text-align: left;

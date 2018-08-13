@@ -32,8 +32,8 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
     justify-content: space-between;
     align-items: center;
     padding-top: 1rem;
-    font-family: getFontFamily($sansseriftype);
-    font-weight: map-get($sansseriftype, semi);
+    font-family: getFontFamily($headingtype);
+    font-weight: map-get($headingtype, semi);
     // necessary for z-index
     position: relative;
     // Menu is above the linkset and the linkset slides from the bottom of it
@@ -75,6 +75,10 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
 .sitenav__company {
     padding: 1rem;
     transition: #{$anchor-hover-transition};
+    text-transform: uppercase;
+
+    @include sassline(epsilon, $headingtype, 3.5, 1, all);
+
 
     &:hover {
         color: map-get($palette, red);
@@ -104,8 +108,8 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
 
 /* Single item within the links */
 .sitenav__linkset-item {
-    font-family: getFontFamily($sansseriftype);
-    font-weight: map-get($sansseriftype, semi);
+    font-family: getFontFamily($headingtype);
+    font-weight: map-get($headingtype, semi);
     letter-spacing: .1rem;
     padding: 1rem 0;
 
@@ -117,10 +121,10 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
     }
 
     .sitenav__link {
-        @include sassline(beta, $sansseriftype, 3.5, 1, all);
+        @include sassline(beta, $headingtype, 3.5, 1, all);
 
         @include deviceBreakpoint(tablet) {
-            @include sassline(beta, $sansseriftype, 5, 1, all);
+            @include sassline(beta, $headingtype, 5, 1, all);
         }
     }
 }

@@ -51,11 +51,11 @@
 .footer__copy {
     padding-left: 0;
     margin-top: 1rem;
-    font-family: getFontFamily($sansseriftype);
     letter-spacing: .09em;
     text-align: center;
+    font-family: getFontFamily($bodytype);
 
-    @include sassline(theta, $sansseriftype, 1, 0);
+    @include sassline(theta, $headingtype, 1, 0);
 
     @include deviceBreakpoint(tablet) {
         margin-top: 0;
@@ -65,6 +65,7 @@
 }
 
 .footer__copy-line--emphasized {
+    font-family: getFontFamily($headingtype);
     font-weight: bold;
 }
 

@@ -262,12 +262,9 @@ a {
     }
 
     // Caption and inline small text.
-    small,
-    .caption {
-        @include fontsize(theta, all);
-        font-family: getFontFamily($headingtype);
+    small {
         font-style: normal;
-        font-weight: map-get($headingtype, semi);
+        @include fontsize(theta, all);
     }
 
     small {
@@ -275,10 +272,15 @@ a {
     }
 
     .caption {
-        @include baseline(theta, $headingtype, 2, 2, all);
         color: $caption-color;
+        font-style: normal;
+
+        @include fontsize(eta, all);
+
+        @include sassline(eta, $bodytype, 1.5, 1);
+
         &--nopad {
-            @include baseline(theta, $headingtype, 2, 0, all);
+            @include baseline(eta, $bodytype, 2, 0, all);
         }
     }
 

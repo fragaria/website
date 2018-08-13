@@ -29,8 +29,6 @@ $portfolio-project-media-width: (
     grid-template-columns: auto;
     grid-template-columns: 1fr;
 
-
-
     @include deviceBreakpoint(tablet-small) {
         grid-template-columns: 1fr 1fr;
         grid-row-gap: 4rem;
@@ -59,15 +57,15 @@ $portfolio-project-media-width: (
         }
     }
 
-    .portfolio-project__headline {
-        @include sassline(epsilon, $seriftype, 2, 1, all);
-    }
+    // .portfolio-project__headline {
+    //     @include sassline(delta, $headingtype, 2, 1, all);
+    // }
 
     .portfolio-project__media {
         float: right;
         max-width: map-get($portfolio-project-media-width, mobile);
 
-        @include sassline(epsilon, $seriftype, 2, 1, all);
+        @include sassline(epsilon, $headingtype, 2, 1, all);
 
         @include deviceBreakpoint(tablet-small) {
             max-width: map-get($portfolio-project-media-width, tablet-small);
@@ -82,6 +80,6 @@ $portfolio-project-media-width: (
     }
 
     .portfolio-project-detail__resources {
-        @include sassline(eta, $seriftype, 2, 1, all);
+        @include sassline(eta, $headingtype, 2, 1, all);
     }
 }

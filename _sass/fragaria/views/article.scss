@@ -12,13 +12,12 @@ $article-content-width: 40rem;
         max-width: 13em;
         margin-left: auto;
         margin-right: auto;
-        font-family: getFontFamily($seriftype);
-        font-weight: 400;
+        font-family: getFontFamily($headingtype);
 
-        @include sassline(alpha, $seriftype, $lineheight: 3, $breakpoint: all);
+        @include sassline(alpha, $headingtype, $lineheight: 3, $breakpoint: all);
 
         @include deviceBreakpoint(tablet) {
-            @include sassline(alpha, $seriftype, $lineheight: 6, $breakpoint: all);
+            @include sassline(alpha, $headingtype, $lineheight: 6, $breakpoint: all);
         }
     }
 }
@@ -62,36 +61,31 @@ $article-content-width: 40rem;
     }
 
     h1, h2, h3 {
-        font-family: getFontFamily($seriftype);
-        font-weight: 400;
+        font-family: getFontFamily($headingtype);
     }
 
     h1 {
-        @include sassline(gamma, $seriftype, $lineheight: 3, $below: 0, $breakpoint: all);
+        @include sassline(gamma, $headingtype, $lineheight: 3, $below: 0, $breakpoint: all);
 
         @include deviceBreakpoint(tablet) {
-           @include sassline(gamma, $seriftype, $lineheight: 3, $below: 1, $breakpoint: all);
+           @include sassline(gamma, $headingtype, $lineheight: 3, $below: 1, $breakpoint: all);
         }
     }
 
     h2 {
-        @include sassline(delta, $seriftype, $lineheight: 2, $below: 0, $above: 2, $breakpoint: all);
+        @include sassline(delta, $headingtype, $lineheight: 2, $below: 0, $above: 2, $breakpoint: all);
 
         @include deviceBreakpoint(tablet) {
-            @include sassline(delta, $seriftype, $lineheight: 3, $below: 1, $above: 3, $breakpoint: all);
+            @include sassline(delta, $headingtype, $lineheight: 3, $below: 1, $above: 3, $breakpoint: all);
         }
     }
 
     h3 {
-        @include sassline(epsilon, $seriftype, $lineheight: 3, $below: 0, $breakpoint: all);
+        @include sassline(epsilon, $headingtype, $lineheight: 3, $below: 0, $breakpoint: all);
 
         @include deviceBreakpoint(tablet) {
-            @include sassline(epsilon, $seriftype, $lineheight: 2, $below: 1, $breakpoint: all);
+            @include sassline(epsilon, $headingtype, $lineheight: 2, $below: 1, $breakpoint: all);
         }
-    }
-
-    p {
-        @include sassline(zeta, $seriftype, $lineheight: 2, $below: 1, $breakpoint: all);
     }
 
     // basic image

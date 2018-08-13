@@ -49,6 +49,13 @@ $article-content-width: 40rem;
     // Will try to add word-breaking hypens according to post language (which defaults to EN).
     hyphens: auto;
 
+    &:first-letter {
+        float: left;
+        font-size: 9rem;
+        line-height: 7rem;
+        padding-right: 1rem;
+    }
+
     a {
         // default anchor style
         @include anchorStyle(true);

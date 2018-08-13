@@ -73,12 +73,10 @@
 
 }
 
-.v-home__career-content {
-    p {
-        max-width: $article-content-width;
-        margin-right: auto;
-        margin-left: auto;
-    }
+.v-home__career-par {
+    max-width: $article-content-width;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .v-home__company-residence   { grid-area: residence; }
@@ -100,9 +98,9 @@
 
 .v-home__cta-row {
     text-align: center;
-    margin-top: 2rem;
+    padding-top: 2rem;
 
     @include deviceBreakpoint(tablet) {
-        margin-top: 3rem;
+        padding-top: 3rem;
     }
 }

@@ -17,7 +17,7 @@ urls.push("{{ post.url | relative_url }}");
 
 // Cache pages
 {% for page in site.html_pages -%}
-{%- unless page.path contains 'amp-html' or page.path contains 'blog/archive' -%}
+{%- unless page.path contains 'blog/archive' -%}
 urls.push("{{ page.url | relative_url }}");
 {%- endunless -%}
 {%- endfor %}

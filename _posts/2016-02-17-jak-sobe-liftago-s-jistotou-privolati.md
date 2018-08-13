@@ -8,6 +8,7 @@ tags:
 - elasticsearch
 - liftago
 - elastic
+- kibana
 modified_time: '2016-02-17T10:49:58.860+01:00'
 cloudinary_src: posts/2016-02-17-jak-sobe-liftago-s-jistotou-privolati__1.png
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-1469978181235135253

@@ -9,6 +9,7 @@ tags:
 - nativescript
 - divshot
 - charlieapp
+- rest
 modified_time: '2015-03-09T13:25:57.678+01:00'
 cloudinary_src: posts/2015-03-09-pondelni-stripky-z-932015__1.png
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-4958115397799822342

@@ -1,7 +1,7 @@
 - title: Democracy 21
   job: Public participation voting platform
   desc: >
-    V rámci projektu participativního rozpočtu v New Yorku v roce 2016 radnice umožnila místním obyvatelům rozdělit z mětského rozpočtu 38 milionů dolarů na projekty navržené členy komunit. Jednalo se tak o největší projekt tohoto typu v Severní Americe. V roce 2015/16 tak proběhlo již 5. kolo, do kterého bylo zapojeno 28 z 51 městských ditriktů.
+    We were hired as the sole tech supplier for D21, a civic participation and decision-making online platform from January 2015 up until June 2018. Citizens of Říčany regularly use it to decide on how to spent 5 million CZK from the city budget, as well as the citizens in NYC with their $30 million. Delivering an e-voting application is nothing simple. Security, scalability and realiability cannot accept any compromises. Our experts successfully kicked&ndash;off the project for a sustainable future development.
   img: portfolio/d21.png
   tags:
     - angular
@@ -11,59 +11,103 @@
   website:
     href: https://d21.me
     caption: d21.me
-  # gallery:
-  #   - https://picsum.photos/200?random
-  #   - https://picsum.photos/200?random
-  #   - https://picsum.photos/200?random
-- title: Komerční Banka
-  job: Frontend strategy kickoff
+- title: Logman
   desc: >
-    V rámci tohoto projektu proběhl participativní urbanistický výzkum, jehož cílem bylo, aby urbanistické úpravy byly uzpůsobeny potřebám a požadavkům občanů, kteří žijí v blízkosti parku a využívají park nejvíce.
-  img: portfolio/kb.png
+    Logman is the central logging facility in Komerční banka. It’s not just a log storage though. It also makes browsing the logs a breeze as they can be looked up and visualized in Kibana (along with all the necessary details like comprehensive permissions setup). Given the large volume, scaling using Kubernetes is a no-brainer.
+  img: portfolio/elasticsearch.png
+  tags:
+    - elasticsearch
+    - kibana
+    - java
   website:
     href: https://www.kb.cz
-    caption: www.kb.cz
-  tags:
-    - angular
-    - java
-    - elasticsearch
-- title: Česká Spořitelna
-  job: Frontend strategy kickoff
+    caption: kb.cz
+- title: Winding Tree
   desc: >
-    Rarely in modern times have we witnessed such a display of petulance and bad judgment by those supposed to be in charge of global financial stability, and by those who set the tone for the Western world. The spectacle is astonishing. The European Central Bank, the EMU bail-out fund, and the International Monetary Fund, among others, are lashing out in fury against an elected government that refuses to do what it is told.
+    Winding Tree is aiming to disrupt the worldwide travel industry by using Ethereum blockchain and other emerging decentralized technologies. As part of a worldwide distributed development team, we are researching and implementing an open-source platform that aims to cut the middlemen and allow entry of more competition into the travel industry. We are also creating tools that significantly decrease the effort required to start working with the platform even if you are not familiar with blockchain, smart contracts and other terms used by the community gathered around cryptocurrencies and decentralized technologies.
+  img: portfolio/windingtree.png
+  tags:
+    - blockchain
+    - ethereum
+    - reactjs
+    - nodejs
+    - solidity
+  website:
+    href: https://windingtree.com/
+    caption: windingtree.com
+- title: Moje zdravé finance
+  desc: >
+    Being a part of the George internet banking, the Moje zdráve finance app has been used by more than 200,000&nbsp;clients of Česká spořitelna for their daily expense management. It also plays an important role as a financial counseling tool used by bankers at the Česká spořitelna branches all around Czech Republic.
   img: portfolio/csas.png
   tags:
     - angular
     - java
-    - elasticsearch
   website:
-    href: https://www.csas.cz
-    caption: www.csas.cz
-  # gallery:
-  #   - https://picsum.photos/200?random
-  #   - https://picsum.photos/200?random
-  #   - https://picsum.photos/200?random
-- title: Adventura
-  job: Travel agency portfolio management
+    href: https://www.csas.cz/cs/osobni-finance/moje-zdrave-finance
+    caption: csas.cz
+- title: Prezident 21
   desc: >
-    Martin Armstrong on his blog about the plans of abolishing cash: “I doubt that the USA will be able to move to a cashless society as easily as Europe. The dollar is used around the world and cancelling that outstanding money supply would bring tremendous international unrest. Additionally, the USA is not in crisis financially, as is the case in Europe.
-  img: portfolio/adventura.jpg
+    As a part of our long-term partnership with Demokracie 21, we participated in creation of the internet game Prezident 21 which hit the public big time during 2017-2018. This pre-election game was a supplement to the real presidency vote in 2018 and demonstrated how the vote would have ended if people could have used the D21 voting method. Contrary to the current voting method, D21 is not limited to a single vote only. Instead, it allows for multiple plus votes and optionally also minus votes. Our complete solution included a robust infrastructure setup to handle peak times during various offline and online marketing activities. The site had hit 3 million visitors throughout its lifetime.
+  img: portfolio/prezident21.png
+  tags:
+    - angular
+    - nodejs
+    - mongodb
+    - aws
+  website:
+    href: https://www.ifd21.org/prezident-21
+    caption: ifd21.org
+- title: Fast
+  desc: >
+    Since we have long experience with the frontend development, we’ve assisted with creating the whole frontend development strategy for new web apps (both internal and external) made by Komerční banka.
+  img: portfolio/kb.png
+  tags:
+    - angular
+    - typescript
+    - bootstrap
+  website:
+    href: https://www.kb.cz
+    caption: kb.cz
+- title: Saifu&mdash;Mobilní wallet of Česká spořitelna
+  desc: >
+    We’re participating in development of a mobile payments electronic wallet for Česká spořitelna. We are working on the server-side solution, mobile application and we were collaborating on the concept of plugins, which will enable rapid prototyping and testing of new functionality.
+  img: portfolio/saifu.png
+  tags:
+    - java
+    - android
+  website:
+    href: https://play.google.com/store/apps/details?id=cz.csas.app.wallet
+    caption: Saifu on Google Play
+- title: WebAPI of Česká spořitelna
+  desc: >
+    Being a part of WebAPI Developers team, our experts helped to deliver the very first open banking REST API in the Czech Republic.
+  img: portfolio/csas-webapi.png
+  tags:
+    - java
+    - rest
+  website:
+    href: https://twitter.com/csas_devs
+    caption: WebAPI Developers on Twitter
+- title: Pathfinder
+  desc: >
+    We’ve delivered a complete frontend solution for one of the Pathfinder transformation project apps for Komerční banka. Besides featuring new tools for the loan management, it’s also packed with bunch of innovations. This is the first flagship project that puts our frontend development strategy implemented in the Fast project in place.
+  img: portfolio/kb.png
+  tags:
+    - angular
+    - typescript
+    - bootstrap
+  website:
+    href: https://www.kb.cz
+    caption: kb.cz
+- title: Adventura.cz and Chinatours.cz
+  desc: >
+    Our <a class="anchor anchor--emphasized" href="/blog/2014/09/02/jak-jsme-udelali-zanetu/">agile approach to software development</a> brought it’s fruits in a complete tech solution for one of the largest travel agencies in Czech. Using SCRUM methodology, the project went out smoothly without any hiccups. The result is a portfolio management platform that covers most of the agency’s needs including tour management, extensive photo catalogue, brochure print support tooling as well as both client–facing websites www.adventura.cz and www.chinatours.cz.
+  img: portfolio/adventura.png
+  tags:
+    - angularjs
+    - python
+    - django
+    - elasticsearch
   website:
     href: https://www.adventura.cz
     caption: adventura.cz
-  tags:
-    - angular
-    - django
-    - elasticsearch
-- title: Další projekt
-  job: lorem ipsum whatever
-  desc: >
-    Martin Armstrong on his blog about the plans of abolishing cash: “I doubt that the USA will be able to move to a cashless society as easily as Europe. The dollar is used around the world and cancelling that outstanding money supply would bring tremendous international unrest. Additionally, the USA is not in crisis financially, as is the case in Europe.
-  img: portfolio/adventura.jpg
-  website:
-    href: https://www.adventura.cz
-    caption: adventura.cz
-  tags:
-    - angular
-    - django
-    - elasticsearch

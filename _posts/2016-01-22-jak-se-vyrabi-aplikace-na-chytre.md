@@ -8,6 +8,7 @@ tags:
 - pebble
 - javascript
 - smartwatch
+- c
 modified_time: '2016-01-22T11:01:05.189+01:00'
 cloudinary_src: posts/2016-01-22-jak-se-vyrabi-aplikace-na-chytre__1.gif
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-486624487688836464

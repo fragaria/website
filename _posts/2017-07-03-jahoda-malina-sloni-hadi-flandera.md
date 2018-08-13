@@ -9,11 +9,12 @@ tags:
 - javascript
 - python
 - flask
-- angularjs
+- angular
 - socket.io
 - eventlet
 - postgresql
 - raspberry
+- rest
 modified_time: '2017-07-03T12:56:23.496+02:00'
 cloudinary_src: posts/2017-07-03-jahoda-malina-sloni-hadi-flandera__1.jpg
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-5818496784390061288

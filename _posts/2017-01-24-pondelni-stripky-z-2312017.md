@@ -9,6 +9,7 @@ tags:
 - etckeeper
 - kalhoty
 - report-uri
+- rest
 modified_time: '2017-01-24T13:52:17.028+01:00'
 cloudinary_src: posts/2017-01-24-pondelni-stripky-z-2312017__1.jpg
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-4405088734590585560

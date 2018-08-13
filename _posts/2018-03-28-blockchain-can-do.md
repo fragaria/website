@@ -10,6 +10,7 @@ tags:
 - blockchain
 - ethereum
 - líf
+- solidity
 modified_time: '2018-03-28T13:25:06.396+02:00'
 cloudinary_src: posts/2018-03-28-blockchain-can-do__1.jpg
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-9154961035646733437

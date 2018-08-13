@@ -7,8 +7,9 @@ lang: en
 tags:
 - npm
 - package
-- javascript
 - publish
+- javascript
+- typescript
 modified_time: '2017-06-26T11:55:25.385+02:00'
 cloudinary_src: posts/2017-06-26-npm-packages-101-creating-npm-package__1.jpg
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-4829889913533734686

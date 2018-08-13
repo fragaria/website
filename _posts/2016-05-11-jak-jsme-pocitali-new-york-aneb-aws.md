@@ -10,6 +10,7 @@ tags:
 - amazon lambda
 - aws
 - lambda
+- mongodb
 modified_time: '2016-05-11T12:21:35.046+02:00'
 cloudinary_src: posts/2016-05-11-jak-jsme-pocitali-new-york-aneb-aws__1.jpg
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-7389964546885819327

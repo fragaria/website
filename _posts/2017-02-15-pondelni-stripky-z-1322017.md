@@ -8,6 +8,8 @@ tags:
 - stripky
 - kancl
 - fragaria
+- typescript
+- d21
 modified_time: '2017-02-15T10:48:09.566+01:00'
 cloudinary_src: posts/2017-02-15-pondelni-stripky-z-1322017__1.jpg
 blogger_id: tag:blogger.com,1999:blog-5328688426183767847.post-5311544707190608917

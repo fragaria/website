@@ -11,17 +11,6 @@
   website:
     href: https://d21.me
     caption: d21.me
-- title: Logman
-  desc: >
-    Logman is the central logging facility in Komerční banka. It’s not just a log storage though. It also makes browsing the logs a breeze as they can be looked up and visualized in Kibana (along with all the necessary details like comprehensive permissions setup). Given the large volume, scaling using Kubernetes is a no-brainer.
-  img: portfolio/elasticsearch.png
-  tags:
-    - elasticsearch
-    - kibana
-    - java
-  website:
-    href: https://www.kb.cz
-    caption: kb.cz
 - title: Winding Tree
   desc: >
     Winding Tree is aiming to disrupt the worldwide travel industry by using Ethereum blockchain and other emerging decentralized technologies. As part of a worldwide distributed development team, we are researching and implementing an open-source platform that aims to cut the middlemen and allow entry of more competition into the travel industry. We are also creating tools that significantly decrease the effort required to start working with the platform even if you are not familiar with blockchain, smart contracts and other terms used by the community gathered around cryptocurrencies and decentralized technologies.
@@ -35,6 +24,17 @@
   website:
     href: https://windingtree.com/
     caption: windingtree.com
+- title: Logman
+  desc: >
+    Logman is the central logging facility in Komerční banka. It’s not just a log storage though. It also makes browsing the logs a breeze as they can be looked up and visualized in Kibana (along with all the necessary details like comprehensive permissions setup). Given the large volume, scaling using Kubernetes is a no-brainer.
+  img: portfolio/elasticsearch.png
+  tags:
+    - elasticsearch
+    - kibana
+    - java
+  website:
+    href: https://www.kb.cz
+    caption: kb.cz
 - title: Moje zdravé finance
   desc: >
     Being a part of the George internet banking, the Moje zdráve finance app has been used by more than 200,000&nbsp;clients of Česká spořitelna for their daily expense management. It also plays an important role as a financial counseling tool used by bankers at the Česká spořitelna branches all around Czech Republic.
@@ -57,6 +57,18 @@
   website:
     href: https://www.ifd21.org/prezident-21
     caption: ifd21.org
+- title: Adventura.cz and Chinatours.cz
+  desc: >
+    Our <a class="anchor anchor--emphasized" href="/blog/2014/09/02/jak-jsme-udelali-zanetu/">agile approach to software development</a> brought it’s fruits in a complete tech solution for one of the largest travel agencies in Czech. Using SCRUM methodology, the project went out smoothly without any hiccups. The result is a portfolio management platform that covers most of the agency’s needs including tour management, extensive photo catalogue, brochure print support tooling as well as both client–facing websites <a class="anchor anchor--emphasized" href="https://www.adventura.cz">adventura.cz</a> and <a class="anchor anchor--emphasized" href="https://www.chinatours.cz">chinatours.cz</a>.
+  img: portfolio/adventura.png
+  tags:
+    - angularjs
+    - python
+    - django
+    - elasticsearch
+  website:
+    href: https://www.adventura.cz
+    caption: adventura.cz
 - title: Fast
   desc: >
     Since we have long experience with the frontend development, we’ve assisted with creating the whole frontend development strategy for new web apps (both internal and external) made by Komerční banka.
@@ -99,15 +111,4 @@
   website:
     href: https://www.kb.cz
     caption: kb.cz
-- title: Adventura.cz and Chinatours.cz
-  desc: >
-    Our <a class="anchor anchor--emphasized" href="/blog/2014/09/02/jak-jsme-udelali-zanetu/">agile approach to software development</a> brought it’s fruits in a complete tech solution for one of the largest travel agencies in Czech. Using SCRUM methodology, the project went out smoothly without any hiccups. The result is a portfolio management platform that covers most of the agency’s needs including tour management, extensive photo catalogue, brochure print support tooling as well as both client–facing websites www.adventura.cz and www.chinatours.cz.
-  img: portfolio/adventura.png
-  tags:
-    - angularjs
-    - python
-    - django
-    - elasticsearch
-  website:
-    href: https://www.adventura.cz
-    caption: adventura.cz
+

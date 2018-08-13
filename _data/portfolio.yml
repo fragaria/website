@@ -79,7 +79,7 @@
   website:
     href: https://www.kb.cz
     caption: kb.cz
-- title: Saifu&mdash;Mobilní wallet of Česká spořitelna
+- title: Saifu&mdash;mobile wallet of Česká spořitelna
   desc: >
     We’re participating in development of a <i>mobile payments electronic wallet</i> for Česká spořitelna. We are working on the server-side solution, mobile application and we were collaborating on the concept of plugins, which will enable rapid prototyping and testing of new functionality.
   img: portfolio/saifu.png

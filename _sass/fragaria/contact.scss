@@ -1,7 +1,3 @@
 .contact .contact__line {
-    @include sassline(zeta, $bodytype, 2, 0);
-
-    &--indented {
-        margin-top: 2rem;
-    }
+    display: block;
 }

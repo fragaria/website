@@ -57,10 +57,6 @@ $portfolio-project-media-width: (
         }
     }
 
-    // .portfolio-project__headline {
-    //     @include sassline(delta, $headingtype, 2, 1, all);
-    // }
-
     .portfolio-project__media {
         float: right;
         max-width: map-get($portfolio-project-media-width, mobile);

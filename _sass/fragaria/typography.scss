@@ -209,10 +209,12 @@ a {
     // Definition lists.
     dl {
         @include baseline(zeta, $bodytype, 2, 2, all);
+
         dt,
         dd {
             font-feature-settings: "kern", "onum", "liga";
             margin-left: 2rem;
+
             @include breakpoint(break-1) {
                 margin-left: 0;
             }
@@ -227,21 +229,26 @@ a {
 
     // Tables.
     table:not(.rouge-table) {
-        @include sassline(eta, $bodytype, 2, 2, all);
         font-feature-settings: "liga", "lnum", "tnum", "kern";
         font-style: normal;
         width: 100%;
+
+        @include sassline(eta, $bodytype, 2, 2, all);
+
         thead {
             th {
+                padding-bottom: 1px;
                 font-family: getFontFamily($bodytype);
                 font-weight: map-get($bodytype, bold);
+
                 @include sassline(eta, $bodytype, 2, 0, all);
-                padding-bottom: 1px;
             }
         }
+
         tbody {
             td {
                 font-family: getFontFamily($bodytype);
+
                 @include sassline(eta, $bodytype, 2, 0, all);
             }
         }

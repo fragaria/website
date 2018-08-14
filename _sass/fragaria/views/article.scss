@@ -15,10 +15,7 @@ $article-content-width: 40rem;
         font-family: getFontFamily($headingtype);
 
         @include sassline(alpha, $headingtype, $lineheight: 3, $breakpoint: all);
-
-        @include deviceBreakpoint(tablet) {
-            @include sassline(alpha, $headingtype, $lineheight: 6, $breakpoint: all);
-        }
+        @include sassline(alpha, $headingtype, $lineheight: 6, $breakpoint: tablet);
     }
 }
 
@@ -67,26 +64,17 @@ $article-content-width: 40rem;
 
     h1 {
         @include sassline(gamma, $headingtype, $lineheight: 3, $below: 0, $breakpoint: all);
-
-        @include deviceBreakpoint(tablet) {
-           @include sassline(gamma, $headingtype, $lineheight: 3, $below: 1, $breakpoint: all);
-        }
+        @include sassline(gamma, $headingtype, $lineheight: 3, $below: 1, $breakpoint: tablet);
     }
 
     h2 {
         @include sassline(delta, $headingtype, $lineheight: 2, $below: 0, $above: 2, $breakpoint: all);
-
-        @include deviceBreakpoint(tablet) {
-            @include sassline(delta, $headingtype, $lineheight: 3, $below: 1, $above: 3, $breakpoint: all);
-        }
+        @include sassline(delta, $headingtype, $lineheight: 3, $below: 1, $above: 3, $breakpoint: tablet);
     }
 
     h3 {
         @include sassline(epsilon, $headingtype, $lineheight: 3, $below: 0, $breakpoint: all);
-
-        @include deviceBreakpoint(tablet) {
-            @include sassline(epsilon, $headingtype, $lineheight: 2, $below: 1, $breakpoint: all);
-        }
+        @include sassline(epsilon, $headingtype, $lineheight: 2, $below: 1, $breakpoint: tablet);
     }
 
     // basic image

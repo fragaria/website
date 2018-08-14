@@ -71,10 +71,7 @@
             text-decoration: none;
 
             @include sassline(alpha, $headingtype, 3, 1, all);
-
-            @include deviceBreakpoint(tablet) {
-                @include sassline(alpha, $headingtype, 4, 1, all);
-            }
+            @include sassline(alpha, $headingtype, 4, 1, tablet);
         }
 
         .blog-posting__meta {

@@ -79,7 +79,6 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
 
     @include sassline(epsilon, $headingtype, 3.5, 1, all);
 
-
     &:hover {
         color: map-get($palette, red);
     }
@@ -122,10 +121,7 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
 
     .sitenav__link {
         @include sassline(beta, $headingtype, 3.5, 1, all);
-
-        @include deviceBreakpoint(tablet) {
-            @include sassline(beta, $headingtype, 5, 1, all);
-        }
+        @include sassline(beta, $headingtype, 5, 1, tablet);
     }
 }
 

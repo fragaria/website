@@ -17,10 +17,7 @@
     // need to be scoped to take precendence over .typest
     .hero__headline {
         @include sassline(beta, $headingtype, 3, 0, all);
-
-        @include deviceBreakpoint(tablet-small) {
-            @include sassline(beta, $headingtype, 5, 0, all);
-        }
+        @include sassline(beta, $headingtype, 5, 0, tablet-small);
     }
 
     .hero__headline {

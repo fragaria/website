@@ -8,6 +8,7 @@ $full-view-break: 1000px;
     max-width: 40rem;
     margin-left: auto;
     margin-right: auto;
+
     p {
         @include sassline(zeta, $bodytype, $lineheight: 2);
     }
@@ -29,10 +30,7 @@ $full-view-break: 1000px;
         }
 
         @include sassline(beta, $headingtype, $lineheight: 3);
-
-        @include deviceBreakpoint(tablet) {
-            @include sassline(beta, $headingtype, $lineheight: 4, $breakpoint: all);
-        }
+        @include sassline(beta, $headingtype, $lineheight: 4, $breakpoint: tablet);
     }
 }
 
@@ -44,10 +42,6 @@ $full-view-break: 1000px;
     grid-gap: 0 3rem;
 
     padding-top: 4rem;
-
-    // @include deviceBreakpoint(mobile) {
-    //     grid-template-columns: 1fr 1fr 1fr;
-    // }
 }
 
 .v-career-facts-grid__item {
@@ -79,10 +73,6 @@ $full-view-break: 1000px;
 
     padding-top: 3rem;
     margin-bottom: 6rem;
-
-    @include deviceBreakpoint(mobile) {
-        // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
 }
 
 .v-career-tech-grid__item {

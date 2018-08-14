@@ -1,6 +1,4 @@
 // @note: make sure you update fonts preload section in head.html when this changes
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700|Playfair+Display+SC|Playfair+Display:400,400i,700,700i&subset=latin-ext');
-
 @font-face {
   font-family: 'Andulka Text Pro';
   src: url('#{$web-font-path}/AndulkaTextPro.woff') format('woff');

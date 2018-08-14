@@ -50,9 +50,10 @@ $article-content-width: 40rem;
 
     &:first-letter {
         float: left;
+        padding-top: .5rem;
+        padding-right: 1rem;
         font-size: 9rem;
         line-height: 7rem;
-        padding-right: 1rem;
     }
 
     a {

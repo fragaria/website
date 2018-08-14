@@ -15,6 +15,12 @@ $sitenav-push-negative: (
 );
 $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
 
+// .sitenav {
+//     position: fixed;
+//     width: 100%;
+//     background: map-get($palette, white)
+// }
+
 .sitenav,
 .sitenav__menu {
     // Height is needed so that .sitenav__linkset doesn't make the gap.
@@ -31,7 +37,6 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 1rem;
     font-family: getFontFamily($headingtype);
     font-weight: map-get($headingtype, semi);
     // necessary for z-index
@@ -41,6 +46,7 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
     background: map-get($palette, white);
 
     @include deviceBreakpoint(tablet-small) {
+        padding-top: 1rem;
         margin-left: -1rem;
         margin-right: -1rem;
     }
@@ -48,27 +54,23 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
 
 // logo image
 .sitenav__brand {
-    @mixin snBrandSize($height) {
-        $brand-dimension-ratio: 153 / 196;
+    order: 1;
+    margin: 0 0 0 1rem;
 
-        height: $height;
-        // use image dimension ratio to calculate right shift
-        margin-left: $height * -0.5 * $brand-dimension-ratio;
+    img {
+        margin-top: .5rem;
+        height: 3rem;
+
+        @include deviceBreakpoint(tablet) {
+            height: 8rem;
+        }
     }
-
-    position: absolute;
-    top: 1rem;
-    left: 50%;
-
-    @include snBrandSize(4rem);
-
-
     // logo image scales up on bigger screens
     @include deviceBreakpoint(tablet) {
+        margin: 0 4.7rem 0 0;
         background: map-get($palette, white);
         padding: .5em;
-
-        @include snBrandSize(8rem);
+        order: 2;
     }
 }
 
@@ -76,8 +78,15 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
     padding: 1rem;
     transition: #{$anchor-hover-transition};
     text-transform: uppercase;
+    order: 2;
+    flex: 1;
 
-    @include sassline(epsilon, $headingtype, 3.5, 1, all);
+    @include sassline(delta, $headingtype, 3.5, 1, all);
+
+    @include deviceBreakpoint(tablet) {
+        order: 1;
+        flex: 0;
+    }
 
     &:hover {
         color: map-get($palette, red);

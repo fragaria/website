@@ -66,7 +66,7 @@ $selection-color: map-get($palette, red);
 
 $blog-listing-splitter-border-color: map-get($palette, black);
 
-$page-container-max-width: 88rem;
+$page-container-max-width: 1410px;
 
 // Aliases for Sassline breakpoints, @see: $breakpoints
 $breakpoint-aliases: (
@@ -122,19 +122,14 @@ $breakpoints: (
     break-4: 1600   // 1600px  ~ Large desktop up
 );
 
-
-$breakpoints: (
-) !default;
-
-
 // Root font-sizes for each breakpoint. Set to half desired line-height of body text.
 // ! Make sure to have as many sizes as breakpoints above.
 $rootsizes: (
-    rootsize-0: 16,   // 24px line-height body text
-    rootsize-1: 16,   // 28px line-height body text
-    rootsize-2: 16,   // 30px line-height body text
-    rootsize-3: 16,   // 34px line-height body text
-    rootsize-4: 16,   // 34px line-height body text
+    rootsize-0: 15,   // 30px line-height body text
+    rootsize-1: 15,   // 30px line-height body text
+    rootsize-2: 15,   // 30px line-height body text
+    rootsize-3: 15,   // 30px line-height body text
+    rootsize-4: 15,   // 30px line-height body text
 );
 
 // Set the optimum line-length for your text (based on typeface).
@@ -179,7 +174,7 @@ $headingtype: (
     regular: bold,
     semi: bold,
     bold: bold,
-    cap-height: 0.75
+    cap-height: 0.84
 );
 
 $monospacetype: (

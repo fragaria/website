@@ -218,7 +218,7 @@ $max-widths: map-values($maxwidths);
 // Advanced baseline magic.
 // ! Read the README to help understand what is going on here.
 // Parts based on https://gist.github.com/razwan/10662500
-@mixin baseline($fontsize, $font, $lineheight: 2, $below: 2, $breakpoint: 0, $above: 0) {
+@mixin baseline($fontsize, $font, $lineheight: 3, $below: 2, $breakpoint: 0, $above: 0) {
   // Translate aliases
   @if $breakpoint != all and type-of($breakpoint) == string {
     $breakpoint: getBreakpointNumberFromAlias($breakpoint);

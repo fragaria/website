@@ -65,8 +65,6 @@ $portfolio-project-media-width: (
         float: right;
         max-width: map-get($portfolio-project-media-width, mobile);
 
-        @include sassline(epsilon, $headingtype, 2, 1, all);
-
         @include deviceBreakpoint(tablet-small) {
             max-width: map-get($portfolio-project-media-width, tablet-small);
         }
@@ -80,6 +78,6 @@ $portfolio-project-media-width: (
     }
 
     .portfolio-project-detail__resources {
-        @include sassline(eta, $headingtype, 2, 1, all);
+        @include sassline(eta, $bodytype, 2, 1, all);
     }
 }

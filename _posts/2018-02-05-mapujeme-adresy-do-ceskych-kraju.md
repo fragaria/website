@@ -90,8 +90,38 @@ katastrální úřad a jeho dataset s povědomým jménem RUIAN. No prostě
 Koucourkov. Odtud už je jen krůček k automatizaci celého našeho
 datasetu.
 
+{% highlight shell %}
+#!/bin/bash
+# GPS data passed through https://github.com/tyrasd/osmtogeojson
+curl -X POST 'https://lz4.overpass-api.de/api/interpreter' -d@overpass-query.txt | osmtogeojson > src.geojson
+# utility script from https://github.com/JirkaChadima/cz-region-boundaries/blob/master/scripts/prepare-gps-data.js
+node prepare-gps-data.js
+
+# ZIP codes processing
+PSCSOURCE='https://www.ceskaposta.cz/documents/10180/3738087/xls_pcobc.zip/50617e56-6e9a-4335-9608-96fec214e6ef'
+# https://github.com/JirkaChadima/cz-region-boundaries/blob/master/data/zip/county-region.csv, collected from https://cs.wikipedia.org/wiki/Okresy_v_%C4%8Cesku#Okresy_podle_samospr%C3%A1vn%C3%BDch_kraj%C5%AF
+OKRESFILE="../data/zip/county-region.csv"
+ZIPFILE="src.zip"
+FILE='zv_pcobc'
+PSCFILE="../data/zip/zip-county.csv"
+RESULT="../data/zip/zip-region.csv"
+
+wget "$PSCSOURCE" -O src.zip
+
+unzip -n "$ZIPFILE"
+libreoffice --headless --convert-to csv --infilter=csv:44,34,76 "$FILE.xls" --outdir . > /dev/null
+cut -d, -f2,5 "$FILE.csv" | tail -n +2 | sort | uniq > "$PSCFILE"
+# This bash magic is basically an Excel contingency table
+join -t ',' -1 2 -2 1 -o 1.1,2.2 <(sort -t ',' -k2,2 "$PSCFILE") <(sort -t ',' -k1,1 "$OKRESFILE") | sort | uniq > "$RESULT"
+rm "$ZIPFILE"
+rm "$FILE.xls"
+rm "$FILE.csv"
+{% endhighlight %}
+
 A jeho hezké vizualizaci přímo na githubu (samozřejmě bez těch PSČ, ale
 zase si můžete všimnout hraničních kamenů):
+
+<script src="https://gist.github.com/JirkaChadima/42be088b9f33102d1d33e454011d5883.js"></script>
 
 V samotné aplikaci už je to pak jen otázka načtení
 [dvou](https://github.com/JirkaChadima/cz-region-boundaries/blob/master/data/gps/all.txt)
@@ -99,6 +129,34 @@ V samotné aplikaci už je to pak jen otázka načtení
 a můžeme vesele párovat: Kvůli výkonu to zkusíme samozřejmě nejdřív
 podle PSČ a když se zrovna trefíme do nejednoznačně určitelného, tak
 použijeme jeden z algoritmů pro hledání bodu v polygonu.
+
+{% highlight java %}
+//...
+// java code
+//...
+/**
+* https://stackoverflow.com/a/38675842
+*/
+protected boolean isInside(Point p, Polygon polygon) {
+  if (polygon == null) {
+    return false;
+  }
+  int intersections = 0;
+  Point prev = polygon.getPoints().get(polygon.getPoints().size() - 1);
+  for (Point next : polygon.getPoints()) {
+    if ((prev.getY() <= p.getY() && p.getY() < next.getY()) || (prev.getY() >= p.getY() && p.getY() > next.getY())) {
+      double dy = next.getY() - prev.getY();
+      double dx = next.getX() - prev.getX();
+      double x = (p.getY() - prev.getY()) / dy * dx + prev.getX();
+      if (x > p.getX()) {
+        intersections++;
+      }
+    }
+    prev = next;
+  }
+  return intersections % 2 == 1;
+}
+{% endhighlight %}
 
 ## A přitom taková blbost
 

@@ -97,7 +97,7 @@ ruční dočištění, drobnou část souborů jsme rozpoznáváním prohnali
 znovu s trochu jiným nastavením, a bylo
 hotovo.
 
-{% include figure.html cloudinary_src='posts/2016-05-11-jak-jsme-pocitali-new-york-aneb-aws__2.png' caption='Velmi neoptimalizovaný testovací lístek' %}
+{% include figure.html cloudinary_src='posts/2016-05-11-jak-jsme-pocitali-new-york-aneb-aws__2.png' %}
 
 Pro tento typ nárazových a nesynchronních úloh je tedy AWS Lambda
 naprosto ideálním řešením, a to i přes to, že teoreticky máte k

@@ -49,8 +49,8 @@ $article-content-width: 40rem;
         float: left;
         padding-top: .5rem;
         padding-right: 1rem;
-        font-size: 9rem;
-        line-height: 7rem;
+        font-size: 6.8rem;
+        line-height: 5rem;
     }
 
     a {
@@ -74,7 +74,7 @@ $article-content-width: 40rem;
 
     h3 {
         @include sassline(epsilon, $headingtype, $lineheight: 3, $below: 0, $breakpoint: all);
-        @include sassline(epsilon, $headingtype, $lineheight: 2, $below: 1, $breakpoint: tablet);
+        @include sassline(epsilon, $headingtype, $lineheight: 2, $below: 3, $breakpoint: tablet);
     }
 
     // basic image

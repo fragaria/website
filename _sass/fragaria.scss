@@ -8,12 +8,13 @@ $icomoon-font-path: '#{$base-url}assets/fonts';
 @import
     "fragaria/icons",
     "fragaria/fonts",
+    "fragaria/mixins",
+
     "settings",
 
     "sassline",     // sassline
     "hamburgers/hamburgers",   // hamburger menu styles
 
-    "fragaria/mixins",
     "fragaria/typography",
 
     "fragaria/anchor",

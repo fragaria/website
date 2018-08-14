@@ -55,11 +55,7 @@
     text-align: center;
 
     .team-member__name {
-        @include sassline(epsilon, $headingtype, 1.5, 2, all);
-    }
-
-    .caption {
-
+        @include sassline(epsilon, $headingtype, $below: 0, $breakpoint: all);
     }
 }
 

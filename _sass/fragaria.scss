@@ -1,12 +1,13 @@
 @charset "utf-8";
 
 // This has to go first so that fonts are loaded OK.
-$web-font-path: 'https://res.cloudinary.com/fragaria/raw/upload/v1534234755/fragaria.cz/fonts/';
+$web-font-path: 'https://res.cloudinary.com/fragaria/raw/upload/v1534234755/fragaria.cz/fonts';
 $icomoon-font-path: '#{$base-url}assets/fonts';
 
 // Import frameworks & theme styles
 @import
     "fragaria/icons",
+    "fragaria/fonts",
     "settings",
 
     "sassline",     // sassline

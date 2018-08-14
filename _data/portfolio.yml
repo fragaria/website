@@ -47,7 +47,7 @@
 - title: Prezident 21
   desc: >
     As a part of our long-term partnership with Demokracie 21, we participated in creation of the <a href="https://www.prezident21.cz/" class="anchor anchor--emphasized">internet game Prezident 21</a> which hit the public big time during 2017-2018. This pre-election game was a supplement to the real presidency vote in 2018 and demonstrated how the vote would have ended if people could have used the D21 voting method. Contrary to the current voting method, D21 is not limited to a single vote only. Instead, it allows for multiple plus votes and optionally also minus votes. Our complete solution included a robust infrastructure setup to handle peak times during various offline and online marketing activities. The site had hit <i>3 million visitors</i> throughout its lifetime.
-  img: portfolio/prezident21.png
+  img: portfolio/p21.png
   tags:
     - angular
     - nodejs

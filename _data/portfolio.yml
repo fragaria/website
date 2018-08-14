@@ -37,7 +37,7 @@
 - title: Moje zdravé finance
   desc: >
     Being a part of the George internet banking, the Moje zdráve finance app has been used by more than 200,000&nbsp;clients of Česká spořitelna (Erste Group) for their daily expense management. It also plays an important role as a financial counseling tool used by bankers at the Česká spořitelna branches all around Czech Republic.
-  img: portfolio/csas.png
+  img: portfolio/mzf.png
   tags:
     - angular
     - java
@@ -71,7 +71,7 @@
 - title: Fast
   desc: >
     Since we have long experience with the frontend development, we’ve assisted with creating the whole frontend development strategy for new web apps (both internal and external) made by Komerční banka (Societe Generale Group).
-  img: portfolio/kb.png
+  img: portfolio/fast.png
   tags:
     - angular
     - typescript
@@ -92,7 +92,7 @@
 - title: WebAPI of Česká spořitelna
   desc: >
     Being a part of WebAPI Developers team, our experts helped to deliver the <i>very first open banking REST API</i> in the Czech Republic.
-  img: portfolio/csas-webapi.png
+  img: portfolio/cs-webapi.jpg
   tags:
     - java
     - rest

@@ -10,9 +10,11 @@ function siteMenu(rootElem) {
             if (toggle.classList.contains('is-active')) {
                 toggle.classList.remove('is-active');
                 toggle.setAttribute('aria-expanded', 'false');
+                document.body.classList.remove('noscroll');
             } else {
                 toggle.classList.add('is-active');
                 toggle.setAttribute('aria-expanded', 'true');
+                document.body.classList.add('noscroll');
             }
         });
     }
@@ -21,6 +23,7 @@ function siteMenu(rootElem) {
         link.addEventListener('click', function () {
             rootElem.classList.add('sitenav-wrapper--noanim');
             rootElem.classList.remove('sitenav-wrapper--show');
+            document.body.classList.remove('noscroll');
 
             for (let toggle of toggles) {
                 toggle.classList.remove('is-active');
@@ -101,8 +104,28 @@ function expandPortfolio(element) {
     });
 }
 
+/**
+ * Shrink site navigation when user scrolls 100px down
+ * and takes it backs when user returns to top
+ * @param {HTMLElement} element
+ */
+function shirkSidenavOnScroll (element) {
+    document.onscroll = function() {
+        const scrolled = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
+
+        if (scrolled > 100) {
+            element.classList.add('shrink');
+        }
+        else {
+            element.classList.remove('shrink');
+        }
+    }
+}
+
+
 const handlers = [
     {className: 'js-sitenav', handler: siteMenu},
+    {className: 'js-sitenav', handler: shirkSidenavOnScroll},
     {className: 'js-site-reload-button', handler: siteReload},
     {className: 'js-fix-baseline', handler: fixBaseline},
     {className: 'js-portfolio-strip', handler: expandPortfolio},

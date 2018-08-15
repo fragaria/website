@@ -3,7 +3,7 @@
         /cs_CZ
             cs_CZ.aff           
             cs_CZ.dic
-            settings.yml`
+            settings.yml
 </code></pre></div></div> <h3 id="2-instalace-django-haystack">2. Instalace django-haystack</h3> <p>Dalším krokem je instalace <strong>django-haystack</strong> pro vaší aplikaci. Budeme také potřebovat knihovnu <strong>elasticsearch</strong> s Pythoními bindingy. To uděláte snadno pomocí <strong>pipu</strong> (přičemž předpokládám, že virtualenv již máte aktivovaný):</p> <figure class="highlight"><pre><code class="language-shell" data-lang="shell">pip <span class="nb">install </span>django-haystack elasticsearch</code></pre></figure> <p>Abychom mohli používat češtinu, budeme muset nainstalovat ještě vylepšený Elasticsearch backend, který nám umožní upravit konfiguraci:</p> <figure class="highlight"><pre><code class="language-shell" data-lang="shell">pip <span class="nb">install </span>elasticstack</code></pre></figure> <p>Dále musíme tyto Django appky přidat do <code class="highlighter-rouge">INSTALLED_APPS</code>. Otevřeme si tedy <code class="highlighter-rouge">settings.py</code> naší aplikace a upravíme <code class="highlighter-rouge">INSTALLED_APPS</code> aby vypadaly cca takto:</p> <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
     <span class="o">...</span>
     <span class="s">'haystack'</span><span class="p">,</span>

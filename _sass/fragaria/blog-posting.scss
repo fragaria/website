@@ -10,7 +10,7 @@
             margin: 2rem 0 0;
             filter: grayscale(0);
 
-            @include deviceBreakpoint(tablet) {
+            @include breakpoint(tablet up) {
                 margin-left: 3rem;
                 margin-top: 0;
                 min-height: 25rem;
@@ -22,7 +22,7 @@
             flex: 1;
         }
 
-        @include deviceBreakpoint(tablet) {
+        @include breakpoint(tablet up) {
             flex-direction: row;
 
         }
@@ -63,7 +63,7 @@
             z-index: 1;
 
 
-            @include deviceBreakpoint(tablet) {
+            @include breakpoint(tablet up) {
                 padding: 6rem 2rem 5rem 2rem;
             }
         }
@@ -71,8 +71,8 @@
         .blog-posting__headline {
             text-decoration: none;
 
-            @include sassline(alpha, $headingtype, 3, 1, all);
-            @include sassline(alpha, $headingtype, 4, 0, tablet);
+            @include baseline(alpha, $headingtype, 3, 1, $breakpoint: tablet-small down);
+            @include baseline(alpha, $headingtype, 4, 0, $breakpoint: tablet up);
         }
 
         .blog-posting__meta {
@@ -80,12 +80,12 @@
         }
 
         .blog-posting__excerpt {
-            max-width: deviceBreakpointWidth(tablet-small);
+            max-width: breakpoint-size(tablet-small);
             margin-left: auto;
             margin-right: auto;
             font-weight: bold;
 
-            @include sassline(zeta, $bodytype, 2, 1, all);
+            @include baseline(zeta, $bodytype, 2, 1);
         }
 
         .blog-posting__cta-button:hover {
@@ -113,7 +113,7 @@
             color: $anchor-hover-color;
         }
 
-        @include deviceBreakpoint(tablet) {
+        @include breakpoint(tablet up) {
             .blog-posting__media-fill {
                 transform: scale(1.04);
                 filter: grayscale(0%);
@@ -132,7 +132,7 @@
     .blog-posting__excerpt {
         hyphens: auto;
 
-        @include sassline(eta, $bodytype, 2, 0, all);
+        @include baseline(eta, $bodytype, 2, 0);
     }
 
     .blog-posting__meta {
@@ -143,7 +143,7 @@
         font-family: getFontFamily($headingtype);
         text-decoration: none;
 
-        @include sassline(gamma, $headingtype, 3, 1, all);
+        @include baseline(gamma, $headingtype, 3, 1);
     }
 }
 
@@ -167,7 +167,7 @@
     background-position: center center;
     background-repeat: no-repeat;
 
-    @include deviceBreakpoint(tablet) {
+    @include breakpoint(tablet up) {
         background-size: initial;
         transition-property: filter, transform;
         transition-duration: .8s;

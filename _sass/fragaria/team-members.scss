@@ -22,16 +22,16 @@
         grid-gap: 2rem;
     }
 
-    @include deviceBreakpoint(mobile) {
+    @include breakpoint(mobile up) {
         grid-gap: 4rem;
     }
 
-    @include deviceBreakpoint(tablet-small) {
+    @include breakpoint(tablet-small up) {
         grid-template-columns: repeat(4, 1fr);
     }
 
     /* 5 columns on a row for desktop and up */
-    @include deviceBreakpoint(tablet) {
+    @include breakpoint(tablet up) {
         max-width: 70rem;
         margin-right: auto;
         margin-left: auto;
@@ -55,7 +55,7 @@
     text-align: center;
 
     .team-member__name {
-        @include sassline(epsilon, $headingtype, $below: 0, $breakpoint: all);
+        @include baseline(epsilon, $headingtype, $below: 0);
     }
 }
 

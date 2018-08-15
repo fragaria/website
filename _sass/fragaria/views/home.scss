@@ -3,7 +3,7 @@
     padding-bottom: 4rem;
     padding: 6rem 0 10rem;
 
-    @include deviceBreakpoint(tablet) {
+    @include breakpoint(tablet up) {
         padding: 8rem 0 12rem;
     }
 }
@@ -14,8 +14,8 @@
     margin-right: auto;
     text-align: center;
 
-    @include sassline(beta, $headingtype, 3, 0, all);
-    @include sassline(beta, $headingtype, 5, 0, tablet-small);
+    @include baseline(beta, $headingtype, 3, 0, $breakpoint: mobile down);
+    @include baseline(beta, $headingtype, 5, 0, $breakpoint: tablet-small up);
 
     i {
         font-style: normal;
@@ -33,7 +33,7 @@
 .v-home__career {
     margin-top: 4rem;
 
-    @include deviceBreakpoint(tablet) {
+    @include breakpoint(tablet up) {
         margin-top: 10rem;
     }
 }
@@ -49,7 +49,7 @@
         "billing"
         "contactform";
 
-    @include deviceBreakpoint(tablet-small) {
+    @include breakpoint(tablet-small up) {
         grid-template-columns: auto;
         grid-template-rows: auto;
         grid-gap: 1rem 1rem;
@@ -85,7 +85,7 @@
     padding-top: 1rem;
     margin-top: 1rem;
 
-    @include deviceBreakpoint(tablet) {
+    @include breakpoint(tablet up) {
         border-top: 0;
         padding: 0;
         margin: 0;
@@ -97,7 +97,7 @@
     text-align: center;
     padding-top: 2rem;
 
-    @include deviceBreakpoint(tablet) {
+    @include breakpoint(tablet up) {
         padding-top: 3rem;
     }
 }

@@ -1,9 +1,8 @@
 .taglist {
     text-align: center;
 
-    @include sassline(eta, $bodytype, $below: 1, $breakpoint: all);
-
-    @include deviceBreakpoint(tablet) {
+    @include baseline(eta, $bodytype, $below: 1);
+    @include breakpoint(tablet up) {
         text-align: left;
     }
 

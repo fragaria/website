@@ -6,13 +6,14 @@ $icomoon-font-path: '#{$base-url}assets/fonts';
 
 // Import frameworks & theme styles
 @import
+    "fragaria/reset",
     "fragaria/icons",
-    "fragaria/fonts",
-    "fragaria/mixins",
 
     "settings",
 
-    "sassline",     // sassline
+    "fragaria/fonts",
+    "fragaria/mixins",
+
     "hamburgers/hamburgers",   // hamburger menu styles
 
     "fragaria/typography",

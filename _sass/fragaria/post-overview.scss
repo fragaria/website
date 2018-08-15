@@ -1,7 +1,7 @@
 .post-overview__body {
     column-count: 1;
 
-    @include deviceBreakpoint(tablet) {
+    @include breakpoint(tablet up) {
         column-count: 4;
         column-rule: 1px $blog-listing-splitter-border-color solid;
         column-gap: 4rem;
@@ -16,7 +16,7 @@
 
     @include baselineAwareBorder($orientation: 'bottom', $width: 4px, $offset: -3px, $size: 3rem);
 
-    @include deviceBreakpoint(tablet) {
+    @include breakpoint(tablet up) {
         @include baselineAwareBorderCancel($orientation: 'bottom');
 
         &:not(:nth-child(4n+4)) {
@@ -30,7 +30,7 @@
     font-family: getFontFamily($bodytype);
     font-weight: normal;
 
-    @include sassline(eta, $bodytype, 2, 0, all);
+    @include baseline(eta, $bodytype, 2, 0);
 }
 
 .post-overview__pubdate {

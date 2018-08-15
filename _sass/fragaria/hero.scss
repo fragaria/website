@@ -6,18 +6,18 @@
     padding-bottom: 4rem;
     padding: 6rem 0;
 
-    @include deviceBreakpoint(tablet-small) {
+    @include breakpoint(tablet-small up) {
         padding: 6rem 0 10rem;
     }
 
-    @include deviceBreakpoint(tablet) {
+    @include breakpoint(tablet up) {
         padding: 8rem 0 12rem;
     }
 
     // need to be scoped to take precendence over .typest
     .hero__headline {
-        @include sassline(beta, $headingtype, 3, 0, all);
-        @include sassline(beta, $headingtype, 5, 0, tablet-small);
+        @include baseline(beta, $headingtype, 5, 0, $breakpoint: tablet-small down);
+        @include baseline(beta, $headingtype, 3, 0, $breakpoint: tablet up);
     }
 
     .hero__headline {
@@ -38,7 +38,7 @@
         font-family: getFontFamily($headingtype);
         font-size: 300%;
 
-        @include deviceBreakpoint(tablet-small) {
+        @include breakpoint(tablet-small up) {
             font-size: 500%;
         }
 

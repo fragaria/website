@@ -68,15 +68,6 @@ $blog-listing-splitter-border-color: map-get($palette, black);
 
 $page-container-max-width: 1410px;
 
-// Aliases for Sassline breakpoints, @see: $breakpoints
-$breakpoint-aliases: (
-    zero: break-0,
-    mobile: break-1,
-    tablet-small: break-2,
-    tablet: break-3,
-    desktop: break-4,
-);
-
 // Buttons
 
 $button-variants: (
@@ -115,50 +106,21 @@ $sharebox-variants: (
 // Breakpoint sizes from px to ems. Add more values here to add more breakpoints.
 // Change names if you prefer, it wont break the mixin as long as they are strings not just numbers.
 $breakpoints: (
-    break-0: 0,     // 0px       Mobile first
-    break-1: 640,   // 640px   ~ Small tablet up
-    break-2: 800,   // 800px   ~ Large tablet up
-    break-3: 1024,  // 1024px  ~ Desktop up
-    break-4: 1600   // 1600px  ~ Large desktop up
+    zero: 0px,            // 0px       Mobile first
+    mobile: 640px,        // 640px   ~ Small tablet up
+    tablet-small: 800px,  // 800px   ~ Large tablet up
+    tablet: 1024px,       // 1024px  ~ Desktop up
+    desktop: 1600px       // 1600px  ~ Large desktop up
 );
 
 // Root font-sizes for each breakpoint. Set to half desired line-height of body text.
 // ! Make sure to have as many sizes as breakpoints above.
 $rootsizes: (
-    rootsize-0: 15,   // 30px line-height body text
-    rootsize-1: 15,   // 30px line-height body text
-    rootsize-2: 15,   // 30px line-height body text
-    rootsize-3: 15,   // 30px line-height body text
-    rootsize-4: 15,   // 30px line-height body text
-);
-
-// Set the optimum line-length for your text (based on typeface).
-// Aim for 75–100 characters a line when possible, at smaller sizes type size is more important.
-// ! Make sure to have as many widths as breakpoints above.
-// Note: this was 'maxwidths' in previous versions.
-$measures: (
-    measure-0: 500,  // 500px wide
-    measure-1: 550,  // 550px wide
-    measure-2: 600,  // 600px wide
-    measure-3: 680,  // 680px wide
-    measure-4: 800  // 680px wide
-);
-
-// Set the max-widths for containers (based on design).
-// ! Make sure to have as many widths as breakpoints above.
-$maxwidths: (
-    width-0: 480,
-    width-1: 648,
-    width-2: 800,
-    width-3: 1024,
-    width-4: 1600,
-);
-
-// Gutter widths
-$gutterwidths: (
-    small: 1rem,
-    medium: 2rem,
-    large: 4rem
+    zero: 15px,   // 30px line-height body text
+    mobile: 15px,   // 30px line-height body text
+    tablet-small: 15px,   // 30px line-height body text
+    tablet: 15px,   // 30px line-height body text
+    desktop: 15px,   // 30px line-height body text
 );
 
 $bodytype: (
@@ -181,6 +143,66 @@ $monospacetype: (
     font-family: 'Menlo, monospace',
     regular: 400,
     cap-height: 0.68
+);
+
+// Setting responsive modular-scales. Use appropriate scales for viewport sizes.
+// Major Third http://www.modularscale.com/
+$modular-scale: (
+    zero: (
+        alpha:   36.0px,
+        beta:    30.0px,
+        gamma:   30.0px,
+        delta:   24.0px,
+        epsilon: 20.0px,
+        zeta:    20.0px,
+        eta:     18.0px,
+        theta:   12.8px,
+        iota:    11.5px
+    ),
+    mobile: (
+        alpha:   36.0px,
+        beta:    30.0px,
+        gamma:   30.0px,
+        delta:   24.0px,
+        epsilon: 20.0px,
+        zeta:    20.0px,
+        eta:     18.0px,
+        theta:   12.8px,
+        iota:    11.5px
+    ),
+    tablet-small: (
+        alpha:   72.0px,
+        beta:    64.0px,
+        gamma:   36.0px,
+        delta:   30.7px,
+        epsilon: 22.5px,
+        zeta:    20.0px,
+        eta:     18px,
+        theta:   15.0px,
+        iota:    12.7px
+    ),
+    tablet: (
+        alpha:   72.0px,
+        beta:    64.0px,
+        gamma:   36.0px,
+        delta:   30.7px,
+        epsilon: 22.5px,
+        zeta:    20.0px,
+        eta:     18px,
+        theta:   15.0px,
+        iota:    12.7px
+    ),
+    desktop: (
+        alpha:   72.0px,
+        beta:    64.0px,
+        gamma:   36.0px,
+        delta:   30.7px,
+        epsilon: 22.5px,
+        zeta:    20.0px,
+        eta:     18px,
+        theta:   15.0px,
+        iota:    12.7px
+    )
 );
 
 

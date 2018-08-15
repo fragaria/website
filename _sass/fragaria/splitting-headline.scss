@@ -4,7 +4,7 @@
     text-align: center;
     text-transform: uppercase;
 
-    @include deviceBreakpoint(tablet) {
+    @include breakpoint(tablet up) {
         padding-bottom: 5rem;
     }
 

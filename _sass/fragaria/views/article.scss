@@ -4,7 +4,7 @@ $article-content-width: 40rem;
     padding-top: 2rem;
     text-align: center;
 
-    @include deviceBreakpoint(tablet) {
+    @include breakpoint(tablet up) {
         padding-top: 5rem;
     }
 
@@ -14,8 +14,8 @@ $article-content-width: 40rem;
         margin-right: auto;
         font-family: getFontFamily($headingtype);
 
-        @include sassline(alpha, $headingtype, $lineheight: 3, $breakpoint: all);
-        @include sassline(alpha, $headingtype, $lineheight: 6, $breakpoint: tablet);
+        @include baseline(alpha, $headingtype, $lineheight: 3, $breakpoint: tablet-small down);
+        @include baseline(alpha, $headingtype, $lineheight: 6, $breakpoint: tablet up);
     }
 }
 
@@ -63,18 +63,18 @@ $article-content-width: 40rem;
     }
 
     h1 {
-        @include sassline(gamma, $headingtype, $lineheight: 3, $below: 0, $breakpoint: all);
-        @include sassline(gamma, $headingtype, $lineheight: 3, $below: 1, $breakpoint: tablet);
+        @include baseline(gamma, $headingtype, $lineheight: 3, $below: 0, $breakpoint: tablet-small down);
+        @include baseline(gamma, $headingtype, $lineheight: 3, $below: 1, $breakpoint: tablet up);
     }
 
     h2 {
-        @include sassline(delta, $headingtype, $lineheight: 2, $below: 0, $above: 2, $breakpoint: all);
-        @include sassline(delta, $headingtype, $lineheight: 3, $below: 1, $above: 3, $breakpoint: tablet);
+        @include baseline(delta, $headingtype, $lineheight: 2, $below: 0, $above: 2, $breakpoint: tablet-small down);
+        @include baseline(delta, $headingtype, $lineheight: 3, $below: 1, $above: 3, $breakpoint: tablet up);
     }
 
     h3 {
-        @include sassline(epsilon, $headingtype, $lineheight: 3, $below: 0, $breakpoint: all);
-        @include sassline(epsilon, $headingtype, $lineheight: 2, $below: 3, $breakpoint: tablet);
+        @include baseline(epsilon, $headingtype, $lineheight: 3, $below: 0, $breakpoint: tablet-small down);
+        @include baseline(epsilon, $headingtype, $lineheight: 2, $below: 3, $breakpoint: tablet up);
     }
 
     // basic image
@@ -83,7 +83,7 @@ $article-content-width: 40rem;
         padding-bottom: 2rem;
 
         &.figure--wide {
-            @include deviceBreakpoint(desktop) {
+            @include breakpoint(desktop up) {
                 margin-left: -15rem;
                 margin-right: -15rem;
             }
@@ -99,7 +99,7 @@ $article-content-width: 40rem;
 
     .figure__caption {
         font-weight: bold;
-        @include sassline(theta, $bodytype, $lineheight: 2, $below: 0, $breakpoint: all);
+        @include baseline(theta, $bodytype, $lineheight: 2, $below: 0);
     }
 
     .inline-figure-container {
@@ -130,7 +130,7 @@ $article-content-width: 40rem;
         margin-left: 0;
     }
 
-    @include deviceBreakpoint(tablet) {
+    @include breakpoint(tablet up) {
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;

@@ -18,18 +18,18 @@
 
 .v-error .v-error__inner {
     h1 {
-        @include sassline(alpha, $headingtype, $lineheight: 3, $below: 2, $breakpoint: all);
-        @include sassline(beta, $headingtype, $lineheight: 5, $below: 2, $breakpoint: tablet-small);
+        @include baseline(alpha, $headingtype, $lineheight: 3, $below: 2, $breakpoint: mobile down);
+        @include baseline(beta, $headingtype, $lineheight: 5, $below: 2, $breakpoint: tablet-small up);
     }
 
 
     h3 {
-        @include sassline(delta, $headingtype, $lineheight: 3, $below: 4, $breakpoint: all);
+        @include baseline(delta, $headingtype, $lineheight: 3, $below: 4);
     }
 
     img {
         height: 6rem;
 
-        @include sassline(delta, $headingtype, 0, 2)
+        @include baseline(delta, $headingtype, 0, 2)
     }
 }

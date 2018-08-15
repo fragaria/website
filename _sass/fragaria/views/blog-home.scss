@@ -9,7 +9,7 @@
     grid-column-gap: 4rem;
     margin-top: 4rem;
 
-    @include deviceBreakpoint(tablet) {
+    @include breakpoint(tablet up) {
         grid-template-areas:
             "main"
             "latest"

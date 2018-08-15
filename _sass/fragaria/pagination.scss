@@ -1,5 +1,5 @@
 .pagination {
-    @include sassline(gamma, $headingtype, 2, 0, all);
+    @include baseline(gamma, $headingtype, 2, 0);
 
     display: flex;
     flex-direction: column;
@@ -17,19 +17,19 @@
 
     }
 
-    @include deviceBreakpoint(tablet) {
+    @include breakpoint(tablet up) {
         flex-direction: row;
     }
 }
 
 .pagination__next {
-    @include deviceBreakpoint(tablet) {
+    @include breakpoint(tablet up) {
         margin-left: auto;
     }
 }
 
 .pagination__previous {
-    @include deviceBreakpoint(tablet) {
+    @include breakpoint(tablet up) {
         margin-right: auto;
     }
 }

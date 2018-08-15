@@ -1,0 +1,69 @@
+@mixin triangle($size, $color, $direction) {
+    height: 0;
+    width: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: $size / 2;
+
+    @if $direction == up {
+        border-bottom-color: $color;
+    } @else if $direction == right {
+        border-left-color:   $color;
+    } @else if $direction == down {
+        border-top-color:    $color;
+    } @else if $direction == left {
+        border-right-color:  $color;
+    }
+}
+
+
+@mixin borderedTriangle($size, $border-width, $color, $border-color, $direction, $alt: false) {
+    $back-size: $size + ($border-width * 2);
+    position: relative;
+
+    min-width: $size;
+    min-height: $size;
+
+    &:after,
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &:after {
+        @include triangle($size, $color, $direction);
+    }
+
+    &:before {
+        @include triangle($back-size, $border-color, $direction);
+
+        $mid-border-width: ($border-width / 2);
+        $border-width-and-mid: $border-width + $mid-border-width;
+
+        @if ($alt == true) {
+            $mid-border-width: 0;
+            $border-width-and-mid: $border-width * 2;
+        }
+
+        @if ($direction == up) or ($direction == down) {
+            margin-left: - $border-width;
+
+            @if ($direction == down) {
+                margin-top: -$mid-border-width;
+            } @else {
+                margin-top: - $border-width-and-mid;
+            }
+
+        } @else if ($direction == right) or ($direction == left) {
+            margin-top: - $border-width;
+
+            @if ($direction == right) {
+                margin-left: - $mid-border-width;
+            } @else {
+                margin-left: - $border-width-and-mid;
+            }
+        }
+    }
+}

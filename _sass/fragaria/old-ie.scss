@@ -28,19 +28,19 @@
         font-family: getFontFamily($headingtype);
         font-weight: bold;
         text-transform: lowercase;
-        @include sassline(beta, $headingtype, 3, 2, all);
+        @include baseline(beta, $headingtype, 3, 2);
     }
 
     p {
         font-family: getFontFamily($bodytype);
-        @include sassline(zeta, $bodytype, 2, 1, all);
+        @include baseline(zeta, $bodytype, 2, 1);
     }
 
     a, a:hover {
         color: map-get($palette, white);
         font-family: getFontFamily($bodytype);
         text-decoration: underline;
-        @include sassline(zeta, $bodytype, 2, 1, all);
+        @include baseline(zeta, $bodytype, 2, 1);
     }
 
     b {

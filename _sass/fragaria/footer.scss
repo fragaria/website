@@ -10,7 +10,7 @@
     // second top border
     @include baselineAwareBorder($color: map-get($palette, black), $orientation: 'top', $width: 2px, $offset: 0);
 
-    @include deviceBreakpoint(tablet) {
+    @include breakpoint(tablet up) {
         align-items: flex-start;
         flex-direction: row;
         margin-top: 8rem;
@@ -36,7 +36,7 @@
     align-items: center;
     margin-bottom: 1rem;
 
-    @include deviceBreakpoint(tablet) {
+    @include breakpoint(tablet up) {
         flex-direction: row;
         margin-bottom: 0;
     }
@@ -55,9 +55,9 @@
     text-align: center;
     font-family: getFontFamily($bodytype);
 
-    @include sassline(theta, $headingtype, 1, 0);
+    @include baseline(theta, $headingtype, 1, 0);
 
-    @include deviceBreakpoint(tablet) {
+    @include breakpoint(tablet up) {
         margin-top: 0;
         padding-left: 1rem;
         text-align: left;
@@ -73,7 +73,7 @@
     line-height: 3rem;
     font-size: 1.5rem;
 
-    @include deviceBreakpoint(tablet) {
+    @include breakpoint(tablet up) {
         font-size: 2rem;
     }
 }

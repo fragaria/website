@@ -125,10 +125,10 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
     list-style-type: none;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     // Menu is above the linkset and the linkset slides from the bottom of it
     z-index: 1;
     height: 0;
+    overflow: scroll;
 
     @include breakpoint(tablet up) {
         padding-top: map-get($sitenav-menu-height, tablet)/2;
@@ -183,7 +183,19 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
         transform: translate3d(0, 0, 0);
         opacity: 1;
         pointer-events: all;
-        height: 100vh;
+        height: map-get($sitenav-push, mobile);
+
+        @include breakpoint(tablet up) {
+            height: map-get($sitenav-push, tablet);
+        }
+    }
+
+    &.shrink {
+        @include breakpoint(tablet up) {
+            .sitenav__linkset {
+                height: 100vh;
+            }
+        }
     }
 }
 

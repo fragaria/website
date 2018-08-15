@@ -357,11 +357,16 @@ a {
 
     // Inline code
     code.highlighter-rouge {
-        // FIXME: this breaks grid as the capsize is different
         font-family: getFontFamily($monospacetype);
         background-color: $code-inline-background-color;
         word-break: break-word;
         padding: 0 0.2em;
+
+        @each $breakpoint, $size in $inline-monospace-sizes {
+            @include breakpoint($breakpoint only) {
+                font-size: $size;
+            }
+        }
     }
 
     // Code block

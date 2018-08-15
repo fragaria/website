@@ -106,21 +106,21 @@ $sharebox-variants: (
 // Breakpoint sizes from px to ems. Add more values here to add more breakpoints.
 // Change names if you prefer, it wont break the mixin as long as they are strings not just numbers.
 $breakpoints: (
-    zero: 0px,            // 0px       Mobile first
-    mobile: 640px,        // 640px   ~ Small tablet up
-    tablet-small: 800px,  // 800px   ~ Large tablet up
-    tablet: 1024px,       // 1024px  ~ Desktop up
-    desktop: 1600px       // 1600px  ~ Large desktop up
+    zero:           0px,            // 0px       Mobile first
+    mobile:         640px,          // 640px   ~ Small tablet up
+    tablet-small:   800px,          // 800px   ~ Large tablet up
+    tablet:         1024px,         // 1024px  ~ Desktop up
+    desktop:        1600px          // 1600px  ~ Large desktop up
 );
 
 // Root font-sizes for each breakpoint. Set to half desired line-height of body text.
 // ! Make sure to have as many sizes as breakpoints above.
 $rootsizes: (
-    zero: 15px,   // 30px line-height body text
-    mobile: 15px,   // 30px line-height body text
-    tablet-small: 15px,   // 30px line-height body text
-    tablet: 15px,   // 30px line-height body text
-    desktop: 15px,   // 30px line-height body text
+    zero:           15px,           // 30px line-height body text
+    mobile:         15px,           // 30px line-height body text
+    tablet-small:   15px,           // 30px line-height body text
+    tablet:         15px,           // 30px line-height body text
+    desktop:        15px,           // 30px line-height body text
 );
 
 $bodytype: (
@@ -140,7 +140,7 @@ $headingtype: (
 );
 
 $monospacetype: (
-    font-family: 'Menlo, monospace',
+    font-family: "'Source Code Pro', monospace",
     regular: 400,
     cap-height: 0.68
 );
@@ -205,6 +205,17 @@ $modular-scale: (
     )
 );
 
+// Text that uses monospace font can end up mixed in body font, hence we
+// need to fix the font size as it has different capsize.
+// @note: make sure to verify this against body font size and root size for the
+// breakpoint.
+$inline-monospace-sizes: (
+    zero: 18px,
+    mobile: 18px,
+    tablet-small: 18px,
+    tablet: 18px,
+    desktop: 18px,
+);
 
 // Sitenav settings
 
@@ -212,7 +223,6 @@ $sitenav-menu-height: (
     mobile: 5rem,
     tablet: 10rem,
 );
-
 
 // Hamburger settings
 // @see: https://jonsuh.com/hamburgers/

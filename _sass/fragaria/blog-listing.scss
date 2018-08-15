@@ -19,7 +19,9 @@
 
     &:first-child,
     & + & {
-        @include baselineAwareBorder($color: $blog-listing-splitter-border-color, $orientation: 'top');
+        @include breakpoint(tablet-small down) {
+            @include baseline-border($color: $blog-listing-splitter-border-color, $orientation: 'top');
+        }
     }
 
 
@@ -41,11 +43,6 @@
         &:first-child,
         &:last-child {
             padding: 0;
-        }
-
-        &:first-child,
-        & + & {
-            @include baselineAwareBorderCancel($orientation: 'top');
         }
 
         // anything but first posting in the row should have left padding
@@ -79,7 +76,7 @@
 
 // Cancels out horizontal divider of the first blog-listing__post
 .blog-listing--nofirstdivider .blog-listing__post:first-child {
-    @include baselineAwareBorderCancel($orientation: 'top');
+    @include baseline-border-cancel($orientation: 'top');
 }
 
 // this is a blog-listing that includes horizontal rule divider on tablet and larger
@@ -89,7 +86,7 @@
         .blog-listing__post:nth-child(1n + 4) {
             margin-top: 2rem;
             padding-top: 2rem;
-            @include baselineAwareBorder($color: $blog-listing-splitter-border-color, $width:2px, $orientation: 'top');
+            @include baseline-border($color: $blog-listing-splitter-border-color, $width:2px, $orientation: 'top');
         }
 
         .blog-listing__post-inner {

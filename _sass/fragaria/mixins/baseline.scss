@@ -6,16 +6,9 @@ $breakpoint-keys: map-keys($breakpoints);
 $sizes: map-values($rootsizes);
 $points: map-values($breakpoints);
 
-// Is value in scale in $modular-scale?
-@function in-modular-scale($scale, $key) {
-    $map: map-get($modular-scale, $scale);
-    $output: map-has-key($map, $key);
-    @return $output;
-}
-
-
 // Root font-size in %, outputted in correct breakpoints.
 @mixin rootsize {
+    // 16 is default font size for most browsers.
     font-size: strip-unit(nth($sizes, 1)) / 16 * 100%;
 
     // Loop through breakpoints.
@@ -28,9 +21,9 @@ $points: map-values($breakpoints);
 
 
 /**
- * Border implementation which doesn't break baseline.
+ * Border implementation which doesn't break baseline. It's done using position: absolute for :before.
  */
-@mixin baselineAwareBorder($color: $border-color, $width: 1px, $orientation: 'top', $offset: 0, $size: 100%) {
+@mixin baseline-border($color: $border-color, $width: 1px, $orientation: 'top', $offset: 0, $size: 100%) {
     position: relative;
 
     &:before {
@@ -51,8 +44,10 @@ $points: map-values($breakpoints);
     }
 }
 
-
-@mixin baselineAwareBorderCancel($orientation: 'top') {
+/**
+ * Cancel out baseline-aware border.
+ */
+@mixin baseline-border-cancel($orientation: 'top') {
     &:before {
         @if ($orientation == 'top') {
             border-top: 0;
@@ -64,6 +59,10 @@ $points: map-values($breakpoints);
     }
 }
 
+/**
+ * Outputs mixin content so that it's wrapped by media query in between
+ * given breakpoints (including the first and up-to second).
+ */
 @mixin span-breakpoints($first: null, $second: null) {
     $str: "";
 
@@ -87,8 +86,6 @@ $points: map-values($breakpoints);
         $str: $str + "(max-width: #{$width})"
     }
 
-    // @debug $first, $second, $str;
-
     @if $str == "" {
         @content;
     }
@@ -100,20 +97,14 @@ $points: map-values($breakpoints);
 }
 
 
-@mixin baseline-sizing($size, $push, $shift, $lineheight) {
-    font-size: #{$size}rem;
-    margin-bottom: #{$push}rem;
-    padding-top: #{$shift}rem;
-    line-height: #{$lineheight}rem;
-}
-
-
+/**
+ * Output font family and baseline alignment for given breakpoint and font settings.
+ */
 @mixin baseline-in-breakpoint($breakpoint, $fontsize, $font, $lineheight, $above, $below) {
     @if not map-has-key($breakpoints, $breakpoint) {
         @warn "Unknown breakpoint class: #{$breakpoint}"
     }
 
-    $font-value: type-of($fontsize);
     $cap-height: map-get($font, cap-height);
     $scale: map-get($modular-scale, $breakpoint);
     $size: map-get($scale, $fontsize);
@@ -122,10 +113,16 @@ $points: map-values($breakpoints);
     $baseline-shift: #{$above + (($size / 2 * (($lineheight * $rootsize / $size) - $cap-height)) / $rootsize + 0.00001)};
     $baseline-push: #{$below - (($size / 2 * (($lineheight * $rootsize / $size) - $cap-height)) / $rootsize + 0.00001)};
 
-    @include baseline-sizing($size / $rootsize, $baseline-push, $baseline-shift, $lineheight);
+    font-family: #{map-get($font, font-family)};
+    font-size: #{$size / $rootsize}rem;
+    margin-bottom: #{$baseline-push}rem;
+    padding-top: #{$baseline-shift}rem;
+    line-height: #{$lineheight}rem;
 }
 
-
+/**
+ * Output font family and baseline alignment for multiple media queries using breakpoint expression.
+ */
 @mixin baseline($fontsize, $font, $lineheight: 2, $above: 0, $below: 0, $breakpoint: null) {
     @if not $breakpoint {
         $breakpoint: zero up;
@@ -151,10 +148,7 @@ $points: map-values($breakpoints);
             @error "#{$dir} is not a valid direction value, use one of: up, down, only";
         }
 
-        // @debug $breakpoint, $dir, $bp-idx, $bps;
-
         @each $bp in $bps {
-            // @debug $bp, "|||", $bps, index($bps, $bp), length($bps);
             @include span-breakpoints(
                 if(index($breakpoints, $bp) == 1, null, $bp),
                 map-next-key($breakpoints, $bp)
@@ -165,7 +159,9 @@ $points: map-values($breakpoints);
     }
 }
 
-
+/**
+ * Output fontsize for given breakpoint.
+ */
 @mixin fontsize-in-breakpoint($breakpoint, $fontsize) {
     @if not map-has-key($breakpoints, $breakpoint) {
         @warn "Unknown breakpoint class: #{$breakpoint}"
@@ -178,7 +174,9 @@ $points: map-values($breakpoints);
     font-size: #{$size / $rootsize}rem;
 }
 
-
+/**
+ * Output fontsize for multiple media queries using breakpoint expression.
+ */
 @mixin fontsize($fontsize, $breakpoint: null) {
     @if not $breakpoint {
         $breakpoint: zero up;

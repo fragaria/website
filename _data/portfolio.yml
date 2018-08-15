@@ -99,15 +99,3 @@
   website:
     href: https://twitter.com/csas_devs
     caption: WebAPI Developers on Twitter
-- title: Pathfinder
-  desc: >
-    We’ve delivered a complete frontend solution for one of the Pathfinder transformation project apps for Komerční banka (Societe Generale Group). Besides featuring new tools for the loan management, it’s also packed with bunch of innovations. This is the first flagship project that puts our frontend development strategy implemented in the Fast project in place.
-  img: portfolio/kb.png
-  tags:
-    - angular
-    - typescript
-    - bootstrap
-  website:
-    href: https://www.kb.cz
-    caption: kb.cz
-

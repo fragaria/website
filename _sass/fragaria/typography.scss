@@ -81,7 +81,6 @@ a {
     h4,
     h5,
     h6 {
-        font-family: getFontFamily($headingtype);
         font-feature-settings: "dlig", "liga", "lnum", "kern";
         font-style: normal;
         font-weight: map-get($headingtype, bold);

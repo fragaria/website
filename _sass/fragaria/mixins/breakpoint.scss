@@ -48,7 +48,7 @@
     $bp: bp-to-em($bp, $rootsize);
 
     @if $bp-max {
-        $bp-max: bp-to-em($bp-max) - (1 / strip-unit($rootsize));
+        $bp-max: bp-to-em($bp-max) - 0.0001;
     }
 
     // Conditions to skip media query creation

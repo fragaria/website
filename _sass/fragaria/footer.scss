@@ -8,7 +8,7 @@
     align-items: center;
 
     // second top border
-    @include baselineAwareBorder($color: map-get($palette, black), $orientation: 'top', $width: 2px, $offset: 0);
+    @include baseline-border($color: map-get($palette, black), $orientation: 'top', $width: 2px, $offset: 0);
 
     @include breakpoint(tablet up) {
         align-items: flex-start;

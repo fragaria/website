@@ -73,7 +73,7 @@ následující adresářová struktura:
         /cs_CZ
             cs_CZ.aff           
             cs_CZ.dic
-            settings.yml`
+            settings.yml
 ```
 
 ### 2\. Instalace django-haystack

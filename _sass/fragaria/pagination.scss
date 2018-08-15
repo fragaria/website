@@ -10,6 +10,7 @@
     .pagination__anchor {
         font-family: getFontFamily($headingtype);
         font-weight: bold;
+        transition: #{$anchor-hover-transition};
 
         &:hover {
             color: map-get($palette, red);

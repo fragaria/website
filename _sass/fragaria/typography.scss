@@ -360,7 +360,7 @@ a {
     // Code blocks
 
     // Inline code
-    code.highlighter-rouge {
+    .highlighter-rouge {
         font-family: getFontFamily($monospacetype);
         background-color: $code-inline-background-color;
         word-break: break-word;
@@ -373,16 +373,14 @@ a {
         }
     }
 
-    // Code block
-    figure.highlight {
-        margin-bottom: 1rem;
+    .highlight {
         background-color: $code-block-background-color;
         overflow-x: scroll;
         line-height: 1rem;
         font-family: getFontFamily($monospacetype);
 
         code {
-            @include fontsize(iota);
+            @include fontsize(theta);
             @include codeHighlight();
             display: inline-block;
             padding: 1rem;
@@ -393,6 +391,11 @@ a {
             color: map-get($palette, gray-medium);
             margin-right: 1rem;
         }
+    }
+
+    // Code block
+    figure.highlight {
+        margin-bottom: 1rem;
     }
 
     // Letter space those capitals people, Jan Tschichold would be proud.

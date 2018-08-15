@@ -38,6 +38,7 @@
         min-width: 4rem;
         font-family: getFontFamily($headingtype);
         font-size: 300%;
+        transition: #{$anchor-hover-transition};
 
         @include breakpoint(tablet-small up) {
             font-size: 500%;

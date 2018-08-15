@@ -1,6 +1,7 @@
 function siteMenu(rootElem) {
-    const toggles = rootElem.getElementsByClassName('js-sitenav-menu-toggle');
-    const links = rootElem.getElementsByClassName('js-sitenav-link');
+    const toggles = rootElem.getElementsByClassName('js-sitenav-menu__toggle');
+    const links = rootElem.getElementsByClassName('js-sitenav__link');
+    const currentUrl = window.location.pathname;
 
     for (let toggle of toggles) {
         toggle.addEventListener('click', function () {
@@ -20,14 +21,31 @@ function siteMenu(rootElem) {
     }
 
     for (let link of links) {
-        link.addEventListener('click', function () {
-            rootElem.classList.add('sitenav-wrapper--noanim');
-            rootElem.classList.remove('sitenav-wrapper--show');
-            document.body.classList.remove('noscroll');
+        link.addEventListener('click', function (evt) {
+            const targetUrl = evt.target.closest('.js-sitenav-menu__anchor').getAttribute('href');
+            const targetSuffix = targetUrl.replace(currentUrl, '');
 
-            for (let toggle of toggles) {
-                toggle.classList.remove('is-active');
-                toggle.setAttribute('aria-expanded', 'false');
+            // id-based navigation on current page
+            if (targetSuffix.startsWith('#')) {
+                evt.preventDefault();
+
+                const sitenavWrap = rootElem;
+                const sitenavMenu = rootElem.getElementsByClassName('js-sitenav-menu')[0];
+                const sitenavMenuHeight = sitenavMenu.getBoundingClientRect().height;
+                const target = document.getElementById(targetSuffix.substring(1));
+                const offset = sitenavWrap.classList.contains('shrink') ?
+                    sitenavMenuHeight * 2 :
+                    sitenavMenuHeight;
+                window.scroll({top: target.offsetTop - offset, behavior: 'smooth'});
+
+                rootElem.classList.add('sitenav-wrapper--noanim');
+                rootElem.classList.remove('sitenav-wrapper--show');
+                document.body.classList.remove('noscroll');
+
+                for (let toggle of toggles) {
+                    toggle.classList.remove('is-active');
+                    toggle.setAttribute('aria-expanded', 'false');
+                }
             }
         });
 

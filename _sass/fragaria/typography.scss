@@ -31,6 +31,10 @@ body {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+
+    // Only implemented in FF so-far, uses smootscroll polyfill for other browsers.
+    // @see: https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior
+    scroll-behavior: smooth;
 }
 
 // Links.

@@ -64,6 +64,42 @@ $points: map-values($breakpoints);
     }
 }
 
+@mixin span-breakpoints($first: null, $second: null) {
+    $str: "";
+
+    @if $first {
+        $ratsize: map-get($breakpoints, $first) / map-get($rootsizes, $first);
+        $width: strip-unit($ratsize) * 1em;
+
+        @if $width > 0em {
+            $str: $str + "(min-width: #{$width})"
+        }
+    }
+
+    @if $second {
+        @if $str != "" {
+            $str: $str + " and ";
+        }
+
+        $rootsize: map-get($rootsizes, $second);
+        $ratsize: map-get($breakpoints, $second) / $rootsize;
+        $width: strip-unit($ratsize) * 1em - 0.0001;
+        $str: $str + "(max-width: #{$width})"
+    }
+
+    // @debug $first, $second, $str;
+
+    @if $str == "" {
+        @content;
+    }
+    @else {
+        @media screen and #{$str} {
+            @content;
+        }
+    }
+}
+
+
 @mixin baseline-sizing($size, $push, $shift, $lineheight) {
     font-size: #{$size}rem;
     margin-bottom: #{$push}rem;
@@ -90,7 +126,7 @@ $points: map-values($breakpoints);
 }
 
 
-@mixin baseline($fontsize, $font, $lineheight: 2, $above: 2, $below: 2, $breakpoint: null) {
+@mixin baseline($fontsize, $font, $lineheight: 2, $above: 0, $below: 0, $breakpoint: null) {
     @if not $breakpoint {
         $breakpoint: zero up;
     }
@@ -99,10 +135,13 @@ $points: map-values($breakpoints);
     $dir: if(length($breakpoint) > 1, nth($breakpoint, 2), only);
 
     @if $dir == only {
-        @include baseline-in-breakpoint($bp-val, $fontsize, $font, $lineheight, $above, $below);
+        @include span-breakpoints($bp-val, map-next-key($breakpoints, $bp-val)) {
+            @include baseline-in-breakpoint($bp-val, $fontsize, $font, $lineheight, $above, $below);
+        }
     } @else {
         $bps: ();
         $bp-idx: index($breakpoint-keys, $bp-val);
+
 
         @if $dir == up {
             $bps: list-slice($breakpoint-keys, $bp-idx);
@@ -112,15 +151,14 @@ $points: map-values($breakpoints);
             @error "#{$dir} is not a valid direction value, use one of: up, down, only";
         }
 
-        @each $bp in $bps {
-            $rat: map-get($breakpoints, $bp) / map-get($rootsizes, $bp);
-            $min-width: strip-unit($rat) * 1em;
+        // @debug $breakpoint, $dir, $bp-idx, $bps;
 
-            @if $min-width > 0em {
-                @media screen and (min-width: $min-width) {
-                    @include baseline-in-breakpoint($bp, $fontsize, $font, $lineheight, $above, $below);
-                }
-            } @else {
+        @each $bp in $bps {
+            // @debug $bp, "|||", $bps, index($bps, $bp), length($bps);
+            @include span-breakpoints(
+                if(index($breakpoints, $bp) == 1, null, $bp),
+                map-next-key($breakpoints, $bp)
+            ) {
                 @include baseline-in-breakpoint($bp, $fontsize, $font, $lineheight, $above, $below);
             }
         }
@@ -150,7 +188,9 @@ $points: map-values($breakpoints);
     $dir: if(length($breakpoint) > 1, nth($breakpoint, 2), only);
 
     @if $dir == only {
-        @include fontsize-in-breakpoint($bp-val, $fontsize);
+        @include span-breakpoints($bp-val, map-next-key($breakpoints, $bp-val)) {
+            @include fontsize-in-breakpoint($bp-val, $fontsize);
+        }
     } @else {
         $bps: ();
         $bp-idx: index($breakpoint-keys, $bp-val);
@@ -164,14 +204,10 @@ $points: map-values($breakpoints);
         }
 
         @each $bp in $bps {
-            $rat: map-get($breakpoints, $bp) / map-get($rootsizes, $bp);
-            $min-width: strip-unit($rat) * 1em;
-
-            @if $min-width > 0em {
-                @media screen and (min-width: $min-width) {
-                    @include fontsize-in-breakpoint($bp, $fontsize);
-                }
-            } @else {
+            @include span-breakpoints(
+                if(index($breakpoints, $bp) == 1, null, $bp),
+                map-next-key($breakpoints, $bp)
+            ) {
                 @include fontsize-in-breakpoint($bp, $fontsize);
             }
         }

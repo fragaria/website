@@ -32,7 +32,7 @@
     @if type-of($bp-name) == "string" {
         @if map-has-key($breakpoints, $bp-name) {
             @if $dir == "only" or $dir == "down" {
-                $bp-max: map-next($breakpoints, $bp-name);
+                $bp-max: map-next-value($breakpoints, $bp-name);
             }
 
             $bp: map-get($breakpoints, $bp-name);

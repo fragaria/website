@@ -104,7 +104,7 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
     order: 2;
     flex: 1;
 
-    @include baseline(delta, $headingtype, 3.5, 1);
+    @include baseline(delta, $headingtype, $lineheight: 3.5, $below: 1);
 
     @include breakpoint(tablet up) {
         padding: 1rem;
@@ -151,8 +151,8 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
     }
 
     .sitenav__link {
-        @include baseline(beta, $headingtype, 3.5, 1, $breakpoint: tablet-small down);
-        @include baseline(beta, $headingtype, 5, 1, $breakpoint: tablet up);
+        @include baseline(beta, $headingtype, $lineheight: 3.5, $below: 1, $breakpoint: tablet-small down);
+        @include baseline(beta, $headingtype, $lineheight: 5, $below: 1, $breakpoint: tablet up);
     }
 }
 

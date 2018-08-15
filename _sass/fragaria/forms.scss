@@ -14,7 +14,7 @@
     display: block;
     font-family: getFontFamily($headingtype);
 
-    @include baseline(eta, $headingtype, 2, 1);
+    @include baseline(eta, $headingtype, $lineheight: 2, $below: 1);
 }
 
 .form-control {

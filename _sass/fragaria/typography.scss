@@ -93,45 +93,44 @@ a {
         @include baseline(
             $fontsize: gamma,
             $font: $headingtype,
-            $lineheight: 3,
-            $below: 0
+            $lineheight: 3
         );
     }
 
     // Heading level 2.
     h2,
     .beta {
-        @include baseline(delta, $headingtype, 3, 0);
+        @include baseline(delta, $headingtype, $lineheight: 3);
     }
 
     // Heading level 3.
     h3,
     .gamma {
-        @include baseline(epsilon, $headingtype, 3, 0);
+        @include baseline(epsilon, $headingtype, $lineheight: 3);
     }
 
     // Heading level 4.
     h4,
     .delta {
-        @include baseline(zeta, $headingtype, 2, 0);
+        @include baseline(zeta, $headingtype, $lineheight: 2);
     }
 
     // Heading level 5.
     h5,
     .epsilon {
-        @include baseline(eta, $headingtype, 2, 0);
+        @include baseline(eta, $headingtype, $lineheight: 2);
     }
 
     // Heading level 6.
     h6,
     .zeta {
-        @include baseline(theta, $headingtype, 2, 0);
+        @include baseline(theta, $headingtype, $lineheight: 2);
     }
 
     // Lists.
     ul,
     ol {
-        @include baseline(eta, $bodytype, 2, 2);
+        @include baseline(eta, $bodytype, $lineheight: 2, $below: 2);
         li {
             font-feature-settings: "kern", "onum", "liga";
             margin-left: 2rem;
@@ -206,7 +205,7 @@ a {
 
     // Definition lists.
     dl {
-        @include baseline(zeta, $bodytype, 2, 2);
+        @include baseline(zeta, $bodytype, $lineheight: 2, $below: 2);
 
         dt,
         dd {
@@ -231,7 +230,7 @@ a {
         font-style: normal;
         width: 100%;
 
-        @include baseline(eta, $bodytype, 2, 2);
+        @include baseline(eta, $bodytype, $lineheight: 2, $below: 2);
 
         thead {
             th {
@@ -239,14 +238,14 @@ a {
                 font-family: getFontFamily($bodytype);
                 font-weight: map-get($bodytype, bold);
 
-                @include baseline(eta, $bodytype, 2, 0);
+                @include baseline(eta, $bodytype, $lineheight: 2);
             }
         }
 
         tbody {
             td {
                 font-family: getFontFamily($bodytype);
-                @include baseline(eta, $bodytype, 2, 0);
+                @include baseline(eta, $bodytype, $lineheight: 2);
             }
         }
     }
@@ -279,10 +278,10 @@ a {
         color: $caption-color;
         font-style: normal;
 
-        @include baseline(eta, $bodytype, 1.5, 1);
+        @include baseline(eta, $bodytype, $lineheight: 1.5, $below: 1);
 
         &--nopad {
-            @include baseline(eta, $bodytype, 2, 0);
+            @include baseline(eta, $bodytype, $lineheight: 2);
         }
     }
 
@@ -359,9 +358,9 @@ a {
 
     // Inline code
     code.highlighter-rouge {
+        // FIXME: this breaks grid as the capsize is different
         font-family: getFontFamily($monospacetype);
         background-color: $code-inline-background-color;
-        font-size: 1rem;
         word-break: break-word;
         padding: 0 0.2em;
     }

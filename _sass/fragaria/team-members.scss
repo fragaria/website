@@ -55,7 +55,11 @@
     text-align: center;
 
     .team-member__name {
-        @include baseline(epsilon, $headingtype, $below: 0);
+        @include baseline(epsilon, $headingtype);
+    }
+
+    .team-member__alt {
+        @include baseline(eta, $bodytype, $below: 1);
     }
 }
 

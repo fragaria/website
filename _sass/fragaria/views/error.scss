@@ -30,6 +30,6 @@
     img {
         height: 6rem;
 
-        @include baseline(delta, $headingtype, 0, 2)
+        @include baseline(delta, $headingtype, $lineheight: 0, $below: 2)
     }
 }

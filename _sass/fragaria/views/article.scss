@@ -63,17 +63,17 @@ $article-content-width: 40rem;
     }
 
     h1 {
-        @include baseline(gamma, $headingtype, $lineheight: 3, $below: 0, $breakpoint: tablet-small down);
+        @include baseline(gamma, $headingtype, $lineheight: 3, $breakpoint: tablet-small down);
         @include baseline(gamma, $headingtype, $lineheight: 3, $below: 1, $breakpoint: tablet up);
     }
 
     h2 {
-        @include baseline(delta, $headingtype, $lineheight: 2, $below: 0, $above: 2, $breakpoint: tablet-small down);
+        @include baseline(delta, $headingtype, $lineheight: 2, $above: 2, $breakpoint: tablet-small down);
         @include baseline(delta, $headingtype, $lineheight: 3, $below: 1, $above: 3, $breakpoint: tablet up);
     }
 
     h3 {
-        @include baseline(epsilon, $headingtype, $lineheight: 3, $below: 0, $breakpoint: tablet-small down);
+        @include baseline(epsilon, $headingtype, $lineheight: 3, $breakpoint: tablet-small down);
         @include baseline(epsilon, $headingtype, $lineheight: 2, $below: 3, $breakpoint: tablet up);
     }
 
@@ -99,7 +99,7 @@ $article-content-width: 40rem;
 
     .figure__caption {
         font-weight: bold;
-        @include baseline(theta, $bodytype, $lineheight: 2, $below: 0);
+        @include baseline(theta, $bodytype, $lineheight: 2);
     }
 
     .inline-figure-container {

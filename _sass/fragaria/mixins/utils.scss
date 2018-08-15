@@ -56,14 +56,14 @@
     @return $num / ($num * 0 + 1);
 }
 
-/// Find the next key in a map.
+/// Find the next value in a map.
 /// @access private
 ///
 /// @param {Map} $map - Map to traverse.
 /// @param {Mixed} $key - Key to use as a starting point.
 ///
 /// @returns {Mixed} The value for the key after `$key`, if `$key` was found. If `$key` was not found, or `$key` was the last value in the map, returns `null`.
-@function map-next($map, $key) {
+@function map-next-value($map, $key) {
     // Store the values of the map as a list, so we can access them with nth
     $values: map-values($map);
 
@@ -87,6 +87,25 @@
     @else {
         @return nth($values, $i);
     }
+}
+
+
+/// Find the next key in a map.
+/// @access private
+///
+/// @param {Map} $map - Map to traverse.
+/// @param {Mixed} $key - Key to use as a starting point.
+///
+/// @returns {Mixed} The key after `$key`, if `$key` was found. If `$key` was not found, or `$key` was the last value in the map, returns `null`.
+@function map-next-key($map, $key) {
+    $keys: map-keys($map);
+    $idx: index($keys, $key);
+
+    @if ($idx == length($keys)) {
+        @return null;
+    }
+
+    @return nth($keys, $idx + 1);
 }
 
 

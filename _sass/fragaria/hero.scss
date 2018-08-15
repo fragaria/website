@@ -16,8 +16,9 @@
 
     // need to be scoped to take precendence over .typest
     .hero__headline {
-        @include baseline(beta, $headingtype, 5, 0, $breakpoint: tablet-small down);
-        @include baseline(beta, $headingtype, 3, 0, $breakpoint: tablet up);
+        @include baseline(beta, $headingtype, $lineheight: 3, $breakpoint: mobile down);
+        @include baseline(beta, $headingtype, $lineheight: 4, $breakpoint: tablet-small only);
+        @include baseline(beta, $headingtype, $lineheight: 5, $breakpoint: tablet up);
     }
 
     .hero__headline {

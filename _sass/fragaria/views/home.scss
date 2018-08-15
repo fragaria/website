@@ -14,8 +14,8 @@
     margin-right: auto;
     text-align: center;
 
-    @include baseline(beta, $headingtype, 3, 0, $breakpoint: mobile down);
-    @include baseline(beta, $headingtype, 5, 0, $breakpoint: tablet-small up);
+    @include baseline(beta, $headingtype, $lineheight: 3, $breakpoint: mobile down);
+    @include baseline(beta, $headingtype, $lineheight: 5, $breakpoint: tablet-small up);
 
     i {
         font-style: normal;

@@ -33,7 +33,7 @@
         display: block;
         text-align: center;
         margin-bottom: 2rem;
-        // color: map-get($palette, white);
+        color: map-get($palette, white);
 
         // cancel color transition for the featured
         &:hover .blog-posting__headline,
@@ -43,7 +43,6 @@
         }
 
         .blog-posting__media {
-            display: none;
             position: absolute;
             top: 0;
             left: 0;
@@ -71,8 +70,8 @@
         .blog-posting__headline {
             text-decoration: none;
 
-            @include baseline(alpha, $headingtype, 3, 1, $breakpoint: tablet-small down);
-            @include baseline(alpha, $headingtype, 4, 0, $breakpoint: tablet up);
+            @include baseline(alpha, $headingtype, $lineheight: 3, $below: 1, $breakpoint: tablet-small down);
+            @include baseline(alpha, $headingtype, $lineheight: 5, $breakpoint: tablet up);
         }
 
         .blog-posting__meta {
@@ -85,7 +84,7 @@
             margin-right: auto;
             font-weight: bold;
 
-            @include baseline(zeta, $bodytype, 2, 1);
+            @include baseline(zeta, $bodytype, $lineheight: 2, $below: 1);
         }
 
         .blog-posting__cta-button:hover {
@@ -132,7 +131,7 @@
     .blog-posting__excerpt {
         hyphens: auto;
 
-        @include baseline(eta, $bodytype, 2, 0);
+        @include baseline(eta, $bodytype, $lineheight: 2);
     }
 
     .blog-posting__meta {
@@ -143,7 +142,7 @@
         font-family: getFontFamily($headingtype);
         text-decoration: none;
 
-        @include baseline(gamma, $headingtype, 3, 1);
+        @include baseline(gamma, $headingtype, $lineheight: 3, $below: 1);
     }
 }
 

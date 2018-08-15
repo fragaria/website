@@ -131,12 +131,9 @@ function shirkSidenavOnScroll (element) {
     const onScroll = () => {
         const scrolled = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
 
-        if (scrolled > 100) {
-            element.classList.add('shrink');
-        }
-        else {
+        scrolled > 100 ?
+            element.classList.add('shrink') :
             element.classList.remove('shrink');
-        }
     }
 
     const raf = window.requestAnimationFrame ||
@@ -147,6 +144,8 @@ function shirkSidenavOnScroll (element) {
     let lastScrollTop = document.documentElement.scrollTop;
 
     if (raf) {
+        // make sure to run it first time too
+        onScroll();
         loop();
     }
 

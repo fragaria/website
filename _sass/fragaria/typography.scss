@@ -363,7 +363,7 @@ a {
         padding: 0 0.2em;
 
         @each $breakpoint, $size in $inline-monospace-sizes {
-            @include breakpoint($breakpoint only) {
+            @include breakpoint($breakpoint up) {
                 font-size: $size;
             }
         }

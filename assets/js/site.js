@@ -110,7 +110,7 @@ function expandPortfolio(element) {
  * @param {HTMLElement} element
  */
 function shirkSidenavOnScroll (element) {
-    document.onscroll = function() {
+    const onScroll = () => {
         const scrolled = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
 
         if (scrolled > 100) {
@@ -118,6 +118,32 @@ function shirkSidenavOnScroll (element) {
         }
         else {
             element.classList.remove('shrink');
+        }
+    }
+
+    const raf = window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        window.oRequestAnimationFrame;
+    let lastScrollTop = document.documentElement.scrollTop;
+
+    if (raf) {
+        loop();
+    }
+
+    function loop() {
+        let scrollTop = document.documentElement.scrollTop;
+
+        if (lastScrollTop === scrollTop) {
+            raf(loop);
+            return;
+        } else {
+            lastScrollTop = scrollTop;
+
+            // fire scroll function if scrolls vertically
+            onScroll();
+            raf(loop);
         }
     }
 }

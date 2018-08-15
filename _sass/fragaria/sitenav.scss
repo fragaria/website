@@ -14,7 +14,6 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
 .sitenav {
     position: fixed;
     width: 100%;
-    background: map-get($palette, white);
     z-index: 20;
 }
 
@@ -65,7 +64,7 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
     position: relative;
     // Menu is above the linkset and the linkset slides from the bottom of it
     z-index: 2;
-    background: map-get($palette, white);
+    background: transparentize(map-get($palette, white), 0.05);
 
     @include breakpoint(tablet-small up) {
         margin-left: -1rem;
@@ -196,6 +195,10 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
                 height: 100vh;
             }
         }
+    }
+
+    .sitenav__menu {
+        background: map-get($palette, white);
     }
 }
 

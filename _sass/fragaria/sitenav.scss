@@ -22,28 +22,17 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
     margin: 0 auto;
 }
 
-.sitenav,
-.sitenav__menu {
-    // Height is needed so that .sitenav__linkset doesn't make the gap.
-    height: map-get($sitenav-menu-height, mobile);
-
-    @include breakpoint(tablet up) {
-            transition: height .15s linear;
-        height: map-get($sitenav-menu-height, tablet);
-        will-change: height;
-    }
-}
-
 @include breakpoint(tablet up) {
     .sitenav.shrink {
-        &,
         .sitenav__menu {
-            height: map-get($sitenav-menu-height, tablet)/2.5;
+            // height: map-get($sitenav-menu-height, tablet)/2.5;
+            transform: translate3d(0, -3.5rem, 0);
+            border-bottom: 1px solid map-get($palette, black);
         }
 
         .sitenav__brand img{
-            height: 6rem;
-            transform: translate3d(0, 1.5rem, 0);
+            // height: 6rem;
+            transform: translate3d(0, 2.5rem, 0) scale(0.8);
         }
 
         .sitenav__linkset {
@@ -57,14 +46,16 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
 .sitenav__menu {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     font-family: getFontFamily($headingtype);
     font-weight: map-get($headingtype, semi);
     // necessary for z-index
     position: relative;
     // Menu is above the linkset and the linkset slides from the bottom of it
     z-index: 2;
-    background: transparentize(map-get($palette, white), 0.05);
+
+    background: map-get($palette, white);
+    transition: transform .15s linear;
 
     @include breakpoint(tablet-small up) {
         margin-left: -1rem;
@@ -78,20 +69,33 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
     margin: 0 0 0 1rem;
 
     img {
-        transform: translate3d(0, .3rem, 0);
+        transform: translate3d(0, .5rem, 0);
         height: 3rem;
 
+
         @include breakpoint(tablet up) {
-            transition: height .15s linear, transform .15s linear;
-            height: 8rem;
-            will-change: height, translate
+            height: 10rem;
+            margin-bottom: -4rem;
+            transition: transform .15s linear;
+            will-change: translate, scale;
         }
     }
     // logo image scales up on bigger screens
     @include breakpoint(tablet up) {
+        position: relative;
         margin: 0 5.1rem 0 0;
         padding: .5em;
         order: 2;
+
+        &:before {
+            content: ' ';
+            background: map-get($palette, white);
+            position: absolute;
+            top: 116px;
+            height: .55rem;
+            width: 100%;
+            left: 0;
+        }
     }
 }
 
@@ -107,6 +111,7 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
 
     @include breakpoint(tablet up) {
         padding: 1rem;
+        line-height: 1.3;
         order: 1;
         flex: 0;
     }
@@ -163,7 +168,6 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
     background: map-get($palette, white);
     pointer-events: none;
     transition: transform .3s $sitenav-slide-transition, opacity .15s $sitenav-slide-transition;
-    // transition-property: opacity, transform;
     will-change: opacity, transform, height;
 
     @include breakpoint(tablet up) {

@@ -1,2 +1,7 @@
 <script src="{{ '/assets/js/smoothscroll.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/' | relative_url }}{% if jekyll.environment == 'production' %}{{ 'site.js' | bust_js_cache }}{% else %}site.js{% endif %}"></script>
+
+{% if site.service_worker.enabled %}
+<!-- register service worker -->
+<script type="text/javascript" src="{{ '/assets/js/register-sw.js' | relative_url }}"></script>
+{% endif %}

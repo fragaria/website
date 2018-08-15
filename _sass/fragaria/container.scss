@@ -1,5 +1,9 @@
 .page-container {
     text-align: center;
+
+    &.noscroll {
+        overflow: hidden;
+    }
 }
 
 .page-container__inner {
@@ -7,5 +11,10 @@
     max-width: $page-container-max-width;
     margin-left: auto;
     margin-right: auto;
+    padding-top: map-get($sitenav-menu-height, mobile);
     text-align: left;
+
+    @include deviceBreakpoint(tablet) {
+       padding-top: map-get($sitenav-menu-height, tablet);
+    }
 }

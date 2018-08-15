@@ -1,7 +1,3 @@
-$sitenav-menu-height: (
-    mobile: 5rem,
-    tablet: 9rem,
-);
 $sitenav-push: (
     mobile: calc(100vh - #{map-get($sitenav-menu-height, mobile)}),
     tablet: calc(100vh - #{map-get($sitenav-menu-height, tablet)}),
@@ -15,11 +11,17 @@ $sitenav-push-negative: (
 );
 $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
 
-// .sitenav {
-//     position: fixed;
-//     width: 100%;
-//     background: map-get($palette, white)
-// }
+.sitenav {
+    position: fixed;
+    width: 100%;
+    background: map-get($palette, white);
+    z-index: 20;
+}
+
+.sitenav__container {
+    max-width: $page-container-max-width;
+    margin: 0 auto;
+}
 
 .sitenav,
 .sitenav__menu {
@@ -27,7 +29,27 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
     height: map-get($sitenav-menu-height, mobile);
 
     @include deviceBreakpoint(tablet) {
+        transition: height .15s linear;
         height: map-get($sitenav-menu-height, tablet);
+        will-change: height;
+    }
+}
+
+@include deviceBreakpoint(tablet) {
+    .sitenav.shrink {
+        &,
+        .sitenav__menu {
+            height: map-get($sitenav-menu-height, tablet)/2.5;
+        }
+
+        .sitenav__brand img{
+            height: 6rem;
+            transform: translate3d(0, 1.5rem, 0);
+        }
+
+        .sitenav__linkset {
+
+        }
     }
 }
 
@@ -46,7 +68,6 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
     background: map-get($palette, white);
 
     @include deviceBreakpoint(tablet-small) {
-        padding-top: 1rem;
         margin-left: -1rem;
         margin-right: -1rem;
     }
@@ -58,32 +79,35 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
     margin: 0 0 0 1rem;
 
     img {
-        margin-top: .5rem;
+        transform: translate3d(0, .3rem, 0);
         height: 3rem;
 
         @include deviceBreakpoint(tablet) {
+            transition: height .15s linear, transform .15s linear;
             height: 8rem;
+            will-change: height, translate
         }
     }
     // logo image scales up on bigger screens
     @include deviceBreakpoint(tablet) {
-        margin: 0 4.7rem 0 0;
-        background: map-get($palette, white);
+        margin: 0 5.1rem 0 0;
         padding: .5em;
         order: 2;
     }
 }
 
 .sitenav__company {
-    padding: 1rem;
+    padding: 1rem 1rem 1rem .5rem;
     transition: #{$anchor-hover-transition};
     text-transform: uppercase;
+    text-align: left;
     order: 2;
     flex: 1;
 
     @include sassline(delta, $headingtype, 3.5, 1, all);
 
     @include deviceBreakpoint(tablet) {
+        padding: 1rem;
         order: 1;
         flex: 0;
     }
@@ -97,8 +121,6 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
 .sitenav__linkset {
     display: flex;
     width: 100%;
-    height: map-get($sitenav-push, mobile);
-    min-height: 8rem;
     padding-top: map-get($sitenav-menu-height, mobile)/2;
     list-style-type: none;
     flex-direction: column;
@@ -106,9 +128,9 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
     justify-content: center;
     // Menu is above the linkset and the linkset slides from the bottom of it
     z-index: 1;
+    height: 0;
 
     @include deviceBreakpoint(tablet) {
-        height: map-get($sitenav-push, tablet);
         padding-top: map-get($sitenav-menu-height, tablet)/2;
         justify-content: flex-start;
     }
@@ -139,10 +161,11 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
 .sitenav__linkset {
     transform: translate3d(0, map-get($sitenav-push-negative, mobile), 0);
     opacity: 0;
+    background: map-get($palette, white);
     pointer-events: none;
     transition: transform .3s $sitenav-slide-transition, opacity .15s $sitenav-slide-transition;
     // transition-property: opacity, transform;
-    will-change: opacity, transform,;
+    will-change: opacity, transform, height;
 
     @include deviceBreakpoint(tablet) {
         transform: translate3d(0, map-get($sitenav-push-negative, tablet), 0);
@@ -153,12 +176,6 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
     }
 }
 
-.sitenav-wrapper__push {
-    transform: translate3d(0, 0, 0);
-    transition: transform .3s $sitenav-slide-transition;
-    will-change: transform;
-}
-
 /* Styles when menu is enabled */
 .sitenav-wrapper--show {
     // Unshift linkset
@@ -166,20 +183,10 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
         transform: translate3d(0, 0, 0);
         opacity: 1;
         pointer-events: all;
-    }
-
-    // Push the content by same space as the linkset
-    .sitenav-wrapper__push {
-        transform: translate3d(0, map-get($sitenav-push, mobile), 0);
-
-        @include deviceBreakpoint(tablet) {
-            transform: translate3d(0, map-get($sitenav-push, tablet), 0);
-        }
+        height: 100vh;
     }
 }
 
-.sitenav-wrapper--noanim .sitenav-wrapper__push,
 .sitenav-wrapper--noanim .sitenav__linkset {
     transition: none;
 }
-

@@ -1,23 +1,25 @@
-<div class="content-block content-block__cover--mobile">
-    <nav class="sitenav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-        <div class="sitenav__menu">
-            <a href="{{ '/' | relative_url }}" class="sitenav__company typeset__anchor--nounderline" itemprop="url"><span itemprop="name">Fragaria</span></a>
+<nav class="sitenav js-sitenav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <div class="sitenav__container">
+        <div class="content-block content-block__cover--mobile">
+            <div class="sitenav__menu">
+                <a href="{{ '/' | relative_url }}" class="sitenav__company typeset__anchor--nounderline" itemprop="url"><span itemprop="name">Fragaria</span></a>
 
-            <a class="sitenav__brand" href="{{ '/' | relative_url }}">
-                <img alt="{{ site.company.official_name }}" src="{{ '/assets/img/strawberry.svg' | relative_url }}">
-            </a>
+                <a class="sitenav__brand" href="{{ '/' | relative_url }}">
+                    <img alt="{{ site.company.official_name }}" src="{{ '/assets/img/strawberry.svg' | relative_url }}">
+                </a>
 
-            <button class="hamburger hamburger--collapse js-sitenav-menu-toggle" type="button" aria-label="Menu" aria-controls="navigation" aria-expanded="false">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
+                <button class="hamburger hamburger--collapse js-sitenav-menu-toggle" type="button" aria-label="Menu" aria-controls="navigation" aria-expanded="false">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+
+            <ul class="sitenav__linkset">
+                {% for menuitem in site.data.sitenav %}
+                    <li class="sitenav__linkset-item js-sitenav-link"><a href="{{ menuitem.url | relative_url }}" class="sitenav__link typeset__anchor--nounderline" itemprop="url"><span itemprop="name">{{ menuitem.name }}</span></a></li>
+                {% endfor %}
+            </ul>
         </div>
-
-        <ul class="sitenav__linkset">
-            {% for menuitem in site.data.sitenav %}
-                <li class="sitenav__linkset-item js-sitenav-link"><a href="{{ menuitem.url | relative_url }}" class="sitenav__link typeset__anchor--nounderline" itemprop="url"><span itemprop="name">{{ menuitem.name }}</span></a></li>
-            {% endfor %}
-        </ul>
-    </nav>
-</div>
+    </div>
+</nav>

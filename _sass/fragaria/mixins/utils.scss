@@ -109,6 +109,9 @@
 }
 
 
+/**
+ * Creates a new SASS list by slicing the provided.
+ */
 @function list-slice($list, $start: 1, $end: length($list)) {
     $result: null;
 

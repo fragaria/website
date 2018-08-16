@@ -33,6 +33,35 @@
     {
       "icon": {
         "paths": [
+          "M726 298c118 0 212 96 212 214s-94 214-212 214h-172v-82h172c72 0 132-60 132-132s-60-132-132-132h-172v-82h172zM342 554v-84h340v84h-340zM166 512c0 72 60 132 132 132h172v82h-172c-118 0-212-96-212-214s94-214 212-214h172v82h-172c-72 0-132 60-132 132z"
+        ],
+        "attrs": [
+          {}
+        ],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "link"
+        ],
+        "grid": 24
+      },
+      "attrs": [
+        {}
+      ],
+      "properties": {
+        "order": 1,
+        "id": 1,
+        "prevSize": 24,
+        "code": 59664,
+        "name": "link"
+      },
+      "setIdx": 1,
+      "setId": 6,
+      "iconIdx": 0
+    },
+    {
+      "icon": {
+        "paths": [
           "M810 640v-86h-84v86h84zM810 810v-84h-84v84h84zM554 298v-84h-84v84h84zM554 470v-86h-84v86h84zM554 640v-86h-84v86h84zM554 810v-84h-84v84h84zM298 470v-86h-84v86h84zM298 640v-86h-84v86h84zM298 810v-84h-84v84h84zM640 470h256v426h-768v-598h256v-84l128-128 128 128v256z"
         ],
         "attrs": [
@@ -57,7 +86,7 @@
       },
       "setIdx": 1,
       "setId": 6,
-      "iconIdx": 0
+      "iconIdx": 1
     },
     {
       "icon": {
@@ -215,7 +244,7 @@
       },
       "setIdx": 7,
       "setId": 0,
-      "iconIdx": 0
+      "iconIdx": 1
     },
     {
       "icon": {
@@ -245,7 +274,7 @@
       },
       "setIdx": 7,
       "setId": 0,
-      "iconIdx": 1
+      "iconIdx": 2
     },
     {
       "icon": {
@@ -276,7 +305,7 @@
       },
       "setIdx": 7,
       "setId": 0,
-      "iconIdx": 3
+      "iconIdx": 4
     },
     {
       "icon": {
@@ -309,7 +338,7 @@
       },
       "setIdx": 7,
       "setId": 0,
-      "iconIdx": 4
+      "iconIdx": 5
     },
     {
       "icon": {
@@ -340,7 +369,7 @@
       },
       "setIdx": 7,
       "setId": 0,
-      "iconIdx": 5
+      "iconIdx": 6
     },
     {
       "icon": {
@@ -372,7 +401,7 @@
       },
       "setIdx": 7,
       "setId": 0,
-      "iconIdx": 6
+      "iconIdx": 7
     },
     {
       "icon": {
@@ -406,7 +435,7 @@
       },
       "setIdx": 7,
       "setId": 0,
-      "iconIdx": 7
+      "iconIdx": 8
     },
     {
       "icon": {
@@ -438,7 +467,7 @@
       },
       "setIdx": 7,
       "setId": 0,
-      "iconIdx": 8
+      "iconIdx": 9
     },
     {
       "icon": {
@@ -469,7 +498,7 @@
       },
       "setIdx": 7,
       "setId": 0,
-      "iconIdx": 9
+      "iconIdx": 10
     }
   ],
   "height": 1024,

@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?msgmt6');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?msgmt6#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?msgmt6') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?msgmt6') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?msgmt6##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?e65adk');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?e65adk#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?e65adk') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?e65adk') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?e65adk##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -29,6 +29,11 @@
 .icon--open-source {
   &:before {
     content: $icon--open-source; 
+  }
+}
+.icon--link {
+  &:before {
+    content: $icon--link; 
   }
 }
 .icon--city {

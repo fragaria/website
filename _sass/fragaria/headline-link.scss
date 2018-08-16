@@ -1,0 +1,26 @@
+.headline-link,
+.typeset .headline-link {
+    user-select: none;
+    visibility: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    color: map-get($palette, gray-dark);
+    text-decoration: none;
+    padding-left: .25rem;
+
+    i {
+        display: block;
+        font-style: normal;
+    }
+}
+
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover {
+    .headline-link {
+        visibility: visible;
+    }
+}

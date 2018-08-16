@@ -1,9 +1,9 @@
 function siteMenu(rootElem) {
-    const toggles = rootElem.getElementsByClassName('js-sitenav-menu__toggle');
-    const links = rootElem.getElementsByClassName('js-sitenav__link');
-    const currentUrl = window.location.pathname;
+    var toggles = rootElem.getElementsByClassName('js-sitenav-menu__toggle');
+    var links = rootElem.getElementsByClassName('js-sitenav__link');
+    var currentUrl = window.location.pathname;
 
-    for (let toggle of toggles) {
+    for (var toggle of toggles) {
         toggle.addEventListener('click', function () {
             rootElem.classList.remove('sitenav-wrapper--noanim');
             rootElem.classList.toggle('sitenav-wrapper--show');
@@ -20,27 +20,27 @@ function siteMenu(rootElem) {
         });
     }
 
-    for (let link of links) {
+    for (var link of links) {
         link.addEventListener('click', function (evt) {
-            const targetAnchor = evt.target.closest('.js-sitenav-menu__anchor');
+            var targetAnchor = evt.target.closest('.js-sitenav-menu__anchor');
 
             if (! targetAnchor) {
                 console.warn('Could not found target anchor for current click evt.', evt);
                 return;
             }
 
-            const targetUrl = targetAnchor.getAttribute('href');
-            const targetSuffix = targetUrl.replace(currentUrl, '');
+            var targetUrl = targetAnchor.getAttribute('href');
+            var targetSuffix = targetUrl.replace(currentUrl, '');
 
             // id-based navigation on current page
             if (targetSuffix.startsWith('#')) {
                 evt.preventDefault();
 
-                const sitenavWrap = rootElem;
-                const sitenavMenu = rootElem.getElementsByClassName('js-sitenav-menu')[0];
-                const sitenavMenuHeight = sitenavMenu.getBoundingClientRect().height;
-                const targetId = targetSuffix.substring(1);
-                const target = document.getElementById(targetId);
+                var sitenavWrap = rootElem;
+                var sitenavMenu = rootElem.getElementsByClassName('js-sitenav-menu')[0];
+                var sitenavMenuHeight = sitenavMenu.getBoundingClientRect().height;
+                var targetId = targetSuffix.substring(1);
+                var target = document.getElementById(targetId);
                 window.scroll({top: target.offsetTop, behavior: 'smooth'});
                 history.pushState({}, evt.target.text, targetUrl);
 
@@ -48,7 +48,7 @@ function siteMenu(rootElem) {
                 rootElem.classList.remove('sitenav-wrapper--show');
                 document.body.classList.remove('noscroll');
 
-                for (let toggle of toggles) {
+                for (var toggle of toggles) {
                     toggle.classList.remove('is-active');
                     toggle.setAttribute('aria-expanded', 'false');
                 }
@@ -87,9 +87,9 @@ function siteReload(rootElem) {
 function fixBaseline(element) {
     function _fix() {
         // Get actual size of 1 rem in px
-        const remSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-        const elemHeight = element.getBoundingClientRect().height;
-        const elemHeightInRem = elemHeight / remSize;
+        var remSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+        var elemHeight = element.getBoundingClientRect().height;
+        var elemHeightInRem = elemHeight / remSize;
 
         // Fix images using setting their height to a direct multiple of 1rem
         if (element instanceof HTMLImageElement) {
@@ -99,8 +99,8 @@ function fixBaseline(element) {
         }
         // Fix other elements by adjusting their margin
         else {
-            const heightDecimalPart = elemHeightInRem % 1;
-            const marginInRem = heightDecimalPart > 0.5 ?
+            var heightDecimalPart = elemHeightInRem % 1;
+            var marginInRem = heightDecimalPart > 0.5 ?
                 1 - heightDecimalPart :
                 heightDecimalPart * -1;
             element.style.marginBottom = marginInRem + 'rem';
@@ -121,7 +121,7 @@ function fixBaseline(element) {
  * @param {HTMLElement} element
  */
 function expandPortfolio(element) {
-    const toggle = element.getElementsByClassName('js-portfolio-strip__expand-toggle')[0];
+    var toggle = element.getElementsByClassName('js-portfolio-strip__expand-toggle')[0];
 
     toggle.addEventListener('click', function () {
         element.classList.remove('portfolio-strip--collapsed');
@@ -135,24 +135,24 @@ function expandPortfolio(element) {
  * @param {HTMLElement} element
  */
 function shirkSidenavOnScroll(element) {
-    const onScroll = () => {
-        const scrolled = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
+    var onScroll = function () {
+        var scrolled = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
 
         scrolled > 100 ?
             element.classList.add('sitenav--shrinked') :
             element.classList.remove('sitenav--shrinked');
-    }
+    };
 
-    const enableAnimations = () => {
+    var enableAnimations = () => {
         element.classList.add('sitenav--animated');
     }
 
-    const raf = window.requestAnimationFrame ||
+    var raf = window.requestAnimationFrame ||
         window.webkitRequestAnimationFrame ||
         window.mozRequestAnimationFrame ||
         window.msRequestAnimationFrame ||
         window.oRequestAnimationFrame;
-    let lastScrollTop = document.documentElement.scrollTop;
+    var lastScrollTop = document.documentElement.scrollTop;
 
     if (raf) {
         // make sure to run it first time too
@@ -162,7 +162,7 @@ function shirkSidenavOnScroll(element) {
     }
 
     function loop() {
-        let scrollTop = document.documentElement.scrollTop;
+        var scrollTop = document.documentElement.scrollTop;
 
         if (lastScrollTop === scrollTop) {
             raf(loop);
@@ -183,16 +183,16 @@ function shirkSidenavOnScroll(element) {
  * @param {HTMLElement} rootElem
  */
 function autoAddHeadlineAnchors(rootElem) {
-    const headlines = rootElem.querySelectorAll('h1,h2,h3,h4,h5,h6');
+    var headlines = rootElem.querySelectorAll('h1,h2,h3,h4,h5,h6');
 
     for (let headline of headlines) {
-        const anchorUrl = window.location.pathname + '#' + headline.getAttribute('id');
-        const anchor = document.createElement('a');
+        var anchorUrl = window.location.pathname + '#' + headline.getAttribute('id');
+        var anchor = document.createElement('a');
         anchor.setAttribute('title', 'Link to this heading');
         anchor.setAttribute('aria-hidden', 'true');
         anchor.setAttribute('href', anchorUrl);
         anchor.classList.add('headline-link');
-        const anchorIcon = document.createElement('i');
+        var anchorIcon = document.createElement('i');
         anchorIcon.classList.add('icon--link');
         anchor.appendChild(anchorIcon);
         headline.appendChild(anchor);
@@ -200,7 +200,7 @@ function autoAddHeadlineAnchors(rootElem) {
 }
 
 
-const handlers = [
+var handlers = [
     {className: 'js-sitenav', handler: siteMenu},
     {className: 'js-sitenav', handler: shirkSidenavOnScroll},
     {className: 'js-site-reload-button', handler: siteReload},
@@ -209,9 +209,9 @@ const handlers = [
     {className: 'js-auto-add-headline-anchors', handler: autoAddHeadlineAnchors},
 ];
 
-handlers.forEach(({className, handler}) => {
-    for (let rootElem of document.getElementsByClassName(className)) {
-        handler(rootElem);
+handlers.forEach(function (handler) {
+    for (var rootElem of document.getElementsByClassName(handler.className)) {
+        handler.handler(rootElem);
     }
 });
 

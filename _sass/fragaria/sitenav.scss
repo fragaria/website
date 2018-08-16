@@ -125,17 +125,18 @@ $sitenav-shrinked-push-negative: -3.5rem;
 .sitenav__linkset {
     display: flex;
     width: 100%;
-    padding-top: map-get($sitenav-menu-height, mobile) / 2;
+    padding-top: #{map-get($sitenav-menu-height, mobile) * 0.5};
     list-style-type: none;
     flex-direction: column;
     align-items: center;
     // Menu is above the linkset and the linkset slides from the bottom of it
     z-index: 1;
-    height: 100vh;
+    height: calc(100vh - #{map-get($sitenav-menu-height, mobile)});
     overflow: scroll;
 
     @include breakpoint(tablet up) {
-        padding-top: map-get($sitenav-menu-height, tablet) / 2;
+        padding-top: #{map-get($sitenav-menu-height, tablet) * 0.5};
+        height: calc(100vh - #{map-get($sitenav-menu-height, tablet)});
         justify-content: flex-start;
     }
 }

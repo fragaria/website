@@ -1,5 +1,5 @@
 $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
-$sitenav-shrinked-push-negative: -3.5rem;
+$sitenav-shrinked-push: 3.5rem;
 
 .sitenav {
     position: fixed;
@@ -16,7 +16,7 @@ $sitenav-shrinked-push-negative: -3.5rem;
 @include breakpoint(tablet up) {
     .sitenav.sitenav--shrinked {
         .sitenav__menu {
-            transform: translate3d(0, $sitenav-shrinked-push-negative, 0);
+            transform: translate3d(0, #{-1 * $sitenav-shrinked-push}, 0);
             border-bottom: 1px solid map-get($palette, black);
             height: $sitenav-menu-height-shrinked;
         }
@@ -144,6 +144,7 @@ $sitenav-shrinked-push-negative: -3.5rem;
 .sitenav--shrinked .sitenav__linkset {
     @include breakpoint(tablet up) {
         padding-top: map-get($sitenav-menu-height, tablet);
+        height: calc(100vh - #{$sitenav-menu-height-shrinked - $sitenav-shrinked-push});
     }
 }
 
@@ -190,7 +191,7 @@ $sitenav-shrinked-push-negative: -3.5rem;
     &.sitenav--shrinked {
         @include breakpoint(tablet up) {
             .sitenav__linkset {
-                transform: translate3d(0, $sitenav-shrinked-push-negative, 0);
+                transform: translate3d(0, #{-1 * $sitenav-shrinked-push}, 0);
             }
         }
     }

@@ -127,13 +127,17 @@ function expandPortfolio(element) {
  * and takes it backs when user returns to top
  * @param {HTMLElement} element
  */
-function shirkSidenavOnScroll (element) {
+function shirkSidenavOnScroll(element) {
     const onScroll = () => {
         const scrolled = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
 
         scrolled > 100 ?
             element.classList.add('sitenav--shrinked') :
             element.classList.remove('sitenav--shrinked');
+    }
+
+    const enableAnimations = () => {
+        element.classList.add('sitenav--animated');
     }
 
     const raf = window.requestAnimationFrame ||
@@ -147,6 +151,7 @@ function shirkSidenavOnScroll (element) {
         // make sure to run it first time too
         onScroll();
         loop();
+        setTimeout(enableAnimations);
     }
 
     function loop() {

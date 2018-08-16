@@ -42,7 +42,6 @@ $sitenav-shrinked-push-negative: -3.5rem;
     pointer-events: all;
 
     background: map-get($palette, white);
-    transition: transform .15s linear;
     height: map-get($sitenav-menu-height, mobile);
 
     @include breakpoint(tablet-small up) {
@@ -64,12 +63,9 @@ $sitenav-shrinked-push-negative: -3.5rem;
         transform: translate3d(0, .6rem, 0);
         height: 3rem;
 
-
         @include breakpoint(tablet up) {
             height: 10rem;
             margin-bottom: -4rem;
-            transition: transform .15s linear;
-            will-change: translate, scale;
         }
     }
     // logo image scales up on bigger screens
@@ -88,6 +84,18 @@ $sitenav-shrinked-push-negative: -3.5rem;
             width: 100%;
             left: 0;
         }
+    }
+}
+
+.sitenav--animated .sitenav__menu {
+    transition: transform .15s linear;
+    will-change: transform;
+}
+
+.sitenav--animated .sitenav__brand img {
+    @include breakpoint(tablet up) {
+        transition: transform .15s linear;
+        will-change: translate, scale;
     }
 }
 

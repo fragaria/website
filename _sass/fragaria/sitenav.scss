@@ -133,7 +133,7 @@ $sitenav-shrinked-push: 3.5rem;
     z-index: 1;
     height: calc(100vh - #{map-get($sitenav-menu-height, mobile)});
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
 
     @include breakpoint(tablet up) {
         padding-top: #{map-get($sitenav-menu-height, tablet) * 0.5};

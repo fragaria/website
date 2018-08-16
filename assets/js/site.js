@@ -33,7 +33,7 @@ function siteMenu(rootElem) {
                 const sitenavMenu = rootElem.getElementsByClassName('js-sitenav-menu')[0];
                 const sitenavMenuHeight = sitenavMenu.getBoundingClientRect().height;
                 const target = document.getElementById(targetSuffix.substring(1));
-                const offset = sitenavWrap.classList.contains('shrink') ?
+                const offset = sitenavWrap.classList.contains('sitenav--shrinked') ?
                     sitenavMenuHeight * 2 :
                     sitenavMenuHeight;
                 window.scroll({top: target.offsetTop - offset, behavior: 'smooth'});
@@ -132,8 +132,8 @@ function shirkSidenavOnScroll (element) {
         const scrolled = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
 
         scrolled > 100 ?
-            element.classList.add('shrink') :
-            element.classList.remove('shrink');
+            element.classList.add('sitenav--shrinked') :
+            element.classList.remove('sitenav--shrinked');
     }
 
     const raf = window.requestAnimationFrame ||

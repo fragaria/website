@@ -1,18 +1,9 @@
-$sitenav-push: (
-    mobile: calc(100vh - #{map-get($sitenav-menu-height, mobile)}),
-    tablet: calc(100vh - #{map-get($sitenav-menu-height, tablet)}),
-);
-
-// push navigation outsite of the screen we need negative value of $sitenav-push
-// but calc() cannot handle -1 * calc()
-$sitenav-push-negative: (
-    mobile: calc(-100vh + #{map-get($sitenav-menu-height, mobile)}),
-    tablet: calc(-100vh + #{map-get($sitenav-menu-height, tablet)}),
-);
 $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
+$sitenav-shrinked-push-negative: -3.5rem;
 
 .sitenav {
     position: fixed;
+    pointer-events: none;
     width: 100%;
     z-index: 20;
 }
@@ -23,20 +14,15 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
 }
 
 @include breakpoint(tablet up) {
-    .sitenav.shrink {
+    .sitenav.sitenav--shrinked {
         .sitenav__menu {
-            // height: map-get($sitenav-menu-height, tablet)/2.5;
-            transform: translate3d(0, -3.5rem, 0);
+            transform: translate3d(0, $sitenav-shrinked-push-negative, 0);
             border-bottom: 1px solid map-get($palette, black);
+            height: $sitenav-menu-height-shrinked;
         }
 
-        .sitenav__brand img{
-            // height: 6rem;
+        .sitenav__brand img {
             transform: translate3d(0, 2.5rem, 0) scale(0.8);
-        }
-
-        .sitenav__linkset {
-
         }
     }
 }
@@ -53,13 +39,19 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
     position: relative;
     // Menu is above the linkset and the linkset slides from the bottom of it
     z-index: 2;
+    pointer-events: all;
 
     background: map-get($palette, white);
     transition: transform .15s linear;
+    height: map-get($sitenav-menu-height, mobile);
 
     @include breakpoint(tablet-small up) {
         margin-left: -1rem;
         margin-right: -1rem;
+    }
+
+    @include breakpoint(tablet up) {
+        height: map-get($sitenav-menu-height, tablet);
     }
 }
 
@@ -125,18 +117,24 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
 .sitenav__linkset {
     display: flex;
     width: 100%;
-    padding-top: map-get($sitenav-menu-height, mobile)/2;
+    padding-top: map-get($sitenav-menu-height, mobile) / 2;
     list-style-type: none;
     flex-direction: column;
     align-items: center;
     // Menu is above the linkset and the linkset slides from the bottom of it
     z-index: 1;
-    height: 0;
+    height: 100vh;
     overflow: scroll;
 
     @include breakpoint(tablet up) {
-        padding-top: map-get($sitenav-menu-height, tablet)/2;
+        padding-top: map-get($sitenav-menu-height, tablet) / 2;
         justify-content: flex-start;
+    }
+}
+
+.sitenav--shrinked .sitenav__linkset {
+    @include breakpoint(tablet up) {
+        padding-top: map-get($sitenav-menu-height, tablet);
     }
 }
 
@@ -163,20 +161,12 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
 
 /* Set up animated props */
 .sitenav__linkset {
-    transform: translate3d(0, map-get($sitenav-push-negative, mobile), 0);
+    transform: translate3d(0, -100vh, 0);
     opacity: 0;
     background: map-get($palette, white);
     pointer-events: none;
     transition: transform .3s $sitenav-slide-transition, opacity .15s $sitenav-slide-transition;
-    will-change: opacity, transform, height;
-
-    @include breakpoint(tablet up) {
-        transform: translate3d(0, map-get($sitenav-push-negative, tablet), 0);
-    }
-
-    @include breakpoint(desktop up) {
-        transform: translate3d(0, map-get($sitenav-push-negative, desktop), 0);
-    }
+    will-change: opacity, transform;
 }
 
 /* Styles when menu is enabled */
@@ -186,17 +176,12 @@ $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
         transform: translate3d(0, 0, 0);
         opacity: 1;
         pointer-events: all;
-        height: map-get($sitenav-push, mobile);
-
-        @include breakpoint(tablet up) {
-            height: map-get($sitenav-push, tablet);
-        }
     }
 
-    &.shrink {
+    &.sitenav--shrinked {
         @include breakpoint(tablet up) {
             .sitenav__linkset {
-                height: 100vh;
+                transform: translate3d(0, $sitenav-shrinked-push-negative, 0);
             }
         }
     }

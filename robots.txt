@@ -1,1 +1,1 @@
-Sitemap: https://fragaria.github.com/website/sitemap.xml
+Sitemap: https://fragaria.github.io/website/sitemap.xml

@@ -9,10 +9,11 @@
 title: fragaria.cz
 email: info@fragaria.cz
 description: >
-    We are a software development company based in Czech Republic. Our
-    specialization are state-of-the-art apps without compromises
-    that you can rely on. JavaScript, Python, NodeJS, Angular or Vue.js... we know it all.
-keywords: fragaria, software, vývoj software, webové aplikace, python, javascript, angular, elasticsearch, html, css
+    Based in Prague, Czech Republic, we build high-quality, reliable and scalable
+    web applications without compromises. Having more than
+    10 years of experience, our team built on senior-level experts. Backends,
+    frontends, SPAs and mobile apps, we know what it takes to do it right.
+keywords: software, software development, web apps, vývoj software, webové aplikace, python, javascript, typescript, java, angular, vue, elasticsearch, html, css
 url: "http://localhost:4000" # the base hostname & protocol for your site
 baseurl: "/website/"
 logo: "/assets/logo.svg" # Site logo

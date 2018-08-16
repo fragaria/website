@@ -10,11 +10,13 @@
     display: none;
 }
 
-.old-ie .page-container__inner {
+.old-ie .page-container__inner,
+.old-ie .sitenav {
     display: none;
 }
 
 .old-ie .old-ie-warning {
+    display: block;
     position: absolute;
     width: 768px;
     height: 450px;
@@ -27,8 +29,7 @@
     h1 {
         font-family: getFontFamily($headingtype);
         font-weight: bold;
-        text-transform: lowercase;
-        @include baseline(beta, $headingtype, $lineheight: 3, $below: 2);
+        @include baseline(beta, $headingtype, $lineheight: 3, $below: 2, $above: 2);
     }
 
     p {

@@ -83,7 +83,6 @@ cloudinary:
 
 jekyll_tidy:
     exclude:
-        - index.html
         - sw.js
         - assets/js/*
     compress_html: true

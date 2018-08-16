@@ -24,6 +24,10 @@ autoprefixer:
         - last 2 versions
     only_production: true
 
+ga:
+    enabled: true
+    id: UA-9784905-1
+
 # Service worker
 # Features:
 # - allows for offline access

@@ -1,1 +1,4 @@
 url: "https://fragaria.github.com"
+
+ga:
+    enabled: false

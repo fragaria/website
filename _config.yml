@@ -32,6 +32,7 @@ plugins:
     - jekyll-feed
     - jekyll-paginate
     - jekyll-archives
+    - jekyll-redirect-from
 
 exclude:
     - Dockerfile
@@ -86,6 +87,9 @@ jekyll_tidy:
     ignore_env: development
 
 # ---------------------- custom configuration ----------------------------------
+
+ga:
+    enabled: false
 
 service_worker:
     # Only enabled in production, @see: _config.prod.yml

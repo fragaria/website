@@ -125,6 +125,7 @@ function expandPortfolio(element) {
 
     toggle.addEventListener('click', function () {
         element.classList.remove('portfolio-strip--collapsed');
+        toggle.setAttribute('aria-expanded', 'true');
     });
 }
 

@@ -1,4 +1,4 @@
-<div class="portfolio-strip js-portfolio-strip {% if site.data.portfolio.size > 4 %}portfolio-strip--collapsed{% endif %}">
+<div id="js-portfolio-strip" class="portfolio-strip js-portfolio-strip {% if site.data.portfolio.size > 4 %}portfolio-strip--collapsed{% endif %}">
     <div class="portfolio-strip__items">
         {% for project in site.data.portfolio %}
             <article class="portfolio-project js-portfolio-strip__item {% if forloop.index > 4 %}portfolio-project--hidden{% endif %}" itemtype="https://schema.org/SoftwareApplication" itemscope>
@@ -36,8 +36,8 @@
         {% endfor %}
     </div>
 
-    <div class="v-home__cta-row portfolio-strip__show-more js-portfolio-strip__expand-toggle">
-        <span class="button">Show more</span>
+    <div class="v-home__cta-row portfolio-strip__show-more">
+        <span class="button js-portfolio-strip__expand-toggle" role="button" aria-controls="js-portfolio-strip" aria-expanded="false">Show more</span>
     </div>
 </div>
 

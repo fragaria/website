@@ -4,7 +4,7 @@ layout: blank
 
 <div class="content-block typeset v-home" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="{{ site.company.official_name }}">
-    <section class="hero">
+    <section class="hero" role="banner">
         <h1 class="hero__headline">We build software that <i>works</i>.<br>No <i>half-baked</i> solutions, no <i>false</i> promises.</h1>
     </section>
     <section class="v-home__portfolio">
@@ -34,7 +34,7 @@ layout: blank
     </section>
 
     <section class="v-home__career">
-        <h1 class="splitting-headline anchor-shift" id="team">
+        <h1 class="splitting-headline anchor-shift" id="career">
             <span class="splitting-headline__fill">Career</span>
         </h1>
 
@@ -42,7 +42,7 @@ layout: blank
         <p class="v-home__career-par">Besides developing great software, we like being people too. That's why we value friendship and understanding as our top priorities. Expect a great team full of interesting characters. Beers and parties included.</p>
 
         <div class="v-home__cta-row">
-            <a class="button" href="{{ '/career/' | relative_url }}">I'm interested</a>
+            <a class="button" role="button" href="{{ '/career/' | relative_url }}">I'm interested</a>
         </div>
     </section>
 
@@ -102,16 +102,16 @@ layout: blank
                 <input type="text" name="_gotcha" style="display:none" />
 
                 <div class="form__line">
-                    <label for="name" class="form-label">Your name</label>
-                    <input class="form-control" type="text" name="name" required>
+                    <label class="form-label" for="git-name">Your name</label>
+                    <input class="form-control" type="text" name="name" id="git-name" required>
                 </div>
                 <div class="form__line">
-                    <label for="name" class="form-label">Your email</label>
-                    <input class="form-control" type="email" name="_replyto" required>
+                    <label class="form-label" for="git-email">Your email</label>
+                    <input class="form-control" type="email" name="_replyto" id="git-email"  required>
                 </div>
                 <div class="form__line">
-                    <label for="name" class="form-label">Your message</label>
-                    <textarea class="form-control" name="message" required></textarea>
+                    <label class="form-label" for="git-message">Your message</label>
+                    <textarea class="form-control" name="message" id="git-message"  required></textarea>
                 </div>
                 <div class="form__submit">
                     <input type="submit" class="button" value="Send">

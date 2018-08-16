@@ -1,7 +1,11 @@
 $full-view-break: 1000px;
 
 .v-career .hero {
-    padding-bottom: 2rem
+    padding: 2rem 0;
+
+    @include breakpoint(tablet up) {
+        padding-top: 4rem;
+    }
 }
 
 .v-career-section .v-career-section--content {
@@ -10,7 +14,7 @@ $full-view-break: 1000px;
     margin-right: auto;
 
     p {
-        @include baseline(zeta, $bodytype, $lineheight: 2);
+        // @include baseline(eta, $bodytype, $lineheight: 2);
     }
 }
 
@@ -29,8 +33,8 @@ $full-view-break: 1000px;
             color: map-get($palette, red);
         }
 
-        @include baseline(beta, $headingtype, $lineheight: 3, $breakpoint: tablet-small down);
-        @include baseline(beta, $headingtype, $lineheight: 4, $breakpoint: tablet up);
+        @include baseline(beta, $headingtype, $lineheight: 3, $below: 1, $breakpoint: tablet-small down);
+        @include baseline(beta, $headingtype, $lineheight: 5, $below: 2, $breakpoint: tablet up);
     }
 }
 
@@ -41,7 +45,7 @@ $full-view-break: 1000px;
     grid-template-rows: auto;
     grid-gap: 0 3rem;
 
-    padding-top: 4rem;
+    padding-top: 2rem;
 }
 
 .v-career-facts-grid__item {
@@ -49,11 +53,11 @@ $full-view-break: 1000px;
 }
 
 .v-career-facts-grid .v-career-facts-grid__title {
-    @include baseline(zeta, $headingtype, $lineheight: 2);
+    @include baseline(epsilon, $headingtype, $lineheight: 2);
 }
 
 .v-career-facts-grid .v-career-facts-grid__icon {
-    margin-top: 1rem;
+    margin-top: 2rem;
     font-size: 3rem;
 
     &:before {

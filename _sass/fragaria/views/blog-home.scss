@@ -7,9 +7,10 @@
         "latest"
         "other";
     grid-column-gap: 4rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
 
     @include breakpoint(tablet up) {
+        margin-top: 4rem;
         grid-template-areas:
             "main"
             "latest"

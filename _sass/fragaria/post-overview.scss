@@ -14,8 +14,12 @@
     width: 100%;
     margin-bottom: 2rem;
 
+    &:hover {
+        color: map-get($palette, red);
+    }
+
     @include breakpoint(tablet-small down) {
-        @include baseline-border($orientation: 'bottom', $width: 4px, $offset: -3px, $size: 3rem);
+        @include baseline-border($orientation: 'bottom', $width: 4px, $offset: -1rem, $size: 3rem);
     }
 
     @include breakpoint(tablet up) {

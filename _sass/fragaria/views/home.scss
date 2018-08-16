@@ -24,7 +24,11 @@
 }
 
 .v-home__portfolio {
-    margin-bottom: 2rem;
+    margin-bottom: 6rem;
+
+    @include breakpoint(tablet up) {
+        margin-bottom: 2rem;
+    }
 }
 
 .v-home__blog,

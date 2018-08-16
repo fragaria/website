@@ -14,8 +14,8 @@ $article-content-width: 40rem;
         margin-right: auto;
         font-family: getFontFamily($headingtype);
 
-        @include baseline(alpha, $headingtype, $lineheight: 3, $breakpoint: tablet-small down);
-        @include baseline(alpha, $headingtype, $lineheight: 6, $breakpoint: tablet up);
+        @include baseline(alpha, $headingtype, $lineheight: 3, $breakpoint: tablet-small down, $below: 2);
+        @include baseline(alpha, $headingtype, $lineheight: 6, $breakpoint: tablet up, $below: 2);
     }
 }
 
@@ -45,13 +45,13 @@ $article-content-width: 40rem;
     // Will try to add word-breaking hypens according to post language (which defaults to EN).
     hyphens: auto;
 
-    &:first-letter {
-        float: left;
-        padding-top: .5rem;
-        padding-right: 1rem;
-        font-size: 6.8rem;
-        line-height: 5rem;
-    }
+    // &:first-letter {
+    //     float: left;
+    //     padding-top: .5rem;
+    //     padding-right: 1rem;
+    //     font-size: 6.8rem;
+    //     line-height: 5rem;
+    // }
 
     a {
         // default anchor style
@@ -68,13 +68,13 @@ $article-content-width: 40rem;
     }
 
     h2 {
-        @include baseline(delta, $headingtype, $lineheight: 2, $above: 2, $breakpoint: tablet-small down);
-        @include baseline(delta, $headingtype, $lineheight: 3, $below: 1, $above: 3, $breakpoint: tablet up);
+        @include baseline(delta, $headingtype, $lineheight: 2, $below: 1, $above: 2, $breakpoint: tablet-small down);
+        @include baseline(delta, $headingtype, $lineheight: 3, $below: 1, $above: 1, $breakpoint: tablet up);
     }
 
     h3 {
-        @include baseline(epsilon, $headingtype, $lineheight: 3, $breakpoint: tablet-small down);
-        @include baseline(epsilon, $headingtype, $lineheight: 2, $below: 3, $breakpoint: tablet up);
+        @include baseline(epsilon, $headingtype, $lineheight: 3, $below: 1, $breakpoint: tablet-small down);
+        @include baseline(epsilon, $headingtype, $lineheight: 2, $below: 1, $above: 2, $breakpoint: tablet up);
     }
 
     // basic image
@@ -98,7 +98,6 @@ $article-content-width: 40rem;
     }
 
     .figure__caption {
-        font-weight: bold;
         @include baseline(theta, $bodytype, $lineheight: 2);
     }
 

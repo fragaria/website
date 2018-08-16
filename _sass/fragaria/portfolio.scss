@@ -1,6 +1,6 @@
 $portfolio-project-media-width: (
     mobile: 4rem,
-    tablet-small: 7rem,
+    tablet-small: 6rem,
 );
 
 .portfolio-strip {
@@ -58,15 +58,17 @@ $portfolio-project-media-width: (
     }
 
     .portfolio-project__headline {
-        @include baseline(gamma, $headingtype, $lineheight: 3);
+        @include baseline(gamma, $headingtype, $lineheight: 2, $below: 1);
     }
 
     .portfolio-project__media {
         float: right;
         max-width: map-get($portfolio-project-media-width, mobile);
+        margin-top: .5rem;
 
         @include breakpoint(tablet-small up) {
             max-width: map-get($portfolio-project-media-width, tablet-small);
+            margin-top: 0;
         }
     }
 }

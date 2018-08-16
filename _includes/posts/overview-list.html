@@ -7,13 +7,11 @@
 
     <div class="post-overview__body">
         {% for post in include.posts %}
-            <article itemtype="http://schema.org/BlogPosting" itemscope="" class="post-overview__post">
-                <h1 itemprop="headline" class="post-overview__post-headline">
-                    <a href="{{ post.url | relative_url }}" class="post-overview__anchor">{{ post.title }}</a>
-                </h1>
+            <a itemtype="http://schema.org/BlogPosting" itemscope="" class="post-overview__post" href="{{ post.url | relative_url }}">
+                <h1 itemprop="headline" class="post-overview__post-headline">{{ post.title }}</h1>
                 <meta itemprop="datePublished" content="{{ post.date | date_to_xmlschema }}" />
                 <p class="post-overview__pubdate">{{ post.date | date: "%d.%m.%Y" }}</p>
-            </article>
+            </a>
         {% endfor %}
     </div>
 

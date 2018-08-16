@@ -133,7 +133,7 @@ a {
     // Lists.
     ul,
     ol {
-        @include baseline(eta, $bodytype, $lineheight: 2, $below: 2);
+        @include baseline(zeta, $bodytype, $lineheight: 2, $below: 2);
         li {
             font-feature-settings: "kern", "onum", "liga";
             margin-left: 2rem;

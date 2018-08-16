@@ -6,6 +6,8 @@ $breakpoint-keys: map-keys($breakpoints);
 $sizes: map-values($rootsizes);
 $points: map-values($breakpoints);
 
+$anchor-baseline-shift-add: 8!default;
+
 // Root font-size in %, outputted in correct breakpoints.
 @mixin rootsize {
     // 16 is default font size for most browsers.
@@ -100,7 +102,7 @@ $points: map-values($breakpoints);
 /**
  * Output font family and baseline alignment for given breakpoint and font settings.
  */
-@mixin baseline-in-breakpoint($breakpoint, $fontsize, $font, $lineheight, $above, $below) {
+@mixin baseline-in-breakpoint($breakpoint, $fontsize, $font, $lineheight, $above, $below, $anchor) {
     @if not map-has-key($breakpoints, $breakpoint) {
         @warn "Unknown breakpoint class: #{$breakpoint}"
     }
@@ -110,20 +112,26 @@ $points: map-values($breakpoints);
     $size: map-get($scale, $fontsize);
     $rootsize: map-get($rootsizes, $breakpoint);
 
-    $baseline-shift: #{$above + (($size / 2 * (($lineheight * $rootsize / $size) - $cap-height)) / $rootsize + 0.00001)};
+    $baseline-shift: $above + (($size / 2 * (($lineheight * $rootsize / $size) - $cap-height)) / $rootsize + 0.00001);
     $baseline-push: #{$below - (($size / 2 * (($lineheight * $rootsize / $size) - $cap-height)) / $rootsize + 0.00001)};
 
     font-family: #{map-get($font, font-family)};
     font-size: #{$size / $rootsize}rem;
     margin-bottom: #{$baseline-push}rem;
-    padding-top: #{$baseline-shift}rem;
     line-height: #{$lineheight}rem;
+
+    @if $anchor {
+        padding-top: #{$baseline-shift + $anchor-baseline-shift-add}rem;
+        margin-top: -#{$anchor-baseline-shift-add}rem;
+    } @else {
+        padding-top: #{$baseline-shift}rem;
+    }
 }
 
 /**
  * Output font family and baseline alignment for multiple media queries using breakpoint expression.
  */
-@mixin baseline($fontsize, $font, $lineheight: 2, $above: 0, $below: 0, $breakpoint: null) {
+@mixin baseline($fontsize, $font, $lineheight: 2, $above: 0, $below: 0, $breakpoint: null, $anchor: false) {
     @if not $breakpoint {
         $breakpoint: zero up;
     }
@@ -133,7 +141,7 @@ $points: map-values($breakpoints);
 
     @if $dir == only {
         @include span-breakpoints($bp-val, map-next-key($breakpoints, $bp-val)) {
-            @include baseline-in-breakpoint($bp-val, $fontsize, $font, $lineheight, $above, $below);
+            @include baseline-in-breakpoint($bp-val, $fontsize, $font, $lineheight, $above, $below, $anchor);
         }
     } @else {
         $bps: ();
@@ -153,7 +161,7 @@ $points: map-values($breakpoints);
                 if(index($breakpoints, $bp) == 1, null, $bp),
                 map-next-key($breakpoints, $bp)
             ) {
-                @include baseline-in-breakpoint($bp, $fontsize, $font, $lineheight, $above, $below);
+                @include baseline-in-breakpoint($bp, $fontsize, $font, $lineheight, $above, $below, $anchor);
             }
         }
     }

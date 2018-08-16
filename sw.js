@@ -61,6 +61,7 @@ function loadFromCache(request) {
 }
 
 self.addEventListener('install', function(event) {
+    console.log(`[sw] Installing ...`);
     // Perform install steps
     event.waitUntil(precache());
 });

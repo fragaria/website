@@ -82,7 +82,10 @@ cloudinary:
     cloud_path_prefix: fragaria.cz/
 
 jekyll_tidy:
-    exclude: ["index.html"]
+    exclude:
+        - index.html
+        - sw.js
+        - assets/js/*
     compress_html: true
     ignore_env: development
 
@@ -94,7 +97,7 @@ ga:
 service_worker:
     # Only enabled in production, @see: _config.prod.yml
     enabled: false
-    cache_version: 1
+    cache_version: 5
 
 
 company:

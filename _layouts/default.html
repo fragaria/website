@@ -6,12 +6,7 @@ layout: null
 <html lang="cs" dir="ltr" itemtype="http://schema.org/WebPage" itemscope="">
     {% include layouts/head.html %}
 
-    <!--[if lte IE 10]>
-        <body class="page-container baseline-grid js-baseline-grid old-ie">
-    <![endif]-->
-    <!--[if gt IE 10]>-->
-        <body class="page-container baseline-grid js-baseline-grid">
-    <!--<![endif]-->
+    <body class="page-container baseline-grid js-baseline-grid js-ie-warn">
         {% include_cached layouts/ie-warning.html %}
         {{ content }}
         {% include_cached layouts/js.html %}

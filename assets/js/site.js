@@ -1,9 +1,41 @@
+var forEachNode = function (nodelist, callback, scope) {
+    for (var i = 0; i < nodelist.length; i++) {
+        callback.call(scope, i, nodelist[i]); // passes back stuff we need
+    }
+};
+
+
+function showIEWarning(rootElem) {
+    function isIE() {
+        var ua = window.navigator.userAgent; //Check the userAgent property of the window.navigator object
+        var msie = ua.indexOf('MSIE '); // IE 10 or older
+        var trident = ua.indexOf('Trident/'); //IE 11
+
+        return (msie > 0 || trident > 0);
+    }
+
+    if (isIE() && document.cookie.indexOf('iewarndismissed') == -1) {
+        rootElem.classList.add('old-ie');
+
+        forEachNode(rootElem.querySelectorAll('.js-ie-warn__dismiss'), function (index, dismissToggle) {
+            dismissToggle.addEventListener('click', function () {
+                var date = new Date();
+                date.setTime(date.getTime() + (1 * 24 * 60 * 60 * 1000));
+                // store cookie not to bother with this again
+                document.cookie = "iewarndismissed=true; expires=" + date.toGMTString(); + " path=/";
+                rootElem.classList.remove('old-ie');
+            });
+        });
+    }
+}
+
+
 function siteMenu(rootElem) {
     var toggles = rootElem.getElementsByClassName('js-sitenav-menu__toggle');
     var links = rootElem.getElementsByClassName('js-sitenav__link');
     var currentUrl = window.location.pathname;
 
-    for (var toggle of toggles) {
+    forEachNode(toggles, function (index, toggle) {
         toggle.addEventListener('click', function () {
             rootElem.classList.remove('sitenav-wrapper--noanim');
             rootElem.classList.toggle('sitenav-wrapper--show');
@@ -18,9 +50,9 @@ function siteMenu(rootElem) {
                 document.body.classList.add('noscroll');
             }
         });
-    }
+    });
 
-    for (var link of links) {
+    forEachNode(links, function (index, link) {
         link.addEventListener('click', function (evt) {
             var targetAnchor = evt.target.closest('.js-sitenav-menu__anchor');
 
@@ -48,14 +80,13 @@ function siteMenu(rootElem) {
                 rootElem.classList.remove('sitenav-wrapper--show');
                 document.body.classList.remove('noscroll');
 
-                for (var toggle of toggles) {
+                forEachNode(toggles, function (index, toggle) {
                     toggle.classList.remove('is-active');
                     toggle.setAttribute('aria-expanded', 'false');
-                }
+                });
             }
         });
-
-    }
+    });
 }
 
 /**
@@ -143,7 +174,7 @@ function shirkSidenavOnScroll(element) {
             element.classList.remove('sitenav--shrinked');
     };
 
-    var enableAnimations = () => {
+    var enableAnimations = function () {
         element.classList.add('sitenav--animated');
     }
 
@@ -185,7 +216,7 @@ function shirkSidenavOnScroll(element) {
 function autoAddHeadlineAnchors(rootElem) {
     var headlines = rootElem.querySelectorAll('h1,h2,h3,h4,h5,h6');
 
-    for (let headline of headlines) {
+    forEachNode(headlines, function (index, headline) {
         var anchorUrl = window.location.pathname + '#' + headline.getAttribute('id');
         var anchor = document.createElement('a');
         anchor.setAttribute('title', 'Link to this heading');
@@ -196,11 +227,12 @@ function autoAddHeadlineAnchors(rootElem) {
         anchorIcon.classList.add('icon--link');
         anchor.appendChild(anchorIcon);
         headline.appendChild(anchor);
-    }
+    });
 }
 
 
 var handlers = [
+    {className: 'js-ie-warn', handler: showIEWarning},
     {className: 'js-sitenav', handler: siteMenu},
     {className: 'js-sitenav', handler: shirkSidenavOnScroll},
     {className: 'js-site-reload-button', handler: siteReload},
@@ -210,9 +242,9 @@ var handlers = [
 ];
 
 handlers.forEach(function (handler) {
-    for (var rootElem of document.getElementsByClassName(handler.className)) {
+    forEachNode(document.getElementsByClassName(handler.className), function (index, rootElem) {
         handler.handler(rootElem);
-    }
+    })
 });
 
 if (window.location.href.indexOf('?showgrid') !== -1) {

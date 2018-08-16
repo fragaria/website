@@ -48,7 +48,7 @@
 <!-- preload fragaria icon set -->
 <link rel="preload" href="/website/assets/fonts/fragariacz-icons.ttf?e65adk" as="font" type="font/ttf" crossorigin="anonymous">
 <!-- preload javascript file -->
-<link rel="preload" href="/website/assets/js/site.js?c20344d8a90226834ba98b698196a484" as="script">
+<link rel="preload" href="/website/assets/js/site.js?010612d8be879f1362c8af7a3150251c" as="script">
 
 <link rel="stylesheet" href="/website/assets/styles.css?d41d8cd98f00b204e9800998ecf8427e">
 <link rel="alternate" type="application/atom+xml" href="/website/feed.xml" title="Atom feed for this page"/>
@@ -74,7 +74,7 @@
     <p><strong>Thanks for your understanding</strong>.</p>
 </div>
 
-        <nav class="sitenav js-sitenav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+        <nav id="js-sitenav" class="sitenav js-sitenav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
     <div class="sitenav__container">
         <div class="content-block content-block__cover--mobile">
             <div class="sitenav__menu js-sitenav-menu">
@@ -84,7 +84,7 @@
                     <img alt="Fragaria s.r.o." src="/website/assets/img/strawberry.svg">
                 </a>
 
-                <button class="hamburger hamburger--collapse js-sitenav-menu__toggle" type="button" aria-label="Menu" aria-controls="navigation" aria-expanded="false">
+                <button class="hamburger hamburger--collapse js-sitenav-menu__toggle" type="button" aria-label="Menu" aria-controls="js-sitenav" aria-expanded="false">
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
                     </span>
@@ -113,7 +113,7 @@
     <div class="sitenav-wrapper__push">
         <div class="content-block typeset v-home" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Fragaria s.r.o.">
-    <section class="hero">
+    <section class="hero" role="banner">
         <h1 class="hero__headline">We build software that <i>works</i>.<br>No <i>half-baked</i> solutions, no <i>false</i> promises.</h1>
     </section>
     <section class="v-home__portfolio">
@@ -121,7 +121,7 @@
             <span class="splitting-headline__fill">Projects</span>
         </h1>
 
-        <div class="portfolio-strip js-portfolio-strip portfolio-strip--collapsed">
+        <div id="js-portfolio-strip" class="portfolio-strip js-portfolio-strip portfolio-strip--collapsed">
     <div class="portfolio-strip__items">
         
             <article class="portfolio-project js-portfolio-strip__item " itemtype="https://schema.org/SoftwareApplication" itemscope>
@@ -546,8 +546,8 @@
         
     </div>
 
-    <div class="v-home__cta-row portfolio-strip__show-more js-portfolio-strip__expand-toggle">
-        <span class="button">Show more</span>
+    <div class="v-home__cta-row portfolio-strip__show-more">
+        <span class="button js-portfolio-strip__expand-toggle" role="button" aria-controls="js-portfolio-strip" aria-expanded="false">Show more</span>
     </div>
 </div>
 
@@ -705,7 +705,7 @@ background-image:
 
 
 <div class="v-home__cta-row">
-    <a class="button" href="/website/blog/">More posts</a>
+    <a class="button" role="button" href="/website/blog/">More posts</a>
 </div>
 
     </section>
@@ -1333,7 +1333,7 @@ background-image:
     </section>
 
     <section class="v-home__career">
-        <h1 class="splitting-headline anchor-shift" id="team">
+        <h1 class="splitting-headline anchor-shift" id="career">
             <span class="splitting-headline__fill">Career</span>
         </h1>
 
@@ -1341,7 +1341,7 @@ background-image:
         <p class="v-home__career-par">Besides developing great software, we like being people too. That's why we value friendship and understanding as our top priorities. Expect a great team full of interesting characters. Beers and parties included.</p>
 
         <div class="v-home__cta-row">
-            <a class="button" href="/website/career/">I'm interested</a>
+            <a class="button" role="button" href="/website/career/">I'm interested</a>
         </div>
     </section>
 
@@ -1401,16 +1401,16 @@ background-image:
                 <input type="text" name="_gotcha" style="display:none" />
 
                 <div class="form__line">
-                    <label for="name" class="form-label">Your name</label>
-                    <input class="form-control" type="text" name="name" required>
+                    <label class="form-label" for="git-name">Your name</label>
+                    <input class="form-control" type="text" name="name" id="git-name" required>
                 </div>
                 <div class="form__line">
-                    <label for="name" class="form-label">Your email</label>
-                    <input class="form-control" type="email" name="_replyto" required>
+                    <label class="form-label" for="git-email">Your email</label>
+                    <input class="form-control" type="email" name="_replyto" id="git-email"  required>
                 </div>
                 <div class="form__line">
-                    <label for="name" class="form-label">Your message</label>
-                    <textarea class="form-control" name="message" required></textarea>
+                    <label class="form-label" for="git-message">Your message</label>
+                    <textarea class="form-control" name="message" id="git-message"  required></textarea>
                 </div>
                 <div class="form__submit">
                     <input type="submit" class="button" value="Send">
@@ -1433,13 +1433,13 @@ background-image:
         </div>
         <div class="footer__social">
             
-                <a href="https://twitter.com/fragariacz" class="icon--twitter footer__social-icon"></a>
+                <a href="https://twitter.com/fragariacz" class="icon--twitter footer__social-icon" title="Twitter profile page"></a>
             
             
-                <a href="https://linkedin.com/company/fragaria-ltd-" class="icon--linkedin footer__social-icon"></a>
+                <a href="https://linkedin.com/company/fragaria-ltd-" class="icon--linkedin footer__social-icon" title="LinkedIn profile page"></a>
             
             
-                <a href="https://github.com/fragaria"class="icon--github footer__social-icon"></a>
+                <a href="https://github.com/fragaria"class="icon--github footer__social-icon" title="GitHub profile page"></a>
             
         </div>
     </div>
@@ -1449,7 +1449,7 @@ background-image:
 </div>
 
         <script src="/website/assets/js/smoothscroll.js"></script>
-<script src="/website/assets/js/site.js?c20344d8a90226834ba98b698196a484"></script>
+<script src="/website/assets/js/site.js?010612d8be879f1362c8af7a3150251c"></script>
 
 
 <!-- register service worker -->

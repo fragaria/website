@@ -165,6 +165,28 @@ function shirkSidenavOnScroll (element) {
     }
 }
 
+/**
+ * This function will automatically add anchors for all the h* elements
+ * found within the rootElem descendant nodes.
+ * @param {HTMLElement} rootElem
+ */
+function autoAddHeadlineAnchors(rootElem) {
+    const headlines = rootElem.querySelectorAll('h1,h2,h3,h4,h5,h6');
+
+    for (let headline of headlines) {
+        const anchorUrl = window.location.pathname + '#' + headline.getAttribute('id');
+        const anchor = document.createElement('a');
+        anchor.setAttribute('title', 'Link to this heading');
+        anchor.setAttribute('aria-hidden', 'true');
+        anchor.setAttribute('href', anchorUrl);
+        anchor.classList.add('headline-link');
+        const anchorIcon = document.createElement('i');
+        anchorIcon.classList.add('icon--link');
+        anchor.appendChild(anchorIcon);
+        headline.appendChild(anchor);
+    }
+}
+
 
 const handlers = [
     {className: 'js-sitenav', handler: siteMenu},
@@ -172,6 +194,7 @@ const handlers = [
     {className: 'js-site-reload-button', handler: siteReload},
     {className: 'js-fix-baseline', handler: fixBaseline},
     {className: 'js-portfolio-strip', handler: expandPortfolio},
+    {className: 'js-auto-add-headline-anchors', handler: autoAddHeadlineAnchors},
 ];
 
 handlers.forEach(({className, handler}) => {

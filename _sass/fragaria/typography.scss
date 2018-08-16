@@ -93,41 +93,61 @@ a {
     // Heading level 1.
     h1,
     .alpha {
-        @include baseline(
-            $fontsize: gamma,
-            $font: $headingtype,
-            $lineheight: 3
-        );
+        @include baseline($fontsize: gamma, $font: $headingtype, $lineheight: 3);
+
+        &.anchor-shift {
+            @include baseline($fontsize: gamma, $font: $headingtype, $lineheight: 3, $anchor: true);
+        }
     }
 
     // Heading level 2.
     h2,
     .beta {
         @include baseline(delta, $headingtype, $lineheight: 3);
+
+        &.anchor-shift {
+            @include baseline(delta, $headingtype, $lineheight: 3, $anchor: true);
+        }
     }
 
     // Heading level 3.
     h3,
     .gamma {
         @include baseline(epsilon, $headingtype, $lineheight: 3);
+
+        &.anchor-shift {
+            @include baseline(epsilon, $headingtype, $lineheight: 3, $anchor: true);
+        }
     }
 
     // Heading level 4.
     h4,
     .delta {
         @include baseline(zeta, $headingtype, $lineheight: 2);
+
+        &.anchor-shift {
+            @include baseline(zeta, $headingtype, $lineheight: 2, $anchor: true)
+        }
     }
 
     // Heading level 5.
     h5,
     .epsilon {
         @include baseline(eta, $headingtype, $lineheight: 2);
+
+        &.anchor-shift {
+            @include baseline(eta, $headingtype, $lineheight: 2, $anchor: true);
+        }
     }
 
     // Heading level 6.
     h6,
     .zeta {
         @include baseline(theta, $headingtype, $lineheight: 2);
+
+        &.anchor-shift {
+            @include baseline(theta, $headingtype, $lineheight: 2, $anchor: true);
+        }
     }
 
     // Lists.

@@ -33,10 +33,7 @@ function siteMenu(rootElem) {
                 const sitenavMenu = rootElem.getElementsByClassName('js-sitenav-menu')[0];
                 const sitenavMenuHeight = sitenavMenu.getBoundingClientRect().height;
                 const target = document.getElementById(targetSuffix.substring(1));
-                const offset = sitenavWrap.classList.contains('sitenav--shrinked') ?
-                    sitenavMenuHeight * 2 :
-                    sitenavMenuHeight;
-                window.scroll({top: target.offsetTop - offset, behavior: 'smooth'});
+                window.scroll({top: target.offsetTop, behavior: 'smooth'});
 
                 rootElem.classList.add('sitenav-wrapper--noanim');
                 rootElem.classList.remove('sitenav-wrapper--show');

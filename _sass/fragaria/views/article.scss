@@ -63,18 +63,62 @@ $article-content-width: 40rem;
     }
 
     h1 {
-        @include baseline(gamma, $headingtype, $lineheight: 3, $breakpoint: tablet-small down);
-        @include baseline(gamma, $headingtype, $lineheight: 3, $below: 1, $breakpoint: tablet up);
+        @include baseline(
+            gamma,
+            $headingtype,
+            $lineheight: 3,
+            $breakpoint: tablet-small down,
+            $anchor: true,
+        );
+        @include baseline(
+            gamma,
+            $headingtype,
+            $lineheight: 3,
+            $below: 1,
+            $breakpoint: tablet up,
+            $anchor: true,
+        );
     }
 
     h2 {
-        @include baseline(delta, $headingtype, $lineheight: 2, $below: 1, $above: 2, $breakpoint: tablet-small down, $anchor: true);
-        @include baseline(delta, $headingtype, $lineheight: 3, $below: 1, $above: 1, $breakpoint: tablet up, $anchor: true);
+        @include baseline(
+            delta,
+            $headingtype,
+            $lineheight: 2,
+            $below: 1,
+            $above: 2,
+            $breakpoint: tablet-small down,
+            $anchor: true
+        );
+        @include baseline(
+            delta,
+            $headingtype,
+            $lineheight: 3,
+            $below: 1,
+            $above: 1,
+            $breakpoint: tablet up,
+            $anchor: true
+        );
     }
 
     h3 {
-        @include baseline(epsilon, $headingtype, $lineheight: 3, $below: 1, $breakpoint: tablet-small down);
-        @include baseline(epsilon, $headingtype, $lineheight: 2, $below: 1, $above: 2, $breakpoint: tablet up);
+        @include baseline(
+            epsilon,
+            $headingtype,
+            $lineheight: 3,
+            $below: 1,
+            $breakpoint: tablet-small down,
+            $anchor: true,
+        );
+        @include baseline(
+            epsilon,
+            $headingtype,
+            $lineheight: 2,
+            $below: 1,
+            $above: 2,
+            $breakpoint: tablet up,
+            $anchor: true,
+        );
     }
 
     // basic image

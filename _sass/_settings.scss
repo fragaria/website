@@ -97,11 +97,16 @@ $sharebox-variants: (
     ),
 );
 
-// Fonts
+// Sitenav settings
+
+$sitenav-menu-height: (
+    mobile: 5rem,
+    tablet: 10rem,
+);
+$sitenav-menu-height-shrinked: 8.5rem;
 
 
-// Sassline settings
-// https://sassline.com/
+// Baseline settings
 
 // Breakpoint sizes from px to ems. Add more values here to add more breakpoints.
 // Change names if you prefer, it wont break the mixin as long as they are strings not just numbers.
@@ -121,6 +126,18 @@ $rootsizes: (
     tablet-small:   15px,           // 30px line-height body text
     tablet:         15px,           // 30px line-height body text
     desktop:        15px,           // 30px line-height body text
+);
+
+// This defines, how much shift is added to baselined headings that
+// should support anchored links like /blog/2018/03/28/blockchain-can-do/#not-that-hard.
+// Since there is a sitenav that sticks from the top of the page, we need
+// to shift the window by a little bit to compensate.
+$anchor-baseline-shifts: (
+    zero:           map-get($sitenav-menu-height, mobile),
+    mobile:         map-get($sitenav-menu-height, mobile),
+    tablet-small:   map-get($sitenav-menu-height, mobile),
+    tablet:         $sitenav-menu-height-shrinked,
+    desktop:        $sitenav-menu-height-shrinked,
 );
 
 $bodytype: (
@@ -216,13 +233,6 @@ $inline-monospace-sizes: (
     tablet: 18px,
     desktop: 18px,
 );
-
-// Sitenav settings
-$sitenav-menu-height: (
-    mobile: 5rem,
-    tablet: 10rem,
-);
-$sitenav-menu-height-shrinked: 8.5rem;
 
 // Hamburger settings
 // @see: https://jonsuh.com/hamburgers/

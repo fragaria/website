@@ -6,8 +6,6 @@ $breakpoint-keys: map-keys($breakpoints);
 $sizes: map-values($rootsizes);
 $points: map-values($breakpoints);
 
-$anchor-baseline-shift-add: 8!default;
-
 // Root font-size in %, outputted in correct breakpoints.
 @mixin rootsize {
     // 16 is default font size for most browsers.
@@ -121,8 +119,9 @@ $anchor-baseline-shift-add: 8!default;
     line-height: #{$lineheight}rem;
 
     @if $anchor {
-        padding-top: #{$baseline-shift + $anchor-baseline-shift-add}rem;
-        margin-top: -#{$anchor-baseline-shift-add}rem;
+        $anchor-shift: map-get($anchor-baseline-shifts, $breakpoint);
+        padding-top: #{$baseline-shift + $anchor-shift};
+        margin-top: #{$anchor-shift * -1};
     } @else {
         padding-top: #{$baseline-shift}rem;
     }

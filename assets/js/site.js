@@ -22,7 +22,14 @@ function siteMenu(rootElem) {
 
     for (let link of links) {
         link.addEventListener('click', function (evt) {
-            const targetUrl = evt.target.closest('.js-sitenav-menu__anchor').getAttribute('href');
+            const targetAnchor = evt.target.closest('.js-sitenav-menu__anchor');
+
+            if (! targetAnchor) {
+                console.warn('Could not found target anchor for current click evt.', evt);
+                return;
+            }
+
+            const targetUrl = targetAnchor.getAttribute('href');
             const targetSuffix = targetUrl.replace(currentUrl, '');
 
             // id-based navigation on current page

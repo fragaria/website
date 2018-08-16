@@ -19,10 +19,10 @@
     display: block;
     position: absolute;
     width: 768px;
-    height: 450px;
+    height: 510px;
     top: 50%;
     left: 50%;
-    margin-top: -225px;
+    margin-top: -255px;
     margin-left: -384px;
     color: map-get($palette, white);
 
@@ -50,5 +50,14 @@
 
     img {
         width: 5rem;
+    }
+
+    .button {
+        margin-top: 2rem;
+
+        &:hover {
+            background: map-get($palette, white);
+            color: map-get($palette, black);
+        }
     }
 }

@@ -156,6 +156,8 @@
     src: cloudinary
     cloudinary: people/ondrej-pudis.jpg
   profiles:
+    github: ondrejpudis
+    linkedin: pudisond
 - name: Marta Vaňková
   alt: Psyche
   nationality: Czech

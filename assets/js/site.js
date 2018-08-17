@@ -5,6 +5,15 @@ var forEachNode = function (nodelist, callback, scope) {
 };
 
 
+// String.startsWith polyfill for IE
+if (!String.prototype.startsWith) {
+    String.prototype.startsWith = function (searchString, position) {
+        position = position || 0;
+        return this.indexOf(searchString, position) === position;
+    };
+}
+
+
 function showIEWarning(rootElem) {
     function isIE() {
         var ua = window.navigator.userAgent; //Check the userAgent property of the window.navigator object

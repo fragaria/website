@@ -36,7 +36,7 @@
     caption: kb.cz
 - title: Moje zdravé finance
   desc: >
-    Being a part of the George internet banking, the Moje zdráve finance app has been used by more than 200,000&nbsp;clients of Česká spořitelna (Erste Group) for their daily expense management. It also plays an important role as a financial counseling tool used by bankers at the Česká spořitelna branches all around Czech Republic.
+    Being a part of the George internet banking, the Moje zdravé finance app has been used by more than 200,000&nbsp;clients of Česká spořitelna (Erste Group) for their daily expense management. It also plays an important role as a financial counseling tool used by bankers at the Česká spořitelna branches all around Czech Republic.
   img: portfolio/mzf.png
   tags:
     - angular

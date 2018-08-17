@@ -1,4 +1,5 @@
 <script src="{{ '/assets/js/smoothscroll.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/element-closest.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/' | relative_url }}{% if jekyll.environment == 'production' %}{{ 'site.js' | bust_js_cache }}{% else %}site.js{% endif %}"></script>
 
 {% if site.service_worker.enabled %}

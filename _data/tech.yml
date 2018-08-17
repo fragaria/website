@@ -43,6 +43,6 @@
 - title: AWS
   img: /assets/img/aws.svg
   url: https://aws.amazon.com
-- title: Linux
-  img: /assets/img/linux.svg
-  url: https://en.wikipedia.org/wiki/Linux
+- title: Django
+  img: /assets/img/django.svg
+  url: https://www.djangoproject.com

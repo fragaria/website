@@ -195,6 +195,10 @@ $sitenav-shrinked-push: 3.5rem;
 
     &.sitenav--shrinked {
         @include breakpoint(tablet up) {
+            .sitenav__menu {
+                border: none;
+            }
+
             .sitenav__linkset {
                 transform: translate3d(0, #{-1 * $sitenav-shrinked-push}, 0);
             }

@@ -1,7 +1,6 @@
 .v-home .hero {
     text-align: center;
-    padding-bottom: 4rem;
-    padding: 6rem 0;
+    padding: 2rem 0 6rem;
 
     @include breakpoint(tablet-small up) {
         padding: 6rem 0 10rem;

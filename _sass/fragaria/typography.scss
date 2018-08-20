@@ -505,7 +505,7 @@ a {
             $lineheight: 3,
             $below: 1,
             $breakpoint: tablet-small down,
-            $anchor: true,
+            $anchor: true
         );
         @include baseline(
             epsilon,
@@ -514,7 +514,7 @@ a {
             $below: 1,
             $above: 2,
             $breakpoint: tablet up,
-            $anchor: true,
+            $anchor: true
         );
     }
 
@@ -524,7 +524,7 @@ a {
         padding-bottom: 2rem;
 
         &.figure--wide {
-            @include breakpoint(desktop up) {
+            @include breakpoint(tablet up) {
                 margin-left: -15rem;
                 margin-right: -15rem;
             }

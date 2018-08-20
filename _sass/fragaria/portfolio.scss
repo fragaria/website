@@ -39,7 +39,8 @@ $portfolio-project-media-width: (
 .portfolio-project {
     margin-bottom: 2rem;
     padding-bottom: 3rem;
-    border-bottom: 1px solid #000;
+
+    @include baseline-border($orientation: bottom);
 
     &:last-child {
         padding-bottom: 0;

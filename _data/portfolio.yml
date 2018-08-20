@@ -28,7 +28,7 @@
 - title: Logman
   challenge: Scaling bank logs to make life easy
   desc: >
-    Logman is the <i>central logging facility</i> in Komerční banka (Societe Generale Group). It’s not just a log storage though, it also makes browsing the logs a breeze as they can be looked up and visualized in <a class="anchor anchor--emphasized" href="https://www.elastic.co/products/kibana" target="_blank" rel="noopener">Kibana</a> (along with all the necessary details like comprehensive permissions setup). Given the large volume; scaling using <a href="https://kubernetes.io/" class="anchor anchor--emphasized" target="_blank" rel="noopener">Kubernetes</a> is a no-brainer.
+    Logman is the <i>central logging facility</i> in Komerční banka (Societe Generale Group). It’s not just a log storage though, it also makes browsing the logs a breeze as they can be looked up and visualized in <a class="anchor anchor--emphasized" href="https://www.elastic.co/products/kibana" target="_blank" rel="noopener">Kibana</a> (along with all the necessary details like comprehensive permissions setup). Given the large volume; scaling using <a href="https://kubernetes.io/" class="anchor anchor--emphasized" target="_blank" rel="noopener">Kubernetes</a> is a no-brainer. Our team has come up with a solution complex enough to accommodate dozens of internal systems with varying requirements, yet without sacrificing long-term maintainability.
   img: portfolio/elasticsearch.png
   tags:
     - elasticsearch

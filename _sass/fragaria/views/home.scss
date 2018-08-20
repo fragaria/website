@@ -96,7 +96,7 @@
     margin-top: 1rem;
 
     @include breakpoint(mobile down) {
-        border-top: 1px $border-color solid;
+        @include baseline-border($orientation: 'top');
     }
 
     @include breakpoint(tablet up) {

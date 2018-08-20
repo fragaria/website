@@ -77,7 +77,7 @@
 - title: Fast
   challenge: Re-writing frontend strategy
   desc: >
-    Since we have lengthy experience with frontend development, we’ve assisted with creating the whole frontend development strategy for new web apps (both internal and external) made by Komerční banka (Societe Generale Group).
+    Since we have lengthy experience with frontend development, we’ve assisted with creating the whole frontend development strategy for new web apps (both internal and external) made by Komerční banka (Societe Generale Group). Introducing new technologies in a corporate environment is never easy, but we’ve succeeded and helped the bank update their tech stack to face the increasing demand for modern interactive web apps.
   img: portfolio/fast.png
   tags:
     - angular

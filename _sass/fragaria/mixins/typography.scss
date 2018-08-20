@@ -4,3 +4,25 @@
     text-decoration-skip-ink: auto;
     text-decoration-width: 1px;
 }
+
+
+@mixin narrow-content {
+    @include breakpoint(mobile up) {
+        max-width: rem-calc(map-get($breakpoints, mobile));
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+@mixin anchor-style($emphasize: false) {
+    @include underlineSkippingDescenders();
+
+    @if ($emphasize) {
+        color: map-get($palette, red);
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+}

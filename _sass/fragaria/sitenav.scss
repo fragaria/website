@@ -155,6 +155,7 @@ $sitenav-shrinked-push: 3.5rem;
     font-weight: map-get($headingtype, semi);
     letter-spacing: .1rem;
     padding: 1rem 0;
+    width: 100%;
 
     // active link is highlighted
     &--active .sitenav__link,
@@ -164,8 +165,11 @@ $sitenav-shrinked-push: 3.5rem;
     }
 
     .sitenav__link {
-        @include baseline(beta, $headingtype, $lineheight: 3.5, $below: 1, $breakpoint: tablet-small down);
-        @include baseline(beta, $headingtype, $lineheight: 5, $below: 1, $breakpoint: tablet up);
+        display: block;
+        line-height: 1;
+
+        @include fontsize(gamma, $breakpoint: tablet-small down);
+        @include fontsize(beta, $breakpoint: tablet up);
     }
 }
 

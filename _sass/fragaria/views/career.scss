@@ -1,21 +1,7 @@
 $full-view-break: 1000px;
 
-.v-career .hero {
-    padding: 2rem 0;
-
-    @include breakpoint(tablet up) {
-        padding-top: 4rem;
-    }
-}
-
 .v-career-section .v-career-section--content {
-    max-width: 40rem;
-    margin-left: auto;
-    margin-right: auto;
-
-    p {
-        // @include baseline(eta, $bodytype, $lineheight: 2);
-    }
+    @include narrow-content;
 }
 
 // spacing of individual section blocks
@@ -33,23 +19,37 @@ $full-view-break: 1000px;
             color: map-get($palette, red);
         }
 
-        @include baseline(beta, $headingtype, $lineheight: 3, $below: 1, $breakpoint: tablet-small down);
-        @include baseline(beta, $headingtype, $lineheight: 5, $below: 2, $breakpoint: tablet up);
+        @include baseline(gamma, $headingtype, $lineheight: 3, $below: 1, $breakpoint: tablet-small down);
+        @include baseline(gamma, $headingtype, $lineheight: 5, $below: 2, $breakpoint: tablet up);
     }
 }
 
 // grid for facts about the company
 .v-career-facts-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto;
     grid-template-rows: auto;
     grid-gap: 0 3rem;
-
     padding-top: 2rem;
+
+    @include breakpoint(tablet up) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.v-career-facts-grid__icon {
+    display: none;
+
+    @include breakpoint(tablet up) {
+        display: block;
+    }
+
 }
 
 .v-career-facts-grid__item {
-    text-align: center;
+    @include breakpoint(tablet up) {
+        text-align: center;
+    }
 }
 
 .v-career-facts-grid .v-career-facts-grid__title {

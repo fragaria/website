@@ -17,18 +17,16 @@
                 </div>
 
                 <h1 class="portfolio-project__headline">{{ project.title }}</h1>
+                <p class="portfolio-project__challenge">{{ project.challenge }}</p>
+
+                {% if project.website %}
+                <p class="portfolio-project__link">
+                    <a class="anchor anchor--emphasized" href="{{ project.website.href }}">{{ project.website.caption }}</a>
+                </p>
+                {% endif %}
 
                 <div class="portfolio-project-detail">
-                    <!-- <div class="caption portfolio-project__subheadline">{{ project.job }}</div> -->
-
-                    {% if project.website %}
-                        <div class="portfolio-project-detail__resources">
-                            <a class="anchor anchor--emphasized" href="{{ project.website.href }}">{{ project.website.caption }}</a>
-                        </div>
-                    {% endif %}
-
-                    <div class="portfolio-project-detail__resources">{{ project.desc }}</div>
-
+                    <p class="portfolio-project-detail__description">{{ project.desc }}</p>
                     {% include posts/taglist.html tags=project.tags class='taglist--leftbound' %}
                 </div>
 
@@ -36,7 +34,7 @@
         {% endfor %}
     </div>
 
-    <div class="v-home__cta-row portfolio-strip__show-more">
+    <div class="cta-row portfolio-strip__show-more">
         <span class="button js-portfolio-strip__expand-toggle" role="button" aria-controls="js-portfolio-strip" aria-expanded="false">Show more</span>
     </div>
 </div>

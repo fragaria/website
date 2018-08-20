@@ -3,26 +3,19 @@
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    padding-bottom: 4rem;
-    padding: 6rem 0;
-
-    @include breakpoint(tablet-small up) {
-        padding: 6rem 0 10rem;
-    }
+    padding-top: 2rem;
+    text-align: center;
 
     @include breakpoint(tablet up) {
-        padding: 8rem 0 12rem;
+        padding-top: 5rem;
+    }
+
+    &--vertical {
+        flex-direction: column;
     }
 
     // need to be scoped to take precendence over .typest
     .hero__headline {
-        @include baseline(beta, $headingtype, $lineheight: 3, $breakpoint: mobile down);
-        @include baseline(beta, $headingtype, $lineheight: 4, $breakpoint: tablet-small only);
-        @include baseline(beta, $headingtype, $lineheight: 5, $breakpoint: tablet up);
-    }
-
-    .hero__headline {
-        max-width: 40em;
         margin-left: auto;
         margin-right: auto;
 
@@ -31,6 +24,20 @@
             color: map-get($palette, red);
         }
 
+        @include baseline(alpha, $headingtype, $lineheight: 3, $below: 2, $breakpoint: mobile down);
+        @include baseline(alpha, $headingtype, $lineheight: 4, $below: 2, $breakpoint: tablet-small only);
+        @include baseline(alpha, $headingtype, $lineheight: 6, $below: 2, $breakpoint: tablet up);
+    }
+
+    .hero__sub {
+        @include breakpoint(mobile up) {
+            max-width: rem-calc(map-get($breakpoints, mobile));
+        }
+    }
+
+    .hero__headline + .hero__sub,
+    .hero__sub + .hero__sub {
+        @include baseline(zeta, $bodytype, $above: 2);
     }
 
     .hero__paginator {

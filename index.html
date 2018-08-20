@@ -4,8 +4,10 @@ layout: blank
 
 <div class="content-block typeset v-home" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="{{ site.company.official_name }}">
-    <section class="hero" role="banner">
-        <h1 class="hero__headline">We build software that <i>works</i>.<br>No <i>half-baked</i> solutions, no <i>false</i> promises.</h1>
+    <section class="hero hero--vertical" role="banner">
+        <h1 class="hero__headline">We build software that <i>works</i>.</h1>
+        <p class="hero__sub">Our team is built upon serious senior-level experts.<br>Think backends, frontends, SPAs and mobile apps; we know what it takes to do it <i>absolutely right.</i></p>
+        <p class="hero__sub"><a href="{{ '/solutions/' | relative_url }}" class="anchor anchor--emphasized">See how we do it</a></p>
     </section>
     <section class="v-home__portfolio">
         <h1 class="splitting-headline anchor-shift" id="projects">
@@ -23,26 +25,16 @@ layout: blank
         {% include blog-news.html %}
     </section>
 
-    <section class="v-home__team">
-        <meta itemprop="numberOfEmployees" content="{{ site.data.team.size }}">
-
-        <h1 class="splitting-headline anchor-shift" id="team">
-            <span class="splitting-headline__fill">Team</span>
-        </h1>
-
-        {% include team-members.html %}
-    </section>
-
     <section class="v-home__career">
         <h1 class="splitting-headline anchor-shift" id="career">
-            <span class="splitting-headline__fill">Career</span>
+            <span class="splitting-headline__fill">Work with us</span>
         </h1>
 
         <p class="v-home__career-par">Fragaria is a company with some serious software development history. The company is built upon people with real skills. You can be sure to learn a lot. Fast.</p>
         <p class="v-home__career-par">Besides developing great software, we like being people too. That's why we value friendship and understanding as our top priorities. Expect a great team full of interesting characters. Beers and parties included.</p>
 
-        <div class="v-home__cta-row">
-            <a class="button" role="button" href="{{ '/career/' | relative_url }}">I'm interested</a>
+        <div class="cta-row">
+            <a class="button" role="button" href="{{ '/work-with-us/' | relative_url }}">Interested in joining us?</a>
         </div>
     </section>
 
@@ -56,45 +48,43 @@ layout: blank
         <meta itemprop="telephone" content="{{ site.company.phone }}">
 
         <div class="v-home__company-content">
+            <article class="contact v-home__company-about">
+                <p class="contact__about">Based in Prague, Czech Republic, we love working with international teams too. Our people love communicating; we are proactive and have no issues speaking English the whole day (if required).</p>
+            </article>
+
             <article class="contact v-home__company-residence" itemprop="address" itemtype="https://schema.org/PostalAddress" itemscope>
-                <h1>Residence</h1>
-                <p>
-                    <span class="contact__line">{{ site.company.official_name }}</span>
-                    <span class="contact__line" itemprop="streetAddress">{{ site.company.address.residence.line1 }}</span>
-                    <span class="contact__line" itemprop="postalCode">{{ site.company.address.residence.line2 }}</span>
-                    <span class="contact__line" itemprop="addressLocality">{{ site.company.address.residence.line3 }}</span>
+                <h1 class="beta">Residence</h1>
+                <p class="contact__line">{{ site.company.official_name }}</p>
+                <p class="contact__line" itemprop="streetAddress">{{ site.company.address.residence.line1 }}</p>
+                <p class="contact__line" itemprop="postalCode">{{ site.company.address.residence.line2 }}</p>
+                <p class="contact__line" itemprop="addressLocality">{{ site.company.address.residence.line3 }}</p>
+
+                <br>
+                <p class="contact__line" itemprop="companyPhoneNumber">
+                    <a class="anchor anchor--emphasized" href="tel:{{ site.company.phone }}">{{ site.company.phone }}</a>
                 </p>
 
-                <p>
-                    <span class="contact__line" itemprop="companyPhoneNumber">
-                        <a class="anchor anchor--emphasized" href="tel:{{ site.company.phone }}">{{ site.company.phone }}</a>
-                    </span>
+                <p class="contact__line" itemprop="companyEmal">
+                    <a class="anchor anchor--emphasized" href="mailto:{{ site.company.email }}" >{{ site.company.email }}</a>
+                </p>
 
-                    <span class="contact__line" itemprop="companyEmal">
-                        <a class="anchor anchor--emphasized" href="mailto:{{ site.company.email }}" >{{ site.company.email }}</a>
-                    </span>
-
-                    <span class="contact__line" itemprop="companyResidenceMap">
-                        <a class="anchor anchor--emphasized" href="{{ site.company.address.residence.map_link }}" target="_blank" rel="noopener" >Map to our office</a>
-                    </span>
+                <p class="contact__line" itemprop="companyResidenceMap">
+                    <a class="anchor anchor--emphasized" href="{{ site.company.address.residence.map_link }}" target="_blank" rel="noopener" >Map to our office</a>
                 </p>
 
 
             </article>
 
             <article class="contact v-home__company-billing">
-                <h1>Billing</h1>
-                <p>
-                    <span class="contact__line">{{ site.company.official_name }}</span>
-                    <span class="contact__line">{{ site.company.address.billing.line1 }}</span>
-                    <span class="contact__line">{{ site.company.address.billing.line2 }}</span>
-                    <span class="contact__line">{{ site.company.address.billing.line3 }}</span>
-                </p>
-                <p>
-                    <span class="contact__line">IČO: <span itemprop="identifier">{{ site.company.ico }}</span></span>
-                    <span class="contact__line">DIČ: <span itemprop="taxID">{{ site.company.dic }}</span></span>
-                    <span class="contact__line">Account nr.: {{ site.company.account_nr }}</span>
-                </p>
+                <h1 class="beta">Billing</h1>
+                <p class="contact__line">{{ site.company.official_name }}</p>
+                <p class="contact__line">{{ site.company.address.billing.line1 }}</p>
+                <p class="contact__line">{{ site.company.address.billing.line2 }}</p>
+                <p class="contact__line">{{ site.company.address.billing.line3 }}</p>
+                <br>
+                <p class="contact__line">IČO: <span itemprop="identifier">{{ site.company.ico }}</span></p>
+                <p class="contact__line">DIČ: <span itemprop="taxID">{{ site.company.dic }}</span></p>
+                <p class="contact__line">Account nr.: {{ site.company.account_nr }}</p>
             </article>
 
             <form class="v-home__company-contactform form" action="https://formspree.io/{{ site.company.contact_email }}" method="POST">
@@ -102,15 +92,15 @@ layout: blank
                 <input type="text" name="_gotcha" style="display:none" />
 
                 <div class="form__line">
-                    <label class="form-label" for="git-name">Your name</label>
+                    <label class="form-label" for="git-name">Full name</label>
                     <input class="form-control" type="text" name="name" id="git-name" required>
                 </div>
                 <div class="form__line">
-                    <label class="form-label" for="git-email">Your email</label>
+                    <label class="form-label" for="git-email">Email</label>
                     <input class="form-control" type="email" name="_replyto" id="git-email"  required>
                 </div>
                 <div class="form__line">
-                    <label class="form-label" for="git-message">Your message</label>
+                    <label class="form-label" for="git-message">What is your enquiry?</label>
                     <textarea class="form-control" name="message" id="git-message"  required></textarea>
                 </div>
                 <div class="form__submit">

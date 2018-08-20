@@ -3,16 +3,16 @@
   description: No waterfalls here. We belive agile is the right way to do it.
 - title: Open source
   icon: icon--open-source
-  description: We support open source, and we regularly contribute to it.
+  description: We support open source and we regularly contribute to it.
 - title: Home office
   icon: icon--house
   description: Working from home is easier than ever. That's why we consider it a common practice.
 - title: Pet friendly
   icon: icon--paw
-  description: We won't mind if you bring your little friend down to the office. We do sometimes too.
+  description: We won't mind if you bring your little friend down to the office (we sometimes do too!).
 - title: Beers and BBQ
   icon: icon--beer
-  description: A beer or two after hard work is always welcome to blow off some steam.
+  description: A beer or two after hard work is always welcome to blow-off some steam.
 - title: Office in the city center
   icon: icon--city
-  description: We're based on Karlovo náměstí. Top-class locality.
+  description: We're based on Karlovo náměstí - top-class locality.

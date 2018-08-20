@@ -58,20 +58,31 @@ $portfolio-project-media-width: (
     }
 
     .portfolio-project__headline {
-        @include baseline(gamma, $headingtype, $lineheight: 2, $below: 1);
+        @include baseline(gamma, $headingtype, $lineheight: 2, $below: 0);
     }
 
     .portfolio-project__media {
         float: right;
         max-width: map-get($portfolio-project-media-width, mobile);
         margin-top: .5rem;
+        margin-left: 1rem;
 
         @include breakpoint(tablet-small up) {
             max-width: map-get($portfolio-project-media-width, tablet-small);
             margin-top: 0;
+            margin-left: 2rem;
         }
     }
+
+    .portfolio-project__challenge {
+        @include baseline(eta, $bodytype, $lineheight: 2, $below: 0);
+    }
+
+    .portfolio-project__link {
+        @include baseline(eta, $bodytype, $lineheight: 2, $below: 2);
+    }
 }
+
 
 
 .portfolio-project-detail {
@@ -79,7 +90,8 @@ $portfolio-project-media-width: (
         padding-right: map-get($portfolio-project-media-width, tablet-small) + 2rem;
     }
 
-    .portfolio-project-detail__resources {
+
+    .portfolio-project-detail__description {
         @include baseline(eta, $bodytype, $lineheight: 2, $below: 1);
     }
 }

@@ -62,7 +62,6 @@ a {
 
 // Styles for typeset text.
 .typeset {
-
     // Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
     p {
         @include baseline(
@@ -153,14 +152,12 @@ a {
     // Lists.
     ul,
     ol {
-        @include baseline(zeta, $bodytype, $lineheight: 2, $below: 2);
+        @include baseline(zeta, $bodytype, $lineheight: 2, $below: 1);
+
         li {
             font-feature-settings: "kern", "onum", "liga";
             margin-left: 2rem;
 
-            @include breakpoint(tablet up) {
-                margin-left: 0;
-            }
             ol,
             ul {
                 margin-bottom: 0;
@@ -224,6 +221,12 @@ a {
                 }
             }
         }
+    }
+
+    // Avoid blank line between p and ul.
+    p + ul,
+    p + ol {
+        margin-top: -1rem;
     }
 
     // Definition lists.
@@ -440,5 +443,117 @@ a {
     // Ascending and descending numbers with OpenType.
     .oldstyle-numerals {
         font-feature-settings: "onum", "kern";
+    }
+}
+
+.article-typeset {
+    text-align: left;
+
+    a {
+        // default anchor style
+        @include anchor-style(true);
+    }
+
+    h1, h2, h3 {
+        font-family: getFontFamily($headingtype);
+    }
+
+    h1 {
+        @include baseline(
+            gamma,
+            $headingtype,
+            $lineheight: 3,
+            $breakpoint: tablet-small down,
+            $anchor: true
+        );
+
+        @include baseline(
+            gamma,
+            $headingtype,
+            $lineheight: 3,
+            $below: 1,
+            $breakpoint: tablet up,
+            $anchor: true
+        );
+    }
+
+    h2 {
+        @include baseline(
+            delta,
+            $headingtype,
+            $lineheight: 2,
+            $below: 1,
+            $above: 2,
+            $breakpoint: tablet-small down,
+            $anchor: true
+        );
+        @include baseline(
+            delta,
+            $headingtype,
+            $lineheight: 3,
+            $below: 1,
+            $above: 1,
+            $breakpoint: tablet up,
+            $anchor: true
+        );
+    }
+
+    h3 {
+        @include baseline(
+            epsilon,
+            $headingtype,
+            $lineheight: 3,
+            $below: 1,
+            $breakpoint: tablet-small down,
+            $anchor: true,
+        );
+        @include baseline(
+            epsilon,
+            $headingtype,
+            $lineheight: 2,
+            $below: 1,
+            $above: 2,
+            $breakpoint: tablet up,
+            $anchor: true,
+        );
+    }
+
+    // basic image
+    .figure:not(.highlight) {
+        text-align: center;
+        padding-bottom: 2rem;
+
+        &.figure--wide {
+            @include breakpoint(desktop up) {
+                margin-left: -15rem;
+                margin-right: -15rem;
+            }
+        }
+    }
+
+    .figure__image {
+        // images without display: block get unspecified margin added by browsers
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .figure__caption {
+        @include baseline(theta, $bodytype, $lineheight: 2);
+    }
+
+    .inline-figure-container {
+        display: flex;
+        justify-content: space-around;
+
+        > figure {
+            + figure {
+                margin-left: 1rem;
+            }
+
+            img {
+                max-height: 14rem;
+            }
+        }
     }
 }

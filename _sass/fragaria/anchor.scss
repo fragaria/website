@@ -1,19 +1,8 @@
-@mixin anchorStyle($emphasize: false) {
-    @include underlineSkippingDescenders();
-
-    @if ($emphasize) {
-        color: map-get($palette, red);
-    }
-
-    &:hover {
-        text-decoration: none;
-    }
-}
 
 .anchor--default {
-    @include anchorStyle();
+    @include anchor-style();
 }
 
 .anchor--emphasized {
-    @include anchorStyle(true);
+    @include anchor-style(true);
 }

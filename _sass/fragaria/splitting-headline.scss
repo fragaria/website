@@ -12,7 +12,8 @@
         content: '';
         position: absolute;
         width: 100%;
-        margin-top: 1rem;
+        // TODO; @note: this has to match half the font size of the font used for the headline
+        margin-top: 18px;
         left: 0;
         height: 3px;
         background: $hr-color;

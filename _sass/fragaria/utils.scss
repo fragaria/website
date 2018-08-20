@@ -26,3 +26,8 @@
 .u-margin--bottom2 {
     margin-bottom: 2rem;
 }
+
+.hypenize {
+    // Will try to add word-breaking hypens according to post language (which defaults to EN).
+    hyphens: auto;
+}

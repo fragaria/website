@@ -1,10 +1,10 @@
 - name: Projects
   url: /#projects
-- name: Team
-  url: /#team
+- name: Solutions
+  url: /solutions/
 - name: Blog
   url: /blog/
-- name: Career
-  url: /career/
+- name: Work with us
+  url: /work-with-us/
 - name: Contact
   url: /#get-in-touch

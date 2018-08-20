@@ -164,5 +164,5 @@
   gender: female
   avatar:
     src: cloudinary
-    cloudinary: people/marta-vankova.jpg
+    cloudinary: people/marta-vankova-face.jpg
   profiles:

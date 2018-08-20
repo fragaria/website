@@ -1,7 +1,7 @@
 - title: Democracy 21 (D21)
   challenge: Delivering an e-voting app for civic participation
   desc: >
-    Delivering an e-voting application is nothing simple: security, scalability and reliability cannot accept any compromises. We were privileged to be hired as the sole tech supplier for D21 &ndash; a civic participation and decision-making online platform (from January 2015 until June 2018). Citizens of Říčany regularly use D21 to decide on how to <a class="anchor anchor--emphasized" href="http://www.ridimricany.cz/" target="_blank" rel="noopener">spend 5 million CZK</a> from the city budget, as well as the citizens in <a class="anchor anchor--emphasized" href="/blog/2016/05/11/jak-jsme-pocitali-new-york-aneb-aws/">NYC with their $30 million budget</a>. Our experts successfully kicked-off the project for a sustainable future development.
+    Delivering an e-voting application is nothing simple: security, scalability and reliability cannot accept any compromises. We were privileged to be hired as the sole tech supplier for D21 &ndash; a civic participation and decision-making online platform (from January&nbsp;2015 until June&nbsp;2018). Citizens of Říčany regularly use D21 to decide on how to <a class="anchor anchor--emphasized" href="http://www.ridimricany.cz/" target="_blank" rel="noopener">spend 5 million CZK</a> from the city budget, as well as the citizens in <a class="anchor anchor--emphasized" href="/blog/2016/05/11/jak-jsme-pocitali-new-york-aneb-aws/">NYC with their $30 million budget</a>. Our experts successfully kicked-off the project for a sustainable future development.
   img: portfolio/d21.png
   tags:
     - angular
@@ -40,7 +40,7 @@
 - title: Moje zdravé finance
   challenge: 200,000+ clients using this finance app
   desc: >
-    Being a part of the George internet banking, the Moje zdravé finance app has been used by more than 200,000 clients of Česká spořitelna (Erste group) for their daily expense management. It also plays an important role as a financial counseling tool used by bankers at the Česká spořitelna branches all around the Czech Republic.
+    Being a part of the George internet banking, the Moje zdravé finance app has been used by more than <i>200,000&nbsp;clients</i> of Česká spořitelna (Erste group) for their daily expense management. It also plays an important role as a financial counseling tool used by bankers at the Česká spořitelna branches all around the Czech Republic.
   img: portfolio/mzf.png
   tags:
     - angular

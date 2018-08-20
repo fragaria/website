@@ -5,9 +5,20 @@ description: TODO
 keywords: solutions, software
 ---
 
-<!-- TODO: microdata -->
 <div class="content-block">
-    <article class="v-solutions typeset">
+    <article class="v-solutions typeset" itemtype="http://schema.org/Product" itemscope>
+        <meta itemprop="name" content="custom-tailored software">
+        <meta itemprop="category" content="software development">
+        <span itemprop="audience" itemtype="https://schema.org/Audience" itemscope class="hidden">
+            <meta itemprop="audienceType" content="anyone">
+        </span>
+        <span itemprop="brand" itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop="name" content="{{ site.company.official_name }}">
+        </span>
+        <span itemprop="manufacturer" itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop="name" content="{{ site.company.official_name }}">
+        </span>
+
         <section class="hero hero--nobottom">
             <h1 class="hero__headline">Solutions</h1>
         </section>

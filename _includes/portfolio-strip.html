@@ -17,13 +17,11 @@
                 </div>
 
                 <h1 class="portfolio-project__headline">{{ project.title }}</h1>
-                <p class="portfolio-project__challenge">{{ project.challenge }}</p>
-
-                {% if project.website %}
-                <p class="portfolio-project__link">
-                    <a class="anchor anchor--emphasized" href="{{ project.website.href }}">{{ project.website.caption }}</a>
+                <p class="portfolio-project__subtitle">
+                    {{ project.challenge }}{% if project.website %},
+                        <a class="anchor anchor--emphasized" href="{{ project.website.href }}">{{ project.website.caption }}</a>
+                    {% endif %}
                 </p>
-                {% endif %}
 
                 <div class="portfolio-project-detail">
                     <p class="portfolio-project-detail__description">{{ project.desc }}</p>

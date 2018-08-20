@@ -54,11 +54,16 @@ $portfolio-project-media-width: (
 
         &:nth-child(2n+1) {
             border-right: 1px solid #000;
+            padding-left: 0;
+        }
+
+        &:nth-child(2n+2) {
+            padding-right: 0;
         }
     }
 
     .portfolio-project__headline {
-        @include baseline(gamma, $headingtype, $lineheight: 2, $below: 0);
+        @include baseline(gamma, $headingtype, $lineheight: 2, $below: 1);
     }
 
     .portfolio-project__media {
@@ -74,12 +79,10 @@ $portfolio-project-media-width: (
         }
     }
 
-    .portfolio-project__challenge {
-        @include baseline(eta, $bodytype, $lineheight: 2, $below: 0);
-    }
+    .portfolio-project__subtitle {
+        font-style: italic;
 
-    .portfolio-project__link {
-        @include baseline(eta, $bodytype, $lineheight: 2, $below: 2);
+        @include baseline(eta, $bodytype, $lineheight: 2, $below: 1);
     }
 }
 

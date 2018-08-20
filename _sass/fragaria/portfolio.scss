@@ -53,6 +53,8 @@ $portfolio-project-media-width: (
         margin-bottom: 0;
         border-bottom: none;
 
+        @include baseline-border-cancel($orientation: bottom);
+
         &:nth-child(2n+1) {
             border-right: 1px solid #000;
             padding-left: 0;

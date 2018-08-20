@@ -86,6 +86,10 @@ $portfolio-project-media-width: (
         font-style: italic;
 
         @include baseline(eta, $bodytype, $lineheight: 2, $below: 1);
+
+        @include breakpoint(tablet up) {
+            padding-right: map-get($portfolio-project-media-width, tablet-small) + 2rem;
+        }
     }
 }
 

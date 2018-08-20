@@ -4,14 +4,20 @@
     align-items: center;
     text-align: center;
     padding-top: 2rem;
+    padding-bottom: 2rem;
     text-align: center;
 
     @include breakpoint(tablet up) {
         padding-top: 5rem;
+        padding-bottom: 5rem;
     }
 
     &--vertical {
         flex-direction: column;
+    }
+
+    &--nobottom {
+        padding-bottom: 0;
     }
 
     // need to be scoped to take precendence over .typest

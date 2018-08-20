@@ -10,7 +10,7 @@
     margin-top: 2rem;
 
     @include breakpoint(tablet up) {
-        margin-top: 4rem;
+        margin-top: 5rem;
         grid-template-areas:
             "main"
             "latest"

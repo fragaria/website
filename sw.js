@@ -7,7 +7,7 @@ urls.push("/website/assets/favicons/android-chrome-192x192.png");urls.push("/web
 urls.push("/website/blog/2018/07/25/spehujeme-pouzivatelov-na-nasich-strankach/");urls.push("/website/blog/2018/03/28/blockchain-can-do/");urls.push("/website/blog/2018/02/14/idealni-bezdratova-sluchatka-spunty/");urls.push("/website/blog/2018/02/05/mapujeme-adresy-do-ceskych-kraju/");urls.push("/website/blog/2018/01/23/vybirame-bezdratova-sluchatka-uvod/");urls.push("/website/blog/2017/12/01/elasticsearch-60-se-blizi/");urls.push("/website/blog/2017/11/10/ohlednuti-ex-vedce/");urls.push("/website/blog/2017/09/22/fraga-akce-aneb-kluci-na-vylete/");urls.push("/website/blog/2017/07/03/jahoda-malina-sloni-hadi-flandera/");urls.push("/website/blog/2017/06/26/npm-packages-101-creating-npm-package/");
 
 // Cache pages
-urls.push("/website/404.html");urls.push("/website/blog/");urls.push("/website/career/");urls.push("/website/");urls.push("/website/nginx-redir-list/");urls.push("/website/offline/");
+urls.push("/website/404.html");urls.push("/website/blog/");urls.push("/website/solutions/");urls.push("/website/work-with-us/");urls.push("/website/");urls.push("/website/nginx-redir-list/");urls.push("/website/offline/");
 
 
 // Cache name: adjust version number to invalidate service worker cache.

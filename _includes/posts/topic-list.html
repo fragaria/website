@@ -6,7 +6,7 @@
 
 {% assign sortedtags = tags | split:'|' | sort | reverse %}
 
-<ul class="topic-list">
+<ul class="archive-nav-list topic-list">
     {% for tag in sortedtags %}
         {% assign tagitems = tag | split: '#' %}
         {% assign tagname = tagitems[1] %}

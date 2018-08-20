@@ -1,5 +1,5 @@
 {% assign posts_by_year = site.posts | group_by_exp:"post", "post.date | date: '%Y'"  %}
-<ul>
+<ul class="archive-nav-list">
     {% for year in posts_by_year %}
         {% assign archive_url = '/blog/archive/year/' | append: year.name | append: '/' %}
         <li><a class="anchor--emphasized" itemprop="relatedLink" href="{{ archive_url | relative_url }}">{{ year.name }}</a> ({{ year.items.size }})</li>

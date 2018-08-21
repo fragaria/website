@@ -1,6 +1,6 @@
 .v-home .hero {
     text-align: center;
-    padding: 2rem 0 6rem;
+    padding: 3rem 0 6rem;
 
     @include breakpoint(tablet-small up) {
         padding: 6rem 0 10rem;
@@ -16,8 +16,8 @@
         margin-right: auto;
         text-align: center;
 
-        @include baseline(beta, $headingtype, $lineheight: 3, $breakpoint: mobile down);
-        @include baseline(beta, $headingtype, $lineheight: 5, $breakpoint: tablet-small up);
+        @include baseline(alpha, $headingtype, $lineheight: 3, $breakpoint: mobile down);
+        @include baseline(alpha, $headingtype, $lineheight: 5, $breakpoint: tablet-small up);
 
         i {
             font-style: normal;

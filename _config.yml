@@ -16,7 +16,7 @@ description: >
     to do it right.
 keywords: software, software development, web apps, vývoj software, webové aplikace, python, javascript, typescript, java, angular, vue, elasticsearch, html, css
 url: "http://localhost:4000" # the base hostname & protocol for your site
-baseurl: "/website/"
+baseurl: "/"
 logo: "/assets/logo.svg" # Site logo
 # favicon: "/favicon.ico" # Uncomment to add custom favicon, or leave as is to use site logo
 

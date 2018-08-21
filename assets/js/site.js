@@ -175,8 +175,13 @@ function expandPortfolio(element) {
  * @param {HTMLElement} element
  */
 function shirkSidenavOnScroll(element) {
+    function getBodyScrollTop() {
+        let el = document.scrollingElement || document.documentElement;
+        return el.scrollTop;
+    }
+
     var onScroll = function () {
-        var scrolled = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
+        var scrolled = Math.max(window.pageYOffset, getBodyScrollTop());
 
         scrolled > 100 ?
             element.classList.add('sitenav--shrinked') :
@@ -192,7 +197,7 @@ function shirkSidenavOnScroll(element) {
         window.mozRequestAnimationFrame ||
         window.msRequestAnimationFrame ||
         window.oRequestAnimationFrame;
-    var lastScrollTop = document.documentElement.scrollTop;
+    var lastScrollTop = getBodyScrollTop();
 
     if (raf) {
         // make sure to run it first time too
@@ -202,7 +207,7 @@ function shirkSidenavOnScroll(element) {
     }
 
     function loop() {
-        var scrollTop = document.documentElement.scrollTop;
+        var scrollTop = getBodyScrollTop();
 
         if (lastScrollTop === scrollTop) {
             raf(loop);

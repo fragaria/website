@@ -1,4 +1,5 @@
-url: "https://www.fragaria.cz"
+url: "https://fragaria.cz"
+baseurl: "/"
 
 plugins:
     - jekyll-sitemap

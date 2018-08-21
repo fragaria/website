@@ -88,8 +88,17 @@ layout: blank
             </article>
 
             <form class="v-home__company-contactform form" action="https://formspree.io/{{ site.company.contact_email }}" method="POST">
-                <input type="hidden" name="_subject" value="New question submission from the website" />
                 <input type="text" name="_gotcha" style="display:none" />
+
+                <div class="form__line">
+                    <label class="form-label" for="git-subject">I would like to</label>
+                    <div class="form-control-wrapper form-control-wrapper--select">
+                        <select class="form-control" name="_subject" id="git-subject" required>
+                            <option value="New enquiry">Ask a question</option>
+                            <option value="Work interest">Work with you</option>
+                        </select>
+                    </div>
+                </div>
 
                 <div class="form__line">
                     <label class="form-label" for="git-name">Full name</label>

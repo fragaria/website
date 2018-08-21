@@ -20,7 +20,7 @@
 .form-control {
     display: block;
     width: 100%;
-    font-family: getFontFamily($bodytype);
+    font-family: getFontFamily($headingtype);
     background-color: map-get($palette, gray-light);
     border: 0;
     // border: 2px map-get($palette, red) solid;
@@ -32,6 +32,24 @@
     &:focus {
         outline: none;
         box-shadow: none;
+        background-color: darken(map-get($palette, gray-light), 1%);
+    }
+}
+
+.form-control-wrapper {
+    position: relative;
+
+    &--select::after {
+        font-family: '#{$icomoon-font-family}';
+        position: absolute;
+        right: 0;
+        top: 0;
+        content: $icon--arrow-down;
+        display: block;
+        height: 3rem;
+        line-height: 3rem;
+        font-size: 1.5rem;
+        right: .5rem;
     }
 }
 
@@ -39,6 +57,18 @@ input.form-control {
     // height: 2rem;
     line-height: 2rem;
     // border: 0;
+}
+
+select.form-control {
+    line-height: 2rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    user-select: none;
+
+    &::-ms-expand {
+        display: none; /* hide the default arrow in ie10 and ie11 */
+    }
 }
 
 textarea.form-control {

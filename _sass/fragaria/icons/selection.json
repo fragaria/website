@@ -64,6 +64,35 @@
     {
       "icon": {
         "paths": [
+          "M316 334l196 196 196-196 60 60-256 256-256-256z"
+        ],
+        "attrs": [
+          {}
+        ],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "tags": [
+          "keyboard_arrow_down"
+        ],
+        "grid": 24
+      },
+      "attrs": [
+        {}
+      ],
+      "properties": {
+        "order": 1,
+        "id": 3,
+        "prevSize": 24,
+        "code": 59665,
+        "name": "arrow-down"
+      },
+      "setIdx": 2,
+      "setId": 6,
+      "iconIdx": 0
+    },
+    {
+      "icon": {
+        "paths": [
           "M726 298c118 0 212 96 212 214s-94 214-212 214h-172v-82h172c72 0 132-60 132-132s-60-132-132-132h-172v-82h172zM342 554v-84h340v84h-340zM166 512c0 72 60 132 132 132h172v82h-172c-118 0-212-96-212-214s94-214 212-214h172v82h-172c-72 0-132 60-132 132z"
         ],
         "attrs": [
@@ -88,7 +117,7 @@
       },
       "setIdx": 2,
       "setId": 6,
-      "iconIdx": 0
+      "iconIdx": 2
     },
     {
       "icon": {
@@ -117,7 +146,7 @@
       },
       "setIdx": 2,
       "setId": 6,
-      "iconIdx": 1
+      "iconIdx": 3
     },
     {
       "icon": {

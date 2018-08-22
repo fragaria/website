@@ -1,6 +1,6 @@
 <span itemprop="{% if include.prop %}{{ include.prop }}{% else %}image{% endif %}" itemtype="http://schema.org/ImageObject" itemscope class="hidden">
     <meta itemprop="caption" content="{{ site.company.official_name }}">
-    {% if prop == 'logo' %}
+    {% if include.prop == 'logo' %}
         <meta itemprop="url" content="{{ 'assets/img/strawberry_60-60.png' | absolute_url }}">
         <meta itemprop="width" content="60">
         <meta itemprop="height" content="60">

@@ -1,13 +1,13 @@
 <ul class="pagination" role="navigation" aria-label="Pagination" itemscope itemtype="http://schema.org/SiteNavigationElement/Pagination">
     {% if include.paginator.page != 1 %}
     <li class="pagination__previous pagination__link">
-        <a class="pagination__anchor gamma" href="{{ include.paginator.previous_page_path | relative_url }}" aria-label="Previous page">< Newer posts </a>
+        <a class="pagination__anchor gamma" href="{{ include.paginator.previous_page_path | relative_url }}" aria-label="Previous page">&lt; Newer posts </a>
     </li>
     {% endif %}
 
     {% if include.paginator.page != include.paginator.total_pages %}
     <li class="pagination__next pagination__link">
-        <a class="pagination__anchor gamma" href="{{ include.paginator.next_page_path | relative_url }}" aria-label="Next page">Older posts ></a>
+        <a class="pagination__anchor gamma" href="{{ include.paginator.next_page_path | relative_url }}" aria-label="Next page">Older posts &gt;</a>
     </li>
     {% endif %}
 </ul>

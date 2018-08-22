@@ -9,13 +9,12 @@
                 </span>
 
                 <span itemprop="publisher" itemtype="http://schema.org/Organization" class="hidden" itemscope>
-                    <span itemprop="logo" itemtype="http://schema.org/ImageObject" itemscope="">
-                        <meta itemprop="url" content="{{ 'assets/img/strawberry.svg' | absolute_url }}">
-                    </span>
+                    {% include_cached seo/company-image.html prop="logo" %}
                     <meta itemprop="name" content="{{ site.company.official_name }}">
                 </span>
 
                 <meta itemprop="datePublished" content="{{ include.post.date | date_to_xmlschema }}" />
+                <meta itemprop="dateModified" content="{% if include.post.modified_time %}{{ include.post.modified_time | date_to_xmlschema }}{% else %}{{ include.post.date | date_to_xmlschema }}{% endif %}" />
                 <link itemprop="mainEntityOfPage" href="{{ include.post.url }}" />
             </p>
             {% if include.excerpt_words %}

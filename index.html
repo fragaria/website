@@ -2,8 +2,26 @@
 layout: blank
 ---
 
-<div class="content-block typeset v-home" itemscope itemtype="http://schema.org/Organization">
+<div class="content-block typeset v-home" itemscope itemtype="http://schema.org/LocalBusiness">
     <meta itemprop="name" content="{{ site.company.official_name }}">
+    <meta itemprop="openingHours" content="Mo-Fr 10:00-17:00">
+    <meta itemprop="hasMap" content="{{ site.company.address.residence.map_link }}">
+    <meta itemprop="logo" content="{{ 'assets/img/strawberry.png' | absolute_url }}">
+    <meta itemprop="url" content="{{ '/' | absolute_url }}">
+    {% include_cached seo/company-image.html %}
+    {% if site.company.social.twitter %}
+        <meta itemprop="sameAs" content="https://twitter.com/{{ site.company.social.twitter }}">
+    {% endif %}
+    {% if site.company.social.linkedin %}
+        <meta itemprop="sameAs" content="https://linkedin.com/company/{{ site.company.social.linkedin }}">
+    {% endif %}
+    {% if site.company.social.github %}
+        <meta itemprop="sameAs" content="https://github.com/{{ site.company.social.github }}">
+    {% endif %}
+    {% if site.company.social.github %}
+        <meta itemprop="sameAs" content="https://stackshare.io/{{ site.company.social.stackshare }}">
+    {% endif %}
+
     <section class="hero hero--vertical" role="banner">
         <h1 class="hero__headline">We build software that <i>works</i>.</h1>
         <p class="hero__sub">Our team is built upon serious senior-level experts.<br>Think backends, frontends, SPAs and mobile apps; we know what it takes to do it <i>absolutely right.</i></p>
@@ -31,7 +49,7 @@ layout: blank
         </h1>
 
         <div class="v-home__career-content">
-            <p class="v-home__career-par">Fragaria is a company with some serious software development history. The company is built upon people with <i>real skills</i>. You can be sure to learn a lot. <i>Fast</i>.</p>
+            <p class="v-home__career-par">Fragaria is a company with some serious software development history. <span>The company is built upon</span> <i>people with</i> <b>real skills</b>. You can be sure to learn a lot. <i>Fast</i>.</p>
             <p class="v-home__career-par">Besides developing great software, <i>we like being people too</i>. That's why we value friendship and understanding as our top priorities. Expect a great team full of interesting characters. Beers and parties included.</p>
         </div>
 
@@ -62,15 +80,15 @@ layout: blank
                 <p class="contact__line" itemprop="addressLocality">{{ site.company.address.residence.line3 }}</p>
 
                 <br>
-                <p class="contact__line" itemprop="companyPhoneNumber">
+                <p class="contact__line" itemprop="telephone">
                     <a class="anchor anchor--emphasized" href="tel:{{ site.company.phone }}">{{ site.company.phone }}</a>
                 </p>
 
-                <p class="contact__line" itemprop="companyEmal">
+                <p class="contact__line" itemprop="email">
                     <a class="anchor anchor--emphasized" href="mailto:{{ site.company.email }}" >{{ site.company.email }}</a>
                 </p>
 
-                <p class="contact__line" itemprop="companyResidenceMap">
+                <p class="contact__line">
                     <a class="anchor anchor--emphasized" href="{{ site.company.address.residence.map_link }}" target="_blank" rel="noopener" >Map to our office</a>
                 </p>
 

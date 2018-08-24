@@ -191,7 +191,7 @@ Start the application using:
 bundle exec jekyll serve --livereload
 ```
 
-Testing site will be available at `http://localhost:4000/website/`.
+Testing site will be available at `http://localhost:4000/`.
 
 ## Using Docker
 

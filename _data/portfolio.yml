@@ -28,7 +28,7 @@
 - title: Logman
   challenge: Scaling bank logs to make life easy
   desc: >
-    Logman is the <i>central logging facility</i> in Komerční banka (Societe Generale Group). It’s not just a log storage though, it also makes browsing the logs a breeze as they can be looked up and visualized in <a class="anchor anchor--emphasized" href="https://www.elastic.co/products/kibana" target="_blank" rel="noopener">Kibana</a> (along with all the necessary details like comprehensive permissions setup). Given the large volume; scaling using <a href="https://kubernetes.io/" class="anchor anchor--emphasized" target="_blank" rel="noopener">Kubernetes</a> is a no-brainer. Our team has come up with a solution complex enough to accommodate dozens of internal systems with varying requirements, yet without sacrificing long-term maintainability.
+    Logman is the <i>central logging facility</i> in Komerční banka (Société Générale Group member). It’s not just a log storage though, it also makes browsing the logs a breeze as they can be looked up and visualized in <a class="anchor anchor--emphasized" href="https://www.elastic.co/products/kibana" target="_blank" rel="noopener">Kibana</a> (along with all the necessary details like comprehensive permissions setup). Given the large volume; scaling using <a href="https://kubernetes.io/" class="anchor anchor--emphasized" target="_blank" rel="noopener">Kubernetes</a> is a no-brainer. Our team has come up with a solution complex enough to accommodate dozens of internal systems with varying requirements, yet without sacrificing long-term maintainability.
   img: portfolio/elasticsearch.png
   tags:
     - elasticsearch
@@ -40,7 +40,7 @@
 - title: Moje zdravé finance
   challenge: 200,000+ clients using this finance app
   desc: >
-    Being a part of the George internet banking, the Moje zdravé finance app has been used by more than <i>200,000&nbsp;clients</i> of Česká spořitelna (Erste group) for their daily expense management. It also plays an important role as a financial counseling tool used by bankers at the Česká spořitelna branches all around the Czech Republic.
+    Being a part of the George internet banking, the Moje zdravé finance app has been used by more than <i>200,000&nbsp;clients</i> of Česká spořitelna (Erste Group member) for their daily expense management. It also plays an important role as a financial counseling tool used by bankers at the Česká spořitelna branches all around the Czech Republic.
   img: portfolio/mzf.png
   tags:
     - angular
@@ -77,7 +77,7 @@
 - title: Fast
   challenge: Re-writing frontend strategy
   desc: >
-    Since we have lengthy experience with frontend development, we’ve assisted with creating the whole frontend development strategy for new web apps (both internal and external) made by Komerční banka (Societe Generale Group). We’ve succeeded and helped the bank update their tech stack to face the increasing demand for modern interactive web apps.
+    Since we have lengthy experience with frontend development, we’ve assisted with creating the whole frontend development strategy for new web apps (both internal and external) made by Komerční banka (Société Générale Group member). We’ve succeeded and helped the bank update their tech stack to face the increasing demand for modern interactive web apps.
   img: portfolio/fast.png
   tags:
     - angular
@@ -88,7 +88,7 @@
     caption: kb.cz
 # - title: Saifu&mdash;mobile wallet of Česká spořitelna
 #   desc: >
-#     We’re participating in development of a <i>mobile payments electronic wallet</i> for Česká spořitelna (Erste Group). We are working on the server-side solution, mobile application and we were collaborating on the concept of plugins, which will enable rapid prototyping and testing of new functionality.
+#     We’re participating in development of a <i>mobile payments electronic wallet</i> for Česká spořitelna (Erste Group member). We are working on the server-side solution, mobile application and we were collaborating on the concept of plugins, which will enable rapid prototyping and testing of new functionality.
 #   img: portfolio/saifu.png
 #   tags:
 #     - java

@@ -71,6 +71,42 @@ a {
             $below: 1
         );
         font-feature-settings: "kern", "onum", "liga";
+
+        &.alpha {
+            @include baseline(
+                $fontsize: alpha,
+                $font: $bodytype,
+                $lineheight: 4,
+                $below: 1
+            );
+        }
+
+        &.beta {
+            @include baseline(
+                $fontsize: beta,
+                $font: $bodytype,
+                $lineheight: 4,
+                $below: 1
+            );
+        }
+
+        &.gamma {
+            @include baseline(
+                $fontsize: gamma,
+                $font: $bodytype,
+                $lineheight: 2,
+                $below: 1
+            );
+        }
+
+        &.delta {
+            @include baseline(
+                $fontsize: delta,
+                $font: $bodytype,
+                $lineheight: 2,
+                $below: 1
+            );
+        }
     }
 
     p + .figure {
@@ -528,6 +564,10 @@ a {
                 margin-left: -15rem;
                 margin-right: -15rem;
             }
+        }
+
+        &.figure--left {
+            text-align: left;
         }
     }
 

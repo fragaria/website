@@ -244,6 +244,18 @@ function autoAddHeadlineAnchors(rootElem) {
     });
 }
 
+window.toggleGrid = function toggleGrid(valueToSet) {
+    const gridElem = document.getElementsByClassName('js-baseline-grid')[0];
+
+    if (typeof valueToSet === 'undefined') {
+        gridElem.classList.toggle('baseline-grid--visible');
+    } else {
+        valueToSet ?
+            gridElem.classList.add('baseline-grid--visible') :
+            gridElem.classList.remove('baseline-grid--visible');
+    }
+}
+
 
 var handlers = [
     {className: 'js-ie-warn', handler: showIEWarning},
@@ -262,5 +274,6 @@ handlers.forEach(function (handler) {
 });
 
 if (window.location.href.indexOf('?showgrid') !== -1) {
-    document.getElementsByClassName('js-baseline-grid')[0].classList.add('baseline-grid--visible');
+    toggleGrid(true);
 }
+

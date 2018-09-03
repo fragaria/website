@@ -14,7 +14,7 @@ cloudinary_src: posts/2018-09-03-building-a-simple-company-website-the-hard-way-
 ---
 
 Let’s face it: web is bloated with bad typography. Words like vertical
-rythm, careful font selection and readability didn’t really make it to the web,
+rhythm, careful font selection and readability didn’t really make it to the web,
 it seems. Good news is, that it can be achieved and in this post, I will show
 you how to approach it.
 
@@ -27,9 +27,9 @@ website design.*
 A good typography definitely makes a difference. If you’re not familiar with the
 term, it describes the means how to make a written language *readable* and
 *appealing*. Having good typography on your website increases the chance that people read
-what you want to tell them. Having a bad typography can result in people leaving
-your page immediately because they’re simply disgusted or they won’t read the
-whole thing beacuse they will get tired soon while reading it.
+what you want to tell them. Having bad typography can result in people leaving
+your page immediately because they’re simply disgusted or not reading the
+whole thing because they will get tired soon.
 
 Mastering typography is like mastering painting: it’s an artistic discipline of sorts. It
 takes years of practice to do it really well. But that doesn’t mean you can’t do
@@ -38,11 +38,11 @@ your effort. Let’s dive into it.
 
 ## Start with your content first
 
-It all starts right on your keyboard. Everything else will be useless
-unless your text is written well. It’s a broad topic and this little article
-can’t fully cover it. Good news it doesn’t need to because others already have previously.
-I recommend going through the excellent [Butterick’s Practical Typography][5]
-e-book. Well worth your time.
+It all starts right on your keyboard. Everything else will be useless unless
+your text is written well. It’s a broad topic and this little article can’t
+fully cover it. Good news it doesn’t need to because others already have done so
+previously. I recommend going through the excellent [Butterick’s Practical
+Typography][5] e-book. Well worth your time.
 
 ## Font selection
 
@@ -51,10 +51,10 @@ valuable content. Internet is flooded with [Google Fonts][1] nowadays. It’s
 free, it’s packed with options and everyone loves it. Unfortunately, the good old
 rule still applies here: *you get what you pay for*.
 
-Don’t get me wrong: I’m not saying that all the Google Fonts are *bad*.
+Don’t get me wrong: I’m not saying that all Google Fonts are *bad*.
 Certainly, there are exceptions like [Roboto][2] or [Source Code Pro][3]. The
 problem is that number of well-made Google Fonts is relatively low. Which leads
-to the fact that the good ones are way too overused on the web. Ultimately, it’t
+to the fact that the good ones are way too overused on the web. Ultimately, it’s
 the opposite of broad selection&mdash;you’re using fonts that are used by
 millions of websites, leaving behind your chance to stand out of crowd.
 
@@ -62,11 +62,11 @@ Fortunately, using Google Fonts is not the only way. There are many great font
 designers out there. Be ready to pay for it though as creating a quality font is
 no easy job; it takes hundereds of hours of work to do it well. And that’s why
 it’s worth the investment because professional font will have all the important
-font design aspects (like real *italics* or *kerning*) made exactly right.
+font design aspects (like real *italics* or *kerning*) made just right.
 
-For example, for our 2018 company website, we’ve chosen the fonts from
+For example, for our 2018 company website, we’ve chosen the fonts by
 Czech-based typeset foundry [Storm Type][4]. You can also buy from marketplaces
-that sell fonts from many different foundries, like Adobe’s
+that sell fonts by many different foundries, like Adobe’s
 [Typekit](https://typekit.com/).
 
 There are no strict rules on how to choose your fonts. It’s all
@@ -83,7 +83,7 @@ advice that can give you a little headstart:
 * Use *low number of fonts*. In most cases, two fonts shall
   suffice (body + headings). When adding a new font, always ask yourself: is that really
   necessary? Remember that there are various means of adding emphasis to your
-  text. Different fonts should be considered a last resort.
+  text. Different fonts should be considered as a last resort.
 
 ## Line length
 
@@ -143,13 +143,13 @@ When deciding whether the number of characters is OK, you can also use the
 
 What are *hyphens*? We all know them, they look like this: -. They have multiple
 uses but a common one is to put it at the end of line when a work breaks onto
-the next line. These little marks improve legibility of the written text by adding more
+the next line. These little marks improve legibility of the text by adding more
 consistency to length of individual lines.
 
-This has been automated for decades in text processors. It’s not known
-that well that it can be also used *on the web*. You can see it in action at this page.
+This has been automated for decades in text processors. It’s not well known
+that it can be also used *on the web*. You can see it in action on this page.
 
-Use following CSS rule to turn it on:
+Use the following CSS rule to turn it on:
 
 ```css
 .hyphenate {
@@ -172,10 +172,10 @@ tag level (which is always a good idea).
 
 Note: hyphenation support will vary for different languages (and with [different
 browsers](caniuse.com/#search=hyphens) for that matter). It’s not perfect, but
-from our experience, it works quite well for both English and Czech languages.
+from our experience it works quite well for both English and Czech languages.
 If you’re not satisfied with the browser hypehenation quality for your language,
 you can help the browser by using the *soft hyphen* HTML entity (`&shy;`) to give
-it an advice on where it’s OK to break the word. As you can probably imagine,
+it advice on where it’s OK to break the word. As you can probably imagine
 this quickly gets tedious so you might want to use some tool to automate the
 process, like the [hypher](https://github.com/bramstein/hypher) JS library.
 
@@ -206,7 +206,7 @@ AY, Ty, Va, TAT
 Kerning adjusts spacing between letter pairs in a way that makes reading it easier.
 Default kerning setting in HTML is *on*. But that will only happen if you have a
 font that has the kerning letter pairs defined. As mentioned previously, you can
-rely that professional fonts do.
+be sure that professional fonts do.
 
 *Ligatures* come from the days of metal font typesetting to avoid a problem, when
 some characters tended to collide in an unpleasant way. These collisions can
@@ -236,16 +236,16 @@ ligatures worked out.
 
 ## Conclusion
 
-We’ve covered some basics on typography. We’ve learned that typography can help
+We’ve covered some basics of typography. We’ve learned that typography can help
 you boost interest in your content and (hopefully) bring some new audience. We’ve also
 learned how bad typography can yield the opposite outcome. I hope that this
-little introduction made you *aware* that while web is substantially different
+little introduction made you *aware* of the fact that while web is substantially different
 from print, we still should care about readability and aesthetics of written
 language. Bad typography cannot be saved by nice color selection, photos and icons.
 
 If you liked the article, stay tuned for the next part of our *Building a simple
 company website the Hard Way* series where we’re gonna talk about another
-important aspect of typography: *vertical rythm*.
+important aspect of typography: *vertical rhythm*.
 
 
 [1]: https://fonts.google.com/

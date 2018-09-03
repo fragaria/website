@@ -28,7 +28,8 @@ A good typography definitely makes a difference. If you’re not familiar with t
 term, it describes the means how to make a written language *readable* and
 *appealing*. Having good typography on your website increases the chance that people read
 what you want to tell them. Having a bad typography can result in people leaving
-your page immediately because they’re simply disgusted or disoriented.
+your page immediately because they’re simply disgusted or they won’t read the
+whole thing beacuse they will get tired soon while reading it.
 
 Mastering typography is like mastering painting: it’s an artistic discipline of sorts. It
 takes years of practice to do it really well. But that doesn’t mean you can’t do
@@ -39,21 +40,21 @@ your effort. Let’s dive into it.
 
 It all starts right on your keyboard. Everything else will be useless
 unless your text is written well. It’s a broad topic and this little article
-can’t fully cover it. Good news it doesn’t need to because others already have.
+can’t fully cover it. Good news it doesn’t need to because others already have previously.
 I recommend going through the excellent [Butterick’s Practical Typography][5]
 e-book. Well worth your time.
 
 ## Font selection
 
 Selecting a bad font can easily ruin all the hard work you put into writing your
-valuable content. Internet is flooded with [Google Fonts][1] nowadays. It's
+valuable content. Internet is flooded with [Google Fonts][1] nowadays. It’s
 free, it’s packed with options and everyone loves it. Unfortunately, the good old
 rule still applies here: *you get what you pay for*.
 
-Don’t get me wrong: I’m not saying that all the Google Fonts are *bad*. There
-certainly are exceptions like [Roboto][2] or [Source Code Pro][3]. The
-problem is that number of well-made Google Fonts is relatively low. Which leads to the fact
-that the good ones are way too overused on the web. Ultimately, it’t
+Don’t get me wrong: I’m not saying that all the Google Fonts are *bad*.
+Certainly, there are exceptions like [Roboto][2] or [Source Code Pro][3]. The
+problem is that number of well-made Google Fonts is relatively low. Which leads
+to the fact that the good ones are way too overused on the web. Ultimately, it’t
 the opposite of broad selection&mdash;you’re using fonts that are used by
 millions of websites, leaving behind your chance to stand out of crowd.
 
@@ -63,31 +64,31 @@ no easy job; it takes hundereds of hours of work to do it well. And that’s why
 it’s worth the investment because professional font will have all the important
 font design aspects (like real *italics* or *kerning*) made exactly right.
 
-For example, for our 2018 company website, we’ve chosen the fonts from Czech-based typeset
-foundry [Storm Type][4]. Specifically, we’ve decided to use [Andulka Text
-Pro](https://www.stormtype.com/typefaces/841) for the body typeface and [Trivia
-Grotesk N2](https://www.stormtype.com/typefaces/2239) for the headings.
+For example, for our 2018 company website, we’ve chosen the fonts from
+Czech-based typeset foundry [Storm Type][4]. You can also buy from marketplaces
+that sell fonts from many different foundries, like Adobe’s
+[Typekit](https://typekit.com/).
 
-There are no strict rules on how to choose your fonts. It's all
+There are no strict rules on how to choose your fonts. It’s all
 matter of personal taste and trial. But I will provide you with some general
-advices that can give you a little headstart:
+advice that can give you a little headstart:
 
 * Try various combinations and see what *works well together*.
-* Avoid selecting multiple *similar fonts*. Use your font selection to help you
-  readers to easily differentiate various contexts.
+* Avoid selecting multiple *similar fonts*. Use your font selection to help your
+  readers to differentiate various contexts easily.
 * Think of what your *website message* is. Is it modern? Is it fancy? Is it
   serious? Your typeface selection might want to reflect that.
 * Avoid [goofy fonts](https://practicaltypography.com/goofy-fonts.html) by all
-  means. No exceptions there really.
-* Use *low number of typefaces*. In most cases, two shall
+  means. No exceptions.
+* Use *low number of fonts*. In most cases, two fonts shall
   suffice (body + headings). When adding a new font, always ask yourself: is that really
-  necessary?  Remember that there are various means of adding emphasis to your
+  necessary? Remember that there are various means of adding emphasis to your
   text. Different fonts should be considered a last resort.
 
 ## Line length
 
 Line length is an essential and often neglected attribute of any written text.
-It's been known for centuries that text is best readable when there are *45&ndash;90
+It’s been known for centuries that text is best readable when there are *45&ndash;90
 characters per line*. Interestingly, people seem to have forgotten that in the
 internet age.
 
@@ -143,10 +144,10 @@ When deciding whether the number of characters is OK, you can also use the
 What are *hyphens*? We all know them, they look like this: -. They have multiple
 uses but a common one is to put it at the end of line when a work breaks onto
 the next line. These little marks improve legibility of the written text by adding more
-consistency in length of individual lines.
+consistency to length of individual lines.
 
-This has been automated for decades in text processors. It's not known
-that well that it can be also used *on the web* as you can easily see at this page.
+This has been automated for decades in text processors. It’s not known
+that well that it can be also used *on the web*. You can see it in action at this page.
 
 Use following CSS rule to turn it on:
 
@@ -158,8 +159,8 @@ Use following CSS rule to turn it on:
 }
 ```
 
-Hyphenation support is language-sensitive. Therefore, it is essential to
-set the right language for the given DOM node. E.g.:
+Hyphenation support is language-sensitive. Therefore, it is essential to set the
+right language for the given DOM node. E.g.:
 
 ```html
 <article class="hyphenate" lang="en">...</article>
@@ -173,17 +174,17 @@ Note: hyphenation support will vary for different languages (and with [different
 browsers](caniuse.com/#search=hyphens) for that matter). It’s not perfect, but
 from our experience, it works quite well for both English and Czech languages.
 If you’re not satisfied with the browser hypehenation quality for your language,
-you can help the browser by using the *soft hypen* HTML entity (`&shy;`) to give
-it an advice where it's OK to break the word. This easily gets tedious though so
-you might want to use some tool to automate the prcoess, like the
-[hypher](https://github.com/bramstein/hypher) JS library.
+you can help the browser by using the *soft hyphen* HTML entity (`&shy;`) to give
+it an advice on where it’s OK to break the word. As you can probably imagine,
+this quickly gets tedious so you might want to use some tool to automate the
+process, like the [hypher](https://github.com/bramstein/hypher) JS library.
 
 ## Kerning, ligatures
 
 These are font features that&mdash;similarly to hyphenation&mdash;have been
 used in typesetting programs since the beginning.
 
-*Kerning* is a name for spacing adjustments made to specific letter pairs. Taking and
+*Kerning* is a name for spacing adjustments made to specific letter pairs. Taking an
 example from [Practical Typography](5) e-book, look at these two lines of text:
 
 ---
@@ -208,7 +209,7 @@ font that has the kerning letter pairs defined. As mentioned previously, you can
 rely that professional fonts do.
 
 *Ligatures* come from the days of metal font typesetting to avoid a problem, when
-some characters tended to collide in a unpleasant way. These collisions can
+some characters tended to collide in an unpleasant way. These collisions can
 happen with 'f' character for example. Consider this:
 
 ---
@@ -225,17 +226,17 @@ With ligatures:
 </p>
 ---
 
-It’s worth noting that ligature support is not necessary for all fonts. Some are
-simply designed in a way that prevents characters from colliding. In the example
+It’s worth noting that ligature support is not necessary for every font. Some are
+designed in a way that simply prevents characters from colliding. In the example
 above, the need for ligatures is questionable. But the variant with ligatures
 enabled definitely looks more appealing.
 
-As with kerning, this will only work if your font is quality one and have the
-ligatures defined.
+As with kerning, this will only work if your font is a quality one and have the
+ligatures worked out.
 
 ## Conclusion
 
-We’ve covered some basics on typography. We've learned that typography can help
+We’ve covered some basics on typography. We’ve learned that typography can help
 you boost interest in your content and (hopefully) bring some new audience. We’ve also
 learned how bad typography can yield the opposite outcome. I hope that this
 little introduction made you *aware* that while web is substantially different

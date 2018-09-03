@@ -434,7 +434,7 @@ a {
 
     .highlight {
         background-color: $code-block-background-color;
-        overflow-x: scroll;
+        overflow-x: auto;
         line-height: 1rem;
         font-family: getFontFamily($monospacetype);
 

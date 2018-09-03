@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Building a simple company website the Hard Way: Typography intro'
-date: 2018-09-03T14:00:00.000+01:00
+date: 2018-09-03T10:00:00.000+01:00
 author: Filip Vařecha
 lang: en
 tags:
@@ -9,7 +9,7 @@ tags:
 - sass
 - css
 - fonts
-modified_time: 2018-09-03T14:00:00.000+01:00
+modified_time: 2018-09-03T10:00:00.000+01:00
 cloudinary_src: posts/2018-09-03-building-a-simple-company-website-the-hard-way-typography__2_se31j8
 ---
 

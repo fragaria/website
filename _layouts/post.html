@@ -19,11 +19,11 @@ layout: blank
         </div>
 
         <p class="article__meta">
+            <meta itemprop="datePublished" content="{{ include.post.date | date_to_xmlschema }}" />
+            <span class="article__pubdate">{{ page.date | date: "%B %d, %Y" }}</span>
             <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="article__author">
                 by <span itemprop="name">{{ page.author }}</span>
             </span>
-            <meta itemprop="datePublished" content="{{ include.post.date | date_to_xmlschema }}" />
-            <span class="article__pubdate">{{ page.date | date: "%d.%m.%Y" }}</span>
             <meta itemprop="publisher">{{ site.organization.official_name }}</meta>
         </p>
 

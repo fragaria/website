@@ -173,7 +173,7 @@ tag level (which is always a good idea).
 Note: hyphenation support will vary for different languages (and with [different
 browsers](caniuse.com/#search=hyphens) for that matter). It’s not perfect, but
 from our experience it works quite well for both English and Czech languages.
-If you’re not satisfied with the browser hypehenation quality for your language,
+If you’re not satisfied with the browser hyphenation quality for your language,
 you can help the browser by using the *soft hyphen* HTML entity (`&shy;`) to give
 it advice on where it’s OK to break the word. As you can probably imagine
 this quickly gets tedious so you might want to use some tool to automate the

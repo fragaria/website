@@ -33,6 +33,7 @@ plugins:
     - jekyll-paginate
     - jekyll-archives
     - jekyll-redirect-from
+    - amp-jekyll
 
 exclude:
     - Dockerfile
@@ -87,6 +88,8 @@ jekyll_tidy:
         - assets/js/*
     compress_html: true
     ignore_env: development
+
+ampdir: amp
 
 # ---------------------- custom configuration ----------------------------------
 

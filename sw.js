@@ -7,7 +7,7 @@ urls.push("/assets/favicons/android-chrome-192x192.png");urls.push("/assets/favi
 urls.push("/blog/2018/09/03/building-a-simple-company-website-the-hard-way-typography-intro/");urls.push("/blog/2018/07/25/spehujeme-pouzivatelov-na-nasich-strankach/");urls.push("/blog/2018/03/28/blockchain-can-do/");urls.push("/blog/2018/02/14/idealni-bezdratova-sluchatka-spunty/");urls.push("/blog/2018/02/05/mapujeme-adresy-do-ceskych-kraju/");urls.push("/blog/2018/01/23/vybirame-bezdratova-sluchatka-uvod/");urls.push("/blog/2017/12/01/elasticsearch-60-se-blizi/");urls.push("/blog/2017/11/10/ohlednuti-ex-vedce/");urls.push("/blog/2017/09/22/fraga-akce-aneb-kluci-na-vylete/");urls.push("/blog/2017/07/03/jahoda-malina-sloni-hadi-flandera/");
 
 // Cache pages
-urls.push("/404.html");urls.push("/blog/");urls.push("/solutions/");urls.push("/work-with-us/");urls.push("/");urls.push("/offline/");
+urls.push("/404.html");urls.push("/work-with-us/");urls.push("/solutions/");urls.push("/blog/");urls.push("/");urls.push("/offline/");
 
 
 // Cache name: adjust version number to invalidate service worker cache.

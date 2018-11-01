@@ -2,7 +2,7 @@
 layout: post
 title: Povídání o hyperkrychlích
 date: '2016-01-06T12:28:00.000+01:00'
-author: Hynek Urban
+author: David Pěgřímek
 tags:
 - hyperkrychle
 - off-topic

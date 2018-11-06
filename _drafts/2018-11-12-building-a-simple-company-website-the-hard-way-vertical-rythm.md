@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 'Building a simple company website the Hard Way: Vertical rythm and baseline'
-date: 2018-09-03T14:00:00.000+01:00
+title: 'Building a simple company website the Hard Way: Vertical rythm'
+date: 2018-11-12T14:00:00.000+01:00
 author: Filip Vařecha
 lang: en
 tags:
@@ -15,18 +15,75 @@ modified_time: 2018-09-03T14:00:00.000+01:00
 cloudinary_src: posts/2018-09-03-building-a-simple-company-website-the-hard-way-typography__2_se31j8
 ---
 
-## Addiction to baseline
+Websites with good vertical rythm are more aesthetically pleasing and generally feel
+more consistent. While understanding of vertical rythm rules is simple, maintaing
+it on bigger websites might get challenging. And challenges are fun, aren't they? Read on!
+
+## Vertical rythm
+
+What exactly is *vertical rythm*? It's a magical combination of three
+properties of written text:
+
+* a font size
+* a line-height
+* margins and paddings
+
+By mixing up these properties, you can either end up with a page that looks
+chaotic or&mdash;when following the vertical rythm rules&mdash;with website that feels natural and pleasing.
+
+To get a grasp of the principle, consider these two designs:
+
+{% include figure.html cloudinary_src='posts/2018-11-12-building-a-simple-company-website-the-hard-way-vertical-rythm__1_yjlap0' caption='The good, the bad and the ugly' sizing='wide' %}
+
+Even without the baseline grid attached, you would probably say that the one on the
+left just feels right: it's easier to read, it's more balanced and it generally looks
+more professional. While the one on the right just feels weird.
+
+Please note I've kept the font size same in both examples. That means you can
+actually screw up the design by not carefully selecting *any* of the said properties.
+
+Wanna know how *not to screw up*? Surprisingly, there are only two basic
+rules: *multiples of line-height* and *consistency*.
+
+## Multiples of line-height
+
+The core principle behind good vertical rythm is quite simple: pick the line-height
+and keep all the spacings between elements on the page as **multiples of it**.
+
+Common practice is to *set line height to 120-150% of the font size*. If you start
+with font-size set to 16px (which is the default in the browsers), you would
+normally use line height of 24px.
+
+Then, in your designs, you would set the margins and paddings to multiples of 24px:
+48px, 72px and so on. You can also use 12px as it's 24px multiplied by 1/2.
+All the multiples are OK as long as you don't create dozens of combinations
+and keep things simple and *consistent*.
+
+## Consistency
+
+
+## Basline grid
+
+When scaling up you website design, the math can get tedious.
+
+
+## Addiction to baseline: sticking The text to The grid
 
 A *baseline* is a line on which most letters sit. Following figure demonstrates it
 quite well:
 
 {% include figure.html cloudinary_src='posts/2018-09-03-building-a-simple-company-website-the-hard-way-typography__4_jal5ik' sizing='wide' caption='Baseline, line-height, font-size and cap height explained, author: <a href="https://medium.com/@razvanonofrei/aligning-type-to-baseline-the-right-way-using-sass-e258fce47a9b">Razvan Onofrei</a>' %}
 
-Why am I mentioning the addiction? Because on most websites, the designers do not
-care much if the *vertical rythm* takes the baseline grid into consideration.
-Worse, most website do not care about vertical rythm at all. When designing our new
-company website, we decided to be very strict about that. Fitting everything to baseline
-became a must, addiction of sort.
+When working on you vertical rythm rules, you will quickly find out that
+achieving looks of the introductory image (where each text line is nicely put on the gridline)
+is not as simple as merely expressing your margins as multiples of line-height.
+
+This has a reason: line-height in web browsers doesn't work the same as leadings
+in traditional print. Instead of fitting the text onto the baseline, it put's it
+in the middle.
+
+<!-- Why am I mentioning the addiction? Fitting everything to baseline
+became a must, addiction of sort. -->
 
 You might ask why this is important? Well, besides making spacing adjustments way
 simpler (think 1rem = 1 grid column), it shines when you deal with multi-column
@@ -35,10 +92,6 @@ content. It makes it neatly aligned with a newspaper-like feel.
 Go on and toggle the grid on by clicking <a href="#" onclick="window.toggleGrid();
 return false;">here</a>.
 
-As you can see, everything (well, almost) sits nicely on the grid
-line. Suprisingly, aligning text to a baseline in pure CSS is a tricky stuff. Given how
-*line-height* works (refer to above image again), text will always be aligned to
-it's middle and not to the baseline as we would like it to.
 
 In order to acheive the desired effect, we need to *shift every text* by a specific
 amount it needs to fit nicely on the baseline. Your initial thought might be:

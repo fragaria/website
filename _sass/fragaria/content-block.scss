@@ -16,7 +16,7 @@
     }
 
     @include breakpoint(tablet up) {
-        @include cbPadding(4 * $grid-unit);
+        @include cbPadding(2 * $grid-unit);
     }
 }
 

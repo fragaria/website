@@ -29,19 +29,19 @@
     h1 {
         font-family: getFontFamily($headingtype);
         font-weight: bold;
-        @include baseline(beta, $headingtype, $lineheight: 3, $below: 2, $above: 2);
+        @include baseline(beta, $headingtype, $lineheight: 2, $below: 2, $above: 2);
     }
 
     p {
         font-family: getFontFamily($bodytype);
-        @include baseline(zeta, $bodytype, $lineheight: 2, $below: 1);
+        @include baseline(zeta, $bodytype, $below: 1);
     }
 
     a, a:hover {
         color: map-get($palette, white);
         font-family: getFontFamily($bodytype);
         text-decoration: underline;
-        @include baseline(zeta, $bodytype, $lineheight: 2, $below: 1);
+        @include baseline(zeta, $bodytype, $below: 1);
     }
 
     b {

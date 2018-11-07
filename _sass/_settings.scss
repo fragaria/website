@@ -44,6 +44,8 @@ $brands: (
     @return map-get(map-get($brands, $brand), $prop);
 }
 
+$grid-unit: 1.5rem;
+
 $primary-color: map-get($palette, black);
 
 $body-background: map-get($palette, white);
@@ -100,10 +102,10 @@ $sharebox-variants: (
 // Sitenav settings
 
 $sitenav-menu-height: (
-    mobile: 5rem,
-    tablet: 10rem,
+    mobile: 3 * $grid-unit,
+    tablet: 5 * $grid-unit,
 );
-$sitenav-menu-height-shrinked: 8.5rem;
+$sitenav-menu-height-shrinked: 3 * $grid-unit;
 
 
 // Baseline settings
@@ -121,11 +123,11 @@ $breakpoints: (
 // Root font-sizes for each breakpoint. Set to half desired line-height of body text.
 // ! Make sure to have as many sizes as breakpoints above.
 $rootsizes: (
-    zero:           15px,           // 30px line-height body text
-    mobile:         15px,           // 30px line-height body text
-    tablet-small:   15px,           // 30px line-height body text
-    tablet:         15px,           // 30px line-height body text
-    desktop:        15px,           // 30px line-height body text
+    zero:           18px,           // 30px line-height body text
+    mobile:         18px,           // 30px line-height body text
+    tablet-small:   18px,           // 30px line-height body text
+    tablet:         18px,           // 30px line-height body text
+    desktop:        18px,           // 30px line-height body text
 );
 
 // This defines, how much shift is added to baselined headings that
@@ -237,9 +239,9 @@ $inline-monospace-sizes: (
 // Hamburger settings
 // @see: https://jonsuh.com/hamburgers/
 
-$hamburger-padding-x: 1rem;
-$hamburger-padding-y: 1rem;
-$hamburger-layer-width: 1.5rem;
+$hamburger-padding-x: 0;
+$hamburger-padding-y: 0;
+$hamburger-layer-width: $grid-unit;
 $hamburger-layer-height: 3px;
 $hamburger-layer-spacing: 5px;
 $hamburger-layer-color: $primary-color;

@@ -1,13 +1,13 @@
 .v-home .hero {
     text-align: center;
-    padding: 3rem 0 6rem;
+    padding: gu(1) 0 gu(2);
 
     @include breakpoint(tablet-small up) {
-        padding: 6rem 0 10rem;
+        padding: gu(3) 0 gu(5);
     }
 
     @include breakpoint(tablet up) {
-        padding: 8rem 0 12rem;
+        padding: gu(4) 0 gu(6);
     }
 
     .hero__headline {
@@ -16,8 +16,8 @@
         margin-right: auto;
         text-align: center;
 
-        @include baseline(alpha, $headingtype, $lineheight: 3, $breakpoint: mobile down);
-        @include baseline(alpha, $headingtype, $lineheight: 5, $breakpoint: tablet-small up);
+        @include baseline(alpha, $headingtype, $lineheight: 2, $breakpoint: mobile down);
+        @include baseline(alpha, $headingtype, $lineheight: 3, $breakpoint: tablet-small up);
 
         i {
             font-style: normal;
@@ -27,10 +27,10 @@
 }
 
 .v-home__portfolio {
-    margin-bottom: 6rem;
+    margin-bottom: gu(3);
 
     @include breakpoint(tablet up) {
-        margin-bottom: 2rem;
+        margin-bottom: gu();
     }
 }
 
@@ -38,10 +38,10 @@
 .v-home__team,
 .v-home__company,
 .v-home__career {
-    margin-top: 4rem;
+    margin-top: gu(2);
 
     @include breakpoint(tablet up) {
-        margin-top: 10rem;
+        margin-top: gu(5);
     }
 }
 
@@ -50,7 +50,7 @@
 
     grid-template-columns: auto;
     grid-template-rows: auto;
-    grid-gap: 1rem 0;
+    grid-gap: gu() 0;
     grid-template-areas:
         "about"
         "residence"
@@ -60,7 +60,7 @@
     @include breakpoint(mobile up) {
         grid-template-columns: auto;
         grid-template-rows: auto;
-        grid-gap: 1rem 1rem;
+        grid-gap: gu() gu();
         grid-template-areas:
             "about         about"
             "residence     billing"
@@ -70,8 +70,8 @@
 
     @media (min-width: 1100px) {
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: minmax(10rem, auto);
-        grid-gap: 0 4rem;
+        grid-template-rows: minmax(gu(6), auto);
+        grid-gap: 0 gu(2);
         grid-template-areas:
             "about     about   contactform contactform"
             "residence billing contactform contactform"
@@ -85,7 +85,7 @@
 }
 
 .v-home .v-home__career-par {
-    @include baseline(eta, $bodytype, $lineheight: 2, $below: é);
+    @include baseline(eta, $bodytype, $below: 1);
 }
 
 .v-home__company-about       { grid-area: about; }
@@ -94,8 +94,8 @@
 .v-home__company-contactform { grid-area: contactform; }
 
 .v-home__company-contactform {
-    padding-top: 1rem;
-    margin-top: 1rem;
+    padding-top: gu();
+    margin-top: gu();
 
     @include breakpoint(mobile down) {
         @include baseline-border($orientation: 'top');

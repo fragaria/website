@@ -1,8 +1,8 @@
 .cta-row {
     text-align: center;
-    padding-top: 2rem;
+    padding-top: gu();
 
     @include breakpoint(tablet up) {
-        padding-top: 3rem;
+        padding-top: gu(2);
     }
 }

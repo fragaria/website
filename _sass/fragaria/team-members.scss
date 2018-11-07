@@ -13,17 +13,17 @@
 .team-members {
     display: grid;
     grid-template-columns: 1fr;
-    grid-auto-rows: minmax(10rem, auto);
-    grid-row-gap: 4rem;
+    grid-auto-rows: minmax(gu(5), auto);
+    grid-row-gap: gu(2);
 
-    @media (min-width: 20rem) {
+    @media (min-width: gu(10)) {
         grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: minmax(10rem, auto);
-        grid-gap: 2rem;
+        grid-auto-rows: minmax(gu(5), auto);
+        grid-gap: gu();
     }
 
     @include breakpoint(mobile up) {
-        grid-gap: 4rem;
+        grid-gap: gu(2);
     }
 
     @include breakpoint(tablet-small up) {
@@ -32,11 +32,11 @@
 
     /* 5 columns on a row for desktop and up */
     @include breakpoint(tablet up) {
-        max-width: 70rem;
+        max-width: gu(35);
         margin-right: auto;
         margin-left: auto;
         grid-template-columns: repeat(5, 1fr);
-        grid-gap: 4rem;
+        grid-gap: gu(2);
     }
 }
 
@@ -47,11 +47,11 @@
 .team-member__avatar-image {
     display: block;
     margin: auto;
-    width: 7rem;
+    width: gu(3);
 }
 
 .team-member__body {
-    margin-top: 1rem;
+    margin-top: gu();
     text-align: center;
 
     .team-member__name {
@@ -65,7 +65,7 @@
 
 .team-member__profiles {
     display: block;
-    height: 2rem;
+    height: gu();
 }
 
 .team-member__profile {
@@ -84,7 +84,7 @@
 }
 
 .team-member__profile-body {
-    display: none
+    display: none;
 }
 
 
@@ -93,19 +93,19 @@
     margin-right: auto;
     margin-left: auto;
 
-    padding: 3rem;
+    padding: gu();
 
     background-color: map-get($palette, red);
     color: map-get($palette, white);
 
     &.career-teaser--short {
-        max-width: 60rem;
+        max-width: gu(30);
     }
 }
 
 // align 'contact us' button
 .career-teaser__contactbutton {
-    margin-top: 2rem;
+    margin-top: gu();
 
     .button:hover {
         background-color: map-get($palette, white);

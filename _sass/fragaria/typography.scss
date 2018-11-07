@@ -24,7 +24,6 @@ body {
     font-family: getFontFamily($bodytype);
     font-style: normal;
     font-weight: map-get($bodytype, regular);
-    line-height: 2rem;
     color: $text-color;
     background: $body-background;
     height: 100%;
@@ -67,7 +66,7 @@ a {
         @include baseline(
             $fontsize: zeta,
             $font: $bodytype,
-            $lineheight: 2,
+            $lineheight: 1,
             $below: 1
         );
         font-feature-settings: "kern", "onum", "liga";
@@ -76,7 +75,7 @@ a {
             @include baseline(
                 $fontsize: alpha,
                 $font: $bodytype,
-                $lineheight: 4,
+                $lineheight: 2,
                 $below: 1
             );
         }
@@ -85,7 +84,7 @@ a {
             @include baseline(
                 $fontsize: beta,
                 $font: $bodytype,
-                $lineheight: 4,
+                $lineheight: 2,
                 $below: 1
             );
         }
@@ -103,14 +102,14 @@ a {
             @include baseline(
                 $fontsize: delta,
                 $font: $bodytype,
-                $lineheight: 2,
+                $lineheight: 1,
                 $below: 1
             );
         }
     }
 
     p + .figure {
-        padding-top: 2rem;
+        padding-top: gu();
     }
 
     // Headings. OpenType ligatures, discretionary ligatures and lining figures enabled if available.
@@ -128,76 +127,76 @@ a {
     // Heading level 1.
     h1,
     .alpha {
-        @include baseline($fontsize: gamma, $font: $headingtype, $lineheight: 3);
+        @include baseline($fontsize: gamma, $font: $headingtype, $lineheight: 2);
 
         &.anchor-shift {
-            @include baseline($fontsize: gamma, $font: $headingtype, $lineheight: 3, $anchor: true);
+            @include baseline($fontsize: gamma, $font: $headingtype, $lineheight: 2, $anchor: true);
         }
     }
 
     // Heading level 2.
     h2,
     .beta {
-        @include baseline(delta, $headingtype, $lineheight: 3);
+        @include baseline(delta, $headingtype, $lineheight: 2);
 
         &.anchor-shift {
-            @include baseline(delta, $headingtype, $lineheight: 3, $anchor: true);
+            @include baseline(delta, $headingtype, $lineheight: 2, $anchor: true);
         }
     }
 
     // Heading level 3.
     h3,
     .gamma {
-        @include baseline(epsilon, $headingtype, $lineheight: 3);
+        @include baseline(epsilon, $headingtype, $lineheight: 2);
 
         &.anchor-shift {
-            @include baseline(epsilon, $headingtype, $lineheight: 3, $anchor: true);
+            @include baseline(epsilon, $headingtype, $lineheight: 2, $anchor: true);
         }
     }
 
     // Heading level 4.
     h4,
     .delta {
-        @include baseline(zeta, $headingtype, $lineheight: 2);
+        @include baseline(zeta, $headingtype);
 
         &.anchor-shift {
-            @include baseline(zeta, $headingtype, $lineheight: 2, $anchor: true)
+            @include baseline(zeta, $headingtype, $anchor: true)
         }
     }
 
     // Heading level 5.
     h5,
     .epsilon {
-        @include baseline(eta, $headingtype, $lineheight: 2);
+        @include baseline(eta, $headingtype);
 
         &.anchor-shift {
-            @include baseline(eta, $headingtype, $lineheight: 2, $anchor: true);
+            @include baseline(eta, $headingtype, $anchor: true);
         }
     }
 
     // Heading level 6.
     h6,
     .zeta {
-        @include baseline(theta, $headingtype, $lineheight: 2);
+        @include baseline(theta, $headingtype);
 
         &.anchor-shift {
-            @include baseline(theta, $headingtype, $lineheight: 2, $anchor: true);
+            @include baseline(theta, $headingtype, $anchor: true);
         }
     }
 
     // Lists.
     ul,
     ol {
-        @include baseline(zeta, $bodytype, $lineheight: 2, $below: 1);
+        @include baseline(zeta, $bodytype, $below: 1);
 
         li {
             font-feature-settings: "kern", "onum", "liga";
-            margin-left: 2rem;
+            margin-left: gu();
 
             ol,
             ul {
                 margin-bottom: 0;
-                margin-left: 2rem;
+                margin-left: gu();
                 padding-top: 0;
             }
         }
@@ -211,10 +210,10 @@ a {
             &:before {
                 content: counter(top-level) ".";
                 font-feature-settings: "lnum", "tnum";
-                margin-left: -3rem;
+                margin-left: gu(-2);
                 position: absolute;
                 text-align: right;
-                width: 2em;
+                width: gu();
             }
             ul {
                 li {
@@ -262,17 +261,17 @@ a {
     // Avoid blank line between p and ul.
     p + ul,
     p + ol {
-        margin-top: -1rem;
+        margin-top: gu(-1);
     }
 
     // Definition lists.
     dl {
-        @include baseline(zeta, $bodytype, $lineheight: 2, $below: 2);
+        @include baseline(zeta, $bodytype, $below: 2);
 
         dt,
         dd {
             font-feature-settings: "kern", "onum", "liga";
-            margin-left: 2rem;
+            margin-left: gu();
 
             @include breakpoint(tablet up) {
                 margin-left: 0;
@@ -282,7 +281,7 @@ a {
             font-weight: map-get($bodytype, bold);
         }
         dd + dt {
-            padding-top: 1rem;
+            padding-top: gu();
         }
     }
 
@@ -391,12 +390,12 @@ a {
         }
 
         @include breakpoint(mobile up) {
-            margin-left: -1rem;
+            margin-left: gu(-1);
         }
     }
 
     blockquote + .figure {
-        padding-top: 1rem;
+        padding-top: gu();
     }
 
     // Horizontal rule.
@@ -412,8 +411,8 @@ a {
         background-size: 100% 0.15rem;
         border: 0;
         margin: 0;
-        padding-bottom: 2rem;
-        padding-top: 2rem;
+        padding-bottom: gu();
+        padding-top: gu();
     }
 
     // Code blocks
@@ -435,26 +434,26 @@ a {
     .highlight {
         background-color: $code-block-background-color;
         overflow-x: auto;
-        line-height: 1rem;
+        line-height: gu();
         font-family: getFontFamily($monospacetype);
 
         code {
             @include fontsize(theta);
             @include codeHighlight();
             display: inline-block;
-            padding: 1rem;
+            padding: gu(0.5);
         }
 
         // Line numbers
         .lineno {
             color: map-get($palette, gray-medium);
-            margin-right: 1rem;
+            margin-right: gu();
         }
     }
 
     // Code block
     figure.highlight {
-        margin-bottom: 1rem;
+        margin-bottom: gu();
     }
 
     // Letter space those capitals people, Jan Tschichold would be proud.
@@ -506,7 +505,7 @@ a {
         @include baseline(
             gamma,
             $headingtype,
-            $lineheight: 3,
+            $lineheight: 1,
             $below: 1,
             $breakpoint: tablet up,
             $anchor: true
@@ -517,18 +516,17 @@ a {
         @include baseline(
             delta,
             $headingtype,
-            $lineheight: 2,
             $below: 1,
-            $above: 2,
+            $above: 1,
             $breakpoint: tablet-small down,
             $anchor: true
         );
         @include baseline(
             delta,
             $headingtype,
-            $lineheight: 3,
+            $lineheight: 2,
             $below: 1,
-            $above: 1,
+            $above: 0,
             $breakpoint: tablet up,
             $anchor: true
         );
@@ -538,7 +536,7 @@ a {
         @include baseline(
             epsilon,
             $headingtype,
-            $lineheight: 3,
+            $lineheight: 1,
             $below: 1,
             $breakpoint: tablet-small down,
             $anchor: true
@@ -546,9 +544,29 @@ a {
         @include baseline(
             epsilon,
             $headingtype,
-            $lineheight: 2,
+            $lineheight: 1,
             $below: 1,
-            $above: 2,
+            $above: 1,
+            $breakpoint: tablet up,
+            $anchor: true
+        );
+    }
+
+    h4 {
+        @include baseline(
+            epsilon,
+            $headingtype,
+            $lineheight: 1,
+            $below: 1,
+            $breakpoint: tablet-small down,
+            $anchor: true
+        );
+        @include baseline(
+            epsilon,
+            $headingtype,
+            $lineheight: 1,
+            $below: 1,
+            $above: 1,
             $breakpoint: tablet up,
             $anchor: true
         );
@@ -557,12 +575,12 @@ a {
     // basic image
     .figure:not(.highlight) {
         text-align: center;
-        padding-bottom: 2rem;
+        padding-bottom: gu();
 
         &.figure--wide {
             @include breakpoint(tablet up) {
-                margin-left: -15rem;
-                margin-right: -15rem;
+                margin-left: gu(-8);
+                margin-right: gu(-8);
             }
         }
 
@@ -579,7 +597,7 @@ a {
     }
 
     .figure__caption {
-        @include baseline(theta, $bodytype, $lineheight: 2);
+        @include baseline(theta, $bodytype);
     }
 
     .inline-figure-container {
@@ -588,11 +606,11 @@ a {
 
         > figure {
             + figure {
-                margin-left: 1rem;
+                margin-left: gu();
             }
 
             img {
-                max-height: 14rem;
+                max-height: gu(7);
             }
         }
     }

@@ -6,7 +6,7 @@ $full-view-break: 1000px;
 
 // spacing of individual section blocks
 .v-career-section + .v-career-section {
-    margin-top: 4rem;
+    margin-top: gu(2);
 }
 
 .v-career-section {
@@ -19,8 +19,8 @@ $full-view-break: 1000px;
             color: map-get($palette, red);
         }
 
-        @include baseline(gamma, $headingtype, $lineheight: 3, $below: 1, $breakpoint: tablet-small down);
-        @include baseline(gamma, $headingtype, $lineheight: 5, $below: 2, $breakpoint: tablet up);
+        @include baseline(gamma, $headingtype, $below: 1, $breakpoint: tablet-small down);
+        @include baseline(gamma, $headingtype, $lineheight: 2, $below: 2, $breakpoint: tablet up);
     }
 }
 
@@ -29,8 +29,8 @@ $full-view-break: 1000px;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    grid-gap: 0 3rem;
-    padding-top: 2rem;
+    grid-gap: 0 gu();
+    padding-top: gu();
 
     @include breakpoint(tablet up) {
         grid-template-columns: 1fr 1fr;
@@ -53,12 +53,12 @@ $full-view-break: 1000px;
 }
 
 .v-career-facts-grid .v-career-facts-grid__title {
-    @include baseline(epsilon, $headingtype, $lineheight: 2);
+    @include baseline(epsilon, $headingtype);
 }
 
 .v-career-facts-grid .v-career-facts-grid__icon {
-    margin-top: 2rem;
-    font-size: 3rem;
+    margin-top: gu();
+    font-size: gu();
 
     &:before {
         color: map-get($palette, red) !important;
@@ -73,10 +73,10 @@ $full-view-break: 1000px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-gap: 3rem 2rem;
+    grid-gap: gu() gu();
 
-    padding-top: 3rem;
-    margin-bottom: 6rem;
+    padding-top: gu();
+    margin-bottom: gu(3);
 }
 
 .v-career-tech-grid__item {
@@ -85,11 +85,11 @@ $full-view-break: 1000px;
 
 .v-career-tech-grid__image {
     display: block;
-    height: 4rem;
-    width: 4rem;
+    height: gu(2);
+    width: gu(2);
     margin: auto;
 }
 
 .v-career-tech-grid .v-career-tech-grid__title {
-    @include baseline(zeta, $headingtype, $lineheight: 2);
+    @include baseline(zeta, $headingtype);
 }

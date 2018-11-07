@@ -3,13 +3,13 @@
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 0;
+    padding-bottom: gu();
     text-align: center;
 
     @include breakpoint(tablet up) {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
+        padding-top: gu(3);
+        padding-bottom: gu(3);
     }
 
     &--vertical {
@@ -30,9 +30,9 @@
             color: map-get($palette, red);
         }
 
-        @include baseline(alpha, $headingtype, $lineheight: 3, $below: 2, $breakpoint: mobile down);
-        @include baseline(alpha, $headingtype, $lineheight: 4, $below: 2, $breakpoint: tablet-small only);
-        @include baseline(alpha, $headingtype, $lineheight: 6, $below: 2, $breakpoint: tablet up);
+        @include baseline(alpha, $headingtype, $lineheight: 1, $below: 2, $breakpoint: mobile down);
+        @include baseline(alpha, $headingtype, $lineheight: 2, $below: 2, $breakpoint: tablet-small only);
+        @include baseline(alpha, $headingtype, $lineheight: 3, $below: 2, $breakpoint: tablet up);
     }
 
     .hero__sub {
@@ -48,7 +48,7 @@
 
     .hero__paginator {
         font-weight: bold;
-        min-width: 4rem;
+        min-width: gu(2);
         font-family: getFontFamily($headingtype);
         font-size: 300%;
         transition: #{$anchor-hover-transition};

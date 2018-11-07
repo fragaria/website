@@ -3,18 +3,18 @@
 }
 
 .form__line + .form__line {
-    margin-top: 1rem;
+    margin-top: gu();
 }
 
 .form__submit {
-    margin-top: 2rem;
+    margin-top: gu();
 }
 
 .form-label {
     display: block;
     font-family: getFontFamily($headingtype);
 
-    @include baseline(zeta, $headingtype, $lineheight: 2, $below: 1);
+    @include baseline(zeta, $headingtype, $below: 1);
 }
 
 .form-control {
@@ -25,7 +25,7 @@
     border: 0;
     // border: 2px map-get($palette, red) solid;
     border-radius: 0;
-    padding: .5rem;
+    padding: gu(0.5);
 
     @include fontsize(zeta);
 
@@ -46,21 +46,21 @@
         top: 0;
         content: $icon--arrow-down;
         display: block;
-        height: 3rem;
-        line-height: 3rem;
+        height: gu(2);
+        line-height: gu(2);
         font-size: 1.5rem;
-        right: .5rem;
+        right: gu(0.5);
     }
 }
 
 input.form-control {
     // height: 2rem;
-    line-height: 2rem;
+    line-height: gu();
     // border: 0;
 }
 
 select.form-control {
-    line-height: 2rem;
+    line-height: gu();
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -72,7 +72,7 @@ select.form-control {
 }
 
 textarea.form-control {
-    min-height: 8rem;
-    line-height: 2rem;
+    min-height: gu(4);
+    line-height: gu();
     // border: 0;
 }

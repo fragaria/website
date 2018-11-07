@@ -1,5 +1,5 @@
 .pagination {
-    @include baseline(gamma, $headingtype, $lineheight: 2);
+    @include baseline(gamma, $headingtype);
 
     display: flex;
     flex-direction: column;

@@ -1,6 +1,6 @@
 $portfolio-project-media-width: (
-    mobile: 4rem,
-    tablet-small: 6rem,
+    mobile: gu(2),
+    tablet-small: gu(3),
 );
 
 .portfolio-strip {
@@ -31,14 +31,14 @@ $portfolio-project-media-width: (
 
     @include breakpoint(tablet-small up) {
         grid-template-columns: 1fr 1fr;
-        grid-row-gap: 4rem;
+        grid-row-gap: gu(2);
     }
 
 }
 
 .portfolio-project {
-    margin-bottom: 2rem;
-    padding-bottom: 3rem;
+    margin-bottom: gu();
+    padding-bottom: gu(2);
 
     @include baseline-border($orientation: bottom);
 
@@ -49,7 +49,7 @@ $portfolio-project-media-width: (
     }
 
     @include breakpoint(tablet-small up) {
-        padding: 0 2rem;
+        padding: 0 gu();
         margin-bottom: 0;
         border-bottom: none;
 
@@ -66,7 +66,7 @@ $portfolio-project-media-width: (
     }
 
     .portfolio-project__headline {
-        @include baseline(gamma, $headingtype, $lineheight: 2, $below: 1);
+        @include baseline(gamma, $headingtype, $below: 1);
     }
 
     .portfolio-project__media {
@@ -78,17 +78,17 @@ $portfolio-project-media-width: (
         @include breakpoint(tablet-small up) {
             max-width: map-get($portfolio-project-media-width, tablet-small);
             margin-top: 0;
-            margin-left: 2rem;
+            margin-left: gu();
         }
     }
 
     .portfolio-project__subtitle {
         font-style: italic;
 
-        @include baseline(eta, $bodytype, $lineheight: 2, $below: 1);
+        @include baseline(eta, $bodytype, $below: 1);
 
         @include breakpoint(tablet up) {
-            padding-right: map-get($portfolio-project-media-width, tablet-small) + 2rem;
+            padding-right: map-get($portfolio-project-media-width, tablet-small) + gu();
         }
     }
 }
@@ -97,11 +97,11 @@ $portfolio-project-media-width: (
 
 .portfolio-project-detail {
     @include breakpoint(tablet up) {
-        padding-right: map-get($portfolio-project-media-width, tablet-small) + 2rem;
+        padding-right: map-get($portfolio-project-media-width, tablet-small) + gu();
     }
 
 
     .portfolio-project-detail__description {
-        @include baseline(eta, $bodytype, $lineheight: 2, $below: 1);
+        @include baseline(eta, $bodytype, $below: 1);
     }
 }

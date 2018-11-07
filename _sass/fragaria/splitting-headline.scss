@@ -1,11 +1,11 @@
 .splitting-headline {
     position: relative;
-    padding-bottom: 3rem;
+    padding-bottom: gu(2);
     text-align: center;
     text-transform: uppercase;
 
     @include breakpoint(tablet up) {
-        padding-bottom: 5rem;
+        padding-bottom: gu(3);
     }
 
     &:before {
@@ -13,7 +13,7 @@
         position: absolute;
         width: 100%;
         // TODO; @note: this has to match half the font size of the font used for the headline
-        margin-top: 18px;
+        margin-top: gu();
         left: 0;
         height: 3px;
         background: $hr-color;
@@ -23,5 +23,5 @@
 
 .splitting-headline__fill {
     background: map-get($palette, white);
-    padding: 1rem;
+    padding: gu();
 }

@@ -1,5 +1,5 @@
 $sitenav-slide-transition: cubic-bezier(1, 0, 0, 1);
-$sitenav-shrinked-push: 3.5rem;
+$sitenav-shrinked-push: gu(2);
 
 .sitenav {
     position: fixed;
@@ -18,7 +18,6 @@ $sitenav-shrinked-push: 3.5rem;
         .sitenav__menu {
             transform: translate3d(0, #{-1 * $sitenav-shrinked-push}, 0);
             border-bottom: 1px solid map-get($palette, black);
-            height: $sitenav-menu-height-shrinked;
         }
 
         .sitenav__brand img {
@@ -27,12 +26,11 @@ $sitenav-shrinked-push: 3.5rem;
     }
 }
 
-
 /* Menu container that is visible all the time */
 .sitenav__menu {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: flex-end;
     font-family: getFontFamily($headingtype);
     font-weight: map-get($headingtype, semi);
     // necessary for z-index
@@ -45,8 +43,10 @@ $sitenav-shrinked-push: 3.5rem;
     height: map-get($sitenav-menu-height, mobile);
 
     @include breakpoint(tablet-small up) {
-        margin-left: -1rem;
-        margin-right: -1rem;
+        margin-left: gu(-1);
+        margin-right: gu(-1);
+        padding-left: gu();
+        padding-right: gu();
     }
 
     @include breakpoint(tablet up) {
@@ -54,36 +54,89 @@ $sitenav-shrinked-push: 3.5rem;
     }
 }
 
+
+.sitenav__company {
+    // On mobile, company takes all the remaining space.
+    flex: 1;
+}
+
+.sitenav__brand,
+.sitenav__menutoggle {
+    // On tablet up, all the elements are evenly sized.
+    @include breakpoint(tablet up) {
+        flex: 1;
+    }
+}
+
 // logo image
 .sitenav__brand {
+    height: map-get($sitenav-menu-height, mobile);
     order: 1;
-    margin: 0 0 0 1rem;
+    margin-left: gu();
 
     img {
         transform: translate3d(0, .6rem, 0);
-        height: 3rem;
+        height: gu(2);
 
         @include breakpoint(tablet up) {
-            height: 10rem;
-            margin-bottom: -4rem;
+            height: gu(6);
+            margin-bottom: gu(-2);
         }
     }
     // logo image scales up on bigger screens
     @include breakpoint(tablet up) {
+        height: map-get($sitenav-menu-height, tablet);
         position: relative;
-        margin: 0 5.1rem 0 0;
-        padding: .5em;
+        margin-left: 0;
+        padding: 0;
         order: 2;
 
-        &:before {
-            content: ' ';
-            background: map-get($palette, white);
-            position: absolute;
-            top: 116px;
-            height: .55rem;
-            width: 100%;
-            left: 0;
-        }
+        // &:before {
+        //     content: ' ';
+        //     background: map-get($palette, white);
+        //     position: absolute;
+        //     top: 116px;
+        //     height: .55rem;
+        //     width: 100%;
+        //     left: 0;
+        // }
+    }
+}
+
+.sitenav__company {
+    height: map-get($sitenav-menu-height, mobile);
+    line-height: map-get($sitenav-menu-height, mobile);
+    transition: #{$anchor-hover-transition};
+    text-transform: uppercase;
+    text-align: left;
+    order: 2;
+    // Space between logo.
+    margin-left: gu(.5);
+    font-family: #{map-get($headingtype, font-family)};
+
+    @include fontsize(delta);
+
+    @include breakpoint(tablet up) {
+        order: 1;
+        margin-left: 0;
+    }
+
+    &:hover {
+        color: map-get($palette, red);
+    }
+}
+
+.sitenav__menutoggle {
+    height: map-get($sitenav-menu-height, mobile);
+    line-height: map-get($sitenav-menu-height, mobile);
+    margin-right: gu(1);
+
+    @include breakpoint(tablet up) {
+        margin-right: 0;
+    }
+
+    .hamburger-box {
+        float: right;
     }
 }
 
@@ -96,28 +149,6 @@ $sitenav-shrinked-push: 3.5rem;
     @include breakpoint(tablet up) {
         transition: transform .15s linear;
         will-change: translate, scale;
-    }
-}
-
-.sitenav__company {
-    padding: 1rem 1rem 1rem .5rem;
-    transition: #{$anchor-hover-transition};
-    text-transform: uppercase;
-    text-align: left;
-    order: 2;
-    flex: 1;
-
-    @include baseline(delta, $headingtype, $lineheight: 3.5, $below: 1);
-
-    @include breakpoint(tablet up) {
-        padding: 1rem;
-        line-height: 1.3;
-        order: 1;
-        flex: 0;
-    }
-
-    &:hover {
-        color: map-get($palette, red);
     }
 }
 

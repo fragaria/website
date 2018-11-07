@@ -4,16 +4,16 @@
 
     &--horizontal .blog-posting__body {
         flex-direction: column;
-        padding-bottom: 4rem;
+        padding-bottom: gu(2);
 
         .blog-posting__media {
-            margin: 2rem 0 0;
+            margin: gu() 0 0;
             filter: grayscale(0);
 
             @include breakpoint(tablet up) {
-                margin-left: 3rem;
+                margin-left: gu();
                 margin-top: 0;
-                min-height: 25rem;
+                min-height: gu(12);
             }
         }
 
@@ -32,7 +32,7 @@
         position: relative;
         display: block;
         text-align: center;
-        margin-bottom: 2rem;
+        margin-bottom: gu();
         color: map-get($palette, white);
 
         // cancel color transition for the featured
@@ -58,20 +58,20 @@
 
         .blog-posting__content {
             position: relative;
-            padding: 3rem 1rem;
+            padding: gu(2) gu();
             z-index: 1;
 
 
             @include breakpoint(tablet up) {
-                padding: 6rem 2rem 5rem 2rem;
+                padding: gu(3) gu() gu(2) gu();
             }
         }
 
         .blog-posting__headline {
             text-decoration: none;
 
-            @include baseline(alpha, $headingtype, $lineheight: 3, $below: 1, $breakpoint: tablet-small down);
-            @include baseline(alpha, $headingtype, $lineheight: 5, $below: 1, $breakpoint: tablet up);
+            @include baseline(alpha, $headingtype, $lineheight: 2, $below: 1, $breakpoint: tablet-small down);
+            @include baseline(alpha, $headingtype, $lineheight: 2, $below: 1, $breakpoint: tablet up);
         }
 
         .blog-posting__meta {
@@ -84,8 +84,8 @@
             margin-right: auto;
             font-weight: bold;
 
-            @include baseline(eta, $bodytype, $lineheight: 2, $below: 1, $breakpoint: tablet-small down);
-            @include baseline(zeta, $bodytype, $lineheight: 2, $below: 1, $breakpoint: tablet up);
+            @include baseline(eta, $bodytype, $below: 1, $breakpoint: tablet-small down);
+            @include baseline(zeta, $bodytype, $below: 1, $breakpoint: tablet up);
         }
 
         .blog-posting__cta-button:hover {
@@ -124,7 +124,7 @@
 }
 
 .blog-posting__cta {
-    padding-top: 1rem;
+    padding-top: gu();
 }
 
 // this has to be scoped so it beats specificity of .typeset
@@ -132,7 +132,7 @@
     .blog-posting__excerpt {
         hyphens: auto;
 
-        @include baseline(eta, $bodytype, $lineheight: 2);
+        @include baseline(eta, $bodytype);
     }
 
     .blog-posting__meta {
@@ -143,7 +143,7 @@
         font-family: getFontFamily($headingtype);
         text-decoration: none;
 
-        @include baseline(gamma, $headingtype, $lineheight: 3, $below: 1);
+        @include baseline(gamma, $headingtype, $lineheight: 2, $below: 1);
     }
 }
 
@@ -155,8 +155,8 @@
 .blog-posting__media {
     width: 100%;
     flex: 1;
-    min-height: 8rem;
-    margin-top: 2rem;
+    min-height: gu(4);
+    margin-top: gu();
     overflow: hidden;
 }
 

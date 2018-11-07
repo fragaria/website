@@ -6,11 +6,11 @@
         "featured"
         "latest"
         "other";
-    grid-column-gap: 4rem;
-    margin-top: 2rem;
+    grid-column-gap: gu(2);
+    margin-top: gu();
 
     @include breakpoint(tablet up) {
-        margin-top: 5rem;
+        margin-top: gu(3);
         grid-template-areas:
             "main"
             "latest"
@@ -19,11 +19,11 @@
 
         // space out individual home sections
         .v-blog-home__section--tablet-padbottom {
-            padding-bottom: 2rem;
+            padding-bottom: gu();
         }
 
         .v-blog-home__section--tablet-padtop {
-            padding-top: 2rem;
+            padding-top: gu();
         }
 
         // divider between sections

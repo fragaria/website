@@ -1,9 +1,9 @@
 .article {
-    padding-top: 2rem;
+    padding-top: gu();
     text-align: center;
 
     @include breakpoint(tablet up) {
-        padding-top: 5rem;
+        padding-top: gu(3);
     }
 
     .article__headline {
@@ -12,14 +12,14 @@
         margin-right: auto;
         font-family: getFontFamily($headingtype);
 
-        @include baseline(alpha, $headingtype, $lineheight: 4, $breakpoint: mobile down, $below: 2);
-        @include baseline(alpha, $headingtype, $lineheight: 6, $breakpoint: tablet-small up, $below: 2);
+        @include baseline(alpha, $headingtype, $lineheight: 2, $breakpoint: mobile down, $below: 2);
+        @include baseline(alpha, $headingtype, $lineheight: 3, $breakpoint: tablet-small up, $below: 2);
     }
 }
 
 .article__meta {
     font-style: italic;
-    padding-bottom: 2rem;
+    padding-bottom: gu();
 }
 
 .article__pubdate,
@@ -40,11 +40,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 3rem;
-    padding-top: 4rem;
+    margin-bottom: gu(2);
+    padding-top: gu(2);
 
     .article__miscitem + .article__miscitem {
-        margin-top: 1rem;
+        margin-top: 0;
         margin-left: 0;
     }
 
@@ -55,7 +55,7 @@
 
         .article__miscitem + .article__miscitem {
             margin-top: 0;
-            margin-left: 3rem;
+            margin-left: gu(2);
         }
     }
 }

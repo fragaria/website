@@ -27,8 +27,9 @@
 
 .sharebox__item-body {
     display: block;
-    width: 4rem;
-    height: 2rem;
+    width: gu(2);
+    height: gu();
+    line-height: gu();
 
     > span {
         display: none;

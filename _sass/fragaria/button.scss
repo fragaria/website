@@ -22,9 +22,9 @@
 .button,
 a.button {
     display: inline-block;
-    padding: 0 2rem;
-    line-height: 3rem;
-    height: 3rem;
+    padding: 0 gu();
+    line-height: gu(2);
+    height: gu(2);
     border: 0;
 
     @include buttonStyle(

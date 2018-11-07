@@ -1,3 +1,5 @@
+var GRID_REMS = 1.5;
+
 var forEachNode = function (nodelist, callback, scope) {
     for (var i = 0; i < nodelist.length; i++) {
         callback.call(scope, i, nodelist[i]); // passes back stuff we need
@@ -128,18 +130,21 @@ function fixBaseline(element) {
     function _fix() {
         // Get actual size of 1 rem in px
         var remSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+        var gridUnitSize = remSize * GRID_REMS;
         var elemHeight = element.getBoundingClientRect().height;
-        var elemHeightInRem = elemHeight / remSize;
+        var elemHeightInGridUnits = elemHeight / gridUnitSize;
+
+        console.log(gridUnitSize, elemHeightInGridUnits);
 
         // Fix images using setting their height to a direct multiple of 1rem
         if (element instanceof HTMLImageElement) {
-            if (elemHeightInRem % 1 !== 0) {
-                element.style.height = Math.floor(elemHeightInRem) + 'rem';
+            if (elemHeightInGridUnits % gridUnitSize !== 0) {
+                element.style.height = (Math.floor(elemHeightInGridUnits) * GRID_REMS) + 'rem';
             }
         }
         // Fix other elements by adjusting their margin
         else {
-            var heightDecimalPart = elemHeightInRem % 1;
+            var heightDecimalPart = elemHeightInGridUnits % 1;
             var marginInRem = heightDecimalPart > 0.5 ?
                 1 - heightDecimalPart :
                 heightDecimalPart * -1;

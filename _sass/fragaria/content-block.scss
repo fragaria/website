@@ -9,31 +9,31 @@
 }
 
 .content-block {
-    @include cbPadding(1rem);
+    @include cbPadding($grid-unit);
 
     @include breakpoint(tablet-small up) {
-        @include cbPadding(2rem);
+        @include cbPadding(2 * $grid-unit);
     }
 
     @include breakpoint(tablet up) {
-        @include cbPadding(4rem);
+        @include cbPadding(4 * $grid-unit);
     }
 }
 
 .content-block__cover {
-    @include cbMargin(-1rem);
+    @include cbMargin(-1 * $grid-unit);
 
     @include breakpoint(tablet-small up) {
-        @include cbMargin(-2rem);
+        @include cbMargin(-2 * $grid-unit);
     }
 
     @include breakpoint(tablet up) {
-        @include cbMargin(-4rem);
+        @include cbMargin(-4 * $grid-unit);
     }
 }
 
 .content-block__cover--mobile {
-    @include cbMargin(-1rem);
+    @include cbMargin(-1 * $grid-unit);
 
     @include breakpoint(tablet-small up) {
         @include cbMargin(0);

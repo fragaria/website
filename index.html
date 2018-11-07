@@ -78,9 +78,7 @@ layout: blank
                 <p class="contact__line" itemprop="streetAddress">{{ site.company.address.residence.line1 }}</p>
                 <p class="contact__line" itemprop="postalCode">{{ site.company.address.residence.line2 }}</p>
                 <p class="contact__line" itemprop="addressLocality">{{ site.company.address.residence.line3 }}</p>
-
-                <br>
-                <p class="contact__line" itemprop="telephone">
+                <p class="contact__line u-margin--top1" itemprop="telephone">
                     <a class="anchor anchor--emphasized" href="tel:{{ site.company.phone }}">{{ site.company.phone }}</a>
                 </p>
 
@@ -101,8 +99,7 @@ layout: blank
                 <p class="contact__line">{{ site.company.address.billing.line1 }}</p>
                 <p class="contact__line">{{ site.company.address.billing.line2 }}</p>
                 <p class="contact__line">{{ site.company.address.billing.line3 }}</p>
-                <br>
-                <p class="contact__line">IČO: <span itemprop="identifier">{{ site.company.ico }}</span></p>
+                <p class="contact__line u-margin--top1">IČO: <span itemprop="identifier">{{ site.company.ico }}</span></p>
                 <p class="contact__line">DIČ: <span itemprop="taxID">{{ site.company.dic }}</span></p>
                 <p class="contact__line">Account nr.: {{ site.company.account_nr }}</p>
             </article>

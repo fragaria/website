@@ -1,9 +1,9 @@
 .contact .contact__about {
-    @include baseline(eta, $bodytype, $lineheight: 2, $below: 1);
+    @include baseline(eta, $bodytype, $below: 1);
 }
 
 .contact .contact__line {
     display: block;
 
-    @include baseline(eta, $bodytype, $lineheight: 2, $below: 0);
+    @include baseline(eta, $bodytype, $below: 0);
 }

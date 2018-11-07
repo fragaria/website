@@ -6,15 +6,43 @@ $breakpoint-keys: map-keys($breakpoints);
 $sizes: map-values($rootsizes);
 $points: map-values($breakpoints);
 
+@function gu($multiplier: 1) {
+    @return $grid-unit * $multiplier;
+}
+
+
+@function calc-rootsize($breakpoint-idx) {
+    // 16 is default font size for most browsers.
+    @return strip-unit(nth($sizes, $breakpoint-idx)) / 16;
+}
+
+
 // Root font-size in %, outputted in correct breakpoints.
 @mixin rootsize {
-    // 16 is default font size for most browsers.
-    font-size: strip-unit(nth($sizes, 1)) / 16 * 100%;
+    font-size: calc-rootsize(1) * 100%;
 
     // Loop through breakpoints.
     @for $i from 2 through $breakpoints-limit {
         @media screen and (min-width: strip-unit(nth($points, $i)) / 16 * 1em ) {
-            font-size: strip-unit(nth($sizes, $i)) / 16 * 100%;
+            font-size: calc-rootsize($i) * 100%;
+        }
+    }
+}
+
+// Root font-size in %, outputted in correct breakpoints.
+@mixin baseline-grid {
+    background-image: -webkit-linear-gradient(top,#0ff 0,rgba(255,255,255,0)1px);
+    background-image: -moz-linear-gradient(top,#0ff 0,rgba(255,255,255,0)1px);
+    background-image: -o-linear-gradient(top,#0ff 0,rgba(255,255,255,0)1px);
+    background-image: linear-gradient(to bottom,#0ff 0,rgba(255,255,255,0)1px);
+    background-repeat: repeat-y;
+
+    background-size: 100% $grid-unit;
+
+    // Loop through breakpoints.
+    @for $i from 2 through $breakpoints-limit {
+        @media screen and (min-width: strip-unit(nth($points, $i)) / 16 * 1em ) {
+            background-size: 100% $grid-unit;
         }
     }
 }
@@ -110,18 +138,18 @@ $points: map-values($breakpoints);
     $size: map-get($scale, $fontsize);
     $rootsize: map-get($rootsizes, $breakpoint);
 
-    $baseline-shift: $above + (($size / 2 * (($lineheight * $rootsize / $size) - $cap-height)) / $rootsize + 0.00001);
-    $baseline-push: #{$below - (($size / 2 * (($lineheight * $rootsize / $size) - $cap-height)) / $rootsize + 0.00001)};
+    $baseline-shift: strip-unit(gu($above)) + (($size / 2 * ((strip-unit(gu($lineheight)) * $rootsize / $size) - $cap-height)) / $rootsize + 0.00001);
+    $baseline-push: strip-unit(gu($below)) - (($size / 2 * ((strip-unit(gu($lineheight)) * $rootsize / $size) - $cap-height)) / $rootsize + 0.00001);
 
     font-family: #{map-get($font, font-family)};
     font-size: #{$size / $rootsize}rem;
     margin-bottom: #{$baseline-push}rem;
-    line-height: #{$lineheight}rem;
+    line-height: gu($lineheight);
 
     @if $anchor {
-        $anchor-shift: map-get($anchor-baseline-shifts, $breakpoint);
-        padding-top: #{$baseline-shift + $anchor-shift};
-        margin-top: #{$anchor-shift * -1};
+        $anchor-shift: strip-unit(map-get($anchor-baseline-shifts, $breakpoint));
+        padding-top: #{$baseline-shift + $anchor-shift}rem;
+        margin-top: #{$anchor-shift * -1}rem;
     } @else {
         padding-top: #{$baseline-shift}rem;
     }
@@ -130,7 +158,7 @@ $points: map-values($breakpoints);
 /**
  * Output font family and baseline alignment for multiple media queries using breakpoint expression.
  */
-@mixin baseline($fontsize, $font, $lineheight: 2, $above: 0, $below: 0, $breakpoint: null, $anchor: false) {
+@mixin baseline($fontsize, $font, $lineheight: 1, $above: 0, $below: 0, $breakpoint: null, $anchor: false) {
     @if not $breakpoint {
         $breakpoint: zero up;
     }

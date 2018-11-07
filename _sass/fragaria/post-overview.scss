@@ -4,7 +4,7 @@
     @include breakpoint(tablet up) {
         column-count: 4;
         column-rule: 1px $blog-listing-splitter-border-color solid;
-        column-gap: 4rem;
+        column-gap: gu(2);
     }
 }
 
@@ -12,19 +12,19 @@
     // prevent item being cut in the middle by multicolumn layout
     display: inline-block;
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: gu();
 
     &:hover {
         color: map-get($palette, red);
     }
 
     @include breakpoint(tablet-small down) {
-        @include baseline-border($orientation: 'bottom', $width: 4px, $offset: -1rem, $size: 3rem);
+        @include baseline-border($orientation: 'bottom', $width: 4px, $offset: 0, $size: gu(2));
     }
 
     @include breakpoint(tablet up) {
         &:not(:nth-child(4n+4)) {
-            @include baseline-border($orientation: 'bottom', $width: 4px, $offset: -1rem, $size: 3rem);
+            @include baseline-border($orientation: 'bottom', $width: 4px, $offset: 0, $size: gu(2));
         }
     }
 }
@@ -34,7 +34,7 @@
     font-family: getFontFamily($bodytype);
     font-weight: normal;
 
-    @include baseline(eta, $bodytype, $lineheight: 2);
+    @include baseline(eta, $bodytype);
 }
 
 .post-overview__pubdate {
@@ -42,5 +42,5 @@
 }
 
 .post-overview__cta {
-    padding-top: 2rem;
+    padding-top: gu();
 }

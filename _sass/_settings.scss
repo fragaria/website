@@ -123,11 +123,11 @@ $breakpoints: (
 // Root font-sizes for each breakpoint. Set to half desired line-height of body text.
 // ! Make sure to have as many sizes as breakpoints above.
 $rootsizes: (
-    zero:           18px,           // 30px line-height body text
-    mobile:         18px,           // 30px line-height body text
-    tablet-small:   18px,           // 30px line-height body text
-    tablet:         18px,           // 30px line-height body text
-    desktop:        18px,           // 30px line-height body text
+    zero:           18px,
+    mobile:         18px,
+    tablet-small:   18px,
+    tablet:         18px,
+    desktop:        18px,
 );
 
 // This defines, how much shift is added to baselined headings that

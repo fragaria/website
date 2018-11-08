@@ -138,11 +138,14 @@ $points: map-values($breakpoints);
     $size: map-get($scale, $fontsize);
     $rootsize: map-get($rootsizes, $breakpoint);
 
-    $baseline-shift: strip-unit(gu($above)) + (($size / 2 * ((strip-unit(gu($lineheight)) * $rootsize / $size) - $cap-height)) / $rootsize + 0.00001);
-    $baseline-push: strip-unit(gu($below)) - (($size / 2 * ((strip-unit(gu($lineheight)) * $rootsize / $size) - $cap-height)) / $rootsize + 0.00001);
+    $sizeRatio: $size / $rootsize;
+    $sizeRatioInv: $rootsize / $size;
+    $push: (($sizeRatio * ((strip-unit(gu($lineheight)) * $sizeRatioInv) - $cap-height)  / 2) + 0.00001);
+    $baseline-shift: strip-unit(gu($above)) + $push;
+    $baseline-push: strip-unit(gu($below)) - $push;
 
     font-family: #{map-get($font, font-family)};
-    font-size: #{$size / $rootsize}rem;
+    font-size: #{$sizeRatio}rem;
     margin-bottom: #{$baseline-push}rem;
     line-height: gu($lineheight);
 

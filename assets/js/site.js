@@ -134,8 +134,6 @@ function fixBaseline(element) {
         var elemHeight = element.getBoundingClientRect().height;
         var elemHeightInGridUnits = elemHeight / gridUnitSize;
 
-        console.log(gridUnitSize, elemHeightInGridUnits);
-
         // Fix images using setting their height to a direct multiple of 1rem
         if (element instanceof HTMLImageElement) {
             if (elemHeightInGridUnits % gridUnitSize !== 0) {

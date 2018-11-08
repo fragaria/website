@@ -13,7 +13,7 @@
         font-family: getFontFamily($headingtype);
 
         @include baseline(alpha, $headingtype, $lineheight: 2, $breakpoint: mobile down, $below: 2);
-        @include baseline(alpha, $headingtype, $lineheight: 3, $breakpoint: tablet-small up, $below: 2);
+        @include baseline(alpha, $headingtype, $lineheight: 2.8, $breakpoint: tablet-small up, $below: 2);
     }
 }
 

@@ -1,0 +1,8 @@
+.box {
+    background-color: $code-inline-background-color;
+    padding: gu(1);
+}
+
+.box + p {
+    margin-top: gu(1);
+}

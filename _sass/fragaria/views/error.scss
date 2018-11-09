@@ -6,7 +6,7 @@
     height: 100vh;
     background: map-get($palette, red);
     color: map-get($palette, white);
-    padding: 1rem;
+    padding: gu();
 
     .button {
         &:hover {
@@ -18,17 +18,17 @@
 
 .v-error .v-error__inner {
     h1 {
-        @include baseline(alpha, $headingtype, $lineheight: 3, $below: 2, $breakpoint: mobile down);
-        @include baseline(beta, $headingtype, $lineheight: 5, $below: 2, $breakpoint: tablet-small up);
+        @include baseline(alpha, $headingtype, $lineheight: 2.3, $below: 2, $breakpoint: mobile down);
+        @include baseline(beta, $headingtype, $lineheight: 3, $below: 2, $breakpoint: tablet-small up);
     }
 
 
     h3 {
-        @include baseline(delta, $headingtype, $lineheight: 3, $below: 4);
+        @include baseline(delta, $headingtype, $lineheight: 2.3, $below: 4);
     }
 
     img {
-        height: 6rem;
+        height: gu(3);
 
         @include baseline(delta, $headingtype, $lineheight: 0, $below: 2)
     }

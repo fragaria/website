@@ -210,9 +210,9 @@ a {
             &:before {
                 content: counter(top-level) ".";
                 font-feature-settings: "lnum", "tnum";
-                margin-left: gu(-2);
+                margin-left: gu(-1);
                 position: absolute;
-                text-align: right;
+                text-align: left;
                 width: gu();
             }
             ul {
@@ -259,10 +259,10 @@ a {
     }
 
     // Avoid blank line between p and ul.
-    p + ul,
-    p + ol {
-        margin-top: gu(-1);
-    }
+    // p + ul,
+    // p + ol {
+    //     margin-top: gu(-1);
+    // }
 
     // Definition lists.
     dl {
@@ -353,7 +353,7 @@ a {
     .beta + .caption,
     h3 + .caption,
     .gamma + .caption {
-        margin-top: -1.5rem;
+        margin-top: gu(-1);
     }
 
     .delta + .caption,
@@ -368,7 +368,7 @@ a {
 
         p {
             font-style: map-get($bodytype, italic);
-            padding-left: 1rem;
+            padding-left: gu();
 
         }
 
@@ -422,7 +422,9 @@ a {
         font-family: getFontFamily($monospacetype);
         background-color: $code-inline-background-color;
         word-break: break-word;
+        white-space: nowrap;
         padding: 0 0.2em;
+        margin-bottom: gu();
 
         @each $breakpoint, $size in $inline-monospace-sizes {
             @include breakpoint($breakpoint up) {
@@ -537,7 +539,6 @@ a {
             epsilon,
             $headingtype,
             $lineheight: 1,
-            $below: 1,
             $breakpoint: tablet-small down,
             $anchor: true
         );

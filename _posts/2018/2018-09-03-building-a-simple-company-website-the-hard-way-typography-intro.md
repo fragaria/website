@@ -20,9 +20,14 @@ you how to approach it.
 
 {% include figure.html cloudinary_src='posts/2018-09-03-building-a-simple-company-website-the-hard-way-typography__2_se31j8' sizing='wide' caption='Author: <a href="https://www.flickr.com/photos/tarale/2897185492" rel="noopener" target="_blank">Taryn</a>; CC BY 2.0' %}
 
-*Note: this article is the first in our 2018 series Building a simple company
-website the Hard Way where you can read some interesting points on contemporary
-website design.*
+<section class="box">
+<p>This article is a part of the <i>Building a simple company website the Hard Way</i> series.</p>
+
+<ol>
+    <li>Typography introduction</li>
+    <li><a href="/blog/2018/11/12/building-a-simple-company-website-the-hard-way-vertical-rhythm/">Vertical rhythm</a></li>
+</ol>
+</section>
 
 A good typography definitely makes a difference. If you’re not familiar with the
 term, it describes the means how to make a written language *readable* and
@@ -151,7 +156,7 @@ that it can be also used *on the web*. You can see it in action on this page.
 
 Use the following CSS rule to turn it on:
 
-```css
+```scss
 .hyphenate {
     -webkit-hyphens: auto;
         -ms-hyphens: auto;
@@ -243,7 +248,7 @@ little introduction made you *aware* of the fact that while web is substantially
 from print, we still should care about readability and aesthetics of written
 language. Bad typography cannot be saved by nice color selection, photos and icons.
 
-If you liked the article, stay tuned for the next part of our *Building a simple
+If you liked the article, stay tuned for the [next part][6] of our *Building a simple
 company website the Hard Way* series where we’re gonna talk about another
 important aspect of typography: *vertical rhythm*.
 
@@ -253,3 +258,4 @@ important aspect of typography: *vertical rhythm*.
 [3]: https://fonts.google.com/specimen/Source+Code+Pro
 [4]: https://www.stormtype.com/
 [5]: https://practicaltypography.com/
+[6]: /blog/2018/11/12/building-a-simple-company-website-the-hard-way-vertical-rythm/

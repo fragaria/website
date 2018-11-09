@@ -59,13 +59,15 @@
     }
 
     .team-member__alt {
-        @include baseline(eta, $bodytype, $below: 1);
+        @include baseline(eta, $bodytype);
     }
 }
 
 .team-member__profiles {
-    display: block;
-    height: gu();
+    display: flex;
+    height: gu(2);
+    align-items: center;
+    justify-content: center;
 }
 
 .team-member__profile {
@@ -79,7 +81,7 @@
     }
 
     & + .team-member__profile {
-        margin-left: .25em;
+        margin-left: .5em;
     }
 }
 

@@ -583,8 +583,8 @@ a {
             $sitenav-gap: strip-unit(gu(3)) * $rem-size;
             $breakpoint: map-get($breakpoints, tablet) + $sitenav-gap;
             @include breakpoint($breakpoint up) {
-                margin-left: gu(-6);
-                margin-right: gu(-6);
+                margin-left: gu(-7);
+                margin-right: gu(-7);
             }
         }
 

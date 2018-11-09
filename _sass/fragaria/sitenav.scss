@@ -75,8 +75,8 @@ $sitenav-shrinked-push: gu(2);
     margin-left: gu(0.5);
 
     img {
-        transform: translate3d(0, .6rem, 0);
-        height: gu(2);
+        transform: translate3d(0, .8rem, 0);
+        height: gu(1.666);
 
         @include breakpoint(tablet up) {
             height: gu(5.5);

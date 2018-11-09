@@ -8,7 +8,7 @@
 
 @mixin narrow-content {
     @include breakpoint(mobile up) {
-        max-width: rem-calc(map-get($breakpoints, mobile));
+        max-width: gu(25);
         margin-left: auto;
         margin-right: auto;
     }

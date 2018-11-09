@@ -108,7 +108,7 @@ before—the moon! The crew consisted of Neil Armstrong, Michael Collins,
 and Buzz Aldrin.</p>
 </figure>
 
-with this (approx. *55 characters* per line):
+with this (approx. *65 characters* per line):
 
 <figure class="figure figure--left">
 <p>On July 16, 1969, the Apollo 11 spacecraft launched from the Kennedy Space
@@ -137,10 +137,10 @@ When deciding whether the number of characters is OK, you can also use the
 
 
 <figure class="figure figure--left">
-<p>abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcd</p>
+<p>abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijkl</p>
 </figure>
 
-&hellip; yields **~2.2 alphabets**, which is OK.
+&hellip; yields **~2.5 alphabets**, which is OK.
 
 ---
 

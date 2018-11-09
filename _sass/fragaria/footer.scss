@@ -43,7 +43,7 @@
 
 .footer__brand {
     display: block;
-    height: gu(2);
+    height: gu(1.666);
     margin: auto;
 }
 
@@ -77,11 +77,11 @@
 }
 
 .footer__social {
-    line-height: 3rem;
-    font-size: 1.5rem;
+    line-height: gu(2);
+    font-size: gu(.85);
 
     @include breakpoint(tablet up) {
-        font-size: 2rem;
+        font-size: gu(1.11);
     }
 }
 

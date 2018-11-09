@@ -2,6 +2,7 @@
     font-family: 'fragariacz-icons';
 
     &:before {
+        transition: #{$anchor-hover-transition};
         content: $icon;
     }
 

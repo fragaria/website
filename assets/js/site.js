@@ -131,22 +131,33 @@ function fixBaseline(element) {
         // Get actual size of 1 rem in px
         var remSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
         var gridUnitSize = remSize * GRID_REMS;
-        var elemHeight = element.getBoundingClientRect().height;
-        var elemHeightInGridUnits = elemHeight / gridUnitSize;
+
+        var elemStyle = element.currentStyle || getComputedStyle(element);
+        // Actual element height *without* the margin.
+        var elemBoundingHeight = element.getBoundingClientRect().height;
+        // Current margin of the element in px.
+        var elemBottomMargin = elemStyle.marginBottom ? parseFloat(elemStyle.marginBottom) : 0;
+        // Total height of the element in px.
+        var elemHeight = elemBoundingHeight + elemBottomMargin;
+
+        var elemHeightInGu = elemHeight / gridUnitSize;
+        var marginBottomInGu = elemBottomMargin / gridUnitSize;
 
         // Fix images using setting their height to a direct multiple of 1rem
         if (element instanceof HTMLImageElement) {
-            if (elemHeightInGridUnits % gridUnitSize !== 0) {
-                element.style.height = (Math.floor(elemHeightInGridUnits) * GRID_REMS) + 'rem';
+            if (elemHeightInGu % gridUnitSize !== 0) {
+                element.style.height = (Math.floor(elemHeightInGu) * GRID_REMS) + 'rem';
             }
         }
         // Fix other elements by adjusting their margin
         else {
-            var heightDecimalPart = elemHeightInGridUnits % 1;
-            var marginInRem = heightDecimalPart > 0.5 ?
-                1 - heightDecimalPart :
-                heightDecimalPart * -1;
-            element.style.marginBottom = marginInRem + 'rem';
+            // Height difference to nearest grid unit.
+            var heightDecimalPartInGu = elemHeightInGu % 1;
+            // Compensated margin.
+            var newMarginInGu = heightDecimalPartInGu > 0.5 ?
+                1 - heightDecimalPartInGu + marginBottomInGu :
+                marginBottomInGu - heightDecimalPartInGu;
+            element.style.marginBottom = (newMarginInGu * GRID_REMS) + 'rem';
         }
     }
 
@@ -261,17 +272,17 @@ window.toggleGrid = function toggleGrid(valueToSet) {
 
 
 var handlers = [
-    {className: 'js-ie-warn', handler: showIEWarning},
-    {className: 'js-sitenav', handler: siteMenu},
-    {className: 'js-sitenav', handler: shirkSidenavOnScroll},
-    {className: 'js-site-reload-button', handler: siteReload},
-    {className: 'js-fix-baseline', handler: fixBaseline},
-    {className: 'js-portfolio-strip', handler: expandPortfolio},
-    {className: 'js-auto-add-headline-anchors', handler: autoAddHeadlineAnchors},
+    {query: '.js-ie-warn', handler: showIEWarning},
+    {query: '.js-sitenav', handler: siteMenu},
+    {query: '.js-sitenav', handler: shirkSidenavOnScroll},
+    {query: '.js-site-reload-button', handler: siteReload},
+    {query: '.js-fix-baseline, .typeset h1, .typeset h2, .typeset h3, .typeset h4, .article-typeset h1, .article-typset h2, .article-typset h3, .article-typeset h4', handler: fixBaseline},
+    {query: '.js-portfolio-strip', handler: expandPortfolio},
+    {query: '.js-auto-add-headline-anchors', handler: autoAddHeadlineAnchors},
 ];
 
 handlers.forEach(function (handler) {
-    forEachNode(document.getElementsByClassName(handler.className), function (index, rootElem) {
+    forEachNode(document.querySelectorAll(handler.query), function (index, rootElem) {
         handler.handler(rootElem);
     })
 });

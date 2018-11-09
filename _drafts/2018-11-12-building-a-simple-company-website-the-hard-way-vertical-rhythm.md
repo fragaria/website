@@ -12,14 +12,14 @@ tags:
 - css
 - fonts
 modified_time: 2018-09-03T14:00:00.000+01:00
-cloudinary_src: posts/2018-11-12-building-a-simple-company-website-the-hard-way-vertical-rythm__5_ubxdrs
+cloudinary_src: posts/2018-11-12-building-a-simple-company-website-the-hard-way-vertical-rythm__6_msthpg
 ---
 
 Websites with good vertical rhythm are more aesthetically pleasing and generally feel
 more consistent. While understanding of vertical rhythm rules is simple, maintaing
 it on bigger websites becomes challenging. But challenges are fun, aren't they? Read on!
 
-{% include figure.html cloudinary_src='posts/2018-11-12-building-a-simple-company-website-the-hard-way-vertical-rythm__5_ubxdrs' sizing='wide' %}
+{% include figure.html cloudinary_src='posts/2018-11-12-building-a-simple-company-website-the-hard-way-vertical-rythm__6_msthpg' sizing='wide' %}
 
 <section class="box">
 <p>This article is a part of the <i>Building a simple company website the Hard Way</i> series.</p>
@@ -42,7 +42,7 @@ By mixing up these properties, you can either end up with a page that looks
 chaotic or&mdash;when you’re careful&mdash;with website that feels
 natural and pleasing. To get a grasp of the principle, consider these two designs:
 
-{% include figure.html cloudinary_src='posts/2018-11-12-building-a-simple-company-website-the-hard-way-vertical-rythm__1_yjlap0' caption='The good, the bad and the ugly' sizing='wide' %}
+{% include figure.html cloudinary_src='posts/2018-11-12-building-a-simple-company-website-the-hard-way-vertical-rythm__1_yjlap0' caption='The Good, the Bad and the Ugly.' sizing='wide' %}
 
 Even without the baseline grid attached, you would probably say that the one on the
 left just feels right: it’s easier to read, more balanced and it generally looks
@@ -52,11 +52,11 @@ readability and the looks of the text. Even if you are not a musician, you would
 notice when the rhythm is erratic. The same applies to the written text. This principle
 relates to how our brains works, the key word here is [pattern recognition](https://en.wikipedia.org/wiki/Pattern_recognition_(psychology)).
 
-{% include figure.html cloudinary_src='posts/2018-11-12-building-a-simple-company-website-the-hard-way-vertical-rythm__3_ex0yyd' %}
+{% include figure.html cloudinary_src='posts/2018-11-12-building-a-simple-company-website-the-hard-way-vertical-rythm__3_ex0yyd' caption='Vertical rhythm is somewhat similar to rhythm in music.' %}
 
-When there is a pattern (think rhythm), the brain has less work to decode the message. When the pattern
-is lacking, text is more difficult (and exhausing) to read. And from the previous series
-part, we know [this is dangerous][1].
+When there is a pattern (*~rhythm*), the brain has less work to decode the message. When the pattern
+is lacking, text is more difficult (and exhausing) to read. And from the [previous series
+part][1], we know this is *dangerous*.
 
 Good. Now we know rhythm is imporant. The big question is: *how do we maintain it*?
 Surprisingly, there are only two basic rules: *multiples of line height* and *consistency*.
@@ -156,7 +156,7 @@ multi&ndash;column content.
 
 So, we need to deal with this somehow. For long, people thought baseline
 alignment is not possible in CSS. It turns out that&mdash;with some SASS dark
-magic&mdash; it’s doable. In order to acheive the desired effect, we need to
+magic&mdash;it’s doable. In order to acheive the desired effect, we need to
 *shift every text* downwards by a specific amount it needs to fit nicely on the baseline.
 Your initial thought might be:
 
@@ -227,7 +227,7 @@ Razvan Onofrei (original author of the idea) or
 [plumber](https://jamonserrano.github.io/plumber-sass/) that implements this as
 a nice SASS library.
 
-We originally tried Sassline first but quickly realized it’s too restrictive and we
+We originally tried Sassline but quickly realized it’s too restrictive and we
 didn’t really like all the rules it introduced. So we’ve decided to write our
 bunch of mixins that get the job done.
 
@@ -322,14 +322,14 @@ forEachNode(document.querySelectorAll(query), fixBaseline);
 
 We’ve covered some ideas on vertical rhythm. As we’ve found out,
 browser rendering engines unfortunately lack support for proper
-typography needs. We’ve described few tips on how to work around
-it ourselves. I hope that rendering engines will improve at some point
+typography. We’ve described few tips on how to work around
+it ourselves. Let’s hope the rendering engines will improve at some point
 in future. Until then, we have two options:
 
 1. Ignore the baseline troubles and focus just on the basics
 2. Put significant effort to make your website stand out
 
-Since you’ve read all the way down to conclusion, I you still like the option two more.
+Since you’ve read all the way down to conclusion, I bet you might like the option two a bit more.
 
 And in case you enjoyed the article, stay tuned for the next part of *Building a simple
 company website the Hard Way* series. We’ll shed some light on Web Workers.

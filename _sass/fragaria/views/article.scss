@@ -3,7 +3,7 @@
     text-align: center;
 
     @include breakpoint(tablet up) {
-        padding-top: gu(3);
+        padding-top: gu(5);
     }
 
     .article__headline {

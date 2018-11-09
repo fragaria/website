@@ -15,7 +15,6 @@
     // Breakpoint size
     $bp: null;
 
-
     // Orientation media queries have a unique syntax
     @if $bp-name == "landscape" or $bp-name == "portrait" {
         @return "(orientation: #{$bp-name})";
@@ -42,25 +41,25 @@
             @warn 'breakpoint(): "#{$val}" is not defined in your $breakpoints setting.';
         }
     }
-
-    // Convert any pixel, rem, or unitless value to em
-    $rootsize: map-get($rootsizes, $bp-name);
-    $bp: bp-to-em($bp, $rootsize);
+    @else {
+        // If $bp-name is actually pixel value.
+        $bp: $bp-name;
+    }
 
     @if $bp-max {
-        $bp-max: bp-to-em($bp-max) - 0.0001;
+        $bp-max: $bp-max - 0.0001;
     }
 
     // Conditions to skip media query creation
     // - It's a named breakpoint that resolved to "0 down" or "0 up"
     // - It's a numeric breakpoint that resolved to "0 " + anything
-    @if $bp > 0em or $dir == "only" or $dir == "down" {
+    @if $bp > 0px or $dir == "only" or $dir == "down" {
         // `only` ranges use the format `(min-width: n) and (max-width: n)`
         @if $dir == "only" {
             // Only named media queries can have an "only" range
             @if $named == true {
                 // Only use "min-width" if the floor is greater than 0
-                @if $bp > 0em {
+                @if $bp > 0px {
                     $str: $str + "(min-width: #{$bp})";
 
                     // Only add "and" to the media query if there's a ceiling
@@ -84,7 +83,7 @@
 
             // Skip media query creation if input value is exactly "0 down",
             // unless the function was called as "small down", in which case it's just "small only"
-            @if $named or $bp > 0em {
+            @if $named or $bp > 0px {
                 @if $max != null {
                     $str: $str + "(max-width: #{$max})";
                 }
@@ -92,7 +91,7 @@
         }
 
         // `up` ranges use the format `(min-width: n)`
-        @else if $bp > 0em {
+        @else if $bp > 0px {
             $str: $str + "(min-width: #{$bp})";
         }
     }
@@ -122,22 +121,4 @@
             @content;
         }
     }
-}
-
-
-@function breakpoint-size($breakpoint) {
-    $rootsize: map-get($rootsizes, $breakpoint);
-    @return map-get($breakpoints, $breakpoint) / $rootsize * 1em;
-}
-
-
-// Converts a unitless, pixel, or rem value to em, for use in breakpoints.
-@function bp-to-em($value, $base: 16px) {
-    // Pixel and unitless values are converted to rems
-    @if unit($value) == 'px' or unitless($value) {
-        $value: rem-calc($value, $base);
-    }
-
-    // Then the value is converted to ems
-    @return strip-unit($value) * 1em;
 }

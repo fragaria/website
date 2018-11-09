@@ -42,7 +42,7 @@ $sitenav-shrinked-push: gu(2);
     background: map-get($palette, white);
     height: map-get($sitenav-menu-height, mobile);
 
-    @include breakpoint(tablet-small up) {
+    @include breakpoint(tablet up) {
         margin-left: gu(-1);
         margin-right: gu(-1);
         padding-left: gu();
@@ -79,7 +79,7 @@ $sitenav-shrinked-push: gu(2);
         height: gu(2);
 
         @include breakpoint(tablet up) {
-            height: gu(6);
+            height: gu(5.5);
             margin-bottom: gu(-2);
         }
     }
@@ -203,8 +203,7 @@ $sitenav-shrinked-push: gu(2);
         display: block;
         line-height: 1;
 
-        @include fontsize(gamma, $breakpoint: tablet-small down);
-        @include fontsize(beta, $breakpoint: tablet up);
+        @include fontsize(gamma);
     }
 }
 

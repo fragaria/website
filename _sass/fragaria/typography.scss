@@ -579,9 +579,12 @@ a {
         padding-bottom: gu();
 
         &.figure--wide {
-            @include breakpoint(tablet up) {
-                margin-left: gu(-8);
-                margin-right: gu(-8);
+            $rem-size: map-get($rootsizes, tablet);
+            $sitenav-gap: strip-unit(gu(3)) * $rem-size;
+            $breakpoint: map-get($breakpoints, tablet) + $sitenav-gap;
+            @include breakpoint($breakpoint up) {
+                margin-left: gu(-6);
+                margin-right: gu(-6);
             }
         }
 

@@ -21,6 +21,7 @@
         - [Installing dependencies on macOS](#installing-dependencies-on-macos)
         - [Installing the app](#installing-the-app)
     - [Launching the app](#launching-the-app)
+    - [Viewing future articles and drafts](#viewing-future-articles-and-drafts)
     - [Using Docker](#using-docker)
 
 # Creating posts
@@ -192,6 +193,14 @@ bundle exec jekyll serve --livereload
 ```
 
 Testing site will be available at `http://localhost:4000/`.
+
+## Viewing future articles and drafts
+
+Simple! Just run the app using:
+
+```
+bundle exec jekyll serve --livereload --future --drafts
+```
 
 ## Using Docker
 

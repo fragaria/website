@@ -1,4 +1,4 @@
-@mixin memberProfileVariant($icon, $main) {
+@mixin memberProfileVariant($icon) {
     font-family: 'fragariacz-icons';
 
     &:before {
@@ -6,7 +6,7 @@
     }
 
     &:hover:before {
-        color: $main;
+        color: map-get($palette, red);
     }
 }
 
@@ -73,10 +73,7 @@
 .team-member__profile {
     @each $variantName, $variantSettings in $brands {
         &--#{$variantName} {
-            @include memberProfileVariant(
-                map-get($variantSettings, icon),
-                map-get($variantSettings, main)
-            );
+            @include memberProfileVariant(map-get($variantSettings, icon));
         }
     }
 

@@ -16,7 +16,7 @@ cloudinary_src: posts/2018-11-12-building-a-simple-company-website-the-hard-way-
 ---
 
 Websites with good vertical rhythm are more aesthetically pleasing and generally feel
-more consistent. While understanding of vertical rhythm rules is simple, maintaing
+more consistent. While understanding vertical rhythm rules is simple, maintaing
 it on bigger websites becomes challenging. But challenges are fun, aren't they? Read on!
 
 {% include figure.html cloudinary_src='posts/2018-11-12-building-a-simple-company-website-the-hard-way-vertical-rythm__6_msthpg' sizing='wide' %}
@@ -38,25 +38,25 @@ Simply said, it describes combination of two properties of written text:
 * a line height
 * element spacings (think margins and paddings)
 
-By mixing up these properties, you can either end up with a page that looks
+By mixing up these properties you can either end up with a page that looks
 chaotic or&mdash;when you’re careful&mdash;with website that feels
 natural and pleasing. To get a grasp of the principle, consider these two designs:
 
 {% include figure.html cloudinary_src='posts/2018-11-12-building-a-simple-company-website-the-hard-way-vertical-rythm__1_yjlap0' caption='The Good, the Bad and the Ugly.' sizing='wide' %}
 
-Even without the baseline grid attached, you would probably say that the one on the
+Even without the baseline grid attached you would probably say that the one on the
 left just feels right: it’s easier to read, more balanced and it generally looks
 more professional. While the one on the right feels rather awkward. Good rhythm inherently
-brings this feel of natural flow and&mdash;similarily to how music rhythm works&mdash;improves
+brings this feel of natural flow and&mdash;similarly to how music rhythm works&mdash;improves
 readability and the looks of the text. Even if you are not a musician, you would probably
-notice when the rhythm is erratic. The same applies to the written text. This principle
-relates to how our brains works, the key word here is [pattern recognition](https://en.wikipedia.org/wiki/Pattern_recognition_(psychology)).
+notice when the rhythm is erratic. The same applies to written text. This principle
+relates to how our brains work, the key word here is [pattern recognition](https://en.wikipedia.org/wiki/Pattern_recognition_(psychology)).
 
 {% include figure.html cloudinary_src='posts/2018-11-12-building-a-simple-company-website-the-hard-way-vertical-rythm__3_ex0yyd' caption='Vertical rhythm is somewhat similar to rhythm in music.' %}
 
 When there is a pattern (*~rhythm*), the brain has less work to decode the message. When the pattern
-is lacking, text is more difficult (and exhausing) to read. And from the [previous series
-part][1], we know this is *dangerous*.
+lacks, text is more difficult (and exhausing) to read. And from the [previous series
+part][1] we know this is *dangerous*.
 
 Good. Now we know rhythm is imporant. The big question is: *how do we maintain it*?
 Surprisingly, there are only two basic rules: *multiples of line height* and *consistency*.
@@ -72,7 +72,7 @@ means it all starts with the font size selection. Many people choose *16px as ba
 because browsers use this as the default value, but you are free to choose
 whatever you like. We chose 18px for this site. Once you’ve decided about the base
 font size, decide about the line height. Most of the time, 150% of font size
-works well and we did the same on this size. Line height is set to 27px
+works well and we did the same on this site. Line height is set to 27px
 (18px&nbsp;&times;&nbsp;1.5).
 
 Then, when designing the site, keep in mind this simple rule:
@@ -131,7 +131,7 @@ h1 {
 
 ### The baseline problem
 
-A *baseline* is the invisible line on which most letters sit. Following figure demonstrates it
+A *baseline* is the invisible line on which most letters sit. The following figure demonstrates it
 quite well:
 
 {% include figure.html cloudinary_src='posts/2018-09-03-building-a-simple-company-website-the-hard-way-typography__4_jal5ik' sizing='wide' caption='Baseline, line-height, font-size and cap height explained, author: <a href="https://medium.com/@razvanonofrei/aligning-type-to-baseline-the-right-way-using-sass-e258fce47a9b">Razvan Onofrei</a>' %}
@@ -155,8 +155,8 @@ you want to arrange your boxes to match the baseline. This is especially true fo
 multi&ndash;column content.
 
 So, we need to deal with this somehow. For long, people thought baseline
-alignment is not possible in CSS. It turns out that&mdash;with some SASS dark
-magic&mdash;it’s doable. In order to acheive the desired effect, we need to
+alignment was not possible in CSS. It turns out that&mdash;with some SASS dark
+magic&mdash;it’s doable. In order to acheive the desired effect we need to
 *shift every text* downwards by a specific amount it needs to fit nicely on the baseline.
 Your initial thought might be:
 
@@ -181,8 +181,8 @@ Make sure to use the above image for the reference on the formula.
 
 Once we have the shift, we need to move our text downwards on the baseline. We
 can do that easily by adding `padding-top`. Unfortunately, this has a side-effect:
-it pushes the elements below the one in question too. In order to compensate, we
-need to set the the same value multiplied by &ndash;1 as our `margin-bottom`.
+it pushes the elements below the one in question, too. In order to compensate, we
+need to set the same value multiplied by &ndash;1 as our `margin-bottom`.
 
 If you’re interested in details of the algorithm, please look at the [blog
 post](https://medium.com/@razvanonofrei/aligning-type-to-baseline-the-right-way-using-sass-e258fce47a9b)
@@ -222,14 +222,14 @@ $font: (
 }
 ```
 
-There are frameworks too. You can use [sassline](https://sassline.com/) from the
+There are frameworks, too. You can use [sassline](https://sassline.com/) from the
 Razvan Onofrei (original author of the idea) or
 [plumber](https://jamonserrano.github.io/plumber-sass/) that implements this as
 a nice SASS library.
 
 We originally tried Sassline but quickly realized it’s too restrictive and we
-didn’t really like all the rules it introduced. So we’ve decided to write our
-bunch of mixins that get the job done.
+didn’t really like all the rules it had introduced. So we decided to write our
+bunch of mixins to get the job done.
 
 ### The restrictive line-height problem
 
@@ -239,26 +239,26 @@ This is best demonstrated by an example:
 
 As you can see on the image, headings on these two examples have different line height.
 The example on the left&mdash;albeit breaking the baseline grid&mdash;looks better
-(and reads better too!). Well, I've not been totally honest with you:
+(and reads better, too!). Well, I've not been totally honest with you:
 
-> Breaking the grid is OK and generally recommended if the readability would
+> Breaking the grid is OK and generally recommended if the readability should
 > suffer otherwise.
 
 This rule has a sibling:
 
 > When you break the baseline grid, make sure to join it again as soon as possible.
 
-Example image shows this well. The grid pace is restored once we’ve dealt with
-the heading.
+Example image shows this well. The grid pace is restored once the heading has
+been dealt with.
 
 Even though rules are simple, implmentation is not. The reason for that
-is that the margin compensation depends on *how many lines does the heading span*. Looking
-at the picture, it’s obvious that the margin compensation will be different
+is that the margin compensation depends on *how many lines the heading spans*. Looking
+at the picture it’s obvious that the margin compensation will be different
 if the heading takes one line, two lines and so on. When we’re off the grid, we’re
 simply off.
 
 Therefore, some static SASS code won’t suffice. We’ll have to use something with
-more dynamic nature: JavaScript. We’ll have to calculate the margin compensation based
+more dynamic nature: JavaScript. We ought to calculate the margin compensation based
 on the actual height of the block element. Ultimately, we need to round the total element height
 to *nearest grid unit*.
 
@@ -297,13 +297,13 @@ function fixBaseline(element) {
 }
 ```
 
-It’s quite straightforward. When dealing with the difference to closest
+It’s quite straightforward. When dealing with the difference to the nearest
 grid unit, we either round up or down depending on what is closer. You might
 end up favoring one or the other. This can be easily adjusted by changing
 the `0.5` to something else (in 0&ndash;1 range).
 
 Applying this function to our elements (ones that are set to have
-line height other than straight multiple of grid unit) then
+line height other than integer multiple of grid unit) then
 turns out to be easy:
 
 ```javascript

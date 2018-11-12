@@ -48,11 +48,11 @@
 .team-member__avatar-image {
     display: block;
     margin: auto;
-    width: gu(3);
+    width: gu(3.75);
 }
 
 .team-member__body {
-    margin-top: gu();
+    margin-top: gu(0.25);
     text-align: center;
 
     .team-member__name {
@@ -88,28 +88,5 @@
 }
 
 
-// special section that has emphasized background
-.career-teaser {
-    margin-right: auto;
-    margin-left: auto;
 
-    padding: gu();
-
-    background-color: map-get($palette, red);
-    color: map-get($palette, white);
-
-    &.career-teaser--short {
-        max-width: gu(30);
-    }
-}
-
-// align 'contact us' button
-.career-teaser__contactbutton {
-    margin-top: gu();
-
-    .button:hover {
-        background-color: map-get($palette, white);
-        color: map-get($palette, red);
-    }
-}
 

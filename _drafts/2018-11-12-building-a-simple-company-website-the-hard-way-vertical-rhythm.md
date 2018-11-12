@@ -326,8 +326,8 @@ typography. We’ve described few tips on how to work around
 it ourselves. Let’s hope the rendering engines will improve at some point
 in future. Until then, we have two options:
 
-1. Ignore the baseline troubles and focus just on the basics
-2. Put significant effort to make your website stand out
+a) Ignore the baseline troubles and focus just on the basics<br>
+b) Put significant effort to make your website stand out
 
 Since you’ve read all the way down to conclusion, I bet you might like the option two a bit more.
 

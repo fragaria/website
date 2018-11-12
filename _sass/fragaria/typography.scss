@@ -127,10 +127,10 @@ a {
     // Heading level 1.
     h1,
     .alpha {
-        @include baseline($fontsize: gamma, $font: $headingtype, $lineheight: 2);
+        @include baseline($fontsize: gamma, $font: $headingtype, $lineheight: 1.53);
 
         &.anchor-shift {
-            @include baseline($fontsize: gamma, $font: $headingtype, $lineheight: 2, $anchor: true);
+            @include baseline($fontsize: gamma, $font: $headingtype, $lineheight: 1.53, $anchor: true);
         }
     }
 
@@ -365,11 +365,26 @@ a {
     // Quotes.
     blockquote {
         border-left: .15rem solid $border-color;
+        padding: gu(0.5) 0;
+        margin-bottom: gu();
 
         p {
-            font-style: map-get($bodytype, italic);
             padding-left: gu();
+            font-style: map-get($bodytype, italic);
 
+            &:last-child {
+                margin: 0;
+                padding-top: 0;
+
+                // @include fontsize(zeta);
+
+                // @include baseline(
+                //     $fontsize: zeta,
+                //     $font: $bodytype,
+                //     $lineheight: 1,
+                //     $below: 0
+                // );
+            }
         }
 
         /**

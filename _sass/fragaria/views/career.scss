@@ -93,3 +93,27 @@ $full-view-break: 1000px;
 .v-career-tech-grid .v-career-tech-grid__title {
     @include baseline(zeta, $headingtype);
 }
+
+// special section that has emphasized background
+.career-teaser {
+    @include narrow-content;
+
+    padding: gu(2);
+
+    background-color: map-get($palette, red);
+    color: map-get($palette, white);
+}
+
+// align 'contact us' button
+.career-teaser__contactbutton {
+    padding-top: gu();
+
+    .button:hover {
+        background-color: map-get($palette, white);
+        color: map-get($palette, red);
+    }
+}
+
+.career-teaser .career-teaser__headline {
+    @include baseline($fontsize: gamma, $font: $headingtype, $lineheight: 1.53, $below: 0);
+}

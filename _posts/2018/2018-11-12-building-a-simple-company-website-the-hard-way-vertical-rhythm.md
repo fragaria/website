@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Building a simple company website the Hard Way: Vertical rhythm'
-date: 2018-11-12T14:00:00.000+01:00
+date: 2018-11-12T10:00:00.000+01:00
 author: Filip Vařecha
 lang: en
 tags:

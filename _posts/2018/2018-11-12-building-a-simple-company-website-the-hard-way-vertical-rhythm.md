@@ -81,7 +81,7 @@ Then, when designing the site, keep in mind this simple rule:
 
 For example, if your line height is 24px, you would set your spacings to
 48px (2&nbsp;&times;&nbsp;24), 72px (3&nbsp;&times;&nbsp;24), 96px
-(4&nbsp;&times;&nbsp;25) and so on. You could also use 12px as it’s
+(4&nbsp;&times;&nbsp;24) and so on. You could also use 12px as it’s
 0.5&nbsp;&times;&nbsp;24. All the multiples are OK as long as you
 don’t create dozens of combinations and keep things simple and *consistent*.
 

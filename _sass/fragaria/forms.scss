@@ -23,7 +23,6 @@
     font-family: getFontFamily($headingtype);
     background-color: map-get($palette, gray-light);
     border: 0;
-    // border: 2px map-get($palette, red) solid;
     border-radius: 0;
     padding: gu(0.5);
 
@@ -38,6 +37,14 @@
 
 .form-control-wrapper {
     position: relative;
+    /*
+     * Shift form control a bit to align it closer to the label.
+     * This breaks the grid temporarily for sake of better readability.
+     */
+     $shift: gu(0.5);
+     margin-top: $shift * -1;
+     padding-bottom: $shift;
+     margin-bottom: gu(-1);
 
     &--select::after {
         font-family: '#{$icomoon-font-family}';

@@ -119,15 +119,21 @@ layout: blank
 
                 <div class="form__line">
                     <label class="form-label" for="git-name">Full name</label>
-                    <input class="form-control" type="text" name="name" id="git-name" required>
+                    <div class="form-control-wrapper">
+                        <input class="form-control" type="text" name="name" id="git-name" required>
+                    </div>
                 </div>
                 <div class="form__line">
                     <label class="form-label" for="git-email">Email</label>
-                    <input class="form-control" type="email" name="_replyto" id="git-email"  required>
+                    <div class="form-control-wrapper">
+                        <input class="form-control" type="email" name="_replyto" id="git-email"  required>
+                    </div>
                 </div>
                 <div class="form__line">
                     <label class="form-label" for="git-message">What is your enquiry?</label>
-                    <textarea class="form-control" name="message" id="git-message"  required></textarea>
+                    <div class="form-control-wrapper">
+                        <textarea class="form-control" name="message" id="git-message"  required></textarea>
+                    </div>
                 </div>
                 <div class="form__submit">
                     <input type="submit" class="button" value="Send">

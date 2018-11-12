@@ -107,7 +107,7 @@ nákupu](https://opbeat.com/blog/posts/welcome-opbeat-to-the-elastic-family/)
 je vstup na pole [performance
 monitoringu](https://techcrunch.com/2017/06/22/elastic-enters-apm-space-with-opbeat-acquisition/).
 
-![performance-monitoring](https://opbeat.com/blog/posts/welcome-opbeat-to-the-elastic-family/opbeat-timeline-ui.png)
+![performance-monitoring](https://www.elastic.co/assets/blt91a961dfbbe50571/6.2%20blog%20post.gif)
 
 Mrkněte na stránky firmy [opbeat](https://opbeat.com), kde si uděláte
 obrázek, co se chystá.

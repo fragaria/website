@@ -188,7 +188,7 @@ If you’re interested in details of the algorithm, please look at the [blog
 post](https://medium.com/@razvanonofrei/aligning-type-to-baseline-the-right-way-using-sass-e258fce47a9b)
 from the original inventor of the technique, Razvan Onofrei.
 
-In order to use this globally, we’re need some help with the math. This is where
+In order to use this globally, we’ll need some help with the math. This is where
 SASS enters the game. Let’s create some mixins for it. Take a look at the following
 example (a stripped down version of one of our mixins):
 

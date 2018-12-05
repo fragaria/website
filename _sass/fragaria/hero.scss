@@ -30,9 +30,8 @@
             color: map-get($palette, red);
         }
 
-        @include baseline(alpha, $headingtype, $lineheight: 1, $below: 2, $breakpoint: mobile down);
-        @include baseline(alpha, $headingtype, $lineheight: 2, $below: 2, $breakpoint: tablet-small only);
-        @include baseline(alpha, $headingtype, $lineheight: 2.7, $below: 2, $breakpoint: tablet up);
+        @include baseline(alpha, $headingtype, $lineheight: 2, $below: 2, $breakpoint: mobile down);
+        @include baseline(alpha, $headingtype, $lineheight: 2.75, $below: 2, $breakpoint: mobile up);
     }
 
     .hero__sub {

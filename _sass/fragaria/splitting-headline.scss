@@ -4,6 +4,10 @@
     text-align: center;
     text-transform: uppercase;
 
+    // Shall fix https://github.com/fragaria/website/issues/10
+    // Content above the .splitting-headline is hidden beneath the margin of .splitting-headline
+    z-index: -1;
+
     @include breakpoint(tablet up) {
         padding-bottom: gu(3);
     }

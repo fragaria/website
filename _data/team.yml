@@ -57,14 +57,6 @@
     src: github
   profiles:
     github: tibor-kulcar
-- name: Hynek Urban
-  alt: Skeptic
-  nationality: Czech
-  gender: male
-  avatar:
-    src: github
-  profiles:
-    github: hynek-urban
 - name: Ondřej Chmelař
   alt: Allrounder
   nationality: Czech

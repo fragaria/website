@@ -111,6 +111,15 @@
     src: github
   profiles:
     github: MichalMaM
+- name: Ondřej Šrámek
+  alt: Moravian
+  nationality: Czech
+  gender: male
+  avatar:
+    src: github
+  profiles:
+    linkedin: ondrejsramek
+    github: osramek
 - name: Daniela Borošová
   alt: Tango DJ
   nationality: Slovak

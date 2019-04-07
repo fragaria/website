@@ -49,27 +49,28 @@ function loadFromCache(request) {
 
 self.addEventListener('install', function(event) {
     console.log(`[sw] Installing ...`);
+    // Make sure to not stuck waiting for current sw to become terminated.
+    self.skipWaiting();
     // Perform install steps
     event.waitUntil(precache());
 });
 
 self.addEventListener('fetch', event => {
     const request = event.request;
-    let loadPipe = loadFromNetwork(request, 1500).catch(err => loadFromCache(request));
+    let handler = null;
 
     if (request.method === 'GET') {
-        loadPipe = loadPipe.catch(err => {
-            console.warn('[sw] Could not load, redirecting to offline page ', err);
-            return caches.open(CACHE_NAME).then(cache => {
-                return cache.match('/offline/');
-            })
-        });
+        handler = loadFromNetwork(request, 1500)
+            .catch(err => loadFromCache(request))
+            .catch(err => {
+                console.warn('[sw] Could not load, redirecting to offline page ', err);
+                return caches.open(CACHE_NAME).then(cache => {
+                    return cache.match('/offline/');
+                })
+            });
     } else {
-        loadPipe = loadPipe.catch(err => {
-            console.warn('[sw] Could not load, going for 404', err);
-            throw err;
-        });
+        handler = fetch(request);
     }
 
-    event.respondWith(loadPipe);
+    return event.respondWith(handler);
 });

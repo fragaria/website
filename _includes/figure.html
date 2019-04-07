@@ -10,6 +10,8 @@
     src="{%- if include.cloudinary_src -%}
         {%- if include.format == 'gif' -%}
             {% cloudinary_url include.cloudinary_src format='auto' %}
+        {%- elsif include.format == 'svg' -%}
+            {% cloudinary_url include.cloudinary_src format='svg' %}
         {%- else -%}
             {% cloudinary_url include.cloudinary_src width=img_width crop='limit' quality='auto' dpr='2.0' format='auto' %}
         {%- endif -%}
@@ -17,7 +19,7 @@
         {{ include.src }}
     {%- endif -%}"
 
-    srcset="{%- if include.cloudinary_src and include.format != 'gif' -%}
+    srcset="{%- if include.cloudinary_src and include.format != 'gif' and include.format != 'svg' -%}
         {% cloudinary_url include.cloudinary_src width='480' crop='limit' quality='auto' format='auto' %} 480w,
         {% cloudinary_url include.cloudinary_src width='640' crop='limit' quality='auto' format='auto' %} 640w,
         {% cloudinary_url include.cloudinary_src width='1290' crop='limit' quality='auto' format='auto' %} 1290w,

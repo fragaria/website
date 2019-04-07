@@ -332,6 +332,7 @@ b) Put significant effort to make your website stand out
 Since you’ve read all the way down to conclusion, I bet you might like the option two a bit more.
 
 And in case you enjoyed the article, stay tuned for the next part of *Building a simple
-company website the Hard Way* series. We’ll shed some light on Web Workers.
+company website the Hard Way* series. We’ll shed some light on [Service workers][2].
 
 [1]: /blog/2018/09/03/building-a-simple-company-website-the-hard-way-typography-intro/
+[2]: /blog/2019/04/05/building-a-simple-company-website-the-hard-way-service-workers/

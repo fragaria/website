@@ -130,7 +130,7 @@ if ("serviceWorker" in navigator) {
 </script>
 ```
 
-Once this snipped is run, registration is finished. Browser takes over and
+Once this snippet is run, registration is finished. Browser takes over and
 starts the script in the background, proceeding to the installation stage.
 
 ### Pre-loading content
@@ -185,7 +185,7 @@ static assets, last 10 blog posts and few other important pages.
 Next, we register the handler for the `install` event. As a result,
 `precache` is executed which adds all the assets to the SW cache. Caches are
 automatically available for every SW as the `caches` global object and they are clever enough
-to know how load URLs. Naturally, this will result in bunch of network
+to know how to load URLs. Naturally, this will result in bunch of network
 requests made by the browser.
 
 Before caching starts we also call `self.skipWaiting` method to ensure our new
@@ -198,7 +198,7 @@ to finish by using `event.waitUntil`.
 
 ### Network proxying
 
-When the SW is activated, it can start proxing network requests. This will allow
+When the SW is activated, it can start proxying network requests. This will allow
 us to make our page work offline. In order to do so, we need to add another handler,
 this time for `fetch` browser event. `fetch` is called whenever a request to
 our server is made by the browser. We can hijack it and make it return cached
@@ -295,11 +295,11 @@ Another nice benefit of implementing a service worker is ability to suggest your
 visitors add a shortcut on their phone homescreen for your website. It will
 look just like any other mobile application launch button and will open in a
 webview automatically. It’s a first step towards making your website work
-like a *Progressive Web App*. You need to meet few more requirements though:
+like a *Progressive Web App*. You need to meet a few more requirements though:
 
 - Your page has to be *served using HTTPS*. But you do that already anyway, don’t
   you?
-- You need to *prepare the icon* for the app shortcut. Usually, you’re site logo
+- You need to *prepare the icon* for the app shortcut. Usually, your site logo
   will do just fine.
 - You have to provide a *manifest file*. The easiest way to create it is using
   some online generator, like [this one](https://app-manifest.firebaseapp.com/).
@@ -311,9 +311,9 @@ suggest visitors option to add shortcut automatically.
 
 ## Conclusions
 
-It a brief example, we’ve demonstrated how you can use service workers to
+In a brief example, we’ve demonstrated how you can use service workers to
 improve the overall user experience especially on mobile devices. In a real world
-scenario, we would need to add few more moving parts like syncing up the caches
+scenario, we would need to add a few more moving parts like syncing up the caches
 in the background (when new content comes up) but hopefully we’ve at least gave
 you a little headstart. *Progessive Web Apps* are way to go these days and
 running a service worker is one of key requirements to make your app a

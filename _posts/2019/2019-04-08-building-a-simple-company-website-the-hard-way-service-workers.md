@@ -292,8 +292,8 @@ during installation stage.
 ## Homescreen link to your page
 
 Another nice benefit of implementing a service worker is ability to suggest your
-visitors add a shortcut on their phone homescreen for your website. It will
-look just like any other mobile application launch button and will open in a
+visitors adding a shortcut on their phone homescreen to your website. It will
+look just like any other mobile application launch button and open in a
 webview automatically. It’s a first step towards making your website work
 like a *Progressive Web App*. You need to meet a few more requirements though:
 

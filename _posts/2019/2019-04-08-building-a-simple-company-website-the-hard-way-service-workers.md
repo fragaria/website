@@ -62,7 +62,7 @@ visitor’s network connection is down.
 How is that possible? It's because SW script can act like *a network proxy*. It
 can intercept every request the browser makes to the server. This means you can
 modify the response (either forge one, or use a cached one) and avoid hitting
-the server at all. You can fill up the caches by preloading the content when SW
+the server completely. You can fill up the caches by preloading the content when SW
 script is being installed. This enables you to make your website blazing fast if
 you can anticipate next clicks of your users, too.
 

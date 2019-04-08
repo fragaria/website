@@ -335,4 +335,4 @@ And in case you enjoyed the article, stay tuned for the next part of *Building a
 company website the Hard Way* series. We’ll shed some light on [Service workers][2].
 
 [1]: /blog/2018/09/03/building-a-simple-company-website-the-hard-way-typography-intro/
-[2]: /blog/2019/04/05/building-a-simple-company-website-the-hard-way-service-workers/
+[2]: /blog/2019/04/08/building-a-simple-company-website-the-hard-way-service-workers/

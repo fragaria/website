@@ -14,7 +14,7 @@ cloudinary_src: posts/PIXNIO-227587-5372x3586_khjell
 
 Hi there once again! I’m gonna close our little *Building a simple company
 website the Hard Way* series with a brief introduction to how service workers
-operate and why you should want them on your website too. They’re cool and
+operate and why you should want them on your website, too. They’re cool and
 fancy, sometimes unnecessary, but likely still worth your time as I’m about to
 demonstrate.
 
@@ -32,37 +32,37 @@ demonstrate.
 
 
 Service workers are little JavaScript worker scripts that run in the
-background. Besides registering it, they are completely managed by
-the browser. Their life is not limited to the time you directly interact with
-the related website: they’re kinda alive even if you’re not using the site.
+background. Besides their registration, they are completely managed by
+the browser. Their execution is not limited to the time you directly interact with
+the related website: *they’re kinda alive even if you’re not using the site*.
 
-They allow you to do some interesting stuff including:
+As a result, they allow you to do some interesting stuff including:
 
 - support offline use of your pages
-- make push notifications for new content on your site
+- trigger push notifications for new content on your site
 - synchronize cached data for offline use in the background
-- promote adding of home screen link to your page on mobile devices
+- promote addition of home screen link to your page on mobile devices
 
 For the sake of this article, we will focus on offline experience as it’s the
 most important feature for company portfolio websites.
 
 Huge number of content viewers visit your page using their cellphones these
-days. As a result your visitors frequently go offline temporarily as mobile
+days. As a result, your visitors frequently go offline temporarily as mobile
 networks are generally unrealiable.
 
 ## Saving the offline situation
 
 Network connection hanging out in the middle of browsing often results in visitor
-simply quitting the website right away. This includes even situations when
+simply quitting right away. This includes even situations when
 interruptions are to be expected: like during your descent down to the subway.
 Service workers can be used to mitigate such risk as they allow you to keep
 your website functional&mdash;albeit just partially&mdash;even while the
 visitor’s network connection is down.
 
-How is that possible? It's because SW script can act like *a network proxy*. It
+How’s that possible? It's because SW script can act like *a network proxy*. It
 can intercept every request the browser makes to the server. This means you can
 modify the response (either forge one, or use a cached one) and avoid hitting
-the server completely. You can fill up the caches by preloading the content when SW
+the server completely. You can fill up the caches by pre-loading the content when SW
 script is being installed. This enables you to make your website blazing fast if
 you can anticipate next clicks of your users, too.
 
@@ -98,7 +98,7 @@ along the way.
 Particularly important is the condition when new SW get installed. By
 definition, this happens when service worker file *gets changed*. Ultimately, it
 means new SW is installed once the size of the current SW script is different
-from the new one&mdash;bytewise. Unfortunately, the exact process is a little
+from the new one&mdash;*bytewise*. Unfortunately, the exact process is little
 counterintuitive. Old SW is not replaced immediately after new SW is detected,
 but once the user leaves the page. This means closing it, not just refreshing.
 Weird? Yes but fortunately fixable. We can avoid default behavior by calling

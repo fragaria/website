@@ -11,7 +11,7 @@ tags:
 - sass
 - css
 - fonts
-modified_time: 2018-09-03T14:00:00.000+01:00
+modified_time: 2019-04-08T09:00:00.000+02:00
 cloudinary_src: posts/2018-11-12-building-a-simple-company-website-the-hard-way-vertical-rythm__6_msthpg
 ---
 

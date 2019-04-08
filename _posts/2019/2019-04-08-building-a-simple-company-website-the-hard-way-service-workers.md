@@ -41,7 +41,7 @@ They allow you to do some interesting stuff including:
 - support offline use of your pages
 - make push notifications for new content on your site
 - synchronize cached data for offline use in the background
-- suggest addition of home screen link to your page on user mobile devices
+- promote adding of home screen link to your page on mobile devices
 
 For the sake of this article, we will focus on offline experience as it’s the
 most important feature for company portfolio websites.
@@ -291,8 +291,8 @@ during installation stage.
 
 ## Homescreen link to your page
 
-Another nice benefit of implementing a service worker is ability to suggest your
-visitors adding a shortcut on their phone homescreen to your website. It will
+Another nice benefit of implementing a service worker is ability to prompt your
+visitors to add a website shortcut on their phone homescreen. It will
 look just like any other mobile application launch button and open in a
 webview automatically. It’s a first step towards making your website work
 like a *Progressive Web App*. You need to meet a few more requirements though:
@@ -305,7 +305,7 @@ like a *Progressive Web App*. You need to meet a few more requirements though:
   some online generator, like [this one](https://app-manifest.firebaseapp.com/).
 
 Once you’ve accomplished all of these tasks and have a working SW, Chrome will
-suggest visitors option to add shortcut automatically.
+prompt visitors to add shortcut automatically.
 
 {% include figure.html cloudinary_src='posts/Screenshot_2019-04-07-14-23-47-738_com.android.chrome_q0rwob' caption='Google Chrome suggests adding a home screen shortcut.' %}
 

@@ -70,17 +70,17 @@ A typical scenario how offline support implementation looks like is following:
 
 1. Assemble a **list of assets to load automatically** when visitor hits your
    site. This should include the content that is most likely to be required
-   in near future. It can be any content you can think of: page documents, images,
+   in near future. It can be anything you can think of: page documents, images,
    scripts, videos. Anything you want. Just make sure you’re *not too greedy*
-   about the data transfer. Remember: we do this for mobile devices where data
+   about the data transfer. Remember: we do this for mobile devices where extensive data
    transfer can be costly.
-2. Upon service worker installation, **preload these assets** and store them in
+2. Upon service worker installation, **pre-load these assets** and store them in
    service worker cache.
 3. Use service worker to **proxy network requests**. Impose a timeout to load
    the content from the real server. If the server doesn’t make it on time,
    offer the cached version instead.
 4. If both network and caches fail (e.g. when hitting something that wasn’t
-   preloaded), serve some kind of „*You’re offline*“ page so that the visitor
+   pre-loaded), serve some kind of „*You’re offline*“ page so that the visitor
    knows what happend. This improves the general user experience.
 
 ## Using service workers
@@ -90,7 +90,7 @@ potiential mistakes. Have a look at following diagram:
 
 {% include figure.html cloudinary_src='posts/sw-lifecycle_t6dh0u' format='svg' caption='Service worker lifecycle.' %}
 
-After you’ve registed the SW, browser will run its installation stage. Next,
+After you’ve registered the SW, browser will run its installation stage. Next,
 the SW gets activated and it starts working as our network proxy. It will stay
 activated until it’s replaced by a new SW script or in case it fails somewhere
 along the way.
@@ -136,7 +136,7 @@ starts the script in the background, proceeding to the installation stage.
 ### Pre-loading content
 
 Installation stage is there to prepare the SW for its real job. In our case, we
-want to use it as a network proxy. This is the right time to preload our content
+want to use it as a network proxy. This is the right time to pre-load our content
 and fill up the caches. It’s rather straightforward:
 
 ```javascript
@@ -174,12 +174,12 @@ self.addEventListener('install', function(event) {
     console.log(`[sw] Installing ...`);
     // Make sure not to get stuck waiting for the current to become terminated.
     self.skipWaiting();
-    // Perform preloading of cached content.
+    // Perform pre-loading of cached content.
     event.waitUntil(precache());
 });
 ```
 
-Ultimately, we need a list of URLs to preload. Cache will contain some critical
+Ultimately, we need a list of URLs to pre-load. Cache will contain some critical
 static assets, last 10 blog posts and few other important pages.
 
 Next, we register the handler for the `install` event. As a result,
@@ -188,13 +188,12 @@ automatically available for every SW as the `caches` global object and they are 
 to know how to load URLs. Naturally, this will result in bunch of network
 requests made by the browser.
 
-Before caching starts we also call `self.skipWaiting` method to ensure our new
+Before caching starts we also call `self.skipWaiting()` method to ensure our new
 worker gets activated once install is finished. If we didn’t call it, old SW would be
 replaced *after* user leaves the page which is not desirable.
 
 Please note that `event` is promise-aware so we can make it wait for `precache`
 to finish by using `event.waitUntil`.
-
 
 ### Network proxying
 
@@ -259,7 +258,7 @@ self.addEventListener('fetch', event => {
 
 ### Offline pages
 
-In order to show user a nice offline page, we need to improve our `loadPipe`
+In order to show user a nice offline page, we gotta improve our `loadPipe`
 pipeline. Specifically, we need to handle the case when cached version of the
 page is *unavailable*:
 
@@ -292,7 +291,7 @@ during installation stage.
 ## Homescreen link to your page
 
 Another nice benefit of implementing a service worker is ability to prompt your
-visitors to add a website shortcut on their phone homescreen. It will
+visitors to add a website shortcut on their phone homescreens. It will
 look just like any other mobile application launch button and open in a
 webview automatically. It’s a first step towards making your website work
 like a *Progressive Web App*. You need to meet a few more requirements though:
@@ -312,7 +311,7 @@ prompt visitors to add shortcut automatically.
 ## Conclusions
 
 In a brief example, we’ve demonstrated how you can use service workers to
-improve the overall user experience especially on mobile devices. In a real world
+improve the overall user experience&mdash;especially on mobile devices. In a real world
 scenario, we would need to add a few more moving parts like syncing up the caches
 in the background (when new content comes up) but hopefully we’ve at least gave
 you a little headstart. *Progessive Web Apps* are way to go these days and

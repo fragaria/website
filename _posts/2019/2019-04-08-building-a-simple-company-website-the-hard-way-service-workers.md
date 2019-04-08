@@ -13,7 +13,7 @@ cloudinary_src: posts/PIXNIO-227587-5372x3586_khjell
 ---
 
 Hi there once again! I’m gonna close our little *Building a simple company
-website th Hard Way* series with a brief introduction to how service workers
+website the Hard Way* series with a brief introduction to how service workers
 operate and why you should want them on your website too. They’re cool and
 fancy, sometimes unnecessary, but likely still worth your time as I’m about to
 demonstrate.

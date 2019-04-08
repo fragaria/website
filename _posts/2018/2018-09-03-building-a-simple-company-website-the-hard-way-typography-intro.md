@@ -9,7 +9,7 @@ tags:
 - sass
 - css
 - fonts
-modified_time: 2018-09-03T10:00:00.000+01:00
+modified_time: 2019-04-08T09:00:00.000+02:00
 cloudinary_src: posts/2018-09-03-building-a-simple-company-website-the-hard-way-typography__2_se31j8
 ---
 
@@ -26,6 +26,7 @@ you how to approach it.
 <ol>
     <li>Typography introduction</li>
     <li><a href="/blog/2018/11/12/building-a-simple-company-website-the-hard-way-vertical-rhythm/">Vertical rhythm</a></li>
+    <li><a href="/blog/2019/04/08/building-a-simple-company-website-the-hard-way-service-workers/">Service workers</a></li>
 </ol>
 </section>
 

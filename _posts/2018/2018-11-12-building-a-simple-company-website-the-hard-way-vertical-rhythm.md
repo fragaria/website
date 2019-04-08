@@ -27,6 +27,7 @@ it on bigger websites becomes challenging. But challenges are fun, aren't they? 
 <ol>
     <li><a href="/blog/2018/09/03/building-a-simple-company-website-the-hard-way-typography-intro/">Typography introduction</a></li>
     <li>Vertical rhythm</li>
+    <li><a href="/blog/2019/04/08/building-a-simple-company-website-the-hard-way-service-workers/">Service workers</a></li>
 </ol>
 </section>
 

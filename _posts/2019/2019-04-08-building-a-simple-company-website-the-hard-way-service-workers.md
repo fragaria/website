@@ -307,7 +307,7 @@ like a *Progressive Web App*. You need to meet few more requirements though:
 Once you’ve accomplished all of these tasks and have a working SW, Chrome will
 suggest visitors option to add shortcut automatically.
 
-{% include figure.html cloudinary_src='posts/Screenshot_2019-04-07-14-23-47-738_com.android.chrome_q0rwob' caption='Google Chrome suggests adding home screen shortcut.' %}
+{% include figure.html cloudinary_src='posts/Screenshot_2019-04-07-14-23-47-738_com.android.chrome_q0rwob' caption='Google Chrome suggests adding a home screen shortcut.' %}
 
 ## Conclusions
 

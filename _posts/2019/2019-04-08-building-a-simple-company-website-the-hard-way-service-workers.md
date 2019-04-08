@@ -12,7 +12,7 @@ modified_time: 2019-04-08T09:00:00.000+02:00
 cloudinary_src: posts/PIXNIO-227587-5372x3586_khjell
 ---
 
-Hi there once again! I’m gonna close our litte *Building a simple company
+Hi there once again! I’m gonna close our little *Building a simple company
 website th Hard Way* series with a brief introduction to how service workers
 operate and why you should want them on your website too. They’re cool and
 fancy, sometimes unnecessary, but likely still worth your time as I’m about to

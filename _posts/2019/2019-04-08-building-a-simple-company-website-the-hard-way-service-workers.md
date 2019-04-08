@@ -90,7 +90,7 @@ potiential mistakes. Have a look at following diagram:
 
 {% include figure.html cloudinary_src='posts/sw-lifecycle_t6dh0u' format='svg' caption='Service worker lifecycle.' %}
 
-After you’ve registed the SW, browser will run it’s installation stage. Next,
+After you’ve registed the SW, browser will run its installation stage. Next,
 the SW gets activated and it starts working as our network proxy. It will stay
 activated until it’s replaced by a new SW script or in case it fails somewhere
 along the way.
@@ -135,7 +135,7 @@ starts the script in the background, proceeding to the installation stage.
 
 ### Pre-loading content
 
-Installation stage is there to prepare the SW for it’s real job. In our case, we
+Installation stage is there to prepare the SW for its real job. In our case, we
 want to use it as a network proxy. This is the right time to preload our content
 and fill up the caches. It’s rather straightforward:
 

@@ -14,7 +14,7 @@
                     <img class="portfolio-project__image" src="{% cloudinary_url project.img crop='fit' height='128' width='128' format='png' quality='auto' dpr='2.0' %}" alt="{{ project.title }}">
                 </div>
 
-                <h1 class="portfolio-project__headline">{{ project.title }}</h1>
+                <h1 class="portfolio-project__headline" id="{{project.anchor}}">{{ project.title }}</h1>
                 <p class="portfolio-project__subtitle">
                     {{ project.challenge }}{% if project.website %},
                         <a class="anchor anchor--emphasized" href="{{ project.website.href }}">{{ project.website.caption }}</a>
@@ -34,4 +34,3 @@
         <span class="button js-portfolio-strip__expand-toggle" role="button" aria-controls="js-portfolio-strip" aria-expanded="false">Show more</span>
     </div>
 </div>
-

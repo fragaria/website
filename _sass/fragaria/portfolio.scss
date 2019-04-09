@@ -66,7 +66,7 @@ $portfolio-project-media-width: (
     }
 
     .portfolio-project__headline {
-        @include baseline(gamma, $headingtype, $below: 1);
+        @include baseline(gamma, $headingtype, $below: 1, $above: 1, $anchor: true);
     }
 
     .portfolio-project__media {

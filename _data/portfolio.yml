@@ -1,16 +1,3 @@
-- title: Democracy 21 (D21)
-  challenge: Delivering an e-voting app for civic participation
-  desc: >
-    Delivering an e-voting application is nothing simple: security, scalability and reliability cannot accept any compromises. We were privileged to be hired as the sole tech supplier for D21&mdash;a civic participation and decision-making online platform (from January&nbsp;2015 until June&nbsp;2018). Citizens of Říčany regularly use D21 to decide on how to <a class="anchor anchor--emphasized" href="http://www.ridimricany.cz/" target="_blank" rel="noopener">spend 5 million CZK</a> from the city budget, as well as the citizens in <a class="anchor anchor--emphasized" href="/blog/2016/05/11/jak-jsme-pocitali-new-york-aneb-aws/">NYC with their $30 million budget</a>. Our experts successfully kicked-off the project for a sustainable future development.
-  img: portfolio/d21.png
-  tags:
-    - angular
-    - nodejs
-    - mongodb
-    - aws
-  website:
-    href: https://d21.me
-    caption: d21.me
 - title: Winding Tree
   challenge: Disrupting the travel industry with blockchain
   desc: >
@@ -25,15 +12,28 @@
   website:
     href: https://windingtree.com/
     caption: windingtree.com
-- title: Logman
-  challenge: Scaling bank logs to make life easy
+- title: Kiwi.com
+  challenge: Kiwi.com makes travel better for everyone and Fragaria is here to help them out
   desc: >
-    Logman is the <i>central logging facility</i> in Komerční banka (Société Générale Group member). It’s not just a log storage though, it also makes browsing the logs a breeze as they can be looked up and visualized in <a class="anchor anchor--emphasized" href="https://www.elastic.co/products/kibana" target="_blank" rel="noopener">Kibana</a> (along with all the necessary details like comprehensive permissions setup). Given the large volume; scaling using <a href="https://kubernetes.io/" class="anchor anchor--emphasized" target="_blank" rel="noopener">Kubernetes</a> is a no-brainer. Our team has come up with a solution complex enough to accommodate dozens of internal systems with varying requirements, yet without sacrificing long-term maintainability.
-  img: portfolio/elasticsearch.png
+    We have become an IT solutions supplier for one of the most successful domestic <a href="https://www.forbes.cz/startup-roku-2018-prvenstvi-obhajilo-kiwi-na-druhem-miste-je-prekvapeni/" class="anchor anchor--emphasized" target="_blank" rel="noopener">startups</a>. Together, we cooperate on development of several smaller projects. Besides the development itself, our contribution comes in the project leadership: we work in an agile way and regularly integrate the product increments into the existing infrastructure. This way, everyone can see the projects moving forward which leads to mutual satisfaction.
+  img: portfolio/kiwi.png
   tags:
-    - elasticsearch
-    - kibana
-    - java
+    - javascript
+    - python
+    - rest
+    - agile
+  website:
+    href: https://kiwi.com
+    caption: Kiwi.com
+- title: Fast
+  challenge: Re-writing frontend strategy
+  desc: >
+    Since we have lengthy experience with frontend development, we’ve assisted with creating the whole frontend development strategy for new web apps (both internal and external) made by Komerční banka (Société Générale Group member). We’ve succeeded and helped the bank update their tech stack to face the increasing demand for modern interactive web apps.
+  img: portfolio/fast.png
+  tags:
+    - angular
+    - typescript
+    - bootstrap
   website:
     href: https://www.kb.cz
     caption: kb.cz
@@ -48,19 +48,31 @@
   website:
     href: https://www.csas.cz/cs/osobni-finance/moje-zdrave-finance
     caption: product website
-- title: Prezident 21
-  challenge: Creating a new and innovative voting game with 3 million visitors
+- title: Democracy 21 (D21)
+  challenge: Delivering an e-voting app for civic participation
   desc: >
-    As a part of our long-term partnership with Democracy 21 (D21)&mdash;see above, we participated in creation of the internet game&mdash;<a href="https://www.prezident21.cz/" class="anchor anchor--emphasized" target="_blank" rel="noopener">Prezident 21</a>&mdash;which hit the public big time during 2017&ndash;2018. This pre-election game was a supplement to the real presidency vote in 2018 and demonstrated how the vote would have ended if people could have used the D21 voting method. Contrary to the current voting method, D21 is not limited to a single vote only. Instead, it allows for multiple plus votes and optionally, also minus votes. Our complete solution included a robust infrastructure setup to handle peak times during various offline and online marketing activities. The site had hit <i>3&nbsp;million visitors</i> throughout its lifetime.
-  img: portfolio/p21.png
+    Delivering an e-voting application is nothing simple: security, scalability and reliability cannot accept any compromises. We were privileged to be hired as the sole tech supplier for D21&mdash;a civic participation and decision-making online platform (from January&nbsp;2015 until June&nbsp;2018). Citizens of Říčany regularly use D21 to decide on how to <a class="anchor anchor--emphasized" href="http://www.ridimricany.cz/" target="_blank" rel="noopener">spend 5 million CZK</a> from the city budget, as well as the citizens in <a class="anchor anchor--emphasized" href="/blog/2016/05/11/jak-jsme-pocitali-new-york-aneb-aws/">NYC with their $30 million budget</a>. Our experts successfully kicked-off the project for a sustainable future development.
+  img: portfolio/d21.png
   tags:
     - angular
     - nodejs
     - mongodb
     - aws
   website:
-    href: https://www.ifd21.org/prezident-21
-    caption: ifd21.org
+    href: https://d21.me
+    caption: d21.me
+- title: Logman
+  challenge: Scaling bank logs to make life easy
+  desc: >
+    Logman is the <i>central logging facility</i> in Komerční banka (Société Générale Group member). It’s not just a log storage though, it also makes browsing the logs a breeze as they can be looked up and visualized in <a class="anchor anchor--emphasized" href="https://www.elastic.co/products/kibana" target="_blank" rel="noopener">Kibana</a> (along with all the necessary details like comprehensive permissions setup). Given the large volume; scaling using <a href="https://kubernetes.io/" class="anchor anchor--emphasized" target="_blank" rel="noopener">Kubernetes</a> is a no-brainer. Our team has come up with a solution complex enough to accommodate dozens of internal systems with varying requirements, yet without sacrificing long-term maintainability.
+  img: portfolio/elasticsearch.png
+  tags:
+    - elasticsearch
+    - kibana
+    - java
+  website:
+    href: https://www.kb.cz
+    caption: kb.cz
 - title: Adventura.cz and Chinatours.cz
   challenge: Tech solution and design for the Czech travel industry
   desc: >
@@ -74,19 +86,20 @@
   website:
     href: https://www.adventura.cz
     caption: adventura.cz
-- title: Fast
-  challenge: Re-writing frontend strategy
+- title: Prezident 21
+  challenge: Creating a new and innovative voting game with 3 million visitors
   desc: >
-    Since we have lengthy experience with frontend development, we’ve assisted with creating the whole frontend development strategy for new web apps (both internal and external) made by Komerční banka (Société Générale Group member). We’ve succeeded and helped the bank update their tech stack to face the increasing demand for modern interactive web apps.
-  img: portfolio/fast.png
+    As a part of our long-term partnership with Democracy 21 (D21)&mdash;see above, we participated in creation of the internet game&mdash;<a href="https://www.prezident21.cz/" class="anchor anchor--emphasized" target="_blank" rel="noopener">Prezident 21</a>&mdash;which hit the public big time during 2017&ndash;2018. This pre-election game was a supplement to the real presidency vote in 2018 and demonstrated how the vote would have ended if people could have used the D21 voting method. Contrary to the current voting method, D21 is not limited to a single vote only. Instead, it allows for multiple plus votes and optionally, also minus votes. Our complete solution included a robust infrastructure setup to handle peak times during various offline and online marketing activities. The site had hit <i>3&nbsp;million visitors</i> throughout its lifetime.
+  img: portfolio/p21.png
   tags:
     - angular
-    - typescript
-    - bootstrap
+    - nodejs
+    - mongodb
+    - aws
   website:
-    href: https://www.kb.cz
-    caption: kb.cz
-# - title: Saifu&mdash;mobile wallet of Česká spořitelna
+    href: https://www.ifd21.org/prezident-21
+    caption: ifd21.org
+    # - title: Saifu&mdash;mobile wallet of Česká spořitelna
 #   desc: >
 #     We’re participating in development of a <i>mobile payments electronic wallet</i> for Česká spořitelna (Erste Group member). We are working on the server-side solution, mobile application and we were collaborating on the concept of plugins, which will enable rapid prototyping and testing of new functionality.
 #   img: portfolio/saifu.png

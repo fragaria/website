@@ -18,7 +18,7 @@ cloudinary_src: posts/kouzlo-malych-projektu-hero_n5emzb
 ---
 
 Měsíce nebo roky vyvíjet nějaký velký propracovaný systém je zábava a tak. Když se ale
-zpětně ohlédnu na všechny své projekty, tak mi až překvapivě velkou radost udělali i
+zpětně ohlédnu na všechny své projekty, tak mi až překvapivě velkou radost udělaly i
 drobnosti, jejichž vytvoření zabralo jednotky hodin. V článku se vám pochlubím svým TOP 3
 žebříčkem.
 

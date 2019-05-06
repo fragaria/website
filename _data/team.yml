@@ -125,7 +125,7 @@
   gender: male
   avatar:
     src: cloudinary
-    cloudinary: people/michal-hotovec.jpg
+    cloudinary: posts/michal-hotovec_pbrpgh.jpg
   profiles:
     twitter: mhotovec
     linkedin: michalhotovec

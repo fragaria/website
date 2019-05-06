@@ -18,17 +18,6 @@
     github: martinbilek
     twitter: ajtea
     linkedin: martin-b%C3%ADlek-47699542
-- name: Lukáš Marek
-  alt: Digital baldy
-  nationality: Czech
-  gender: male
-  avatar:
-    src: gravatar
-  profiles:
-    gravatar: lukas.marek@fragaria.cz
-    github: krtek
-    twitter: krtek_cz
-    linkedin: krtek
 - name: Robin Gottfried
   alt: Charmer
   nationality: Czech
@@ -94,15 +83,6 @@
     github: xtursky
     twitter: xtursky
     linkedin: lukas-tursky-79584247
-- name: Milan Slezák
-  alt: Mr. Android
-  nationality: Czech
-  gender: male
-  avatar:
-    src: cloudinary
-    cloudinary: people/milan-slezak.jpg
-  profiles:
-    linkedin: slezakm
 - name: Michal Dub
   alt: Artefact
   nationality: Czech
@@ -129,16 +109,6 @@
     cloudinary: people/daniela-borosova.jpg
   profiles:
     linkedin: daniela-boro%C5%A1ov%C3%A1-1521833b
-- name: Kamil Daněk
-  alt: Ex&ndash;scientist
-  nationality: Czech
-  gender: male
-  avatar:
-    src: cloudinary
-    cloudinary: people/kamil-danek.jpg
-  profiles:
-    github: kdanek
-    linkedin: kamil-danek-12414652
 - name: Adam David
   alt: Noncommuter
   nationality: Czech
@@ -149,16 +119,16 @@
   profiles:
     gravatar: adam.david@fragaria.cz
     github: adamdavidcz
-- name: Ondřej Pudiš
+- name: Michal Hotovec
   alt: Youngblood
   nationality: Czech
   gender: male
   avatar:
     src: cloudinary
-    cloudinary: people/ondrej-pudis.jpg
+    cloudinary: people/michal-hotovec.jpg
   profiles:
-    github: ondrejpudis
-    linkedin: pudisond
+    twitter: mhotovec
+    linkedin: michalhotovec
 - name: Marta Vaňková
   alt: Psyche
   nationality: Czech

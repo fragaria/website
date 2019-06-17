@@ -129,6 +129,15 @@
   profiles:
     twitter: mhotovec
     linkedin: michalhotovec
+- name: Michal Maněna
+  alt: Micman
+  nationality: Czech
+  gender: male
+  avatar:
+    src: linkedin
+  profiles:
+    facebook: michal.manena
+    linkedin: michalmanena
 - name: Marta Vaňková
   alt: Psyche
   nationality: Czech

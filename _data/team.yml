@@ -134,7 +134,8 @@
   nationality: Czech
   gender: male
   avatar:
-    src: linkedin
+    src: cloudinary
+    cloudinary: posts/michalmanena_cixuvl.jpg
   profiles:
     facebook: michal.manena
     linkedin: michalmanena

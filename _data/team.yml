@@ -139,6 +139,14 @@
   profiles:
     facebook: michal.manena
     linkedin: michalmanena
+- name: Michal Martinek
+  alt: Do-gooder
+  nationality: Czech
+  gender: male
+  avatar:
+    src: github
+  profiles:
+    github: MichalMartinek
 - name: Marta Vaňková
   alt: Psyche
   nationality: Czech
@@ -147,12 +155,3 @@
     src: cloudinary
     cloudinary: people/marta-vankova-face.jpg
   profiles:
-- name: Michal Martinek
-  alt: Do-gooder
-  nationality: Czech
-  gender: male
-  avatar:
-    src: cloudinary
-    cloudinary: posts/michalmanena_cixuvl.jpg
-  profiles:
-    github: MichalMartinek

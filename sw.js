@@ -7,7 +7,7 @@ urls.push("/assets/favicons/android-chrome-192x192.png");urls.push("/assets/favi
 urls.push("/blog/2019/04/08/building-a-simple-company-website-the-hard-way-service-workers/");urls.push("/blog/2019/03/29/kouzlo-malych-projektu/");urls.push("/blog/2019/02/05/runtime-configuration-in-web-applications/");urls.push("/blog/2018/11/12/building-a-simple-company-website-the-hard-way-vertical-rhythm/");urls.push("/blog/2018/09/03/building-a-simple-company-website-the-hard-way-typography-intro/");urls.push("/blog/2018/07/25/spehujeme-pouzivatelov-na-nasich-strankach/");urls.push("/blog/2018/03/28/blockchain-can-do/");urls.push("/blog/2018/02/14/idealni-bezdratova-sluchatka-spunty/");urls.push("/blog/2018/02/05/mapujeme-adresy-do-ceskych-kraju/");urls.push("/blog/2018/01/23/vybirame-bezdratova-sluchatka-uvod/");
 
 // Cache pages
-urls.push("/404.html");urls.push("/work-with-us/");urls.push("/solutions/");urls.push("/blog/");urls.push("/");urls.push("/offline/");
+urls.push("/404.html");urls.push("/solutions/");urls.push("/work-with-us/");urls.push("/blog/");urls.push("/");urls.push("/offline/");
 
 
 // Cache name: adjust version number to invalidate service worker cache.

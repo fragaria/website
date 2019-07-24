@@ -147,3 +147,12 @@
     src: cloudinary
     cloudinary: people/marta-vankova-face.jpg
   profiles:
+- name: Michal Martinek
+  alt: Do-gooder
+  nationality: Czech
+  gender: male
+  avatar:
+    src: cloudinary
+    cloudinary: posts/michalmanena_cixuvl.jpg
+  profiles:
+    github: MichalMartinek

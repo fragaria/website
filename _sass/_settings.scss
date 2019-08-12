@@ -23,11 +23,6 @@ $brands: (
         alt: #fff,
         icon: $icon--twitter,
     ),
-    gplus: (
-        main: #dd4b39,
-        alt: #fff,
-        icon: $icon--gplus,
-    ),
     linkedin: (
         main: #0077b5,
         alt: #fff,
@@ -91,11 +86,6 @@ $sharebox-variants: (
         foreground: getBrandInfo(twitter, alt),
         background:getBrandInfo(twitter, main),
         icon: getBrandInfo(twitter, icon),
-    ),
-    gplus: (
-        foreground: getBrandInfo(gplus, alt),
-        background:getBrandInfo(gplus, main),
-        icon: getBrandInfo(gplus, icon),
     ),
 );
 

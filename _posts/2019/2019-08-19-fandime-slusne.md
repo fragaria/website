@@ -29,7 +29,7 @@ Určitou paralelu s PHP vidím i v Javascriptu, od kterého paradoxně ostatní 
 Realita je ale taková, že se dnes jedná o jedny z nejpoužívanějších jazků pro webové aplikace. 
 Trh technologií se tím diverzifikoval a vývojáři si na základě svých zkušeností vybrali obvykle jeden framework, který byli ochotni do krve bránit a z modernistů se pak stávali fundamentálové neochotni zkoumat výhody konkurenčních technologií. 
 Kolegové, přiznejme si to - i my podléháme něčemu, čemu se říká technologický marketing a firmy jsou motivovány podporovat tu či onu technologii v rámci zachování a rozvoje pracovní síly, kterou potřebují. 
-A upřímě - kdo z vás dělá v ASP, MooTools, Flash a další? Ohledně Flashe: 
+A upřímně - kdo z vás dělá v ASP, MooTools, Flash a další? Ohledně Flashe: 
 Pamatujete si tu poptávku po ultra moderním hýbajícím se webu ve Flashi a ulpívání na něm?
 
 # Metodiky
@@ -41,7 +41,7 @@ Odskočme si mimo samotné programování. Během posledních deseti let vznikly
 * Acceptance test driven development
 * Feature driven development
 
-Všechny výše uvedené mají důraz na nějakou doménu ve vývoji software a jakmile se podaří nějaký projekt dokončit s použitím některé z výše uvedeného přístupu, často spadneme do psychologické pasti, že daný způsob je vhodný pro jakýkoliv projekt.
+Všechny výše uvedené mají důraz na nějakou doménu ve vývoji software a jakmile se podaří nějaký projekt dokončit s použitím některého z výše uvedeného přístupu, často spadneme do psychologické pasti, že daný způsob je vhodný pro jakýkoliv projekt.
 Podobně je to i s volbou technologického stacku.
 Náročnost celého oboru pak vede fundamentalismu převážně řídících pracovníků, nicméně specialistů nevyjímaje. 
 Nemají ani moc na výběr. Je těžké nespadnout do psychologické pasti, protože nadřízení pracovníci požadují pro svá manažerská rozhodnutí podklady a vývojoví manažeři se musí něčeho chytit, zvláště pokud jsou méně zkušení.

@@ -4,6 +4,7 @@ title: Fandíme slušně!
 date: 2019-08-19T09:00:00.000+02:00
 author: Michal Maněna
 lang: cz
+cloudinary_src: posts/football-1350720_1920_eracx5
 tags:
 - TDD
 - BDD
@@ -15,6 +16,8 @@ Sparta, nebo Slávie? A nebo Bohemka? Každý člověk má určité preference a
 Od politiky, přes ženy (muže) po fotbal. My vývojáři jsme trochu odlišní “pacienti”.
 Preferujeme různé technologie a metodiky. A stejně jako u jiných koníčků do toho více či méně dáváme emoce.
 V tomto článku se zamýšlím nad profesním fundamentalismem, se kterým se stále setkávám po 15 let praxe v oboru.
+
+{% include figure.html cloudinary_src='posts/football-1350720_1920_eracx5' sizing='wide' %}
 
 ## Multidisciplinární obor
 
@@ -29,8 +32,7 @@ Určitou paralelu s PHP vidím i v Javascriptu, od kterého paradoxně ostatní 
 Realita je ale taková, že se dnes jedná o jedny z nejpoužívanějších jazků pro webové aplikace.
 Trh technologií se tím diverzifikoval a vývojáři si na základě svých zkušeností vybrali obvykle jeden framework, který byli ochotni do krve bránit a z modernistů se pak stávali fundamentálové neochotni zkoumat výhody konkurenčních technologií.
 Kolegové, přiznejme si to - i my podléháme něčemu, čemu se říká technologický marketing a firmy jsou motivovány podporovat tu či onu technologii v rámci zachování a rozvoje pracovní síly, kterou potřebují.
-A upřímně - kdo z vás dělá v ASP, MooTools, Flash a další? Ohledně Flashe:
-Pamatujete si tu poptávku po ultra moderním hýbajícím se webu ve Flashi a ulpívání na něm?
+A upřímně - kdo z vás dělá v ASP, MooTools, Flash a další? Ohledně Flashe: Pamatujete si tu poptávku po ultra moderním hýbajícím se webu ve Flashi a ulpívání na něm?
 
 ## Metodiky
 

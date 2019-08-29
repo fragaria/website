@@ -4,6 +4,7 @@ title: Fandíme slušně!
 date: '2019-08-30T08:59:00.001+02:00'
 author: Michal Maněna
 lang: cz
+cloudinary_src: posts/football-1350720_1920_eracx5
 tags:
 - TDD
 - BDD
@@ -15,6 +16,8 @@ Sparta, nebo Slávie? A nebo Bohemka? Každý člověk má určité preference a
 Od politiky, přes ženy (muže) po fotbal. My vývojáři jsme trochu odlišní “pacienti”. 
 Preferujeme různé technologie a metodiky. A stejně jako u jiných koníčků do toho více či méně dáváme emoce. 
 V tomto článku se zamýšlím nad profesním fundamentalismem, se kterým se stále setkávám po 15 let praxe v oboru.
+
+{% include figure.html cloudinary_src='posts/football-1350720_1920_eracx5' sizing='wide' %}
 
 # Multidisciplinární obor 
 

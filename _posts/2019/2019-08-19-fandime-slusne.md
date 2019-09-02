@@ -46,7 +46,7 @@ Odskočme si mimo samotné programování. Během posledních deseti let vznikly
 
 Všechny výše uvedené mají důraz na nějakou doménu ve vývoji software a jakmile se podaří nějaký projekt dokončit s použitím některého z výše uvedeného přístupu, často spadneme do psychologické pasti, že daný způsob je vhodný pro jakýkoliv projekt.
 Podobně je to i s volbou technologického stacku.
-Náročnost celého oboru pak vede fundamentalismu převážně řídících pracovníků, nicméně specialistů nevyjímaje.
+Náročnost celého oboru pak vede k fundamentalismu převážně řídících pracovníků, nicméně specialistů nevyjímaje.
 Nemají ani moc na výběr. Je těžké nespadnout do psychologické pasti, protože nadřízení pracovníci požadují pro svá manažerská rozhodnutí podklady a vývojoví manažeři se musí něčeho chytit, zvláště pokud jsou méně zkušení.
 Jakmile se vám nějaké technologie či postupy podařilo použít v jednom projektu, předpokládáte, že stejný postup bude vhodný i na jiném projektu.
 

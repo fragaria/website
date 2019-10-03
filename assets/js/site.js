@@ -291,3 +291,20 @@ if (window.location.href.indexOf('?showgrid') !== -1) {
     toggleGrid(true);
 }
 
+window.cookieconsent.initialise({
+    "type": "info",
+    "palette": {
+        "popup": {
+            "background": "#ea272e"
+        },
+        "button": {
+            "background": "#fff"
+        }
+    },
+    "content": {
+        "message": "This site uses its own cookies and third-party cookies to gather information on your browsing for statistical purposes. If you continue browsing or fill in the form, we consider that you accept its use and",
+        "link": "Fragaria Privacy Policy",
+        "href": "/assets/documents/fragaria-privacy-policy.pdf"
+    }
+});
+

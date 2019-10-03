@@ -1,3 +1,15 @@
+- title: Karmen
+  challenge: Open-source multiple 3D printer controller
+  desc: >
+    We’ve fallen in love with 3D print! And since we’re a developer company, we’ve decided to contribute to it by kicking-off an <a href="https://github.com/fragaria/karmen" class="anchor anchor--emphasized" target="_blank" rel="noopener">open-source</a> solution for multi-printer management. It allows one to control a bunch of printers remotely, features an efficient management of print queues and offers smooth and user-friendly web interface.
+  img: portfolio/karmen.png
+  tags:
+    - python
+    - reactjs
+    - rest
+  website:
+    href: https://karmen.fragaria.cz/
+    caption: karmen.fragaria.cz
 - title: Winding Tree
   challenge: Disrupting the travel industry with blockchain
   desc: >

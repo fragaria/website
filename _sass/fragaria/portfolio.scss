@@ -2,6 +2,7 @@ $portfolio-project-media-width: (
     mobile: gu(2),
     tablet-small: gu(3),
 );
+$portfolio-project-media-height: gu(3);
 
 .portfolio-strip {
     position: relative;
@@ -79,6 +80,10 @@ $portfolio-project-media-width: (
             max-width: map-get($portfolio-project-media-width, tablet-small);
             margin-top: 0;
             margin-left: gu();
+        }
+
+        .portfolio-project__image {
+            max-height: $portfolio-project-media-height;
         }
     }
 

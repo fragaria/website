@@ -12,11 +12,11 @@
             <span class="k">if</span> <span class="o">not</span> <span class="nx">input</span> <span class="o">or</span> <span class="o">not</span> <span class="nx">query</span>
                 <span class="k">return</span> <span class="nx">input</span>
 
-            <span class="nx">bits</span> <span class="o">=</span> <span class="p">(</span><span class="nx">b</span><span class="p">.</span><span class="na">toLowerCase</span><span class="p">()</span> <span class="k">for</span> <span class="nx">b</span> <span class="o">in</span> <span class="nx">query</span><span class="p">.</span><span class="na">split</span><span class="p">(</span><span class="s">' '</span><span class="p">)</span> <span class="k">when</span> <span class="nx">b</span> <span class="o">isnt</span> <span class="s">' '</span><span class="p">)</span>
+            <span class="nx">bits</span> <span class="o">=</span> <span class="p">(</span><span class="nx">b</span><span class="p">.</span><span class="na">toLowerCase</span><span class="p">()</span> <span class="k">for</span> <span class="nx">b</span> <span class="k">in</span> <span class="nx">query</span><span class="p">.</span><span class="na">split</span><span class="p">(</span><span class="s">' '</span><span class="p">)</span> <span class="k">when</span> <span class="nx">b</span> <span class="o">isnt</span> <span class="s">' '</span><span class="p">)</span>
 
             <span class="nx">filtered</span> <span class="o">=</span> <span class="p">[]</span>
 
-            <span class="k">for</span> <span class="nx">item</span> <span class="o">in</span> <span class="nx">input</span>
+            <span class="k">for</span> <span class="nx">item</span> <span class="k">in</span> <span class="nx">input</span>
                 <span class="nx">item_copy</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="na">copy</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span>
 
                 <span class="c1">#Remove fields in which we don't want to search</span>

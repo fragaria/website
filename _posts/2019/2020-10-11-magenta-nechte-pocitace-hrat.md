@@ -3,6 +3,7 @@ layout: post
 title: Magenta - nechte počítače hrát
 date: 2019-10-11T09:00:00.000+02:00
 author: Michal Martinek
+cloudinary_src: posts/synth_eqk1jl
 lang: cz
 tags:
 - magenta

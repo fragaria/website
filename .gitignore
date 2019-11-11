@@ -6,7 +6,6 @@ _site/
 .jekyll-cache/
 
 desktop.ini
-Gemfile.lock
 
 node_modules
 bower_components

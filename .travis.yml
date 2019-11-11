@@ -3,6 +3,10 @@ rvm:
     - 2.5.1
 script: "JEKYLL_ENV=production bundle exec jekyll build --config '_config.yml,_config.witharchives.yml,_config.prod.yml'"
 
+before_install:
+    - gem uninstall -v '>= 2' -i $(rvm gemdir)@global -ax bundler || true
+    - gem install bundler -v '< 2'
+
 deploy:
     provider: pages
     fqdn: fragaria.cz

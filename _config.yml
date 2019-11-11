@@ -45,7 +45,12 @@ exclude:
     - assets/favicons/README.md
     - .sass-cache
     - .travis
+    - node_modules
     - README.md
+    - vendor/bundle/
+    - vendor/cache/
+    - vendor/gems/
+    - vendor/ruby/
 
 permalink: /blog/:year/:month/:day/:title/
 

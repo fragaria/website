@@ -18,14 +18,14 @@
         <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">sockets</span><span class="p">[</span><span class="nx">url</span><span class="p">];</span>
     <span class="p">}</span>
 <span class="p">}</span></code></pre></figure> <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// omit import, basically taken from ng2-socket-io</span>
-<span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">io</span> <span class="k">from</span> <span class="s1">'socket.io-client'</span><span class="p">;</span>
+<span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">io</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">socket.io-client</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="p">@</span><span class="nd">Injectable</span><span class="p">()</span>
 <span class="k">export</span> <span class="kd">class</span> <span class="nx">WrappedSocket</span> <span class="p">{</span>
     <span class="nl">ioSocket</span><span class="p">:</span> <span class="nx">any</span><span class="p">;</span>
 
     <span class="kd">constructor</span><span class="p">(</span><span class="nx">config</span><span class="p">:</span> <span class="nx">SocketIoConfig</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">const</span> <span class="nx">url</span><span class="p">:</span> <span class="nx">string</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">url</span> <span class="o">||</span> <span class="s1">''</span><span class="p">;</span>
+        <span class="kd">const</span> <span class="nx">url</span><span class="p">:</span> <span class="nx">string</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">url</span> <span class="o">||</span> <span class="dl">''</span><span class="p">;</span>
         <span class="kd">const</span> <span class="nx">options</span><span class="p">:</span> <span class="nx">any</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">options</span> <span class="o">||</span> <span class="p">{};</span>
         <span class="k">this</span><span class="p">.</span><span class="nx">ioSocket</span> <span class="o">=</span> <span class="nx">io</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
     <span class="p">}</span>
@@ -43,20 +43,20 @@
     <span class="p">}</span>
 
     <span class="nx">disconnect</span><span class="p">(</span><span class="nx">close</span><span class="p">?:</span> <span class="nx">any</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'disconnect'</span><span class="p">)</span>
-        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">ioSocket</span><span class="p">.</span><span class="nx">disconnect</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">ioSocket</span><span class="p">,</span> <span class="kr">arguments</span><span class="p">);</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">disconnect</span><span class="dl">'</span><span class="p">)</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">ioSocket</span><span class="p">.</span><span class="nx">disconnect</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">ioSocket</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="nx">emit</span><span class="p">(</span><span class="nx">eventName</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">data</span><span class="p">:</span> <span class="nx">any</span><span class="p">,</span> <span class="nx">callback</span><span class="p">?:</span> <span class="nb">Function</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">ioSocket</span><span class="p">.</span><span class="nx">emit</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">ioSocket</span><span class="p">,</span> <span class="kr">arguments</span><span class="p">);</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">ioSocket</span><span class="p">.</span><span class="nx">emit</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">ioSocket</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="nx">removeListener</span><span class="p">(</span><span class="nx">eventName</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">callback</span><span class="p">?:</span> <span class="nb">Function</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">ioSocket</span><span class="p">.</span><span class="nx">removeListener</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">ioSocket</span><span class="p">,</span> <span class="kr">arguments</span><span class="p">);</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">ioSocket</span><span class="p">.</span><span class="nx">removeListener</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">ioSocket</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="nx">removeAllListeners</span><span class="p">(</span><span class="nx">eventName</span><span class="p">?:</span> <span class="nx">string</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">ioSocket</span><span class="p">.</span><span class="nx">removeAllListeners</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">ioSocket</span><span class="p">,</span> <span class="kr">arguments</span><span class="p">);</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">ioSocket</span><span class="p">.</span><span class="nx">removeAllListeners</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">ioSocket</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">);</span>
     <span class="p">}</span>
 
     <span class="cm">/** create an Observable from an event */</span>
@@ -73,11 +73,11 @@
         <span class="p">}).</span><span class="nx">share</span><span class="p">();</span>
     <span class="p">}</span>
 <span class="p">}</span></code></pre></figure> <p>…a na dalších 20 řádkách si ten tunel ještě pustíme. No, a to je vlastně všechno. Zbytek aplikace jsou tradiční nezajímavé formulářové inputy, validace a taky on-screen klávesnice. Třeba trochu upravená <a href="https://github.com/protacon/ng-virtual-keyboard">tahleta</a>.</p> <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// omit imports</span>
-<span class="kd">const</span>   <span class="nx">SOCKET_URL</span> <span class="o">=</span> <span class="s1">'/* @echo SOCKET_URL */'</span><span class="p">;</span>
+<span class="kd">const</span>   <span class="nx">SOCKET_URL</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">/* @echo SOCKET_URL */</span><span class="dl">'</span><span class="p">;</span>
 
 <span class="p">@</span><span class="nd">Component</span><span class="p">({</span>
-    <span class="na">templateUrl</span><span class="p">:</span> <span class="s1">'dashboard.component.html'</span><span class="p">,</span>
-    <span class="na">styleUrls</span><span class="p">:</span> <span class="p">[</span><span class="s1">'dashboard.component.less'</span><span class="p">]</span>
+    <span class="na">templateUrl</span><span class="p">:</span> <span class="dl">'</span><span class="s1">dashboard.component.html</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">styleUrls</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">dashboard.component.less</span><span class="dl">'</span><span class="p">]</span>
 <span class="p">})</span>
 <span class="k">export</span> <span class="kd">class</span> <span class="nx">Dashboard</span> <span class="kr">implements</span> <span class="nx">OnInit</span><span class="p">,</span> <span class="nx">OnDestroy</span> <span class="p">{</span>
 
@@ -95,7 +95,7 @@
     <span class="nx">ngOnInit</span><span class="p">()</span> <span class="p">{</span>
         <span class="c1">// Listen for "data_changed" events from server</span>
         <span class="k">this</span><span class="p">.</span><span class="nx">socketSubscribe</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">mainSocket</span>
-            <span class="p">.</span><span class="nx">fromEvent</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;</span><span class="p">(</span><span class="s1">'data_changed'</span><span class="p">)</span>
+            <span class="p">.</span><span class="nx">fromEvent</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;</span><span class="p">(</span><span class="dl">'</span><span class="s1">data_changed</span><span class="dl">'</span><span class="p">)</span>
             <span class="p">.</span><span class="nx">subscribe</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
                 <span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
                 <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">fields</span><span class="p">[</span><span class="nx">data</span><span class="p">.</span><span class="nx">name</span><span class="p">])</span> <span class="p">{</span>
@@ -106,7 +106,7 @@
     <span class="p">}</span>
     <span class="c1">// Handle data change from UI and emit "json" event into socket</span>
     <span class="nx">onFieldChange</span><span class="p">(</span><span class="na">payload</span><span class="p">:</span> <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">,</span> <span class="na">value</span><span class="p">:</span> <span class="nx">any</span><span class="p">})</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">mainSocket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s1">'json'</span><span class="p">,</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">mainSocket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="dl">'</span><span class="s1">json</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
             <span class="na">data</span><span class="p">:</span> <span class="p">{</span>
                 <span class="na">name</span><span class="p">:</span> <span class="nx">payload</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span>
                 <span class="na">value</span><span class="p">:</span> <span class="nx">payload</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span>
@@ -127,14 +127,14 @@
 <span class="n">CORS</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
 <span class="n">socketio</span> <span class="o">=</span> <span class="n">SocketIO</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
 
-<span class="c"># Handles messages of type "json"</span>
-<span class="nd">@socketio.on</span><span class="p">(</span><span class="s">'json'</span><span class="p">)</span>
+<span class="c1"># Handles messages of type "json"
+</span><span class="o">@</span><span class="n">socketio</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="s">'json'</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">client_data_change</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
     <span class="n">database</span><span class="o">.</span><span class="n">update_value</span><span class="p">(</span><span class="n">message</span><span class="p">[</span><span class="s">'data'</span><span class="p">][</span><span class="s">'name'</span><span class="p">],</span> <span class="n">message</span><span class="p">[</span><span class="s">'data'</span><span class="p">][</span><span class="s">'value'</span><span class="p">])</span></code></pre></figure> <p>Jak se data na klienta posílají si ukážeme po krátké odbočce do světa databází.</p> <h2 id="sqlite-postgresql-a-listennotify">SqLite, PostgreSQL a LISTEN/NOTIFY</h2> <p>Když už se pollingem, tedy periodickou kontrolou dat nezabýváme na ose prohlížeč-server, byla by škoda dělat polling do databáze. Na scénu tak vstupují SQLite a PostgreSQL, které umí pomocí <a href="https://www.sqlite.org/c3ref/update_hook.html">update_hook</a> respektive dvojice <a href="https://www.postgresql.org/docs/9.4/static/sql-listen.html">LISTEN</a>/<a href="https://www.postgresql.org/docs/9.4/static/sql-notify.html">NOTIFY</a> při nějaké události volat uživatelský kód. Pro SQLite se dá použít například knihovna <a href="https://github.com/karellen/karellen-sqlite">karellen-sqlite</a>, my si ukážeme, jak se problém řeší v Postgresu a <a href="http://initd.org/psycopg/">psycopg2</a>.</p> <p>V PostgreSQL mějme jednoduchou tabulku, z níž chceme zavolat NOTIFY pokaždé, když do ní přibude nový řádek. Na to se samozřejme nejlépe používají triggery.</p> <figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="c1">-- simple table definition, sequence omitted</span>
 <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">field_value</span> <span class="p">(</span>
-    <span class="n">id</span> <span class="n">integer</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
-    <span class="n">value</span> <span class="n">character</span> <span class="n">varying</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
-    <span class="n">field</span> <span class="n">character</span> <span class="n">varying</span><span class="p">(</span><span class="mi">80</span><span class="p">)</span>
+    <span class="n">id</span> <span class="nb">integer</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">value</span> <span class="nb">character</span> <span class="nb">varying</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">field</span> <span class="nb">character</span> <span class="nb">varying</span><span class="p">(</span><span class="mi">80</span><span class="p">)</span>
 <span class="p">);</span>
 
 <span class="k">CREATE</span> <span class="k">FUNCTION</span> <span class="n">field_value_notify_change</span><span class="p">()</span> <span class="k">RETURNS</span> <span class="k">trigger</span>
@@ -146,14 +146,14 @@
     <span class="c1">-- build JSON object, compatible with 9.4 and 9.5</span>
     <span class="n">payload</span> <span class="o">=</span> <span class="n">json_build_object</span><span class="p">(</span><span class="s1">'field'</span><span class="p">,</span> <span class="k">NEW</span><span class="p">.</span><span class="n">field</span><span class="p">,</span> <span class="s1">'value'</span><span class="p">,</span> <span class="k">NEW</span><span class="p">.</span><span class="n">value</span><span class="p">);</span>
     <span class="c1">-- this is the magic, that emits the real event</span>
-    <span class="n">perform</span> <span class="n">pg_notify</span><span class="p">(</span><span class="s1">'field_value_change'</span><span class="p">,</span> <span class="n">payload</span><span class="p">::</span><span class="n">text</span><span class="p">);</span>
+    <span class="n">perform</span> <span class="n">pg_notify</span><span class="p">(</span><span class="s1">'field_value_change'</span><span class="p">,</span> <span class="n">payload</span><span class="p">::</span><span class="nb">text</span><span class="p">);</span>
     <span class="k">RETURN</span> <span class="k">NULL</span><span class="p">;</span>
 <span class="k">END</span>
 <span class="err">$$</span><span class="p">;</span>
 
 <span class="c1">-- regsiter function as a table trigger</span>
-<span class="k">CREATE</span> <span class="k">TRIGGER</span> <span class="n">on_field_value_change</span> <span class="k">AFTER</span> <span class="k">INSERT</span> <span class="k">ON</span> <span class="n">field_value</span> <span class="k">FOR</span> <span class="k">EACH</span> <span class="k">ROW</span> <span class="k">EXECUTE</span> <span class="k">PROCEDURE</span> <span class="n">field_value_notify_change</span><span class="p">();</span></code></pre></figure> <p>Obsluha v Pythonu je pak dost jednoduchá, ale pro webový server je blokující smyčka tak, jak je uvedená v dokumentaci, poměrně nevhodná.</p> <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># http://initd.org/psycopg/docs/advanced.html#asynchronous-notifications</span>
-<span class="kn">import</span> <span class="nn">select</span>
+<span class="k">CREATE</span> <span class="k">TRIGGER</span> <span class="n">on_field_value_change</span> <span class="k">AFTER</span> <span class="k">INSERT</span> <span class="k">ON</span> <span class="n">field_value</span> <span class="k">FOR</span> <span class="k">EACH</span> <span class="k">ROW</span> <span class="k">EXECUTE</span> <span class="k">PROCEDURE</span> <span class="n">field_value_notify_change</span><span class="p">();</span></code></pre></figure> <p>Obsluha v Pythonu je pak dost jednoduchá, ale pro webový server je blokující smyčka tak, jak je uvedená v dokumentaci, poměrně nevhodná.</p> <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1"># http://initd.org/psycopg/docs/advanced.html#asynchronous-notifications
+</span><span class="kn">import</span> <span class="nn">select</span>
 <span class="kn">import</span> <span class="nn">psycopg2</span>
 <span class="kn">import</span> <span class="nn">psycopg2.extensions</span>
 
@@ -194,12 +194,12 @@
         <span class="n">element</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
         <span class="n">socketio</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="s">'data_changed'</span><span class="p">,</span> <span class="p">{</span><span class="s">'data'</span><span class="p">:</span> <span class="p">{</span><span class="s">'name'</span><span class="p">:</span> <span class="n">element</span><span class="p">[</span><span class="s">'field'</span><span class="p">],</span> <span class="s">'value'</span><span class="p">:</span> <span class="n">element</span><span class="p">[</span><span class="s">'value'</span><span class="p">]}},</span> <span class="n">broadcast</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
-<span class="c"># ...</span>
-
+<span class="c1"># ...
+</span>
 <span class="n">dbThread</span> <span class="o">=</span> <span class="bp">None</span>
 <span class="n">qThread</span> <span class="o">=</span> <span class="bp">None</span>
 
-<span class="nd">@socketio.on</span><span class="p">(</span><span class="s">'connect'</span><span class="p">)</span>
+<span class="o">@</span><span class="n">socketio</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="s">'connect'</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">connect</span><span class="p">():</span>
     <span class="s">"""On first socket.io connection registers the database listener and value emitter"""</span>
     <span class="k">global</span> <span class="n">dbThread</span>

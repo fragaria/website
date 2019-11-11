@@ -29,16 +29,16 @@
                     <span class="k">raise</span> <span class="n">exc</span><span class="o">.</span><span class="n">HTTPForbidden</span><span class="p">(</span><span class="n">detail</span><span class="o">=</span><span class="s">"User not allowed to access application!"</span><span class="p">)</span>
             <span class="k">except</span> <span class="nb">Exception</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
                 <span class="k">try</span><span class="p">:</span>
-                    <span class="c"># Try to handle it with a custom error handler.</span>
-                    <span class="n">rv</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handle_exception</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+                    <span class="c1"># Try to handle it with a custom error handler.
+</span>                    <span class="n">rv</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handle_exception</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
                     <span class="k">if</span> <span class="n">rv</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
                         <span class="n">response</span> <span class="o">=</span> <span class="n">rv</span>
                 <span class="k">except</span> <span class="n">exc</span><span class="o">.</span><span class="n">HTTPException</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
-                    <span class="c"># Use the HTTP exception as response.</span>
-                    <span class="n">response</span> <span class="o">=</span> <span class="n">e</span>
+                    <span class="c1"># Use the HTTP exception as response.
+</span>                    <span class="n">response</span> <span class="o">=</span> <span class="n">e</span>
                 <span class="k">except</span> <span class="nb">Exception</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
-                    <span class="c"># Error wasn't handled so we have nothing else to do.</span>
-                    <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_internal_error</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+                    <span class="c1"># Error wasn't handled so we have nothing else to do.
+</span>                    <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_internal_error</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
 
             <span class="k">try</span><span class="p">:</span>
                 <span class="k">return</span> <span class="n">response</span><span class="p">(</span><span class="n">environ</span><span class="p">,</span> <span class="n">start_response</span><span class="p">)</span>

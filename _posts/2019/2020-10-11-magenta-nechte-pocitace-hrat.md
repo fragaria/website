@@ -17,7 +17,7 @@ Umělá inteligence je v poslední době oblíbené téma a její využití si p
 ## Magenta
 Magenta je open-sourcový projekt, který vznikl pod vedením lidí z Google Brain. Snaží se využívat strojové učení pro tvorbu hudby, obrazů a jiných materiálů. Také zkoumá, jakým způsobem tvořit aplikace a rozhraní pro umělce, aby jim umožnil obohatit svůj proces umělecké tvorby o použití strojového učení. Vyvíjí jak knihovny a ML modely pro vývojáře, tak tvoří nástroje pro umělce. Pod kapotou využívají TensorFlow, což je další open-source projekt od Google, sloužící jako platforma pro strojové učení. 
 
-Magenta jednak tvoří modely vizuálního umělce, které pokračují v kreslení nebo transformují obraz do jiného stylu. Širší část ale tvoří modely a nástroje pro hudebníky, kterým se budeme věnovat.
+Magenta jednak tvoří modely pro vizuální umělce, které pokračují v kreslení nebo transformují obraz do jiného stylu. Širší část ale tvoří modely a nástroje pro hudebníky, kterým se budeme věnovat.
 
 ### Projekty
 

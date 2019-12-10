@@ -51,6 +51,8 @@ exclude:
     - vendor/cache/
     - vendor/gems/
     - vendor/ruby/
+    - .idea/
+    - .gitignore
 
 permalink: /blog/:year/:month/:day/:title/
 

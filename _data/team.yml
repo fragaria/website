@@ -156,3 +156,12 @@
     src: cloudinary
     cloudinary: people/marta-vankova-face.jpg
   profiles:
+- name: Adam Ježek
+  alt: Lights & sound
+  gender: male
+  avatar:
+    src: cloudinary
+    cloudinary: posts/profile_adam_q3qzvh
+  profiles:
+    twitter: adamjezek98
+    github: adamjezek98

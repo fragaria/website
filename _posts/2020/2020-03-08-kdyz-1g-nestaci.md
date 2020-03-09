@@ -2,7 +2,7 @@
 layout: post
 title: Když 1Gbps nestačí… Jak na 10G intranet
 date: 2020-03-08T09:00:00.000+02:00
-author: Adam Jezek
+author: Adam Ježek
 cloudinary_src: posts/20200308_223407_ty5kyk
 lang: cz
 tags:
@@ -57,15 +57,19 @@ dostáváme až na teoretických 12000 Mbps. A najednou jsou ty gigové rozvody 
 
 Ale zpátky na zem…
 ===
-3600 Mbps je opravdu hodně. Ale co s takovou rychlostí? Které zařízení to zvládne a k čemu to využije běžný uživatel?  
+3600 Mbps je opravdu hodně. Ale co s takovou rychlostí? Které zařízení to zvládne a k čemu to využije běžný uživatel? 
+
  Pokud na NASce máte videa, 4K stream potřebuje okolo 20 Mbps, takže i na gigové síti je zde stále velká rezerva. 
  Rychlé připojení se vyplatí hlavně ve dvou případech - při velkém množství klientů  a pro zkrácení čekání u velkých záloh. 
 Při běžné práci na počítači se se svým průměrným NVMe SSD dostávám na rychlost zápisu okolo 700 MB/s (5600 Mbps), 
-takže pro kopírování objemných dat už zde jsou znatelné rozdíly. Využití se najde i při zálohování z více disků 
+takže pro kopírování objemných dat už zde jsou znatelné rozdíly.
+
+Využití se najde i při zálohování z více disků 
 najednou, nebo při datově náročných operacích, například pro střih videa. Zvláště, pokud zpracováváme záznam z více 
 kamer a třeba ještě ve 4K, potřebujeme velké a rychlé úložiště. Do běžného desktopu se vejde jen pár disků, takže 
 vhodné řešení je mít data na velkém diskovém poli, ideálně s RAIDem pro zálohu. A pokud chceme využít plný potenciál 
 takového řešení, je 10G propoj nutnost.
+
 Při více klientech dává smysl mít 10G alespoň na cestě od NASky do posledního switche, a do klientských PC přivést 
 jenom 1G. Varianta je to značně levnější a na velkých pracovištích může zlepšit user experience.
 
@@ -90,10 +94,13 @@ Ve většině případů je lepší pořídit prvky pro metaliku. Jenže ani ty 
  většina rozvodů dnes zpravidla bývá z CAT5e kabeláže. Ačkoliv 1G internet po ní zvládá fungovat až na vzdálenosti 100m,
  u 10G tomu tak nebude. Na krátkých spojích do deseti metrů zpravidla problémy nebudou, u delších rozvodů už ale můžeme
  očekávat problémy. Spoj nemusí mít 10G link, někdy se naváže pouze 5G, 2.5G, nebo jenom 1G spoj, občas se link nemusí
- navázat vůbec. 10G síť vyžaduje CAT6A kabely, které stojí dvojnásobek a při předělávání rozvodů už je vhodné myslet 
+ navázat vůbec.
+
+ 10G síť vyžaduje CAT6A kabely, které stojí dvojnásobek a při předělávání rozvodů už je vhodné myslet 
  dopředu a rovnou použít CAT7. Není to zase tak dávno, kdy nám stačily dial-up modemy a kam jsme se za tu dobu dostali. 
- V případě prvků s SFP sloty máme větší flexibilitu v zapojení, ale za nějaké kompromisy.  SFP moduly na sobě mohu mít 
- buď metalický konektor, a nebo optický LC konektor, který sice nabízí větší vzdálenosti, jen nemusí vždy fungovat. 
+ V případě prvků s SFP sloty máme větší flexibilitu v zapojení, ale za nějaké kompromisy.  SFP moduly na sobě mohou mít 
+ buď metalický konektor, a nebo optický LC konektor, který sice nabízí větší vzdálenosti, jen nemusí vždy fungovat.
+ 
  Optické 10G SFP moduly na eBayi najdete v cenovém rozmezí od několika stovek po několik tisíc korun, podle toho od 
  jakého výrobce jsou. A různí výrobci v různých zařízeních podporují různé SFP moduly, a je zpravidla nutné si přečíst 
  dokumentaci, než nějaký koupíte. Ještě obtížnější je to s optikou, která se dělí na single mode a multimode, 

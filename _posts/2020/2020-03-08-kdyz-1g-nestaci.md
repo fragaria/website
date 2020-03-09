@@ -26,7 +26,9 @@ Pokud patříte do té malé skupinky lidí, kteří mají přístup k pořádn�
 
 {% include figure.html cloudinary_src='posts/EPLbtv3WoAcCtnX_jt3j8q'  %}
 
-Pokud výsledek výše pro vás není nic neobvyklého, pravděpodobně už 
+Pokud výsledek výše pro vás není nic neobvyklého, pravděpodobně už máte dispozici rychlejší síť, nebo jí dokonce i
+ spravujete - přecijen v českých podmínkách jsou koncové přípojky s rychlostí nad 1G velmi vzácné. V tom případě
+ pro vás následující článek nejspíše nepřinese nic nového.
 
 Pokud žijete na vesnici, tak vaše přípojka pravděpodobně nebude dosahovat závratných rychlostí.
  Buď jste připojeni vzduchem z (ne)dalekého města a internet pořádně funguje jenom když neprší.
@@ -47,7 +49,7 @@ A kolik teda potřebuji?
 ===
 Lepší pevný disk zvládá rychlosti okolo 150 MB/s. V případě SSD se bavíme o hodnotách nad 500 MB/s. Samotný disk je ale 
  kvůli zálohování zpravidla nesmysl, a ukládání dat na různá RAID pole může rychlosti ještě dosti zvednout - 4 disky v 
- RAID5 znamenají až trojnásobnou rychlost při čtení. Než začneme míchat jablka s hrušky, je nutno poznamenat, že 
+ RAID5 znamenají až trojnásobnou rychlost při čtení. Než začneme míchat jablka a hrušky, je nutno poznamenat, že 
  zatímco při úložišti se zpravidla bavíme o bytech, v síti to jsou zase bity. 
 Lepší NAS s vhodnými disky ve správné konfiguraci teoreticky zvládne posílat ven až 3600 Mbps, v případě SSD se 
 dostáváme až na teoretických 12000 Mbps. A najednou jsou ty gigové rozvody hodně pozadu.
@@ -74,7 +76,7 @@ počítači 1G síťová karta, do PCIe se dá pořídit už od pár stovek. S 1
 jsou zde větší požadavky na hardware, což je dobře vidět například na větší ceně NAS s 10G portem. Switch s několika 1G 
 porty a dvojicí 10G portů pro uplink už vyjde nad 5 tisíc. Pokud budeme chtít mít všech 8 portů 10G, je už cena okolo 
 15 tisíc. S více porty ceny dále rostou. Síťová karta do počítače už je v řádu jednotek tisíc. Možnost, jak ušetřit na
- switchích a síťových kartách existuje, nakupujte  použité. Např. na eBayi se jich dá najít  za rozumnou cenu hromada.
+ switchích a síťových kartách existuje, nakupujte  použité. Například na eBayi se jich dá najít  za rozumnou cenu hromada.
 
 U těchto prvků se kromě známých RJ45 konektorů objevují také SFP sloty. Ceny obou řešení jsou si dosti podobné, 
 nicméně v druhém případě je cena ještě navýšena o SFP moduly. Jeden případ za všechny by v případě PCIe karet mohly 
@@ -97,4 +99,4 @@ Ve většině případů je lepší pořídit prvky pro metaliku. Jenže ani ty 
  dokumentaci, než nějaký koupíte. Ještě obtížnější je to s optikou, která se dělí na single mode a multimode, 
  které mezi sebou nejsou kompatibilní, a proto není od věci si před koupí nastudovat pár článků o tom, jak to vlastně funguje.
 
-Hodně štěstí s nakupováním 
+Hodně štěstí s nakupováním!

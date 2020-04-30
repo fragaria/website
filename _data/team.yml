@@ -64,16 +64,6 @@
   profiles:
     github: pavel-mxsf
     twitter: pavel_mxsf
-- name: Jirka Chadima
-  alt: Consultant
-  nationality: Czech
-  gender: male
-  avatar:
-    src: github
-  profiles:
-    github: JirkaChadima
-    twitter: JirkaChadima
-    linkedin: jirichadima
 - name: Lukáš Turský
   alt: Nitpick
   nationality: Slovak

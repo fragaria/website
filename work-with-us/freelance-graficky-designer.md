@@ -56,3 +56,5 @@ jak **vlastní produkty** (nedávno jsme do světa vypustili [Karmen](https://ka
 zakázku pro širokou škálu klientů **od startupů až po banky**. Je nás kolem dvaceti a
 zakládáme si na tom, že vedle práce jsme i kamarádi. abychom dělali práci která
 *nám dává smysl* a která *nás baví*.
+
+V případě zájmu se nám prosím ozvi na [hledamegrafika@fragaria.cz](mailto:hledamegrafika@fragaria.cz) a pošli nám své portfolio.

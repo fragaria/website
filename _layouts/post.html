@@ -20,10 +20,14 @@ layout: blank
 
         <p class="article__meta">
             <meta itemprop="datePublished" content="{{ include.post.date | date_to_xmlschema }}" />
+            {% unless page.suppress_pubdate %}
             <span class="article__pubdate">{{ page.date | date: "%B %d, %Y" }}</span>
+            {% endunless %}
+            {% unless page.suppress_author %}
             <span itemprop="author" itemtype="http://schema.org/Person" itemscope="" class="article__author">
                 by <span itemprop="name">{{ page.author }}</span>
             </span>
+            {% endunless %}
             <meta itemprop="publisher">{{ site.organization.official_name }}</meta>
         </p>
 

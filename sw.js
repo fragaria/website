@@ -7,7 +7,7 @@ urls.push("/assets/favicons/android-chrome-192x192.png");urls.push("/assets/favi
 urls.push("/blog/2020/03/26/moving-on/");urls.push("/blog/2020/03/08/kdyz-1g-nestaci/");urls.push("/blog/2019/10/11/magenta-nechte-pocitace-hrat/");urls.push("/blog/2019/08/19/fandime-slusne/");urls.push("/blog/2019/04/08/building-a-simple-company-website-the-hard-way-service-workers/");urls.push("/blog/2019/03/29/kouzlo-malych-projektu/");urls.push("/blog/2019/02/05/runtime-configuration-in-web-applications/");urls.push("/blog/2018/11/12/building-a-simple-company-website-the-hard-way-vertical-rhythm/");urls.push("/blog/2018/09/03/building-a-simple-company-website-the-hard-way-typography-intro/");urls.push("/blog/2018/07/25/spehujeme-pouzivatelov-na-nasich-strankach/");
 
 // Cache pages
-urls.push("/404.html");urls.push("/solutions/");urls.push("/work-with-us/");urls.push("/blog/");urls.push("/");urls.push("/offline/");
+urls.push("/404.html");urls.push("/work-with-us/freelance-graficky-designer/");urls.push("/solutions/");urls.push("/work-with-us/");urls.push("/blog/");urls.push("/");urls.push("/offline/");
 
 
 // Cache name: adjust version number to invalidate service worker cache.

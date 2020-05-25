@@ -3,12 +3,6 @@ layout: post
 title: Freelance grafický designer
 date: 2020-05-25T13:00:00.000+01:00
 author: Fragaria
-description: >
-    Pomoz nám vyrábět webové aplikace, které nejen že skvěle fungují, ale také
-    perfektně vypadají. Spolupracuj s partou seniorních vývojářů na vývoji věcí,
-    které dávají smysl a jsou lidem na očích. Hledáme freelancera, který bude pevnou
-    součástí našeho týmu, ale kterého budeme objednávat na konkrétní projekty. Jsme
-    silní v dobrém plánování i remote spolupráci.
 keywords: career, webdesign, graphics, freelance, grafik, externí
 lang: cs
 tags:

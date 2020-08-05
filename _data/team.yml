@@ -64,16 +64,6 @@
   profiles:
     github: pavel-mxsf
     twitter: pavel_mxsf
-- name: Lukáš Turský
-  alt: Nitpick
-  nationality: Slovak
-  gender: male
-  avatar:
-    src: github
-  profiles:
-    github: xtursky
-    twitter: xtursky
-    linkedin: lukas-tursky-79584247
 - name: Michal Dub
   alt: Artefact
   nationality: Czech
@@ -130,14 +120,6 @@
   profiles:
     facebook: michal.manena
     linkedin: michalmanena
-- name: Michal Martinek
-  alt: Do-gooder
-  nationality: Czech
-  gender: male
-  avatar:
-    src: github
-  profiles:
-    github: MichalMartinek
 - name: Marta Vaňková
   alt: Psyche
   nationality: Czech

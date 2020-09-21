@@ -137,3 +137,8 @@
   profiles:
     twitter: adamjezek98
     github: adamjezek98
+- name: Romana Pourová
+  alt: horsegirl
+  avatar:
+    src: cloudinary
+    cloudinary: posts/romana_rx3vs3

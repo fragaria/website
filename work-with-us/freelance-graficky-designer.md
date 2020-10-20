@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Freelance grafický designer
+title: Grafický designer / UX
 date: 2020-10-20T13:00:00.000+01:00
 author: Fragaria
 keywords: career, webdesign, graphics, freelance, grafik, externí

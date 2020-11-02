@@ -128,6 +128,15 @@
     src: cloudinary
     cloudinary: people/marta-vankova-face.jpg
   profiles:
+- name: Jan Březina
+  alt: Dirty Harry
+  gender: male
+  avatar:
+    src: cloudinary
+    cloudinary: posts/honza-brezina_wmorba
+  profiles:
+    linkedin: jan-březina-9326a779
+    github: pablohassan1
 - name: Adam Ježek
   alt: Lights & sound
   gender: male

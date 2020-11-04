@@ -1,7 +1,5 @@
 - name: Martin Burián
   alt: Havloid
-  nationality: Czech
-  gender: male
   avatar:
     src: cloudinary
     cloudinary: people/martin-burian.jpg
@@ -11,8 +9,6 @@
     github: Kancelarskej
 - name: Martin Bílek
   alt: Love ’n’ truthnik
-  nationality: Czech
-  gender: male
   avatar:
     src: github
   profiles:
@@ -21,8 +17,6 @@
     linkedin: martin-b%C3%ADlek-47699542
 - name: Robin Gottfried
   alt: Charmer
-  nationality: Czech
-  gender: male
   avatar:
     src: github
   profiles:
@@ -31,8 +25,6 @@
     linkedin: robingottfried
 - name: Filip Vařecha
   alt: True optimist
-  nationality: Czech
-  gender: male
   avatar:
     src: github
   profiles:
@@ -41,41 +33,36 @@
     linkedin: filip-varecha
 - name: Tibor Kulčár
   alt: Aristocrat
-  nationality: Slovak
-  gender: male
   avatar:
     src: github
   profiles:
     github: tibor-kulcar
 - name: Ondřej Chmelař
   alt: Allrounder
-  nationality: Czech
-  gender: male
   avatar:
     src: github
   profiles:
     github: ondrejchmelar
 - name: Pavel Vojáček
   alt: MacGyver
-  nationality: Czech
-  gender: male
   avatar:
     src: github
   profiles:
     github: pavel-mxsf
     twitter: pavel_mxsf
+- name: Stanislav Knapp
+  alt: Puki
+  avatar:
+    src: cloudinary
+    cloudinary: posts/stano_uy8gdn
 - name: Michal Dub
   alt: Artefact
-  nationality: Czech
-  gender: male
   avatar:
     src: github
   profiles:
     github: MichalMaM
 - name: Ondřej Šrámek
   alt: Moravian
-  nationality: Czech
-  gender: male
   avatar:
     src: github
   profiles:
@@ -83,8 +70,6 @@
     github: osramek
 - name: Daniela Borošová
   alt: Tango DJ
-  nationality: Slovak
-  gender: female
   avatar:
     src: cloudinary
     cloudinary: people/daniela-borosova.jpg
@@ -92,8 +77,6 @@
     linkedin: daniela-boro%C5%A1ov%C3%A1-1521833b
 - name: Adam David
   alt: Noncommuter
-  nationality: Czech
-  gender: male
   avatar:
     src: cloudinary
     cloudinary: people/adam-david.jpg
@@ -102,8 +85,6 @@
     github: adamdavidcz
 - name: Michal Hotovec
   alt: Nick
-  nationality: Czech
-  gender: male
   avatar:
     src: cloudinary
     cloudinary: posts/michal-hotovec_pbrpgh.jpg
@@ -112,8 +93,6 @@
     linkedin: michalhotovec
 - name: Michal Maněna
   alt: Micman
-  nationality: Czech
-  gender: male
   avatar:
     src: cloudinary
     cloudinary: posts/michalmanena_cixuvl.jpg
@@ -122,15 +101,12 @@
     linkedin: michalmanena
 - name: Marta Vaňková
   alt: Psyche
-  nationality: Czech
-  gender: female
   avatar:
     src: cloudinary
     cloudinary: people/marta-vankova-face.jpg
   profiles:
 - name: Jan Březina
   alt: Dirty Harry
-  gender: male
   avatar:
     src: cloudinary
     cloudinary: posts/honza-brezina_wmorba
@@ -139,7 +115,6 @@
     github: pablohassan1
 - name: Adam Ježek
   alt: Lights & sound
-  gender: male
   avatar:
     src: cloudinary
     cloudinary: posts/profile_adam_q3qzvh
@@ -147,7 +122,7 @@
     twitter: adamjezek98
     github: adamjezek98
 - name: Romana Pourová
-  alt: horsegirl
+  alt: Horsegirl
   avatar:
     src: cloudinary
     cloudinary: posts/romana_rx3vs3

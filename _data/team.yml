@@ -99,6 +99,13 @@
   profiles:
     facebook: michal.manena
     linkedin: michalmanena
+- name: Daniel Vančura
+  alt: Hidden weeb
+  avatar:
+    src: cloudinary
+    cloudinary: posts/hugo_ihoyy0
+  profiles:
+    facebook: daniel.vancura.73
 - name: Marta Vaňková
   alt: Psyche
   avatar:

@@ -71,7 +71,7 @@
     - mongodb
     - aws
   website:
-    href: https://d21.me
+    href: https://www.d21.me
     caption: d21.me
 - title: Logman
   challenge: Scaling bank logs to make life easy

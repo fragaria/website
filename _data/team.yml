@@ -133,3 +133,11 @@
   avatar:
     src: cloudinary
     cloudinary: posts/romana_rx3vs3
+- name: Lubomír Nedbal
+  alt: Resistor
+  avatar:
+    src: github
+  profiles:
+    github: lopliok
+    twitter: lopliok
+    facebook: lopliok

@@ -1,7 +1,7 @@
 - name: Projects
   url: /#projects
-- name: Solutions
-  url: /solutions/
+- name: How we work
+  url: /how-we-work/
 - name: Blog
   url: /blog/
 - name: Work with us

@@ -1,3 +1,16 @@
+- title: Eda (adventura.cz)
+  challenge: Žaneta‘s younger brother
+  desc: >
+    Although Covid-19 pandemic has hit the travel industry hard, we are working with our long-term partners - travel agencies <a href="https://www.adventura.cz/" class="anchor anchor--emphasized" target="_blank" rel="noopener">Adventura</a> and <a href="https://www.chinatours.cz/" class="anchor anchor--emphasized" target="_blank" rel="noopener">China Tours</a> - to create a booking management system. It complements previously delivered tour management system and web presentations. On top of that it is connected to <a href="https://www.vario.cz/" class="anchor anchor--emphasized" target="_blank" rel="noopener">Vario accounting software</a> via SOAP API.
+  img: portfolio/adventura.png
+  tags:
+    - python
+    - angular
+    - django
+  website:
+    href: https://adventura.cz
+    caption: adventura.cz
+
 - title: Karmen
   challenge: Open-source multiple 3D printer controller
   desc: >

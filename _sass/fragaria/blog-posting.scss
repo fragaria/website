@@ -168,7 +168,6 @@
     background-repeat: no-repeat;
 
     @include breakpoint(tablet up) {
-        background-size: initial;
         transition-property: filter, transform;
         transition-duration: .8s;
         transition-timing-function: cubic-bezier(.2,1,.2,1);

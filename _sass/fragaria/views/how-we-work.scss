@@ -1,0 +1,46 @@
+.v-how-we-work {
+  @include narrow-content;
+
+  section {
+
+  }
+
+  .illustration__horizontal {
+    display: flex;
+    width: 100%;
+
+    img {
+      &:nth-child(2) {
+        margin: 0 1rem;
+      }
+    }
+  }
+}
+
+.section__main-title {
+  display: block;
+  text-align: center;
+
+  @include baseline(
+    beta,
+    $headingtype,
+    $lineheight: 3,
+    $breakpoint: tablet-small down,
+    $anchor: true
+  );
+
+  @include baseline(
+    beta,
+    $headingtype,
+    $lineheight: 2,
+    $above: 3,
+    $below: 0,
+    $breakpoint: tablet up,
+    $anchor: true
+  );
+};
+
+.work-cycle {
+  list-style: none;
+
+}

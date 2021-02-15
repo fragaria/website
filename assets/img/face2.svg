@@ -1,0 +1,37 @@
+<svg id="Group_8" data-name="Group 8" xmlns="http://www.w3.org/2000/svg" width="226" height="226.99" viewBox="0 0 226 226.99">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e3e3e3;
+      }
+
+      .cls-2 {
+        fill: #d93730;
+      }
+
+      .cls-3 {
+        fill: #333;
+      }
+
+      .cls-4 {
+        opacity: 0.1;
+      }
+
+      .cls-5 {
+        fill: #fdb797;
+      }
+    </style>
+  </defs>
+  <ellipse id="Ellipse_54" data-name="Ellipse 54" class="cls-1" cx="113" cy="112.83" rx="113" ry="112.83"/>
+  <path id="Path_130" data-name="Path 130" class="cls-2" d="M325.49,551.66c22.164.035,43.264-7.9,61.765-20.1-4.18-22.84-19.505-22.709-19.505-22.709H280s-15,1.23-19.7,22.25a112.919,112.919,0,0,0,65.19,20.56Z" transform="translate(-211.95 -324.67)"/>
+  <circle id="Ellipse_55" data-name="Ellipse 55" class="cls-3" cx="54.76" cy="54.76" r="54.76" transform="translate(57.58 56.127)"/>
+  <path id="Path_131" data-name="Path 131" class="cls-4" d="M97.34,409.21h35.09v28.07a17.54,17.54,0,0,1-17.54,17.54h0a17.54,17.54,0,0,1-17.54-17.54V409.21Z" transform="translate(-2.67 -252.89)"/>
+  <path id="Path_132" data-name="Path 132" class="cls-5" d="M100.69,407.91h28.39a3.35,3.35,0,0,1,3.35,3.35V436a17.54,17.54,0,0,1-17.54,17.54h0A17.54,17.54,0,0,1,97.34,436V411.25a3.35,3.35,0,0,1,3.35-3.35Z" transform="translate(-2.67 -252.89)"/>
+  <path id="Path_133" data-name="Path 133" class="cls-4" d="M306.69,494.24a50.5,50.5,0,0,0,35.09.1V490H306.69Z" transform="translate(-211.95 -324.586)"/>
+  <circle id="Ellipse_56" data-name="Ellipse 56" class="cls-5" cx="50.29" cy="50.29" r="50.29" transform="translate(62.05 71.488)"/>
+  <path id="Path_134" data-name="Path 134" class="cls-4" d="M288.48,400.55s21.19,43,81,18l-13.92-21.83-24.67-8.86Z" transform="translate(-211.95 -324.445)"/>
+  <path id="Path_135" data-name="Path 135" class="cls-3" d="M288.48,399.92s21.19,43,81,18l-13.92-21.83-24.67-8.86Z" transform="translate(-211.95 -324.443)"/>
+  <path id="Path_136" data-name="Path 136" class="cls-3" d="M288.29,397a29.05,29.05,0,0,1,7.2-11.71c9.89-9.78,26.11-11.84,34.43-23a6.51,6.51,0,0,1-3,9.18c8-.05,17.21-.75,21.71-7.31a14.91,14.91,0,0,1-2.51,15.74c7.06.32,14.6,5.11,15.06,12.17.3,4.7-2.64,9.15-6.51,11.85s-8.54,3.93-13.14,4.95C328.11,411.85,279.53,424.26,288.29,397Z" transform="translate(-211.95 -324.404)"/>
+  <ellipse id="Ellipse_57" data-name="Ellipse 57" class="cls-5" cx="4.68" cy="8.77" rx="4.68" ry="8.77" transform="translate(57.35 112.966)"/>
+  <ellipse id="Ellipse_58" data-name="Ellipse 58" class="cls-5" cx="4.68" cy="8.77" rx="4.68" ry="8.77" transform="translate(157.94 112.966)"/>
+</svg>

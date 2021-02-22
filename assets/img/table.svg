@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="861" height="633" viewBox="0 0 861 633">
+<svg xmlns="http://www.w3.org/2000/svg" width="564" height="336" viewBox="0 0 564 336">
   <defs>
     <style>
       .cls-1 {
@@ -16,23 +16,10 @@
       .cls-4 {
         fill: #d93730;
       }
-
-      .cls-5 {
-        filter: url(#Rectangle_5);
-      }
     </style>
-    <filter id="Rectangle_5" x="0" y="0" width="861" height="633" filterUnits="userSpaceOnUse">
-      <feOffset input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="49.5" result="blur"/>
-      <feFlood flood-opacity="0.051"/>
-      <feComposite operator="in" in2="blur"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
   </defs>
-  <g id="Group_3" data-name="Group 3" transform="translate(-529.5 -2019.5)">
-    <g class="cls-5" transform="matrix(1, 0, 0, 1, 529.5, 2019.5)">
-      <rect id="Rectangle_5-2" data-name="Rectangle 5" class="cls-1" width="564" height="336" transform="translate(148.5 148.5)"/>
-    </g>
+  <g id="Group_3" data-name="Group 3" transform="translate(-678 -2168)">
+    <rect id="Rectangle_5" data-name="Rectangle 5" class="cls-1" width="564" height="336" transform="translate(678 2168)"/>
     <g id="undraw_Spreadsheet_re_cn18" transform="translate(466.666 2149.489)">
       <rect id="seda" class="cls-2" width="51.47" height="22.782" transform="translate(287.803 92.442)"/>
       <rect id="seda-2" data-name="seda" class="cls-2" width="51.47" height="22.782" transform="translate(390.51 139.687)"/>

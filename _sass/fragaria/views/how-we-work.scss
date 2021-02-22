@@ -1,30 +1,20 @@
 .v-how-we-work {
-  @include narrow-content;
-
-  section {
-
-  }
-
-  .illustration__horizontal {
-    display: flex;
-    width: 100%;
-
-    img {
-      &:nth-child(2) {
-        margin: 0 1rem;
-      }
-    }
-  }
+  // @include narrow-content;
 }
 
+.section__main-count,
 .section__main-title {
   display: block;
   text-align: center;
+}
 
+.section__main-count {
   @include baseline(
-    beta,
+    alpha,
     $headingtype,
-    $lineheight: 3,
+    $lineheight: 2,
+    $above: 3,
+    $below: 0,
     $breakpoint: tablet-small down,
     $anchor: true
   );
@@ -40,7 +30,150 @@
   );
 };
 
+.section__main-title {
+  max-width: 30rem;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include baseline(
+    gamma,
+    $headingtype,
+    $above: 1,
+    $below: 1,
+    $lineheight: 1.5,
+    $breakpoint: tablet-small down,
+    $anchor: true
+  );
+
+  @include baseline(
+    gamma,
+    $headingtype,
+    $above: 1,
+    $below: 1,
+    $lineheight: 2,
+    $breakpoint: tablet up,
+    $anchor: true
+  );
+}
+
+.section__main-subtitle {
+  @include baseline(
+      $fontsize: delta,
+      $font: $headingtype,
+      $breakpoint: tablet-small down,
+      $below: 2
+  );
+
+  @include baseline(
+      $fontsize: delta,
+      $font: $headingtype,
+      $lineheight: 1.5,
+      $breakpoint: tablet up,
+      $below: 2
+  );
+}
+
+.team-composition {
+  text-align: center;
+  padding: gu() 0 gu(2);
+}
+
 .work-cycle {
   list-style: none;
+  margin-top: gu(3);
 
+  li {
+    margin: 0!important;
+
+    div {
+      position: relative;
+      width: 50%;
+      padding: 0 gu() gu();
+
+      @include breakpoint(tablet up) {
+        padding: 0 gu(2) gu(2);
+      }
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        background: #000;
+      }
+
+      &:after {
+        width: 14px;
+        height: 14px;
+        border-radius: 100%;
+      }
+
+      &:before {
+        height: 100%;
+        width: 2px;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &:nth-child(even) div{
+      margin-left: auto;
+      padding-right: 0;
+
+      &:before {
+        left: -1px;
+      }
+
+      &:after {
+        left: -7px;
+      }
+    }
+
+    &:nth-child(odd) div{
+      margin-right: auto;
+      padding-left: 0;
+
+      &:before {
+        right: -1px;
+      }
+
+      &:after {
+        right: -7px;
+      }
+    }
+
+    &:last-child div:before {
+      width: 0;
+    }
+  }
+}
+
+.flexible__contract,
+.advantages {
+  display: grid;
+  grid-row-gap: gu();
+  grid-template-columns: auto;
+
+  @include breakpoint(tablet up) {
+    grid-column-gap: gu(4);
+    grid-template-columns: auto auto;
+  }
+
+  margin-top: gu(3);
+}
+
+.flexible__contract div {
+  padding: gu(2);
+  text-align: center;
+  box-shadow: 0 0 100px #eee;
+}
+
+.advantages {
+  grid-template-columns: auto;
+
+  @include breakpoint(tablet up) {
+    grid-template-columns: auto auto auto;
+  }
 }

@@ -120,14 +120,6 @@
   profiles:
     linkedin: jan-březina-9326a779
     github: pablohassan1
-- name: Adam Ježek
-  alt: Lights & sound
-  avatar:
-    src: cloudinary
-    cloudinary: posts/profile_adam_q3qzvh
-  profiles:
-    twitter: adamjezek98
-    github: adamjezek98
 - name: Romana Pourová
   alt: Horsegirl
   avatar:

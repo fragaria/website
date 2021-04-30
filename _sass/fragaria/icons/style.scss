@@ -2,19 +2,20 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?3rxsze');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?3rxsze#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?3rxsze') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?3rxsze') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?3rxsze##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?9rc3rg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?9rc3rg#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?9rc3rg') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?9rc3rg') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?9rc3rg##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
+  font-display: block;
 }
 
 [class^="icon--"], [class*=" icon--"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: '#{$icomoon-font-family}' !important;
-  speak: none;
+  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -26,49 +27,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon--stackshare {
+.icon--youtube {
   &:before {
-    content: $icon--stackshare; 
-  }
-}
-.icon--open-source {
-  &:before {
-    content: $icon--open-source; 
-  }
-}
-.icon--arrow-down {
-  &:before {
-    content: $icon--arrow-down; 
-  }
-}
-.icon--link {
-  &:before {
-    content: $icon--link; 
-  }
-}
-.icon--city {
-  &:before {
-    content: $icon--city; 
-  }
-}
-.icon--beer {
-  &:before {
-    content: $icon--beer; 
-  }
-}
-.icon--thermometer {
-  &:before {
-    content: $icon--thermometer; 
-  }
-}
-.icon--at {
-  &:before {
-    content: $icon--at; 
-  }
-}
-.icon--paw {
-  &:before {
-    content: $icon--paw; 
+    content: $icon--youtube; 
   }
 }
 .icon--power {
@@ -109,6 +70,61 @@
 .icon--facebook {
   &:before {
     content: $icon--facebook; 
+  }
+}
+.icon--stackshare {
+  &:before {
+    content: $icon--stackshare; 
+  }
+}
+.icon--open-source {
+  &:before {
+    content: $icon--open-source; 
+  }
+}
+.icon--city {
+  &:before {
+    content: $icon--city; 
+  }
+}
+.icon--beer {
+  &:before {
+    content: $icon--beer; 
+  }
+}
+.icon--arrow-down {
+  &:before {
+    content: $icon--arrow-down; 
+  }
+}
+.icon--link {
+  &:before {
+    content: $icon--link; 
+  }
+}
+.icon--city {
+  &:before {
+    content: $icon--city; 
+  }
+}
+.icon--beer {
+  &:before {
+    content: $icon--beer; 
+  }
+}
+.icon--thermometer {
+  &:before {
+    content: $icon--thermometer; 
+  }
+}
+.icon--at {
+  &:before {
+    content: $icon--at; 
+  }
+}
+.icon--paw {
+  &:before {
+    content: $icon--paw; 
   }
 }
 

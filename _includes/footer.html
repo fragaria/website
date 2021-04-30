@@ -10,6 +10,9 @@
             </div>
         </div>
         <div class="footer__social">
+            {% if site.company.social.youtube %}
+                <a href="https://www.youtube.com/{{ site.company.social.youtube }}" class="icon--youtube footer__social-icon" title="Youtube channel"></a>
+            {% endif %}
             {% if site.company.social.twitter %}
                 <a href="https://twitter.com/{{ site.company.social.twitter }}" class="icon--twitter footer__social-icon" title="Twitter profile page"></a>
             {% endif %}

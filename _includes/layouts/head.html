@@ -44,5 +44,9 @@
     {% endif %}
 
     {% include_cached layouts/head-static.html %}
+
+    {% if page.path contains '_posts' %}
+        <link rel="amphtml" href="{{ page.id | prepend: 'amp' | prepend: site.baseurl | prepend: site.url | append: '.html' }}">
+    {% endif %}
 </head>
 

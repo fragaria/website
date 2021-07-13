@@ -30,6 +30,11 @@
             </div>
             {% endif %}
         </div>
+        {% if include.post.youtube_id %}
+        <div class="blog-posting__media" >
+            {% include youtube.html id=include.post.youtube_id width='100%' %}
+        </div>
+        {% endif %}
         {% if include.post.cloudinary_src %}
         <div class="blog-posting__media">
             <div class="blog-posting__media-fill" style="

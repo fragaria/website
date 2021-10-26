@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Pořád ještě posílate hesla přes Slack nebo email?!
-date: 2021-06-28T13:00:00.000+01:00
+date: 2021-03-15T13:00:00.000+01:00
 author: Filip Vařecha
 lang: cs
 tags:
-modified_time: 2021-06-28T08:00:00.000+01:00
+modified_time: 2021-03-15T08:00:00.000+01:00
 youtube_id: uIBNFVG2gi4
 ---
 

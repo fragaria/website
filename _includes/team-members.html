@@ -8,6 +8,9 @@
                     {% if member.avatar.src == 'github' %}
                         <source srcset="https://github.com/{{ member.profiles.github }}.png?size=125" media="(min-width: 480px)" />
                         <img class="team-member__avatar-image" src="https://github.com/{{ member.profiles.github }}.png?size=128" alt="{{ member.name }}" itemprop="contentUrl" />
+                    {% elsif member.avatar.src == 'img_source' %}
+                        <source srcset="https://github.com/{{ member.img_source.github }}.png?size=125" media="(min-width: 480px)" />
+                        <img class="team-member__avatar-image" src="https://github.com/{{ member.img_source.github }}.png?size=128" alt="{{ member.name }}" itemprop="contentUrl" />
                     {% elsif member.avatar.src == 'gravatar' %}
                         <img class="team-member__avatar-image" src="{{ member.profiles.gravatar | to_gravatar }}?s=125" alt="{{ member.name }}" itemprop="contentUrl" />
                     {% elsif member.avatar.src == 'cloudinary' %}

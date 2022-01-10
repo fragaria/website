@@ -58,7 +58,9 @@
 - name: Jan Mikula
   alt: Hot Head
   avatar:
-    src: github
+    src: img_source
+  img_source:
+    github: HonzaMikula
   profiles:
     linkedin: janmikula
     twitter: janmikula

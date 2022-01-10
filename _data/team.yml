@@ -147,3 +147,9 @@
     src: github
   profiles:
     github: jonasbilek
+- name: Filip Haas
+  alt: Fíla
+  avatar:
+    src: github
+  profiles:
+    github: filiphaas

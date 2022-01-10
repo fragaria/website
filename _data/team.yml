@@ -55,6 +55,13 @@
   avatar:
     src: cloudinary
     cloudinary: posts/stano_uy8gdn
+- name: Jan Mikula
+  alt: Hot Head
+  avatar:
+    src: github
+  profiles:
+    linkedin: janmikula
+    twitter: janmikula
 - name: Michal Dub
   alt: Artefact
   avatar:
@@ -133,14 +140,6 @@
     github: lopliok
     twitter: lopliok
     facebook: lopliok
-- name: Jan Mikula
-  alt: Miky
-  avatar:
-    src: github
-  profiles:
-    github: HonzaMikula
-    linkedin: janmikula
-    twitter: janmikula
 - name: Jonáš Bílek
   alt: Kamínek
   avatar:

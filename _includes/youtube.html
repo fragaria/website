@@ -1,3 +1,9 @@
 {% capture width %}{% if include.width %}{{ include.width }}{% else %}640{% endif %}{% endcapture %}
-{% capture height %}{% if include.height %}{{ include.height }}{% else %}360{% endif %}{% endcapture %}
-<iframe width="{{ width }}" height="{{ height }}" src="https://www.youtube.com/embed/{{ include.id }}" frameborder="0" allowfullscreen></iframe>
+<iframe
+  width="{{ width }}"
+  height="{{ height }}"
+  style="aspect-ratio: 105/59;"
+  src="https://www.youtube.com/embed/{{ include.id }}"
+  frameborder="0"
+  allowfullscreen
+></iframe>

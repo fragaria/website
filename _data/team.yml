@@ -70,13 +70,6 @@
     src: github
   profiles:
     github: MichalMaM
-- name: Ondřej Šrámek
-  alt: Moravian
-  avatar:
-    src: github
-  profiles:
-    linkedin: ondrejsramek
-    github: osramek
 - name: Daniela Borošová
   alt: Tango DJ
   avatar:
@@ -92,14 +85,6 @@
   profiles:
     gravatar: adam.david@fragaria.cz
     github: adamdavidcz
-- name: Michal Hotovec
-  alt: Nick
-  avatar:
-    src: cloudinary
-    cloudinary: posts/michal-hotovec_pbrpgh.jpg
-  profiles:
-    twitter: mhotovec
-    linkedin: michalhotovec
 - name: Michal Maněna
   alt: Micman
   avatar:
@@ -129,28 +114,21 @@
   profiles:
     linkedin: jan-březina-9326a779
     github: pablohassan1
+- name: Vojtěch Trš
+  alt: voyczech
+  avatar:
+    src: cloudinary
+    cloudinary: posts/vojtech-trs_cbpm9t
+  profiles:
+    linkedin: vojtech-trs
 - name: Romana Pourová
   alt: Horsegirl
   avatar:
     src: cloudinary
     cloudinary: posts/romana_rx3vs3
-- name: Lubomír Nedbal
-  alt: Resistor
-  avatar:
-    src: github
-  profiles:
-    github: lopliok
-    twitter: lopliok
-    facebook: lopliok
 - name: Jonáš Bílek
   alt: Kamínek
   avatar:
     src: github
   profiles:
     github: jonasbilek
-- name: Filip Haas
-  alt: Fíla
-  avatar:
-    src: github
-  profiles:
-    github: filiphaas

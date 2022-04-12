@@ -7,7 +7,7 @@ urls.push("/assets/favicons/android-chrome-192x192.png");urls.push("/assets/favi
 urls.push("/blog/2022/03/14/tech-talk-08-lightsail-ampify/");urls.push("/blog/2022/03/07/lt-23-emca22-typescript2021/");urls.push("/blog/2022/02/21/lt-22-karmen/");urls.push("/blog/2022/02/14/lt-21-smart-home/");urls.push("/blog/2022/01/24/lt-20-vpn/");urls.push("/blog/2021/12/15/lt-19-log4shell/");urls.push("/blog/2021/10/26/lt-18-mjml/");urls.push("/blog/2021/10/18/lt-17-age-do-domacnosti/");urls.push("/blog/2021/10/17/tech-talk-7-ciro-vs-kravata/");urls.push("/blog/2021/09/12/tech-talk-6-design-thinking/");
 
 // Cache pages
-urls.push("/404.html");urls.push("/work-with-us/freelance-graficky-designer/");urls.push("/work-with-us/");urls.push("/how-we-work/");urls.push("/blog/");urls.push("/");urls.push("/offline/");urls.push("/solutions/");
+urls.push("/404.html");urls.push("/work-with-us/freelance-graficky-designer/");urls.push("/work-with-us/");urls.push("/how-we-work/");urls.push("/blog/");urls.push("/");urls.push("/offline/");urls.push("/work-with-us/test-engineer-qa/");urls.push("/solutions/");
 
 
 // Cache name: adjust version number to invalidate service worker cache.

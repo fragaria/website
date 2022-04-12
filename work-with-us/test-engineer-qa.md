@@ -41,7 +41,7 @@ Jsme silní v dobrém plánování i remote spolupráci.
 
 * Děláme jak vlastní produkty, tak i projekty pro velké hráče, které **venku budou vidět**
 ([Alza.cz](https://www.alza.cz), [Kiwi.com](https://www.kiwi.com),
-Komerční banka, Česká spořitelna), startupy ([windingtree.com](https://www.windingtree.com),
+Komerční banka, Česká spořitelna), startupy ([windingtree.com](https://www.windingtree.com)),
 ale i core systémy pro menší a střední firmy ([CK Adventura](https://www.adventura.cz/), …).
 * Remote a home office jsme zavedli dávno před Covidem a máme s ním mnohaleté zkušenosti.
 * OSVČ i HPP, je nám to jedno.

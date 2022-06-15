@@ -106,14 +106,6 @@
     src: cloudinary
     cloudinary: people/marta-vankova-face.jpg
   profiles:
-- name: Jan Březina
-  alt: Dirty Harry
-  avatar:
-    src: cloudinary
-    cloudinary: posts/honza-brezina_wmorba
-  profiles:
-    linkedin: jan-březina-9326a779
-    github: pablohassan1
 - name: Vojtěch Trš
   alt: voyczech
   avatar:

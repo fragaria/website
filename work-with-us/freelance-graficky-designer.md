@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Grafický designer / UX
-date: 2021-10-13T13:00:00.000+01:00
+date: 2022-12-7T13:00:00.000+01:00
 author: Fragaria
 keywords: career, webdesign, graphics, freelance, grafik, externí
 lang: cs
 tags:
-modified_time: 2020-05-25T13:00:00.000+01:00
+modified_time: 2022-12-7T13:00:00.000+01:00
 suppress_author: true
 ---
 

@@ -61,7 +61,7 @@
     src: cloudinary
     cloudinary: posts/llama_tnf5ce
   profiles:
-    linkedin: jan-dočkal-a9a32862
+    linkedin: jan-do%C4%8Dkal-a9a32862
 - name: Jan Mikula
   alt: Hot Head
   avatar:

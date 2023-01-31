@@ -1,0 +1,48 @@
+$full-view-break: 1000px;
+
+.v-responsibilities-section .v-responsibilities-section--content {
+    // @include narrow-content;
+}
+
+// spacing of individual section blocks
+.v-responsibilities-section + .v-responsibilities-section {
+    margin-top: gu();
+}
+
+// grid for facts about the company
+.v-responsibilities-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: gu(2);
+
+    @include breakpoint(tablet up) {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: gu(3);
+  }
+}
+
+.v-responsibilities-grid__image {
+    display: flex;
+    height: 100%;
+
+    img {
+      align-self: center;
+    }
+}
+
+.v-responsibilities-grid__item {
+    @include breakpoint(tablet up) {
+        text-align: center;
+    }
+}
+
+.v-responsibilities-grid .v-responsibilities-grid__title {
+    display: none;
+
+    @include baseline(eta, $bodytype, $below: 1);
+
+    @include breakpoint(tablet up) {
+      display: block;
+    }
+}

@@ -27,6 +27,10 @@
     margin-bottom: gu(2);
 }
 
+.u-margin--bottom8 {
+    margin-bottom: gu(8);
+}
+
 .hypenize {
     // Will try to add word-breaking hypens according to post language (which defaults to EN).
     hyphens: auto;

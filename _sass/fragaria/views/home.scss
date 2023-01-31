@@ -37,7 +37,8 @@
 .v-home__blog,
 .v-home__team,
 .v-home__company,
-.v-home__career {
+.v-home__career,
+.v-home .v-responsibilities-section {
     margin-top: gu(2);
 
     @include breakpoint(tablet up) {
@@ -80,7 +81,8 @@
 
 }
 
-.v-home .v-home__career-content {
+.v-home .v-home__career-content,
+.v-home .v-career-section--content {
     @include narrow-content;
 }
 

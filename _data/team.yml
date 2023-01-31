@@ -23,60 +23,6 @@
     github: czervenka
     twitter: czervenka
     linkedin: robingottfried
-- name: Filip Vařecha
-  alt: Homebrewer
-  avatar:
-    src: github
-  profiles:
-    github: xaralis
-    facebook: filip.varecha
-    linkedin: filip-varecha
-- name: Tibor Kulčár
-  alt: Aristocrat
-  avatar:
-    src: github
-  profiles:
-    github: tibor-kulcar
-- name: Ondřej Chmelař
-  alt: Ing.
-  avatar:
-    src: github
-  profiles:
-    github: ondrejchmelar
-- name: Pavel Vojáček
-  alt: MacGyver
-  avatar:
-    src: github
-  profiles:
-    github: pavel-mxsf
-    twitter: pavel_mxsf
-- name: Stanislav Knopp
-  alt: Puki
-  avatar:
-    src: cloudinary
-    cloudinary: posts/stano_uy8gdn
-- name: Jan Dočkal
-  alt: Code monkey
-  avatar:
-    src: cloudinary
-    cloudinary: posts/llama_tnf5ce
-  profiles:
-    linkedin: jan-do%C4%8Dkal-a9a32862
-- name: Jan Mikula
-  alt: Hot Head
-  avatar:
-    src: img_source
-  img_source:
-    github: HonzaMikula
-  profiles:
-    linkedin: janmikula
-    twitter: janmikula
-- name: Michal Dub
-  alt: Artefact
-  avatar:
-    src: github
-  profiles:
-    github: MichalMaM
 - name: Daniela Borošová
   alt: Tango DJ
   avatar:
@@ -92,21 +38,6 @@
   profiles:
     gravatar: adam.david@fragaria.cz
     github: adamdavidcz
-- name: Michal Maněna
-  alt: Micman
-  avatar:
-    src: cloudinary
-    cloudinary: posts/michalmanena_cixuvl.jpg
-  profiles:
-    facebook: michal.manena
-    linkedin: michalmanena
-- name: Daniel Vančura
-  alt: Hidden weeb
-  avatar:
-    src: cloudinary
-    cloudinary: posts/hugo_ihoyy0
-  profiles:
-    facebook: daniel.vancura.73
 - name: Marta Vaňková
   alt: Psyche
   avatar:

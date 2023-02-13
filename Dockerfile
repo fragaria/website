@@ -9,7 +9,7 @@ WORKDIR /srv/jekyll
 
 VOLUME  /srv/jekyll
 
-COPY . /srv/jekyll
+COPY Gemfile* /srv/jekyll
 
 RUN bundle install
 

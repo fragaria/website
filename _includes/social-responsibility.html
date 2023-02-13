@@ -1,12 +1,16 @@
-  <div class="v-responsibilities-section--content">
-      <div class="v-responsibilities-grid">
-          {% for responsibility in site.data.responsibilities %}
-              <a class="v-responsibilities-grid__item" href="{{ item.url }}">
-                  <div class="v-responsibilities-grid__image">
+<div class="v-responsibilities-section--content">
+    <div class="v-responsibilities-grid">
+        {% for responsibility in site.data.responsibilities %}
+            <a
+                class="v-responsibilities-grid__item"
+                href="{{ responsibility.url }}"
+                target="_blank"
+            >
+                <div class="v-responsibilities-grid__image">
                     <img src="{{ responsibility.img }}" alt="">
-                  </div>
-                  <span class="v-responsibilities-grid__title">{{ responsibility.title }}</span>
-              </a>
-          {% endfor %}
-      </div>
-  </div>
+                </div>
+                <span class="v-responsibilities-grid__title">{{ responsibility.title }}</span>
+            </a>
+        {% endfor %}
+    </div>
+</div>

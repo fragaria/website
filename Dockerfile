@@ -5,13 +5,13 @@ RUN apk --no-cache add \
     file \
     imagemagick
 
-CMD ["jekyll", "--help"]
-
-ENTRYPOINT ["/usr/jekyll/bin/entrypoint"]
-
 WORKDIR /srv/jekyll
 
 VOLUME  /srv/jekyll
+
+COPY . /srv/jekyll
+
+RUN bundle install
 
 EXPOSE 35729
 EXPOSE 4000

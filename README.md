@@ -5,24 +5,25 @@
 ## Table of contents
 
 - [Fragaria.cz website](#fragariacz-website)
-    - [Table of contents](#table-of-contents)
+  - [Table of contents](#table-of-contents)
 - [Creating posts](#creating-posts)
-    - [Providing images for the posts](#providing-images-for-the-posts)
-    - [Including images within the post body](#including-images-within-the-post-body)
-    - [Including Youtube videos in the post body](#including-youtube-videos-in-the-post-body)
-    - [Including embeddables like iframes](#including-embeddables-like-iframes)
-    - [Highlighting code blocks](#highlighting-code-blocks)
+  - [Providing images for the posts](#providing-images-for-the-posts)
+  - [Including images within the post body](#including-images-within-the-post-body)
+  - [Including Youtube videos in the post body](#including-youtube-videos-in-the-post-body)
+  - [Including embeddables like iframes](#including-embeddables-like-iframes)
+  - [Highlighting code blocks](#highlighting-code-blocks)
 - [Development](#development)
-    - [Installation](#installation)
-        - [Install build dependencies](#install-build-dependencies)
-            - [Ubuntu 18.04](#ubuntu-1804)
-            - [Fedora 28](#fedora-28)
-        - [Install rbenv](#install-rbenv)
-        - [Installing dependencies on macOS](#installing-dependencies-on-macos)
-        - [Installing the app](#installing-the-app)
-    - [Launching the app](#launching-the-app)
-    - [Viewing future articles and drafts](#viewing-future-articles-and-drafts)
-    - [Using Docker](#using-docker)
+  - [Installation](#installation)
+    - [Install build dependencies](#install-build-dependencies)
+      - [Ubuntu 18.04](#ubuntu-1804)
+      - [Fedora 28](#fedora-28)
+    - [Install rbenv](#install-rbenv)
+    - [Installing dependencies on macOS](#installing-dependencies-on-macos)
+    - [Installing the app](#installing-the-app)
+  - [Launching the app](#launching-the-app)
+  - [Viewing future articles and drafts](#viewing-future-articles-and-drafts)
+  - [Using Docker](#using-docker)
+- [Deployment](#deployment)
 
 # Creating posts
 
@@ -44,11 +45,11 @@ E.g.: `2014-10-20-ako-vyrobit-staticky-web-efektivne.md`
 
 At minimum, following properties need to be declared in the front matter:
 
-- `title`: title of your post
-- `date`: publication date of the post in ISO format (e.g. 2014-10-20T13:37:00.002+02:00)
-- `author`: your name
-- `lang`: language of the post (cs, sk, en)... we generally recommend writing all posts in English
-- `tags`: keywords of the post as a YAML array
+-   `title`: title of your post
+-   `date`: publication date of the post in ISO format (e.g. 2014-10-20T13:37:00.002+02:00)
+-   `author`: your name
+-   `lang`: language of the post (cs, sk, en)... we generally recommend writing all posts in English
+-   `tags`: keywords of the post as a YAML array
 
 ## Providing images for the posts
 
@@ -118,7 +119,6 @@ First, install required development dependencies:
 
 #### Ubuntu 18.04
 
-
 ```
 sudo apt-get update
 sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common
@@ -175,8 +175,8 @@ Switch to the cloned repository:
 cd fragaria.cz
 ```
 
-Then, install Ruby gems using following from *within the
-repository directory*:
+Then, install Ruby gems using following from _within the
+repository directory_:
 
 ```
 rbenv install         # Installs Ruby version required by the project
@@ -210,14 +210,13 @@ to get things up and running.
 First, make sure you have Docker along with `docker-comopose` installed. To do
 so, please follow a guide according to you OS of choice:
 
-* [Windows](https://docs.docker.com/docker-for-windows/install/)
-* [macOS](https://docs.docker.com/docker-for-mac/install/)
-* [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
-* [Fedora](https://docs.docker.com/install/linux/docker-ce/fedora/)
+-   [Windows](https://docs.docker.com/docker-for-windows/install/)
+-   [macOS](https://docs.docker.com/docker-for-mac/install/)
+-   [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+-   [Fedora](https://docs.docker.com/install/linux/docker-ce/fedora/)
 
 `docker-compose` can be installed by following
 [official resources](https://docs.docker.com/compose/install/).
-
 
 **Note for Fedora**: It's better to run docker-compose without `sudo`. Please
 follow [this guide](https://bluntinstrumentsoftesting.com/2016/12/03/run-docker-without-sudo-in-fedora-25/)
@@ -232,3 +231,16 @@ docker-compose up
 
 First boot might take some time, but you should be presented with a running
 app after a while.
+
+# Deployment
+
+Use provided `build.sh` script. It will build the site using Docker and automatically commit to the `gh-pages` branch.
+You simply confirm your will by pushing:
+
+```sh
+./build.sh
+git push
+```
+
+Note: make sure you've committed all your work before running this as it will fail when switching to `gh-pages` branch
+otherwise.

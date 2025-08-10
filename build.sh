@@ -17,5 +17,5 @@ cp -r _site/* /tmp/fragaria-website-build
 rm -rf _site
 git checkout gh-pages
 cp -r /tmp/fragaria-website-build/. .
-# git add -A
-# git commit -m "Automated build"
+git add -A
+git commit -m "Automated build"

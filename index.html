@@ -80,35 +80,9 @@ layout: blank
             </article>
 
             <article class="contact v-home__company-residence" itemprop="address" itemtype="https://schema.org/PostalAddress" itemscope>
-                <h1 class="beta">Residence</h1>
-                <p class="contact__line">{{ site.company.official_name }}</p>
-                <p class="contact__line" itemprop="streetAddress">{{ site.company.address.residence.line1 }}</p>
-                <p class="contact__line" itemprop="postalCode">{{ site.company.address.residence.line2 }}</p>
-                <p class="contact__line" itemprop="addressLocality">{{ site.company.address.residence.line3 }}</p>
-                <p class="contact__line u-margin--top1" itemprop="telephone">
-                    <a class="anchor anchor--emphasized" href="tel:{{ site.company.phone }}">{{ site.company.phone }}</a>
-                </p>
-
-                <p class="contact__line" itemprop="email">
-                    <a class="anchor anchor--emphasized" href="mailto:{{ site.company.email }}" >{{ site.company.email }}</a>
-                </p>
-
-                <p class="contact__line">
-                    <a class="anchor anchor--emphasized" href="{{ site.company.address.residence.map_link }}" target="_blank" rel="noopener" >Map to our office</a>
-                </p>
-
-
-            </article>
-
-            <article class="contact v-home__company-billing">
-                <h1 class="beta">Billing</h1>
-                <p class="contact__line">{{ site.company.official_name }}</p>
-                <p class="contact__line">{{ site.company.address.billing.line1 }}</p>
-                <p class="contact__line">{{ site.company.address.billing.line2 }}</p>
-                <p class="contact__line">{{ site.company.address.billing.line3 }}</p>
-                <p class="contact__line u-margin--top1">IČO: <span itemprop="identifier">{{ site.company.ico }}</span></p>
+                <h1 class="beta">{{ site.company.official_name }}</h1>
+                <p class="contact__line">IČO: <span itemprop="identifier">{{ site.company.ico }}</span></p>
                 <p class="contact__line">DIČ: <span itemprop="taxID">{{ site.company.dic }}</span></p>
-                <p class="contact__line">Account nr.: {{ site.company.account_nr }}</p>
             </article>
 
             <form class="v-home__company-contactform form" action="https://formspree.io/{{ site.company.contact_email }}" method="POST">

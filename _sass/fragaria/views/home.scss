@@ -112,3 +112,19 @@
 
 
 
+.v-home__foster {
+    margin-bottom: gu(4);
+    text-align: center;
+}
+.v-home__foster-content {
+    margin: auto auto;
+    width: 60%;
+    padding-top: gu(1);
+    padding-bottom: gu(1);
+    background-color: #8e8748;
+    color: white;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
